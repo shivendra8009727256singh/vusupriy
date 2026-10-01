@@ -1,0 +1,375 @@
+﻿import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
+import '../../App.css'
+
+import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
+import heroInterior from '../../assets/images/home/hero-interior.png'
+import featuredProjectsVisual from '../../assets/images/home/projects/featured-projects.png'
+
+function Preloader({ leaving }) {
+  return (
+    <div
+      className={`preloader ${leaving ? 'preloader--leaving' : ''}`}
+      aria-hidden="true"
+    >
+      <div className="preloader-panels">
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+      </div>
+
+      <div className="preloader-brand">
+        <div className="preloader-logo-wrap">
+          <img src={vasupriyLogo} alt="" className="preloader-logo" />
+        </div>
+
+        <div className="preloader-wordmark">
+          <span>VASUPRIY</span>
+          <small>INTERIOVILLA</small>
+        </div>
+
+        <div className="preloader-progress">
+          <span />
+        </div>
+
+        <p>Designing spaces with character</p>
+      </div>
+
+      <span className="preloader-index preloader-index--left">
+        EST. 2019
+      </span>
+
+      <span className="preloader-index preloader-index--right">
+        INTERIOR · EXECUTION
+      </span>
+    </div>
+  )
+}
+
+function Home() {
+  const [showLoader, setShowLoader] = useState(true)
+  const [loaderLeaving, setLoaderLeaving] = useState(false)
+  const [pageReady, setPageReady] = useState(false)
+  useEffect(() => {
+    document.body.classList.add('is-loading')
+
+    const leaveTimer = window.setTimeout(() => {
+      setLoaderLeaving(true)
+      setPageReady(true)
+    }, 2200)
+
+    const removeTimer = window.setTimeout(() => {
+      setShowLoader(false)
+      document.body.classList.remove('is-loading')
+    }, 3300)
+
+    return () => {
+      window.clearTimeout(leaveTimer)
+      window.clearTimeout(removeTimer)
+      document.body.classList.remove('is-loading')
+    }
+  }, [])
+return (
+    <>
+      {showLoader && <Preloader leaving={loaderLeaving} />}
+
+      <main className={`site ${pageReady ? 'site--ready' : ''}`}>
+{/* =====================================================
+            HERO
+        ====================================================== */}
+
+        <section className="hero-section" id="home">
+          <div className="hero-media" aria-hidden="true">
+            <img src={heroInterior} alt="" />
+          </div>
+
+          <div className="hero-image-shade" />
+          <div className="hero-navy-panel" />
+
+          <div className="site-container hero-container">
+            <div className="hero-content">
+              <div className="hero-eyebrow">
+                <span className="eyebrow-line" />
+
+                <span>
+                  Interior Design · Execution · Customization
+                </span>
+              </div>
+
+              <h1 className="hero-title">
+                <span className="hero-title-line hero-title-line--white">
+                  Designing
+                </span>
+
+                <span className="hero-title-line hero-title-line--gold">
+                  spaces that feel
+                </span>
+
+                <span className="hero-title-line hero-title-line--white">
+                  uniquely yours.
+                </span>
+              </h1>
+
+              <div className="hero-bottom">
+                <div className="hero-description">
+                  <span className="hero-year">
+                    EST. 2019
+                  </span>
+
+                  <p>
+                    Modern, minimalist and thoughtfully crafted
+                    interiors where functionality meets refined
+                    aesthetics.
+                  </p>
+                </div>
+
+                <div className="hero-actions">
+                  <Link
+                    className="hero-primary-btn"
+                    to="/projects"
+                  >
+                    <span>Explore Projects</span>
+
+                    <span
+                      className="button-arrow"
+                      aria-hidden="true"
+                    >
+                      ↗
+                    </span>
+                  </Link>
+
+                  <Link
+                    className="hero-text-link"
+                    to="/contact"
+                  >
+                    Book a Consultation
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <aside className="hero-feature">
+              <div className="feature-top">
+                <span className="feature-number">01</span>
+                <span className="feature-line" />
+              </div>
+
+              <div className="feature-content">
+                <span className="feature-label">
+                  Our Approach
+                </span>
+
+                <strong>
+                  Factory-direct.
+                  <br />
+                  End-to-end.
+                  <br />
+                  Made for you.
+                </strong>
+              </div>
+            </aside>
+
+            <div
+              className="hero-scroll"
+              aria-hidden="true"
+            >
+              <span className="scroll-line" />
+              <span>Scroll to explore</span>
+            </div>
+          </div>
+        </section>
+
+        {/* =====================================================
+            EXPERTISE STRIP
+        ====================================================== */}
+
+        <section
+          className="brand-strip"
+          aria-label="Vasupriy expertise"
+        >
+          <div className="brand-strip-track">
+            <span>Residential Interiors</span>
+            <i />
+
+            <span>Commercial Spaces</span>
+            <i />
+
+            <span>Space Makeovers</span>
+            <i />
+
+            <span>2D &amp; 3D Visualization</span>
+            <i />
+
+            <span>Custom Design</span>
+            <i />
+
+            <span>End-to-End Execution</span>
+          </div>
+        </section>
+
+        {/* =====================================================
+            ABOUT INTRO
+        ====================================================== */}
+
+        <section
+          className="intro-section section-space"
+          id="about"
+        >
+          <div className="site-container intro-grid">
+            <div className="intro-label">
+              <span className="section-label">
+                About Vasupriy
+              </span>
+            </div>
+
+            <div className="intro-content">
+              <h2 className="section-title">
+                Less clutter.
+                <br />
+                More character.
+                <br />
+                <em>Timeless spaces.</em>
+              </h2>
+
+              <div className="intro-copy">
+                <p>
+                  Since 2019, Vasupriy Interiovilla has been
+                  shaping residential and commercial spaces
+                  around clean lines, functional layouts and
+                  sophisticated details.
+                </p>
+
+                <Link to="/about">
+                  Discover our story
+                  <span aria-hidden="true">↗</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* =====================================================
+            FEATURED PROJECTS
+        ====================================================== */}
+
+        <section className="featured-projects section-space" id="featured-projects">
+          <div className="site-container">
+            <div className="projects-heading-row">
+              <div className="projects-heading-meta">
+                <span className="section-label">Selected Work</span>
+                <span className="projects-count">01 — 03</span>
+              </div>
+
+              <div className="projects-heading-copy">
+                <h2 className="section-title projects-title">
+                  Spaces shaped around
+                  <br />
+                  <em>how people actually live.</em>
+                </h2>
+
+                <p>
+                  From refined residences to expressive commercial spaces,
+                  we shape interiors around function, character and the
+                  people who experience them.
+                </p>
+              </div>
+            </div>
+
+            <div className="projects-showcase">
+              <div className="projects-visual">
+                <div className="projects-visual-frame">
+                  <img
+                    src={featuredProjectsVisual}
+                    alt="Residential, commercial and space makeover interior design concepts"
+                  />
+
+                  <div className="projects-visual-overlay" aria-hidden="true" />
+
+                  <div className="projects-visual-caption">
+                    <span>Vasupriy Interiovilla</span>
+                    <span>Design · Execution · Customization</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="projects-list">
+                <div className="project-row">
+                  <span className="project-number">01</span>
+
+                  <div className="project-row-content">
+                    <span className="project-kicker">Modern Homes</span>
+                    <h3>Residential Interiors</h3>
+                    <p>
+                      Thoughtful spaces balancing comfort, clean detailing
+                      and everyday functionality.
+                    </p>
+                  </div>
+
+                  <span className="project-row-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </div>
+
+                <div className="project-row">
+                  <span className="project-number">02</span>
+
+                  <div className="project-row-content">
+                    <span className="project-kicker">Work &amp; Hospitality</span>
+                    <h3>Commercial Spaces</h3>
+                    <p>
+                      Refined environments designed around experience,
+                      identity and efficient use of space.
+                    </p>
+                  </div>
+
+                  <span className="project-row-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </div>
+
+                <div className="project-row">
+                  <span className="project-number">03</span>
+
+                  <div className="project-row-content">
+                    <span className="project-kicker">Refresh &amp; Reimagine</span>
+                    <h3>Space Makeovers</h3>
+                    <p>
+                      Focused transformations that bring new character,
+                      warmth and purpose to existing spaces.
+                    </p>
+                  </div>
+
+                  <span className="project-row-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="projects-footer">
+              <p>
+                Interior concepts shown for design presentation.
+                Explore our complete project portfolio.
+              </p>
+
+              <Link className="projects-view-all" to="/projects">
+                <span>Explore All Projects</span>
+                <span aria-hidden="true">↗</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+</main>
+    </>
+  )
+}
+
+export default Home
+
+
+
+
+

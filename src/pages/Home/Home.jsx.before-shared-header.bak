@@ -1,0 +1,600 @@
+import { useEffect, useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+
+import '../../App.css'
+
+import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
+import heroInterior from '../../assets/images/home/hero-interior.png'
+
+function Preloader({ leaving }) {
+  return (
+    <div
+      className={`preloader ${leaving ? 'preloader--leaving' : ''}`}
+      aria-hidden="true"
+    >
+      <div className="preloader-panels">
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+      </div>
+
+      <div className="preloader-brand">
+        <div className="preloader-logo-wrap">
+          <img src={vasupriyLogo} alt="" className="preloader-logo" />
+        </div>
+
+        <div className="preloader-wordmark">
+          <span>VASUPRIY</span>
+          <small>INTERIOVILLA</small>
+        </div>
+
+        <div className="preloader-progress">
+          <span />
+        </div>
+
+        <p>Designing spaces with character</p>
+      </div>
+
+      <span className="preloader-index preloader-index--left">
+        EST. 2019
+      </span>
+
+      <span className="preloader-index preloader-index--right">
+        INTERIOR · EXECUTION
+      </span>
+    </div>
+  )
+}
+
+function Home() {
+  const [showLoader, setShowLoader] = useState(true)
+  const [loaderLeaving, setLoaderLeaving] = useState(false)
+  const [pageReady, setPageReady] = useState(false)
+  const [headerScrolled, setHeaderScrolled] = useState(false)
+
+  useEffect(() => {
+    document.body.classList.add('is-loading')
+
+    const leaveTimer = window.setTimeout(() => {
+      setLoaderLeaving(true)
+      setPageReady(true)
+    }, 2200)
+
+    const removeTimer = window.setTimeout(() => {
+      setShowLoader(false)
+      document.body.classList.remove('is-loading')
+    }, 3300)
+
+    return () => {
+      window.clearTimeout(leaveTimer)
+      window.clearTimeout(removeTimer)
+      document.body.classList.remove('is-loading')
+    }
+  }, [])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHeaderScrolled(window.scrollY > 60)
+    }
+
+    handleScroll()
+
+    window.addEventListener('scroll', handleScroll, {
+      passive: true,
+    })
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  return (
+    <>
+      {showLoader && <Preloader leaving={loaderLeaving} />}
+
+      <main className={`site ${pageReady ? 'site--ready' : ''}`}>
+        {/* =====================================================
+            HEADER
+        ====================================================== */}
+
+        <header
+          className={`site-header ${
+            headerScrolled ? 'site-header--scrolled' : ''
+          }`}
+        >
+          <div className="site-container header-inner">
+            <Link
+              className="brand"
+              to="/"
+              aria-label="Vasupriy Interiovilla home"
+            >
+              <img
+                className="brand-logo"
+                src={vasupriyLogo}
+                alt="Vasupriy Interiovilla"
+              />
+
+              <span className="brand-name">
+                <strong>VASUPRIY</strong>
+                <small>INTERIOVILLA</small>
+              </span>
+            </Link>
+
+            <nav
+              className="desktop-nav"
+              aria-label="Primary navigation"
+            >
+              <NavLink
+                to="/"
+                end
+                className={({ isActive }) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Home
+              </NavLink>
+
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                About
+              </NavLink>
+
+              <NavLink
+                to="/interior-services"
+                className={({ isActive }) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Interior Services
+              </NavLink>
+
+              <NavLink
+                to="/interior-products"
+                className={({ isActive }) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Interior Products
+              </NavLink>
+
+              <NavLink
+                to="/projects"
+                className={({ isActive }) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Projects
+              </NavLink>
+
+              <NavLink
+                to="/gallery"
+                className={({ isActive }) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Gallery
+              </NavLink>
+
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Blog
+              </NavLink>
+
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? 'active' : ''
+                }
+              >
+                Contact
+              </NavLink>
+            </nav>
+
+            <Link className="header-cta" to="/contact">
+              <span>Book Now</span>
+              <span aria-hidden="true">↗</span>
+            </Link>
+
+            <button
+              className="menu-button"
+              type="button"
+              aria-label="Open navigation"
+            >
+              <span />
+              <span />
+            </button>
+          </div>
+        </header>
+
+        {/* =====================================================
+            HERO
+        ====================================================== */}
+
+        <section className="hero-section" id="home">
+          <div className="hero-media" aria-hidden="true">
+            <img src={heroInterior} alt="" />
+          </div>
+
+          <div className="hero-image-shade" />
+          <div className="hero-navy-panel" />
+
+          <div className="site-container hero-container">
+            <div className="hero-content">
+              <div className="hero-eyebrow">
+                <span className="eyebrow-line" />
+
+                <span>
+                  Interior Design · Execution · Customization
+                </span>
+              </div>
+
+              <h1 className="hero-title">
+                <span className="hero-title-line hero-title-line--white">
+                  Designing
+                </span>
+
+                <span className="hero-title-line hero-title-line--gold">
+                  spaces that feel
+                </span>
+
+                <span className="hero-title-line hero-title-line--white">
+                  uniquely yours.
+                </span>
+              </h1>
+
+              <div className="hero-bottom">
+                <div className="hero-description">
+                  <span className="hero-year">
+                    EST. 2019
+                  </span>
+
+                  <p>
+                    Modern, minimalist and thoughtfully crafted
+                    interiors where functionality meets refined
+                    aesthetics.
+                  </p>
+                </div>
+
+                <div className="hero-actions">
+                  <Link
+                    className="hero-primary-btn"
+                    to="/projects"
+                  >
+                    <span>Explore Projects</span>
+
+                    <span
+                      className="button-arrow"
+                      aria-hidden="true"
+                    >
+                      ↗
+                    </span>
+                  </Link>
+
+                  <Link
+                    className="hero-text-link"
+                    to="/contact"
+                  >
+                    Book a Consultation
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <aside className="hero-feature">
+              <div className="feature-top">
+                <span className="feature-number">01</span>
+                <span className="feature-line" />
+              </div>
+
+              <div className="feature-content">
+                <span className="feature-label">
+                  Our Approach
+                </span>
+
+                <strong>
+                  Factory-direct.
+                  <br />
+                  End-to-end.
+                  <br />
+                  Made for you.
+                </strong>
+              </div>
+            </aside>
+
+            <div
+              className="hero-scroll"
+              aria-hidden="true"
+            >
+              <span className="scroll-line" />
+              <span>Scroll to explore</span>
+            </div>
+          </div>
+        </section>
+
+        {/* =====================================================
+            EXPERTISE STRIP
+        ====================================================== */}
+
+        <section
+          className="brand-strip"
+          aria-label="Vasupriy expertise"
+        >
+          <div className="brand-strip-track">
+            <span>Residential Interiors</span>
+            <i />
+
+            <span>Commercial Spaces</span>
+            <i />
+
+            <span>Space Makeovers</span>
+            <i />
+
+            <span>2D &amp; 3D Visualization</span>
+            <i />
+
+            <span>Custom Design</span>
+            <i />
+
+            <span>End-to-End Execution</span>
+          </div>
+        </section>
+
+        {/* =====================================================
+            ABOUT INTRO
+        ====================================================== */}
+
+        <section
+          className="intro-section section-space"
+          id="about"
+        >
+          <div className="site-container intro-grid">
+            <div className="intro-label">
+              <span className="section-label">
+                About Vasupriy
+              </span>
+            </div>
+
+            <div className="intro-content">
+              <h2 className="section-title">
+                Less clutter.
+                <br />
+                More character.
+                <br />
+                <em>Timeless spaces.</em>
+              </h2>
+
+              <div className="intro-copy">
+                <p>
+                  Since 2019, Vasupriy Interiovilla has been
+                  shaping residential and commercial spaces
+                  around clean lines, functional layouts and
+                  sophisticated details.
+                </p>
+
+                <Link to="/about">
+                  Discover our story
+                  <span aria-hidden="true">↗</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* =====================================================
+            FOOTER
+        ====================================================== */}
+
+        <footer className="site-footer" id="contact">
+          <div className="footer-top">
+            <div className="site-container">
+              <div className="footer-cta">
+                <div className="footer-cta-label">
+                  <span className="footer-label-line" />
+                  <span>Start a Project</span>
+                </div>
+
+                <Link
+                  className="footer-big-link"
+                  to="/contact"
+                >
+                  <span>
+                    Let&apos;s create a space
+                    <br />
+                    that feels <em>like you.</em>
+                  </span>
+
+                  <span
+                    className="footer-circle-arrow"
+                    aria-hidden="true"
+                  >
+                    ↗
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="footer-main">
+            <div className="site-container footer-grid">
+              <div className="footer-brand">
+                <Link
+                  className="footer-logo-link"
+                  to="/"
+                  aria-label="Vasupriy Interiovilla home"
+                >
+                  <img
+                    className="footer-logo"
+                    src={vasupriyLogo}
+                    alt="Vasupriy Interiovilla"
+                  />
+
+                  <span className="footer-wordmark">
+                    <strong>VASUPRIY</strong>
+                    <small>INTERIOVILLA</small>
+                  </span>
+                </Link>
+
+                <p>
+                  Modern, minimalist and thoughtfully crafted
+                  interiors where refined aesthetics meet
+                  functionality.
+                </p>
+
+                <span className="footer-since">
+                  ESTABLISHED 2019
+                </span>
+              </div>
+
+              <div className="footer-column">
+                <span className="footer-heading">
+                  Explore
+                </span>
+
+                <nav
+                  className="footer-links"
+                  aria-label="Footer navigation"
+                >
+                  <Link to="/">
+                    <span>01</span>
+                    Home
+                  </Link>
+
+                  <Link to="/about">
+                    <span>02</span>
+                    About
+                  </Link>
+
+                  <Link to="/interior-services">
+                    <span>03</span>
+                    Interior Services
+                  </Link>
+
+                  <Link to="/interior-products">
+                    <span>04</span>
+                    Interior Products
+                  </Link>
+
+                  <Link to="/projects">
+                    <span>05</span>
+                    Projects
+                  </Link>
+
+                  <Link to="/gallery">
+                    <span>06</span>
+                    Gallery
+                  </Link>
+
+                  <Link to="/blog">
+                    <span>07</span>
+                    Blog
+                  </Link>
+
+                  <Link to="/contact">
+                    <span>08</span>
+                    Contact
+                  </Link>
+                </nav>
+              </div>
+
+              <div className="footer-column footer-services">
+                <span className="footer-heading">
+                  Expertise
+                </span>
+
+                <div className="footer-service-list">
+                  <span>Residential Interiors</span>
+                  <span>Commercial Spaces</span>
+                  <span>Space Makeovers</span>
+                  <span>2D &amp; 3D Visualization</span>
+                  <span>
+                    Architectural &amp; Civil Work
+                  </span>
+                  <span>Custom Design</span>
+                </div>
+              </div>
+
+              <div className="footer-column footer-connect">
+                <span className="footer-heading">
+                  Let&apos;s Connect
+                </span>
+
+                <p>
+                  Have a space in mind? Tell us what
+                  you&apos;re imagining and let&apos;s shape it
+                  together.
+                </p>
+
+                <Link
+                  className="footer-consultation"
+                  to="/contact"
+                >
+                  <span>Book a Consultation</span>
+                  <span aria-hidden="true">↗</span>
+                </Link>
+
+                <div className="footer-socials">
+                  <Link
+                    to="/contact"
+                    aria-label="Instagram"
+                  >
+                    IG
+                  </Link>
+
+                  <Link
+                    to="/contact"
+                    aria-label="Facebook"
+                  >
+                    FB
+                  </Link>
+
+                  <Link
+                    to="/contact"
+                    aria-label="Pinterest"
+                  >
+                    PI
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <div className="site-container footer-bottom-inner">
+              <p>
+                © {new Date().getFullYear()} Vasupriy
+                Interiovilla. All rights reserved.
+              </p>
+
+              <button
+                className="back-to-top"
+                type="button"
+                onClick={() =>
+                  window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                  })
+                }
+              >
+                <span>Back to top</span>
+                <span aria-hidden="true">↑</span>
+              </button>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </>
+  )
+}
+
+export default Home

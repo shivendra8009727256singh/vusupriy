@@ -1,0 +1,751 @@
+﻿import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
+import '../../App.css'
+
+import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
+import heroInterior from '../../assets/images/home/hero-interior.png'
+import residentialInterior from '../../assets/images/home/projects/residential-interior.png'
+import commercialSpace from '../../assets/images/home/projects/commercial-space.png'
+import spaceMakeover from '../../assets/images/home/projects/space-makeover.png'
+
+function Preloader({ leaving }) {
+  return (
+    <div
+      className={`preloader ${leaving ? 'preloader--leaving' : ''}`}
+      aria-hidden="true"
+    >
+      <div className="preloader-panels">
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+      </div>
+
+      <div className="preloader-brand">
+        <div className="preloader-logo-wrap">
+          <img src={vasupriyLogo} alt="" className="preloader-logo" />
+        </div>
+
+        <div className="preloader-wordmark">
+          <span>VASUPRIY</span>
+          <small>INTERIOVILLA</small>
+        </div>
+
+        <div className="preloader-progress">
+          <span />
+        </div>
+
+        <p>Designing spaces with character</p>
+      </div>
+
+      <span className="preloader-index preloader-index--left">
+        EST. 2019
+      </span>
+
+      <span className="preloader-index preloader-index--right">
+        INTERIOR · EXECUTION
+      </span>
+    </div>
+  )
+}
+
+function Home() {
+  const [showLoader, setShowLoader] = useState(true)
+  const [loaderLeaving, setLoaderLeaving] = useState(false)
+  const [pageReady, setPageReady] = useState(false)
+  const [activeProject, setActiveProject] = useState(0)
+  const [projectsInView, setProjectsInView] = useState(false)
+  const [activeService, setActiveService] = useState(0)
+
+  const homeServices = [
+    {
+      number: '01',
+      title: 'Space Designing & Makeover',
+      description:
+        'Thoughtful space planning and makeover solutions shaped around your lifestyle, functionality and visual identity.',
+    },
+    {
+      number: '02',
+      title: 'Execution & Turnkey Solutions',
+      description:
+        'Coordinated interior execution with a streamlined approach from approved design direction through on-site implementation.',
+    },
+    {
+      number: '03',
+      title: 'Architectural & Civil Solutions',
+      description:
+        'Integrated architectural and civil support for spaces that need planning, structural coordination and refined execution.',
+    },
+    {
+      number: '04',
+      title: '2D & 3D Visualization',
+      description:
+        'Clear 2D planning and immersive 3D visualization to help you understand the space and design direction before execution.',
+    },
+  ]
+  useEffect(() => {
+    document.body.classList.add('is-loading')
+
+    const leaveTimer = window.setTimeout(() => {
+      setLoaderLeaving(true)
+      setPageReady(true)
+    }, 2200)
+
+    const removeTimer = window.setTimeout(() => {
+      setShowLoader(false)
+      document.body.classList.remove('is-loading')
+    }, 3300)
+
+    return () => {
+      window.clearTimeout(leaveTimer)
+      window.clearTimeout(removeTimer)
+      document.body.classList.remove('is-loading')
+    }
+  }, [])
+
+
+  useEffect(() => {
+    const projectSection = document.querySelector('#featured-projects')
+
+    if (!projectSection) {
+      return undefined
+    }
+
+    const revealObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setProjectsInView(true)
+          revealObserver.disconnect()
+        }
+      },
+      {
+        root: null,
+        rootMargin: '0px 0px -12% 0px',
+        threshold: 0.12,
+      },
+    )
+
+    revealObserver.observe(projectSection)
+
+    return () => {
+      revealObserver.disconnect()
+    }
+  }, [])
+
+  useEffect(() => {
+    const projectSection = document.querySelector('#featured-projects')
+
+    if (!projectSection) {
+      return undefined
+    }
+
+    const projectRows = Array.from(
+      projectSection.querySelectorAll('[data-project-index]'),
+    )
+
+    if (!projectRows.length) {
+      return undefined
+    }
+
+    let frameId = null
+
+    const updateActiveProject = () => {
+      frameId = null
+
+      const activationY = window.innerHeight * 0.48
+
+      const closestRow = projectRows.reduce((closest, row) => {
+        const rect = row.getBoundingClientRect()
+        const rowCenter = rect.top + rect.height / 2
+        const distance = Math.abs(rowCenter - activationY)
+
+        if (!closest || distance < closest.distance) {
+          return {
+            row,
+            distance,
+          }
+        }
+
+        return closest
+      }, null)
+
+      if (!closestRow) {
+        return
+      }
+
+      const sectionRect = projectSection.getBoundingClientRect()
+
+      const sectionIsRelevant =
+        sectionRect.top < window.innerHeight * 0.72 &&
+        sectionRect.bottom > window.innerHeight * 0.22
+
+      if (!sectionIsRelevant) {
+        return
+      }
+
+      const nextProject = Number(
+        closestRow.row.dataset.projectIndex,
+      )
+
+      if (!Number.isNaN(nextProject)) {
+        setActiveProject((currentProject) =>
+          currentProject === nextProject ? currentProject : nextProject,
+        )
+      }
+    }
+
+    const scheduleProjectUpdate = () => {
+      if (frameId !== null) {
+        return
+      }
+
+      frameId = window.requestAnimationFrame(updateActiveProject)
+    }
+
+    scheduleProjectUpdate()
+
+    window.addEventListener('scroll', scheduleProjectUpdate, {
+      passive: true,
+    })
+
+    window.addEventListener('resize', scheduleProjectUpdate)
+
+    return () => {
+      window.removeEventListener('scroll', scheduleProjectUpdate)
+      window.removeEventListener('resize', scheduleProjectUpdate)
+
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId)
+      }
+    }
+  }, [])
+
+return (
+    <>
+      {showLoader && <Preloader leaving={loaderLeaving} />}
+
+      <main className={`site ${pageReady ? 'site--ready' : ''}`}>
+{/* =====================================================
+            HERO
+        ====================================================== */}
+
+        <section className="hero-section" id="home">
+          <div className="hero-media" aria-hidden="true">
+            <img src={heroInterior} alt="" />
+          </div>
+
+          <div className="hero-image-shade" />
+          <div className="hero-navy-panel" />
+
+          <div className="site-container hero-container">
+            <div className="hero-content">
+              <div className="hero-eyebrow">
+                <span className="eyebrow-line" />
+
+                <span>
+                  Interior Design · Execution · Customization
+                </span>
+              </div>
+
+              <h1 className="hero-title">
+                <span className="hero-title-line hero-title-line--white">
+                  Designing
+                </span>
+
+                <span className="hero-title-line hero-title-line--gold">
+                  spaces that feel
+                </span>
+
+                <span className="hero-title-line hero-title-line--white">
+                  uniquely yours.
+                </span>
+              </h1>
+
+              <div className="hero-bottom">
+                <div className="hero-description">
+                  <span className="hero-year">
+                    EST. 2019
+                  </span>
+
+                  <p>
+                    Modern, minimalist and thoughtfully crafted
+                    interiors where functionality meets refined
+                    aesthetics.
+                  </p>
+                </div>
+
+                <div className="hero-actions">
+                  <Link
+                    className="hero-primary-btn"
+                    to="/projects"
+                  >
+                    <span>Explore Projects</span>
+
+                    <span
+                      className="button-arrow"
+                      aria-hidden="true"
+                    >
+                      ↗
+                    </span>
+                  </Link>
+
+                  <Link
+                    className="hero-text-link"
+                    to="/contact"
+                  >
+                    Book a Consultation
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <aside className="hero-feature">
+              <div className="feature-top">
+                <span className="feature-number">01</span>
+                <span className="feature-line" />
+              </div>
+
+              <div className="feature-content">
+                <span className="feature-label">
+                  Our Approach
+                </span>
+
+                <strong>
+                  Factory-direct.
+                  <br />
+                  End-to-end.
+                  <br />
+                  Made for you.
+                </strong>
+              </div>
+            </aside>
+
+            <div
+              className="hero-scroll"
+              aria-hidden="true"
+            >
+              <span className="scroll-line" />
+              <span>Scroll to explore</span>
+            </div>
+          </div>
+        </section>
+
+        {/* =====================================================
+            EXPERTISE STRIP
+        ====================================================== */}
+
+        <section
+          className="brand-strip"
+          aria-label="Vasupriy expertise"
+        >
+          <div className="brand-strip-track">
+            <span>Residential Interiors</span>
+            <i />
+
+            <span>Commercial Spaces</span>
+            <i />
+
+            <span>Space Makeovers</span>
+            <i />
+
+            <span>2D &amp; 3D Visualization</span>
+            <i />
+
+            <span>Custom Design</span>
+            <i />
+
+            <span>End-to-End Execution</span>
+          </div>
+        </section>
+
+        {/* =====================================================
+            ABOUT INTRO
+        ====================================================== */}
+
+        <section
+          className="intro-section section-space"
+          id="about"
+        >
+          <div className="site-container intro-grid">
+            <div className="intro-label">
+              <span className="section-label">
+                About Vasupriy
+              </span>
+            </div>
+
+            <div className="intro-content">
+              <h2 className="section-title">
+                Less clutter.
+                <br />
+                More character.
+                <br />
+                <em>Timeless spaces.</em>
+              </h2>
+
+              <div className="intro-copy">
+                <p>
+                  Since 2019, Vasupriy Interiovilla has been
+                  shaping residential and commercial spaces
+                  around clean lines, functional layouts and
+                  sophisticated details.
+                </p>
+
+                <Link to="/about">
+                  Discover our story
+                  <span aria-hidden="true">↗</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* =====================================================
+            FEATURED PROJECTS
+        ====================================================== */}
+
+        <section
+          className={`featured-projects section-space ${
+            projectsInView ? 'featured-projects--visible' : ''
+          }`}
+          id="featured-projects"
+        >
+          <div className="site-container">
+            <div className="projects-heading-row">
+              <div className="projects-heading-meta">
+                <span className="section-label">Selected Work</span>
+                <span className="projects-count">01 — 03</span>
+              </div>
+
+              <div className="projects-heading-copy">
+                <h2 className="section-title projects-title">
+                  Spaces shaped around
+                  <br />
+                  <em>how people actually live.</em>
+                </h2>
+
+                <p>
+                  From refined residences to expressive commercial spaces,
+                  we shape interiors around function, character and the
+                  people who experience them.
+                </p>
+              </div>
+            </div>
+
+            <div className="projects-showcase">
+              <div className="projects-visual">
+                <div className="projects-visual-frame">
+                  <div className="projects-image-stack">
+                    <img
+                      className={`project-visual-image ${
+                        activeProject === 0 ? 'project-visual-image--active' : ''
+                      }`}
+                      src={residentialInterior}
+                      alt="Residential interior design concept"
+                    />
+
+                    <img
+                      className={`project-visual-image ${
+                        activeProject === 1 ? 'project-visual-image--active' : ''
+                      }`}
+                      src={commercialSpace}
+                      alt="Commercial interior design concept"
+                    />
+
+                    <img
+                      className={`project-visual-image ${
+                        activeProject === 2 ? 'project-visual-image--active' : ''
+                      }`}
+                      src={spaceMakeover}
+                      alt="Space makeover interior design concept"
+                    />
+                  </div>
+
+                  <div className="projects-visual-overlay" aria-hidden="true" />
+
+                  <div className="projects-visual-index" aria-hidden="true">
+                    <span key={`project-index-${activeProject}`}>0{activeProject + 1}</span>
+                    <span>03</span>
+                  </div>
+
+                  <div className="projects-visual-caption">
+                    <span key={`project-caption-${activeProject}`}>
+                      {activeProject === 0 && 'Residential Interiors'}
+                      {activeProject === 1 && 'Commercial Spaces'}
+                      {activeProject === 2 && 'Space Makeovers'}
+                    </span>
+
+                    <span>Design · Execution · Customization</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="projects-list">
+                <div
+                  className={`project-row ${
+                    activeProject === 0 ? 'project-row--active' : ''
+                  }`}
+                  data-project-index="0"
+                  onMouseEnter={() => setActiveProject(0)}
+                  onFocus={() => setActiveProject(0)}
+                  tabIndex={0}
+                >
+                  <span className="project-number">01</span>
+
+                  <div className="project-row-content">
+                    <span className="project-kicker">Modern Homes</span>
+                    <h3>Residential Interiors</h3>
+                    <p>
+                      Thoughtful spaces balancing comfort, clean detailing
+                      and everyday functionality.
+                    </p>
+                  </div>
+
+                  <span className="project-row-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </div>
+
+                <div
+                  className={`project-row ${
+                    activeProject === 1 ? 'project-row--active' : ''
+                  }`}
+                  data-project-index="1"
+                  onMouseEnter={() => setActiveProject(1)}
+                  onFocus={() => setActiveProject(1)}
+                  tabIndex={0}
+                >
+                  <span className="project-number">02</span>
+
+                  <div className="project-row-content">
+                    <span className="project-kicker">Work &amp; Hospitality</span>
+                    <h3>Commercial Spaces</h3>
+                    <p>
+                      Refined environments designed around experience,
+                      identity and efficient use of space.
+                    </p>
+                  </div>
+
+                  <span className="project-row-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </div>
+
+                <div
+                  className={`project-row ${
+                    activeProject === 2 ? 'project-row--active' : ''
+                  }`}
+                  data-project-index="2"
+                  onMouseEnter={() => setActiveProject(2)}
+                  onFocus={() => setActiveProject(2)}
+                  tabIndex={0}
+                >
+                  <span className="project-number">03</span>
+
+                  <div className="project-row-content">
+                    <span className="project-kicker">Refresh &amp; Reimagine</span>
+                    <h3>Space Makeovers</h3>
+                    <p>
+                      Focused transformations that bring new character,
+                      warmth and purpose to existing spaces.
+                    </p>
+                  </div>
+
+                  <span className="project-row-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="projects-footer">
+              <p>
+                Interior concepts shown for design presentation.
+                Explore our complete project portfolio.
+              </p>
+
+              <Link className="projects-view-all" to="/projects">
+                <span>Explore All Projects</span>
+                <span aria-hidden="true">↗</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* =====================================================
+            INTERIOR SERVICES PREVIEW
+            ===================================================== */}
+
+        <section className="home-services section-space" id="home-services">
+          <div className="home-services-atmosphere" aria-hidden="true">
+            <span className="home-services-glow home-services-glow--one" />
+            <span className="home-services-glow home-services-glow--two" />
+            <span className="home-services-grid" />
+          </div>
+
+          <div className="site-container home-services-container">
+            <div className="home-services-heading">
+              <div className="home-services-heading-meta">
+                <span className="home-services-label">
+                  <span aria-hidden="true" />
+                  Our Services
+                </span>
+
+                <span className="home-services-count">01 — 04</span>
+              </div>
+
+              <div className="home-services-heading-copy">
+                <h2>
+                  Explore our comprehensive
+                  <br />
+                  <span>interior design services.</span>
+                </h2>
+
+                <p>
+                  From thoughtful space planning to coordinated execution,
+                  Vasupriy brings design, visualization and implementation
+                  together through one considered approach.
+                </p>
+              </div>
+            </div>
+
+            <div className="home-services-stage">
+              <div className="home-services-content">
+                <div
+                  className="home-services-list"
+                  role="tablist"
+                  aria-label="Interior services"
+                >
+                  {homeServices.map((service, index) => {
+                    const isActive = activeService === index
+
+                    return (
+                      <button
+                        className={`home-service-item ${
+                          isActive ? 'home-service-item--active' : ''
+                        }`}
+                        key={service.number}
+                        type="button"
+                        role="tab"
+                        aria-selected={isActive}
+                        aria-controls="home-service-visual"
+                        onMouseEnter={() => setActiveService(index)}
+                        onFocus={() => setActiveService(index)}
+                        onClick={() => setActiveService(index)}
+                      >
+                        <span className="home-service-number">
+                          {service.number}
+                        </span>
+
+                        <span className="home-service-title">
+                          {service.title}
+                        </span>
+
+                        <span
+                          className="home-service-arrow"
+                          aria-hidden="true"
+                        >
+                          ↗
+                        </span>
+                      </button>
+                    )
+                  })}
+                </div>
+
+                <div className="home-services-description">
+                  <p key={`service-description-${activeService}`}>
+                    {homeServices[activeService].description}
+                  </p>
+                </div>
+
+                <Link
+                  className="home-services-cta"
+                  to="/interior-services"
+                >
+                  <span>Explore All Services</span>
+                  <span className="home-services-cta-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </Link>
+              </div>
+
+              <div
+                className="home-services-visual"
+                id="home-service-visual"
+                role="tabpanel"
+              >
+                <div className="home-services-image-frame">
+                  <img
+                    className={`home-service-image ${
+                      activeService === 0 ? 'home-service-image--active' : ''
+                    }`}
+                    src={spaceMakeover}
+                    alt="Space designing and makeover concept"
+                  />
+
+                  <img
+                    className={`home-service-image ${
+                      activeService === 1 ? 'home-service-image--active' : ''
+                    }`}
+                    src={residentialInterior}
+                    alt="Interior execution and turnkey concept"
+                  />
+
+                  <img
+                    className={`home-service-image ${
+                      activeService === 2 ? 'home-service-image--active' : ''
+                    }`}
+                    src={commercialSpace}
+                    alt="Architectural and civil interior concept"
+                  />
+
+                  <img
+                    className={`home-service-image ${
+                      activeService === 3 ? 'home-service-image--active' : ''
+                    }`}
+                    src={spaceMakeover}
+                    alt="2D and 3D visualization concept"
+                  />
+
+                  <div
+                    className="home-services-image-shade"
+                    aria-hidden="true"
+                  />
+
+                  <div className="home-services-visual-index">
+                    <span key={`service-index-${activeService}`}>
+                      0{activeService + 1}
+                    </span>
+                    <span>/ 04</span>
+                  </div>
+
+                  <div className="home-services-visual-caption">
+                    <span key={`service-title-${activeService}`}>
+                      {homeServices[activeService].title}
+                    </span>
+
+                    <small>
+                      Design · Visualization · Execution
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+</main>
+    </>
+  )
+}
+
+export default Home
+
+
+
+
+
+
+
+
+
