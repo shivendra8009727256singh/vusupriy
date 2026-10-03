@@ -1,20 +1,13 @@
-import { useEffect, useRef, useState } from 'react'
-import useDecodedSelection, { createDecodedSelection } from '../../hooks/useDecodedSelection.js'
+﻿import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import '../../App.css'
-import useScrollMotion from '../../hooks/useScrollMotion.js'
-import InteriorProductsPreview from '../../components/home/InteriorProductsPreview.jsx'
-import WhyVasupriy from '../../components/home/WhyVasupriy.jsx'
 
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
-import HeroSlideshow from '../../components/home/HeroSlideshow.jsx'
+import heroInterior from '../../assets/images/home/hero-interior.png'
 import residentialInterior from '../../assets/images/home/projects/residential-interior.png'
 import commercialSpace from '../../assets/images/home/projects/commercial-space.png'
 import spaceMakeover from '../../assets/images/home/projects/space-makeover.png'
-import serviceMakeover from '../../assets/images/home/services/space-designing-makeover.png'
-import serviceExecution from '../../assets/images/home/services/execution-turnkey.png'
-import serviceArchitecture from '../../assets/images/home/services/architectural-civil.png'
 
 function Preloader({ leaving }) {
   return (
@@ -59,38 +52,20 @@ function Preloader({ leaving }) {
 }
 
 function Home() {
-  const [showLoader, setShowLoader] = useState(() => !window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+  const [showLoader, setShowLoader] = useState(true)
   const [loaderLeaving, setLoaderLeaving] = useState(false)
-  const [pageReady, setPageReady] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+  const [pageReady, setPageReady] = useState(false)
   const [activeProject, setActiveProject] = useState(0)
-  const [activeService, serviceImages] = useDecodedSelection(0)
-  const siteRef = useRef(null)
-  const projectIndexRef = useRef(0)
+  const [projectsInView, setProjectsInView] = useState(false)
+  const [activeService, setActiveService] = useState(0)
   const projectHoverTimer = useRef(null)
   const serviceHoverTimer = useRef(null)
-
-  const [projectImages] = useState(() => createDecodedSelection(setActiveProject))
-  useEffect(() => () => projectImages.cancel(), [projectImages])
-
-  const activateProject = index => {
-    window.clearTimeout(projectHoverTimer.current)
-    projectImages.select(index, siteRef.current?.querySelectorAll('.project-visual-image')[index], readyIndex => {
-      projectIndexRef.current = readyIndex
-      setActiveProject(readyIndex)
-      siteRef.current?.dispatchEvent(new CustomEvent('project-select', { detail: readyIndex }))
-    })
-  }
-
-  const activateService = index => {
-    window.clearTimeout(serviceHoverTimer.current)
-    serviceImages.select(index, siteRef.current?.querySelectorAll('.home-service-image')[index])
-  }
 
   const scheduleProjectHover = (index) => {
     window.clearTimeout(projectHoverTimer.current)
 
     projectHoverTimer.current = window.setTimeout(() => {
-      activateProject(index)
+      setActiveProject(index)
     }, 450)
   }
 
@@ -102,7 +77,7 @@ function Home() {
     window.clearTimeout(serviceHoverTimer.current)
 
     serviceHoverTimer.current = window.setTimeout(() => {
-      activateService(index)
+      setActiveService(index)
     }, 450)
   }
 
@@ -136,62 +111,197 @@ function Home() {
         'Clear 2D planning and immersive 3D visualization to help you understand the space and design direction before execution.',
     },
   ]
-  useScrollMotion(siteRef, projectIndexRef, setActiveProject)
+  useEffect(() => {
+    const animatedElements = Array.from(
+      document.querySelectorAll('[data-reveal]'),
+    )
+
+    if (!animatedElements.length) {
+      return undefined
+    }
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return
+          }
+
+          entry.target.classList.add('is-revealed')
+          revealObserver.unobserve(entry.target)
+        })
+      },
+      {
+        root: null,
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.12,
+      },
+    )
+
+    animatedElements.forEach((element) => {
+      revealObserver.observe(element)
+    })
+
+    return () => revealObserver.disconnect()
+  }, [])
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
     document.body.classList.add('is-loading')
-    const leaveTimer = window.setTimeout(() => setLoaderLeaving(true), 2200)
-    const readyTimer = window.setTimeout(() => setPageReady(true), 3100)
-    const finish = () => {
-      setShowLoader(false)
+
+    const leaveTimer = window.setTimeout(() => {
+      setLoaderLeaving(true)
       setPageReady(true)
+    }, 2200)
+
+    const removeTimer = window.setTimeout(() => {
+      setShowLoader(false)
       document.body.classList.remove('is-loading')
-    }
-    const removeTimer = window.setTimeout(finish, 3300)
-    const preference = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const preferenceChanged = () => {
-      if (!preference.matches) return
-      window.clearTimeout(leaveTimer)
-      window.clearTimeout(readyTimer)
-      window.clearTimeout(removeTimer)
-      finish()
-    }
-    preference.addEventListener('change', preferenceChanged)
+    }, 3300)
+
     return () => {
       window.clearTimeout(leaveTimer)
-      window.clearTimeout(readyTimer)
       window.clearTimeout(removeTimer)
-      preference.removeEventListener('change', preferenceChanged)
       document.body.classList.remove('is-loading')
     }
   }, [])
 
-  useEffect(() => () => {
-    window.clearTimeout(projectHoverTimer.current)
-    window.clearTimeout(serviceHoverTimer.current)
+
+  useEffect(() => {
+    const projectSection = document.querySelector('#featured-projects')
+
+    if (!projectSection) {
+      return undefined
+    }
+
+    const revealObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setProjectsInView(true)
+          revealObserver.disconnect()
+        }
+      },
+      {
+        root: null,
+        rootMargin: '0px 0px -12% 0px',
+        threshold: 0.12,
+      },
+    )
+
+    revealObserver.observe(projectSection)
+
+    return () => {
+      revealObserver.disconnect()
+    }
   }, [])
 
-  return (
+  useEffect(() => {
+    const projectSection = document.querySelector('#featured-projects')
+
+    if (!projectSection) {
+      return undefined
+    }
+
+    const projectRows = Array.from(
+      projectSection.querySelectorAll('[data-project-index]'),
+    )
+
+    if (!projectRows.length) {
+      return undefined
+    }
+
+    let frameId = null
+
+    const updateActiveProject = () => {
+      frameId = null
+
+      const activationY = window.innerHeight * 0.48
+
+      const closestRow = projectRows.reduce((closest, row) => {
+        const rect = row.getBoundingClientRect()
+        const rowCenter = rect.top + rect.height / 2
+        const distance = Math.abs(rowCenter - activationY)
+
+        if (!closest || distance < closest.distance) {
+          return {
+            row,
+            distance,
+          }
+        }
+
+        return closest
+      }, null)
+
+      if (!closestRow) {
+        return
+      }
+
+      const sectionRect = projectSection.getBoundingClientRect()
+
+      const sectionIsRelevant =
+        sectionRect.top < window.innerHeight * 0.72 &&
+        sectionRect.bottom > window.innerHeight * 0.22
+
+      if (!sectionIsRelevant) {
+        return
+      }
+
+      const nextProject = Number(
+        closestRow.row.dataset.projectIndex,
+      )
+
+      if (!Number.isNaN(nextProject)) {
+        setActiveProject((currentProject) =>
+          currentProject === nextProject ? currentProject : nextProject,
+        )
+      }
+    }
+
+    const scheduleProjectUpdate = () => {
+      if (frameId !== null) {
+        return
+      }
+
+      frameId = window.requestAnimationFrame(updateActiveProject)
+    }
+
+    scheduleProjectUpdate()
+
+    window.addEventListener('scroll', scheduleProjectUpdate, {
+      passive: true,
+    })
+
+    window.addEventListener('resize', scheduleProjectUpdate)
+
+    return () => {
+      window.removeEventListener('scroll', scheduleProjectUpdate)
+      window.removeEventListener('resize', scheduleProjectUpdate)
+
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId)
+      }
+    }
+  }, [])
+
+return (
     <>
       {showLoader && <Preloader leaving={loaderLeaving} />}
 
-      <div ref={siteRef} className={`site ${pageReady ? 'site--ready' : ''}`}>
+      <main className={`site ${pageReady ? 'site--ready' : ''}`}>
 {/* =====================================================
             HERO
         ====================================================== */}
 
-        <section className="hero-section hero-section--cinematic" id="home">
-          <div className="hero-media hero-motion-media" aria-hidden="true">
-            <HeroSlideshow ready={pageReady} />
+        <section className="hero-section" id="home">
+          <div className="hero-media" aria-hidden="true">
+            <img src={heroInterior} alt="" />
           </div>
 
-          <div className="hero-image-shade hero-motion-shade" />
-          <div className="hero-navy-panel hero-motion-panel" />
+          <div className="hero-image-shade" />
+          <div className="hero-navy-panel" />
 
           <div className="site-container hero-container">
             <div className="hero-content">
-              <div className="hero-eyebrow hero-motion-eyebrow">
+              <div className="hero-eyebrow">
                 <span className="eyebrow-line" />
 
                 <span>
@@ -199,27 +309,21 @@ function Home() {
                 </span>
               </div>
 
-              <h1 className="hero-title hero-motion-title">
-                <span className="hero-title-mask">
-                  <span className="hero-title-line hero-title-line--white">
+              <h1 className="hero-title">
+                <span className="hero-title-line hero-title-line--white">
                   Designing
                 </span>
-                </span>
 
-                <span className="hero-title-mask">
-                  <span className="hero-title-line hero-title-line--gold">
+                <span className="hero-title-line hero-title-line--gold">
                   spaces that feel
                 </span>
-                </span>
 
-                <span className="hero-title-mask">
-                  <span className="hero-title-line hero-title-line--white">
+                <span className="hero-title-line hero-title-line--white">
                   uniquely yours.
-                </span>
                 </span>
               </h1>
 
-              <div className="hero-bottom hero-motion-bottom">
+              <div className="hero-bottom">
                 <div className="hero-description">
                   <span className="hero-year">
                     EST. 2019
@@ -258,7 +362,7 @@ function Home() {
               </div>
             </div>
 
-            <aside className="hero-feature hero-motion-feature">
+            <aside className="hero-feature">
               <div className="feature-top">
                 <span className="feature-number">01</span>
                 <span className="feature-line" />
@@ -280,7 +384,7 @@ function Home() {
             </aside>
 
             <div
-              className="hero-scroll hero-motion-scroll"
+              className="hero-scroll"
               aria-hidden="true"
             >
               <span className="scroll-line" />
@@ -296,19 +400,24 @@ function Home() {
         <section
           className="brand-strip"
           aria-label="Vasupriy expertise"
-          data-scroll-section
         >
           <div className="brand-strip-track">
-            {[0, 1].map(copy => (
-              <div className="brand-strip-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>
-                {['Residential Interiors', 'Commercial Spaces', 'Space Makeovers',
-                  '2D & 3D Visualization', 'Custom Design', 'End-to-End Execution'].map(label => (
-                  <span className="brand-strip-item" key={label}>
-                    <span>{label}</span><i aria-hidden="true" />
-                  </span>
-                ))}
-              </div>
-            ))}
+            <span>Residential Interiors</span>
+            <i />
+
+            <span>Commercial Spaces</span>
+            <i />
+
+            <span>Space Makeovers</span>
+            <i />
+
+            <span>2D &amp; 3D Visualization</span>
+            <i />
+
+            <span>Custom Design</span>
+            <i />
+
+            <span>End-to-End Execution</span>
           </div>
         </section>
 
@@ -319,7 +428,7 @@ function Home() {
         <section
           className="intro-section section-space intro-section--cinematic"
           id="about"
-          data-scroll-section
+          data-reveal
         >
           <div className="intro-motion-bg" aria-hidden="true">
             <span className="intro-motion-orbit intro-motion-orbit--one" />
@@ -327,7 +436,7 @@ function Home() {
             <span className="intro-motion-line" />
           </div>
 
-          <div className="site-container intro-grid" data-reveal data-heading-reveal>
+          <div className="site-container intro-grid">
             <div className="intro-label" data-reveal-child="label">
               <span className="section-label">
                 About Vasupriy
@@ -376,12 +485,13 @@ function Home() {
         ====================================================== */}
 
         <section
-          className="featured-projects section-space"
+          className={`featured-projects section-space ${
+            projectsInView ? 'featured-projects--visible' : ''
+          }`}
           id="featured-projects"
-          data-scroll-section
         >
           <div className="site-container">
-            <div className="projects-heading-row" data-reveal>
+            <div className="projects-heading-row">
               <div className="projects-heading-meta">
                 <span className="section-label">Selected Work</span>
                 <span className="projects-count">01 — 03</span>
@@ -389,8 +499,9 @@ function Home() {
 
               <div className="projects-heading-copy">
                 <h2 className="section-title projects-title">
-                  <span className="motion-title-mask"><span className="motion-title-line">Spaces shaped around</span></span>
-                  <span className="motion-title-mask"><em className="motion-title-line">how people actually live.</em></span>
+                  Spaces shaped around
+                  <br />
+                  <em>how people actually live.</em>
                 </h2>
 
                 <p>
@@ -403,7 +514,7 @@ function Home() {
 
             <div className="projects-showcase">
               <div className="projects-visual">
-                <div className="projects-visual-frame" data-reveal>
+                <div className="projects-visual-frame">
                   <div className="projects-image-stack">
                     <img
                       className={`project-visual-image ${
@@ -411,7 +522,6 @@ function Home() {
                       }`}
                       src={residentialInterior}
                       alt="Residential interior design concept"
-                      aria-hidden={activeProject !== 0}
                     />
 
                     <img
@@ -420,7 +530,6 @@ function Home() {
                       }`}
                       src={commercialSpace}
                       alt="Commercial interior design concept"
-                      aria-hidden={activeProject !== 1}
                     />
 
                     <img
@@ -429,7 +538,6 @@ function Home() {
                       }`}
                       src={spaceMakeover}
                       alt="Space makeover interior design concept"
-                      aria-hidden={activeProject !== 2}
                     />
                   </div>
 
@@ -458,19 +566,9 @@ function Home() {
                     activeProject === 0 ? 'project-row--active' : ''
                   }`}
                   data-project-index="0"
-                  data-reveal
-                  role="button"
-                  aria-pressed={activeProject === 0}
-                  onClick={() => activateProject(0)}
-                  onKeyDown={event => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault()
-                      activateProject(0)
-                    }
-                  }}
                   onMouseEnter={() => scheduleProjectHover(0)}
                   onMouseLeave={cancelProjectHover}
-                  onFocus={() => activateProject(0)}
+                  onFocus={() => setActiveProject(0)}
                   tabIndex={0}
                 >
                   <span className="project-number">01</span>
@@ -494,19 +592,9 @@ function Home() {
                     activeProject === 1 ? 'project-row--active' : ''
                   }`}
                   data-project-index="1"
-                  data-reveal
-                  role="button"
-                  aria-pressed={activeProject === 1}
-                  onClick={() => activateProject(1)}
-                  onKeyDown={event => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault()
-                      activateProject(1)
-                    }
-                  }}
                   onMouseEnter={() => scheduleProjectHover(1)}
                   onMouseLeave={cancelProjectHover}
-                  onFocus={() => activateProject(1)}
+                  onFocus={() => setActiveProject(1)}
                   tabIndex={0}
                 >
                   <span className="project-number">02</span>
@@ -530,19 +618,9 @@ function Home() {
                     activeProject === 2 ? 'project-row--active' : ''
                   }`}
                   data-project-index="2"
-                  data-reveal
-                  role="button"
-                  aria-pressed={activeProject === 2}
-                  onClick={() => activateProject(2)}
-                  onKeyDown={event => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault()
-                      activateProject(2)
-                    }
-                  }}
                   onMouseEnter={() => scheduleProjectHover(2)}
                   onMouseLeave={cancelProjectHover}
-                  onFocus={() => activateProject(2)}
+                  onFocus={() => setActiveProject(2)}
                   tabIndex={0}
                 >
                   <span className="project-number">03</span>
@@ -563,7 +641,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="projects-footer" data-reveal>
+            <div className="projects-footer">
               <p>
                 Interior concepts shown for design presentation.
                 Explore our complete project portfolio.
@@ -581,15 +659,15 @@ function Home() {
             INTERIOR SERVICES PREVIEW
             ===================================================== */}
 
-        <section className="home-services section-space" id="home-services" data-scroll-section>
-          <div className="home-services-atmosphere" data-reveal aria-hidden="true">
+        <section className="home-services section-space" id="home-services">
+          <div className="home-services-atmosphere" aria-hidden="true">
             <span className="home-services-glow home-services-glow--one" />
             <span className="home-services-glow home-services-glow--two" />
             <span className="home-services-grid" />
           </div>
 
           <div className="site-container home-services-container">
-            <div className="home-services-heading" data-reveal data-heading-reveal>
+            <div className="home-services-heading">
               <div className="home-services-heading-meta">
                 <span className="home-services-label">
                   <span aria-hidden="true" />
@@ -601,8 +679,9 @@ function Home() {
 
               <div className="home-services-heading-copy">
                 <h2>
-                  <span className="motion-title-mask"><span className="motion-title-line">Explore our comprehensive</span></span>
-                  <span className="motion-title-mask"><em className="motion-title-line">interior design services.</em></span>
+                  Explore our comprehensive
+                  <br />
+                  <span>interior design services.</span>
                 </h2>
 
                 <p>
@@ -629,17 +708,14 @@ function Home() {
                           isActive ? 'home-service-item--active' : ''
                         }`}
                         key={service.number}
-                        id={`home-service-tab-${index}`}
-                        data-reveal
-                        style={{ '--reveal-delay': `${index * 80}ms` }}
                         type="button"
                         role="tab"
                         aria-selected={isActive}
                         aria-controls="home-service-visual"
                         onMouseEnter={() => scheduleServiceHover(index)}
                         onMouseLeave={cancelServiceHover}
-                        onFocus={() => activateService(index)}
-                        onClick={() => activateService(index)}
+                        onFocus={() => setActiveService(index)}
+                        onClick={() => setActiveService(index)}
                       >
                         <span className="home-service-number">
                           {service.number}
@@ -660,7 +736,7 @@ function Home() {
                   })}
                 </div>
 
-                <div className="home-services-description" data-reveal>
+                <div className="home-services-description">
                   <p key={`service-description-${activeService}`}>
                     {homeServices[activeService].description}
                   </p>
@@ -668,7 +744,6 @@ function Home() {
 
                 <Link
                   className="home-services-cta"
-                  data-reveal
                   to="/interior-services"
                 >
                   <span>Explore All Services</span>
@@ -682,47 +757,39 @@ function Home() {
                 className="home-services-visual"
                 id="home-service-visual"
                 role="tabpanel"
-                aria-labelledby={`home-service-tab-${activeService}`}
               >
-                <div className="home-services-image-frame" data-reveal>
-                  <div className="home-services-image-stack">
+                <div className="home-services-image-frame">
                   <img
                     className={`home-service-image ${
                       activeService === 0 ? 'home-service-image--active' : ''
                     }`}
-                    src={serviceMakeover}
+                    src={spaceMakeover}
                     alt="Space designing and makeover concept"
-                    aria-hidden={activeService !== 0}
                   />
 
                   <img
                     className={`home-service-image ${
                       activeService === 1 ? 'home-service-image--active' : ''
                     }`}
-                    src={serviceExecution}
+                    src={residentialInterior}
                     alt="Interior execution and turnkey concept"
-                    aria-hidden={activeService !== 1}
                   />
 
                   <img
                     className={`home-service-image ${
                       activeService === 2 ? 'home-service-image--active' : ''
                     }`}
-                    src={serviceArchitecture}
+                    src={commercialSpace}
                     alt="Architectural and civil interior concept"
-                    aria-hidden={activeService !== 2}
                   />
 
                   <img
                     className={`home-service-image ${
                       activeService === 3 ? 'home-service-image--active' : ''
                     }`}
-                    src={serviceMakeover}
+                    src={spaceMakeover}
                     alt="2D and 3D visualization concept"
-                    aria-hidden={activeService !== 3}
                   />
-
-                  </div>
 
                   <div
                     className="home-services-image-shade"
@@ -750,12 +817,19 @@ function Home() {
             </div>
           </div>
         </section>
-
-        <InteriorProductsPreview />
-        <WhyVasupriy />
-      </div>
+</main>
     </>
   )
 }
 
 export default Home
+
+
+
+
+
+
+
+
+
+
