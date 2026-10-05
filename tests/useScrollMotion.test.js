@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { createScrollMotion, chapterProgress, projectLayers, stableProjectIndex, createProjectOwnership } from '../src/hooks/useScrollMotion.js'
 
-function fixture({ reduced = false, mobile = false, about = false, images = false, products = false, why = false, entrances = false } = {}) {
+function fixture({ reduced = false, mobile = false, about = false, images = false, products = false, why = false, entrances = false, masks = false } = {}) {
   const listeners = new Map()
   const frames = new Map()
   const observers = []
@@ -26,11 +26,15 @@ function fixture({ reduced = false, mobile = false, about = false, images = fals
   const whyRows = [element(650,140),element(800,140),element(950,140)]
   const position = (element, top, height=140) => { element.getBoundingClientRect=()=>{ const translated=top+parseFloat(element.style.values.get('--reveal-y')||'0');return {top:translated,bottom:translated+height,height} } }
   position(whyCopy,820,80);whyRows.forEach((row,index)=>position(row,650+index*150))
+  const maskFrame = element(800,100)
+  maskFrame.matches=()=>true
+  const maskedHeading = element(800,100)
+  maskedHeading.parentElement=maskFrame
   const entrance = element(800, 140)
   let entranceTop = 800
   entrance.getBoundingClientRect = () => { const top = entranceTop + parseFloat(entrance.style.values.get('--reveal-y') || '0'); return {top,bottom:top+140,height:140} }
   const reveal = [heading, ...rows, ...(about ? [aboutAnchor] : [])]
-  const queries = new Map([['.why-vasupriy-heading h2',why ? [whyHeading] : []],['.why-vasupriy-intro',why ? [whyCopy] : []],['.why-vasupriy-row',why ? whyRows : []],['.home-service-item', entrances ? [entrance] : []],['[data-heading-reveal]', about ? [aboutAnchor] : [heading]], ['[data-reveal]', reveal], ['[data-scroll-section]', [section]], ['[data-project-index]', rows], ['.project-visual-image', imageLayers]])
+  const queries = new Map([['.intro-title-line',masks ? [maskedHeading] : []],['.why-vasupriy-heading h2',why ? [whyHeading] : []],['.why-vasupriy-intro',why ? [whyCopy] : []],['.why-vasupriy-row',why ? whyRows : []],['.home-service-item', entrances ? [entrance] : []],['[data-heading-reveal]', about ? [aboutAnchor] : [heading]], ['[data-reveal]', reveal], ['[data-scroll-section]', [section]], ['[data-project-index]', rows], ['.project-visual-image', imageLayers]])
   const root = element(0, 3000)
   root.querySelectorAll = s => queries.get(s) || []
   root.querySelector = s => s === '#home-products' ? (products ? productSection : null) : s === '.home-products-frame' ? (products ? productFrame : null) : s === '#why-vasupriy' ? (why ? whySection : null) : s === '#about' ? (about ? aboutSection : null) : s === '#about [data-reveal]' ? (about ? aboutAnchor : null) : s === '#home' ? hero : s === '#featured-projects' ? section : s === '.projects-visual' ? visual : null
@@ -44,7 +48,7 @@ function fixture({ reduced = false, mobile = false, about = false, images = fals
   const changes = []
   const cleanup = createScrollMotion(root, { window: win, getProjectIndex: () => selected, onProjectChange: i => { selected=i; changes.push(i) } })
   const flush = (elapsed = 16) => { clock += elapsed; const pending=[...frames.values()]; frames.clear(); pending.forEach(fn=>fn()) }
-  return { whyIntroAnchor, whyHeading, whyCopy, whyRows, position, entrance, setEntranceTop: value => { entranceTop=value }, productSection, productFrame, whySection, win, imageLayers, root, hero, heading, aboutSection, aboutAnchor, rows, frames, listeners, observers, changes, cleanup, flush, mediaObjects }
+  return { maskFrame, maskedHeading, whyIntroAnchor, whyHeading, whyCopy, whyRows, position, entrance, setEntranceTop: value => { entranceTop=value }, productSection, productFrame, whySection, win, imageLayers, root, hero, heading, aboutSection, aboutAnchor, rows, frames, listeners, observers, changes, cleanup, flush, mediaObjects }
 }
 
 test('batches scroll events and changes the selected project only when necessary', () => {
@@ -266,17 +270,17 @@ test('Why rows follow actual copy progress after the heading establishes', () =>
 test('assembly stops at intermediate scroll, reverses, recalculates resize and resolves late arrivals', () => {
   const f=fixture({entrances:true})
   assert.equal(f.entrance.attributes.get('data-scroll-reveal'),'up')
-  assert.equal(f.entrance.style.values.get('--reveal-y'),'42.00px')
-  assert.equal(f.entrance.style.values.get('--reveal-x'),'-50.00px')
-  f.flush();assert.equal(f.entrance.style.values.get('--reveal-opacity'),'0.0000')
+  assert.equal(f.entrance.style.values.get('--reveal-y'),'80.00px')
+  assert.equal(f.entrance.style.values.get('--reveal-x'),'-85.00px')
+  f.setEntranceTop(900);f.flush();assert.equal(f.entrance.style.values.get('--reveal-opacity'),'0.0800')
   f.setEntranceTop(616);f.listeners.get('scroll')();f.flush()
   const intermediate=new Map(f.entrance.style.values)
   const y=parseFloat(intermediate.get('--reveal-y'))
-  assert.ok(y>0 && y<42);assert.ok(parseFloat(intermediate.get('--reveal-x'))<0)
+  assert.ok(y>0 && y<80);assert.ok(parseFloat(intermediate.get('--reveal-x'))<0)
   assert.equal(f.frames.size,0);f.flush(5000)
   assert.deepEqual(f.entrance.style.values,intermediate)
   f.listeners.get('scroll')();f.flush();assert.deepEqual(f.entrance.style.values,intermediate)
-  f.setEntranceTop(450);f.listeners.get('scroll')();f.flush();assert.equal(f.entrance.style.values.get('--reveal-y'),'0.00px')
+  f.setEntranceTop(390);f.listeners.get('scroll')();f.flush();assert.equal(f.entrance.style.values.get('--reveal-y'),'0.00px')
   f.setEntranceTop(616);f.listeners.get('scroll')();f.flush();assert.deepEqual(f.entrance.style.values,intermediate)
   f.win.innerHeight=1000;f.listeners.get('resize')();f.flush();assert.ok(parseFloat(f.entrance.style.values.get('--reveal-y'))<y)
   f.setEntranceTop(-2000);f.listeners.get('scroll')();f.flush();assert.equal(f.entrance.style.values.get('--reveal-opacity'),'1.0000')
@@ -285,9 +289,20 @@ test('assembly stops at intermediate scroll, reverses, recalculates resize and r
 
 test('mobile entrances shorten travel; reduced motion resolves every target immediately', () => {
   const f=fixture({entrances:true,mobile:true});f.flush()
-  assert.equal(f.entrance.style.values.get('--reveal-y'),'38.00px')
+  assert.equal(f.entrance.style.values.get('--reveal-y'),'60.00px')
   f.mediaObjects.get('(prefers-reduced-motion: reduce)').matches=true
   f.listeners.get('(prefers-reduced-motion: reduce)')();f.flush()
   assert.equal(f.entrance.style.values.get('--reveal-opacity'),'1.0000')
   assert.equal(f.entrance.style.values.get('--reveal-y'),'0.00px');f.cleanup()
+})
+
+
+test('heading masks expose physical travel and clean their temporary properties on unmount',()=>{
+  const f=fixture({masks:true})
+  assert.equal(f.maskFrame.attributes.has('data-assembly-mask'),true)
+  assert.equal(f.maskFrame.style.values.get('--assembly-mask-y'),'120.00px')
+  f.cleanup()
+  assert.equal(f.maskFrame.attributes.has('data-assembly-mask'),false)
+  assert.equal(f.maskFrame.style.values.size,0)
+  assert.equal(f.frames.size,0)
 })

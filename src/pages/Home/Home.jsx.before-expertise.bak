@@ -6,7 +6,6 @@ import '../../App.css'
 import useScrollMotion from '../../hooks/useScrollMotion.js'
 import InteriorProductsPreview from '../../components/home/InteriorProductsPreview.jsx'
 import WhyVasupriy from '../../components/home/WhyVasupriy.jsx'
-import BeforeAfterTransformation from '../../components/home/BeforeAfterTransformation.jsx'
 
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
 import HeroSlideshow from '../../components/home/HeroSlideshow.jsx'
@@ -17,8 +16,6 @@ import spaceMakeover from '../../assets/images/home/projects/space-makeover.png'
 import serviceMakeover from '../../assets/images/home/services/space-designing-makeover.png'
 import serviceExecution from '../../assets/images/home/services/execution-turnkey.png'
 import serviceArchitecture from '../../assets/images/home/services/architectural-civil.png'
-import expertiseFloorPlan from '../../assets/images/home/expertise/interior-3d-floor-plan.png'
-import expertiseInterior from '../../assets/images/home/expertise/expertise-interior.png'
 
 function Preloader({ leaving }) {
   return (
@@ -893,250 +890,7 @@ function Home() {
           </div>
         </section>
 
-        {/* =====================================================
-            3D INTERIOR VISUAL + OUR EXPERTISE
-        ====================================================== */}
-
-        <section
-          className="home-expertise"
-          id="expertise"
-          data-scroll-section
-        >
-          <div
-            className="home-expertise-visual"
-            aria-hidden="true"
-          >
-            <div className="home-expertise-visual-inner">
-              <img
-                src={expertiseFloorPlan}
-                alt=""
-                className="home-expertise-floor-plan"
-              />
-            </div>
-          </div>
-
-          <div className="home-expertise-body">
-            <div className="site-container home-expertise-container">
-
-              <div
-                className="home-expertise-heading"
-                data-reveal
-                data-heading-reveal
-              >
-                <span className="home-expertise-label">
-                  <i aria-hidden="true" />
-                  Our Expertise
-                </span>
-
-                <h2>
-                  Curating the perfect
-                  <em> spaces to complete your vision.</em>
-                </h2>
-              </div>
-
-              <div className="home-expertise-grid">
-
-                <article
-                  className="home-expertise-card home-expertise-card--one"
-                  data-reveal
-                >
-                  <div className="home-expertise-card-image">
-                    <img
-                      src={serviceMakeover}
-                      alt="Space planning and interior makeover"
-                    />
-                  </div>
-
-                  <div className="home-expertise-card-copy">
-                    <span>01</span>
-                    <h3>Space Planning &amp; Makeovers</h3>
-                    <p>
-                      Thoughtful layouts and transformations designed
-                      around function, flow and everyday living.
-                    </p>
-                  </div>
-                </article>
-
-                <article
-                  className="home-expertise-card home-expertise-card--two"
-                  data-reveal
-                >
-                  <div className="home-expertise-card-image">
-                    <img
-                      src={residentialInterior}
-                      alt="Interior design and visualization"
-                    />
-                  </div>
-
-                  <div className="home-expertise-card-copy">
-                    <span>02</span>
-                    <h3>Design &amp; Visualization</h3>
-                    <p>
-                      Clear design direction supported by detailed
-                      2D planning and immersive 3D visualization.
-                    </p>
-                  </div>
-                </article>
-
-                <article
-                  className="home-expertise-card home-expertise-card--three"
-                  data-reveal
-                >
-                  <div className="home-expertise-card-image">
-                    <img
-                      src={serviceArchitecture}
-                      alt="Architectural and civil interior solutions"
-                    />
-                  </div>
-
-                  <div className="home-expertise-card-copy">
-                    <span>03</span>
-                    <h3>Architectural &amp; Civil Solutions</h3>
-                    <p>
-                      Coordinated architectural and civil support
-                      for considered, functional interior spaces.
-                    </p>
-                  </div>
-                </article>
-
-                <article
-                  className="home-expertise-card home-expertise-card--four"
-                  data-reveal
-                >
-                  <div className="home-expertise-card-image">
-                    <img
-                      src={serviceExecution}
-                      alt="Turnkey interior execution"
-                    />
-                  </div>
-
-                  <div className="home-expertise-card-copy">
-                    <span>04</span>
-                    <h3>Turnkey Execution</h3>
-                    <p>
-                      End-to-end coordination that brings design,
-                      customization and execution together.
-                    </p>
-                  </div>
-                </article>
-
-              </div>
-
-              <BeforeAfterTransformation />
-            </div>
-          </div>
-        </section>
-
-        {/* EXPERTISE / SKILLS SHOWCASE */}
-        <section
-          className="expertise-showcase"
-          data-scroll-section
-        >
-          <div
-            className="expertise-showcase-blueprint"
-            aria-hidden="true"
-          />
-
-          <div className="site-container expertise-showcase-container">
-
-            <div
-              className="expertise-showcase-heading"
-              data-reveal
-              data-heading-reveal
-            >
-              <div className="expertise-showcase-heading-space">
-                <span className="expertise-showcase-label">
-                  <i aria-hidden="true" />
-                  Our Expertise
-                </span>
-              </div>
-
-              <h2>
-                Trusted Expertise In
-                <em> Interior Design </em>
-                And Execution.
-              </h2>
-            </div>
-
-
-            <div className="expertise-showcase-content">
-
-              <div
-                className="expertise-showcase-info"
-                data-reveal
-              >
-                <p className="expertise-showcase-intro">
-                  We transform ideas into thoughtfully designed spaces
-                  through detailed planning, visualization and coordinated
-                  execution.
-                </p>
-
-                <div className="expertise-showcase-skills">
-
-                  <div className="expertise-showcase-skill">
-                    <div className="expertise-showcase-skill-heading">
-                      <strong>Interior Design</strong>
-                      <span>90%</span>
-                    </div>
-
-                    <div className="expertise-showcase-progress">
-                      <span style={{ '--skill-width': '90%' }} />
-                    </div>
-                  </div>
-
-
-                  <div className="expertise-showcase-skill">
-                    <div className="expertise-showcase-skill-heading">
-                      <strong>3D Visualization</strong>
-                      <span>95%</span>
-                    </div>
-
-                    <div className="expertise-showcase-progress">
-                      <span style={{ '--skill-width': '95%' }} />
-                    </div>
-                  </div>
-
-
-                  <div className="expertise-showcase-skill">
-                    <div className="expertise-showcase-skill-heading">
-                      <strong>Space Planning</strong>
-                      <span>90%</span>
-                    </div>
-
-                    <div className="expertise-showcase-progress">
-                      <span style={{ '--skill-width': '90%' }} />
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-
-              <div
-                className="expertise-showcase-visual"
-                data-reveal
-              >
-                <img
-                  src={expertiseInterior}
-                  alt="Vasupriy interior design expertise"
-                />
-              </div>
-
-            </div>
-
-
-            <div
-              className="expertise-showcase-wordmark"
-              aria-hidden="true"
-            >
-              interiovilla
-            </div>
-
-          </div>
-        </section>
-
         <InteriorProductsPreview />
-
         <WhyVasupriy />
       </div>
     </>
@@ -1144,8 +898,5 @@ function Home() {
 }
 
 export default Home
-
-
-
 
 

@@ -1,94 +1,671 @@
-/* Why Vasupriy: static editorial layout, using Home's existing reveal observer. */
+﻿/* =========================================================
+   WHY VASUPRIY
+   Reference-inspired premium layout
+   ========================================================= */
+
 .why-vasupriy {
   position: relative;
-  padding-top: clamp(56px, 6vw, 88px);
-  overflow: clip;
-  color: #0e2943;
-  background: linear-gradient(180deg, #f5f0ea, #ffffff);
+  overflow: hidden;
+
+  padding:
+    clamp(85px, 8vw, 125px)
+    0
+    clamp(55px, 6vw, 85px);
+
+  background: #f5f0ea;
+  color: #171717;
 }
 
-.why-vasupriy-layout {
+.why-vasupriy-container {
+  position: relative;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.why-vasupriy-header {
+  max-width: 900px;
+
+  margin: 0 auto
+    clamp(65px, 7vw, 100px);
+
+  text-align: center;
+}
+
+.why-vasupriy-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-bottom: 22px;
+
+  color: #0e2943;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.why-vasupriy-eyebrow i {
+  color: #b69558;
+
+  font-size: 0.85rem;
+  font-style: normal;
+}
+
+.why-vasupriy-header h2 {
+  margin: 0;
+
+  color: #151515;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
+  font-weight: 500;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.045em;
+
+  text-transform: uppercase;
+}
+
+.why-vasupriy-header h2 em {
+  color: #b69558;
+
+  font-family: inherit;
+  font-style: normal;
+  font-weight: inherit;
+}
+
+.why-vasupriy-header > p {
+  max-width: 650px;
+
+  margin:
+    23px
+    auto
+    0;
+
+  color: rgba(14, 41, 67, 0.64);
+
+  font-size: clamp(0.78rem, 0.9vw, 0.92rem);
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.why-vasupriy-content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  gap: clamp(48px, 7vw, 112px);
+
+  grid-template-columns:
+    minmax(0, 48%)
+    minmax(0, 52%);
+
+  gap: clamp(30px, 3vw, 50px);
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   LEFT COLLAGE
+   ========================================================= */
+
+.why-vasupriy-visual {
+  position: relative;
+
+  min-height: clamp(510px, 42vw, 640px);
+}
+
+
+/* ---------- IMAGES ---------- */
+
+.why-vasupriy-image {
+  position: absolute;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #e8e2da;
+}
+
+.why-vasupriy-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 900ms cubic-bezier(.2,.75,.25,1);
+}
+
+.why-vasupriy-image:hover img {
+  transform: scale(1.035);
+}
+
+
+/* Large upper/right image */
+
+.why-vasupriy-image--top {
+  top: 0;
+  right: 0;
+
+  width: 58%;
+  height: 54%;
+}
+
+.why-vasupriy-image--top img {
+  object-position: center;
+}
+
+
+/* Main lower/left image */
+
+.why-vasupriy-image--main {
+  left: 0;
+  bottom: 0;
+
+  width: 60%;
+  height: 58%;
+}
+
+.why-vasupriy-image--main img {
+  object-position: center;
+}
+
+
+/* Small overlapping image */
+
+.why-vasupriy-image--detail {
+  right: 0;
+  bottom: 0;
+
+  width: 43%;
+  height: 36%;
+
+  border:
+    clamp(7px, 0.8vw, 12px)
+    solid
+    #f5f0ea;
+
+  border-radius: 20px;
+}
+
+.why-vasupriy-image--detail img {
+  object-position: center;
+}
+
+
+/* =========================================================
+   GOLD SUPPORT CARD
+   ========================================================= */
+
+.why-vasupriy-support-card {
+  position: absolute;
+  z-index: 5;
+
+  top: 0;
+  left: 0;
+
+  width: 34%;
+
+  min-width: 165px;
+
+  padding:
+    clamp(20px, 2.2vw, 32px)
+    clamp(18px, 2vw, 28px);
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #bca469 0%,
+      #8d783e 100%
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    8px
+    8px
+    0
+    rgba(255,255,255,0.75);
+}
+
+.why-vasupriy-support-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+
+  margin-bottom: 17px;
+
+  border: 1px solid rgba(255,255,255,0.52);
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+}
+
+.why-vasupriy-support-card h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(1rem, 1.25vw, 1.3rem);
+  font-weight: 600;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.025em;
+}
+
+.why-vasupriy-support-card p {
+  margin: 15px 0 0;
+
+  color: rgba(255,255,255,0.9);
+
+  font-size: clamp(0.66rem, 0.72vw, 0.76rem);
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   RIGHT — 2 x 2 CARDS
+   ========================================================= */
+
+.why-vasupriy-reasons {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  grid-template-rows:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.why-vasupriy-reason {
+  position: relative;
+
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding:
+    clamp(24px, 2.3vw, 34px)
+    clamp(22px, 2.1vw, 31px);
+
+  border: 1px solid rgba(14,41,67,0.035);
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.67);
+
+  box-shadow:
+    0 12px 35px rgba(14,41,67,0.025);
+
+  transition:
+    transform 350ms ease,
+    box-shadow 350ms ease,
+    background 350ms ease;
+
+  transition-delay: var(--why-card-delay, 0ms);
+}
+
+.why-vasupriy-reason:hover {
+  transform: translateY(-5px);
+
+  background: rgba(255,255,255,0.92);
+
+  box-shadow:
+    0 18px 45px rgba(14,41,67,0.07);
+}
+
+
+/* =========================================================
+   CARD HEADING
+   ========================================================= */
+
+.why-vasupriy-reason-heading {
+  display: grid;
+
+  grid-template-columns: 34px 1fr;
+
+  gap: 13px;
+
   align-items: start;
 }
 
-.why-vasupriy-heading { min-width: 0; translate: 0 calc(var(--motion-depth, 0px) * 0.3); }
-.why-vasupriy-rule {
-  display: block;
-  height: 1px;
-  margin-bottom: 36px;
-  background: linear-gradient(90deg, #d7b77d, rgba(14, 41, 67, 0.12));
-  transform-origin: left;
-}
-.why-vasupriy .section-label { color: #0e2943; }
-.why-vasupriy .section-label::before { background: #d7b77d; }
-.why-vasupriy-heading h2 {
-  margin-top: 30px;
-  font-size: clamp(2.6rem, 4.1vw, 4.6rem);
-  line-height: 1.04;
-  overflow-wrap: break-word;
-}
-.why-vasupriy-heading h2 em { color: #a98248; font-weight: 400; }
-.why-vasupriy-intro {
-  max-width: 440px;
-  margin-top: 30px;
-  font-size: 0.95rem;
-  color: rgba(41, 41, 41, 0.72);
-}
-.why-vasupriy-themes { margin: 0; padding: 0; list-style: none; min-width: 0; }
-.why-vasupriy-row {
-  position: relative;
-  display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
-  gap: 24px;
-  padding-block: 32px 38px;
-}
-.why-vasupriy-row:first-child { padding-top: 0; }
-.why-vasupriy-row::after {
-  content: '';
-  position: absolute;
-  inset: auto 0 0;
-  height: 1px;
-  background: rgba(14, 41, 67, 0.16);
-  transform-origin: left;
-}
-.why-vasupriy-number {
-  color: #a98248;
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  padding-top: 4px;
-}
-.why-vasupriy-copy { min-width: 0; }
-.why-vasupriy-copy h3 {
-  font-size: clamp(1.65rem, 2.35vw, 2.5rem);
-  line-height: 1.12;
-}
-.why-vasupriy-copy p {
-  max-width: 450px;
-  margin-top: 16px;
-  color: rgba(41, 41, 41, 0.72);
-  font-size: 0.9rem;
+.why-vasupriy-reason-icon {
+  width: 32px;
+  height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #9b8951;
+
+  color: #ffffff;
+
+  font-size: 0.82rem;
 }
 
-@media (max-width: 1100px) {
-  .why-vasupriy-layout { gap: 40px; }
-  .why-vasupriy-row { gap: 16px; grid-template-columns: 36px minmax(0, 1fr); }
+.why-vasupriy-reason h3 {
+  max-width: 220px;
+
+  margin: 2px 0 0;
+
+  color: #111111;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(0.92rem, 1vw, 1.08rem);
+  font-weight: 650;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.025em;
 }
-@media (max-width: 760px) {
-  .why-vasupriy-heading { translate: none; }
-  .why-vasupriy-layout { grid-template-columns: minmax(0, 1fr); gap: 44px; }
-  .why-vasupriy-heading h2 { font-size: clamp(2.4rem, 10vw, 3.8rem); }
-  .why-vasupriy-heading :is(.motion-title-mask, .motion-title-line) { display: inline; padding: 0; margin: 0; overflow: visible; }
-  .why-vasupriy-rule { margin-bottom: 26px; }
-  .why-vasupriy-intro { margin-top: 24px; }
-  .why-vasupriy-row { padding-block: 28px; --why-row-delay: 80ms !important; }
+
+
+/* =========================================================
+   CARD DIVIDER + COPY
+   ========================================================= */
+
+.why-vasupriy-reason-rule {
+  display: block;
+
+  width: 100%;
+  height: 1px;
+
+  margin:
+    auto
+    0
+    clamp(18px, 2vw, 27px);
+
+  background: rgba(14,41,67,0.13);
 }
+
+.why-vasupriy-reason p {
+  margin: 0;
+
+  color: rgba(14,41,67,0.64);
+
+  font-size: clamp(0.7rem, 0.76vw, 0.8rem);
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+   ========================================================= */
+
+.why-vasupriy-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: clamp(45px, 5vw, 70px);
+
+  color: rgba(14,41,67,0.72);
+
+  font-size: 0.68rem;
+
+  text-align: center;
+}
+
+.why-vasupriy-footer p {
+  margin: 0;
+}
+
+.why-vasupriy-footer > span {
+  color: #b69558;
+}
+
+.why-vasupriy-footer a {
+  color: #8c6c2d;
+
+  font-weight: 700;
+
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.why-vasupriy-mini-marks {
+  display: flex;
+
+  margin-right: 3px;
+}
+
+.why-vasupriy-mini-marks span {
+  width: 24px;
+  height: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: -5px;
+
+  border: 2px solid #f5f0ea;
+  border-radius: 50%;
+
+  background: #0e2943;
+
+  color: #ffffff;
+
+  font-size: 0.55rem;
+  font-weight: 700;
+}
+
+.why-vasupriy-mini-marks span:nth-child(2) {
+  background: #b69558;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1280px) {
+
+  .why-vasupriy-content {
+    grid-template-columns:
+      minmax(0, 49%)
+      minmax(0, 51%);
+  }
+
+  .why-vasupriy-visual {
+    min-height: 630px;
+  }
+
+  .why-vasupriy-reasons {
+    gap: 22px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .why-vasupriy-content {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .why-vasupriy-visual {
+    width: min(100%, 720px);
+
+    min-height: 620px;
+
+    margin: 0 auto;
+  }
+
+  .why-vasupriy-reasons {
+    min-height: 520px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .why-vasupriy {
+    padding:
+      70px
+      0
+      50px;
+  }
+
+  .why-vasupriy-header {
+    margin-bottom: 50px;
+  }
+
+  .why-vasupriy-header h2 {
+    font-size: clamp(2.25rem, 11vw, 3.25rem);
+  }
+
+  .why-vasupriy-header h2 br {
+    display: none;
+  }
+
+  .why-vasupriy-visual {
+    min-height: 520px;
+  }
+
+  .why-vasupriy-support-card {
+    width: 46%;
+
+    min-width: 0;
+
+    padding: 20px 17px;
+  }
+
+  .why-vasupriy-support-card p {
+    font-size: 0.65rem;
+  }
+
+  .why-vasupriy-image--top {
+    width: 60%;
+    height: 48%;
+  }
+
+  .why-vasupriy-image--main {
+    width: 67%;
+    height: 54%;
+  }
+
+  .why-vasupriy-image--detail {
+    width: 48%;
+    height: 31%;
+  }
+
+  .why-vasupriy-reasons {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    min-height: 0;
+
+    gap: 16px;
+  }
+
+  .why-vasupriy-reason {
+    min-height: 235px;
+
+    padding: 26px 23px;
+  }
+
+  .why-vasupriy-reason-rule {
+    margin:
+      45px
+      0
+      20px;
+  }
+
+  .why-vasupriy-footer {
+    margin-top: 45px;
+
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .why-vasupriy-visual {
+    min-height: 465px;
+  }
+
+  .why-vasupriy-support-card {
+    width: 49%;
+  }
+
+  .why-vasupriy-image--top {
+    width: 58%;
+  }
+
+  .why-vasupriy-image--main {
+    width: 68%;
+  }
+
+  .why-vasupriy-image--detail {
+    width: 48%;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
-  .why-vasupriy-heading { translate: none; }
-  .why-vasupriy *, .why-vasupriy *::before, .why-vasupriy *::after { animation: none !important; transition: none !important; }
-  .motion-enabled .why-vasupriy :is(h2, .section-label, .motion-title-line, .why-vasupriy-intro, .why-vasupriy-number, .why-vasupriy-copy) { opacity: 1; transform: none; }
-  .motion-enabled .why-vasupriy .why-vasupriy-rule,
-  .motion-enabled .why-vasupriy .why-vasupriy-row::after { transform: none; }
+
+  .why-vasupriy-image img,
+  .why-vasupriy-reason {
+    transition: none;
+  }
 }

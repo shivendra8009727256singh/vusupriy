@@ -183,7 +183,7 @@ export function createScrollMotion(root, {
       const rect = sectionRects[index]
       if (rect.bottom < 0 || rect.top > viewport) return
       const progress = reduced.matches ? 0 : clamp((viewport - rect.top) / (viewport + rect.height))
-      section.style.setProperty('--section-progress', progress.toFixed(4))
+       section.style.setProperty('--section-progress', progress.toFixed(4))
       const travel = reduced.matches || mobile.matches ? 0 : desktop.matches ? 14 : 6
       section.style.setProperty('--motion-depth', ((0.5 - progress) * travel).toFixed(2) + 'px')
       section.style.setProperty('--motion-release', (reduced.matches ? 1 : 1 - clamp((progress - 0.7) / 0.3) * 0.15).toFixed(4))
@@ -361,6 +361,9 @@ export function createScrollMotion(root, {
     assemblySections.forEach(section => section?.style.removeProperty('--assembly-progress'))
     scrollTargets.forEach(target => {
       target.element.removeAttribute('data-scroll-reveal')
+      target.mask?.removeAttribute('data-assembly-mask')
+      target.mask?.style.removeProperty('--assembly-mask-x')
+      target.mask?.style.removeProperty('--assembly-mask-y')
       ;['--reveal-opacity', '--reveal-x', '--reveal-y', '--reveal-scale', '--reveal-rule', '--reveal-clip'].forEach(property => target.element.style.removeProperty(property))
     })
     root.classList.remove('motion-enabled')

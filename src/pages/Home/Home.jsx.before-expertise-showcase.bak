@@ -18,7 +18,6 @@ import serviceMakeover from '../../assets/images/home/services/space-designing-m
 import serviceExecution from '../../assets/images/home/services/execution-turnkey.png'
 import serviceArchitecture from '../../assets/images/home/services/architectural-civil.png'
 import expertiseFloorPlan from '../../assets/images/home/expertise/interior-3d-floor-plan.png'
-import expertiseInterior from '../../assets/images/home/expertise/expertise-interior.png'
 
 function Preloader({ leaving }) {
   return (
@@ -1027,116 +1026,7 @@ function Home() {
           </div>
         </section>
 
-        {/* EXPERTISE / SKILLS SHOWCASE */}
-        <section
-          className="expertise-showcase"
-          data-scroll-section
-        >
-          <div
-            className="expertise-showcase-blueprint"
-            aria-hidden="true"
-          />
-
-          <div className="site-container expertise-showcase-container">
-
-            <div
-              className="expertise-showcase-heading"
-              data-reveal
-              data-heading-reveal
-            >
-              <div className="expertise-showcase-heading-space">
-                <span className="expertise-showcase-label">
-                  <i aria-hidden="true" />
-                  Our Expertise
-                </span>
-              </div>
-
-              <h2>
-                Trusted Expertise In
-                <em> Interior Design </em>
-                And Execution.
-              </h2>
-            </div>
-
-
-            <div className="expertise-showcase-content">
-
-              <div
-                className="expertise-showcase-info"
-                data-reveal
-              >
-                <p className="expertise-showcase-intro">
-                  We transform ideas into thoughtfully designed spaces
-                  through detailed planning, visualization and coordinated
-                  execution.
-                </p>
-
-                <div className="expertise-showcase-skills">
-
-                  <div className="expertise-showcase-skill">
-                    <div className="expertise-showcase-skill-heading">
-                      <strong>Interior Design</strong>
-                      <span>90%</span>
-                    </div>
-
-                    <div className="expertise-showcase-progress">
-                      <span style={{ '--skill-width': '90%' }} />
-                    </div>
-                  </div>
-
-
-                  <div className="expertise-showcase-skill">
-                    <div className="expertise-showcase-skill-heading">
-                      <strong>3D Visualization</strong>
-                      <span>95%</span>
-                    </div>
-
-                    <div className="expertise-showcase-progress">
-                      <span style={{ '--skill-width': '95%' }} />
-                    </div>
-                  </div>
-
-
-                  <div className="expertise-showcase-skill">
-                    <div className="expertise-showcase-skill-heading">
-                      <strong>Space Planning</strong>
-                      <span>90%</span>
-                    </div>
-
-                    <div className="expertise-showcase-progress">
-                      <span style={{ '--skill-width': '90%' }} />
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-
-              <div
-                className="expertise-showcase-visual"
-                data-reveal
-              >
-                <img
-                  src={expertiseInterior}
-                  alt="Vasupriy interior design expertise"
-                />
-              </div>
-
-            </div>
-
-
-            <div
-              className="expertise-showcase-wordmark"
-              aria-hidden="true"
-            >
-              interiovilla
-            </div>
-
-          </div>
-        </section>
-
         <InteriorProductsPreview />
-
         <WhyVasupriy />
       </div>
     </>
@@ -1144,7 +1034,6 @@ function Home() {
 }
 
 export default Home
-
 
 
 

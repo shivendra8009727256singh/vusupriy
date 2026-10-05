@@ -3,10 +3,10 @@ import { test } from 'node:test'
 import { assemblyProgress, remapProgress, easeAssembly, assemblyState, assemblyValues, firstWhyRowProgress } from '../src/hooks/scrollReveal.js'
 
 test('assembly geometry resolves initial, intermediate, final, reverse and resized states',()=>{
-  assert.equal(assemblyProgress(1000,1000),0)
-  assert.equal(assemblyProgress(980,1000),0)
-  assert.equal(assemblyProgress(750,1000),0.5)
-  assert.equal(assemblyProgress(520,1000),1)
+  assert.equal(assemblyProgress(1050,1000),0)
+  assert.equal(assemblyProgress(1030,1000),0)
+  assert.equal(assemblyProgress(755,1000),0.5)
+  assert.equal(assemblyProgress(480,1000),1)
   assert.equal(assemblyProgress(-2000,1000),1)
   assert.equal(assemblyProgress(0,0),1)
   assert.ok(assemblyProgress(850,1000)<assemblyProgress(700,1000))
@@ -26,13 +26,13 @@ test('assembly child remapping and cubic easing keep exact separated and final p
   assert.deepEqual(assemblyState(1,origin),{x:0,y:0,opacity:1,scale:1,clip:0,progress:1})
   assert.equal(assemblyState(0.3,origin).x>middle.x,true)
   assert.equal(assemblyState(0.5,origin,0.65).x,39)
-  assert.equal(assemblyState(0,origin,1,true).x,30)
+  assert.equal(assemblyState(0,origin,1,true).x,50)
   assert.equal(assemblyState(0,{x:-25,y:-28}).y,-28)
 })
 
 test('one section progress drives differing child ranges and tall-section viewport windows',()=>{
   const targets=[{group:'about',range:[0.08,0.55]},{group:'about',range:[0.28,0.82]}]
-  const result=assemblyValues(targets,[{top:750},{top:750}],1000)
+  const result=assemblyValues(targets,[{top:755},{top:755}],1000)
   assert.equal(result.groups.size,1);assert.equal(result.groups.get('about').progress,0.5)
   assert.ok(result.values[0]>result.values[1])
   const tall=assemblyValues(targets,[{top:750},{top:1200}],1000)
@@ -58,4 +58,30 @@ test('assembly CSS disables scroll transitions and keeps the overflow guard',asy
   const globalCSS=await readFile(new URL('../src/index.css',import.meta.url),'utf8')
   assert.match(css,/\.motion-enabled \[data-scroll-reveal\] \{\s*transition: none;/)
   assert.match(globalCSS,/#root\s*\{[^}]*overflow-x: clip;/)
+})
+
+
+test('large-image intensity remains substantial at quarter and half progress',()=>{
+  const origin={x:210,y:10,opacity:0.25,scale:1.065,clip:10}
+  const quarter=assemblyState(0.25,origin)
+  const half=assemblyState(0.5,origin)
+  assert.ok(quarter.x>=150)
+  assert.ok(half.x>=100)
+  assert.deepEqual(assemblyState(1,origin),{x:0,y:0,opacity:1,scale:1,clip:0,progress:1})
+})
+
+
+test('configured Services and Products profiles provide clearly separated desktop states',async()=>{
+  const {createRevealTargets}=await import('../src/hooks/scrollReveal.js')
+  const element=()=>({setAttribute(){},closest:()=>null})
+  const root={querySelector:()=>null,querySelectorAll:selector=>['.home-services-image-frame','.home-products-frame','.home-service-item'].includes(selector)?[element()]:[]}
+  const targets=createRevealTargets(root)
+  const services=targets.find(target=>target.group==='services' && target.kind==='right')
+  const products=targets.find(target=>target.group==='products' && target.kind==='left')
+  assert.ok(services.origin.x>=180)
+  assert.ok(products.origin.x<=-160)
+  assert.ok(assemblyState(0.25,services.origin).x>=140)
+  assert.ok(assemblyState(0.5,services.origin).x>=90)
+  const rows=targets.find(target=>target.group==='services' && target.kind==='up')
+  assert.ok(Math.abs(rows.origin.x)>=60 && rows.origin.y>=60)
 })
