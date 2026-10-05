@@ -56,7 +56,7 @@ function Preloader({ leaving }) {
       </span>
 
       <span className="preloader-index preloader-index--right">
-        INTERIOR Â· EXECUTION
+        INTERIOR · EXECUTION
       </span>
     </div>
   )
@@ -199,7 +199,7 @@ function Home() {
                 <span className="eyebrow-line" />
 
                 <span>
-                  Interior Design Â· Execution Â· Customization
+                  Interior Design · Execution · Customization
                 </span>
               </div>
 
@@ -247,7 +247,7 @@ function Home() {
                       className="button-arrow"
                       aria-hidden="true"
                     >
-                      â†—
+                      ↗
                     </span>
                   </Link>
 
@@ -256,7 +256,7 @@ function Home() {
                     to="/contact"
                   >
                     Book a Consultation
-                    <span aria-hidden="true">â†’</span>
+                    <span aria-hidden="true">→</span>
                   </Link>
                 </div>
               </div>
@@ -526,7 +526,7 @@ function Home() {
             <div className="projects-heading-row" data-reveal>
               <div className="projects-heading-meta">
                 <span className="section-label">Selected Work</span>
-                <span className="projects-count">01 â€” 03</span>
+                <span className="projects-count">01 — 03</span>
               </div>
 
               <div className="projects-heading-copy">
@@ -589,7 +589,7 @@ function Home() {
                       {activeProject === 2 && 'Space Makeovers'}
                     </span>
 
-                    <span>Design Â· Execution Â· Customization</span>
+                    <span>Design · Execution · Customization</span>
                   </div>
                 </div>
               </div>
@@ -627,7 +627,7 @@ function Home() {
                   </div>
 
                   <span className="project-row-arrow" aria-hidden="true">
-                    â†—
+                    ↗
                   </span>
                 </div>
 
@@ -663,7 +663,7 @@ function Home() {
                   </div>
 
                   <span className="project-row-arrow" aria-hidden="true">
-                    â†—
+                    ↗
                   </span>
                 </div>
 
@@ -699,7 +699,7 @@ function Home() {
                   </div>
 
                   <span className="project-row-arrow" aria-hidden="true">
-                    â†—
+                    ↗
                   </span>
                 </div>
               </div>
@@ -713,7 +713,7 @@ function Home() {
 
               <Link className="projects-view-all" to="/projects">
                 <span>Explore All Projects</span>
-                <span aria-hidden="true">â†—</span>
+                <span aria-hidden="true">↗</span>
               </Link>
             </div>
           </div>
@@ -738,7 +738,7 @@ function Home() {
                   Our Services
                 </span>
 
-                <span className="home-services-count">01 â€” 04</span>
+                <span className="home-services-count">01 — 04</span>
               </div>
 
               <div className="home-services-heading-copy">
@@ -795,7 +795,7 @@ function Home() {
                           className="home-service-arrow"
                           aria-hidden="true"
                         >
-                          â†—
+                          ↗
                         </span>
                       </button>
                     )
@@ -815,7 +815,7 @@ function Home() {
                 >
                   <span>Explore All Services</span>
                   <span className="home-services-cta-arrow" aria-hidden="true">
-                    â†—
+                    ↗
                   </span>
                 </Link>
               </div>
@@ -884,7 +884,7 @@ function Home() {
                     </span>
 
                     <small>
-                      Design Â· Visualization Â· Execution
+                      Design · Visualization · Execution
                     </small>
                   </div>
                 </div>
