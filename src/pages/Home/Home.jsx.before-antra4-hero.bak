@@ -9,8 +9,8 @@ import WhyVasupriy from '../../components/home/WhyVasupriy.jsx'
 import BeforeAfterTransformation from '../../components/home/BeforeAfterTransformation.jsx'
 
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
+import HeroSlideshow from '../../components/home/HeroSlideshow.jsx'
 import BrandStrip from '../../components/home/BrandStrip.jsx'
-import antra4HeroImage from '../../assets/images/home/hero-interior.png'
 import residentialInterior from '../../assets/images/home/projects/residential-interior.png'
 import commercialSpace from '../../assets/images/home/projects/commercial-space.png'
 import spaceMakeover from '../../assets/images/home/projects/space-makeover.png'
@@ -133,7 +133,12 @@ function Home() {
       description:
         'Integrated architectural and civil support for spaces that need planning, structural coordination and refined execution.',
     },
-
+    {
+      number: '04',
+      title: '2D & 3D Visualization',
+      description:
+        'Clear 2D planning and immersive 3D visualization to help you understand the space and design direction before execution.',
+    },
   ]
   useScrollMotion(siteRef, projectIndexRef, setActiveProject)
 
@@ -180,104 +185,112 @@ function Home() {
             HERO
         ====================================================== */}
 
-        <section className="antra4-hero" id="home">
-
-          <div
-            className="antra4-hero-blueprint"
-            aria-hidden="true"
-          >
-            <span className="antra4-blueprint-line antra4-blueprint-line--one" />
-            <span className="antra4-blueprint-line antra4-blueprint-line--two" />
-            <span className="antra4-blueprint-line antra4-blueprint-line--three" />
+        <section className="hero-section hero-section--cinematic" id="home">
+          <div className="hero-media hero-motion-media" aria-hidden="true">
+            <HeroSlideshow ready={pageReady} />
           </div>
 
-          <div className="site-container antra4-hero-container">
+          <div className="hero-image-shade hero-motion-shade" />
+          <div className="hero-navy-panel hero-motion-panel" />
 
-            <div className="antra4-hero-copy">
+          <div className="site-container hero-container">
+            <div className="hero-content">
+              <div className="hero-eyebrow hero-motion-eyebrow">
+                <span className="eyebrow-line" />
 
-              <div className="antra4-hero-badge">
-                <span aria-hidden="true">✦</span>
-                <span>Trusted Interior Partner</span>
+                <span>
+                  Interior Design · Execution · Customization
+                </span>
               </div>
 
-              <h1 className="antra4-hero-title">
-
-                <span className="antra4-title-line antra4-title-line--video">
-                  <span>Find Your</span>
-
-                  <span
-                    className="antra4-video-pill"
-                    aria-hidden="true"
-                  >
-                    <img
-                      src={residentialInterior}
-                      alt=""
-                    />
-
-                    <span className="antra4-video-play">
-                      ▶
-                    </span>
-                  </span>
+              <h1 className="hero-title hero-motion-title">
+                <span className="hero-title-mask">
+                  <span className="hero-title-line hero-title-line--white">
+                  Your One-Stop
+                </span>
                 </span>
 
-                <span className="antra4-title-line">
-                  Inspired
-                </span>
-
-                <em className="antra4-title-line">
+                <span className="hero-title-mask">
+                  <span className="hero-title-line hero-title-line--gold">
                   Interior
-                </em>
+                </span>
+                </span>
 
-                <em className="antra4-title-line">
-                  Design
-                </em>
-
+                <span className="hero-title-mask">
+                  <span className="hero-title-line hero-title-line--white">
+                  Solution
+                </span>
+                </span>
               </h1>
 
-              <div className="antra4-hero-lower">
-
-                <p className="antra4-hero-description">
-                  Whether it&apos;s your home, office, or a commercial
-                  project, we create thoughtfully designed interiors
-                  that bring your vision to life.
-                </p>
-
-                <Link
-                  className="antra4-hero-cta"
-                  to="/interior-services"
-                >
-                  <span>Our Services</span>
-
-                  <span
-                    className="antra4-hero-cta-arrow"
-                    aria-hidden="true"
-                  >
-                    ↗
+              <div className="hero-bottom hero-motion-bottom">
+                <div className="hero-description">
+                  <span className="hero-year">
+                    EST. 2019
                   </span>
-                </Link>
 
+                  <p>
+                    Modern, minimalist and thoughtfully crafted
+                    interiors where functionality meets refined
+                    aesthetics.
+                  </p>
+                </div>
+
+                <div className="hero-actions">
+                  <Link
+                    className="hero-primary-btn"
+                    to="/projects"
+                  >
+                    <span>Explore Projects</span>
+
+                    <span
+                      className="button-arrow"
+                      aria-hidden="true"
+                    >
+                      ↗
+                    </span>
+                  </Link>
+
+                  <Link
+                    className="hero-text-link"
+                    to="/contact"
+                  >
+                    Book a Consultation
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
               </div>
-
             </div>
 
-            <div className="antra4-hero-visual">
-
-              <span
-                className="antra4-hero-dot"
-                aria-hidden="true"
-              />
-
-              <div className="antra4-hero-image-frame">
-                <img
-                  src={antra4HeroImage}
-                  alt="Vasupriy interior design"
-                />
+            <aside className="hero-feature hero-motion-feature">
+              <div className="feature-top">
+                <span className="feature-number">01</span>
+                <span className="feature-line" />
               </div>
 
-            </div>
+              <div className="feature-content">
+                <span className="feature-label">
+                  Our Approach
+                </span>
 
+                <strong>
+                  Factory-direct.
+                  <br />
+                  End-to-end.
+                  <br />
+                  Made for you.
+                </strong>
+              </div>
+            </aside>
+
+            <div
+              className="hero-scroll hero-motion-scroll"
+              aria-hidden="true"
+            >
+              <span className="scroll-line" />
+              <span>Scroll to explore</span>
+            </div>
           </div>
-
         </section>
 
         {/* =====================================================
@@ -299,7 +312,7 @@ function Home() {
             {[0, 1].map(copy => (
               <div className="brand-strip-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>
                 {['Residential Interiors', 'Commercial Spaces', 'Space Makeovers',
-                  'Custom Design', 'End-to-End Execution'].map(label => (
+                  '2D & 3D Visualization', 'Custom Design', 'End-to-End Execution'].map(label => (
                   <span className="brand-strip-item" key={label}>
                     <span>{label}</span><i aria-hidden="true" />
                   </span>
@@ -1034,7 +1047,7 @@ function Home() {
               <div className="expertise-showcase-heading-space">
                 <span className="expertise-showcase-label">
                   <i aria-hidden="true" />
-                 Our clients say
+                  Our Expertise
                 </span>
               </div>
 
@@ -1131,9 +1144,6 @@ function Home() {
 }
 
 export default Home
-
-
-
 
 
 

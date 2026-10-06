@@ -133,7 +133,12 @@ function Home() {
       description:
         'Integrated architectural and civil support for spaces that need planning, structural coordination and refined execution.',
     },
-
+    {
+      number: '04',
+      title: '2D & 3D Visualization',
+      description:
+        'Clear 2D planning and immersive 3D visualization to help you understand the space and design direction before execution.',
+    },
   ]
   useScrollMotion(siteRef, projectIndexRef, setActiveProject)
 
@@ -202,8 +207,13 @@ function Home() {
 
               <h1 className="antra4-hero-title">
 
-                <span className="antra4-title-line antra4-title-line--video">
-                  <span>Find Your</span>
+                <span className="antra4-title-line">
+                  Find Your
+                </span>
+
+                <span className="antra4-title-line antra4-title-line--mixed">
+
+                  <span>Inspired</span>
 
                   <span
                     className="antra4-video-pill"
@@ -218,15 +228,10 @@ function Home() {
                       ▶
                     </span>
                   </span>
-                </span>
 
-                <span className="antra4-title-line">
-                  Inspired
-                </span>
+                  <em>Interior</em>
 
-                <em className="antra4-title-line">
-                  Interior
-                </em>
+                </span>
 
                 <em className="antra4-title-line">
                   Design
@@ -299,7 +304,7 @@ function Home() {
             {[0, 1].map(copy => (
               <div className="brand-strip-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>
                 {['Residential Interiors', 'Commercial Spaces', 'Space Makeovers',
-                  'Custom Design', 'End-to-End Execution'].map(label => (
+                  '2D & 3D Visualization', 'Custom Design', 'End-to-End Execution'].map(label => (
                   <span className="brand-strip-item" key={label}>
                     <span>{label}</span><i aria-hidden="true" />
                   </span>
@@ -1034,7 +1039,7 @@ function Home() {
               <div className="expertise-showcase-heading-space">
                 <span className="expertise-showcase-label">
                   <i aria-hidden="true" />
-                 Our clients say
+                  Our Expertise
                 </span>
               </div>
 
@@ -1131,8 +1136,6 @@ function Home() {
 }
 
 export default Home
-
-
 
 
 

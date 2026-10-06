@@ -1,7 +1,7 @@
 ﻿import { useCallback, useRef, useState } from 'react'
 
-import beforeImage from '../../assets/images/home/expertise/transformation/before.jpg'
-import afterImage from '../../assets/images/home/expertise/transformation/after.jpg'
+import beforeImage from '../../assets/images/home/expertise/transformation/before.png'
+import afterImage from '../../assets/images/home/expertise/transformation/after.png'
 
 function BeforeAfterTransformation() {
   const comparisonRef = useRef(null)

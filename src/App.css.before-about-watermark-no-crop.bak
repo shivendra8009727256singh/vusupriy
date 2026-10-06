@@ -1,6 +1,6 @@
-﻿/* =========================================================
+/* =========================================================
    VASUPRIY INTERIOVILLA
-   HOME â€” HEADER / HERO / INTRO
+   HOME — HEADER / HERO / INTRO
    ========================================================= */
 
 .site {
@@ -1152,7 +1152,7 @@ body.is-loading {
 }
 
 /* =========================================================
-   ACCESSIBILITY â€” REDUCED MOTION
+   ACCESSIBILITY — REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2007,7 +2007,7 @@ body.is-loading {
 }
 
 /* =========================================================
-   SCROLLED â€” COMPACT STICKY MODE
+   SCROLLED — COMPACT STICKY MODE
    ========================================================= */
 
 .site-header--scrolled {
@@ -2074,7 +2074,7 @@ body.is-loading {
 }
 
 /* =========================================================
-   HEADER LOAD ANIMATION â€” INDIVIDUAL ELEMENTS
+   HEADER LOAD ANIMATION — INDIVIDUAL ELEMENTS
    ========================================================= */
 
 .site--ready .desktop-nav a {
@@ -5171,7 +5171,7 @@ body {
 }
 
 /* =========================================================
-   HOME â€” ABOUT VASUPRIY / ANTRA-INSPIRED EDITORIAL
+   HOME — ABOUT VASUPRIY / ANTRA-INSPIRED EDITORIAL
    ========================================================= */
 
 .about-antra {
@@ -5440,7 +5440,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” TABLET
+   ABOUT — TABLET
    ========================================================= */
 
 @media (max-width: 1100px) {
@@ -5477,7 +5477,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” TABLET / SMALL LAPTOP
+   ABOUT — TABLET / SMALL LAPTOP
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -5544,7 +5544,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” MOBILE
+   ABOUT — MOBILE
    ========================================================= */
 
 @media (max-width: 640px) {
@@ -5633,7 +5633,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” REDUCED MOTION
+   ABOUT — REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -5647,7 +5647,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” ANTRA IMAGE OFFSET + LEFT PEACOCK WATERMARK
+   ABOUT — ANTRA IMAGE OFFSET + LEFT PEACOCK WATERMARK
    ========================================================= */
 
 /* Match the same left/right relationship used by the heading */
@@ -5722,7 +5722,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” RESPONSIVE IMAGE OFFSET
+   ABOUT — RESPONSIVE IMAGE OFFSET
    ========================================================= */
 
 @media (max-width: 1100px) {
@@ -5792,7 +5792,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” FIX IMAGE WIDTH / ANTRA 30-70 COMPOSITION
+   ABOUT — FIX IMAGE WIDTH / ANTRA 30-70 COMPOSITION
    ========================================================= */
 
 @media (min-width: 901px) {
@@ -5841,7 +5841,7 @@ body {
 }
 
 
-/* Large desktop â€” slightly closer to Antra proportions */
+/* Large desktop — slightly closer to Antra proportions */
 @media (min-width: 1280px) {
 
   .about-antra-visual {
@@ -5862,7 +5862,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” ENLARGE LEFT PEACOCK WATERMARK
+   ABOUT — ENLARGE LEFT PEACOCK WATERMARK
    ========================================================= */
 
 @media (min-width: 901px) {
@@ -5908,7 +5908,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” MATCH ANTRA IMAGE HEIGHT
+   ABOUT — MATCH ANTRA IMAGE HEIGHT
    ========================================================= */
 
 @media (min-width: 901px) {
@@ -5942,7 +5942,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” VISUAL STORY + HIGHLIGHTS
+   ABOUT — VISUAL STORY + HIGHLIGHTS
    Same About section / Antra-inspired composition
    ========================================================= */
 
@@ -6252,7 +6252,7 @@ body {
 
 
 /* =========================================================
-   ABOUT WATERMARK â€” HEIGHT ONLY
+   ABOUT WATERMARK — HEIGHT ONLY
    ========================================================= */
 
 @media (min-width: 901px) {
@@ -6269,7 +6269,7 @@ body {
 
 
 /* =========================================================
-   ABOUT WATERMARK â€” FILL COMPLETE LEFT EMPTY COLUMN
+   ABOUT WATERMARK — FILL COMPLETE LEFT EMPTY COLUMN
    Only watermark sizing / vertical coverage changed
    ========================================================= */
 
@@ -6317,7 +6317,7 @@ body {
 
 /* =========================================================
    ABOUT PEACOCK WATERMARK
-   FINAL â€” HEIGHT-DRIVEN LEFT COLUMN FILL
+   FINAL — HEIGHT-DRIVEN LEFT COLUMN FILL
    ========================================================= */
 
 @media (min-width: 901px) {
@@ -6347,7 +6347,7 @@ body {
 
   .about-antra-watermark img {
     /* IMPORTANT:
-       Height controls logo size now â€” not width */
+       Height controls logo size now — not width */
     width: auto;
     max-width: none;
 
@@ -6376,7 +6376,7 @@ body {
 
 
 /* =========================================================
-   HOME â€” 3D VISUAL + OUR EXPERTISE
+   HOME — 3D VISUAL + OUR EXPERTISE
    ========================================================= */
 
 .home-expertise {
@@ -6740,7 +6740,7 @@ body {
 
 
 /* =========================================================
-   OUR EXPERTISE â€” REFERENCE IMAGE CARD TUNING
+   OUR EXPERTISE — REFERENCE IMAGE CARD TUNING
    JSX unchanged
    ========================================================= */
 
@@ -6962,7 +6962,7 @@ body {
 
 
 /* =========================================================
-   OUR EXPERTISE â€” BEFORE / AFTER TRANSFORMATION
+   OUR EXPERTISE — BEFORE / AFTER TRANSFORMATION
    ========================================================= */
 
 .expertise-transformation {
@@ -7778,7 +7778,7 @@ body {
 
 
 /* =========================================================
-   FOOTER â€” FULL PEACOCK WATERMARK
+   FOOTER — FULL PEACOCK WATERMARK
    Same brand artwork used in About
    ========================================================= */
 
@@ -7904,7 +7904,7 @@ body {
 
 
 /* =========================================================
-   VASUPRIY â€” ANTRA HOME 4 HERO
+   VASUPRIY — ANTRA HOME 4 HERO
    ========================================================= */
 
 .antra4-hero {
@@ -8727,7 +8727,7 @@ body {
 
 
 /* =========================================================
-   ANTRA INDEX 4 â€” FINAL REFERENCE MATCH
+   ANTRA INDEX 4 — FINAL REFERENCE MATCH
    Vasupriy branded content
    ========================================================= */
 
@@ -8823,7 +8823,7 @@ body {
 
 
 /* =========================================================
-   TITLE â€” MATCH ANTRA SANS TYPOGRAPHY
+   TITLE — MATCH ANTRA SANS TYPOGRAPHY
    ========================================================= */
 
 .antra4-hero-title {
@@ -9067,7 +9067,7 @@ body {
 
 
 /* =========================================================
-   RIGHT IMAGE â€” 50% HERO
+   RIGHT IMAGE — 50% HERO
    ========================================================= */
 
 .antra4-hero-visual {
@@ -9443,7 +9443,7 @@ body {
 
 
 /* =========================================================
-   ANTRA INDEX 4 â€” PIXEL ALIGNMENT PASS
+   ANTRA INDEX 4 — PIXEL ALIGNMENT PASS
    ========================================================= */
 
 .antra4-hero {
@@ -9730,7 +9730,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” WATERMARK CONTAINMENT FIX
+   ABOUT — WATERMARK CONTAINMENT FIX
    Keep peacock fully inside the available empty space
    ========================================================= */
 
@@ -9869,7 +9869,7 @@ body {
 
 
 /* =========================================================
-   ABOUT WATERMARK â€” TALL + NARROW FINAL ADJUSTMENT
+   ABOUT WATERMARK — TALL + NARROW FINAL ADJUSTMENT
    ========================================================= */
 
 @media (min-width: 1280px) {
@@ -9936,7 +9936,7 @@ body {
 
 
 /* =========================================================
-   ABOUT WATERMARK â€” FINAL TALL SCALE FIX
+   ABOUT WATERMARK — FINAL TALL SCALE FIX
    ========================================================= */
 
 @media (min-width: 1280px) {
@@ -10012,95 +10012,4 @@ body {
   }
 
 }
-
-
-/* =========================================================
-   ABOUT WATERMARK â€” FULL HEIGHT / NARROW / NO CROP
-   ========================================================= */
-
-@media (min-width: 1280px) {
-
-  .about-antra-watermark {
-    top: 300px;
-
-    left: max(
-      var(--page-padding),
-      calc((100vw - 1200px) / 2)
-    );
-
-    /* Give original image enough room so nothing gets cropped */
-    width: 31%;
-    height: 1050px;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-
-    /* IMPORTANT â€” do not crop logo */
-    overflow: visible;
-
-    opacity: 0.075;
-
-    pointer-events: none;
-    user-select: none;
-  }
-
-  .about-antra-watermark img {
-    display: block;
-
-    /* Height stays large */
-    width: auto;
-    height: 100%;
-
-    max-width: none;
-    max-height: none;
-
-    object-fit: contain;
-    object-position: center top;
-
-    /*
-      Make ONLY the visual width narrower.
-      Height remains exactly the same.
-    */
-    transform: scaleX(0.68);
-    transform-origin: center top;
-  }
-
-}
-
-
-@media (min-width: 901px) and (max-width: 1279px) {
-
-  .about-antra-watermark {
-    top: 310px;
-
-    width: 31%;
-    height: 950px;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-
-    overflow: visible;
-
-    opacity: 0.075;
-  }
-
-  .about-antra-watermark img {
-    width: auto;
-    height: 100%;
-
-    max-width: none;
-    max-height: none;
-
-    object-fit: contain;
-    object-position: center top;
-
-    transform: scaleX(0.68);
-    transform-origin: center top;
-  }
-
-}
-
-
 

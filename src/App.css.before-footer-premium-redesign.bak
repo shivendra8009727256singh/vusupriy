@@ -1,6 +1,6 @@
-﻿/* =========================================================
+/* =========================================================
    VASUPRIY INTERIOVILLA
-   HOME â€” HEADER / HERO / INTRO
+   HOME — HEADER / HERO / INTRO
    ========================================================= */
 
 .site {
@@ -1152,7 +1152,7 @@ body.is-loading {
 }
 
 /* =========================================================
-   ACCESSIBILITY â€” REDUCED MOTION
+   ACCESSIBILITY — REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2007,7 +2007,7 @@ body.is-loading {
 }
 
 /* =========================================================
-   SCROLLED â€” COMPACT STICKY MODE
+   SCROLLED — COMPACT STICKY MODE
    ========================================================= */
 
 .site-header--scrolled {
@@ -2074,7 +2074,7 @@ body.is-loading {
 }
 
 /* =========================================================
-   HEADER LOAD ANIMATION â€” INDIVIDUAL ELEMENTS
+   HEADER LOAD ANIMATION — INDIVIDUAL ELEMENTS
    ========================================================= */
 
 .site--ready .desktop-nav a {
@@ -5171,7 +5171,7 @@ body {
 }
 
 /* =========================================================
-   HOME â€” ABOUT VASUPRIY / ANTRA-INSPIRED EDITORIAL
+   HOME — ABOUT VASUPRIY / ANTRA-INSPIRED EDITORIAL
    ========================================================= */
 
 .about-antra {
@@ -5440,7 +5440,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” TABLET
+   ABOUT — TABLET
    ========================================================= */
 
 @media (max-width: 1100px) {
@@ -5477,7 +5477,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” TABLET / SMALL LAPTOP
+   ABOUT — TABLET / SMALL LAPTOP
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -5544,7 +5544,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” MOBILE
+   ABOUT — MOBILE
    ========================================================= */
 
 @media (max-width: 640px) {
@@ -5633,7 +5633,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” REDUCED MOTION
+   ABOUT — REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -5647,7 +5647,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” ANTRA IMAGE OFFSET + LEFT PEACOCK WATERMARK
+   ABOUT — ANTRA IMAGE OFFSET + LEFT PEACOCK WATERMARK
    ========================================================= */
 
 /* Match the same left/right relationship used by the heading */
@@ -5722,7 +5722,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” RESPONSIVE IMAGE OFFSET
+   ABOUT — RESPONSIVE IMAGE OFFSET
    ========================================================= */
 
 @media (max-width: 1100px) {
@@ -5792,7 +5792,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” FIX IMAGE WIDTH / ANTRA 30-70 COMPOSITION
+   ABOUT — FIX IMAGE WIDTH / ANTRA 30-70 COMPOSITION
    ========================================================= */
 
 @media (min-width: 901px) {
@@ -5841,7 +5841,7 @@ body {
 }
 
 
-/* Large desktop â€” slightly closer to Antra proportions */
+/* Large desktop — slightly closer to Antra proportions */
 @media (min-width: 1280px) {
 
   .about-antra-visual {
@@ -5862,7 +5862,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” ENLARGE LEFT PEACOCK WATERMARK
+   ABOUT — ENLARGE LEFT PEACOCK WATERMARK
    ========================================================= */
 
 @media (min-width: 901px) {
@@ -5908,7 +5908,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” MATCH ANTRA IMAGE HEIGHT
+   ABOUT — MATCH ANTRA IMAGE HEIGHT
    ========================================================= */
 
 @media (min-width: 901px) {
@@ -5942,7 +5942,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” VISUAL STORY + HIGHLIGHTS
+   ABOUT — VISUAL STORY + HIGHLIGHTS
    Same About section / Antra-inspired composition
    ========================================================= */
 
@@ -6252,7 +6252,7 @@ body {
 
 
 /* =========================================================
-   ABOUT WATERMARK â€” HEIGHT ONLY
+   ABOUT WATERMARK — HEIGHT ONLY
    ========================================================= */
 
 @media (min-width: 901px) {
@@ -6269,7 +6269,7 @@ body {
 
 
 /* =========================================================
-   ABOUT WATERMARK â€” FILL COMPLETE LEFT EMPTY COLUMN
+   ABOUT WATERMARK — FILL COMPLETE LEFT EMPTY COLUMN
    Only watermark sizing / vertical coverage changed
    ========================================================= */
 
@@ -6317,7 +6317,7 @@ body {
 
 /* =========================================================
    ABOUT PEACOCK WATERMARK
-   FINAL â€” HEIGHT-DRIVEN LEFT COLUMN FILL
+   FINAL — HEIGHT-DRIVEN LEFT COLUMN FILL
    ========================================================= */
 
 @media (min-width: 901px) {
@@ -6347,7 +6347,7 @@ body {
 
   .about-antra-watermark img {
     /* IMPORTANT:
-       Height controls logo size now â€” not width */
+       Height controls logo size now — not width */
     width: auto;
     max-width: none;
 
@@ -6376,7 +6376,7 @@ body {
 
 
 /* =========================================================
-   HOME â€” 3D VISUAL + OUR EXPERTISE
+   HOME — 3D VISUAL + OUR EXPERTISE
    ========================================================= */
 
 .home-expertise {
@@ -6740,7 +6740,7 @@ body {
 
 
 /* =========================================================
-   OUR EXPERTISE â€” REFERENCE IMAGE CARD TUNING
+   OUR EXPERTISE — REFERENCE IMAGE CARD TUNING
    JSX unchanged
    ========================================================= */
 
@@ -6962,7 +6962,7 @@ body {
 
 
 /* =========================================================
-   OUR EXPERTISE â€” BEFORE / AFTER TRANSFORMATION
+   OUR EXPERTISE — BEFORE / AFTER TRANSFORMATION
    ========================================================= */
 
 .expertise-transformation {
@@ -7778,7 +7778,7 @@ body {
 
 
 /* =========================================================
-   FOOTER â€” FULL PEACOCK WATERMARK
+   FOOTER — FULL PEACOCK WATERMARK
    Same brand artwork used in About
    ========================================================= */
 
@@ -7904,7 +7904,7 @@ body {
 
 
 /* =========================================================
-   VASUPRIY â€” ANTRA HOME 4 HERO
+   VASUPRIY — ANTRA HOME 4 HERO
    ========================================================= */
 
 .antra4-hero {
@@ -8727,7 +8727,7 @@ body {
 
 
 /* =========================================================
-   ANTRA INDEX 4 â€” FINAL REFERENCE MATCH
+   ANTRA INDEX 4 — FINAL REFERENCE MATCH
    Vasupriy branded content
    ========================================================= */
 
@@ -8823,7 +8823,7 @@ body {
 
 
 /* =========================================================
-   TITLE â€” MATCH ANTRA SANS TYPOGRAPHY
+   TITLE — MATCH ANTRA SANS TYPOGRAPHY
    ========================================================= */
 
 .antra4-hero-title {
@@ -9067,7 +9067,7 @@ body {
 
 
 /* =========================================================
-   RIGHT IMAGE â€” 50% HERO
+   RIGHT IMAGE — 50% HERO
    ========================================================= */
 
 .antra4-hero-visual {
@@ -9443,7 +9443,7 @@ body {
 
 
 /* =========================================================
-   ANTRA INDEX 4 â€” PIXEL ALIGNMENT PASS
+   ANTRA INDEX 4 — PIXEL ALIGNMENT PASS
    ========================================================= */
 
 .antra4-hero {
@@ -9730,7 +9730,7 @@ body {
 
 
 /* =========================================================
-   ABOUT â€” WATERMARK CONTAINMENT FIX
+   ABOUT — WATERMARK CONTAINMENT FIX
    Keep peacock fully inside the available empty space
    ========================================================= */
 
@@ -9869,7 +9869,7 @@ body {
 
 
 /* =========================================================
-   ABOUT WATERMARK â€” TALL + NARROW FINAL ADJUSTMENT
+   ABOUT WATERMARK — TALL + NARROW FINAL ADJUSTMENT
    ========================================================= */
 
 @media (min-width: 1280px) {
@@ -9936,7 +9936,7 @@ body {
 
 
 /* =========================================================
-   ABOUT WATERMARK â€” FINAL TALL SCALE FIX
+   ABOUT WATERMARK — FINAL TALL SCALE FIX
    ========================================================= */
 
 @media (min-width: 1280px) {
@@ -10015,7 +10015,7 @@ body {
 
 
 /* =========================================================
-   ABOUT WATERMARK â€” FULL HEIGHT / NARROW / NO CROP
+   ABOUT WATERMARK — FULL HEIGHT / NARROW / NO CROP
    ========================================================= */
 
 @media (min-width: 1280px) {
@@ -10036,7 +10036,7 @@ body {
     align-items: flex-start;
     justify-content: center;
 
-    /* IMPORTANT â€” do not crop logo */
+    /* IMPORTANT — do not crop logo */
     overflow: visible;
 
     opacity: 0.075;
@@ -10103,4 +10103,367 @@ body {
 }
 
 
+/* =========================================================
+   VASUPRIY FOOTER — BRAND GOLD BACKGROUND
+   ========================================================= */
+
+.site-footer {
+  background: #D7B77D !important;
+  color: #0E2943;
+}
+
+/* Make all footer sections visually continuous */
+.footer-top,
+.footer-main,
+.footer-bottom {
+  background: transparent !important;
+  color: #0E2943;
+}
+
+/* Main footer typography */
+.site-footer h1,
+.site-footer h2,
+.site-footer h3,
+.site-footer h4,
+.site-footer h5,
+.site-footer h6,
+.site-footer p,
+.site-footer li,
+.site-footer address,
+.site-footer label {
+  color: #0E2943;
+}
+
+/* Links */
+.site-footer a {
+  color: #0E2943;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+/* Borders / separators */
+.footer-top,
+.footer-main,
+.footer-bottom {
+  border-color: rgba(14, 41, 67, 0.18) !important;
+}
+
+/* Existing peacock watermark:
+   dark navy watermark works better on gold */
+.footer-peacock-watermark {
+  opacity: 0.065;
+}
+
+.footer-peacock-watermark img {
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(14%)
+    sepia(20%)
+    saturate(1900%)
+    hue-rotate(165deg)
+    brightness(84%);
+}
+
+/* Inputs if footer has newsletter/contact input */
+.site-footer input,
+.site-footer textarea {
+  color: #0E2943;
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(14, 41, 67, 0.25);
+}
+
+.site-footer input::placeholder,
+.site-footer textarea::placeholder {
+  color: rgba(14, 41, 67, 0.65);
+}
+
+
+/* =========================================================
+   VASUPRIY FOOTER — BRAND GOLD BACKGROUND
+   ========================================================= */
+
+.site-footer {
+  background: #D7B77D !important;
+  color: #0E2943;
+}
+
+/* Make all footer sections visually continuous */
+.footer-top,
+.footer-main,
+.footer-bottom {
+  background: transparent !important;
+  color: #0E2943;
+}
+
+/* Main footer typography */
+.site-footer h1,
+.site-footer h2,
+.site-footer h3,
+.site-footer h4,
+.site-footer h5,
+.site-footer h6,
+.site-footer p,
+.site-footer li,
+.site-footer address,
+.site-footer label {
+  color: #0E2943;
+}
+
+/* Links */
+.site-footer a {
+  color: #0E2943;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+/* Borders / separators */
+.footer-top,
+.footer-main,
+.footer-bottom {
+  border-color: rgba(14, 41, 67, 0.18) !important;
+}
+
+/* Existing peacock watermark:
+   dark navy watermark works better on gold */
+.footer-peacock-watermark {
+  opacity: 0.065;
+}
+
+.footer-peacock-watermark img {
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(14%)
+    sepia(20%)
+    saturate(1900%)
+    hue-rotate(165deg)
+    brightness(84%);
+}
+
+/* Inputs if footer has newsletter/contact input */
+.site-footer input,
+.site-footer textarea {
+  color: #0E2943;
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(14, 41, 67, 0.25);
+}
+
+.site-footer input::placeholder,
+.site-footer textarea::placeholder {
+  color: rgba(14, 41, 67, 0.65);
+}
+
+
+/* =========================================================
+   FOOTER FINAL BACKGROUND SPLIT
+   CTA = original dark
+   Actual footer = Vasupriy gold
+   ========================================================= */
+
+/* Parent must NOT paint gold behind everything */
+.site-footer {
+  background: #0E2943 !important;
+}
+
+
+/* ---------------------------------------------------------
+   CTA SECTION
+   "Let's create a space that feels like you."
+   Keep this OUTSIDE the gold footer visually
+   --------------------------------------------------------- */
+
+.site-footer .footer-top {
+  position: relative;
+
+  background: #0E2943 !important;
+  color: #ffffff !important;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.12) !important;
+}
+
+.site-footer .footer-top h1,
+.site-footer .footer-top h2,
+.site-footer .footer-top h3,
+.site-footer .footer-top p,
+.site-footer .footer-top span,
+.site-footer .footer-top a {
+  color: inherit;
+}
+
+/* CTA small label */
+.site-footer .footer-cta-label {
+  color: rgba(255, 255, 255, 0.62) !important;
+}
+
+/* Main CTA heading/link */
+.site-footer .footer-big-link {
+  color: #ffffff !important;
+}
+
+.site-footer .footer-big-link em {
+  color: #D7B77D !important;
+}
+
+/* CTA circular arrow */
+.site-footer .footer-circle-arrow {
+  color: #0E2943 !important;
+  background: #D7B77D !important;
+}
+
+
+/* ---------------------------------------------------------
+   ACTUAL FOOTER STARTS HERE
+   --------------------------------------------------------- */
+
+.site-footer .footer-main {
+  position: relative;
+
+  background: #D7B77D !important;
+  color: #0E2943 !important;
+}
+
+
+/* Bottom copyright also part of actual footer */
+
+.site-footer .footer-bottom {
+  position: relative;
+
+  background: #D7B77D !important;
+  color: #0E2943 !important;
+
+  border-top:
+    1px solid
+    rgba(14, 41, 67, 0.18) !important;
+}
+
+
+/* ---------------------------------------------------------
+   ACTUAL FOOTER TYPOGRAPHY
+   --------------------------------------------------------- */
+
+.site-footer .footer-main h1,
+.site-footer .footer-main h2,
+.site-footer .footer-main h3,
+.site-footer .footer-main h4,
+.site-footer .footer-main h5,
+.site-footer .footer-main h6,
+.site-footer .footer-main p,
+.site-footer .footer-main span,
+.site-footer .footer-main li,
+.site-footer .footer-main address,
+.site-footer .footer-main label,
+.site-footer .footer-main a,
+
+.site-footer .footer-bottom h1,
+.site-footer .footer-bottom h2,
+.site-footer .footer-bottom h3,
+.site-footer .footer-bottom h4,
+.site-footer .footer-bottom p,
+.site-footer .footer-bottom span,
+.site-footer .footer-bottom a {
+  color: #0E2943;
+}
+
+
+/* Footer headings */
+
+.site-footer .footer-main .footer-heading {
+  color: #0E2943 !important;
+}
+
+
+/* Navigation */
+
+.site-footer .footer-main .footer-links a {
+  color: #0E2943 !important;
+}
+
+.site-footer .footer-main .footer-links a:hover {
+  color: #ffffff !important;
+}
+
+
+/* Expertise list */
+
+.site-footer .footer-main .footer-service-list span {
+  color: rgba(14, 41, 67, 0.82) !important;
+}
+
+
+/* Description text */
+
+.site-footer .footer-main p {
+  color: rgba(14, 41, 67, 0.76) !important;
+}
+
+
+/* Established label */
+
+.site-footer .footer-main .footer-since {
+  color: #0E2943 !important;
+}
+
+
+/* Consultation button */
+
+.site-footer .footer-main .footer-consultation {
+  color: #0E2943 !important;
+  border-color: rgba(14, 41, 67, 0.35) !important;
+}
+
+.site-footer .footer-main .footer-consultation:hover {
+  color: #ffffff !important;
+  background: #0E2943 !important;
+  border-color: #0E2943 !important;
+}
+
+
+/* Social buttons */
+
+.site-footer .footer-main .footer-socials a {
+  color: #0E2943 !important;
+  border-color: rgba(14, 41, 67, 0.30) !important;
+}
+
+.site-footer .footer-main .footer-socials a:hover {
+  color: #ffffff !important;
+  background: #0E2943 !important;
+  border-color: #0E2943 !important;
+}
+
+
+/* ---------------------------------------------------------
+   COPYRIGHT / BACK TO TOP
+   --------------------------------------------------------- */
+
+.site-footer .footer-bottom p {
+  color: rgba(14, 41, 67, 0.68) !important;
+}
+
+.site-footer .footer-bottom .back-to-top {
+  color: #0E2943 !important;
+}
+
+.site-footer .footer-bottom .back-to-top:hover {
+  color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   PEACOCK WATERMARK
+
+   Hide the global footer watermark from CTA.
+   We don't want artwork visually crossing both backgrounds.
+   --------------------------------------------------------- */
+
+.site-footer > .footer-peacock-watermark {
+  display: none !important;
+}
 
