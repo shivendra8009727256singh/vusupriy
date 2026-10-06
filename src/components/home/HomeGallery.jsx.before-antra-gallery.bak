@@ -1,0 +1,236 @@
+﻿import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
+
+import './HomeGallery.css'
+
+const galleryItems = [
+  {
+    id: '01',
+    title: 'Living Spaces',
+    category: 'Residential Interior',
+    image:
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85',
+  },
+  {
+    id: '02',
+    title: 'Modern Living',
+    category: 'Interior Styling',
+    image:
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=85',
+  },
+  {
+    id: '03',
+    title: 'Refined Dining',
+    category: 'Space Design',
+    image:
+      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85',
+  },
+  {
+    id: '04',
+    title: 'Warm Minimalism',
+    category: 'Residential Interior',
+    image:
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85',
+  },
+  {
+    id: '05',
+    title: 'Elegant Details',
+    category: 'Interior Styling',
+    image:
+      'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=85',
+  },
+]
+
+const AUTO_DELAY = 2800
+
+export default function HomeGallery() {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [paused, setPaused] = useState(false)
+  const touchStart = useRef(null)
+
+  const next = () => {
+    setActiveIndex((current) => (current + 1) % galleryItems.length)
+  }
+
+  const previous = () => {
+    setActiveIndex(
+      (current) =>
+        (current - 1 + galleryItems.length) % galleryItems.length,
+    )
+  }
+
+  useEffect(() => {
+    if (paused) return undefined
+
+    const timer = window.setInterval(next, AUTO_DELAY)
+
+    return () => window.clearInterval(timer)
+  }, [paused])
+
+  const getPosition = (index) => {
+    const total = galleryItems.length
+    let difference = index - activeIndex
+
+    if (difference > total / 2) difference -= total
+    if (difference < -total / 2) difference += total
+
+    if (difference === 0) return 'active'
+    if (difference === 1) return 'next'
+    if (difference === -1) return 'previous'
+    if (difference === 2) return 'far-next'
+    if (difference === -2) return 'far-previous'
+
+    return 'hidden'
+  }
+
+  const handleTouchStart = (event) => {
+    touchStart.current = event.touches[0]?.clientX ?? null
+  }
+
+  const handleTouchEnd = (event) => {
+    if (touchStart.current === null) return
+
+    const endX =
+      event.changedTouches[0]?.clientX ?? touchStart.current
+
+    const distance = endX - touchStart.current
+
+    if (Math.abs(distance) > 45) {
+      if (distance < 0) next()
+      else previous()
+    }
+
+    touchStart.current = null
+  }
+
+  return (
+    <section
+      className="home-gallery"
+      id="home-gallery"
+      aria-labelledby="home-gallery-title"
+      data-scroll-section
+    >
+      <div className="home-gallery-heading site-container">
+        <div className="home-gallery-heading-copy" data-reveal>
+          <span className="home-gallery-eyebrow">
+            <i aria-hidden="true" />
+            Selected Works
+          </span>
+
+          <h2 id="home-gallery-title">
+            Spaces that tell
+            <br />
+            <em>our story.</em>
+          </h2>
+        </div>
+
+        <div className="home-gallery-heading-side" data-reveal>
+          <p>
+            Explore a selection of thoughtfully designed spaces
+            shaped through detail, material and refined execution.
+          </p>
+
+          <Link to="/gallery">
+            View Gallery
+            <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
+      </div>
+
+      <div
+        className="home-gallery-stage"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+        onFocus={() => setPaused(true)}
+        onBlur={() => setPaused(false)}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className="home-gallery-track">
+          {galleryItems.map((item, index) => {
+            const position = getPosition(index)
+
+            return (
+              <button
+                className={`home-gallery-card home-gallery-card--${position}`}
+                type="button"
+                key={item.id}
+                onClick={() => setActiveIndex(index)}
+                aria-label={`Show ${item.title}`}
+              >
+                <img
+                  src={item.image}
+                  alt={`${item.title} by Vasupriy Interiovilla`}
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <span className="home-gallery-shade" />
+
+                <span className="home-gallery-card-number">
+                  {item.id}
+                </span>
+
+                <span className="home-gallery-card-copy">
+                  <small>{item.category}</small>
+                  <strong>{item.title}</strong>
+                </span>
+
+                <span
+                  className="home-gallery-card-arrow"
+                  aria-hidden="true"
+                >
+                  ↗
+                </span>
+              </button>
+            )
+          })}
+        </div>
+
+        <button
+          className="home-gallery-nav home-gallery-nav--previous"
+          type="button"
+          onClick={previous}
+          aria-label="Previous gallery image"
+        >
+          ←
+        </button>
+
+        <button
+          className="home-gallery-nav home-gallery-nav--next"
+          type="button"
+          onClick={next}
+          aria-label="Next gallery image"
+        >
+          →
+        </button>
+      </div>
+
+      <div className="home-gallery-footer site-container">
+        <span>
+          {String(activeIndex + 1).padStart(2, '0')}
+        </span>
+
+        <div className="home-gallery-progress">
+          {galleryItems.map((item, index) => (
+            <button
+              key={item.id}
+              type="button"
+              className={
+                index === activeIndex
+                  ? 'home-gallery-dot home-gallery-dot--active'
+                  : 'home-gallery-dot'
+              }
+              onClick={() => setActiveIndex(index)}
+              aria-label={`Show ${item.title}`}
+            />
+          ))}
+        </div>
+
+        <span>
+          {String(galleryItems.length).padStart(2, '0')}
+        </span>
+      </div>
+    </section>
+  )
+}

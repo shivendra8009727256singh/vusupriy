@@ -7,7 +7,6 @@ import useScrollMotion from '../../hooks/useScrollMotion.js'
 import InteriorProductsPreview from '../../components/home/InteriorProductsPreview.jsx'
 import WhyVasupriy from '../../components/home/WhyVasupriy.jsx'
 import BeforeAfterTransformation from '../../components/home/BeforeAfterTransformation.jsx'
-import HomeGallery from '../../components/home/HomeGallery.jsx'
 
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
 import BrandStrip from '../../components/home/BrandStrip.jsx'
@@ -1143,7 +1142,8 @@ function Home() {
             className="interior-architecture-word"
             aria-hidden="true"
           >
-            vasupriy</div>
+            interior
+          </div>
 
           <div
             className="interior-architecture-image"
@@ -1155,16 +1155,12 @@ function Home() {
             />
           </div>
         </section>
-
-        <HomeGallery />
       </div>
     </>
   )
 }
 
 export default Home
-
-
 
 
 

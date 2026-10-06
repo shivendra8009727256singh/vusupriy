@@ -7,7 +7,6 @@ import useScrollMotion from '../../hooks/useScrollMotion.js'
 import InteriorProductsPreview from '../../components/home/InteriorProductsPreview.jsx'
 import WhyVasupriy from '../../components/home/WhyVasupriy.jsx'
 import BeforeAfterTransformation from '../../components/home/BeforeAfterTransformation.jsx'
-import HomeGallery from '../../components/home/HomeGallery.jsx'
 
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
 import BrandStrip from '../../components/home/BrandStrip.jsx'
@@ -21,7 +20,6 @@ import serviceExecution from '../../assets/images/home/services/execution-turnke
 import serviceArchitecture from '../../assets/images/home/services/architectural-civil.png'
 import expertiseFloorPlan from '../../assets/images/home/expertise/interior-3d-floor-plan.png'
 import expertiseInterior from '../../assets/images/home/expertise/expertise-interior.png'
-import interiorShowcaseImage from '../../assets/images/home/interior-showcase.png'
 
 function Preloader({ leaving }) {
   return (
@@ -1133,39 +1131,12 @@ function Home() {
         <InteriorProductsPreview />
 
         <WhyVasupriy />
-
-        <section
-          className="interior-architecture-showcase"
-          aria-label="Vasupriy architectural interior showcase"
-          data-scroll-section
-        >
-          <div
-            className="interior-architecture-word"
-            aria-hidden="true"
-          >
-            vasupriy</div>
-
-          <div
-            className="interior-architecture-image"
-            data-reveal
-          >
-            <img
-              src={interiorShowcaseImage}
-              alt="Modern architectural interior by Vasupriy Interiovilla"
-            />
-          </div>
-        </section>
-
-        <HomeGallery />
       </div>
     </>
   )
 }
 
 export default Home
-
-
-
 
 
 
