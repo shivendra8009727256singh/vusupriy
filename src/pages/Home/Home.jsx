@@ -11,6 +11,7 @@ import BeforeAfterTransformation from '../../components/home/BeforeAfterTransfor
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
 import BrandStrip from '../../components/home/BrandStrip.jsx'
 import antra4HeroImage from '../../assets/images/home/hero-interior.png'
+import heroArchitectureWatermark from '../../assets/images/home/hero-architecture-watermark.png'
 import residentialInterior from '../../assets/images/home/projects/residential-interior.png'
 import commercialSpace from '../../assets/images/home/projects/commercial-space.png'
 import spaceMakeover from '../../assets/images/home/projects/space-makeover.png'
@@ -186,9 +187,11 @@ function Home() {
             className="antra4-hero-blueprint"
             aria-hidden="true"
           >
-            <span className="antra4-blueprint-line antra4-blueprint-line--one" />
-            <span className="antra4-blueprint-line antra4-blueprint-line--two" />
-            <span className="antra4-blueprint-line antra4-blueprint-line--three" />
+            <img
+              src={heroArchitectureWatermark}
+              alt=""
+              className="antra4-hero-blueprint-image"
+            />
           </div>
 
           <div className="site-container antra4-hero-container">
@@ -203,7 +206,7 @@ function Home() {
               <h1 className="antra4-hero-title">
 
                 <span className="antra4-title-line antra4-title-line--video">
-                  <span>Find Your</span>
+                  <span>Your One</span>
 
                   <span
                     className="antra4-video-pill"
@@ -221,15 +224,15 @@ function Home() {
                 </span>
 
                 <span className="antra4-title-line">
-                  Inspired
+                  stop 
                 </span>
 
                 <em className="antra4-title-line">
-                  Interior
+                  Interior 
                 </em>
 
                 <em className="antra4-title-line">
-                  Design
+                  Solutions
                 </em>
 
               </h1>
@@ -318,12 +321,6 @@ function Home() {
           id="about"
           data-scroll-section
         >
-          <div
-            className="about-antra-watermark"
-            aria-hidden="true"
-          >
-            <img src={vasupriyLogo} alt="" />
-          </div>
 
           <div className="site-container about-antra-container">
             <div
@@ -346,11 +343,20 @@ function Home() {
               </div>
             </div>
 
-            <div className="about-antra-visual" data-reveal>
-              <img
-                src={residentialInterior}
-                alt="Vasupriy residential interior design"
-              />
+            <div className="about-antra-media-row">
+              <div
+                className="about-antra-watermark"
+                aria-hidden="true"
+              >
+                <img src={vasupriyLogo} alt="" />
+              </div>
+
+              <div className="about-antra-visual" data-reveal>
+                <img
+                  src={residentialInterior}
+                  alt="Vasupriy residential interior design"
+                />
+              </div>
             </div>
 
             <div className="about-antra-statement" data-reveal>
@@ -725,7 +731,7 @@ function Home() {
                   Our Services
                 </span>
 
-                <span className="home-services-count">01 — 04</span>
+                <span className="home-services-count">01 — 03</span>
               </div>
 
               <div className="home-services-heading-copy">
@@ -1131,6 +1137,9 @@ function Home() {
 }
 
 export default Home
+
+
+
 
 
 

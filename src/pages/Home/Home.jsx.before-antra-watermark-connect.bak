@@ -11,6 +11,7 @@ import BeforeAfterTransformation from '../../components/home/BeforeAfterTransfor
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
 import BrandStrip from '../../components/home/BrandStrip.jsx'
 import antra4HeroImage from '../../assets/images/home/hero-interior.png'
+import heroArchitectureWatermark from '../../assets/images/home/hero-architecture-watermark.png'
 import residentialInterior from '../../assets/images/home/projects/residential-interior.png'
 import commercialSpace from '../../assets/images/home/projects/commercial-space.png'
 import spaceMakeover from '../../assets/images/home/projects/space-makeover.png'
@@ -133,12 +134,7 @@ function Home() {
       description:
         'Integrated architectural and civil support for spaces that need planning, structural coordination and refined execution.',
     },
-    {
-      number: '04',
-      title: '2D & 3D Visualization',
-      description:
-        'Clear 2D planning and immersive 3D visualization to help you understand the space and design direction before execution.',
-    },
+
   ]
   useScrollMotion(siteRef, projectIndexRef, setActiveProject)
 
@@ -191,9 +187,11 @@ function Home() {
             className="antra4-hero-blueprint"
             aria-hidden="true"
           >
-            <span className="antra4-blueprint-line antra4-blueprint-line--one" />
-            <span className="antra4-blueprint-line antra4-blueprint-line--two" />
-            <span className="antra4-blueprint-line antra4-blueprint-line--three" />
+            <img
+              src={heroArchitectureWatermark}
+              alt=""
+              className="antra4-hero-blueprint-image"
+            />
           </div>
 
           <div className="site-container antra4-hero-container">
@@ -304,7 +302,7 @@ function Home() {
             {[0, 1].map(copy => (
               <div className="brand-strip-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>
                 {['Residential Interiors', 'Commercial Spaces', 'Space Makeovers',
-                  '2D & 3D Visualization', 'Custom Design', 'End-to-End Execution'].map(label => (
+                  'Custom Design', 'End-to-End Execution'].map(label => (
                   <span className="brand-strip-item" key={label}>
                     <span>{label}</span><i aria-hidden="true" />
                   </span>
@@ -323,12 +321,6 @@ function Home() {
           id="about"
           data-scroll-section
         >
-          <div
-            className="about-antra-watermark"
-            aria-hidden="true"
-          >
-            <img src={vasupriyLogo} alt="" />
-          </div>
 
           <div className="site-container about-antra-container">
             <div
@@ -351,11 +343,20 @@ function Home() {
               </div>
             </div>
 
-            <div className="about-antra-visual" data-reveal>
-              <img
-                src={residentialInterior}
-                alt="Vasupriy residential interior design"
-              />
+            <div className="about-antra-media-row">
+              <div
+                className="about-antra-watermark"
+                aria-hidden="true"
+              >
+                <img src={vasupriyLogo} alt="" />
+              </div>
+
+              <div className="about-antra-visual" data-reveal>
+                <img
+                  src={residentialInterior}
+                  alt="Vasupriy residential interior design"
+                />
+              </div>
             </div>
 
             <div className="about-antra-statement" data-reveal>
@@ -1039,7 +1040,7 @@ function Home() {
               <div className="expertise-showcase-heading-space">
                 <span className="expertise-showcase-label">
                   <i aria-hidden="true" />
-                  Our Expertise
+                 Our clients say
                 </span>
               </div>
 
@@ -1136,6 +1137,9 @@ function Home() {
 }
 
 export default Home
+
+
+
 
 
 

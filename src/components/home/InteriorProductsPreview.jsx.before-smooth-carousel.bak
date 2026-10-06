@@ -53,11 +53,6 @@ export default function InteriorProductsPreview() {
   const touchStartX = useRef(null)
   const slideTimeoutRef = useRef(null)
 
-  const sliderProducts = [
-    ...products,
-    ...products,
-  ]
-
   const startSlide = () => {
     if (isSliding) return
 
@@ -87,6 +82,10 @@ export default function InteriorProductsPreview() {
     }
   }, [])
 
+  const sliderProducts = [0, 1, 2, 3].map(
+    (offset) => products[(activeIndex + offset) % products.length],
+  )
+
   const handleTouchStart = (event) => {
     touchStartX.current = event.touches[0]?.clientX ?? null
   }
@@ -110,9 +109,6 @@ export default function InteriorProductsPreview() {
     if (isSliding) return
     setActiveIndex(index)
   }
-
-  const trackIndex =
-    activeIndex + (isSliding ? 1 : 0)
 
   return (
     <section
@@ -168,6 +164,8 @@ export default function InteriorProductsPreview() {
           className="products-gallery-slider"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
+          onFocus={() => setIsPaused(true)}
+          onBlur={() => setIsPaused(false)}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
           aria-label="Interior products gallery"
@@ -177,17 +175,14 @@ export default function InteriorProductsPreview() {
             <div
               className={`products-gallery-track ${
                 isSliding
-                  ? 'products-gallery-track--animate'
+                  ? 'products-gallery-track--sliding'
                   : ''
               }`}
-              style={{
-                '--product-index': trackIndex,
-              }}
             >
               {sliderProducts.map((product, index) => (
                 <article
-                  className="products-gallery-card"
-                  key={`${product.id}-${index}`}
+                  className={`products-gallery-card products-gallery-card--${index + 1}`}
+                  key={`${activeIndex}-${index}-${product.id}`}
                 >
                   <img
                     src={product.image}

@@ -621,7 +621,7 @@ return (
                   Our Services
                 </span>
 
-                <span className="home-services-count">01 — 04</span>
+                <span className="home-services-count">01 — 03</span>
               </div>
 
               <div className="home-services-heading-copy">

@@ -10270,850 +10270,394 @@ body {
 }
 
 
+
+
 /* =========================================================
-   HERO — ANTRA ORIGINAL BLUEPRINT
-   FINAL POSITION / SCALE
+   HERO — ARCHITECTURAL BLUEPRINT WATERMARK
    ========================================================= */
 
-.antra4-hero {
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-
-/* LEFT HALF ONLY — same zone as hero copy */
 .antra4-hero-blueprint {
   position: absolute !important;
-
-  left: 0 !important;
-  top: 0 !important;
-
-  width: 50.5% !important;
-  height: 100% !important;
-
-  display: block !important;
-
-  overflow: hidden !important;
-
   z-index: 0 !important;
 
-  opacity: 1 !important;
-  visibility: visible !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
 
-  background: transparent !important;
+  width: 52% !important;
+  height: 100% !important;
 
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(247, 247, 246, 0.10) 0%,
+      rgba(247, 247, 246, 0.20) 70%,
+      rgba(247, 247, 246, 0.96) 100%
+    ),
+    url('./assets/images/home/hero-architecture-watermark.png') !important;
 
+  background-repeat: no-repeat !important;
+  background-position: left 52%, center 54% !important;
+  background-size: 100% 100%, 94% auto !important;
+
+  opacity: 0.20 !important;
+
+  overflow: hidden !important;
   pointer-events: none !important;
 }
 
-
-/* Remove old generated decoration */
+/* Remove old CSS-generated fake blueprint shapes */
 .antra4-hero-blueprint::before,
 .antra4-hero-blueprint::after {
   content: none !important;
   display: none !important;
 }
 
+@media (max-width: 900px) {
+  .antra4-hero-blueprint {
+    width: 100% !important;
 
-/*
-  ORIGINAL ANTRA PNG
+    background-position: center 35% !important;
+    background-size: 100% 100%, 105% auto !important;
 
-  IMPORTANT:
-  - PNG already contains BOTH buildings.
-  - Preserve original aspect ratio.
-  - No object-fit cover.
-  - No artificial height.
-  - Scale using WIDTH only.
-*/
-.antra4-hero-blueprint-image {
+    opacity: 0.13 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .antra4-hero-blueprint {
+    background-position: center 28% !important;
+    background-size: 100% 100%, 125% auto !important;
+
+    opacity: 0.10 !important;
+  }
+}
+
+
+/* =========================================================
+   HERO — REAL ARCHITECTURAL WATERMARK IMAGE
+   ========================================================= */
+
+.antra4-hero-blueprint {
   position: absolute !important;
+  z-index: 1 !important;
 
-  /*
-    Original image is extremely wide because both buildings
-    are part of the same artwork.
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
 
-    Increasing width makes each building large enough to
-    match Antra without vertically stretching the PNG.
-  */
-  width: 190% !important;
-  height: auto !important;
-
-  max-width: none !important;
-  max-height: none !important;
-
-  /*
-    Center the wide two-building composition inside
-    the left hero half.
-  */
-  left: -45% !important;
-
-  /*
-    Antra architecture begins around Inspired and continues
-    behind Interior / Design.
-  */
-  top: 35% !important;
-  bottom: auto !important;
+  width: 52% !important;
+  height: 100% !important;
 
   display: block !important;
 
-  object-fit: initial !important;
-  object-position: initial !important;
+  background: transparent !important;
+  opacity: 1 !important;
 
-  /*
-    Keep the original artwork subtle.
-    The PNG already contains its own light line work.
-  */
-  opacity: 0.42 !important;
-
-  filter: none !important;
-  mix-blend-mode: normal !important;
-
-  transform: none !important;
-
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
-
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-
+  overflow: hidden !important;
   pointer-events: none !important;
-  user-select: none !important;
+}
+
+.antra4-hero-blueprint::before,
+.antra4-hero-blueprint::after {
+  content: none !important;
+  display: none !important;
+}
+
+.antra4-hero-blueprint-image {
+  position: absolute;
+
+  left: 2%;
+  bottom: 3%;
+
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center center;
+
+  opacity: 0.28;
+
+  mix-blend-mode: multiply;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Keep actual hero content above blueprint */
+.antra4-hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .antra4-hero-blueprint {
+    width: 100% !important;
+  }
+
+  .antra4-hero-blueprint-image {
+    left: -5%;
+    bottom: 15%;
+
+    width: 115%;
+
+    opacity: 0.10;
+  }
+}
+
+@media (max-width: 600px) {
+  .antra4-hero-blueprint-image {
+    left: -15%;
+    bottom: 25%;
+
+    width: 135%;
+
+    opacity: 0.08;
+  }
 }
 
 
-/* Text/content above architectural artwork */
-.antra4-hero-container {
-  position: relative !important;
-  z-index: 2 !important;
+
+/* TEMP — HERO BLUEPRINT VISIBILITY TEST */
+.antra4-hero-blueprint {
+  z-index: 10 !important;
+  width: 50% !important;
+  height: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.antra4-hero-blueprint-image {
+  position: absolute !important;
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block !important;
+  visibility: visible !important;
+
+  object-fit: contain !important;
+
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+
+  filter: contrast(300%) brightness(60%) !important;
+
+  outline: 3px solid red !important;
 }
 
 
 /* =========================================================
-   TABLET
+   HERO BLUEPRINT — ANTRA REFERENCE MATCH
    ========================================================= */
+
+@media (min-width: 901px) {
+
+  .antra4-hero-blueprint {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+
+    width: 51% !important;
+    height: 100% !important;
+
+    z-index: 1 !important;
+
+    overflow: hidden !important;
+    pointer-events: none !important;
+
+    opacity: 1 !important;
+  }
+
+  .antra4-hero-blueprint-image {
+    position: absolute !important;
+
+    /* Antra: architecture emerges from lower part */
+    left: 10% !important;
+    bottom: -5% !important;
+
+    width: 98% !important;
+    height: 62% !important;
+
+    object-fit: contain !important;
+    object-position: center bottom !important;
+
+    /* Much softer than previous version */
+    opacity: 0.055 !important;
+
+    filter:
+      grayscale(1)
+      contrast(0.58)
+      brightness(1.42) !important;
+
+    mix-blend-mode: multiply !important;
+
+    /*
+      Fade architecture at top and edges,
+      matching the ghosted Antra treatment.
+    */
+    -webkit-mask-image:
+      linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0,0,0,0.18) 12%,
+        rgba(0,0,0,0.72) 34%,
+        #000 55%,
+        #000 88%,
+        transparent 100%
+      );
+
+    mask-image:
+      linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0,0,0,0.18) 12%,
+        rgba(0,0,0,0.72) 34%,
+        #000 55%,
+        #000 88%,
+        transparent 100%
+      );
+
+    pointer-events: none !important;
+  }
+
+}
+
+
+/* Tablet */
+@media (max-width: 900px) {
+
+  .antra4-hero-blueprint-image {
+    opacity: 0.04 !important;
+
+    filter:
+      grayscale(1)
+      contrast(0.55)
+      brightness(1.45) !important;
+  }
+
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .antra4-hero-blueprint-image {
+    opacity: 0.025 !important;
+  }
+
+}
+
+
+/* =========================================================
+   HERO BLUEPRINT — BALANCED FINAL VISIBILITY
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+  .antra4-hero-blueprint {
+    width: 51% !important;
+    height: 100% !important;
+
+    z-index: 1 !important;
+    opacity: 1 !important;
+
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .antra4-hero-blueprint-image {
+    position: absolute !important;
+
+    /* Keep building lower like Antra */
+    left: 7% !important;
+    bottom: -2% !important;
+
+    width: 100% !important;
+    height: 68% !important;
+
+    object-fit: contain !important;
+    object-position: center bottom !important;
+
+    /* Visible, but still a watermark */
+    opacity: 0.13 !important;
+
+    filter:
+      grayscale(1)
+      contrast(0.82)
+      brightness(1.08) !important;
+
+    mix-blend-mode: multiply !important;
+
+    /* REMOVE previous aggressive fade */
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+
+    pointer-events: none !important;
+  }
+
+}
 
 @media (max-width: 900px) {
 
-  .antra4-hero-blueprint {
-    width: 100% !important;
-  }
-
   .antra4-hero-blueprint-image {
-    width: 170% !important;
+    opacity: 0.08 !important;
 
-    left: -35% !important;
-    top: 36% !important;
-
-    height: auto !important;
-
-    opacity: 0.24 !important;
+    filter:
+      grayscale(1)
+      contrast(0.78)
+      brightness(1.10) !important;
   }
+
 }
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
 
 @media (max-width: 600px) {
 
   .antra4-hero-blueprint-image {
-    width: 190% !important;
-
-    left: -45% !important;
-    top: 39% !important;
-
-    height: auto !important;
-
-    opacity: 0.17 !important;
+    opacity: 0.055 !important;
   }
+
 }
 
 
 /* =========================================================
-   HERO BLUEPRINT — VISIBILITY / POSITION FINAL TUNE
+   HERO BLUEPRINT — REMOVE VISIBLE OUTER FRAME
    ========================================================= */
 
 @media (min-width: 901px) {
 
   .antra4-hero-blueprint {
-    width: 50.5% !important;
-    height: 100% !important;
     overflow: hidden !important;
   }
 
   .antra4-hero-blueprint-image {
     /*
-      Keep the original 2-building PNG intact.
-      Bigger + higher, like Antra reference.
+      Slight oversize pushes the artwork's outer technical
+      boundary outside the visible hero area.
     */
-    width: 205% !important;
-    height: auto !important;
-
-    left: -52.5% !important;
-    top: 25% !important;
-    bottom: auto !important;
-
-    opacity: 0.72 !important;
-
-    object-fit: initial !important;
-    object-position: initial !important;
-
-    filter: none !important;
-    mix-blend-mode: normal !important;
-
-    transform: none !important;
-  }
-}
-
-
-/* =========================================================
-   HERO BLUEPRINT — DIAGNOSTIC VISIBILITY
-   ========================================================= */
-
-@media (min-width: 901px) {
-
-  .antra4-hero-blueprint {
-    left: 0 !important;
-    top: 0 !important;
-    width: 50% !important;
-    height: 100% !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-    overflow: hidden !important;
-
-    z-index: 1 !important;
-  }
-
-  .antra4-hero-blueprint-image {
-    position: absolute !important;
-
-    width: 200% !important;
-    height: auto !important;
-
-    left: -50% !important;
-    top: 23% !important;
-    bottom: auto !important;
-
-    opacity: 1 !important;
-
-    /* TEMPORARY: force faint Antra lines to become visible */
-    filter: contrast(350%) brightness(55%) !important;
-
-    mix-blend-mode: multiply !important;
-
-    transform: none !important;
-    object-fit: initial !important;
-
-    visibility: visible !important;
-  }
-
-  .antra4-hero-container {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-}
-
-
-/* HERO BLUEPRINT — STRONG VISIBILITY TEST */
-@media (min-width: 901px) {
-  .antra4-hero-blueprint-image {
-    opacity: 1 !important;
-    filter: contrast(200%) brightness(75%) !important;
-    mix-blend-mode: multiply !important;
-  }
-}
-
-
-/* =========================================================
-   HERO BLUEPRINT — ANTRA COMPOSITION FINAL TUNE
-   ========================================================= */
-
-@media (min-width: 901px) {
-
-  .antra4-hero-blueprint {
-    position: absolute !important;
-
-    left: 0 !important;
-    top: 0 !important;
-
-    width: 50.5% !important;
-    height: 100% !important;
-
-    overflow: hidden !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-
-    z-index: 0 !important;
-  }
-
-  .antra4-hero-blueprint-image {
-    position: absolute !important;
-
-    /*
-      Keep BOTH buildings from the original Antra PNG
-      inside the left hero composition.
-    */
-    width: 112% !important;
-    height: auto !important;
-
-    left: -6% !important;
-
-    /*
-      Move architecture behind Inspired / Interior / Design.
-    */
-    top: 31% !important;
-    bottom: auto !important;
-
-    max-width: none !important;
-    max-height: none !important;
-
-    object-fit: initial !important;
-
-    /*
-      Original Antra artwork is already subtle.
-      Slight boost only — no aggressive dark filter.
-    */
-    opacity: 1 !important;
-
-    filter: contrast(125%) brightness(94%) !important;
-    mix-blend-mode: multiply !important;
-
-    transform: none !important;
-
-    border: 0 !important;
-    outline: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .antra4-hero-container {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-}
-
-
-/* =========================================================
-   HERO BLUEPRINT — ANTRA ALIGNMENT
-   ========================================================= */
-
-@media (min-width: 901px) {
-  .antra4-hero-blueprint-image {
-    /* Current horizontal composition is correct */
-    width: 112% !important;
-    left: -6% !important;
-
-    /* Move architecture down like Antra */
-    top: 42% !important;
-
-    /* Softer architectural background */
-    opacity: 0.78 !important;
-    filter: contrast(112%) brightness(98%) !important;
-    mix-blend-mode: multiply !important;
-  }
-}
-
-
-/* =========================================================
-   HERO BLUEPRINT — ANTRA EXACT LARGE SCALE
-   ========================================================= */
-
-@media (min-width: 901px) {
-
-  .antra4-hero-blueprint {
-    width: 50.5% !important;
-    height: 100% !important;
-    overflow: hidden !important;
-  }
-
-  .antra4-hero-blueprint-image {
-    /*
-      Larger scale to match Antra reference.
-      Source PNG has large internal transparent space,
-      therefore CSS width must be substantially larger.
-    */
-    width: 175% !important;
-    height: auto !important;
-
-    left: -37.5% !important;
-
-    /* Architecture begins around Inspired and fills
-       Interior / Design background like Antra */
-    top: 32% !important;
-    bottom: auto !important;
-
-    max-width: none !important;
-    max-height: none !important;
-
-    opacity: 0.82 !important;
-
-    filter: contrast(110%) brightness(99%) !important;
-    mix-blend-mode: multiply !important;
-
-    transform: none !important;
-  }
-}
-
-
-/* =========================================================
-   HERO BLUEPRINT — ANTRA PROPORTION FIX
-   Source artwork: 1920 x 505
-   Scale by HEIGHT, not width
-   ========================================================= */
-
-@media (min-width: 901px) {
-
-  .antra4-hero-blueprint {
-    position: absolute !important;
-
-    left: 0 !important;
-    top: 0 !important;
-
-    width: 50.5% !important;
-    height: 100% !important;
-
-    overflow: hidden !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-
-    z-index: 0 !important;
-    pointer-events: none !important;
-  }
-
-  .antra4-hero-blueprint-image {
-    position: absolute !important;
-
-    /*
-      Source is 1920x505, so width-based sizing makes
-      the architecture tiny.
-
-      Size it from HEIGHT instead.
-    */
-    width: auto !important;
-    height: 72% !important;
-
-    max-width: none !important;
-    max-height: none !important;
-
-    /*
-      Center the very-wide two-building artwork.
-    */
-    left: 50% !important;
-    right: auto !important;
-
-    top: 25% !important;
-    bottom: auto !important;
-
-    transform: translateX(-50%) !important;
+    left: -5% !important;
+    bottom: -9% !important;
+
+    width: 116% !important;
+    height: 78% !important;
 
     object-fit: contain !important;
+    object-position: center bottom !important;
 
-    opacity: 1 !important;
+    opacity: 0.13 !important;
 
-    filter: none !important;
-    mix-blend-mode: multiply !important;
+    filter:
+      grayscale(1)
+      contrast(0.82)
+      brightness(1.08) !important;
 
-    border: 0 !important;
-    outline: 0 !important;
-    box-shadow: none !important;
-
-    pointer-events: none !important;
-    user-select: none !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
   }
-
-  .antra4-hero-container {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-}
-
-
-
-/* =========================================================
-   HERO BLUEPRINT — FINAL ANTRA COMPOSITION
-   Architectural artwork fills the empty left hero space
-   ========================================================= */
-
-@media (min-width: 901px) {
-
-  .antra4-hero {
-    position: relative !important;
-    overflow: hidden !important;
-  }
-
-
-  .antra4-hero-blueprint {
-    position: absolute !important;
-
-    left: 0 !important;
-    top: 0 !important;
-
-    width: 50.5% !important;
-    height: 100% !important;
-
-    overflow: hidden !important;
-
-    z-index: 0 !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-
-    pointer-events: none !important;
-
-    background: transparent !important;
-
-    border: 0 !important;
-    outline: 0 !important;
-    box-shadow: none !important;
-  }
-
-
-  .antra4-hero-blueprint::before,
-  .antra4-hero-blueprint::after {
-    content: none !important;
-    display: none !important;
-  }
-
-
-  .antra4-hero-blueprint-image {
-    position: absolute !important;
-
-    /*
-      Original PNG is 1920 x 505 and already contains
-      both architectural drawings.
-
-      We enlarge the full PNG and place its architectural
-      mass in the empty lower-middle area of the hero.
-    */
-
-    width: 165% !important;
-    height: auto !important;
-
-    max-width: none !important;
-    max-height: none !important;
-
-    /*
-      Horizontal:
-      slightly pull left so the main architecture sits
-      behind Inspired / Interior / Design.
-    */
-    left: -32% !important;
-    right: auto !important;
-
-    /*
-      Vertical:
-      architecture begins around Inspired and becomes
-      strongest through Interior / Design.
-    */
-    top: 38% !important;
-    bottom: auto !important;
-
-    display: block !important;
-
-    object-fit: initial !important;
-    object-position: initial !important;
-
-    /*
-      Keep the actual Antra artwork subtle.
-      Do NOT wash it out again with low opacity.
-    */
-    opacity: 0.78 !important;
-    visibility: visible !important;
-
-    filter: none !important;
-    mix-blend-mode: multiply !important;
-
-    transform: none !important;
-
-    border: 0 !important;
-    outline: 0 !important;
-    box-shadow: none !important;
-
-    pointer-events: none !important;
-    user-select: none !important;
-  }
-
-
-  /*
-    Text/video/button remain above architectural artwork.
-  */
-  .antra4-hero-container {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (min-width: 601px) and (max-width: 900px) {
-
-  .antra4-hero-blueprint {
-    left: 0 !important;
-    top: 0 !important;
-
-    width: 100% !important;
-    height: 100% !important;
-
-    overflow: hidden !important;
-  }
-
-  .antra4-hero-blueprint-image {
-    position: absolute !important;
-
-    width: 145% !important;
-    height: auto !important;
-
-    max-width: none !important;
-
-    left: -22% !important;
-    top: 34% !important;
-
-    opacity: 0.48 !important;
-
-    filter: none !important;
-    mix-blend-mode: multiply !important;
-
-    transform: none !important;
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-  .antra4-hero-blueprint {
-    left: 0 !important;
-    top: 0 !important;
-
-    width: 100% !important;
-    height: 100% !important;
-
-    overflow: hidden !important;
-  }
-
-  .antra4-hero-blueprint-image {
-    position: absolute !important;
-
-    width: 180% !important;
-    height: auto !important;
-
-    max-width: none !important;
-
-    left: -40% !important;
-    top: 38% !important;
-
-    opacity: 0.32 !important;
-
-    filter: none !important;
-    mix-blend-mode: multiply !important;
-
-    transform: none !important;
-  }
-}
-
-
-/* =========================================================
-   HERO BLUEPRINT — FINAL VISIBILITY + SCALE TUNE
-   ========================================================= */
-
-@media (min-width: 901px) {
-
-  .antra4-hero-blueprint-image {
-    width: 190% !important;
-    height: auto !important;
-
-    left: -45% !important;
-    right: auto !important;
-
-    top: 31% !important;
-    bottom: auto !important;
-
-    max-width: none !important;
-    max-height: none !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-
-    filter: contrast(145%) brightness(92%) !important;
-    mix-blend-mode: multiply !important;
-
-    transform: none !important;
-  }
-}
-
-
-/* =========================================================
-   HERO BLUEPRINT — BLANK SPACE COMPOSITION FIX
-   ========================================================= */
-
-@media (min-width: 901px) {
-
-  .antra4-hero-blueprint {
-    position: absolute !important;
-
-    left: 0 !important;
-    top: 0 !important;
-
-    width: 50.5% !important;
-    height: 100% !important;
-
-    overflow: hidden !important;
-
-    z-index: 0 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  .antra4-hero-blueprint-image {
-    position: absolute !important;
-
-    /*
-      Keep the COMPLETE 1920x505 Antra artwork visible.
-      Do not zoom/crop the two-building composition.
-    */
-    width: 100% !important;
-    height: auto !important;
-
-    max-width: none !important;
-    max-height: none !important;
-
-    left: 0 !important;
-    right: auto !important;
-
-    /*
-      Place architecture through the blank area:
-      Inspired -> Interior -> Design
-    */
-    top: 43% !important;
-    bottom: auto !important;
-
-    transform: none !important;
-
-    object-fit: contain !important;
-    object-position: center center !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-
-    /*
-      Asset itself is very light.
-      Make the drawing readable without making it harsh.
-    */
-    filter: contrast(150%) brightness(90%) !important;
-    mix-blend-mode: multiply !important;
-
-    border: 0 !important;
-    outline: 0 !important;
-    box-shadow: none !important;
-
-    pointer-events: none !important;
-  }
-
-  .antra4-hero-container {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-}
-
-
-/* =========================================================
-   HERO BLUEPRINT — ANTRA SINGLE BUILDING COMPOSITION
-   ========================================================= */
-
-@media (min-width: 901px) {
-
-  .antra4-hero-blueprint {
-    position: absolute !important;
-
-    left: 0 !important;
-    top: 0 !important;
-
-    width: 50.5% !important;
-    height: 100% !important;
-
-    overflow: hidden !important;
-
-    z-index: 0 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  .antra4-hero-blueprint-image {
-    position: absolute !important;
-
-    /*
-      Zoom the original 1920x505 artwork.
-      We intentionally allow one building to be cropped.
-    */
-    width: 185% !important;
-    height: auto !important;
-
-    max-width: none !important;
-    max-height: none !important;
-
-    /*
-      Focus one building in the centre/right blank area.
-    */
-    left: -15% !important;
-    right: auto !important;
-
-    top: 39% !important;
-    bottom: auto !important;
-
-    transform: none !important;
-
-    object-fit: initial !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-
-    filter: contrast(125%) brightness(96%) !important;
-    mix-blend-mode: multiply !important;
-
-    border: 0 !important;
-    outline: 0 !important;
-    box-shadow: none !important;
-
-    pointer-events: none !important;
-    user-select: none !important;
-  }
-
-  .antra4-hero-container {
-    position: relative !important;
-    z-index: 2 !important;
-  }
-}
-
-
-/* =========================================================
-   ABOUT LOGO — ORIGINAL COLOR + FULL OPACITY
-   Appearance only. Position / size / layout unchanged.
-   ========================================================= */
-
-.about-antra-watermark,
-.about-antra-media-row .about-antra-watermark {
-  opacity: 1 !important;
-}
-
-.about-antra-watermark img,
-.about-antra-media-row .about-antra-watermark img {
-  opacity: 1 !important;
-
-  /* Show original logo colors */
-  filter: none !important;
-  mix-blend-mode: normal !important;
 }
 

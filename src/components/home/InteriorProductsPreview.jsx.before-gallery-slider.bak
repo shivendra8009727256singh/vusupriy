@@ -23,7 +23,7 @@ export default function InteriorProductsPreview() {
         <div className="home-products-heading" data-reveal data-heading-reveal>
           <div className="home-products-heading-meta">
             <span className="section-label">Interior Products</span>
-            <span className="home-products-range" aria-hidden="true">01 — 04</span>
+            <span className="home-products-range" aria-hidden="true">01 — 03</span>
           </div>
           <h2 className="section-title" id="home-products-title">
             <span className="motion-title-mask">
