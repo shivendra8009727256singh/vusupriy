@@ -23,8 +23,52 @@ import expertiseFloorPlan from '../../assets/images/home/expertise/interior-3d-f
 import expertiseInterior from '../../assets/images/home/expertise/expertise-interior.png'
 import interiorShowcaseImage from '../../assets/images/home/interior-showcase.png'
 
+function Preloader({ leaving }) {
+  return (
+    <div
+      className={`preloader ${leaving ? 'preloader--leaving' : ''}`}
+      aria-hidden="true"
+    >
+      <div className="preloader-panels">
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+      </div>
+
+      <div className="preloader-brand">
+        <div className="preloader-logo-wrap">
+          <img src={vasupriyLogo} alt="" className="preloader-logo" />
+        </div>
+
+        <div className="preloader-wordmark">
+          <span>VASUPRIY</span>
+          <small>INTERIOVILLA</small>
+        </div>
+
+        <div className="preloader-progress">
+          <span />
+        </div>
+
+        <p>Your One-Stop Interior Solution</p>
+      </div>
+
+      <span className="preloader-index preloader-index--left">
+        EST. 2019
+      </span>
+
+      <span className="preloader-index preloader-index--right">
+        INTERIOR · EXECUTION
+      </span>
+    </div>
+  )
+}
+
 function Home() {
-  const [pageReady, setPageReady] = useState(false)
+  const [showLoader, setShowLoader] = useState(() => !window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+  const [loaderLeaving, setLoaderLeaving] = useState(false)
+  const [pageReady, setPageReady] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   const [activeProject, setActiveProject] = useState(0)
   const [activeService, serviceImages] = useDecodedSelection(0)
   const siteRef = useRef(null)
@@ -328,12 +372,31 @@ function Home() {
   }, [pageReady])
 
   useEffect(() => {
-    const readyTimer = window.setTimeout(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
+    document.body.classList.add('is-loading')
+    const leaveTimer = window.setTimeout(() => setLoaderLeaving(true), 2200)
+    const readyTimer = window.setTimeout(() => setPageReady(true), 3100)
+    const finish = () => {
+      setShowLoader(false)
       setPageReady(true)
-    }, 100)
-
-    return () => {
+      document.body.classList.remove('is-loading')
+    }
+    const removeTimer = window.setTimeout(finish, 3300)
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const preferenceChanged = () => {
+      if (!preference.matches) return
+      window.clearTimeout(leaveTimer)
       window.clearTimeout(readyTimer)
+      window.clearTimeout(removeTimer)
+      finish()
+    }
+    preference.addEventListener('change', preferenceChanged)
+    return () => {
+      window.clearTimeout(leaveTimer)
+      window.clearTimeout(readyTimer)
+      window.clearTimeout(removeTimer)
+      preference.removeEventListener('change', preferenceChanged)
+      document.body.classList.remove('is-loading')
     }
   }, [])
 
@@ -344,7 +407,7 @@ function Home() {
 
   return (
     <>
-
+      {showLoader && <Preloader leaving={loaderLeaving} />}
 
       <div ref={siteRef} className={`site ${pageReady ? 'site--ready' : ''}`}>
 {/* =====================================================
@@ -1331,7 +1394,6 @@ function Home() {
 }
 
 export default Home
-
 
 
 

@@ -23,8 +23,52 @@ import expertiseFloorPlan from '../../assets/images/home/expertise/interior-3d-f
 import expertiseInterior from '../../assets/images/home/expertise/expertise-interior.png'
 import interiorShowcaseImage from '../../assets/images/home/interior-showcase.png'
 
+function Preloader({ leaving }) {
+  return (
+    <div
+      className={`preloader ${leaving ? 'preloader--leaving' : ''}`}
+      aria-hidden="true"
+    >
+      <div className="preloader-panels">
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+      </div>
+
+      <div className="preloader-brand">
+        <div className="preloader-logo-wrap">
+          <img src={vasupriyLogo} alt="" className="preloader-logo" />
+        </div>
+
+        <div className="preloader-wordmark">
+          <span>VASUPRIY</span>
+          <small>INTERIOVILLA</small>
+        </div>
+
+        <div className="preloader-progress">
+          <span />
+        </div>
+
+        <p>Your One-Stop Interior Solution</p>
+      </div>
+
+      <span className="preloader-index preloader-index--left">
+        EST. 2019
+      </span>
+
+      <span className="preloader-index preloader-index--right">
+        INTERIOR · EXECUTION
+      </span>
+    </div>
+  )
+}
+
 function Home() {
-  const [pageReady, setPageReady] = useState(false)
+  const [showLoader, setShowLoader] = useState(() => !window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+  const [loaderLeaving, setLoaderLeaving] = useState(false)
+  const [pageReady, setPageReady] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   const [activeProject, setActiveProject] = useState(0)
   const [activeService, serviceImages] = useDecodedSelection(0)
   const siteRef = useRef(null)
@@ -96,244 +140,32 @@ function Home() {
   ]
   useScrollMotion(siteRef, projectIndexRef, setActiveProject)
 
-  /* =========================================================
-     HOME — PREMIUM CONVERGE SCROLL REVEAL
-     Independent from the existing useScrollMotion engine.
-  ========================================================= */
   useEffect(() => {
-    const root = siteRef.current
-
-    if (!root) return undefined
-
-    const reducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    )
-
-    const groups = [
-      /* ABOUT */
-      {
-        selector: '.about-antra-heading',
-        direction: 'home-reveal-up',
-      },
-      {
-        selector: '.about-antra-visual',
-        direction: 'home-reveal-left',
-      },
-      {
-        selector: '.about-antra-statement',
-        direction: 'home-reveal-right',
-      },
-      {
-        selector: '.about-antra-story',
-        direction: 'home-reveal-left',
-      },
-      {
-        selector: '.about-antra-points',
-        direction: 'home-reveal-right',
-      },
-
-      /* ABOUT SHOWCASE */
-      {
-        selector: '.about-showcase-image',
-        direction: 'home-reveal-up',
-        stagger: 110,
-      },
-      {
-        selector: '.about-showcase-highlight',
-        direction: 'home-reveal-up',
-        stagger: 90,
-      },
-
-      /* SERVICES */
-      {
-        selector: '.home-services-heading',
-        direction: 'home-reveal-up',
-      },
-      {
-        selector: '.home-services-list',
-        direction: 'home-reveal-left',
-      },
-      {
-        selector: '.home-services-description',
-        direction: 'home-reveal-left',
-      },
-      {
-        selector: '.home-services-visual',
-        direction: 'home-reveal-right',
-      },
-
-      /* EXPERTISE */
-      {
-        selector: '.home-expertise-heading',
-        direction: 'home-reveal-up',
-      },
-      {
-        selector: '.home-expertise-card',
-        direction: 'home-reveal-up',
-        stagger: 120,
-      },
-
-      /* EXPERTISE SHOWCASE */
-      {
-        selector: '.expertise-showcase-heading',
-        direction: 'home-reveal-up',
-      },
-      {
-        selector: '.expertise-showcase-info',
-        direction: 'home-reveal-left',
-      },
-      {
-        selector: '.expertise-showcase-visual',
-        direction: 'home-reveal-right',
-      },
-
-      /* PRODUCTS */
-      {
-        selector: '#home-products [class*="heading"]',
-        direction: 'home-reveal-up',
-      },
-      {
-        selector: '#home-products [class*="card"]',
-        direction: 'home-reveal-up',
-        stagger: 100,
-      },
-
-      /* WHY VASUPRIY */
-      {
-        selector: '#why-vasupriy [class*="heading"]',
-        direction: 'home-reveal-up',
-      },
-      {
-        selector: '#why-vasupriy [class*="visual"]',
-        direction: 'home-reveal-left',
-      },
-      {
-        selector: '#why-vasupriy [class*="content"]',
-        direction: 'home-reveal-right',
-      },
-
-      /* ARCHITECTURE SHOWCASE */
-      {
-        selector: '.interior-architecture-word',
-        direction: 'home-reveal-left',
-      },
-      {
-        selector: '.interior-architecture-image',
-        direction: 'home-reveal-scale',
-      },
-
-      /* GALLERY */
-      {
-        selector: '[class*="home-gallery"] [class*="heading"]',
-        direction: 'home-reveal-up',
-      },
-      {
-        selector: '[class*="home-gallery"] img',
-        direction: 'home-reveal-up',
-        stagger: 80,
-      },
-    ]
-
-    const elements = []
-    const registered = new Set()
-
-    groups.forEach(({ selector, direction, stagger = 0 }) => {
-      root.querySelectorAll(selector).forEach((element, index) => {
-        if (registered.has(element)) return
-
-        registered.add(element)
-
-        element.classList.add(
-          'home-premium-reveal',
-          direction
-        )
-
-        if (stagger) {
-          element.style.setProperty(
-            '--home-reveal-delay',
-            `${Math.min(index * stagger, 420)}ms`
-          )
-        }
-
-        elements.push(element)
-      })
-    })
-
-    if (
-      reducedMotion.matches ||
-      !('IntersectionObserver' in window)
-    ) {
-      elements.forEach((element) => {
-        element.classList.add('home-premium-visible')
-      })
-
-      return undefined
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return
-
-          entry.target.classList.add(
-            'home-premium-visible'
-          )
-
-          observer.unobserve(entry.target)
-        })
-      },
-      {
-        threshold: 0.12,
-        rootMargin: '0px 0px -6% 0px',
-      }
-    )
-
-    /*
-     * Start observing after initial layout/preloader settles.
-     * Elements already inside the first viewport remain readable.
-     */
-    const startTimer = window.setTimeout(() => {
-      elements.forEach((element) => {
-        const rect = element.getBoundingClientRect()
-
-        if (rect.top < window.innerHeight * 0.92) {
-          element.classList.add(
-            'home-premium-visible'
-          )
-        } else {
-          observer.observe(element)
-        }
-      })
-    }, 80)
-
-    return () => {
-      window.clearTimeout(startTimer)
-      observer.disconnect()
-
-      elements.forEach((element) => {
-        element.classList.remove(
-          'home-premium-reveal',
-          'home-reveal-left',
-          'home-reveal-right',
-          'home-reveal-up',
-          'home-reveal-scale',
-          'home-premium-visible'
-        )
-
-        element.style.removeProperty(
-          '--home-reveal-delay'
-        )
-      })
-    }
-  }, [pageReady])
-
-  useEffect(() => {
-    const readyTimer = window.setTimeout(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
+    document.body.classList.add('is-loading')
+    const leaveTimer = window.setTimeout(() => setLoaderLeaving(true), 2200)
+    const readyTimer = window.setTimeout(() => setPageReady(true), 3100)
+    const finish = () => {
+      setShowLoader(false)
       setPageReady(true)
-    }, 100)
-
-    return () => {
+      document.body.classList.remove('is-loading')
+    }
+    const removeTimer = window.setTimeout(finish, 3300)
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const preferenceChanged = () => {
+      if (!preference.matches) return
+      window.clearTimeout(leaveTimer)
       window.clearTimeout(readyTimer)
+      window.clearTimeout(removeTimer)
+      finish()
+    }
+    preference.addEventListener('change', preferenceChanged)
+    return () => {
+      window.clearTimeout(leaveTimer)
+      window.clearTimeout(readyTimer)
+      window.clearTimeout(removeTimer)
+      preference.removeEventListener('change', preferenceChanged)
+      document.body.classList.remove('is-loading')
     }
   }, [])
 
@@ -344,7 +176,7 @@ function Home() {
 
   return (
     <>
-
+      {showLoader && <Preloader leaving={loaderLeaving} />}
 
       <div ref={siteRef} className={`site ${pageReady ? 'site--ready' : ''}`}>
 {/* =====================================================
@@ -1331,8 +1163,6 @@ function Home() {
 }
 
 export default Home
-
-
 
 
 

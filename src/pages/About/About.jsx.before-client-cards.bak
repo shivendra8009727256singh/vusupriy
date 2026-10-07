@@ -27,6 +27,9 @@ import partnerKajaria from '../../assets/images/about/partners/kajaria.webp'
 import partnerMarino from '../../assets/images/about/partners/marino.webp'
 import partnerRehau from '../../assets/images/about/partners/rehau.webp'
 
+import specialityDesign from '../../assets/images/about/specialities/bespoke-design.jpg'
+import specialityFurniture from '../../assets/images/about/specialities/custom-furniture.jpg'
+import specialityExecution from '../../assets/images/about/specialities/complete-execution.jpg'
 import visionInterior from '../../assets/images/about/vision/our-vision.jpg'
 
 const whoWeAreServices = [
@@ -108,53 +111,6 @@ const brandPartners = [
   { name: 'REHAU', logo: partnerRehau },
 ]
 
-const specialityItems = [
-  {
-    id: '01',
-    eyebrow: 'Artisan Crafted',
-    title: 'Handcrafted Décor',
-    image:
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=88',
-    description:
-      'Artisan-made décor that brings warmth, character and the soul of Indian craftsmanship into your home.',
-  },
-  {
-    id: '02',
-    eyebrow: 'Made Around You',
-    title: 'Customized Furniture',
-    image:
-      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=88',
-    description:
-      'Bespoke furniture thoughtfully customized around your space, lifestyle, materials and personal design language.',
-  },
-  {
-    id: '03',
-    eyebrow: 'Rooted In Heritage',
-    title: 'Traditional Art & Craft',
-    image:
-      'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1400&q=88',
-    description:
-      'Timeless Indian artistry reimagined for contemporary homes through skilled hands, detail and authentic craft.',
-  },
-  {
-    id: '04',
-    eyebrow: 'Distinctive Details',
-    title: 'Statement Pieces',
-    image:
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=88',
-    description:
-      'Distinctive handcrafted accents designed to become memorable focal points within your interior.',
-  },
-  {
-    id: '05',
-    eyebrow: 'Personal By Design',
-    title: 'Made for Your Space',
-    image:
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=88',
-    description:
-      'Personalized creations shaped around your home, from dimensions and materials to finishes and final detailing.',
-  },
-]
 function About() {
 
   /* =========================================================
@@ -402,79 +358,7 @@ function About() {
 
   const [activeService, setActiveService] = useState(0)
   const [activeProcessStep, setActiveProcessStep] = useState(0)
-  const [specialityIndex, setSpecialityIndex] = useState(0)
-  const [specialityPaused, setSpecialityPaused] = useState(false)
-  const [specialitySliding, setSpecialitySliding] = useState(false)
 
-  useEffect(() => {
-    if (specialityPaused || specialitySliding) {
-      return undefined
-    }
-
-    const reduceMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches
-
-    if (reduceMotion) return undefined
-
-    /*
-     * Hold the current composition briefly,
-     * then start the 2-second physical slide.
-     */
-    const holdTimer = window.setTimeout(() => {
-      setSpecialitySliding(true)
-    }, 1500)
-
-    return () => {
-      window.clearTimeout(holdTimer)
-    }
-  }, [
-    specialityIndex,
-    specialityPaused,
-    specialitySliding,
-  ])
-
-  useEffect(() => {
-    if (!specialitySliding) return undefined
-
-    const slideTimer = window.setTimeout(() => {
-      setSpecialityIndex((current) => (
-        (current + 1) % specialityItems.length
-      ))
-
-      setSpecialitySliding(false)
-    }, 2000)
-
-    return () => {
-      window.clearTimeout(slideTimer)
-    }
-  }, [specialitySliding])
-
-  /*
-   * Always render one additional card beyond the viewport.
-   *
-   * Desktop: 3 visible + 1 entering
-   * Tablet:  2 visible + extras
-   * Mobile:  1 visible + extras
-   *
-   * The ordering is reconstructed only AFTER the moving card
-   * reaches exactly the same position as the next composition.
-   * That makes the reset visually invisible.
-   */
-  const specialityTrackItems = Array.from(
-    { length: 5 },
-    (_, offset) => (
-      specialityItems[
-        (specialityIndex + offset) % specialityItems.length
-      ]
-    )
-  )
-
-  const selectSpeciality = (index) => {
-    if (specialitySliding) return
-
-    setSpecialityIndex(index)
-  }
   const currentService = whoWeAreServices[activeService]
 
   return (
@@ -577,171 +461,6 @@ function About() {
 
           </div>
 
-        </div>
-      </section>
-
-      {/* =====================================================
-          WHAT WE DO
-      ====================================================== */}
-      <section
-        className="about-what"
-        aria-labelledby="about-what-title"
-      >
-        <div className="about-what-container">
-
-          <div className="about-what-heading">
-            <span className="about-what-eyebrow">
-              <i aria-hidden="true">✦</i>
-              What We Do
-            </span>
-
-            <h2 id="about-what-title">
-              Crafting Interiors And
-              <br />
-              Spaces With Purpose
-            </h2>
-          </div>
-
-
-          <div className="about-what-layout">
-
-            {/* LEFT SERVICES */}
-            <div className="about-what-column about-what-column--left">
-
-              <article className="about-what-service">
-                <span className="about-what-icon" aria-hidden="true">
-                  ◫
-                </span>
-
-                <h3>Thoughtful Interior Design</h3>
-
-                <p>
-                  We create refined interiors that balance visual
-                  character, everyday comfort and functionality.
-                </p>
-
-                <div className="about-what-detail">
-                  <span aria-hidden="true">✓</span>
-
-                  <p>
-                    Tailored design solutions shaped around your
-                    space, lifestyle and vision.
-                  </p>
-                </div>
-              </article>
-
-
-              <article className="about-what-service">
-                <span className="about-what-icon" aria-hidden="true">
-                  ◉
-                </span>
-
-                <h3>3D Visualization &amp; Planning</h3>
-
-                <p>
-                  Detailed planning and realistic visualization help
-                  you understand your space before execution begins.
-                </p>
-
-                <div className="about-what-detail">
-                  <span aria-hidden="true">✓</span>
-
-                  <p>
-                    Clear visual planning for confident design
-                    decisions and coordinated execution.
-                  </p>
-                </div>
-              </article>
-
-            </div>
-
-
-            {/* CENTER VISUAL */}
-            <div className="about-what-visual">
-
-              <div className="about-what-arch about-what-arch--back">
-                <img
-                  src={whatWeDoLeft}
-                  alt="Elegant Vasupriy residential interior"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-
-              <div className="about-what-arch about-what-arch--front">
-                <img
-                  src={whatWeDoRight}
-                  alt="Contemporary Vasupriy interior design"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-
-              <div
-                className="about-what-seal"
-                aria-hidden="true"
-              >
-                <img
-                  src={vasupriyLogo}
-                  alt=""
-                  className="about-what-seal-logo"
-                />
-              </div>
-
-            </div>
-
-
-            {/* RIGHT SERVICES */}
-            <div className="about-what-column about-what-column--right">
-
-              <article className="about-what-service">
-                <span className="about-what-icon" aria-hidden="true">
-                  ◇
-                </span>
-
-                <h3>Customized Interior Solutions</h3>
-
-                <p>
-                  From furniture layouts to finishes, every detail is
-                  considered to create a space that feels personal.
-                </p>
-
-                <div className="about-what-detail">
-                  <span aria-hidden="true">✓</span>
-
-                  <p>
-                    Personalized interiors combining elegance,
-                    practicality and individual character.
-                  </p>
-                </div>
-              </article>
-
-
-              <article className="about-what-service">
-                <span className="about-what-icon" aria-hidden="true">
-                  ⊞
-                </span>
-
-                <h3>Complete Project Execution</h3>
-
-                <p>
-                  We coordinate the interior journey from planning
-                  through execution for a seamless experience.
-                </p>
-
-                <div className="about-what-detail">
-                  <span aria-hidden="true">✓</span>
-
-                  <p>
-                    Coordinated execution with attention to quality,
-                    detail and final finishing.
-                  </p>
-                </div>
-              </article>
-
-            </div>
-
-          </div>
         </div>
       </section>
 
@@ -917,6 +636,171 @@ function About() {
 
 
       {/* =====================================================
+          WHAT WE DO
+      ====================================================== */}
+      <section
+        className="about-what"
+        aria-labelledby="about-what-title"
+      >
+        <div className="about-what-container">
+
+          <div className="about-what-heading">
+            <span className="about-what-eyebrow">
+              <i aria-hidden="true">✦</i>
+              What We Do
+            </span>
+
+            <h2 id="about-what-title">
+              Crafting Interiors And
+              <br />
+              Spaces With Purpose
+            </h2>
+          </div>
+
+
+          <div className="about-what-layout">
+
+            {/* LEFT SERVICES */}
+            <div className="about-what-column about-what-column--left">
+
+              <article className="about-what-service">
+                <span className="about-what-icon" aria-hidden="true">
+                  ◫
+                </span>
+
+                <h3>Thoughtful Interior Design</h3>
+
+                <p>
+                  We create refined interiors that balance visual
+                  character, everyday comfort and functionality.
+                </p>
+
+                <div className="about-what-detail">
+                  <span aria-hidden="true">✓</span>
+
+                  <p>
+                    Tailored design solutions shaped around your
+                    space, lifestyle and vision.
+                  </p>
+                </div>
+              </article>
+
+
+              <article className="about-what-service">
+                <span className="about-what-icon" aria-hidden="true">
+                  ◉
+                </span>
+
+                <h3>3D Visualization &amp; Planning</h3>
+
+                <p>
+                  Detailed planning and realistic visualization help
+                  you understand your space before execution begins.
+                </p>
+
+                <div className="about-what-detail">
+                  <span aria-hidden="true">✓</span>
+
+                  <p>
+                    Clear visual planning for confident design
+                    decisions and coordinated execution.
+                  </p>
+                </div>
+              </article>
+
+            </div>
+
+
+            {/* CENTER VISUAL */}
+            <div className="about-what-visual">
+
+              <div className="about-what-arch about-what-arch--back">
+                <img
+                  src={whatWeDoLeft}
+                  alt="Elegant Vasupriy residential interior"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <div className="about-what-arch about-what-arch--front">
+                <img
+                  src={whatWeDoRight}
+                  alt="Contemporary Vasupriy interior design"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <div
+                className="about-what-seal"
+                aria-hidden="true"
+              >
+                <img
+                  src={vasupriyLogo}
+                  alt=""
+                  className="about-what-seal-logo"
+                />
+              </div>
+
+            </div>
+
+
+            {/* RIGHT SERVICES */}
+            <div className="about-what-column about-what-column--right">
+
+              <article className="about-what-service">
+                <span className="about-what-icon" aria-hidden="true">
+                  ◇
+                </span>
+
+                <h3>Customized Interior Solutions</h3>
+
+                <p>
+                  From furniture layouts to finishes, every detail is
+                  considered to create a space that feels personal.
+                </p>
+
+                <div className="about-what-detail">
+                  <span aria-hidden="true">✓</span>
+
+                  <p>
+                    Personalized interiors combining elegance,
+                    practicality and individual character.
+                  </p>
+                </div>
+              </article>
+
+
+              <article className="about-what-service">
+                <span className="about-what-icon" aria-hidden="true">
+                  ⊞
+                </span>
+
+                <h3>Complete Project Execution</h3>
+
+                <p>
+                  We coordinate the interior journey from planning
+                  through execution for a seamless experience.
+                </p>
+
+                <div className="about-what-detail">
+                  <span aria-hidden="true">✓</span>
+
+                  <p>
+                    Coordinated execution with attention to quality,
+                    detail and final finishing.
+                  </p>
+                </div>
+              </article>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* =====================================================
           OUR APPROACH
       ====================================================== */}
       <section
@@ -951,7 +835,7 @@ function About() {
               <div className="about-approach-image">
                 <img
                   src={approachVision}
-                  alt="Residential interior designed by Vasupriy Interiovilla"
+                  alt="Understanding the client's interior vision"
                   loading="lazy"
                   decoding="async"
                 />
@@ -961,18 +845,19 @@ function About() {
                 </span>
 
                 <div className="about-approach-overlay">
-                  <h3>Residential Interiors</h3>
+                  <h3>Understand Your Vision</h3>
 
                   <p>
-                    Personalized homes designed around your
-                    lifestyle and preferences.
+                    We begin by understanding your lifestyle,
+                    requirements, preferences and the way you want
+                    your space to feel.
                   </p>
                 </div>
               </div>
 
               <div className="about-approach-meta">
                 <span aria-hidden="true" />
-                Residential Spaces
+                Discovery &amp; Understanding
               </div>
             </article>
 
@@ -980,8 +865,8 @@ function About() {
             <article className="about-approach-card">
               <div className="about-approach-image">
                 <img
-                  src={approachExecution}
-                  alt="Hospitality interior designed by Vasupriy Interiovilla"
+                  src={approachPlanning}
+                  alt="Interior planning and design development"
                   loading="lazy"
                   decoding="async"
                 />
@@ -991,17 +876,19 @@ function About() {
                 </span>
 
                 <div className="about-approach-overlay">
-                  <h3>Hospitality</h3>
+                  <h3>Plan &amp; Visualize</h3>
 
                   <p>
-                    Resorts, luxury hotels, and boutique cafes.
+                    Layouts, materials, finishes and design details
+                    are thoughtfully developed before execution
+                    begins.
                   </p>
                 </div>
               </div>
 
               <div className="about-approach-meta">
                 <span aria-hidden="true" />
-                Hotels &amp; Cafes
+                Design &amp; Planning
               </div>
             </article>
 
@@ -1009,8 +896,8 @@ function About() {
             <article className="about-approach-card">
               <div className="about-approach-image">
                 <img
-                  src={approachHandover}
-                  alt="Retail and showroom interior designed by Vasupriy Interiovilla"
+                  src={approachExecution}
+                  alt="Coordinated interior project execution"
                   loading="lazy"
                   decoding="async"
                 />
@@ -1020,18 +907,19 @@ function About() {
                 </span>
 
                 <div className="about-approach-overlay">
-                  <h3>Retail &amp; Showrooms</h3>
+                  <h3>Execute With Precision</h3>
 
                   <p>
-                    Modern showrooms and high-end retail
-                    environments.
+                    Our team coordinates materials, workmanship and
+                    execution with careful attention to quality and
+                    detail.
                   </p>
                 </div>
               </div>
 
               <div className="about-approach-meta">
                 <span aria-hidden="true" />
-                Retail Environments
+                Execution &amp; Coordination
               </div>
             </article>
 
@@ -1039,8 +927,8 @@ function About() {
             <article className="about-approach-card">
               <div className="about-approach-image">
                 <img
-                  src={approachPlanning}
-                  alt="Corporate office interior designed by Vasupriy Interiovilla"
+                  src={approachHandover}
+                  alt="Finished Vasupriy interior ready for handover"
                   loading="lazy"
                   decoding="async"
                 />
@@ -1050,18 +938,19 @@ function About() {
                 </span>
 
                 <div className="about-approach-overlay">
-                  <h3>Corporate Offices</h3>
+                  <h3>Refine &amp; Handover</h3>
 
                   <p>
-                    Productive and inspiring workspaces for
-                    modern businesses.
+                    Final details are reviewed and refined before
+                    delivering a thoughtfully finished space ready
+                    to experience.
                   </p>
                 </div>
               </div>
 
               <div className="about-approach-meta">
                 <span aria-hidden="true" />
-                Modern Workspaces
+                Finishing &amp; Handover
               </div>
             </article>
 
@@ -1180,98 +1069,136 @@ function About() {
             </span>
 
             <h2 id="about-specialities-title">
-              Make Your Home Uniquely Yours.
+              Designed Around You.
               <br />
-              <span>Crafted With Indian Artistry.</span>
+              <span>Crafted To Stand Apart.</span>
             </h2>
 
             <p>
-              Discover handcrafted pieces shaped by Indian craftsmanship
-              and customized around your space, style and story.
+              Our speciality lies in bringing design, customization
+              and execution together to create interiors that feel
+              distinctive, functional and genuinely personal.
             </p>
 
           </div>
 
-          <div
-            className="about-specialities-slider"
-            onMouseEnter={() => setSpecialityPaused(true)}
-            onMouseLeave={() => setSpecialityPaused(false)}
-            onFocusCapture={() => setSpecialityPaused(true)}
-            onBlurCapture={() => setSpecialityPaused(false)}
-          >
-            <div
-              className={`about-specialities-grid ${
-                specialitySliding ? 'is-sliding' : ''
-              }`}
-            >
 
-              {specialityTrackItems.map((item, index) => (
-                <article
-                  className={`about-speciality-card ${
-                    index === 1
-                      ? 'about-speciality-card--featured'
-                      : ''
-                  }`}
-                  key={`${item.id}-${index}`}
-                >
-                  <div className="about-speciality-image">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      loading="lazy"
-                      decoding="async"
-                    />
+          <div className="about-specialities-grid">
 
-                    <span className="about-speciality-number">
-                      {item.id}
-                    </span>
+            {/* SPECIALITY 01 */}
+            <article className="about-speciality-card">
 
-                    {index === 1 && (
-                      <span className="about-speciality-featured-label">
-                        Signature
-                      </span>
-                    )}
-
-                    <div className="about-speciality-overlay">
-                      <span>{item.eyebrow}</span>
-
-                      <h3>{item.title}</h3>
-
-                      <p>{item.description}</p>
-                    </div>
-                  </div>
-                </article>
-              ))}
-
-            </div>
-
-            <div
-              className="about-specialities-dots"
-              aria-label="Speciality slides"
-            >
-              {specialityItems.map((item, index) => (
-                <button
-                  type="button"
-                  key={item.id}
-                  className={
-                    index === specialityIndex
-                      ? 'is-active'
-                      : ''
-                  }
-                  aria-label={`Show ${item.title}`}
-                  aria-current={
-                    index === specialityIndex
-                      ? 'true'
-                      : undefined
-                  }
-                  onClick={() => selectSpeciality(index)}
+              <div className="about-speciality-image">
+                <img
+                  src={specialityDesign}
+                  alt="Bespoke interior design by Vasupriy"
+                  loading="lazy"
+                  decoding="async"
                 />
-              ))}
-            </div>
+
+                <span className="about-speciality-number">
+                  01
+                </span>
+
+                <div className="about-speciality-overlay">
+                  <span>Personalized Spaces</span>
+
+                  <h3>
+                    Bespoke Interior
+                    <br />
+                    Design
+                  </h3>
+
+                  <p>
+                    Thoughtfully designed interiors shaped around
+                    your lifestyle, taste and the character of
+                    your space.
+                  </p>
+                </div>
+              </div>
+
+            </article>
+
+
+            {/* SPECIALITY 02 */}
+            <article className="about-speciality-card about-speciality-card--featured">
+
+              <div className="about-speciality-image">
+                <img
+                  src={specialityFurniture}
+                  alt="Customized furniture and interior finishes"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <span className="about-speciality-number">
+                  02
+                </span>
+
+                <span className="about-speciality-featured-label">
+                  Signature
+                </span>
+
+                <div className="about-speciality-overlay">
+                  <span>Made For Your Interior</span>
+
+                  <h3>
+                    Custom Furniture
+                    <br />
+                    &amp; Finishes
+                  </h3>
+
+                  <p>
+                    Customized furniture, material combinations
+                    and refined finishes created to bring
+                    individuality into every detail.
+                  </p>
+                </div>
+              </div>
+
+            </article>
+
+
+            {/* SPECIALITY 03 */}
+            <article className="about-speciality-card">
+
+              <div className="about-speciality-image">
+                <img
+                  src={specialityExecution}
+                  alt="Complete interior design and execution"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <span className="about-speciality-number">
+                  03
+                </span>
+
+                <div className="about-speciality-overlay">
+                  <span>From Concept To Completion</span>
+
+                  <h3>
+                    End-to-End
+                    <br />
+                    Execution
+                  </h3>
+
+                  <p>
+                    A coordinated interior journey covering
+                    planning, sourcing, workmanship, installation
+                    and final finishing.
+                  </p>
+                </div>
+              </div>
+
+            </article>
+
           </div>
 
+
           <div className="about-specialities-footer">
-            <span>Handcrafted</span>
+
+            <span>Design</span>
             <i aria-hidden="true" />
 
             <span>Customize</span>
@@ -1280,14 +1207,16 @@ function About() {
             <strong>Vasupriy Interiovilla</strong>
 
             <i aria-hidden="true" />
-            <span>Artistry</span>
+            <span>Execute</span>
 
             <i aria-hidden="true" />
-            <span>Made For You</span>
+            <span>Deliver</span>
+
           </div>
 
         </div>
       </section>
+
       {/* =====================================================
           OUR TEAM
       ====================================================== */}
@@ -1658,11 +1587,6 @@ function About() {
 }
 
 export default About
-
-
-
-
-
 
 
 

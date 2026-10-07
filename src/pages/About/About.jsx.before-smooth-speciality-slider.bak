@@ -404,12 +404,9 @@ function About() {
   const [activeProcessStep, setActiveProcessStep] = useState(0)
   const [specialityIndex, setSpecialityIndex] = useState(0)
   const [specialityPaused, setSpecialityPaused] = useState(false)
-  const [specialitySliding, setSpecialitySliding] = useState(false)
 
   useEffect(() => {
-    if (specialityPaused || specialitySliding) {
-      return undefined
-    }
+    if (specialityPaused) return undefined
 
     const reduceMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
@@ -417,64 +414,25 @@ function About() {
 
     if (reduceMotion) return undefined
 
-    /*
-     * Hold the current composition briefly,
-     * then start the 2-second physical slide.
-     */
-    const holdTimer = window.setTimeout(() => {
-      setSpecialitySliding(true)
-    }, 1500)
-
-    return () => {
-      window.clearTimeout(holdTimer)
-    }
-  }, [
-    specialityIndex,
-    specialityPaused,
-    specialitySliding,
-  ])
-
-  useEffect(() => {
-    if (!specialitySliding) return undefined
-
-    const slideTimer = window.setTimeout(() => {
+    const timer = window.setInterval(() => {
       setSpecialityIndex((current) => (
         (current + 1) % specialityItems.length
       ))
-
-      setSpecialitySliding(false)
-    }, 2000)
+    }, 3200)
 
     return () => {
-      window.clearTimeout(slideTimer)
+      window.clearInterval(timer)
     }
-  }, [specialitySliding])
+  }, [specialityPaused])
 
-  /*
-   * Always render one additional card beyond the viewport.
-   *
-   * Desktop: 3 visible + 1 entering
-   * Tablet:  2 visible + extras
-   * Mobile:  1 visible + extras
-   *
-   * The ordering is reconstructed only AFTER the moving card
-   * reaches exactly the same position as the next composition.
-   * That makes the reset visually invisible.
-   */
-  const specialityTrackItems = Array.from(
-    { length: 5 },
+  const visibleSpecialities = Array.from(
+    { length: specialityItems.length },
     (_, offset) => (
       specialityItems[
         (specialityIndex + offset) % specialityItems.length
       ]
     )
   )
-
-  const selectSpeciality = (index) => {
-    if (specialitySliding) return
-
-    setSpecialityIndex(index)
-  }
   const currentService = whoWeAreServices[activeService]
 
   return (
@@ -1199,20 +1157,16 @@ function About() {
             onFocusCapture={() => setSpecialityPaused(true)}
             onBlurCapture={() => setSpecialityPaused(false)}
           >
-            <div
-              className={`about-specialities-grid ${
-                specialitySliding ? 'is-sliding' : ''
-              }`}
-            >
+            <div className="about-specialities-grid">
 
-              {specialityTrackItems.map((item, index) => (
+              {visibleSpecialities.map((item, index) => (
                 <article
                   className={`about-speciality-card ${
                     index === 1
                       ? 'about-speciality-card--featured'
                       : ''
                   }`}
-                  key={`${item.id}-${index}`}
+                  key={`${specialityIndex}-${item.id}`}
                 >
                   <div className="about-speciality-image">
                     <img
@@ -1264,7 +1218,7 @@ function About() {
                       ? 'true'
                       : undefined
                   }
-                  onClick={() => selectSpeciality(index)}
+                  onClick={() => setSpecialityIndex(index)}
                 />
               ))}
             </div>
@@ -1658,8 +1612,6 @@ function About() {
 }
 
 export default About
-
-
 
 
 

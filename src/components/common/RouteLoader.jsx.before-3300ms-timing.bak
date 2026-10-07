@@ -1,0 +1,141 @@
+﻿import { useEffect, useRef, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+
+import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
+
+const ENTER_DURATION = 900
+const LEAVE_DURATION = 900
+const TOTAL_DURATION = ENTER_DURATION + LEAVE_DURATION
+
+export default function RouteLoader() {
+  const location = useLocation()
+
+  const firstRender = useRef(true)
+  const timersRef = useRef([])
+
+  const [showLoader, setShowLoader] = useState(true)
+  const [loaderLeaving, setLoaderLeaving] = useState(false)
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches
+
+    timersRef.current.forEach((timer) => {
+      window.clearTimeout(timer)
+    })
+
+    timersRef.current = []
+
+    if (reducedMotion) {
+      setShowLoader(false)
+      setLoaderLeaving(false)
+      document.body.classList.remove('is-loading')
+      firstRender.current = false
+      return undefined
+    }
+
+    setShowLoader(true)
+    setLoaderLeaving(false)
+
+    document.body.classList.add('is-loading')
+
+    /*
+     * Scroll every newly opened page to the top.
+     * This also makes route transitions feel intentional.
+     */
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto',
+    })
+
+    /*
+     * First website load gets a slightly longer presentation.
+     * Later route changes stay quick and premium.
+     */
+    const leaveDelay = firstRender.current
+      ? 1200
+      : ENTER_DURATION
+
+    const totalDelay = firstRender.current
+      ? 2150
+      : TOTAL_DURATION
+
+    const leaveTimer = window.setTimeout(() => {
+      setLoaderLeaving(true)
+    }, leaveDelay)
+
+    const removeTimer = window.setTimeout(() => {
+      setShowLoader(false)
+      setLoaderLeaving(false)
+      document.body.classList.remove('is-loading')
+      firstRender.current = false
+    }, totalDelay)
+
+    timersRef.current = [
+      leaveTimer,
+      removeTimer,
+    ]
+
+    return () => {
+      timersRef.current.forEach((timer) => {
+        window.clearTimeout(timer)
+      })
+
+      timersRef.current = []
+
+      document.body.classList.remove('is-loading')
+    }
+  }, [location.pathname])
+
+  if (!showLoader) {
+    return null
+  }
+
+  return (
+    <div
+      className={`preloader ${
+        loaderLeaving ? 'preloader--leaving' : ''
+      }`}
+      aria-hidden="true"
+    >
+      <div className="preloader-panels">
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+        <span className="preloader-panel" />
+      </div>
+
+      <div className="preloader-brand">
+        <div className="preloader-logo-wrap">
+          <img
+            src={vasupriyLogo}
+            alt=""
+            className="preloader-logo"
+          />
+        </div>
+
+        <div className="preloader-wordmark">
+          <span>VASUPRIY</span>
+          <small>INTERIOVILLA</small>
+        </div>
+
+        <div className="preloader-progress">
+          <span />
+        </div>
+
+        <p>Your One-Stop Interior Solution</p>
+      </div>
+
+      <span className="preloader-index preloader-index--left">
+        EST. 2019
+      </span>
+
+      <span className="preloader-index preloader-index--right">
+        INTERIOR · EXECUTION
+      </span>
+    </div>
+  )
+}

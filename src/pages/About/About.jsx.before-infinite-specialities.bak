@@ -418,26 +418,22 @@ function About() {
     if (reduceMotion) return undefined
 
     /*
-     * Hold the current composition briefly,
-     * then start the 2-second physical slide.
+     * Keep the cards readable, then begin a premium
+     * 2-second physical slide to the next speciality.
      */
     const holdTimer = window.setTimeout(() => {
       setSpecialitySliding(true)
-    }, 1500)
+    }, 2000)
 
     return () => {
       window.clearTimeout(holdTimer)
     }
-  }, [
-    specialityIndex,
-    specialityPaused,
-    specialitySliding,
-  ])
+  }, [specialityPaused, specialitySliding, specialityIndex])
 
   useEffect(() => {
     if (!specialitySliding) return undefined
 
-    const slideTimer = window.setTimeout(() => {
+    const finishTimer = window.setTimeout(() => {
       setSpecialityIndex((current) => (
         (current + 1) % specialityItems.length
       ))
@@ -446,23 +442,12 @@ function About() {
     }, 2000)
 
     return () => {
-      window.clearTimeout(slideTimer)
+      window.clearTimeout(finishTimer)
     }
   }, [specialitySliding])
 
-  /*
-   * Always render one additional card beyond the viewport.
-   *
-   * Desktop: 3 visible + 1 entering
-   * Tablet:  2 visible + extras
-   * Mobile:  1 visible + extras
-   *
-   * The ordering is reconstructed only AFTER the moving card
-   * reaches exactly the same position as the next composition.
-   * That makes the reset visually invisible.
-   */
-  const specialityTrackItems = Array.from(
-    { length: 5 },
+  const visibleSpecialities = Array.from(
+    { length: 4 },
     (_, offset) => (
       specialityItems[
         (specialityIndex + offset) % specialityItems.length
@@ -1205,7 +1190,7 @@ function About() {
               }`}
             >
 
-              {specialityTrackItems.map((item, index) => (
+              {visibleSpecialities.map((item, index) => (
                 <article
                   className={`about-speciality-card ${
                     index === 1
@@ -1658,7 +1643,6 @@ function About() {
 }
 
 export default About
-
 
 
 

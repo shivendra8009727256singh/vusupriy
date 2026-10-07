@@ -1,5 +1,6 @@
 ﻿import { Navigate, Route, Routes } from 'react-router-dom'
 
+import RouteLoader from './components/common/RouteLoader.jsx'
 import SiteLayout from './components/layout/SiteLayout.jsx'
 
 import Home from './pages/Home/Home.jsx'
@@ -13,51 +14,55 @@ import Contact from './pages/Contact/Contact.jsx'
 
 function App() {
   return (
-    <Routes>
-      <Route element={<SiteLayout />}>
-        <Route index element={<Home />} />
+    <>
+      <RouteLoader />
+
+      <Routes>
+        <Route element={<SiteLayout />}>
+          <Route index element={<Home />} />
+
+          <Route
+            path="about"
+            element={<About />}
+          />
+
+          <Route
+            path="interior-services"
+            element={<InteriorServices />}
+          />
+
+          <Route
+            path="interior-products"
+            element={<InteriorProducts />}
+          />
+
+          <Route
+            path="projects"
+            element={<Projects />}
+          />
+
+          <Route
+            path="gallery"
+            element={<Gallery />}
+          />
+
+          <Route
+            path="blog"
+            element={<Blog />}
+          />
+
+          <Route
+            path="contact"
+            element={<Contact />}
+          />
+        </Route>
 
         <Route
-          path="about"
-          element={<About />}
+          path="*"
+          element={<Navigate to="/" replace />}
         />
-
-        <Route
-          path="interior-services"
-          element={<InteriorServices />}
-        />
-
-        <Route
-          path="interior-products"
-          element={<InteriorProducts />}
-        />
-
-        <Route
-          path="projects"
-          element={<Projects />}
-        />
-
-        <Route
-          path="gallery"
-          element={<Gallery />}
-        />
-
-        <Route
-          path="blog"
-          element={<Blog />}
-        />
-
-        <Route
-          path="contact"
-          element={<Contact />}
-        />
-      </Route>
-
-      <Route
-        path="*"
-        element={<Navigate to="/" replace />}
-      />
-    </Routes>
+      </Routes>
+    </>
   )
 }
 
