@@ -27,10 +27,6 @@ import partnerKajaria from '../../assets/images/about/partners/kajaria.webp'
 import partnerMarino from '../../assets/images/about/partners/marino.webp'
 import partnerRehau from '../../assets/images/about/partners/rehau.webp'
 
-import specialityDesign from '../../assets/images/about/specialities/bespoke-design.jpg'
-import specialityFurniture from '../../assets/images/about/specialities/custom-furniture.jpg'
-import specialityExecution from '../../assets/images/about/specialities/complete-execution.jpg'
-
 const whoWeAreServices = [
   {
     id: '01',
@@ -824,177 +820,11 @@ function About() {
         </div>
 
       </section>
-
-      {/* =====================================================
-          OUR SPECIALITIES
-      ====================================================== */}
-      <section
-        className="about-specialities"
-        aria-labelledby="about-specialities-title"
-      >
-        <div className="about-specialities-container">
-
-          <div className="about-specialities-heading">
-
-            <span className="about-specialities-eyebrow">
-              <i aria-hidden="true">✦</i>
-              Our Specialities
-            </span>
-
-            <h2 id="about-specialities-title">
-              Designed Around You.
-              <br />
-              <span>Crafted To Stand Apart.</span>
-            </h2>
-
-            <p>
-              Our speciality lies in bringing design, customization
-              and execution together to create interiors that feel
-              distinctive, functional and genuinely personal.
-            </p>
-
-          </div>
-
-
-          <div className="about-specialities-grid">
-
-            {/* SPECIALITY 01 */}
-            <article className="about-speciality-card">
-
-              <div className="about-speciality-image">
-                <img
-                  src={specialityDesign}
-                  alt="Bespoke interior design by Vasupriy"
-                  loading="lazy"
-                  decoding="async"
-                />
-
-                <span className="about-speciality-number">
-                  01
-                </span>
-
-                <div className="about-speciality-overlay">
-                  <span>Personalized Spaces</span>
-
-                  <h3>
-                    Bespoke Interior
-                    <br />
-                    Design
-                  </h3>
-
-                  <p>
-                    Thoughtfully designed interiors shaped around
-                    your lifestyle, taste and the character of
-                    your space.
-                  </p>
-                </div>
-              </div>
-
-            </article>
-
-
-            {/* SPECIALITY 02 */}
-            <article className="about-speciality-card about-speciality-card--featured">
-
-              <div className="about-speciality-image">
-                <img
-                  src={specialityFurniture}
-                  alt="Customized furniture and interior finishes"
-                  loading="lazy"
-                  decoding="async"
-                />
-
-                <span className="about-speciality-number">
-                  02
-                </span>
-
-                <span className="about-speciality-featured-label">
-                  Signature
-                </span>
-
-                <div className="about-speciality-overlay">
-                  <span>Made For Your Interior</span>
-
-                  <h3>
-                    Custom Furniture
-                    <br />
-                    &amp; Finishes
-                  </h3>
-
-                  <p>
-                    Customized furniture, material combinations
-                    and refined finishes created to bring
-                    individuality into every detail.
-                  </p>
-                </div>
-              </div>
-
-            </article>
-
-
-            {/* SPECIALITY 03 */}
-            <article className="about-speciality-card">
-
-              <div className="about-speciality-image">
-                <img
-                  src={specialityExecution}
-                  alt="Complete interior design and execution"
-                  loading="lazy"
-                  decoding="async"
-                />
-
-                <span className="about-speciality-number">
-                  03
-                </span>
-
-                <div className="about-speciality-overlay">
-                  <span>From Concept To Completion</span>
-
-                  <h3>
-                    End-to-End
-                    <br />
-                    Execution
-                  </h3>
-
-                  <p>
-                    A coordinated interior journey covering
-                    planning, sourcing, workmanship, installation
-                    and final finishing.
-                  </p>
-                </div>
-              </div>
-
-            </article>
-
-          </div>
-
-
-          <div className="about-specialities-footer">
-
-            <span>Design</span>
-            <i aria-hidden="true" />
-
-            <span>Customize</span>
-            <i aria-hidden="true" />
-
-            <strong>Vasupriy Interiovilla</strong>
-
-            <i aria-hidden="true" />
-            <span>Execute</span>
-
-            <i aria-hidden="true" />
-            <span>Deliver</span>
-
-          </div>
-
-        </div>
-      </section>
     </main>
   )
 }
 
 export default About
-
 
 
 

@@ -1,0 +1,300 @@
+﻿import { useState } from 'react'
+import { Link } from 'react-router-dom'
+
+import './About.css'
+
+const whoWeAreServices = [
+  {
+    id: '01',
+    title: 'Residential Interior Design',
+    image:
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=88',
+    description:
+      'Tailored design services for private homes, including room makeovers and complete home transformations.',
+  },
+  {
+    id: '02',
+    title: 'Commercial Interior Design',
+    image:
+      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=88',
+    description:
+      'Purpose-driven commercial interiors designed around functionality, brand identity and a refined customer experience.',
+  },
+  {
+    id: '03',
+    title: 'Interior Design Consultation',
+    image:
+      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=88',
+    description:
+      'Professional guidance for space planning, materials, finishes and design decisions that bring clarity to your vision.',
+  },
+  {
+    id: '04',
+    title: 'Architectural & Civil Work',
+    image:
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=88',
+    description:
+      'Coordinated architectural and civil solutions supporting a seamless journey from planning through final execution.',
+  },
+  {
+    id: '05',
+    title: 'Renovation & Remodeling',
+    image:
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=88',
+    description:
+      'Thoughtful renovation and remodeling solutions that refresh existing spaces while improving everyday functionality.',
+  },
+]
+
+function About() {
+  const [activeService, setActiveService] = useState(0)
+
+  const currentService = whoWeAreServices[activeService]
+
+  return (
+    <main className="about-page">
+      <section
+        className="about-who"
+        aria-labelledby="about-who-title"
+      >
+        <div className="about-who-container">
+
+          <div className="about-who-intro">
+            <div className="about-who-label-column">
+              <span className="about-who-label">
+                <i aria-hidden="true" />
+                Who We Are
+              </span>
+
+              <span
+                className="about-who-label-dot"
+                aria-hidden="true"
+              />
+
+              <span
+                className="about-who-label-line"
+                aria-hidden="true"
+              />
+            </div>
+
+            <div className="about-who-heading">
+              <h1 id="about-who-title">
+                Explore Our{' '}
+                <span>Comprehensive</span>
+                <br />
+                <span>Interior Design</span>{' '}
+                Services
+              </h1>
+
+              <p>
+                Vasupriy Interiovilla creates thoughtfully designed
+                residential and commercial interiors where refined
+                aesthetics meet functionality, detail and dependable
+                execution.
+              </p>
+            </div>
+          </div>
+
+
+          <div className="about-who-content">
+
+            <div className="about-who-visual">
+              <div
+                className="about-who-image-stack"
+                aria-live="polite"
+              >
+                {whoWeAreServices.map((service, index) => (
+                  <img
+                    key={service.id}
+                    src={service.image}
+                    alt={service.title}
+                    className={
+                      index === activeService
+                        ? 'about-who-image about-who-image--active'
+                        : 'about-who-image'
+                    }
+                  />
+                ))}
+              </div>
+
+              <div className="about-who-image-caption">
+                <p>{currentService.description}</p>
+              </div>
+            </div>
+
+
+            <div className="about-who-services">
+              {whoWeAreServices.map((service, index) => (
+                <button
+                  className={`about-who-service ${
+                    activeService === index
+                      ? 'about-who-service--active'
+                      : ''
+                  }`}
+                  type="button"
+                  key={service.id}
+                  onMouseEnter={() => setActiveService(index)}
+                  onFocus={() => setActiveService(index)}
+                  onClick={() => setActiveService(index)}
+                >
+                  <span className="about-who-service-number">
+                    {service.id}
+                  </span>
+
+                  <strong>
+                    {service.title}
+                  </strong>
+
+                  <span
+                    className="about-who-service-arrow"
+                    aria-hidden="true"
+                  >
+                    →
+                  </span>
+                </button>
+              ))}
+            </div>
+
+          </div>
+
+
+          <div className="about-who-mobile-link">
+            <Link to="/interior-services">
+              Explore Interior Services
+              <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =====================================================
+          HOW WE WORK
+      ====================================================== */}
+      <section
+        className="about-process"
+        aria-labelledby="about-process-title"
+      >
+        <div className="about-process-container">
+
+          <div className="about-process-intro">
+            <div className="about-process-label-column">
+              <span
+                className="about-process-top-line"
+                aria-hidden="true"
+              />
+
+              <span className="about-process-label">
+                <i aria-hidden="true" />
+                How We Work
+              </span>
+
+              <span
+                className="about-process-vertical-line"
+                aria-hidden="true"
+              />
+            </div>
+
+            <div className="about-process-heading">
+              <h2 id="about-process-title">
+                A Thoughtful{' '}
+                <span>Design Process</span>
+                <br />
+                Built For <strong>Results.</strong>
+              </h2>
+
+              <p>
+                From the first conversation to final handover, our
+                process keeps every stage clear, collaborative and
+                focused on transforming your vision into a beautifully
+                executed space.
+              </p>
+            </div>
+          </div>
+
+
+          <div className="about-process-content">
+
+            <div className="about-process-visual">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=88"
+                alt="Thoughtfully designed modern interior"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+
+            <div className="about-process-steps">
+
+              <article className="about-process-step">
+                <span className="about-process-number">
+                  01
+                </span>
+
+                <div>
+                  <h3>Initial Consultation</h3>
+                  <p>
+                    We understand your vision, lifestyle,
+                    requirements, preferences and project goals.
+                  </p>
+                </div>
+              </article>
+
+
+              <article className="about-process-step">
+                <span className="about-process-number">
+                  02
+                </span>
+
+                <div>
+                  <h3>Design &amp; Planning</h3>
+                  <p>
+                    We develop the space plan, design direction,
+                    materials and details required for execution.
+                  </p>
+                </div>
+              </article>
+
+
+              <article className="about-process-step">
+                <span className="about-process-number">
+                  03
+                </span>
+
+                <div>
+                  <h3>Implementation</h3>
+                  <p>
+                    Our team coordinates the work, materials and
+                    execution with attention to quality and detail.
+                  </p>
+                </div>
+              </article>
+
+
+              <article className="about-process-step">
+                <span className="about-process-number">
+                  04
+                </span>
+
+                <div>
+                  <h3>Project Handover</h3>
+                  <p>
+                    We complete final checks and hand over a
+                    thoughtfully finished space ready to experience.
+                  </p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  )
+}
+
+export default About
+
