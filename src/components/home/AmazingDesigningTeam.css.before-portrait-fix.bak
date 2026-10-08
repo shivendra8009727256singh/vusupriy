@@ -1,0 +1,551 @@
+﻿/* =========================================================
+   VASUPRIY INTERIOVILLA — AMAZING DESIGNING TEAM
+   Premium interactive team showcase
+========================================================= */
+
+.amazing-team {
+  --team-deep: #00354a;
+  --team-teal: #004a5e;
+  --team-accent: #167a8f;
+  --team-gold: #af9166;
+  --team-gold-light: #dbc4a4;
+  --team-ivory: #f5f0ea;
+
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: clamp(76px, 9vw, 140px) 0;
+  overflow: clip;
+  background:
+    radial-gradient(
+      ellipse at 12% 20%,
+      rgba(219, 196, 164, 0.20),
+      transparent 42%
+    ),
+    linear-gradient(145deg, #fffdf9 0%, #f5f0ea 100%);
+  color: var(--team-deep);
+}
+
+.amazing-team::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(
+      rgba(0, 74, 94, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 74, 94, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 75px 75px;
+  mask-image: linear-gradient(
+    90deg,
+    black,
+    transparent 85%
+  );
+}
+
+.amazing-team-container {
+  width: min(1320px, calc(100% - 80px));
+  margin-inline: auto;
+}
+
+.amazing-team-header {
+  max-width: 790px;
+  margin-bottom: clamp(38px, 5vw, 70px);
+}
+
+.amazing-team-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: #786141;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+}
+
+.amazing-team-eyebrow span {
+  color: var(--team-accent);
+  font-size: 20px;
+}
+
+.amazing-team-header h2 {
+  margin: 0;
+  color: var(--team-deep);
+  font-family: "Georgia Pro", Georgia, serif;
+  font-size: clamp(40px, 5.3vw, 76px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.amazing-team-header h2 em {
+  color: var(--team-gold);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.amazing-team-header > p {
+  max-width: 620px;
+  margin: 22px 0 0;
+  color: rgba(0, 53, 74, 0.70);
+  font-size: clamp(15px, 1.25vw, 17px);
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SHOWCASE GRID
+========================================================= */
+
+.amazing-team-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: stretch;
+  gap: clamp(28px, 4vw, 66px);
+}
+
+.amazing-team-feature {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border: 1px solid rgba(175, 145, 102, 0.28);
+  border-radius: 30px;
+  background: #fff;
+  box-shadow:
+    0 25px 70px rgba(0, 53, 74, 0.08),
+    0 5px 15px rgba(0, 53, 74, 0.035);
+}
+
+.amazing-team-feature-image {
+  position: relative;
+  min-height: 450px;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    #dce5e5,
+    #b5c9cc
+  );
+}
+
+.amazing-team-portrait {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  opacity: 0;
+  transform: scale(1.07);
+  transition:
+    opacity 600ms ease,
+    transform 1100ms cubic-bezier(.2, .8, .2, 1);
+  pointer-events: none;
+}
+
+.amazing-team-portrait.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.amazing-team-image-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent 58%,
+    rgba(0, 53, 74, 0.30) 100%
+  );
+}
+
+.amazing-team-image-index {
+  position: absolute;
+  z-index: 3;
+  top: 22px;
+  left: 22px;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 100px;
+  background: rgba(0, 53, 74, 0.55);
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(12px);
+}
+
+.amazing-team-feature-caption {
+  padding: 25px 20px 18px;
+  animation: amazingTeamCaptionIn 450ms ease both;
+}
+
+.amazing-team-feature-caption > span {
+  color: #786141;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.amazing-team-feature-caption h3 {
+  margin: 9px 0 10px;
+  color: var(--team-deep);
+  font-family: "Georgia Pro", Georgia, serif;
+  font-size: clamp(27px, 2.6vw, 38px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.amazing-team-feature-caption p {
+  max-width: 500px;
+  min-height: 72px;
+  margin: 0;
+  color: rgba(0, 53, 74, 0.70);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+@keyframes amazingTeamCaptionIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   TEAM MEMBER INTERACTIVE LIST
+========================================================= */
+
+.amazing-team-members {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.amazing-team-member {
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 68px 20px;
+  align-items: center;
+  gap: clamp(12px, 1.6vw, 22px);
+  width: 100%;
+  min-height: 128px;
+  padding: 19px 22px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 74, 94, 0.10);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--team-deep);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 10px 32px rgba(0, 53, 74, 0.035);
+  transition:
+    background 350ms ease,
+    border-color 350ms ease,
+    box-shadow 350ms ease,
+    transform 350ms ease;
+}
+
+.amazing-team-member::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 0;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--team-gold);
+  transform: scaleY(0);
+  transition: transform 350ms ease;
+}
+
+.amazing-team-member:hover,
+.amazing-team-member.is-active {
+  transform: translateX(-6px);
+  border-color: rgba(175, 145, 102, 0.45);
+  background: #fff;
+  box-shadow: 0 20px 45px rgba(0, 53, 74, 0.09);
+}
+
+.amazing-team-member.is-active::before {
+  transform: scaleY(1);
+}
+
+.amazing-team-member:focus-visible {
+  outline: 3px solid var(--team-accent);
+  outline-offset: 3px;
+}
+
+.amazing-team-member-number {
+  align-self: start;
+  padding-top: 5px;
+  color: var(--team-gold);
+  font-family: Georgia, serif;
+  font-size: 16px;
+}
+
+.amazing-team-member-info {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.amazing-team-member-role {
+  color: #786141;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.amazing-team-member-name {
+  color: var(--team-deep);
+  font-family: "Georgia Pro", Georgia, serif;
+  font-size: clamp(21px, 2vw, 28px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.amazing-team-member-description {
+  display: -webkit-box;
+  max-width: 390px;
+  overflow: hidden;
+  color: rgba(0, 53, 74, 0.65);
+  font-size: 12px;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.amazing-team-member-avatar {
+  display: block;
+  width: 68px;
+  height: 68px;
+  overflow: hidden;
+  border: 2px solid var(--team-gold-light);
+  border-radius: 50%;
+  background: #d9e5e7;
+}
+
+.amazing-team-member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 500ms ease;
+}
+
+.amazing-team-member:hover .amazing-team-member-avatar img,
+.amazing-team-member.is-active .amazing-team-member-avatar img {
+  transform: scale(1.10);
+}
+
+.amazing-team-member-arrow {
+  color: var(--team-gold);
+  font-size: 24px;
+  transition: transform 350ms ease;
+}
+
+.amazing-team-member:hover .amazing-team-member-arrow,
+.amazing-team-member.is-active .amazing-team-member-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.amazing-team-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: clamp(40px, 5vw, 70px);
+}
+
+.amazing-team-footer-line {
+  width: min(90px, 12vw);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--team-gold)
+  );
+}
+
+.amazing-team-footer-line:last-child {
+  transform: rotate(180deg);
+}
+
+.amazing-team-footer p {
+  margin: 0;
+  color: rgba(0, 53, 74, 0.68);
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.amazing-team-footer strong {
+  color: var(--team-deep);
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+  .amazing-team-container {
+    width: min(100% - 48px, 1100px);
+  }
+
+  .amazing-team-showcase {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 25px;
+  }
+
+  .amazing-team-feature-image {
+    min-height: 410px;
+  }
+
+  .amazing-team-member {
+    grid-template-columns: 25px minmax(0, 1fr) 54px;
+    min-height: 110px;
+    padding: 15px;
+  }
+
+  .amazing-team-member-avatar {
+    width: 54px;
+    height: 54px;
+  }
+
+  .amazing-team-member-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .amazing-team {
+    padding: 76px 0;
+  }
+
+  .amazing-team-container {
+    width: calc(100% - 36px);
+  }
+
+  .amazing-team-header {
+    margin-bottom: 32px;
+  }
+
+  .amazing-team-header h2 {
+    font-size: clamp(36px, 8vw, 54px);
+  }
+
+  .amazing-team-showcase {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .amazing-team-feature-image {
+    min-height: 390px;
+  }
+
+  .amazing-team-member {
+    grid-template-columns: 26px minmax(0, 1fr) 58px;
+    min-height: 106px;
+    transform: none !important;
+  }
+
+  .amazing-team-member-avatar {
+    width: 58px;
+    height: 58px;
+  }
+
+  .amazing-team-footer {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .amazing-team {
+    padding: 62px 0;
+  }
+
+  .amazing-team-header h2 {
+    font-size: 37px;
+  }
+
+  .amazing-team-feature {
+    padding: 8px;
+    border-radius: 22px;
+  }
+
+  .amazing-team-feature-image {
+    min-height: 340px;
+    border-radius: 16px;
+  }
+
+  .amazing-team-feature-caption {
+    padding: 21px 13px 14px;
+  }
+
+  .amazing-team-feature-caption p {
+    min-height: 0;
+  }
+
+  .amazing-team-member {
+    grid-template-columns: 23px minmax(0, 1fr) 52px;
+    gap: 10px;
+    padding: 14px 12px;
+    border-radius: 16px;
+  }
+
+  .amazing-team-member-name {
+    font-size: 21px;
+  }
+
+  .amazing-team-member-avatar {
+    width: 52px;
+    height: 52px;
+  }
+
+  .amazing-team-member-description {
+    -webkit-line-clamp: 2;
+    font-size: 11px;
+  }
+
+  .amazing-team-footer-line {
+    width: 24px;
+    flex-shrink: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amazing-team *,
+  .amazing-team *::before,
+  .amazing-team *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

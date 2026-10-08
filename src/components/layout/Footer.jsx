@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
 
@@ -6,34 +6,50 @@ function Footer() {
   return (
     <>
       {/* Separate Start a Project section */}
-      <section className="footer-top footer-cta-section">
-        <div className="site-container">
-          <div className="footer-cta">
-            <div className="footer-cta-label">
-              <span className="footer-label-line" />
-              <span>Start a Project</span>
-            </div>
+      <section className="footer-top footer-cta-section footer-cta-premium">
+  <div className="footer-cta-blueprint" aria-hidden="true" />
 
-            <Link
-              className="footer-big-link"
-              to="/contact"
-            >
-              <span>
-                Let&apos;s create a space
-                <br />
-                that feels <em>like you.</em>
-              </span>
+  <div className="site-container footer-cta-premium-container">
+    <div className="footer-cta-premium-content">
 
-              <span
-                className="footer-circle-arrow"
-                aria-hidden="true"
-              >
-                ↗
-              </span>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <div className="footer-cta-premium-pill">
+        <span className="footer-cta-premium-sparkle" aria-hidden="true">
+          ✦
+        </span>
+        LET'S CREATE SOMETHING BEAUTIFUL
+      </div>
+
+      <h2 className="footer-cta-premium-title">
+        Let's Design Your
+        <br />
+        <em>Dream Space.</em>
+      </h2>
+
+      <p className="footer-cta-premium-description">
+        From your first idea to the final detail, let's create
+        an interior that truly feels like yours.
+      </p>
+
+      <Link
+        className="footer-cta-premium-action"
+        to="/contact"
+        aria-label="Start your interior design project"
+      >
+        <span className="footer-cta-premium-action-text">
+          Ready to transform your space?
+        </span>
+
+        <span
+          className="footer-cta-premium-arrow"
+          aria-hidden="true"
+        >
+          ↗
+        </span>
+      </Link>
+
+    </div>
+  </div>
+</section>
 
       {/* Actual Footer */}
       <footer className="site-footer">

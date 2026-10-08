@@ -669,3 +669,146 @@
     transition: none;
   }
 }
+
+/* =========================================================
+   VASUPRIY — WHY CHOOSE US BRAND THEME
+   Scoped visual refinement
+========================================================= */
+
+.why-vasupriy {
+  --why-teal: #004758;
+  --why-deep: #003744;
+  --why-gold: #B48F4E;
+  --why-ivory: #F5F0EA;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(180, 143, 78, 0.08),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #FAF7F2 0%,
+      #F5F0EA 100%
+    );
+
+  color: var(--why-deep);
+}
+
+.why-vasupriy-header h2 {
+  color: var(--why-deep);
+}
+
+.why-vasupriy-header h2 em {
+  color: var(--why-gold);
+}
+
+.why-vasupriy-header > p {
+  color: rgba(0, 55, 68, 0.72);
+}
+
+.why-vasupriy-eyebrow {
+  color: var(--why-gold);
+}
+
+.why-vasupriy-eyebrow i {
+  color: var(--why-teal);
+}
+
+/* Image collage */
+
+.why-vasupriy-image {
+  box-shadow: 0 18px 45px rgba(0, 55, 68, 0.12);
+}
+
+.why-vasupriy-image--detail {
+  border-color: var(--why-ivory);
+}
+
+/* Premium support card */
+
+.why-vasupriy-support-card {
+  background: linear-gradient(
+    135deg,
+    #004758 0%,
+    #003744 100%
+  );
+
+  border: 1px solid rgba(180, 143, 78, 0.45);
+
+  box-shadow:
+    8px 8px 0 rgba(180, 143, 78, 0.20),
+    0 18px 40px rgba(0, 55, 68, 0.15);
+}
+
+.why-vasupriy-support-icon {
+  color: #E8CCA0;
+  border-color: rgba(232, 204, 160, 0.55);
+}
+
+/* Feature cards */
+
+.why-vasupriy-reason {
+  background: rgba(255, 255, 255, 0.78);
+
+  border: 1px solid rgba(0, 71, 88, 0.10);
+
+  box-shadow:
+    0 12px 35px rgba(0, 55, 68, 0.045);
+}
+
+.why-vasupriy-reason:hover {
+  background: #FFFFFF;
+
+  border-color: rgba(180, 143, 78, 0.40);
+
+  box-shadow:
+    0 20px 48px rgba(0, 55, 68, 0.11);
+}
+
+.why-vasupriy-reason-icon {
+  background: var(--why-teal);
+  color: #FFFFFF;
+}
+
+.why-vasupriy-reason h3 {
+  color: var(--why-deep);
+}
+
+.why-vasupriy-reason-rule {
+  background: linear-gradient(
+    90deg,
+    var(--why-gold),
+    rgba(0, 71, 88, 0.10)
+  );
+}
+
+.why-vasupriy-reason p {
+  color: rgba(0, 55, 68, 0.74);
+}
+
+/* Footer */
+
+.why-vasupriy-footer {
+  color: rgba(0, 55, 68, 0.78);
+}
+
+.why-vasupriy-footer > span,
+.why-vasupriy-footer a {
+  color: var(--why-gold);
+}
+
+.why-vasupriy-footer a:hover {
+  color: var(--why-teal);
+}
+
+.why-vasupriy-mini-marks span {
+  background: var(--why-teal);
+  border-color: var(--why-ivory);
+}
+
+.why-vasupriy-mini-marks span:nth-child(2) {
+  background: var(--why-gold);
+}
+

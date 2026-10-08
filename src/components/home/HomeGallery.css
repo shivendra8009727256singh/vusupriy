@@ -1,4 +1,4 @@
-﻿.antra-gallery {
+.antra-gallery {
   position: relative;
   width: 100%;
   padding: 118px 0 112px;
@@ -208,9 +208,6 @@
     );
 }
 
-.antra-gallery:hover .antra-gallery-track {
-  animation-play-state: paused;
-}
 
 @keyframes antraGalleryLeft {
   from {
@@ -339,7 +336,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .antra-gallery-track {
-    animation-play-state: paused !important;
+
   }
 
   .antra-gallery-item img,

@@ -1,0 +1,1018 @@
+﻿/* =========================================================
+   VASUPRIY — INTERIOR PRODUCTS GALLERY
+   5 products / 3 visible desktop
+   ========================================================= */
+
+.products-gallery {
+  position: relative;
+  isolation: isolate;
+
+  min-height: clamp(650px, 52vw, 790px);
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #0e2943;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   FULL BACKGROUND
+   ========================================================= */
+
+.products-gallery-background,
+.products-gallery-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.products-gallery-background {
+  z-index: 0;
+}
+
+.products-gallery-background img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.035);
+
+  filter: saturate(0.82);
+}
+
+.products-gallery-overlay {
+  z-index: 1;
+
+  background:
+    linear-gradient(90deg,
+      rgba(7, 22, 36, 0.92) 0%,
+      rgba(7, 22, 36, 0.82) 25%,
+      rgba(7, 22, 36, 0.48) 52%,
+      rgba(7, 22, 36, 0.60) 100%),
+    linear-gradient(180deg,
+      rgba(5, 17, 28, 0.20),
+      rgba(5, 17, 28, 0.52));
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.products-gallery-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(260px, 29%) minmax(0, 71%);
+
+  gap: clamp(35px, 4vw, 65px);
+
+  align-items: center;
+
+  padding-top: clamp(70px, 7vw, 105px);
+  padding-bottom: clamp(70px, 7vw, 105px);
+}
+
+
+/* =========================================================
+   LEFT COPY
+   ========================================================= */
+
+.products-gallery-copy {
+  margin-left: 10px;
+  position: relative;
+  z-index: 5;
+
+  align-self: center;
+}
+
+.products-gallery-label {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 14px;
+
+  margin-bottom: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+
+  background: rgba(14, 41, 67, 0.20);
+
+  backdrop-filter: blur(8px);
+
+  color: #ffffff;
+
+  font-size: 0.66rem;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.products-gallery-label i {
+  width: 5px;
+  height: 5px;
+
+  flex: 0 0 5px;
+
+  border-radius: 50%;
+
+  background: #d7b77d;
+}
+
+.products-gallery-copy h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(4rem, 6.2vw, 6.4rem);
+  font-weight: 600;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.065em;
+}
+
+.products-gallery-copy p {
+  max-width: 330px;
+
+  margin:
+    clamp(28px, 3vw, 42px) 0 0;
+
+  color: rgba(255, 255, 255, 0.76);
+
+  font-size: clamp(0.82rem, 0.92vw, 0.96rem);
+
+  line-height: 1.7;
+}
+
+.products-gallery-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 28px;
+
+  color: #d7b77d;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.products-gallery-link span {
+  font-size: 1rem;
+
+  transition:
+    transform 300ms ease;
+}
+
+.products-gallery-link:hover span {
+  transform:
+    translate(3px, -3px);
+}
+
+
+/* =========================================================
+   SLIDER
+   ========================================================= */
+
+.products-gallery-slider {
+  position: relative;
+
+  min-width: 0;
+
+  padding-bottom: 74px;
+
+  touch-action: pan-y;
+}
+
+.products-gallery-track {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: clamp(18px, 1.8vw, 28px);
+
+  align-items: center;
+
+  animation:
+    products-gallery-enter 650ms cubic-bezier(.2, .75, .25, 1) both;
+}
+
+@keyframes products-gallery-enter {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+.products-gallery-card {
+  position: relative;
+
+  min-width: 0;
+
+  height: clamp(350px, 31vw, 475px);
+
+  overflow: hidden;
+
+  border-radius: clamp(20px, 1.8vw, 28px);
+
+  background: #f5f0ea;
+
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.18);
+
+  transform: translateZ(0);
+}
+
+.products-gallery-card img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 900ms cubic-bezier(.2, .75, .25, 1);
+}
+
+.products-gallery-card:hover img {
+  transform: scale(1.045);
+}
+
+
+/* Reference-style slight rhythm */
+
+.products-gallery-card--1 {
+  transform: translateY(-18px);
+}
+
+.products-gallery-card--2 {
+  transform: translateY(0);
+}
+
+.products-gallery-card--3 {
+  transform: translateY(18px);
+}
+
+
+/* =========================================================
+   CARD INFORMATION
+   ========================================================= */
+
+.products-gallery-card::after {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(180deg,
+      transparent 45%,
+      rgba(4, 14, 23, 0.74) 100%);
+
+  pointer-events: none;
+}
+
+.products-gallery-card-overlay {
+  position: absolute;
+  z-index: 2;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 24px 22px;
+}
+
+.products-gallery-card-overlay>span {
+  color: #d7b77d;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.products-gallery-card-overlay h3 {
+  max-width: 78%;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(1.05rem, 1.3vw, 1.35rem);
+  font-weight: 600;
+
+  line-height: 1.08;
+
+  text-align: right;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   ARROW CONTROLS
+   ========================================================= */
+
+.products-gallery-controls {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.products-gallery-controls button {
+  width: 52px;
+  height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(215, 183, 125, 0.7);
+  border-radius: 50%;
+
+  background: #d7b77d;
+
+  color: #0e2943;
+
+  cursor: pointer;
+
+  font-size: 1.25rem;
+
+  transition:
+    transform 250ms ease,
+    background 250ms ease,
+    color 250ms ease;
+}
+
+.products-gallery-controls button:hover {
+  transform: translateY(-3px);
+
+  background: #ffffff;
+
+  color: #0e2943;
+}
+
+.products-gallery-controls button:focus-visible,
+.products-gallery-dot:focus-visible,
+.products-gallery-link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   5-PRODUCT PROGRESS
+   ========================================================= */
+
+.products-gallery-progress {
+  position: absolute;
+
+  right: 0;
+  bottom: 19px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.products-gallery-dot {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.38);
+
+  cursor: pointer;
+
+  transition:
+    width 300ms ease,
+    background 300ms ease;
+}
+
+.products-gallery-dot--active {
+  width: 30px;
+
+  background: #d7b77d;
+}
+
+
+/* =========================================================
+   TABLET
+   Total remains 5; 2 cards shown at once
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .products-gallery {
+    min-height: auto;
+  }
+
+  .products-gallery-container {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .products-gallery-copy {
+    max-width: 650px;
+  }
+
+  .products-gallery-copy h2 {
+    font-size: clamp(3.8rem, 10vw, 6rem);
+  }
+
+  .products-gallery-copy p {
+    max-width: 480px;
+  }
+
+  .products-gallery-track {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .products-gallery-card--3 {
+    display: none;
+  }
+
+  .products-gallery-card--1 {
+    transform: translateY(0);
+  }
+
+  .products-gallery-card--2 {
+    transform: translateY(25px);
+  }
+
+  .products-gallery-card {
+    height: clamp(370px, 55vw, 540px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   Total remains 5; 1 card shown at once
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .products-gallery-container {
+    gap: 42px;
+
+    padding-top: 70px;
+    padding-bottom: 65px;
+  }
+
+  .products-gallery-label {
+    margin-bottom: 22px;
+  }
+
+  .products-gallery-copy h2 {
+    font-size: clamp(3.4rem, 16vw, 5rem);
+  }
+
+  .products-gallery-copy p {
+    margin-top: 25px;
+  }
+
+  .products-gallery-slider {
+    padding-bottom: 70px;
+  }
+
+  .products-gallery-track {
+    display: block;
+  }
+
+  .products-gallery-card {
+    width: 100%;
+    height: min(118vw, 520px);
+
+    border-radius: 20px;
+
+    transform: none;
+  }
+
+  .products-gallery-card--2,
+  .products-gallery-card--3 {
+    display: none;
+  }
+
+  .products-gallery-card-overlay {
+    padding: 22px 20px;
+  }
+
+  .products-gallery-controls button {
+    width: 48px;
+    height: 48px;
+  }
+
+  .products-gallery-progress {
+    bottom: 18px;
+  }
+
+  .products-gallery-background img {
+    transform: scale(1.08);
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .products-gallery-track {
+    animation: none;
+  }
+
+  .products-gallery-card img,
+  .products-gallery-link span,
+  .products-gallery-controls button,
+  .products-gallery-dot {
+    transition: none;
+  }
+}
+/* =========================================================
+   PRODUCTS — SMOOTH INFINITE CAROUSEL FINAL
+   ========================================================= */
+
+.products-gallery-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.products-gallery-track {
+  --product-gap: clamp(18px, 1.8vw, 28px);
+
+  display: flex !important;
+  grid-template-columns: none !important;
+
+  gap: var(--product-gap) !important;
+
+  width: 100%;
+
+  align-items: center;
+
+  animation: none !important;
+
+  transform: translate3d(0, 0, 0);
+
+  transition:
+    transform 700ms cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+
+  will-change: transform;
+}
+
+.products-gallery-track--sliding {
+  transform:
+    translate3d(
+      calc(
+        -1 * (
+          (100% - (2 * var(--product-gap))) / 3
+          + var(--product-gap)
+        )
+      ),
+      0,
+      0
+    ) !important;
+}
+
+.products-gallery-card {
+  display: block !important;
+
+  flex:
+    0 0
+    calc((100% - (2 * var(--product-gap))) / 3) !important;
+
+  width:
+    calc((100% - (2 * var(--product-gap))) / 3) !important;
+
+  min-width:
+    calc((100% - (2 * var(--product-gap))) / 3) !important;
+}
+
+/* Maintain existing staggered composition */
+
+.products-gallery-card--1 {
+  transform: translateY(-18px) !important;
+}
+
+.products-gallery-card--2 {
+  transform: translateY(0) !important;
+}
+
+.products-gallery-card--3 {
+  transform: translateY(18px) !important;
+}
+
+.products-gallery-card--4 {
+  transform: translateY(-18px) !important;
+}
+
+
+/* =========================================================
+   TABLET — 2 CARDS
+   ========================================================= */
+
+@media (max-width: 900px) and (min-width: 641px) {
+
+  .products-gallery-track {
+    --product-gap: clamp(18px, 2.5vw, 26px);
+
+    display: flex !important;
+    grid-template-columns: none !important;
+  }
+
+  .products-gallery-card,
+  .products-gallery-card--1,
+  .products-gallery-card--2,
+  .products-gallery-card--3,
+  .products-gallery-card--4 {
+    display: block !important;
+
+    flex:
+      0 0
+      calc((100% - var(--product-gap)) / 2) !important;
+
+    width:
+      calc((100% - var(--product-gap)) / 2) !important;
+
+    min-width:
+      calc((100% - var(--product-gap)) / 2) !important;
+  }
+
+  .products-gallery-track--sliding {
+    transform:
+      translate3d(
+        calc(
+          -1 * (
+            (100% - var(--product-gap)) / 2
+            + var(--product-gap)
+          )
+        ),
+        0,
+        0
+      ) !important;
+  }
+
+  .products-gallery-card--1,
+  .products-gallery-card--3 {
+    transform: translateY(0) !important;
+  }
+
+  .products-gallery-card--2,
+  .products-gallery-card--4 {
+    transform: translateY(25px) !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE — 1 CARD
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .products-gallery-track {
+    display: flex !important;
+    grid-template-columns: none !important;
+
+    gap: 0 !important;
+
+    animation: none !important;
+  }
+
+  .products-gallery-card,
+  .products-gallery-card--1,
+  .products-gallery-card--2,
+  .products-gallery-card--3,
+  .products-gallery-card--4 {
+    display: block !important;
+
+    flex: 0 0 100% !important;
+
+    width: 100% !important;
+    min-width: 100% !important;
+
+    transform: none !important;
+  }
+
+  .products-gallery-track--sliding {
+    transform: translate3d(-100%, 0, 0) !important;
+  }
+}
+
+
+/* =========================================================
+   PRODUCTS — TRUE SMOOTH CAROUSEL
+   ========================================================= */
+
+.products-gallery-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.products-gallery-track {
+  --product-gap: clamp(18px, 1.8vw, 28px);
+  --product-width: calc((100% - (2 * var(--product-gap))) / 3);
+
+  display: flex !important;
+  grid-template-columns: none !important;
+
+  gap: var(--product-gap) !important;
+  align-items: center;
+
+  width: 100%;
+
+  animation: none !important;
+
+  transform:
+    translate3d(
+      calc(
+        -1 * var(--product-index) *
+        (var(--product-width) + var(--product-gap))
+      ),
+      0,
+      0
+    ) !important;
+
+  transition: none !important;
+
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.products-gallery-track--animate {
+  transition:
+    transform 700ms cubic-bezier(.22, .61, .36, 1) !important;
+}
+
+.products-gallery-card,
+.products-gallery-card--1,
+.products-gallery-card--2,
+.products-gallery-card--3,
+.products-gallery-card--4 {
+  display: block !important;
+
+  flex: 0 0 var(--product-width) !important;
+  width: var(--product-width) !important;
+  min-width: var(--product-width) !important;
+
+  transform: none !important;
+}
+
+/* subtle premium rhythm without moving card boxes */
+.products-gallery-card:nth-child(3n + 1) img {
+  object-position: center;
+}
+
+
+/* =========================
+   TABLET — 2 CARDS
+   ========================= */
+
+@media (max-width: 900px) and (min-width: 641px) {
+
+  .products-gallery-track {
+    --product-gap: clamp(18px, 2.5vw, 26px);
+    --product-width: calc((100% - var(--product-gap)) / 2);
+  }
+}
+
+
+/* =========================
+   MOBILE — 1 CARD
+   ========================= */
+
+@media (max-width: 640px) {
+
+  .products-gallery-track {
+    --product-gap: 0px;
+    --product-width: 100%;
+
+    gap: 0 !important;
+  }
+
+  .products-gallery-card,
+  .products-gallery-card--1,
+  .products-gallery-card--2,
+  .products-gallery-card--3,
+  .products-gallery-card--4 {
+    display: block !important;
+
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+
+    transform: none !important;
+  }
+}
+
+
+/* =========================================================
+   VASUPRIY PRODUCTS — OFFICIAL BRAND THEME
+   Teal + Antique Gold | Georgia Typography
+========================================================= */
+
+.products-gallery {
+  --products-teal: #167A8F;
+  --products-teal-mid: #076D81;
+  --products-teal-deep: #004A5E;
+  --products-teal-dark: #00354A;
+
+  --products-gold-light: #DBC4A4;
+  --products-gold: #AF9166;
+  --products-gold-deep: #786141;
+
+  background: #00354A;
+  color: #FFFFFF;
+}
+
+/* Branded background atmosphere */
+
+.products-gallery-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 53, 74, 0.97) 0%,
+      rgba(0, 74, 94, 0.90) 35%,
+      rgba(0, 74, 94, 0.70) 65%,
+      rgba(0, 53, 74, 0.82) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(22, 122, 143, 0.10),
+      rgba(0, 53, 74, 0.55)
+    );
+}
+
+.products-gallery-background img {
+  filter: saturate(0.82);
+}
+
+/* Editorial heading */
+
+.products-gallery-copy h2 {
+  color: #FFFFFF;
+  font-family: "Georgia Pro", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  text-shadow: 0 8px 30px rgba(0, 53, 74, 0.22);
+}
+
+.products-gallery-copy p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.products-gallery-label {
+  color: var(--products-gold-light);
+  border-color: rgba(219, 196, 164, 0.45);
+  background: rgba(0, 53, 74, 0.42);
+}
+
+.products-gallery-label i {
+  background: var(--products-gold);
+}
+
+.products-gallery-link {
+  color: var(--products-gold-light);
+}
+
+.products-gallery-link:hover {
+  color: #FFFFFF;
+}
+
+/* Premium product cards */
+
+.products-gallery-card {
+  border: 1px solid rgba(219, 196, 164, 0.55);
+  border-radius: 24px;
+  background: #F5F0EA;
+
+  box-shadow:
+    0 20px 50px rgba(0, 28, 40, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.products-gallery-card::after {
+  background: linear-gradient(
+    180deg,
+    transparent 42%,
+    rgba(0, 53, 74, 0.92) 100%
+  );
+}
+
+.products-gallery-card-overlay h3 {
+  color: #FFFFFF;
+  font-family: "Georgia Pro", Georgia, serif;
+}
+
+.products-gallery-card-overlay > span {
+  color: var(--products-gold-light);
+}
+
+/* Navigation and progress */
+
+.products-gallery-dot {
+  background: rgba(219, 196, 164, 0.38);
+}
+
+.products-gallery-dot--active {
+  background: var(--products-gold);
+}
+
+.products-gallery-controls button {
+  background: var(--products-gold-light);
+  border-color: var(--products-gold);
+  color: var(--products-teal-dark);
+}
+
+.products-gallery-controls button:hover {
+  background: #FFFFFF;
+  color: var(--products-teal-deep);
+}
+
+.products-gallery-controls button:focus-visible,
+.products-gallery-dot:focus-visible,
+.products-gallery-link:focus-visible {
+  outline-color: var(--products-gold-light);
+}
+
+@media (max-width: 640px) {
+  .products-gallery-card {
+    border-radius: 20px;
+  }
+
+  .products-gallery-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 53, 74, 0.94),
+        rgba(0, 74, 94, 0.83),
+        rgba(0, 53, 74, 0.92)
+      );
+  }
+}
+

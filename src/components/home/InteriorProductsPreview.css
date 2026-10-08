@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    VASUPRIY — INTERIOR PRODUCTS GALLERY
    5 products / 3 visible desktop
    ========================================================= */
@@ -806,7 +806,7 @@
 
 .products-gallery-track--animate {
   transition:
-    transform 700ms cubic-bezier(.22, .61, .36, 1) !important;
+    transform 900ms cubic-bezier(.22, .61, .36, 1) !important;
 }
 
 .products-gallery-card,
@@ -870,3 +870,302 @@
   }
 }
 
+
+/* =========================================================
+   VASUPRIY PRODUCTS — OFFICIAL BRAND THEME
+   Teal + Antique Gold | Georgia Typography
+========================================================= */
+
+.products-gallery {
+  --products-teal: #167A8F;
+  --products-teal-mid: #076D81;
+  --products-teal-deep: #004A5E;
+  --products-teal-dark: #00354A;
+
+  --products-gold-light: #DBC4A4;
+  --products-gold: #AF9166;
+  --products-gold-deep: #786141;
+
+  background: #00354A;
+  color: #FFFFFF;
+}
+
+/* Branded background atmosphere */
+
+.products-gallery-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 53, 74, 0.97) 0%,
+      rgba(0, 74, 94, 0.90) 35%,
+      rgba(0, 74, 94, 0.70) 65%,
+      rgba(0, 53, 74, 0.82) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(22, 122, 143, 0.10),
+      rgba(0, 53, 74, 0.55)
+    );
+}
+
+.products-gallery-background img {
+  filter: saturate(0.82);
+}
+
+/* Editorial heading */
+
+.products-gallery-copy h2 {
+  color: #FFFFFF;
+  font-family: "Georgia Pro", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  text-shadow: 0 8px 30px rgba(0, 53, 74, 0.22);
+}
+
+.products-gallery-copy p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.products-gallery-label {
+  color: var(--products-gold-light);
+  border-color: rgba(219, 196, 164, 0.45);
+  background: rgba(0, 53, 74, 0.42);
+}
+
+.products-gallery-label i {
+  background: var(--products-gold);
+}
+
+.products-gallery-link {
+  color: var(--products-gold-light);
+}
+
+.products-gallery-link:hover {
+  color: #FFFFFF;
+}
+
+/* Premium product cards */
+
+.products-gallery-card {
+  border: 1px solid rgba(219, 196, 164, 0.55);
+  border-radius: 24px;
+  background: #F5F0EA;
+
+  box-shadow:
+    0 20px 50px rgba(0, 28, 40, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.products-gallery-card::after {
+  background: linear-gradient(
+    180deg,
+    transparent 42%,
+    rgba(0, 53, 74, 0.92) 100%
+  );
+}
+
+.products-gallery-card-overlay h3 {
+  color: #FFFFFF;
+  font-family: "Georgia Pro", Georgia, serif;
+}
+
+.products-gallery-card-overlay > span {
+  color: var(--products-gold-light);
+}
+
+/* Navigation and progress */
+
+.products-gallery-dot {
+  background: rgba(219, 196, 164, 0.38);
+}
+
+.products-gallery-dot--active {
+  background: var(--products-gold);
+}
+
+.products-gallery-controls button {
+  background: var(--products-gold-light);
+  border-color: var(--products-gold);
+  color: var(--products-teal-dark);
+}
+
+.products-gallery-controls button:hover {
+  background: #FFFFFF;
+  color: var(--products-teal-deep);
+}
+
+.products-gallery-controls button:focus-visible,
+.products-gallery-dot:focus-visible,
+.products-gallery-link:focus-visible {
+  outline-color: var(--products-gold-light);
+}
+
+@media (max-width: 640px) {
+  .products-gallery-card {
+    border-radius: 20px;
+  }
+
+  .products-gallery-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 53, 74, 0.94),
+        rgba(0, 74, 94, 0.83),
+        rgba(0, 53, 74, 0.92)
+      );
+  }
+}
+
+
+/* =========================================================
+   VASUPRIY PRODUCTS PREMIUM FINISH V1
+   ========================================================= */
+
+/* Explore Products CTA */
+
+.products-gallery-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+
+  min-height: 52px;
+  padding: 14px 20px 14px 24px;
+
+  border: 1px solid rgba(219, 196, 164, 0.75);
+  border-radius: 999px;
+
+  background: rgba(0, 53, 74, 0.35);
+  backdrop-filter: blur(12px);
+
+  color: #dbc4a4;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+
+  box-shadow: 0 10px 30px rgba(0, 28, 40, 0.16);
+
+  transition:
+    background 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    transform 300ms ease;
+}
+
+.products-gallery-link:hover {
+  background: #dbc4a4;
+  border-color: #dbc4a4;
+  color: #00354a;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 35px rgba(0, 28, 40, 0.3);
+}
+
+.products-gallery-link span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  border: 1px solid currentColor;
+  border-radius: 50%;
+
+  font-size: 1rem;
+  line-height: 1;
+
+  transition: transform 300ms ease;
+}
+
+.products-gallery-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* Product card finishing */
+
+.products-gallery-card {
+  transition:
+    border-color 350ms ease,
+    box-shadow 350ms ease;
+}
+
+.products-gallery-card:hover {
+  border-color: #dbc4a4;
+
+  box-shadow:
+    0 28px 65px rgba(0, 28, 40, 0.38),
+    0 0 0 1px rgba(219, 196, 164, 0.22);
+}
+
+.products-gallery-card img {
+  transition:
+    transform 900ms cubic-bezier(.2, .75, .25, 1),
+    filter 500ms ease;
+}
+
+.products-gallery-card:hover img {
+  transform: scale(1.07);
+  filter: saturate(1.08);
+}
+
+.products-gallery-card-overlay h3 {
+  transition: transform 350ms ease;
+}
+
+.products-gallery-card:hover .products-gallery-card-overlay h3 {
+  transform: translateY(-4px);
+}
+
+/* Responsive CTA */
+
+@media (max-width: 640px) {
+  .products-gallery-link {
+    min-height: 48px;
+    padding: 11px 15px 11px 19px;
+    gap: 15px;
+  }
+
+  .products-gallery-link span {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .products-gallery-link,
+  .products-gallery-link span,
+  .products-gallery-card,
+  .products-gallery-card img,
+  .products-gallery-card-overlay h3 {
+    transition: none !important;
+  }
+
+  .products-gallery-link:hover,
+  .products-gallery-link:hover span,
+  .products-gallery-card:hover img,
+  .products-gallery-card:hover .products-gallery-card-overlay h3 {
+    transform: none !important;
+  }
+}
+
+/* VASUPRIY SMOOTH AUTOPLAY FIX START */
+
+.products-gallery-track {
+  transition: none !important;
+}
+
+.products-gallery-track.products-gallery-track--animate {
+  transition:
+    transform 900ms cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+}
+
+.products-gallery-slider:hover .products-gallery-track {
+  animation-play-state: running !important;
+}
+
+/* VASUPRIY SMOOTH AUTOPLAY FIX END */

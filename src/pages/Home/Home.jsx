@@ -1,12 +1,18 @@
-﻿import { useEffect, useRef, useState } from 'react'
+import { useState as useExpertiseState } from 'react'
+import solutionBrandImage from '../../assets/images/renamed-collection/commercial-site-photos/modern-commercial-space-interior-01.jpg'
+import solutionProductImage from '../../assets/images/renamed-collection/residential-site-photos/residential-interior-details-46.jpg'
+import solutionDesignImage from '../../assets/images/renamed-collection/residential-interior-renders/elegant-living-room-14.jpg'
+import aboutVasupriyInterior from '../../assets/images/home/about-vasupriy-interior.png'
+import { useEffect, useRef, useState } from 'react'
 import useDecodedSelection, { createDecodedSelection } from '../../hooks/useDecodedSelection.js'
 import { Link } from 'react-router-dom'
 
 import '../../App.css'
 import useScrollMotion from '../../hooks/useScrollMotion.js'
 import InteriorProductsPreview from '../../components/home/InteriorProductsPreview.jsx'
+import FloorPlanGallery from '../../components/home/FloorPlanGallery.jsx'
+import AmazingDesigningTeam from '../../components/home/AmazingDesigningTeam.jsx'
 import WhyVasupriy from '../../components/home/WhyVasupriy.jsx'
-import BeforeAfterTransformation from '../../components/home/BeforeAfterTransformation.jsx'
 import HomeGallery from '../../components/home/HomeGallery.jsx'
 
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
@@ -16,14 +22,21 @@ import heroArchitectureWatermark from '../../assets/images/home/hero-architectur
 import residentialInterior from '../../assets/images/home/projects/residential-interior.png'
 import commercialSpace from '../../assets/images/home/projects/commercial-space.png'
 import spaceMakeover from '../../assets/images/home/projects/space-makeover.png'
-import serviceMakeover from '../../assets/images/home/services/space-designing-makeover.png'
-import serviceExecution from '../../assets/images/home/services/execution-turnkey.png'
-import serviceArchitecture from '../../assets/images/home/services/architectural-civil.png'
-import expertiseFloorPlan from '../../assets/images/home/expertise/interior-3d-floor-plan.png'
+import serviceMakeover from '../../assets/images/renamed-collection/residential-interior-renders/elegant-living-room-13.jpg'
+import serviceExecution from '../../assets/images/renamed-collection/commercial-site-photos/interior-renovation-in-progress-06.jpg'
+import serviceArchitecture from '../../assets/images/home/products/customized-products.png'
 import expertiseInterior from '../../assets/images/home/expertise/expertise-interior.png'
 import interiorShowcaseImage from '../../assets/images/home/interior-showcase.png'
 
+import expertiseFeature from '../../assets/images/home/expertise/expertise-feature.png'
+import expertiseSpacePlanning from '../../assets/images/home/expertise/space-planning.png'
+import expertiseDesignVisualization from '../../assets/images/home/expertise/design-visualization.png'
+import expertiseArchitecture from '../../assets/images/home/expertise/architectural-solutions.png'
+import expertiseTurnkey from '../../assets/images/home/expertise/turnkey-execution.png'
 function Home() {
+  const [activeExpertiseImage, setActiveExpertiseImage] =
+    useExpertiseState(expertiseFeature)
+
   const [pageReady, setPageReady] = useState(false)
   const [activeProject, setActiveProject] = useState(0)
   const [activeService, serviceImages] = useDecodedSelection(0)
@@ -76,23 +89,22 @@ function Home() {
   const homeServices = [
     {
       number: '01',
-      title: 'Space Designing & Makeover',
+      title: 'Space Designing and Makeover',
       description:
-        'Thoughtful space planning and makeover solutions shaped around your lifestyle, functionality and visual identity.',
+        'Creative space planning and personalized makeovers that transform interiors with thoughtful layouts, functionality and style.',
     },
     {
       number: '02',
-      title: 'Execution & Turnkey Solutions',
+      title: 'Interior Drop Servicing and Installation',
       description:
-        'Coordinated interior execution with a streamlined approach from approved design direction through on-site implementation.',
+        'Seamless interior product sourcing, delivery coordination and professional installation for a convenient end-to-end experience.',
     },
     {
       number: '03',
-      title: 'Architectural & Civil Solutions',
+      title: 'Custom Theme Based Products',
       description:
-        'Integrated architectural and civil support for spaces that need planning, structural coordination and refined execution.',
+        'Explore customized interior products thoughtfully designed around your preferred theme, aesthetic and space requirements.',
     },
-
   ]
   useScrollMotion(siteRef, projectIndexRef, setActiveProject)
 
@@ -347,7 +359,7 @@ function Home() {
 
 
       <div ref={siteRef} className={`site ${pageReady ? 'site--ready' : ''}`}>
-{/* =====================================================
+        {/* =====================================================
             HERO
         ====================================================== */}
 
@@ -369,7 +381,7 @@ function Home() {
             <div className="antra4-hero-copy">
 
               <div className="antra4-hero-badge">
-                <span aria-hidden="true">✦</span>
+                <span aria-hidden="true" />
                 <span>Trusted Interior Partner</span>
               </div>
 
@@ -394,11 +406,11 @@ function Home() {
                 </span>
 
                 <span className="antra4-title-line">
-                  stop 
+                  stop
                 </span>
 
                 <em className="antra4-title-line">
-                  Interior 
+                  Interior
                 </em>
 
                 <em className="antra4-title-line">
@@ -473,10 +485,10 @@ function Home() {
               <div className="brand-strip-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>
                 {['Residential Interiors', 'Commercial Spaces', 'Space Makeovers',
                   'Custom Design', 'End-to-End Execution'].map(label => (
-                  <span className="brand-strip-item" key={label}>
-                    <span>{label}</span><i aria-hidden="true" />
-                  </span>
-                ))}
+                    <span className="brand-strip-item" key={label}>
+                      <span>{label}</span><i aria-hidden="true" />
+                    </span>
+                  ))}
               </div>
             ))}
           </div>
@@ -504,11 +516,9 @@ function Home() {
 
               <div className="about-antra-heading-copy">
                 <h2 className="about-antra-title">
-                  We shape <em>interior spaces,</em>
+                  Thoughtful Spaces.
                   <br />
-                  crafting thoughtful and
-                  <br />
-                  inspiring environments.
+                  <em>Inspired Living.</em>
                 </h2>
               </div>
             </div>
@@ -523,17 +533,18 @@ function Home() {
 
               <div className="about-antra-visual" data-reveal>
                 <img
-                  src={residentialInterior}
-                  alt="Vasupriy residential interior design"
+                  src={aboutVasupriyInterior}
+                  alt="Vasupriy Interiovilla premium commercial interior project"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
 
             <div className="about-antra-statement" data-reveal>
               <p>
-                We believe every space should feel considered, functional
-                and personal — bringing together clean design, refined
-                details and the way people actually live and work.
+                Beautifully designed interiors, tailored to the way you
+                live and work.
               </p>
             </div>
 
@@ -595,29 +606,48 @@ function Home() {
           =================================================== */}
 
           <div className="about-showcase">
+            <div className="about-showcase-solution-heading" data-reveal>
+              <span className="about-showcase-solution-eyebrow">
+                ONE DESTINATION · ENDLESS POSSIBILITIES
+              </span>
+
+              <h2>
+                Switch to a <em>Single Solution</em>
+              </h2>
+            </div>
+
             <div
               className="about-showcase-gallery"
               data-reveal
             >
               <figure className="about-showcase-image about-showcase-image--one">
                 <img
-                  src={residentialInterior}
+                  src={solutionBrandImage}
                   alt="Vasupriy residential interior"
                 />
+                <figcaption className="about-showcase-solution-label">
+                  Multiple Brand Options
+                </figcaption>
               </figure>
 
               <figure className="about-showcase-image about-showcase-image--two">
                 <img
-                  src={commercialSpace}
+                  src={solutionProductImage}
                   alt="Vasupriy commercial interior"
                 />
+                <figcaption className="about-showcase-solution-label">
+                  Multiple Products Options
+                </figcaption>
               </figure>
 
               <figure className="about-showcase-image about-showcase-image--three">
                 <img
-                  src={spaceMakeover}
+                  src={solutionDesignImage}
                   alt="Vasupriy interior space makeover"
                 />
+                <figcaption className="about-showcase-solution-label">
+                  Multiple Design Options
+                </figcaption>
               </figure>
             </div>
 
@@ -930,9 +960,8 @@ function Home() {
 
                     return (
                       <button
-                        className={`home-service-item ${
-                          isActive ? 'home-service-item--active' : ''
-                        }`}
+                        className={`home-service-item ${isActive ? 'home-service-item--active' : ''
+                          }`}
                         key={service.number}
                         id={`home-service-tab-${index}`}
                         data-reveal
@@ -991,41 +1020,37 @@ function Home() {
               >
                 <div className="home-services-image-frame" data-reveal>
                   <div className="home-services-image-stack">
-                  <img
-                    className={`home-service-image ${
-                      activeService === 0 ? 'home-service-image--active' : ''
-                    }`}
-                    src={serviceMakeover}
-                    alt="Space designing and makeover concept"
-                    aria-hidden={activeService !== 0}
-                  />
+                    <img
+                      className={`home-service-image ${activeService === 0 ? 'home-service-image--active' : ''
+                        }`}
+                      src={serviceMakeover}
+                      alt="Space designing and makeover concept"
+                      aria-hidden={activeService !== 0}
+                    />
 
-                  <img
-                    className={`home-service-image ${
-                      activeService === 1 ? 'home-service-image--active' : ''
-                    }`}
-                    src={serviceExecution}
-                    alt="Interior execution and turnkey concept"
-                    aria-hidden={activeService !== 1}
-                  />
+                    <img
+                      className={`home-service-image ${activeService === 1 ? 'home-service-image--active' : ''
+                        }`}
+                      src={serviceExecution}
+                      alt="Interior execution and turnkey concept"
+                      aria-hidden={activeService !== 1}
+                    />
 
-                  <img
-                    className={`home-service-image ${
-                      activeService === 2 ? 'home-service-image--active' : ''
-                    }`}
-                    src={serviceArchitecture}
-                    alt="Architectural and civil interior concept"
-                    aria-hidden={activeService !== 2}
-                  />
+                    <img
+                      className={`home-service-image ${activeService === 2 ? 'home-service-image--active' : ''
+                        }`}
+                      src={serviceArchitecture}
+                      alt="Architectural and civil interior concept"
+                      aria-hidden={activeService !== 2}
+                    />
 
-                  <img
-                    className={`home-service-image ${
-                      activeService === 3 ? 'home-service-image--active' : ''
-                    }`}
-                    src={serviceMakeover}
-                    alt="2D and 3D visualization concept"
-                    aria-hidden={activeService !== 3}
-                  />
+                    <img
+                      className={`home-service-image ${activeService === 3 ? 'home-service-image--active' : ''
+                        }`}
+                      src={serviceMakeover}
+                      alt="2D and 3D visualization concept"
+                      aria-hidden={activeService !== 3}
+                    />
 
                   </div>
 
@@ -1060,143 +1085,114 @@ function Home() {
             3D INTERIOR VISUAL + OUR EXPERTISE
         ====================================================== */}
 
-        {/* BEFORE & AFTER TRANSFORMATION */}
-        <section
-          className="home-transformation-section"
-          data-scroll-section
-        >
-          <BeforeAfterTransformation />
-        </section>
 
-        <section
-          className="home-expertise"
-          id="expertise"
-          data-scroll-section
-        >
-          <div
-            className="home-expertise-visual"
-            aria-hidden="true"
+
+                {/* ORIGINAL 3D INTERIOR FLOOR PLAN VISUAL */}
+        <FloorPlanGallery />
+<section
+  className="home-expertise home-expertise--editorial"
+  id="expertise"
+  data-scroll-section
+>
+  <div className="site-container expertise-editorial-container">
+
+    <div
+      className="expertise-editorial-heading"
+      data-reveal
+      data-heading-reveal
+    >
+      <span className="expertise-editorial-eyebrow">
+        <i aria-hidden="true" />
+        Our Expertise
+      </span>
+
+      <h2>
+        Spaces Designed with
+        <em> Purpose &amp; Precision.</em>
+      </h2>
+
+      <p>
+        From the first concept to the finishing details,
+        we bring thoughtful design and seamless execution together.
+      </p>
+    </div>
+
+    <div className="expertise-editorial-layout">
+
+      <div className="expertise-editorial-feature" data-reveal>
+        <img
+          key={activeExpertiseImage}
+          src={activeExpertiseImage}
+          alt="Vasupriy Interiovilla premium interior design"
+          loading="lazy"
+          decoding="async"
+        />
+
+        <div className="expertise-editorial-feature-overlay">
+          <span>VASUPRIY INTERIOVILLA</span>
+          <strong>Designed for the way you live.</strong>
+        </div>
+      </div>
+
+      <div className="expertise-editorial-list">
+
+        {[
+          {
+            number: '01',
+            title: 'Space Planning & Makeovers',
+            description: 'Thoughtful layouts and inspiring transformations tailored to your lifestyle.',
+            image: expertiseSpacePlanning,
+          },
+          {
+            number: '02',
+            title: 'Design & Visualization',
+            description: 'Clear design direction with detailed planning and immersive visualization.',
+            image: expertiseDesignVisualization,
+          },
+          {
+            number: '03',
+            title: 'Architectural & Civil Solutions',
+            description: 'Coordinated architectural solutions built around beauty and functionality.',
+            image: expertiseArchitecture,
+          },
+          {
+            number: '04',
+            title: 'Turnkey Execution',
+            description: 'Seamless coordination from design development through final execution.',
+            image: expertiseTurnkey,
+          },
+        ].map((item) => (
+          <article
+            className="expertise-editorial-item"
+            key={item.number}
+            data-reveal
+            onMouseEnter={() => setActiveExpertiseImage(item.image)}
+            onFocus={() => setActiveExpertiseImage(item.image)}
+            onClick={() => setActiveExpertiseImage(item.image)}
           >
-            <div className="home-expertise-visual-inner">
-              <img
-                src={expertiseFloorPlan}
-                alt=""
-                className="home-expertise-floor-plan"
-              />
+            <span className="expertise-editorial-number">
+              {item.number}
+            </span>
+
+            <div className="expertise-editorial-item-content">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
             </div>
-          </div>
 
-          <div className="home-expertise-body">
-            <div className="site-container home-expertise-container">
-
-              <div
-                className="home-expertise-heading"
-                data-reveal
-                data-heading-reveal
-              >
-                <span className="home-expertise-label">
-                  <i aria-hidden="true" />
-                  Our Expertise
-                </span>
-
-                <h2>
-                  Curating the perfect
-                  <em> spaces to complete your vision.</em>
-                </h2>
-              </div>
-
-              <div className="home-expertise-grid">
-
-                <article
-                  className="home-expertise-card home-expertise-card--one"
-                  data-reveal
-                >
-                  <div className="home-expertise-card-image">
-                    <img
-                      src={serviceMakeover}
-                      alt="Space planning and interior makeover"
-                    />
-                  </div>
-
-                  <div className="home-expertise-card-copy">
-                    <span>01</span>
-                    <h3>Space Planning &amp; Makeovers</h3>
-                    <p>
-                      Thoughtful layouts and transformations designed
-                      around function, flow and everyday living.
-                    </p>
-                  </div>
-                </article>
-
-                <article
-                  className="home-expertise-card home-expertise-card--two"
-                  data-reveal
-                >
-                  <div className="home-expertise-card-image">
-                    <img
-                      src={residentialInterior}
-                      alt="Interior design and visualization"
-                    />
-                  </div>
-
-                  <div className="home-expertise-card-copy">
-                    <span>02</span>
-                    <h3>Design &amp; Visualization</h3>
-                    <p>
-                      Clear design direction supported by detailed
-                      2D planning and immersive 3D visualization.
-                    </p>
-                  </div>
-                </article>
-
-                <article
-                  className="home-expertise-card home-expertise-card--three"
-                  data-reveal
-                >
-                  <div className="home-expertise-card-image">
-                    <img
-                      src={serviceArchitecture}
-                      alt="Architectural and civil interior solutions"
-                    />
-                  </div>
-
-                  <div className="home-expertise-card-copy">
-                    <span>03</span>
-                    <h3>Architectural &amp; Civil Solutions</h3>
-                    <p>
-                      Coordinated architectural and civil support
-                      for considered, functional interior spaces.
-                    </p>
-                  </div>
-                </article>
-
-                <article
-                  className="home-expertise-card home-expertise-card--four"
-                  data-reveal
-                >
-                  <div className="home-expertise-card-image">
-                    <img
-                      src={serviceExecution}
-                      alt="Turnkey interior execution"
-                    />
-                  </div>
-
-                  <div className="home-expertise-card-copy">
-                    <span>04</span>
-                    <h3>Turnkey Execution</h3>
-                    <p>
-                      End-to-end coordination that brings design,
-                      customization and execution together.
-                    </p>
-                  </div>
-                </article>
-
-              </div>
-
-              
+            <div className="expertise-editorial-thumb">
+              <img src={item.image} alt="" loading="lazy" />
             </div>
-          </div>
-        </section>
+
+            <span className="expertise-editorial-arrow" aria-hidden="true">
+              ↗
+            </span>
+          </article>
+        ))}
+
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* EXPERTISE / SKILLS SHOWCASE */}
         <section
@@ -1218,7 +1214,7 @@ function Home() {
               <div className="expertise-showcase-heading-space">
                 <span className="expertise-showcase-label">
                   <i aria-hidden="true" />
-                 Our clients say
+                  Our clients say
                 </span>
               </div>
 
@@ -1310,6 +1306,8 @@ function Home() {
 
         <WhyVasupriy />
 
+        <AmazingDesigningTeam />
+
         <section
           className="interior-architecture-showcase"
           aria-label="Vasupriy architectural interior showcase"
@@ -1339,6 +1337,10 @@ function Home() {
 }
 
 export default Home
+
+
+
+
 
 
 

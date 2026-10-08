@@ -1,88 +1,101 @@
-﻿import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './InteriorProductsPreview.css'
 
-import curtainsImage from '../../assets/images/home/products/curtains-blinds.png'
-import customizedImage from '../../assets/images/home/products/customized-products.png'
-import doorsImage from '../../assets/images/home/products/doors-windows.png'
-import glazingImage from '../../assets/images/home/products/mirror-glazing.png'
-import residentialImage from '../../assets/images/home/projects/residential-interior.png'
+import curtainsImage from '../../assets/images/renamed-collection/residential-interior-renders/premium-wall-panels-51.jpg'
+import customizedImage from '../../assets/images/renamed-collection/cafe-interiors/cafe-interior-checkered-floor-01.jpg'
+import doorsImage from '../../assets/images/renamed-collection/commercial-interior-renders/cafe-counter-and-pendant-lights-02.jpg'
+import glazingImage from '../../assets/images/renamed-collection/cafe-interiors/cafe-seating-and-plants-04.jpg'
+import residentialImage from '../../assets/images/renamed-collection/residential-interior-renders/designer-ceiling-50.jpg'
 
 const products = [
   {
     id: 1,
-    title: 'Curtains & Blinds',
+    title: 'Wall Coverings',
     image: curtainsImage,
-    alt: 'Curtains and blinds interior products',
+    alt: 'Premium decorative wall covering and panels',
   },
   {
     id: 2,
-    title: 'Customized Products',
+    title: 'Floor Makeovers',
     image: customizedImage,
-    alt: 'Customized interior products',
+    alt: 'Stylish checkered flooring in a modern interior',
   },
   {
     id: 3,
-    title: 'Doors & Windows',
+    title: 'Enlightenment Options',
     image: doorsImage,
-    alt: 'Interior doors and windows',
+    alt: 'Decorative pendant lighting in a premium cafe',
   },
   {
     id: 4,
-    title: 'Mirror & Glazing',
+    title: 'Green Elements',
     image: glazingImage,
-    alt: 'Mirror and glazing interior solutions',
+    alt: 'Indoor greenery and plants in an interior space',
   },
   {
     id: 5,
-    title: 'Interior Collections',
+    title: 'Ceiling Styling',
     image: residentialImage,
-    alt: 'Curated interior product collection',
+    alt: 'Designer ceiling styling in a modern interior',
   },
 ]
 
-const AUTOPLAY_DELAY = 1000
-const SLIDE_DURATION = 700
+const AUTOPLAY_DELAY = 2000
+const SLIDE_DURATION = 900
+
+const sliderProducts = [...products, ...products, ...products]
 
 export default function InteriorProductsPreview() {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [isSliding, setIsSliding] = useState(false)
-  const [isPaused, setIsPaused] = useState(false)
+  const [trackIndex, setTrackIndex] = useState(products.length)
+  const [isAnimating, setIsAnimating] = useState(true)
 
+  const trackIndexRef = useRef(products.length)
   const touchStartX = useRef(null)
   const slideTimeoutRef = useRef(null)
+  const lockedRef = useRef(false)
 
-  const sliderProducts = [
-    ...products,
-    ...products,
-  ]
+  const activeIndex =
+    ((trackIndex % products.length) + products.length) %
+    products.length
 
-  const startSlide = () => {
-    if (isSliding) return
+  const moveTo = (nextIndex) => {
+    if (lockedRef.current) return
 
-    setIsSliding(true)
+    lockedRef.current = true
+    setIsAnimating(true)
+    trackIndexRef.current = nextIndex
+    setTrackIndex(nextIndex)
 
     window.clearTimeout(slideTimeoutRef.current)
 
     slideTimeoutRef.current = window.setTimeout(() => {
-      setActiveIndex((current) => (current + 1) % products.length)
-      setIsSliding(false)
+      let normalizedIndex = trackIndexRef.current
+
+      if (normalizedIndex >= products.length * 2) {
+        normalizedIndex -= products.length
+      } else if (normalizedIndex < products.length) {
+        normalizedIndex += products.length
+      }
+
+      if (normalizedIndex !== trackIndexRef.current) {
+        setIsAnimating(false)
+        trackIndexRef.current = normalizedIndex
+        setTrackIndex(normalizedIndex)
+      }
+
+      lockedRef.current = false
     }, SLIDE_DURATION)
   }
 
   useEffect(() => {
-    if (isPaused || isSliding) return undefined
-
-    const timer = window.setTimeout(() => {
-      startSlide()
+    const timer = window.setInterval(() => {
+      moveTo(trackIndexRef.current + 1)
     }, AUTOPLAY_DELAY)
 
-    return () => window.clearTimeout(timer)
-  }, [activeIndex, isPaused, isSliding])
-
-  useEffect(() => {
     return () => {
+      window.clearInterval(timer)
       window.clearTimeout(slideTimeoutRef.current)
     }
   }, [])
@@ -100,19 +113,22 @@ export default function InteriorProductsPreview() {
     const distance = endX - touchStartX.current
 
     if (distance < -45) {
-      startSlide()
+      moveTo(trackIndexRef.current + 1)
+    } else if (distance > 45) {
+      moveTo(trackIndexRef.current - 1)
     }
 
     touchStartX.current = null
   }
 
   const handleDotClick = (index) => {
-    if (isSliding) return
-    setActiveIndex(index)
-  }
+    const current = trackIndexRef.current % products.length
+    const forward = (index - current + products.length) % products.length
 
-  const trackIndex =
-    activeIndex + (isSliding ? 1 : 0)
+    if (forward === 0) return
+
+    moveTo(trackIndexRef.current + forward)
+  }
 
   return (
     <section
@@ -125,10 +141,7 @@ export default function InteriorProductsPreview() {
         className="products-gallery-background"
         aria-hidden="true"
       >
-        <img
-          src={products[activeIndex].image}
-          alt=""
-        />
+        <img src={products[activeIndex].image} alt="" />
       </div>
 
       <div
@@ -160,14 +173,12 @@ export default function InteriorProductsPreview() {
             to="/interior-products"
           >
             Explore Products
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">{'\u2197'}</span>
           </Link>
         </div>
 
         <div
           className="products-gallery-slider"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
           aria-label="Interior products gallery"
@@ -176,9 +187,7 @@ export default function InteriorProductsPreview() {
           <div className="products-gallery-viewport">
             <div
               className={`products-gallery-track ${
-                isSliding
-                  ? 'products-gallery-track--animate'
-                  : ''
+                isAnimating ? 'products-gallery-track--animate' : ''
               }`}
               style={{
                 '--product-index': trackIndex,
@@ -199,7 +208,6 @@ export default function InteriorProductsPreview() {
                     <span>
                       {String(product.id).padStart(2, '0')}
                     </span>
-
                     <h3>{product.title}</h3>
                   </div>
                 </article>
