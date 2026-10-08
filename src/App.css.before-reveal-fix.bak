@@ -11995,7 +11995,6 @@ body {
 
   filter: blur(0);
 
-  transform: translate3d(0, 0, 0) scale(1) !important;
 }
 
 
@@ -13563,5 +13562,4 @@ body {
     color: #AF9166 !important;
   }
 }
-
 

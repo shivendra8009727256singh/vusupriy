@@ -1060,15 +1060,9 @@ function Home() {
             3D INTERIOR VISUAL + OUR EXPERTISE
         ====================================================== */}
 
-        {/* BEFORE & AFTER TRANSFORMATION */}
-        <section
-          className="home-transformation-section"
-          data-scroll-section
-        >
-          <BeforeAfterTransformation />
-        </section>
-
-        <section
+                {/* BEFORE & AFTER TRANSFORMATION */}
+        <BeforeAfterTransformation />
+<section
           className="home-expertise"
           id="expertise"
           data-scroll-section
@@ -1339,7 +1333,6 @@ function Home() {
 }
 
 export default Home
-
 
 
 
