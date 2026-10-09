@@ -1,4 +1,4 @@
-import AmazingDesigningTeam from '../../components/home/AmazingDesigningTeam.jsx'
+﻿import AmazingDesigningTeam from '../../components/home/AmazingDesigningTeam.jsx'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -484,26 +484,13 @@ function About() {
           WHO WE ARE
       ====================================================== */}
       <section
-        className="about-who-v2 about-who-v2--antra"
+        className="about-who-v2"
         aria-labelledby="about-who-v2-title"
       >
         <div className="about-who-v2-shell">
 
-          <div className="about-who-v2-headline">
-            <span className="about-who-v2-kicker">
-              ✦ Who We Are
-            </span>
-
-            <h1 id="about-who-v2-title">
-              We Shape <span>Interior Designs,</span>
-              <br />
-              <span>Crafting Timeless</span> And
-              <br />
-              Inspiring Spaces
-            </h1>
-          </div>
-
           <div className="about-who-v2-visual">
+
             <div className="about-who-v2-image">
               <img
                 src="https://antra.ibthemespro.com/assets/img/images/about-img-11.png"
@@ -511,24 +498,36 @@ function About() {
                 loading="eager"
                 decoding="async"
               />
+
               <div
                 className="about-who-v2-image-shade"
                 aria-hidden="true"
               />
             </div>
+
+            <span className="about-who-v2-label">
+              <i aria-hidden="true">✦</i>
+              Who We Are
+            </span>
+
           </div>
+
 
           <div className="about-who-v2-content">
 
             <div className="about-who-v2-intro">
-              <h2>
+
+              <h1 id="about-who-v2-title">
                 Whether it’s your home, office, or a commercial
                 space, we bring your
                 <span> vision to life.</span>
-              </h2>
+              </h1>
+
             </div>
 
+
             <div className="about-who-v2-features">
+
               <div className="about-who-v2-feature">
                 <span aria-hidden="true">✓</span>
                 <strong>Customized Interiors</strong>
@@ -548,9 +547,12 @@ function About() {
                 <span aria-hidden="true">✓</span>
                 <strong>End-to-End Execution</strong>
               </div>
+
             </div>
 
+
             <div className="about-who-v2-divider" />
+
 
             <p className="about-who-v2-description">
               Established in 2019, Vasupriy Interiovilla creates
@@ -562,15 +564,20 @@ function About() {
               who use them.
             </p>
 
+
             <Link
               to="/interior-services"
               className="about-who-v2-button"
             >
               <span>More About Us</span>
-              <i aria-hidden="true">↗</i>
+
+              <i aria-hidden="true">
+                ↗
+              </i>
             </Link>
 
           </div>
+
         </div>
       </section>
 

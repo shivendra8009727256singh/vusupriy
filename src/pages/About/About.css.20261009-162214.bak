@@ -6301,38 +6301,3 @@
     transition: none;
   }
 }
-/* VASUPRIY WHO WE ARE NAVBAR ALIGNMENT FIX */
-
-@media (min-width: 901px) {
-  .about-page .about-who-v2--antra {
-    padding-top: 165px;
-  }
-
-  .about-page .about-who-v2--antra .about-who-v2-headline h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(29px, 2.8vw, 42px);
-    font-weight: 750;
-    line-height: 1.17;
-    letter-spacing: -0.045em;
-  }
-
-  .about-page .about-who-v2--antra .about-who-v2-shell {
-    row-gap: 30px;
-  }
-
-  .about-page .about-who-v2--antra .about-who-v2-content {
-    padding-top: 0;
-  }
-
-  .about-page .about-who-v2--antra .about-who-v2-intro h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(21px, 1.8vw, 27px);
-    line-height: 1.35;
-  }
-}
-
-@media (max-width: 900px) {
-  .about-page .about-who-v2--antra {
-    padding-top: 145px;
-  }
-}

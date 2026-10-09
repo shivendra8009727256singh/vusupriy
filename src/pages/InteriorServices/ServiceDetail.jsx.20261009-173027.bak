@@ -1,0 +1,350 @@
+import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+
+const serviceData = {
+  'space-designing-makeover': {
+    title: 'Space Designing & Makeover',
+    subtitle: 'Transform Your Space with Expert Design & Makeovers',
+    description:
+      'Revamp your existing spaces with expert spatial planning, aesthetic styling, and seamless makeovers.',
+    items: [
+      {
+        title: 'Complete Room Transformation',
+        description:
+          'Redefine your bedroom, living room, or any area from scratch without heavy structural changes.',
+      },
+      {
+        title: 'Space Planning & Layout Optimization',
+        description:
+          'Make every square inch count with smart layouts that keep your interiors open, airy, and functional.',
+      },
+      {
+        title: 'Aesthetic Designs & Theme Styling',
+        description:
+          'Curate colour palettes, fabrics, furniture and decor elements around your preferred interior style.',
+      },
+      {
+        title: 'Space Enhancement & Surface Upgrades',
+        description:
+          'Enhance walls, lighting, wallpapers and furnishings to bring sophistication to every corner.',
+      },
+    ],
+  },
+
+  'drop-servicing-installation': {
+    title: 'Drop Servicing & Installation',
+    subtitle: 'Professional Interior Installation Solutions',
+    description:
+      'Explore our specialized installation and execution services for residential and commercial interiors.',
+    items: [
+      { title: 'Architectural & Civil Work' },
+      { title: 'Professional 2D, 3D & GRFC Drawings' },
+      { title: 'Mirror & Glazing Styling' },
+      { title: 'Doors & Windows Installation' },
+      { title: 'Centralized AC & Electrical Fitting' },
+      { title: 'Natural Garden Setup' },
+      { title: '3D Epoxy Flooring' },
+      { title: 'Indian Artistry on Walls & Ceilings' },
+      { title: 'Curtains & Blinds Installation' },
+      { title: 'Nano Coating Protection' },
+      { title: 'Lift Installation' },
+    ],
+  },
+
+  'customized-theme-products': {
+    title: 'Customized & Theme-Based Products',
+    subtitle: 'Distinctive Products for Beautiful Interiors',
+    description:
+      'Discover tailored interior products and finishes selected to complement your space and design vision.',
+    items: [
+      { title: 'Customized Flooring' },
+      { title: 'Wall Panels & Wallpapers' },
+      { title: 'Rugs & Wall Hangings' },
+      { title: 'Complete Furnishings' },
+      { title: 'Garden & Greenery' },
+    ],
+  },
+}
+
+/* Existing Vasupriy assets — Vite resolves the actual image URLs. */
+const availableImages = import.meta.glob(
+  '../../assets/images/**/*.{png,jpg,jpeg,webp,avif}',
+  { eager: true, query: '?url', import: 'default' }
+)
+
+function findImage(filename) {
+  const match = Object.entries(availableImages).find(([path]) =>
+    path.endsWith('/' + filename)
+  )
+  return match?.[1] || null
+}
+
+const serviceImages = {
+  'space-designing-makeover': {
+    hero: 'space-designing-makeover.png',
+    items: [
+      ['space-makeover.png', 'elegant-living-room-13.jpg', 'modern-bedroom-interior-27.jpg'],
+      ['space-planning.png', 'floor-plan-01.png', 'interior-3d-floor-plan.png'],
+      ['contemporary-interior-52.jpg', 'cafe-wall-art-19.jpg', 'elegant-living-room-14.jpg'],
+      ['premium-wall-panels-51.jpg', 'living-room-feature-wall-45.jpg', 'bedroom-wall-paneling-29.jpg'],
+    ],
+  },
+  'drop-servicing-installation': {
+    hero: 'architectural-civil.png',
+    items: [
+      ['architectural-civil.png', 'interior-renovation-in-progress-06.jpg'],
+      ['design-visualization.png', 'floor-plan-02.png'],
+      ['mirror-glazing.png', 'residential-interior-details-46.jpg'],
+      ['doors-windows.png', 'interior-left.jpg'],
+      ['commercial-ceiling-lighting-08.jpg', 'living-room-ceiling-lighting-44.jpg'],
+      ['cafe-seating-and-plants-04.jpg', 'cafe-green-accent-wall-16.jpg'],
+      ['restaurant-checkered-floor-61.jpg', 'cafe-interior-checkered-floor-01.jpg'],
+      ['restaurant-wall-decor-40.jpg', 'designer-ceiling-50.jpg'],
+      ['curtains-blinds.png', 'elegant-living-room-15.jpg'],
+      ['premium-wall-panels-55.jpg'],
+      ['interior-staircase-design-23.jpg'],
+    ],
+  },
+  'customized-theme-products': {
+    hero: 'customized-products.png',
+    items: [
+      ['restaurant-checkered-floor-65.jpg', 'cafe-interior-checkered-floor-09.jpg'],
+      ['premium-wall-panels-51.jpg', 'cafe-wooden-wall-panels-07.jpg'],
+      ['cafe-wall-art-23.jpg', 'restaurant-wall-decor-44.jpg'],
+      ['custom-furniture.jpg', 'elegant-living-room-16.jpg'],
+      ['cafe-seating-and-plants-12.jpg', 'cafe-green-accent-wall-19.jpg'],
+    ],
+  },
+}
+
+function ServiceDetail() {
+  const location = useLocation()
+  const slug = location.pathname.split('/').filter(Boolean).at(-1)
+
+  const service = serviceData[slug]
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
+  useEffect(() => {
+    setSelectedIndex(0)
+  }, [slug])
+
+  if (!service) {
+    return (
+      <main style={{ padding: '160px 24px 80px', textAlign: 'center' }}>
+        <h1>Service not found</h1>
+        <Link to="/interior-services">View all services</Link>
+      </main>
+    )
+  }
+
+  const selected = service.items[selectedIndex] || service.items[0]
+  const imageGroup = serviceImages[slug]
+  const selectedImages = (imageGroup?.items[selectedIndex] || [])
+    .map(findImage)
+    .filter(Boolean)
+
+  return (
+    <main className="vasu-service-page">
+      <section
+        className="vasu-service-hero"
+        style={{
+          backgroundImage: imageGroup?.hero && findImage(imageGroup.hero)
+            ? `linear-gradient(90deg, rgba(3,35,42,.91), rgba(3,35,42,.55)), url("${findImage(imageGroup.hero)}")`
+            : undefined,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="vasu-service-container">
+          <span className="vasu-service-eyebrow">
+            VASUPRIY INTERIOVILLA / SERVICES
+          </span>
+
+          <h1>{service.title}</h1>
+          <p>{service.subtitle}</p>
+
+          <div className="vasu-service-breadcrumb">
+            <Link to="/">Home</Link>
+            <span>/</span>
+            <Link to="/interior-services">Services</Link>
+            <span>/</span>
+            <span>{service.title}</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="vasu-service-main">
+        <div className="vasu-service-container vasu-service-layout">
+          <aside className="vasu-service-sidebar">
+            <div className="vasu-service-sidebar-inner">
+              <span className="vasu-service-sidebar-eyebrow">
+                EXPLORE SERVICES
+              </span>
+
+              <h2>Our Expertise</h2>
+
+              <div className="vasu-service-sidebar-list">
+                {service.items.map((item, index) => (
+                  <button
+                    key={item.title}
+                    type="button"
+                    className={`vasu-service-sidebar-item ${
+                      selectedIndex === index ? 'active' : ''
+                    }`}
+                    aria-pressed={selectedIndex === index}
+                    onClick={() => setSelectedIndex(index)}
+                  >
+                    <span className="vasu-service-sidebar-number">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+
+                    <span>{item.title}</span>
+
+                    <span aria-hidden="true">↗</span>
+                  </button>
+                ))}
+              </div>
+
+              <div className="vasu-service-sidebar-cta">
+                <span>HAVE A PROJECT IN MIND?</span>
+                <h3>Let's create something beautiful.</h3>
+                <Link to="/contact">Book a Consultation ↗</Link>
+              </div>
+            </div>
+            <div className="vasu-sidebar-vertical-gallery">
+              {(imageGroup?.items || [])
+                .flat()
+                .filter((name, index, arr) => arr.indexOf(name) === index)
+                .map(findImage)
+                .filter(Boolean)
+                .slice(0, 6)
+                .map((src, index) => (
+                  <div
+                    className="vasu-sidebar-gallery-image"
+                    key={src}
+                  >
+                    <img
+                      src={src}
+                      alt={`${service.title} design inspiration ${index + 1}`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                ))}
+            </div>
+          </aside>
+
+          <article className="vasu-service-content">
+            <span className="vasu-service-content-eyebrow">
+              OUR DESIGN SOLUTIONS
+            </span>
+
+            <h2>{selected.title}</h2>
+
+            <p className="vasu-service-lead">
+              {selected.description || service.description}
+            </p>
+
+            {selectedImages.length > 0 && (
+              <div
+                className="vasu-service-image-gallery"
+                style={{ margin: '30px 0 38px' }}
+              >
+                <div
+                  style={{
+                    overflow: 'hidden',
+                    borderRadius: '16px',
+                    aspectRatio: '16 / 10',
+                    background: '#eae5db',
+                  }}
+                >
+                  <img
+                    key={selectedImages[0]}
+                    src={selectedImages[0]}
+                    alt={`${selected.title} interior design example`}
+                    loading="lazy"
+                    decoding="async"
+                    style={{
+                      display: 'block',
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                    }}
+                  />
+                </div>
+
+                {selectedImages.length > 1 && (
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns:
+                        'repeat(auto-fit, minmax(min(100%, 180px), 1fr))',
+                      gap: '14px',
+                      marginTop: '14px',
+                    }}
+                  >
+                    {selectedImages.slice(1).map((src, index) => (
+                      <div
+                        key={src}
+                        style={{
+                          overflow: 'hidden',
+                          borderRadius: '12px',
+                          aspectRatio: '4 / 3',
+                          background: '#eae5db',
+                        }}
+                      >
+                        <img
+                          src={src}
+                          alt={`${selected.title} related interior example ${index + 2}`}
+                          loading="lazy"
+                          decoding="async"
+                          style={{
+                            display: 'block',
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+            <div className="vasu-service-content-divider" />
+
+            <h3>Thoughtfully Designed for Your Space</h3>
+
+            <p>{service.description}</p>
+
+            <div className="vasu-service-process">
+              <div>
+                <span>01</span>
+                <h4>Understand</h4>
+                <p>We discuss your space, preferences and requirements.</p>
+              </div>
+
+              <div>
+                <span>02</span>
+                <h4>Design</h4>
+                <p>We develop a suitable concept and execution approach.</p>
+              </div>
+
+              <div>
+                <span>03</span>
+                <h4>Deliver</h4>
+                <p>We coordinate the work to bring the concept to life.</p>
+              </div>
+            </div>
+
+            <Link to="/contact" className="vasu-service-primary-cta">
+              Discuss Your Project <span aria-hidden="true">↗</span>
+            </Link>
+          </article>
+        </div>
+      </section>
+    </main>
+  )
+}
+
+export default ServiceDetail

@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    VASUPRIY INTERIOVILLA
    HOME — HEADER / HERO / INTRO
    ========================================================= */
@@ -14645,7 +14645,7 @@ body {
 /* Main layout */
 
 .vasu-service-main {
-  padding: 100px 0 0;
+  padding: 100px 0 120px;
 }
 
 .vasu-service-layout {
@@ -15236,25 +15236,3 @@ body {
 }
 
 /* VASUPRIY VERTICAL SIDEBAR GALLERY END */
-
-/* VASUPRIY BALANCED SIDEBAR GALLERY */
-
-.vasu-service-page .vasu-sidebar-vertical-gallery {
-  gap: 16px;
-}
-
-.vasu-service-page .vasu-sidebar-gallery-image,
-.vasu-service-page .vasu-sidebar-gallery-image:nth-child(2n),
-.vasu-service-page .vasu-sidebar-gallery-image:nth-child(3n) {
-  height: 230px;
-  aspect-ratio: auto;
-}
-
-@media (max-width: 767px) {
-  .vasu-service-page .vasu-sidebar-gallery-image,
-  .vasu-service-page .vasu-sidebar-gallery-image:nth-child(2n),
-  .vasu-service-page .vasu-sidebar-gallery-image:nth-child(3n) {
-    height: auto;
-    aspect-ratio: 4 / 3;
-  }
-}

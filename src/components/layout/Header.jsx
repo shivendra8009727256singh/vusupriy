@@ -1,13 +1,29 @@
-﻿import { useEffect, useState } from 'react'
+﻿
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
 
+const services = [
+  {
+    label: 'Space Designing & Makeover',
+    path: '/services/space-designing-makeover',
+  },
+  {
+    label: 'Drop Servicing & Installation',
+    path: '/services/drop-servicing-installation',
+  },
+  {
+    label: 'Customized & Theme-Based Products',
+    path: '/services/customized-theme-products',
+  },
+]
+
 const navigation = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
-  { label: 'Interior Services', path: '/interior-services' },
-  { label: 'Interior Products', path: '/interior-products' },
+  { label: 'Services', path: '/interior-services' },
+  { label: 'Products', path: '/interior-products' },
   { label: 'Projects', path: '/projects' },
   { label: 'Gallery', path: '/gallery' },
   { label: 'Blog', path: '/blog' },
@@ -17,8 +33,15 @@ const navigation = [
 function Header() {
   const [headerScrolled, setHeaderScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
 
+  const servicesRef = useRef(null)
   const location = useLocation()
+
+  const isServicesRoute =
+    location.pathname === '/interior-services' ||
+    location.pathname.startsWith('/services/')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +58,8 @@ function Header() {
 
   useEffect(() => {
     setMenuOpen(false)
+    setServicesOpen(false)
+    setMobileServicesOpen(false)
 
     window.scrollTo({
       top: 0,
@@ -64,6 +89,30 @@ function Header() {
     }
   }, [menuOpen])
 
+  useEffect(() => {
+    if (!servicesOpen) return undefined
+
+    const handleOutsideClick = (event) => {
+      if (!servicesRef.current?.contains(event.target)) {
+        setServicesOpen(false)
+      }
+    }
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setServicesOpen(false)
+      }
+    }
+
+    document.addEventListener('pointerdown', handleOutsideClick)
+    window.addEventListener('keydown', handleEscape)
+
+    return () => {
+      document.removeEventListener('pointerdown', handleOutsideClick)
+      window.removeEventListener('keydown', handleEscape)
+    }
+  }, [servicesOpen])
+
   return (
     <>
       <header
@@ -90,18 +139,83 @@ function Header() {
           </Link>
 
           <nav className="desktop-nav" aria-label="Primary navigation">
-            {navigation.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                end={item.path === '/'}
-                className={({ isActive }) =>
-                  isActive ? 'active' : ''
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
+            {navigation.map((item) => {
+              if (item.label === 'Services') {
+                return (
+                  <div
+                    key={item.path}
+                    ref={servicesRef}
+                    className={`vasu-services-nav ${
+                      servicesOpen ? 'vasu-services-nav--open' : ''
+                    }`}
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
+                    onBlur={(event) => {
+                      if (!event.currentTarget.contains(event.relatedTarget)) {
+                        setServicesOpen(false)
+                      }
+                    }}
+                  >
+                    <button
+                      type="button"
+                      className={`vasu-services-trigger ${
+                        isServicesRoute ? 'active' : ''
+                      }`}
+                      aria-expanded={servicesOpen}
+                      aria-controls="vasu-services-dropdown"
+                      onClick={() => setServicesOpen((current) => !current)}
+                    >
+                      Services
+                      <span
+                        className="vasu-services-chevron"
+                        aria-hidden="true"
+                      >
+                        ▾
+                      </span>
+                    </button>
+
+                    <div
+                      id="vasu-services-dropdown"
+                      className="vasu-services-dropdown"
+                      aria-hidden={!servicesOpen}
+                    >
+                      <span className="vasu-services-dropdown-title">
+                        Explore Our Services
+                      </span>
+
+                      {services.map((service, index) => (
+                        <NavLink
+                          key={service.path}
+                          to={service.path}
+                          tabIndex={servicesOpen ? 0 : -1}
+                          onClick={() => setServicesOpen(false)}
+                          className="vasu-services-dropdown-link"
+                        >
+                          <span className="vasu-services-dropdown-number">
+                            {String(index + 1).padStart(2, '0')}
+                          </span>
+                          <span>{service.label}</span>
+                          <span aria-hidden="true">↗</span>
+                        </NavLink>
+                      ))}
+                    </div>
+                  </div>
+                )
+              }
+
+              return (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  end={item.path === '/'}
+                  className={({ isActive }) =>
+                    isActive ? 'active' : ''
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              )
+            })}
           </nav>
 
           <Link className="header-cta" to="/contact">
@@ -154,30 +268,84 @@ function Header() {
             id="mobile-navigation"
             aria-label="Mobile navigation"
           >
-            {navigation.map((item, index) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                end={item.path === '/'}
-                tabIndex={menuOpen ? 0 : -1}
-                onClick={() => setMenuOpen(false)}
-                className={({ isActive }) =>
-                  isActive ? 'active' : ''
-                }
-              >
-                <span className="mobile-nav-number">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
+            {navigation.map((item, index) => {
+              if (item.label === 'Services') {
+                return (
+                  <div
+                    key={item.path}
+                    className="vasu-mobile-services"
+                  >
+                    <button
+                      type="button"
+                      className={`vasu-mobile-services-trigger ${
+                        isServicesRoute ? 'active' : ''
+                      }`}
+                      tabIndex={menuOpen ? 0 : -1}
+                      aria-expanded={mobileServicesOpen}
+                      onClick={() =>
+                        setMobileServicesOpen((current) => !current)
+                      }
+                    >
+                      <span className="mobile-nav-number">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
 
-                <span className="mobile-nav-label">
-                  {item.label}
-                </span>
+                      <span className="mobile-nav-label">
+                        Services
+                      </span>
 
-                <span className="mobile-nav-arrow" aria-hidden="true">
-                  ↗
-                </span>
-              </NavLink>
-            ))}
+                      <span
+                        className="mobile-nav-arrow"
+                        aria-hidden="true"
+                      >
+                        {mobileServicesOpen ? '−' : '+'}
+                      </span>
+                    </button>
+
+                    {mobileServicesOpen && (
+                      <div className="vasu-mobile-services-list">
+                        {services.map((service) => (
+                          <NavLink
+                            key={service.path}
+                            to={service.path}
+                            tabIndex={menuOpen ? 0 : -1}
+                            onClick={() => setMenuOpen(false)}
+                          >
+                            <span>{service.label}</span>
+                            <span aria-hidden="true">↗</span>
+                          </NavLink>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )
+              }
+
+              return (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  end={item.path === '/'}
+                  tabIndex={menuOpen ? 0 : -1}
+                  onClick={() => setMenuOpen(false)}
+                  className={({ isActive }) =>
+                    isActive ? 'active' : ''
+                  }
+                >
+                  <span className="mobile-nav-number">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+
+                  <span className="mobile-nav-label">
+                    {item.label}
+                  </span>
+
+                  <span className="mobile-nav-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </NavLink>
+              )
+            })}
           </nav>
 
           <div className="mobile-menu-bottom">

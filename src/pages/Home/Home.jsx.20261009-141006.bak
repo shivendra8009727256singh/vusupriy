@@ -1,4 +1,3 @@
-﻿import aboutFloorPlan from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-01.png'
 import { useState as useExpertiseState } from 'react'
 import solutionBrandImage from '../../assets/images/renamed-collection/commercial-site-photos/modern-commercial-space-interior-01.jpg'
 import solutionProductImage from '../../assets/images/renamed-collection/residential-site-photos/residential-interior-details-46.jpg'
@@ -12,7 +11,7 @@ import '../../App.css'
 import useScrollMotion from '../../hooks/useScrollMotion.js'
 import InteriorProductsPreview from '../../components/home/InteriorProductsPreview.jsx'
 import FloorPlanGallery from '../../components/home/FloorPlanGallery.jsx'
-
+import AmazingDesigningTeam from '../../components/home/AmazingDesigningTeam.jsx'
 import WhyVasupriy from '../../components/home/WhyVasupriy.jsx'
 import HomeGallery from '../../components/home/HomeGallery.jsx'
 import ResidentialScrollProjects from '../../components/home/ResidentialScrollProjects.jsx'
@@ -36,63 +35,6 @@ import expertiseDesignVisualization from '../../assets/images/home/expertise/des
 import expertiseArchitecture from '../../assets/images/home/expertise/architectural-solutions.png'
 import expertiseTurnkey from '../../assets/images/home/expertise/turnkey-execution.png'
 function Home() {
-  /* VASUPRIY ABOUT FLOOR PLAN SCROLL PARALLAX */
-  useEffect(() => {
-    const image = siteRef.current?.querySelector('.about-antra-floor-plan')
-
-    if (!image) return undefined
-
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    let frame = 0
-
-    const update = () => {
-      frame = 0
-
-      if (motionQuery.matches) {
-        image.style.removeProperty('--floor-scroll-x')
-        return
-      }
-
-      const rect = image.getBoundingClientRect()
-      const viewportHeight = window.innerHeight || 1
-
-      const progress = (viewportHeight - rect.top) /
-        (viewportHeight + rect.height)
-
-      const clamped = Math.max(0, Math.min(1, progress))
-      const distance = window.innerWidth <= 640 ? 12 : 25
-
-      const offset = (clamped * 2 - 1) * distance
-
-      image.style.setProperty(
-        '--floor-scroll-x',
-        `${offset.toFixed(2)}px`
-      )
-    }
-
-    const onScroll = () => {
-      if (!frame) {
-        frame = window.requestAnimationFrame(update)
-      }
-    }
-
-    update()
-
-    window.addEventListener('scroll', onScroll, { passive: true })
-    window.addEventListener('resize', onScroll)
-    motionQuery.addEventListener?.('change', onScroll)
-
-    return () => {
-      window.removeEventListener('scroll', onScroll)
-      window.removeEventListener('resize', onScroll)
-      motionQuery.removeEventListener?.('change', onScroll)
-
-      if (frame) window.cancelAnimationFrame(frame)
-
-      image.style.removeProperty('--floor-scroll-x')
-    }
-  }, [])
-
   const [activeExpertiseImage, setActiveExpertiseImage] =
     useExpertiseState(expertiseFeature)
 
@@ -608,15 +550,10 @@ function Home() {
             </div>
 
             <div className="about-antra-bottom">
-              <div className="about-antra-watermark-space">
-  <img
-    className="about-antra-floor-plan"
-    src={aboutFloorPlan}
-    alt="Vasupriy Interiovilla 3D interior floor plan"
-    loading="lazy"
-    decoding="async"
-  />
-</div>
+              <div
+                className="about-antra-watermark-space"
+                aria-hidden="true"
+              />
 
               <div className="about-antra-story" data-reveal>
                 <p>
@@ -1372,7 +1309,7 @@ function Home() {
 
         <WhyVasupriy />
 
-        
+        <AmazingDesigningTeam />
 
         <section
           className="interior-architecture-showcase"
