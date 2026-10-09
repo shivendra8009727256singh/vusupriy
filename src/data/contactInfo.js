@@ -1,8 +1,8 @@
 // Shared contact details: import { contactInfo } from this file anywhere in the site.
 // Phone and email are temporary dummy values. Replace them here when ready.
 export const contactInfo = {
-  phone: '+91 00000 00000',
-  email: 'hello@example.com',
+  phone: '+91 8447689084',
+  email: 'Vasupriyinteriovilla@gmail.com',
   address: 'Office no -F09, 1st floor, Anjuman House 23, C Block, Sector 63, Noida, Uttar Pradesh 201309',
   mapEmbedUrl: '',
   // Connect a server endpoint accepting JSON via POST and returning { success: true }
