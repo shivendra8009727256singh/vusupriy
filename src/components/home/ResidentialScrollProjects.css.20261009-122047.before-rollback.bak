@@ -1,0 +1,358 @@
+/* =====================================================
+   VASUPRIY INTERIOVILLA
+   ANTRA-INSPIRED VERTICAL PINNED PROJECTS
+   ===================================================== */
+
+.vasu-scroll-projects {
+  position: relative;
+  width: 100%;
+  background: #f5f1e9;
+  color: #073e49;
+}
+
+/* INTRO - OUTSIDE PINNED IMAGES */
+
+.vasu-project-intro {
+  position: relative;
+  z-index: 5;
+  padding: clamp(60px, 8vw, 120px) 0;
+  background: #f5f1e9;
+}
+
+.vasu-project-intro-inner {
+  width: min(100% - 64px, 1480px);
+  margin-inline: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.vasu-project-eyebrow,
+.vasu-project-content-label {
+  display: block;
+  color: #aa8752;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.vasu-project-eyebrow {
+  margin-bottom: 18px;
+}
+
+.vasu-project-intro h2 {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 78px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+}
+
+.vasu-project-intro h2 em {
+  color: #b18d54;
+  font-style: normal;
+}
+
+.vasu-project-intro-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  color: #647478;
+  font-size: 13px;
+}
+
+.vasu-project-count {
+  color: #073e49;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* PROJECT PANELS */
+
+.vasu-project-list {
+  position: relative;
+}
+
+.vasu-project-panel {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  min-height: 100svh;
+  background: #f5f1e9;
+  z-index: calc(10 + var(--panel-index));
+  box-shadow: 0 -14px 40px rgba(0, 0, 0, 0.07);
+}
+
+/* IMAGE IS EXACTLY ONE VIEWPORT HIGH */
+
+.vasu-project-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  flex: 0 0 100vh;
+  flex: 0 0 100svh;
+  overflow: hidden;
+  background: #203c3c;
+}
+
+.vasu-project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+  transition: transform 1.1s ease;
+}
+
+.vasu-project-panel:hover .vasu-project-image img {
+  transform: scale(1.025);
+}
+
+.vasu-project-image-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.28),
+    transparent 35%,
+    transparent 65%,
+    rgba(0, 0, 0, 0.36)
+  );
+}
+
+.vasu-project-image-top {
+  position: absolute;
+  top: clamp(90px, 11vh, 130px);
+  left: clamp(20px, 4vw, 70px);
+  right: clamp(20px, 4vw, 70px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  color: white;
+}
+
+.vasu-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vasu-project-tags span {
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+}
+
+.vasu-project-number {
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.vasu-project-image-brand {
+  position: absolute;
+  left: clamp(20px, 4vw, 70px);
+  bottom: 34px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(11px, 1.1vw, 15px);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+/* TEXT BELOW IMAGE - NEVER CLIPPED */
+
+.vasu-project-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  min-height: 180px;
+  padding: 38px clamp(20px, 4vw, 70px);
+  background: #f5f1e9;
+}
+
+.vasu-project-content h3 {
+  margin: 12px 0 0;
+  font-size: clamp(34px, 5vw, 74px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.vasu-project-content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #68787b;
+  font-size: 13px;
+  text-align: right;
+}
+
+/* FOOTER */
+
+.vasu-project-footer {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 48px clamp(20px, 4vw, 70px);
+  background: #f5f1e9;
+  color: #68787b;
+  font-size: 14px;
+}
+
+.vasu-project-footer a {
+  color: #073e49;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.vasu-project-footer a:hover {
+  color: #b18d54;
+}
+
+/* MOBILE / TABLET */
+
+@media (max-width: 767px) {
+  .vasu-project-intro {
+    padding: 64px 0 40px;
+  }
+
+  .vasu-project-intro-inner {
+    width: calc(100% - 32px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .vasu-project-intro-side {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .vasu-project-panel {
+    position: relative;
+    top: auto;
+    min-height: 0;
+    box-shadow: none;
+  }
+
+  .vasu-project-image {
+    height: 100svh;
+    flex-basis: 100svh;
+  }
+
+  .vasu-project-image-top {
+    top: 100px;
+    left: 16px;
+    right: 16px;
+  }
+
+  .vasu-project-tags {
+    max-width: 75%;
+  }
+
+  .vasu-project-tags span {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+
+  .vasu-project-number {
+    font-size: clamp(38px, 11vw, 64px);
+  }
+
+  .vasu-project-image-brand {
+    left: 16px;
+    bottom: 24px;
+    font-size: 10px;
+  }
+
+  .vasu-project-content {
+    min-height: 0;
+    padding: 28px 16px 44px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .vasu-project-content-right {
+    text-align: left;
+  }
+
+  .vasu-project-footer {
+    padding: 40px 16px 60px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .vasu-project-panel {
+    position: relative;
+  }
+
+  .vasu-project-image img {
+    transition: none;
+    transform: none !important;
+  }
+}
+/* GSAP SCROLLTRIGGER PROJECT OVERRIDES */
+
+@media (min-width: 768px) {
+  .vasu-project-panel {
+    position: relative;
+    top: auto;
+    min-height: 0;
+    box-shadow: none;
+  }
+
+  .vasu-project-image {
+    height: 100vh;
+    height: 100svh;
+    flex: 0 0 100svh;
+  }
+
+  .vasu-project-image img {
+    will-change: transform;
+    transition: none;
+  }
+
+  .vasu-project-panel:hover .vasu-project-image img {
+    transform: none;
+  }
+
+  .vasu-project-content {
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+  }
+}

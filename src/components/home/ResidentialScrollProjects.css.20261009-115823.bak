@@ -1,0 +1,367 @@
+/* VASUPRIY RESIDENTIAL SCROLL PROJECTS */
+
+.vasu-scroll-projects {
+  position: relative;
+  height: 300vh;
+  background: #f5f1e9;
+  color: #073e49;
+  isolation: isolate;
+}
+
+.vasu-scroll-projects-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.vasu-scroll-projects-inner {
+  width: min(100% - 64px, 1480px);
+  margin: 0 auto;
+}
+
+.vasu-scroll-projects-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.vasu-scroll-projects-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #a4814a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.vasu-scroll-projects-heading h2 {
+  margin: 0;
+  font-size: clamp(28px, 3.6vw, 58px);
+  line-height: 1.1;
+  letter-spacing: -.045em;
+  font-weight: 500;
+}
+
+.vasu-scroll-projects-heading h2 em {
+  color: #b18d54;
+  font-style: normal;
+}
+
+.vasu-scroll-projects-heading-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  color: #68787b;
+  font-size: 12px;
+}
+
+.vasu-scroll-projects-counter {
+  color: #073e49;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.vasu-scroll-projects-frame {
+  --project-one: 2.3;
+  --project-two: .65;
+  --project-three: .65;
+
+  display: flex;
+  gap: clamp(8px, 1.2vw, 18px);
+  height: clamp(330px, 59vh, 660px);
+  min-height: 0;
+}
+
+.vasu-scroll-projects-card {
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #223337;
+  isolation: isolate;
+}
+
+.vasu-scroll-projects-card:nth-child(1) {
+  flex-grow: var(--project-one);
+}
+
+.vasu-scroll-projects-card:nth-child(2) {
+  flex-grow: var(--project-two);
+}
+
+.vasu-scroll-projects-card:nth-child(3) {
+  flex-grow: var(--project-three);
+}
+
+.vasu-scroll-projects-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .75s ease;
+}
+
+.vasu-scroll-projects-card.is-active img {
+  transform: scale(1.035);
+}
+
+.vasu-scroll-projects-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, .22),
+    transparent 35%,
+    rgba(0, 0, 0, .68)
+  );
+  pointer-events: none;
+}
+
+.vasu-scroll-projects-card-top,
+.vasu-scroll-projects-card-bottom {
+  position: absolute;
+  left: clamp(12px, 2vw, 30px);
+  right: clamp(12px, 2vw, 30px);
+  color: white;
+}
+
+.vasu-scroll-projects-card-top {
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.vasu-scroll-projects-card-top span:last-child {
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.vasu-scroll-projects-card.is-active
+.vasu-scroll-projects-card-top span:last-child {
+  opacity: .85;
+}
+
+.vasu-scroll-projects-card-bottom {
+  bottom: 28px;
+}
+
+.vasu-scroll-projects-category {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: #e0c99e;
+}
+
+.vasu-scroll-projects-card-bottom h3 {
+  margin: 0;
+  font-size: clamp(18px, 2.6vw, 40px);
+  font-weight: 500;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.vasu-scroll-projects-card:not(.is-active)
+.vasu-scroll-projects-card-bottom h3 {
+  font-size: clamp(14px, 1.5vw, 23px);
+  white-space: normal;
+}
+
+.vasu-scroll-projects-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #68787b;
+}
+
+.vasu-scroll-projects-footer a {
+  color: #073e49;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.vasu-scroll-projects-footer a:hover {
+  color: #b18d54;
+}
+
+@media (max-height: 680px) and (min-width: 768px) {
+  .vasu-scroll-projects-frame {
+    height: 53vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .vasu-scroll-projects {
+    height: auto;
+    padding: 72px 0;
+  }
+
+  .vasu-scroll-projects-sticky {
+    position: relative;
+    top: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .vasu-scroll-projects-inner {
+    width: min(100% - 32px, 560px);
+  }
+
+  .vasu-scroll-projects-heading {
+    align-items: start;
+    flex-direction: column;
+    margin-bottom: 26px;
+  }
+
+  .vasu-scroll-projects-heading-right {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .vasu-scroll-projects-frame {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 14px;
+  }
+
+  .vasu-scroll-projects-card {
+    width: 100%;
+    height: clamp(280px, 75vw, 420px);
+    flex: none;
+  }
+
+  .vasu-scroll-projects-card img {
+    transform: none !important;
+  }
+
+  .vasu-scroll-projects-card-top span:last-child {
+    opacity: .85;
+  }
+
+  .vasu-scroll-projects-card-bottom h3,
+  .vasu-scroll-projects-card:not(.is-active)
+  .vasu-scroll-projects-card-bottom h3 {
+    font-size: clamp(23px, 6vw, 34px);
+    white-space: normal;
+  }
+
+  .vasu-scroll-projects-footer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vasu-scroll-projects {
+    height: auto;
+    padding: 72px 0;
+  }
+
+  .vasu-scroll-projects-sticky {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+
+  .vasu-scroll-projects-card {
+    flex-grow: 1 !important;
+  }
+
+  .vasu-scroll-projects-card img {
+    transition: none;
+    transform: none !important;
+  }
+}
+/* =========================================================
+   VASUPRIY - VERTICAL SCROLL PROJECTS
+   Three images stacked vertically, one expands on scroll
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+  .vasu-scroll-projects-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: clamp(340px, 62vh, 690px);
+  }
+
+  .vasu-scroll-projects-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    flex-basis: 0;
+    overflow: hidden;
+  }
+
+  .vasu-scroll-projects-card:nth-child(1) {
+    flex-grow: var(--project-one);
+  }
+
+  .vasu-scroll-projects-card:nth-child(2) {
+    flex-grow: var(--project-two);
+  }
+
+  .vasu-scroll-projects-card:nth-child(3) {
+    flex-grow: var(--project-three);
+  }
+
+  .vasu-scroll-projects-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .vasu-scroll-projects-card-bottom {
+    bottom: 14px;
+  }
+
+  .vasu-scroll-projects-card-bottom h3 {
+    font-size: clamp(17px, 2vw, 28px);
+  }
+
+  .vasu-scroll-projects-card:not(.is-active)
+  .vasu-scroll-projects-card-bottom h3 {
+    font-size: clamp(14px, 1.4vw, 19px);
+  }
+
+  .vasu-scroll-projects-card-top {
+    top: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .vasu-scroll-projects-frame {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vasu-scroll-projects-card {
+    width: 100%;
+  }
+}

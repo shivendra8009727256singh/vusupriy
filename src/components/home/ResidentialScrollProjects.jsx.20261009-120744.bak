@@ -1,0 +1,228 @@
+import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
+
+import project01 from '../../assets/images/home/scroll-projects/project-01.png'
+import project02 from '../../assets/images/home/scroll-projects/project-02.png'
+import project03 from '../../assets/images/home/scroll-projects/project-03.png'
+
+import './ResidentialScrollProjects.css'
+
+const projects = [
+  {
+    number: '01',
+    title: 'Elegant Dining',
+    category: 'Residential Interior',
+    image: project01,
+  },
+  {
+    number: '02',
+    title: 'Luxury Living',
+    category: 'Single Home',
+    image: project02,
+  },
+  {
+    number: '03',
+    title: 'Modern Retreat',
+    category: 'Residential Interior',
+    image: project03,
+  },
+]
+
+const clamp = (value, min, max) =>
+  Math.min(max, Math.max(min, value))
+
+export default function ResidentialScrollProjects() {
+  const sectionRef = useRef(null)
+  const frameRef = useRef(null)
+
+  const [active, setActive] = useState(0)
+
+  useEffect(() => {
+    const section = sectionRef.current
+    const frame = frameRef.current
+
+    if (!section || !frame) return undefined
+
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    )
+
+    let raf = 0
+    let lastActive = -1
+
+    const update = () => {
+      raf = 0
+
+      if (reducedMotion.matches || window.innerWidth <= 767) {
+        frame.style.setProperty('--project-one', '1')
+        frame.style.setProperty('--project-two', '1')
+        frame.style.setProperty('--project-three', '1')
+        return
+      }
+
+      const rect = section.getBoundingClientRect()
+
+      const distance = Math.max(
+        section.offsetHeight - window.innerHeight,
+        1
+      )
+
+      const progress = clamp(
+        -rect.top / distance,
+        0,
+        1
+      )
+
+      const position = progress * 2
+
+      const weights = projects.map((_, index) => {
+        const difference = Math.abs(position - index)
+
+        return 0.65 + 1.65 * (
+          1 - clamp(difference, 0, 1)
+        )
+      })
+
+      frame.style.setProperty(
+        '--project-one',
+        weights[0].toFixed(4)
+      )
+
+      frame.style.setProperty(
+        '--project-two',
+        weights[1].toFixed(4)
+      )
+
+      frame.style.setProperty(
+        '--project-three',
+        weights[2].toFixed(4)
+      )
+
+      const nextActive = clamp(
+        Math.round(position),
+        0,
+        2
+      )
+
+      if (nextActive !== lastActive) {
+        lastActive = nextActive
+        setActive(nextActive)
+      }
+    }
+
+    const requestUpdate = () => {
+      if (!raf) {
+        raf = window.requestAnimationFrame(update)
+      }
+    }
+
+    update()
+
+    window.addEventListener(
+      'scroll',
+      requestUpdate,
+      { passive: true }
+    )
+
+    window.addEventListener(
+      'resize',
+      requestUpdate
+    )
+
+    return () => {
+      window.removeEventListener(
+        'scroll',
+        requestUpdate
+      )
+
+      window.removeEventListener(
+        'resize',
+        requestUpdate
+      )
+
+      if (raf) {
+        window.cancelAnimationFrame(raf)
+      }
+    }
+  }, [])
+
+  return (
+    <section
+      ref={sectionRef}
+      className="vasu-scroll-projects"
+      id="residential-projects"
+      aria-label="Residential and single home projects"
+    >
+      <div className="vasu-scroll-projects-sticky">
+        <div className="vasu-scroll-projects-inner">
+
+          <div className="vasu-scroll-projects-heading">
+            <div>
+              <span className="vasu-scroll-projects-eyebrow">
+                Selected Interior Spaces
+              </span>
+
+              <h2>
+                Residential <em>&amp; Single Home</em>
+              </h2>
+            </div>
+
+            <div className="vasu-scroll-projects-heading-right">
+              <span>Designed for inspired living</span>
+
+              <span className="vasu-scroll-projects-counter">
+                0{active + 1} / 03
+              </span>
+            </div>
+          </div>
+
+          <div
+            className="vasu-scroll-projects-frame"
+            ref={frameRef}
+          >
+            {projects.map((project, index) => (
+              <article
+                key={project.number}
+                className={`vasu-scroll-projects-card ${
+                  active === index ? 'is-active' : ''
+                }`}
+              >
+                <img
+                  src={project.image}
+                  alt={`${project.title} - ${project.category}`}
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div className="vasu-scroll-projects-shade" />
+
+                <div className="vasu-scroll-projects-card-top">
+                  <span>{project.number} / 03</span>
+                  <span>VASUPRIY INTERIOVILLA</span>
+                </div>
+
+                <div className="vasu-scroll-projects-card-bottom">
+                  <span className="vasu-scroll-projects-category">
+                    {project.category}
+                  </span>
+
+                  <h3>{project.title}</h3>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="vasu-scroll-projects-footer">
+            <span>Scroll to explore our spaces</span>
+
+            <Link to="/projects">
+              Explore All Projects
+              <span aria-hidden="true"> ↗</span>
+            </Link>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  )
+}

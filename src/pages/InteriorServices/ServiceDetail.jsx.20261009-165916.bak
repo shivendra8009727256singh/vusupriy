@@ -1,0 +1,199 @@
+import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+
+const serviceData = {
+  'space-designing-makeover': {
+    title: 'Space Designing & Makeover',
+    subtitle: 'Transform Your Space with Expert Design & Makeovers',
+    description:
+      'Revamp your existing spaces with expert spatial planning, aesthetic styling, and seamless makeovers.',
+    items: [
+      {
+        title: 'Complete Room Transformation',
+        description:
+          'Redefine your bedroom, living room, or any area from scratch without heavy structural changes.',
+      },
+      {
+        title: 'Space Planning & Layout Optimization',
+        description:
+          'Make every square inch count with smart layouts that keep your interiors open, airy, and functional.',
+      },
+      {
+        title: 'Aesthetic Designs & Theme Styling',
+        description:
+          'Curate colour palettes, fabrics, furniture and decor elements around your preferred interior style.',
+      },
+      {
+        title: 'Space Enhancement & Surface Upgrades',
+        description:
+          'Enhance walls, lighting, wallpapers and furnishings to bring sophistication to every corner.',
+      },
+    ],
+  },
+
+  'drop-servicing-installation': {
+    title: 'Drop Servicing & Installation',
+    subtitle: 'Professional Interior Installation Solutions',
+    description:
+      'Explore our specialized installation and execution services for residential and commercial interiors.',
+    items: [
+      { title: 'Architectural & Civil Work' },
+      { title: 'Professional 2D, 3D & GRFC Drawings' },
+      { title: 'Mirror & Glazing Styling' },
+      { title: 'Doors & Windows Installation' },
+      { title: 'Centralized AC & Electrical Fitting' },
+      { title: 'Natural Garden Setup' },
+      { title: '3D Epoxy Flooring' },
+      { title: 'Indian Artistry on Walls & Ceilings' },
+      { title: 'Curtains & Blinds Installation' },
+      { title: 'Nano Coating Protection' },
+      { title: 'Lift Installation' },
+    ],
+  },
+
+  'customized-theme-products': {
+    title: 'Customized & Theme-Based Products',
+    subtitle: 'Distinctive Products for Beautiful Interiors',
+    description:
+      'Discover tailored interior products and finishes selected to complement your space and design vision.',
+    items: [
+      { title: 'Customized Flooring' },
+      { title: 'Wall Panels & Wallpapers' },
+      { title: 'Rugs & Wall Hangings' },
+      { title: 'Complete Furnishings' },
+      { title: 'Garden & Greenery' },
+    ],
+  },
+}
+
+function ServiceDetail() {
+  const location = useLocation()
+  const slug = location.pathname.split('/').filter(Boolean).at(-1)
+
+  const service = serviceData[slug]
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
+  useEffect(() => {
+    setSelectedIndex(0)
+  }, [slug])
+
+  if (!service) {
+    return (
+      <main style={{ padding: '160px 24px 80px', textAlign: 'center' }}>
+        <h1>Service not found</h1>
+        <Link to="/interior-services">View all services</Link>
+      </main>
+    )
+  }
+
+  const selected = service.items[selectedIndex] || service.items[0]
+
+  return (
+    <main className="vasu-service-page">
+      <section className="vasu-service-hero">
+        <div className="vasu-service-container">
+          <span className="vasu-service-eyebrow">
+            VASUPRIY INTERIOVILLA / SERVICES
+          </span>
+
+          <h1>{service.title}</h1>
+          <p>{service.subtitle}</p>
+
+          <div className="vasu-service-breadcrumb">
+            <Link to="/">Home</Link>
+            <span>/</span>
+            <Link to="/interior-services">Services</Link>
+            <span>/</span>
+            <span>{service.title}</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="vasu-service-main">
+        <div className="vasu-service-container vasu-service-layout">
+          <aside className="vasu-service-sidebar">
+            <div className="vasu-service-sidebar-inner">
+              <span className="vasu-service-sidebar-eyebrow">
+                EXPLORE SERVICES
+              </span>
+
+              <h2>Our Expertise</h2>
+
+              <div className="vasu-service-sidebar-list">
+                {service.items.map((item, index) => (
+                  <button
+                    key={item.title}
+                    type="button"
+                    className={`vasu-service-sidebar-item ${
+                      selectedIndex === index ? 'active' : ''
+                    }`}
+                    aria-pressed={selectedIndex === index}
+                    onClick={() => setSelectedIndex(index)}
+                  >
+                    <span className="vasu-service-sidebar-number">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+
+                    <span>{item.title}</span>
+
+                    <span aria-hidden="true">↗</span>
+                  </button>
+                ))}
+              </div>
+
+              <div className="vasu-service-sidebar-cta">
+                <span>HAVE A PROJECT IN MIND?</span>
+                <h3>Let's create something beautiful.</h3>
+                <Link to="/contact">Book a Consultation ↗</Link>
+              </div>
+            </div>
+          </aside>
+
+          <article className="vasu-service-content">
+            <span className="vasu-service-content-eyebrow">
+              OUR DESIGN SOLUTIONS
+            </span>
+
+            <h2>{selected.title}</h2>
+
+            <p className="vasu-service-lead">
+              {selected.description || service.description}
+            </p>
+
+            <div className="vasu-service-content-divider" />
+
+            <h3>Thoughtfully Designed for Your Space</h3>
+
+            <p>{service.description}</p>
+
+            <div className="vasu-service-process">
+              <div>
+                <span>01</span>
+                <h4>Understand</h4>
+                <p>We discuss your space, preferences and requirements.</p>
+              </div>
+
+              <div>
+                <span>02</span>
+                <h4>Design</h4>
+                <p>We develop a suitable concept and execution approach.</p>
+              </div>
+
+              <div>
+                <span>03</span>
+                <h4>Deliver</h4>
+                <p>We coordinate the work to bring the concept to life.</p>
+              </div>
+            </div>
+
+            <Link to="/contact" className="vasu-service-primary-cta">
+              Discuss Your Project <span aria-hidden="true">↗</span>
+            </Link>
+          </article>
+        </div>
+      </section>
+    </main>
+  )
+}
+
+export default ServiceDetail

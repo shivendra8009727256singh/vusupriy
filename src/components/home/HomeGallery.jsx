@@ -131,7 +131,7 @@ export default function HomeGallery() {
         className="antra-gallery-watermark"
         aria-hidden="true"
       >
-        gallery
+        interiorvilla
       </div>
 
       <div className="antra-gallery-header">
