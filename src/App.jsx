@@ -10,6 +10,7 @@ import InteriorProducts from './pages/InteriorProducts/InteriorProducts.jsx'
 import Projects from './pages/Projects/Projects.jsx'
 import Gallery from './pages/Gallery/Gallery.jsx'
 import Blog from './pages/Blog/Blog.jsx'
+import BlogDetail from './pages/Blog/BlogDetail.jsx'
 import Contact from './pages/Contact/Contact.jsx'
 
 function App() {
@@ -50,6 +51,8 @@ function App() {
             path="blog"
             element={<Blog />}
           />
+
+          <Route path="blog/:slug" element={<BlogDetail />} />
 
           <Route
             path="contact"
