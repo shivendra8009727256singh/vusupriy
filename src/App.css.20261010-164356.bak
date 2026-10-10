@@ -10200,7 +10200,7 @@ body {
   }
 
   .about-antra-media-row .about-antra-watermark img {
-    transform: scale(2.05) !important;
+    transform: scale(1.7) !important;
     transform-origin: center center !important;
   }
 }

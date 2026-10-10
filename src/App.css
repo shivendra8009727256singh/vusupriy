@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    VASUPRIY INTERIOVILLA
    HOME — HEADER / HERO / INTRO
    ========================================================= */
@@ -10205,7 +10205,7 @@ body {
   }
 
   .about-antra-media-row .about-antra-watermark img {
-    transform: scale(2.05) !important;
+    transform: scale(1.7) !important;
     transform-origin: center center !important;
   }
 }
@@ -15906,3 +15906,27 @@ body {
   .vasu-service-page .vasu-service-gap-filler a { color: #063f4b; text-decoration: none; font-size: 13px; font-weight: 800; margin-top: 22px; align-self: flex-start; border-bottom: 1px solid #b48f4e; padding-bottom: 6px; }
 }
 @media (max-width: 1024px) { .vasu-service-page .vasu-service-gap-filler { display: none !important; } }
+/* VASUPRIY HOME LOGO SIZE FIX */
+@media (min-width: 768px) {
+  .home-logo img,
+  .hero-logo img,
+  .home-hero-logo img {
+    max-width: 260px !important;
+    max-height: 260px !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-logo img,
+  .hero-logo img,
+  .home-hero-logo img {
+    max-width: 170px !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+/* VASUPRIY HOME LOGO SIZE FIX END */
+
