@@ -68,6 +68,17 @@
 .contact-submit:hover:not(:disabled) { background: #00354a; transform: translateY(-2px); }
 .contact-submit:disabled { opacity: .65; cursor: wait; }
 .contact-availability { margin-top: 13px; font-size: 12px; }
+.contact-form-footer { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.contact-submit { margin-top: 0; }
+.contact-socials { display: flex; align-items: center; gap: 12px; }
+.contact-socials-label { color: var(--contact-teal); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
+.contact-socials-links { display: flex; align-items: center; gap: 10px; }
+.contact-social-btn { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid transparent; border-radius: 50%; color: #fff; transition: transform var(--transition-base), box-shadow var(--transition-base), filter var(--transition-base); }
+.contact-social-btn svg { width: 20px; height: 20px; }
+.contact-social-btn--instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); box-shadow: 0 6px 16px rgba(220, 39, 67, .35); }
+.contact-social-btn--facebook { background: #1877f2; box-shadow: 0 6px 16px rgba(24, 119, 242, .35); }
+.contact-social-btn--youtube { background: #ff0000; box-shadow: 0 6px 16px rgba(255, 0, 0, .3); }
+.contact-social-btn:hover { transform: translateY(-3px) scale(1.05); filter: brightness(1.08); }
 .contact-map { overflow: hidden; border: 1px solid var(--contact-line); border-radius: 24px; min-height: 380px; background: #eee9df; }
 .contact-map iframe { display: block; border: 0; width: 100%; height: 440px; }
 .contact-map-placeholder { display: flex; min-height: 380px; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 30px; background-image: linear-gradient(rgba(0,71,88,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,71,88,.04) 1px,transparent 1px); background-size: 42px 42px; }
@@ -90,6 +101,8 @@
   .contact-hero .section-label { font-size: 9px; letter-spacing: .1em; }
   .contact-info-grid { grid-template-columns: minmax(0, 1fr); }
   .contact-form-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .contact-form-footer { flex-direction: column; align-items: stretch; }
+  .contact-socials { justify-content: flex-start; }
   .contact-message-visual { min-height: 360px; border-radius: 18px; }
   .contact-image-caption { left: 24px; right: 24px; bottom: 28px; }
   .contact-map, .contact-map-placeholder { min-height: 300px; }

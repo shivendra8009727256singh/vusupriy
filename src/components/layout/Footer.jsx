@@ -1,6 +1,42 @@
 import { Link } from 'react-router-dom'
 
+import { contactInfo } from '../../data/contactInfo.js'
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
+
+function FooterSocialIcon({ type }) {
+  const paths = {
+    instagram: (
+      <>
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+      </>
+    ),
+    facebook: (
+      <path d="M14 8h2V5h-2c-2 0-3 1.5-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8.5c0-.3.2-.5.5-.5Z" />
+    ),
+    youtube: (
+      <>
+        <rect x="2.5" y="6" width="19" height="12" rx="4" />
+        <path d="m10.5 9.8 4.5 2.2-4.5 2.2Z" fill="currentColor" stroke="none" />
+      </>
+    ),
+  }
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="footer-social-icon"
+    >
+      {paths[type]}
+    </svg>
+  )
+}
 
 function Footer() {
   return (
@@ -180,26 +216,35 @@ function Footer() {
               </Link>
 
               <div className="footer-socials">
-                <Link
-                  to="/contact"
-                  aria-label="Instagram"
+                <a
+                  href={contactInfo.socials.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Vasupriy Interiovilla on Instagram"
+                  title="Instagram"
                 >
-                  IG
-                </Link>
+                  <FooterSocialIcon type="instagram" />
+                </a>
 
-                <Link
-                  to="/contact"
-                  aria-label="Facebook"
+                <a
+                  href={contactInfo.socials.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Vasupriy Interiovilla on Facebook"
+                  title="Facebook"
                 >
-                  FB
-                </Link>
+                  <FooterSocialIcon type="facebook" />
+                </a>
 
-                <Link
-                  to="/contact"
-                  aria-label="Pinterest"
+                <a
+                  href={contactInfo.socials.youtube}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Vasupriy Interiovilla on YouTube"
+                  title="YouTube"
                 >
-                  PI
-                </Link>
+                  <FooterSocialIcon type="youtube" />
+                </a>
               </div>
             </div>
           </div>
