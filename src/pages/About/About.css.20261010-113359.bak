@@ -6451,8 +6451,8 @@
 
 /* Premium editorial typography */
 .about-vision .about-vision-statement h2 {
-  /* font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(52px, 7.2vw, 112px); */
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(52px, 7.2vw, 112px);
   font-weight: 500;
   line-height: 0.95;
   letter-spacing: -0.045em;
@@ -6555,10 +6555,10 @@
 
   .about-vision .about-vision-orbit {
     position: absolute;
-    width: 250px;
-    height: 250px;
-    min-width: 250px;
-    left: -412px;
+    width: 220px;
+    height: 220px;
+    min-width: 220px;
+    left: -260px;
     top: 40px;
     right: auto;
     bottom: auto;
@@ -6610,63 +6610,3 @@
 }
 
 /* VASUPRIY VISION LOGO POSITION V4 END */
-
-/* VASUPRIY WHAT WE DO LARGE SEAL START */
-
-/* Enlarge the existing floating circular logo */
-@media (min-width: 1101px) {
-  .about-what-visual .about-what-seal {
-    width: 190px !important;
-    height: 190px !important;
-    min-width: 190px;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-  }
-
-  .about-what-visual .about-what-seal-logo {
-    display: block;
-    width: 88% !important;
-    height: 88% !important;
-    max-width: none;
-    max-height: none;
-    object-fit: contain;
-    object-position: center;
-  }
-}
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1100px) {
-  .about-what-visual .about-what-seal {
-    width: 145px !important;
-    height: 145px !important;
-    min-width: 145px;
-  }
-
-  .about-what-visual .about-what-seal-logo {
-    width: 85% !important;
-    height: 85% !important;
-    object-fit: contain;
-  }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .about-what-visual .about-what-seal {
-    width: 100px !important;
-    height: 100px !important;
-    min-width: 100px;
-  }
-
-  .about-what-visual .about-what-seal-logo {
-    width: 85% !important;
-    height: 85% !important;
-    object-fit: contain;
-  }
-}
-
-/* VASUPRIY WHAT WE DO LARGE SEAL END */

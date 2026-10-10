@@ -1,0 +1,523 @@
+﻿import AmazingDesigningTeam from '../../components/home/AmazingDesigningTeam.jsx'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
+import './About.css'
+
+import processConsultation from '../../assets/images/about/how-we-work/initial-consultation.jpg'
+import processPlanning from '../../assets/images/about/how-we-work/design-planning.jpg'
+import processImplementation from '../../assets/images/about/how-we-work/implementation.jpg'
+import processHandover from '../../assets/images/about/how-we-work/project-handover.jpg'
+
+import whatWeDoLeft from '../../assets/images/about/what-we-do/interior-left.jpg'
+import whatWeDoRight from '../../assets/images/about/what-we-do/interior-right.jpg'
+
+import approachVision from '../../assets/images/about/our-approach/understand-your-vision.png'
+import approachPlanning from '../../assets/images/about/our-approach/plan-and-visualize.png'
+import approachExecution from '../../assets/images/about/our-approach/execute-with-precision.png'
+import approachHandover from '../../assets/images/about/our-approach/refine-and-handover.png'
+import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
+
+import partnerAgl from '../../assets/images/about/partners/agl.png'
+import partnerAristo from '../../assets/images/about/partners/aristo.webp'
+import partnerAsianPaints from '../../assets/images/about/partners/asianpaints.webp'
+import partnerCenturyPly from '../../assets/images/about/partners/centuryply.webp'
+import partnerGreenply from '../../assets/images/about/partners/greenply.webp'
+import partnerHettich from '../../assets/images/about/partners/hettich.webp'
+import partnerKajaria from '../../assets/images/about/partners/kajaria.webp'
+import partnerMarino from '../../assets/images/about/partners/marino.webp'
+import partnerRehau from '../../assets/images/about/partners/rehau.webp'
+
+import visionInterior from '../../assets/images/about/vision/our-vision.jpg'
+
+const whoWeAreServices = [
+  {
+    id: '01',
+    title: 'Residential Interior Design',
+    image:
+      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=88',
+    description:
+      'Tailored design services for private homes, including room makeovers and complete home transformations.',
+  },
+  {
+    id: '02',
+    title: 'Commercial Interior Design',
+    image:
+      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=88',
+    description:
+      'Purpose-driven commercial interiors designed around functionality, brand identity and a refined customer experience.',
+  },
+  {
+    id: '03',
+    title: 'Interior Design Consultation',
+    image:
+      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=88',
+    description:
+      'Professional guidance for space planning, materials, finishes and design decisions that bring clarity to your vision.',
+  },
+  {
+    id: '04',
+    title: 'Architectural & Civil Work',
+    image:
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=88',
+    description:
+      'Coordinated architectural and civil solutions supporting a seamless journey from planning through final execution.',
+  },
+  {
+    id: '05',
+    title: 'Renovation & Remodeling',
+    image:
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=88',
+    description:
+      'Thoughtful renovation and remodeling solutions that refresh existing spaces while improving everyday functionality.',
+  },
+]
+
+
+const howWeWorkSteps = [
+  {
+    id: '01',
+    title: 'Initial Consultation',
+    image: processConsultation,
+  },
+  {
+    id: '02',
+    title: 'Design & Planning',
+    image: processPlanning,
+  },
+  {
+    id: '03',
+    title: 'Implementation',
+    image: processImplementation,
+  },
+  {
+    id: '04',
+    title: 'Project Handover',
+    image: processHandover,
+  },
+]
+
+const brandPartners = [
+                    </span>
+
+                    {index === 1 && (
+                      <span className="about-speciality-featured-label">
+                        Signature
+                      </span>
+                    )}
+
+                    <div className="about-speciality-overlay">
+                      <span>{item.eyebrow}</span>
+
+                      <h3>{item.title}</h3>
+
+                      <p>{item.description}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+
+            </div>
+
+            <div
+              className="about-specialities-dots"
+              aria-label="Speciality slides"
+            >
+              {specialityItems.map((item, index) => (
+                <button
+                  type="button"
+                  key={item.id}
+                  className={
+                    index === specialityIndex
+                      ? 'is-active'
+                      : ''
+                  }
+                  aria-label={`Show ${item.title}`}
+                  aria-current={
+                    index === specialityIndex
+                      ? 'true'
+                      : undefined
+                  }
+                  onClick={() => selectSpeciality(index)}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="about-specialities-footer">
+            <span>Handcrafted</span>
+            <i aria-hidden="true" />
+
+            <span>Customize</span>
+            <i aria-hidden="true" />
+
+            <strong>Vasupriy Interiovilla</strong>
+
+            <i aria-hidden="true" />
+            <span>Artistry</span>
+
+            <i aria-hidden="true" />
+            <span>Made For You</span>
+          </div>
+
+        </div>
+      </section>
+      {/* =====================================================
+          OUR TEAM
+      ====================================================== */}
+      <section
+        className="about-team"
+        aria-labelledby="about-team-title"
+      >
+        <div className="about-team-watermark" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </div>
+
+        <div className="about-team-container">
+
+          <div className="about-team-heading">
+
+            <span className="about-team-eyebrow">
+              <i aria-hidden="true" />
+              Our Team
+            </span>
+
+            <h2 id="about-team-title">
+              The People Behind
+              <br />
+              <span>Thoughtful Interior</span> Design
+            </h2>
+
+            <p>
+              Our team brings together design thinking, practical
+              planning and coordinated execution to transform ideas
+              into refined, functional spaces.
+            </p>
+
+          </div>
+
+
+          <div className="about-team-grid">
+
+            <article className="about-team-card">
+
+              <div className="about-team-card-top">
+                <span className="about-team-dot" />
+
+                <div className="about-team-icon" aria-hidden="true">
+                  <span className="about-team-icon-arch" />
+                  <span className="about-team-icon-arch" />
+                </div>
+              </div>
+
+              <h3>
+                Design
+                <br />
+                Direction
+              </h3>
+
+              <div className="about-team-line" />
+
+              <p>
+                Shaping the overall design language, spatial character
+                and visual direction of every interior.
+              </p>
+
+              <span className="about-team-role">
+                Creative Team
+              </span>
+
+            </article>
+
+
+            <article className="about-team-card">
+
+              <div className="about-team-card-top">
+                <span className="about-team-dot" />
+
+                <div
+                  className="about-team-icon about-team-icon--circles"
+                  aria-hidden="true"
+                >
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+
+              <h3>
+                Interior Planning
+                <br />
+                &amp; Detailing
+              </h3>
+
+              <div className="about-team-line" />
+
+              <p>
+                Developing thoughtful layouts, material combinations
+                and details that balance aesthetics with everyday use.
+              </p>
+
+              <span className="about-team-role">
+                Design Team
+              </span>
+
+            </article>
+
+
+            <article className="about-team-card">
+
+              <div className="about-team-card-top">
+                <span className="about-team-dot" />
+
+                <div
+                  className="about-team-icon about-team-icon--diamond"
+                  aria-hidden="true"
+                >
+                  <span />
+                  <span />
+                </div>
+              </div>
+
+              <h3>
+                Project
+                <br />
+                Coordination
+              </h3>
+
+              <div className="about-team-line" />
+
+              <p>
+                Connecting design, materials and on-site activities
+                so every stage of the project remains clear and
+                coordinated.
+              </p>
+
+              <span className="about-team-role">
+                Coordination Team
+              </span>
+
+            </article>
+
+
+            <article className="about-team-card">
+
+              <div className="about-team-card-top">
+                <span className="about-team-dot" />
+
+                <div
+                  className="about-team-icon about-team-icon--layers"
+                  aria-hidden="true"
+                >
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+
+              <h3>
+                Execution
+                <br />
+                &amp; Finishing
+              </h3>
+
+              <div className="about-team-line" />
+
+              <p>
+                Bringing planned details to life through coordinated
+                workmanship, installation and careful final finishing.
+              </p>
+
+              <span className="about-team-role">
+                Execution Team
+              </span>
+
+            </article>
+
+          </div>
+
+import { useState } from 'react'
+import './AmazingDesigningTeam.css'
+
+import arunImage from '../../assets/images/home/team/arun-sharma.png'
+import priyankaImage from '../../assets/images/home/team/priyanka.png'
+import priyaImage from '../../assets/images/home/team/priya.png'
+import anujImage from '../../assets/images/home/team/anuj-pratap-singh.png'
+
+const teamMembers = [
+  {
+    id: 'arun',
+    number: '01',
+    name: 'Arun Sharma',
+    role: 'Architectural Design',
+    image: arunImage,
+    description:
+      'A bedroom is more than just a place to sleep—it is a personal sanctuary where comfort, relaxation, and style come together.',
+  },
+  {
+    id: 'priyanka',
+    number: '02',
+    name: 'Priyanka',
+    role: 'Interior Design & Planning',
+    image: priyankaImage,
+    description:
+      'From big-picture layouts to the finest details, we bring your ideas to life with creativity, thoughtful planning, and precision.',
+  },
+  {
+    id: 'priya',
+    number: '03',
+    name: 'Priya',
+    role: 'Quality Management',
+    image: priyaImage,
+    description:
+      'Every detail matters. We focus on quality, refined finishes, and careful attention to create spaces that feel exceptional.',
+  },
+  {
+    id: 'anuj',
+    number: '04',
+    name: 'Anuj Pratap Singh',
+    role: 'Project Management',
+    image: anujImage,
+    description:
+      'From planning to final handover, we coordinate every stage to turn creative concepts into beautifully executed spaces.',
+  },
+]
+
+export default function AmazingDesigningTeam() {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const activeMember = teamMembers[activeIndex]
+
+  return (
+    <section
+      className="amazing-team"
+      id="amazing-designing-team"
+      aria-labelledby="amazing-team-title"
+      data-scroll-section
+    >
+      <div className="site-container amazing-team-container">
+        <header className="amazing-team-header">
+          <span className="amazing-team-eyebrow">
+            <span aria-hidden="true">✦</span>
+            THE PEOPLE BEHIND THE SPACES
+          </span>
+
+          <h2 id="amazing-team-title">
+            Our Amazing <em>Designing Team</em>
+          </h2>
+
+          <p>
+            Meet the creative minds and dedicated professionals
+            who transform thoughtful ideas into inspiring interiors.
+          </p>
+        </header>
+
+        <div className="amazing-team-showcase">
+          <div className="amazing-team-feature">
+            <div className="amazing-team-feature-image">
+              {teamMembers.map((member, index) => (
+                <img
+                  key={member.id}
+                  src={member.image}
+                  alt={`${member.name} — ${member.role}`}
+                  className={
+                    index === activeIndex
+                      ? 'amazing-team-portrait is-active'
+                      : 'amazing-team-portrait'
+                  }
+                  aria-hidden={index !== activeIndex}
+                  loading="lazy"
+                  decoding="async"
+                />
+              ))}
+
+              <div className="amazing-team-image-shade" />
+
+              <span className="amazing-team-image-index">
+                {activeMember.number} / 04
+              </span>
+            </div>
+
+            <div
+              className="amazing-team-feature-caption"
+              key={activeMember.id}
+              aria-live="polite"
+            >
+              <span>{activeMember.role}</span>
+              <h3>{activeMember.name}</h3>
+              <p>{activeMember.description}</p>
+            </div>
+          </div>
+
+          <div
+            className="amazing-team-members"
+            aria-label="Meet our team members"
+          >
+            {teamMembers.map((member, index) => {
+              const isActive = activeIndex === index
+
+              return (
+                <button
+                  key={member.id}
+                  type="button"
+                  className={
+                    isActive
+                      ? 'amazing-team-member is-active'
+                      : 'amazing-team-member'
+                  }
+                  onMouseEnter={() => setActiveIndex(index)}
+                  onFocus={() => setActiveIndex(index)}
+                  onClick={() => setActiveIndex(index)}
+                  aria-pressed={isActive}
+                >
+                  <span className="amazing-team-member-number">
+                    {member.number}
+                  </span>
+
+                  <span className="amazing-team-member-info">
+                    <span className="amazing-team-member-role">
+                      {member.role}
+                    </span>
+
+                    <span className="amazing-team-member-name">
+                      {member.name}
+                    </span>
+
+                    <span className="amazing-team-member-description">
+                      {member.description}
+                    </span>
+                  </span>
+
+                  <span className="amazing-team-member-avatar">
+                    <img
+                      src={member.image}
+                      alt=""
+                      loading="lazy"
+                    />
+                  </span>
+
+                  <span
+                    className="amazing-team-member-arrow"
+                    aria-hidden="true"
+                  >
+                    ↗
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="amazing-team-footer">
+          <span className="amazing-team-footer-line" />
+          <p>
+            Different expertise. One shared vision.
+            <strong> Beautifully designed spaces.</strong>
+          </p>
+          <span className="amazing-team-footer-line" />
+        </div>
+      </div>
+    </section>
+  )
+}

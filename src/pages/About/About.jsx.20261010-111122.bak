@@ -1,7 +1,4 @@
-import arunTeamImage from '../../assets/images/home/team/arun-sharma.png'
-import priyankaTeamImage from '../../assets/images/home/team/priyanka.png'
-import priyaTeamImage from '../../assets/images/home/team/priya.png'
-import anujTeamImage from '../../assets/images/home/team/anuj-pratap-singh.png'
+﻿import AmazingDesigningTeam from '../../components/home/AmazingDesigningTeam.jsx'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -33,36 +30,6 @@ import partnerRehau from '../../assets/images/about/partners/rehau.webp'
 
 import visionInterior from '../../assets/images/about/vision/our-vision.jpg'
 
-const aboutTeamMembers = [
-  {
-    id: 'arun',
-    name: 'Arun Sharma',
-    role: 'Architectural Design',
-    image: arunTeamImage,
-    description: 'Creating thoughtful architectural concepts and refined spatial experiences.',
-  },
-  {
-    id: 'priyanka',
-    name: 'Priyanka',
-    role: 'Interior Design & Planning',
-    image: priyankaTeamImage,
-    description: 'Transforming creative ideas into functional, beautiful interior environments.',
-  },
-  {
-    id: 'priya',
-    name: 'Priya',
-    role: 'Quality Management',
-    image: priyaTeamImage,
-    description: 'Ensuring quality, thoughtful detailing and carefully finished spaces.',
-  },
-  {
-    id: 'anuj',
-    name: 'Anuj Pratap Singh',
-    role: 'Project Management',
-    image: anujTeamImage,
-    description: 'Coordinating planning, execution and successful project delivery.',
-  },
-]
 const whoWeAreServices = [
   {
     id: '01',
@@ -1352,36 +1319,149 @@ function About() {
           </div>
 
 
-          <div className="about-team-grid about-team-people-grid">
+          <div className="about-team-grid">
 
-            {aboutTeamMembers.map((member, index) => (
-  <article className="about-team-person-card" key={member.id}>
-    <div className="about-team-person-image">
-      <img
-        src={member.image}
-        alt={`${member.name} - ${member.role}`}
-        loading="lazy"
-        decoding="async"
-      />
-      <span className="about-team-person-number">
-        {String(index + 1).padStart(2, '0')}
-      </span>
-    </div>
+            <article className="about-team-card">
 
-    <div className="about-team-person-info">
-      <span className="about-team-person-role">{member.role}</span>
-      <h3>{member.name}</h3>
-      <p>{member.description}</p>
-    </div>
-  </article>
-))}
+              <div className="about-team-card-top">
+                <span className="about-team-dot" />
+
+                <div className="about-team-icon" aria-hidden="true">
+                  <span className="about-team-icon-arch" />
+                  <span className="about-team-icon-arch" />
+                </div>
+              </div>
+
+              <h3>
+                Design
+                <br />
+                Direction
+              </h3>
+
+              <div className="about-team-line" />
+
+              <p>
+                Shaping the overall design language, spatial character
+                and visual direction of every interior.
+              </p>
+
+              <span className="about-team-role">
+                Creative Team
+              </span>
+
+            </article>
+
+
+            <article className="about-team-card">
+
+              <div className="about-team-card-top">
+                <span className="about-team-dot" />
+
+                <div
+                  className="about-team-icon about-team-icon--circles"
+                  aria-hidden="true"
+                >
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+
+              <h3>
+                Interior Planning
+                <br />
+                &amp; Detailing
+              </h3>
+
+              <div className="about-team-line" />
+
+              <p>
+                Developing thoughtful layouts, material combinations
+                and details that balance aesthetics with everyday use.
+              </p>
+
+              <span className="about-team-role">
+                Design Team
+              </span>
+
+            </article>
+
+
+            <article className="about-team-card">
+
+              <div className="about-team-card-top">
+                <span className="about-team-dot" />
+
+                <div
+                  className="about-team-icon about-team-icon--diamond"
+                  aria-hidden="true"
+                >
+                  <span />
+                  <span />
+                </div>
+              </div>
+
+              <h3>
+                Project
+                <br />
+                Coordination
+              </h3>
+
+              <div className="about-team-line" />
+
+              <p>
+                Connecting design, materials and on-site activities
+                so every stage of the project remains clear and
+                coordinated.
+              </p>
+
+              <span className="about-team-role">
+                Coordination Team
+              </span>
+
+            </article>
+
+
+            <article className="about-team-card">
+
+              <div className="about-team-card-top">
+                <span className="about-team-dot" />
+
+                <div
+                  className="about-team-icon about-team-icon--layers"
+                  aria-hidden="true"
+                >
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+
+              <h3>
+                Execution
+                <br />
+                &amp; Finishing
+              </h3>
+
+              <div className="about-team-line" />
+
+              <p>
+                Bringing planned details to life through coordinated
+                workmanship, installation and careful final finishing.
+              </p>
+
+              <span className="about-team-role">
+                Execution Team
+              </span>
+
+            </article>
 
           </div>
 
         </div>
       </section>
 
-      
+      <AmazingDesigningTeam />
 
       {/* =====================================================
           OUR VISION

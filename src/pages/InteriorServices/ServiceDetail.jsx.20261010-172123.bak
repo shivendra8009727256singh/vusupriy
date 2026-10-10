@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 const serviceData = {
@@ -305,41 +305,6 @@ function ServiceDetail() {
 
   const service = serviceData[slug]
   const [selectedIndex, setSelectedIndex] = useState(0)
-  // VASU_DYNAMIC_SIDEBAR_GAP_V1: measure natural content, never include filler in measurement.
-  const sidebarInnerRef = useRef(null)
-  const articleRef = useRef(null)
-  const [sidebarGap, setSidebarGap] = useState(0)
-
-  useEffect(() => {
-    const sidebarInner = sidebarInnerRef.current
-    const article = articleRef.current
-    if (!sidebarInner || !article) return undefined
-    let frame = 0
-    const measure = () => {
-      cancelAnimationFrame(frame)
-      frame = requestAnimationFrame(() => {
-        if (window.innerWidth <= 1024) {
-          setSidebarGap(0)
-          return
-        }
-        const sidebarHeight = sidebarInner.getBoundingClientRect().height
-        const articleHeight = article.getBoundingClientRect().height
-        // Ignore small differences. Keep filler height independent of its own dimensions.
-        const difference = Math.max(0, Math.round(articleHeight - sidebarHeight - 26))
-        setSidebarGap(difference >= 220 ? difference : 0)
-      })
-    }
-    const observer = new ResizeObserver(measure)
-    observer.observe(sidebarInner)
-    observer.observe(article)
-    window.addEventListener('resize', measure)
-    measure()
-    return () => {
-      cancelAnimationFrame(frame)
-      observer.disconnect()
-      window.removeEventListener('resize', measure)
-    }
-  }, [slug, selectedIndex])
 
   useEffect(() => {
     setSelectedIndex(0)
@@ -393,7 +358,7 @@ function ServiceDetail() {
       <section className="vasu-service-main">
         <div className="vasu-service-container vasu-service-layout">
           <aside className="vasu-service-sidebar">
-            <div className="vasu-service-sidebar-inner" ref={sidebarInnerRef}>
+            <div className="vasu-service-sidebar-inner">
               <span className="vasu-service-sidebar-eyebrow">
                 EXPLORE SERVICES
               </span>
@@ -469,21 +434,9 @@ function ServiceDetail() {
                 </div>
               </div>
             </div>
-            
-{sidebarGap > 0 && (
-  <div className="vasu-service-gap-filler" style={{ minHeight: sidebarGap }}>
-    <span className="vasu-service-gap-eyebrow">DESIGN INSPIRATION</span>
-    <h3>Made for Your Space</h3>
-    <p>Discover ideas and details tailored to your interior vision.</p>
-    {findImage(serviceImages[slug]?.hero) && (
-      <img src={findImage(serviceImages[slug]?.hero)} alt={`${service.title} interior inspiration`} loading="lazy" decoding="async" />
-    )}
-    <Link to="/contact">Discuss Your Project <span aria-hidden="true">â†—</span></Link>
-  </div>
-)}
-</aside>
+            </aside>
 
-          <article className="vasu-service-content" ref={articleRef}>
+          <article className="vasu-service-content">
             <span className="vasu-service-content-eyebrow">
               OUR DESIGN SOLUTIONS
             </span>
@@ -566,9 +519,11 @@ function ServiceDetail() {
                 )}
               </div>
             )}
-          
-            <div className="vasu-service-inline-details">
-<div className="vasu-service-fullwidth-heading">
+          </article>
+        </div>
+        {/* VASUPRIY FULL WIDTH SERVICE DETAILS V1 */}
+        <div className="vasu-service-container vasu-service-fullwidth">
+          <div className="vasu-service-fullwidth-heading">
             <span className="vasu-service-editorial-eyebrow">MORE ABOUT THIS SERVICE</span>
             <h2>{selected.title} &mdash; The Details</h2>
           </div>
@@ -622,12 +577,8 @@ function ServiceDetail() {
             <h3>Thoughtfully Designed for Your Space</h3>
 
             <p>{service.description}</p>
-            </div>
-          </article>
-        </div>
-        {/* VASUPRIY FULL WIDTH SERVICE DETAILS V1 */}
-        <div className="vasu-service-container vasu-service-fullwidth">
-          <div className="vasu-service-process">
+
+            <div className="vasu-service-process">
               <div>
                 <span>01</span>
                 <h4>Understand</h4>

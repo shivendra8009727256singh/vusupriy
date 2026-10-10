@@ -15885,19 +15885,3 @@ body {
 @media (max-width: 767px) {
   .vasu-service-content .vasu-service-inline-details { margin-top: 18px; }
 }
-/* VASU_DYNAMIC_SIDEBAR_GAP_V1 â€” only fills a genuine desktop sidebar gap */
-@media (min-width: 1025px) {
-  .vasu-service-page .vasu-service-sidebar { align-self: start; display: flex; flex-direction: column; gap: 26px; min-width: 0; }
-  .vasu-service-page .vasu-service-gap-filler {
-    box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden;
-    padding: 26px 22px; border-radius: 16px;
-    background: #f8f6f1; border: 1px solid rgba(180,143,78,.28);
-    color: #153e45;
-  }
-  .vasu-service-page .vasu-service-gap-eyebrow { color: #b48f4e; font-size: 11px; font-weight: 800; letter-spacing: .14em; }
-  .vasu-service-page .vasu-service-gap-filler h3 { font-family: Georgia,serif; font-size: clamp(24px,2.4vw,32px); font-weight: 500; line-height: 1.2; margin: 16px 0 12px; }
-  .vasu-service-page .vasu-service-gap-filler p { font-size: 14px; line-height: 1.75; margin: 0 0 22px; }
-  .vasu-service-page .vasu-service-gap-filler img { display: block; width: 100%; min-height: 130px; max-height: 340px; flex: 1 1 auto; object-fit: cover; border-radius: 10px; }
-  .vasu-service-page .vasu-service-gap-filler a { color: #063f4b; text-decoration: none; font-size: 13px; font-weight: 800; margin-top: 22px; align-self: flex-start; border-bottom: 1px solid #b48f4e; padding-bottom: 6px; }
-}
-@media (max-width: 1024px) { .vasu-service-page .vasu-service-gap-filler { display: none !important; } }
