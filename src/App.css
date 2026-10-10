@@ -1552,6 +1552,11 @@ body.is-loading {
   transform: translateY(-4px);
 }
 
+.footer-social-icon {
+  width: 18px;
+  height: 18px;
+}
+
 /* =========================================================
    BOTTOM BAR
    ========================================================= */

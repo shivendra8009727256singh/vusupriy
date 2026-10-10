@@ -8,6 +8,11 @@ export const contactInfo = {
   // Connect a server endpoint accepting JSON via POST and returning { success: true }
   // only after the message is accepted. Email-provider secrets belong on the server.
   submissionEndpoint: '',
+  socials: {
+    instagram: 'https://www.instagram.com/vasupriy__interiovilla',
+    facebook: 'https://www.facebook.com/share/1C5PprZiHW/',
+    youtube: 'https://youtube.com/@vasupriyinteriovilla',
+  },
   services: ['Building Design', 'Construction', 'Renovation & Remodeling', 'Commercial Projects', 'Interior & Exterior Design'],
 }
 
