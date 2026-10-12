@@ -70,15 +70,126 @@
 .contact-availability { margin-top: 13px; font-size: 12px; }
 .contact-form-footer { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
 .contact-submit { margin-top: 0; }
-.contact-socials { display: flex; align-items: center; gap: 12px; }
-.contact-socials-label { color: var(--contact-teal); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
-.contact-socials-links { display: flex; align-items: center; gap: 10px; }
-.contact-social-btn { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid transparent; border-radius: 50%; color: #fff; transition: transform var(--transition-base), box-shadow var(--transition-base), filter var(--transition-base); }
-.contact-social-btn svg { width: 20px; height: 20px; }
-.contact-social-btn--instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); box-shadow: 0 6px 16px rgba(220, 39, 67, .35); }
-.contact-social-btn--facebook { background: #1877f2; box-shadow: 0 6px 16px rgba(24, 119, 242, .35); }
-.contact-social-btn--youtube { background: #ff0000; box-shadow: 0 6px 16px rgba(255, 0, 0, .3); }
-.contact-social-btn:hover { transform: translateY(-3px) scale(1.05); filter: brightness(1.08); }
+/* PREMIUM SOCIAL MEDIA ICONS */
+.contact-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-socials-label {
+  color: var(--contact-teal);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.contact-socials-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-social-btn {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  border: 1px solid rgba(189, 164, 123, .65);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #174F58 0%, #0A303A 100%);
+  color: #E6C99C;
+  box-shadow:
+    0 5px 15px rgba(8, 45, 54, .13),
+    inset 0 1px 0 rgba(255, 255, 255, .12);
+  text-decoration: none;
+  overflow: hidden;
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    background .4s ease,
+    color .4s ease,
+    border-color .4s ease,
+    box-shadow .45s ease;
+}
+
+.contact-social-btn::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #EBD6B2, #BDA47B);
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.contact-social-btn svg {
+  width: 21px;
+  height: 21px;
+  transition: transform .45s cubic-bezier(.2,.8,.2,1);
+}
+
+.contact-social-btn:hover {
+  transform: translateY(-5px);
+  color: #103E48;
+  border-color: #D8B985;
+  box-shadow:
+    0 12px 28px rgba(8, 45, 54, .2),
+    0 0 18px rgba(189, 164, 123, .2);
+  filter: none;
+}
+
+.contact-social-btn:hover::before {
+  opacity: 1;
+}
+
+.contact-social-btn:hover svg {
+  transform: scale(1.12);
+}
+
+.contact-social-btn:focus-visible {
+  outline: 2px solid #BDA47B;
+  outline-offset: 4px;
+}
+
+.contact-social-btn:active {
+  transform: translateY(-1px) scale(.96);
+}
+
+@media (max-width: 480px) {
+  .contact-socials {
+    gap: 12px;
+  }
+
+  .contact-socials-links {
+    gap: 10px;
+  }
+
+  .contact-social-btn {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-social-btn,
+  .contact-social-btn::before,
+  .contact-social-btn svg {
+    transition: none;
+  }
+
+  .contact-social-btn:hover,
+  .contact-social-btn:active {
+    transform: none;
+  }
+}
 .contact-map { overflow: hidden; border: 1px solid var(--contact-line); border-radius: 24px; min-height: 380px; background: #eee9df; }
 .contact-map iframe { display: block; border: 0; width: 100%; height: 440px; }
 .contact-map-placeholder { display: flex; min-height: 380px; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 30px; background-image: linear-gradient(rgba(0,71,88,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,71,88,.04) 1px,transparent 1px); background-size: 42px 42px; }
@@ -115,4 +226,170 @@
   .contact-marquee-track li { font-size: 20px; white-space: normal; padding: 0; gap: 16px; }
   .contact-motion [data-contact-reveal] { opacity: 1; transform: none; transition: none; }
   .contact-submit:hover:not(:disabled) { transform: none; }
+}
+
+
+/* SOCIAL ICONS — MINIMAL LUXURY + ORIGINAL BRAND HOVER */
+
+.contact-page .contact-social-btn {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border: 1px solid rgba(176, 151, 111, .48);
+  border-radius: 50%;
+  background: #faf8f3;
+  color: #16434a;
+  box-shadow: 0 3px 12px rgba(20, 45, 48, .07);
+  overflow: hidden;
+  text-decoration: none;
+  filter: none;
+  transition:
+    background .35s ease,
+    color .35s ease,
+    border-color .35s ease,
+    transform .35s cubic-bezier(.2,.8,.2,1),
+    box-shadow .35s ease;
+}
+
+.contact-page .contact-social-btn::before {
+  display: none;
+}
+
+.contact-page .contact-social-btn svg {
+  position: relative;
+  z-index: 1;
+  width: 21px;
+  height: 21px;
+  transition: transform .35s ease;
+}
+
+/* Instagram original brand gradient */
+.contact-page .contact-social-btn--instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 20px rgba(220, 39, 103, .24);
+}
+
+/* Facebook original brand blue */
+.contact-page .contact-social-btn--facebook:hover {
+  background: #1877f2;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 20px rgba(24, 119, 242, .22);
+}
+
+/* YouTube original brand red */
+.contact-page .contact-social-btn--youtube:hover {
+  background: #ff0033;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 20px rgba(255, 0, 51, .22);
+}
+
+.contact-page .contact-social-btn:hover {
+  transform: translateY(-3px);
+  filter: none;
+}
+
+.contact-page .contact-social-btn:hover svg {
+  transform: scale(1.08);
+}
+
+.contact-page .contact-social-btn:focus-visible {
+  outline: 2px solid #bda47b;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-page .contact-social-btn,
+  .contact-page .contact-social-btn svg {
+    transition: none;
+  }
+
+  .contact-page .contact-social-btn:hover {
+    transform: none;
+  }
+}
+
+/* VASUPRIY REAL BRAND SOCIAL ICONS */
+
+.contact-page .contact-socials-links .contact-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  border-radius: 50%;
+  border: 1px solid #d8c9b0;
+  background: #ffffff;
+  color: #17434a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .06);
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    color .3s ease,
+    box-shadow .3s ease;
+}
+
+.contact-page .contact-socials-links .contact-social-btn::before {
+  display: none !important;
+}
+
+.contact-page .contact-socials-links .contact-social-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  stroke: none;
+}
+
+.contact-page .contact-socials-links .contact-social-btn:hover {
+  transform: translateY(-4px);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* Instagram */
+.contact-page .contact-socials-links .contact-social-btn--instagram:hover {
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+  box-shadow: 0 8px 22px rgba(220, 39, 103, .28);
+}
+
+/* Facebook */
+.contact-page .contact-socials-links .contact-social-btn--facebook:hover {
+  background: #1877f2;
+  box-shadow: 0 8px 22px rgba(24, 119, 242, .25);
+}
+
+/* YouTube */
+.contact-page .contact-socials-links .contact-social-btn--youtube:hover {
+  background: #ff0033;
+  box-shadow: 0 8px 22px rgba(255, 0, 51, .25);
+}
+
+.contact-page .contact-socials-links .contact-social-btn:focus-visible {
+  outline: 2px solid #bda47b;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-page .contact-socials-links .contact-social-btn {
+    transition: none;
+  }
+
+  .contact-page .contact-socials-links .contact-social-btn:hover {
+    transform: none;
+  }
 }

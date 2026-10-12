@@ -1,4 +1,5 @@
-﻿import './HomeGallery.css'
+import { Link } from 'react-router-dom'
+import './HomeGallery.css'
 
 const galleryRowOne = [
   {
@@ -95,9 +96,11 @@ function GalleryTrack({ items, direction = 'left' }) {
         className={`antra-gallery-track antra-gallery-track--${direction}`}
       >
         {repeatedItems.map((item, index) => (
-          <article
+          <Link
+            to="/gallery"
             className={`antra-gallery-item antra-gallery-item--${item.size}`}
             key={`${item.id}-${index}`}
+            aria-label={`View gallery: ${item.title}`}
           >
             <img
               src={item.image}
@@ -112,7 +115,7 @@ function GalleryTrack({ items, direction = 'left' }) {
               <span>{item.category}</span>
               <h3>{item.title}</h3>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </div>

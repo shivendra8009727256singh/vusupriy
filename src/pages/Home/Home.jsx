@@ -145,6 +145,11 @@ function Home() {
     window.clearTimeout(serviceHoverTimer.current)
   }
 
+  const serviceRoutes = [
+    '/services/space-designing-makeover',
+    '/services/drop-servicing-installation',
+    '/services/customized-theme-products',
+  ]
   const homeServices = [
     {
       number: '01',
@@ -488,7 +493,7 @@ function Home() {
 
                 <Link
                   className="antra4-hero-cta"
-                  to="/interior-services"
+                  to="/services/space-designing-makeover"
                 >
                   <span>Our Services</span>
 
@@ -1025,21 +1030,18 @@ function Home() {
                     const isActive = activeService === index
 
                     return (
-                      <button
+                      <Link
+                        to={serviceRoutes[index]}
                         className={`home-service-item ${isActive ? 'home-service-item--active' : ''
                           }`}
                         key={service.number}
                         id={`home-service-tab-${index}`}
                         data-reveal
                         style={{ '--reveal-delay': `${index * 80}ms` }}
-                        type="button"
-                        role="tab"
-                        aria-selected={isActive}
-                        aria-controls="home-service-visual"
                         onMouseEnter={() => scheduleServiceHover(index)}
                         onMouseLeave={cancelServiceHover}
                         onFocus={() => activateService(index)}
-                        onClick={() => activateService(index)}
+                        onClick={() => { cancelServiceHover(); activateService(index) }}
                       >
                         <span className="home-service-number">
                           {service.number}
@@ -1055,7 +1057,7 @@ function Home() {
                         >
                           ↗
                         </span>
-                      </button>
+                      </Link>
                     )
                   })}
                 </div>
