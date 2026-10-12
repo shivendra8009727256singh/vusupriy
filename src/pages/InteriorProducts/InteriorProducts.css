@@ -199,3 +199,71 @@
 }
 
 /* VASUPRIY CENTERED HERO LOGO END */
+
+/* VASUPRIY PRODUCTS LEFT WATERMARK FIX - START */
+
+/* Position watermark behind the left text area only */
+.vpm-page .vpm-hero::after {
+    left: 24% !important;
+    top: 50% !important;
+    bottom: auto !important;
+
+    width: min(38vw, 500px) !important;
+    height: min(38vw, 500px) !important;
+
+    transform: translate(-50%, -50%) !important;
+    background-position: center !important;
+    background-size: contain !important;
+
+    opacity: 0.055 !important;
+    pointer-events: none !important;
+}
+
+/* Keep text and image above watermark */
+.vpm-page .vpm-hero-grid {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive watermark */
+@media (max-width: 750px) {
+    .vpm-page .vpm-hero::after {
+        left: 50% !important;
+        top: 31% !important;
+
+        width: 75vw !important;
+        height: 75vw !important;
+
+        transform: translate(-50%, -50%) !important;
+        opacity: 0.045 !important;
+    }
+}
+
+/* VASUPRIY PRODUCTS LEFT WATERMARK FIX - END */
+
+/* VASUPRIY PRODUCTS WATERMARK SIZE INCREASE */
+@media (min-width: 751px) {
+    .vpm-page .vpm-hero::after {
+        width: min(46vw, 650px) !important;
+        height: min(46vw, 650px) !important;
+        left: 24% !important;
+    }
+}
+
+@media (max-width: 750px) {
+    .vpm-page .vpm-hero::after {
+        width: 85vw !important;
+        height: 85vw !important;
+    }
+}
+
+/* VASUPRIY WATERMARK 800PX */
+@media (min-width: 751px) {
+    .vpm-page .vpm-hero::after {
+        width: 800px !important;
+        height: 800px !important;
+        left: 24% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+}
