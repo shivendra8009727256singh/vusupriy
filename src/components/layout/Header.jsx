@@ -1,4 +1,4 @@
-﻿
+
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
@@ -19,6 +19,13 @@ const services = [
   },
 ]
 
+const productCategories = [
+  { label: 'Flooring Styling', id: 'flooring' },
+  { label: 'Green Element', id: 'green' },
+  { label: 'Enlightenment Options', id: 'lighting' },
+  { label: 'Wall Makeover Products', id: 'walls' },
+]
+
 const navigation = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
@@ -34,14 +41,19 @@ function Header() {
   const [headerScrolled, setHeaderScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [productsOpen, setProductsOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false)
 
   const servicesRef = useRef(null)
+  const productsRef = useRef(null)
   const location = useLocation()
 
   const isServicesRoute =
     location.pathname === '/interior-services' ||
     location.pathname.startsWith('/services/')
+
+  const isProductsRoute = location.pathname === '/interior-products'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +71,9 @@ function Header() {
   useEffect(() => {
     setMenuOpen(false)
     setServicesOpen(false)
+    setProductsOpen(false)
     setMobileServicesOpen(false)
+    setMobileProductsOpen(false)
 
     window.scrollTo({
       top: 0,
@@ -112,6 +126,22 @@ function Header() {
       window.removeEventListener('keydown', handleEscape)
     }
   }, [servicesOpen])
+
+  useEffect(() => {
+    if (!productsOpen) return undefined
+    const outside = (event) => {
+      if (!productsRef.current?.contains(event.target)) setProductsOpen(false)
+    }
+    const escape = (event) => {
+      if (event.key === 'Escape') setProductsOpen(false)
+    }
+    document.addEventListener('pointerdown', outside)
+    window.addEventListener('keydown', escape)
+    return () => {
+      document.removeEventListener('pointerdown', outside)
+      window.removeEventListener('keydown', escape)
+    }
+  }, [productsOpen])
 
   return (
     <>
@@ -196,6 +226,59 @@ function Header() {
                           </span>
                           <span>{service.label}</span>
                           <span aria-hidden="true">↗</span>
+                        </NavLink>
+                      ))}
+                    </div>
+                  </div>
+                )
+              }
+
+              if (item.label === 'Products') {
+                return (
+                  <div
+                    key={item.path}
+                    ref={productsRef}
+                    className={`vasu-services-nav ${productsOpen ? 'vasu-services-nav--open' : ''}`}
+                    onMouseEnter={() => { setProductsOpen(true); setServicesOpen(false) }}
+                    onMouseLeave={() => setProductsOpen(false)}
+                    onBlur={(event) => {
+                      if (!event.currentTarget.contains(event.relatedTarget)) setProductsOpen(false)
+                    }}
+                  >
+                    <button
+                      type="button"
+                      className={`vasu-services-trigger ${isProductsRoute ? 'active' : ''}`}
+                      aria-expanded={productsOpen}
+                      aria-controls="vasu-products-dropdown"
+                      onClick={() => { setProductsOpen((open) => !open); setServicesOpen(false) }}
+                    >
+                      Products <span className="vasu-services-chevron" aria-hidden="true">▾</span>
+                    </button>
+                    <div
+                      id="vasu-products-dropdown"
+                      className="vasu-services-dropdown"
+                      aria-hidden={!productsOpen}
+                    >
+                      <span className="vasu-services-dropdown-title">Explore Product Collections</span>
+                      <NavLink
+                        to="/interior-products"
+                        tabIndex={productsOpen ? 0 : -1}
+                        onClick={() => setProductsOpen(false)}
+                        className="vasu-services-dropdown-link"
+                      >
+                        <span className="vasu-services-dropdown-number">00</span>
+                        <span>All Products</span><span aria-hidden="true">↗</span>
+                      </NavLink>
+                      {productCategories.map((category, index) => (
+                        <NavLink
+                          key={category.id}
+                          to={`/interior-products?category=${category.id}`}
+                          tabIndex={productsOpen ? 0 : -1}
+                          onClick={() => setProductsOpen(false)}
+                          className="vasu-services-dropdown-link"
+                        >
+                          <span className="vasu-services-dropdown-number">{String(index + 1).padStart(2, '0')}</span>
+                          <span>{category.label}</span><span aria-hidden="true">↗</span>
                         </NavLink>
                       ))}
                     </div>
@@ -313,6 +396,41 @@ function Header() {
                           >
                             <span>{service.label}</span>
                             <span aria-hidden="true">↗</span>
+                          </NavLink>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )
+              }
+
+              if (item.label === 'Products') {
+                return (
+                  <div key={item.path} className="vasu-mobile-services">
+                    <button
+                      type="button"
+                      className={`vasu-mobile-services-trigger ${isProductsRoute ? 'active' : ''}`}
+                      tabIndex={menuOpen ? 0 : -1}
+                      aria-expanded={mobileProductsOpen}
+                      onClick={() => setMobileProductsOpen((open) => !open)}
+                    >
+                      <span className="mobile-nav-number">{String(index + 1).padStart(2, '0')}</span>
+                      <span className="mobile-nav-label">Products</span>
+                      <span className="mobile-nav-arrow" aria-hidden="true">{mobileProductsOpen ? '−' : '+'}</span>
+                    </button>
+                    {mobileProductsOpen && (
+                      <div className="vasu-mobile-services-list">
+                        <NavLink to="/interior-products" tabIndex={menuOpen ? 0 : -1} onClick={() => setMenuOpen(false)}>
+                          <span>All Products</span><span aria-hidden="true">↗</span>
+                        </NavLink>
+                        {productCategories.map((category) => (
+                          <NavLink
+                            key={category.id}
+                            to={`/interior-products?category=${category.id}`}
+                            tabIndex={menuOpen ? 0 : -1}
+                            onClick={() => setMenuOpen(false)}
+                          >
+                            <span>{category.label}</span><span aria-hidden="true">↗</span>
                           </NavLink>
                         ))}
                       </div>

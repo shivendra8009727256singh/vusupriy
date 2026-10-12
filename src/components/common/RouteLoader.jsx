@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
@@ -133,11 +133,6 @@ export default function RouteLoader() {
             alt=""
             className="preloader-logo"
           />
-        </div>
-
-        <div className="preloader-wordmark">
-          <span>VASUPRIY</span>
-          <small>INTERIOVILLA</small>
         </div>
 
         <div className="preloader-progress">

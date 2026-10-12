@@ -1,0 +1,40 @@
+{
+  "laminate": [
+    "/images/product-showroom/laminate-01.webp",
+    "/images/product-showroom/laminate-02.webp",
+    "/images/product-showroom/laminate-03.webp"
+  ],
+  "spc": [
+    "/images/product-showroom/spc-01.webp",
+    "/images/product-showroom/spc-02.webp",
+    "/images/product-showroom/spc-03.webp"
+  ],
+  "wood": [
+    "/images/product-showroom/wood-01.webp",
+    "/images/product-showroom/wood-02.webp"
+  ],
+  "deck": [
+    "/images/product-showroom/deck-01.webp",
+    "/images/product-showroom/deck-02.webp"
+  ],
+  "carpet": [
+    "/images/product-showroom/carpet-01.webp",
+    "/images/product-showroom/carpet-02.webp"
+  ],
+  "epoxy": [
+    "/images/product-showroom/epoxy-01.webp",
+    "/images/product-showroom/epoxy-02.webp"
+  ],
+  "rug": [
+    "/images/product-showroom/rug-01.webp",
+    "/images/product-showroom/rug-02.webp",
+    "/images/product-showroom/rug-03.webp"
+  ],
+  "green": [
+    "/images/product-showroom/green-01.webp",
+    "/images/product-showroom/green-02.webp",
+    "/images/product-showroom/green-03.webp",
+    "/images/product-showroom/green-04.webp",
+    "/images/product-showroom/green-05.webp"
+  ]
+}

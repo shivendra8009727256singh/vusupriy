@@ -1,4 +1,4 @@
-﻿import aboutFloorPlan from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-01.png'
+import aboutFloorPlan from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-01.png'
 import { useState as useExpertiseState } from 'react'
 import solutionBrandImage from '../../assets/images/renamed-collection/commercial-site-photos/modern-commercial-space-interior-01.jpg'
 import solutionProductImage from '../../assets/images/renamed-collection/residential-site-photos/residential-interior-details-46.jpg'
@@ -609,14 +609,14 @@ function Home() {
 
             <div className="about-antra-bottom">
               <div className="about-antra-watermark-space">
-  <img
-    className="about-antra-floor-plan"
-    src={aboutFloorPlan}
-    alt="Vasupriy Interiovilla 3D interior floor plan"
-    loading="lazy"
-    decoding="async"
-  />
-</div>
+                <img
+                  className="about-antra-floor-plan"
+                  src={aboutFloorPlan}
+                  alt="Vasupriy Interiovilla 3D interior floor plan"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
 
               <div className="about-antra-story" data-reveal>
                 <p>
@@ -1069,7 +1069,7 @@ function Home() {
                 <Link
                   className="home-services-cta"
                   data-reveal
-                  to="/interior-services"
+                  to="/services/space-designing-makeover"
                 >
                   <span>Explore All Services</span>
                   <span className="home-services-cta-arrow" aria-hidden="true">
@@ -1153,112 +1153,112 @@ function Home() {
 
 
 
-                {/* ORIGINAL 3D INTERIOR FLOOR PLAN VISUAL */}
+        {/* ORIGINAL 3D INTERIOR FLOOR PLAN VISUAL */}
         <FloorPlanGallery />
-<section
-  className="home-expertise home-expertise--editorial"
-  id="expertise"
-  data-scroll-section
->
-  <div className="site-container expertise-editorial-container">
+        <section
+          className="home-expertise home-expertise--editorial"
+          id="expertise"
+          data-scroll-section
+        >
+          <div className="site-container expertise-editorial-container">
 
-    <div
-      className="expertise-editorial-heading"
-      data-reveal
-      data-heading-reveal
-    >
-      <span className="expertise-editorial-eyebrow">
-        <i aria-hidden="true" />
-        Our Expertise
-      </span>
+            <div
+              className="expertise-editorial-heading"
+              data-reveal
+              data-heading-reveal
+            >
+              <span className="expertise-editorial-eyebrow">
+                <i aria-hidden="true" />
+                Our Expertise
+              </span>
 
-      <h2>
-        Spaces Designed with
-        <em> Purpose &amp; Precision.</em>
-      </h2>
+              <h2>
+                Spaces Designed with
+                <em> Purpose &amp; Precision.</em>
+              </h2>
 
-      <p>
-        From the first concept to the finishing details,
-        we bring thoughtful design and seamless execution together.
-      </p>
-    </div>
-
-    <div className="expertise-editorial-layout">
-
-      <div className="expertise-editorial-feature" data-reveal>
-        <img
-          key={activeExpertiseImage}
-          src={activeExpertiseImage}
-          alt="Vasupriy Interiovilla premium interior design"
-          loading="lazy"
-          decoding="async"
-        />
-
-        <div className="expertise-editorial-feature-overlay">
-          <span>VASUPRIY INTERIOVILLA</span>
-          <strong>Designed for the way you live.</strong>
-        </div>
-      </div>
-
-      <div className="expertise-editorial-list">
-
-        {[
-          {
-            number: '01',
-            title: 'Space Planning & Makeovers',
-            description: 'Thoughtful layouts and inspiring transformations tailored to your lifestyle.',
-            image: expertiseSpacePlanning,
-          },
-          {
-            number: '02',
-            title: 'Design & Visualization',
-            description: 'Clear design direction with detailed planning and immersive visualization.',
-            image: expertiseDesignVisualization,
-          },
-          {
-            number: '03',
-            title: 'Architectural & Civil Solutions',
-            description: 'Coordinated architectural solutions built around beauty and functionality.',
-            image: expertiseArchitecture,
-          },
-          {
-            number: '04',
-            title: 'Turnkey Execution',
-            description: 'Seamless coordination from design development through final execution.',
-            image: expertiseTurnkey,
-          },
-        ].map((item) => (
-          <article
-            className="expertise-editorial-item"
-            key={item.number}
-            data-reveal
-            onMouseEnter={() => setActiveExpertiseImage(item.image)}
-            onFocus={() => setActiveExpertiseImage(item.image)}
-            onClick={() => setActiveExpertiseImage(item.image)}
-          >
-            <span className="expertise-editorial-number">
-              {item.number}
-            </span>
-
-            <div className="expertise-editorial-item-content">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              <p>
+                From the first concept to the finishing details,
+                we bring thoughtful design and seamless execution together.
+              </p>
             </div>
 
-            <div className="expertise-editorial-thumb">
-              <img src={item.image} alt="" loading="lazy" />
+            <div className="expertise-editorial-layout">
+
+              <div className="expertise-editorial-feature" data-reveal>
+                <img
+                  key={activeExpertiseImage}
+                  src={activeExpertiseImage}
+                  alt="Vasupriy Interiovilla premium interior design"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div className="expertise-editorial-feature-overlay">
+                  <span>VASUPRIY INTERIOVILLA</span>
+                  <strong>Designed for the way you live.</strong>
+                </div>
+              </div>
+
+              <div className="expertise-editorial-list">
+
+                {[
+                  {
+                    number: '01',
+                    title: 'Space Planning & Makeovers',
+                    description: 'Thoughtful layouts and inspiring transformations tailored to your lifestyle.',
+                    image: expertiseSpacePlanning,
+                  },
+                  {
+                    number: '02',
+                    title: 'Design & Visualization',
+                    description: 'Clear design direction with detailed planning and immersive visualization.',
+                    image: expertiseDesignVisualization,
+                  },
+                  {
+                    number: '03',
+                    title: 'Architectural & Civil Solutions',
+                    description: 'Coordinated architectural solutions built around beauty and functionality.',
+                    image: expertiseArchitecture,
+                  },
+                  {
+                    number: '04',
+                    title: 'Turnkey Execution',
+                    description: 'Seamless coordination from design development through final execution.',
+                    image: expertiseTurnkey,
+                  },
+                ].map((item) => (
+                  <article
+                    className="expertise-editorial-item"
+                    key={item.number}
+                    data-reveal
+                    onMouseEnter={() => setActiveExpertiseImage(item.image)}
+                    onFocus={() => setActiveExpertiseImage(item.image)}
+                    onClick={() => setActiveExpertiseImage(item.image)}
+                  >
+                    <span className="expertise-editorial-number">
+                      {item.number}
+                    </span>
+
+                    <div className="expertise-editorial-item-content">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+
+                    <div className="expertise-editorial-thumb">
+                      <img src={item.image} alt="" loading="lazy" />
+                    </div>
+
+                    <span className="expertise-editorial-arrow" aria-hidden="true">
+                      ↗
+                    </span>
+                  </article>
+                ))}
+
+              </div>
             </div>
-
-            <span className="expertise-editorial-arrow" aria-hidden="true">
-              ↗
-            </span>
-          </article>
-        ))}
-
-      </div>
-    </div>
-  </div>
-</section>
+          </div>
+        </section>
 
         {/* EXPERTISE / SKILLS SHOWCASE */}
         <section
@@ -1372,7 +1372,7 @@ function Home() {
 
         <WhyVasupriy />
 
-        
+
 
         <section
           className="interior-architecture-showcase"

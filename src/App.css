@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    VASUPRIY INTERIOVILLA
    HOME — HEADER / HERO / INTRO
    ========================================================= */
@@ -15930,3 +15930,93 @@ body {
 }
 /* VASUPRIY HOME LOGO SIZE FIX END */
 
+
+/* VASUPRIY HOME HERO - HIDE PLAY BUTTON ONLY */
+.antra4-hero .antra4-video-play {
+    display: none !important;
+}
+/* VASUPRIY LOADER - ENLARGED BRAND LOGO */
+.preloader .preloader-logo-wrap {
+    width: min(320px, 78vw);
+    max-width: 320px;
+    height: auto;
+    min-height: 0;
+    margin-inline: auto;
+}
+
+.preloader .preloader-logo {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .preloader .preloader-logo-wrap {
+        width: min(240px, 78vw);
+        max-width: 240px;
+    }
+}
+/* VASUPRIY LOADER LOGO SIZE FIX - START */
+
+.preloader .preloader-logo-wrap {
+    width: min(430px, 88vw) !important;
+    height: min(430px, 88vw) !important;
+    max-width: none !important;
+    min-height: 0;
+    margin-bottom: 12px;
+}
+
+.preloader .preloader-logo {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .preloader .preloader-logo-wrap {
+        width: min(300px, 88vw) !important;
+        height: min(300px, 88vw) !important;
+        margin-bottom: 10px;
+    }
+}
+
+/* VASUPRIY LOADER LOGO SIZE FIX - END */
+/* VASUPRIY ARCHITECTURE WORD WIDTH - START */
+
+/* Center the word without depending on translateX */
+.site .interior-architecture-word {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 25vw !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.075em !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+}
+
+/* Keep the existing reveal animation's final transform */
+.site .interior-architecture-word.home-premium-visible {
+    transform: translate3d(0, 0, 0) scale(1) !important;
+}
+
+@media (max-width: 600px) {
+    .site .interior-architecture-word {
+        font-size: 25vw !important;
+    }
+}
+
+/* VASUPRIY ARCHITECTURE WORD WIDTH - END */

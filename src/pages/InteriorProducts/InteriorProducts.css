@@ -1,0 +1,201 @@
+﻿.vpm-page{--vpm-ink:#0b303a;--vpm-teal:#073c48;--vpm-gold:#c6a477;--vpm-cream:#f6f3ed;color:var(--vpm-ink);background:var(--vpm-cream);overflow:clip}.vpm-page *{box-sizing:border-box}.vpm-container{width:min(1220px,calc(100% - 72px));margin-inline:auto}.vpm-page h1,.vpm-page h2,.vpm-page h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}.vpm-page em{font-weight:400;color:#bb9464}.vpm-hero{background:radial-gradient(ellipse at 75% 35%,#14535a 0%,#073b46 52%,#052b35 100%);color:#fff;padding:170px 0 106px}.vpm-hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(40px,6vw,100px);align-items:center}.vpm-eyebrow,.vpm-kicker{font:700 10px/1.6 Arial,sans-serif;letter-spacing:.25em;color:var(--vpm-gold)}.vpm-eyebrow{display:flex;gap:13px;align-items:center}.vpm-eyebrow i{width:30px;height:1px;background:var(--vpm-gold)}.vpm-hero h1{font-size:clamp(52px,5.5vw,90px);letter-spacing:-.065em;line-height:1.1;margin:32px 0}.vpm-hero h1 em{color:#e0bc8c}.vpm-hero-copy>p{font:400 16px/1.9 Arial,sans-serif;color:#d2e0df;max-width:460px;margin-bottom:36px}.vpm-hero-button{display:inline-flex;align-items:center;justify-content:space-between;gap:48px;background:#ddc098;color:#073c48;text-decoration:none;padding:20px 26px;font:700 11px Arial,sans-serif;letter-spacing:.075em;transition:background .25s,transform .25s}.vpm-hero-button:hover{background:#f1d8af;transform:translateY(-3px)}.vpm-hero-button span{font-size:19px}.vpm-hero-foot{display:flex;gap:20px;align-items:center;margin-top:74px;font:700 10px Arial,sans-serif;letter-spacing:.2em;color:#b6c9c7}.vpm-hero-foot span:first-child{color:#e0bc8c}.vpm-hero-visual{height:580px;position:relative;margin:25px 35px 0 0}.vpm-hero-visual>img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.84)}.vpm-hero-visual:before{content:'';position:absolute;inset:-18px -18px 18px 18px;border:1px solid #bb9c704f;pointer-events:none}.vpm-hero-inset{position:absolute;width:43%;height:38%;bottom:-35px;right:-45px;border:9px solid #073b46;box-shadow:0 20px 40px #0003}.vpm-hero-inset img{width:100%;height:100%;object-fit:cover}.vpm-hero-image-label{position:absolute;left:20px;bottom:22px;color:#fff;font:700 9px Arial,sans-serif;letter-spacing:.24em;text-shadow:0 2px 7px #000}.vpm-catalog{padding:110px 0 115px}.vpm-catalog-heading{display:flex;justify-content:space-between;align-items:end;gap:40px}.vpm-catalog-heading h2{font-size:clamp(44px,5vw,72px);letter-spacing:-.055em;margin:15px 0 0}.vpm-catalog-heading p{max-width:310px;font:400 15px/1.8 Arial,sans-serif;color:#66747a}.vpm-toolbar{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:48px 0 0;padding:0 0 22px;border-bottom:1px solid #d8d1c6}.vpm-category-nav{display:flex;gap:10px;flex-wrap:wrap}.vpm-category-nav button{border:0;background:transparent;color:#51666b;padding:12px 14px;font:700 11px Arial,sans-serif;cursor:pointer;transition:color .2s,background .2s}.vpm-category-nav button:hover,.vpm-category-nav button.is-active{color:#fff;background:#0b414c}.vpm-search input{width:190px;border:0;border-bottom:1px solid #bfb6a8;background:transparent;padding:12px 0;color:#0b303a;outline:0;font:13px Arial,sans-serif}.vpm-search input:focus{border-bottom-color:#0b414c}.vpm-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.vpm-collection{display:grid;grid-template-columns: minmax(0,1fr) minmax(0,1fr);gap:clamp(42px,6vw,100px);padding:105px 0;border-bottom:1px solid #d8d1c6;align-items:start;scroll-margin-top:110px}.vpm-collection--reverse .vpm-collection-visual{order:2}.vpm-collection-visual{height:min(630px,55vw);min-height:430px;position:sticky;top:125px;overflow:hidden;background:#d7d3c9}.vpm-collection-visual>img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.vpm-collection-visual:hover>img{transform:scale(1.035)}.vpm-visual-mark{position:absolute;top:20px;left:20px;background:#073b46;color:#e9c79c;padding:12px 15px;font:700 10px Arial,sans-serif;letter-spacing:.16em}.vpm-visual-caption{position:absolute;bottom:22px;left:24px;color:#fff;text-shadow:0 1px 5px #000;font:700 10px Arial,sans-serif;letter-spacing:.22em}.vpm-art{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;background:radial-gradient(circle at 45% 38%,#295963,#082f3b 80%);color:#d9bd91}.vpm-art--walls{background:repeating-linear-gradient(110deg,#d2c4af 0,#d2c4af 3px,#e6ded1 3px,#e6ded1 48px)}.vpm-art span{font:400 16px Georgia,serif;letter-spacing:.3em}.vpm-art strong{font:400 clamp(65px,10vw,130px) Georgia,serif;letter-spacing:-.05em;opacity:.6}.vpm-art small{font:700 9px Arial,sans-serif;letter-spacing:.25em}.vpm-art--walls{color:#7c6348}.vpm-collection-meta{display:flex;justify-content:space-between;gap:12px;font:700 10px Arial,sans-serif;letter-spacing:.18em;color:#9c7b50}.vpm-collection-copy h2{font-size:clamp(42px,4.4vw,68px);line-height:1.07;letter-spacing:-.055em;margin:32px 0 24px}.vpm-collection-copy h2 em{display:block;font-size:.55em;line-height:1.35;margin-top:15px;letter-spacing:-.02em}.vpm-collection-description{font:400 15px/1.9 Arial,sans-serif;color:#677477;margin-bottom:35px;max-width:480px}.vpm-material-group{margin-bottom:22px}.vpm-material-group h3{font:700 11px Arial,sans-serif;letter-spacing:.2em;color:#a1845f;margin:24px 0 13px;text-transform:uppercase}.vpm-material{border-top:1px solid #d7d0c5}.vpm-material:last-child{border-bottom:1px solid #d7d0c5}.vpm-material-trigger{display:flex;align-items:center;gap:15px;width:100%;border:0;background:transparent;text-align:left;padding:18px 2px;color:#163b43;cursor:pointer}.vpm-material-index{font:700 10px Arial,sans-serif;color:#b28e5d;min-width:22px}.vpm-material-name{flex:1;font:400 clamp(17px,1.65vw,23px) Georgia,serif}.vpm-material-plus{font:400 26px Georgia,serif;color:#a48258}.vpm-material-trigger:hover .vpm-material-name,.vpm-material--open .vpm-material-name{color:#a17c4e}.vpm-material-reveal{display:flex;gap:18px;padding:0 5px 22px 37px;align-items:center}.vpm-material-reveal>img,.vpm-no-image{width:150px;height:120px;object-fit:cover;flex-shrink:0}.vpm-no-image{background:#e5ddd0;display:flex;flex-direction:column;justify-content:center;padding:15px;gap:6px}.vpm-no-image span,.vpm-no-image small{font:9px Arial,sans-serif;color:#89765d}.vpm-no-image strong{font:18px Georgia,serif;color:#163b43}.vpm-material-action p{font:12px/1.7 Arial,sans-serif;color:#718084;margin:0 0 12px}.vpm-material-action a{font:700 11px Arial,sans-serif;color:#0b414c;text-decoration:none;border-bottom:1px solid #b29b79;padding-bottom:5px}.vpm-collection-link{display:inline-flex;gap:45px;color:#0b414c;text-decoration:none;font:700 11px Arial,sans-serif;letter-spacing:.08em;border-bottom:1px solid #a78960;padding:0 0 12px;margin-top:20px}.vpm-collection-link span{font-size:18px}.vpm-empty{padding:45px 0;text-align:center;font:15px Arial,sans-serif}.vpm-empty button{border:0;background:none;text-decoration:underline;cursor:pointer;color:#0b414c}.vpm-outro{background:#073b46;color:#fff;padding:110px 0}.vpm-outro-inner{display:flex;justify-content:space-between;gap:45px;align-items:center}.vpm-outro h2{font-size:clamp(42px,4.5vw,70px);line-height:1.15;letter-spacing:-.055em;max-width:650px;margin:18px 0}.vpm-outro p{font:15px/1.8 Arial,sans-serif;color:#bed0d0}.vpm-outro .vpm-hero-button{flex-shrink:0}
+@media(max-width:1000px){.vpm-hero-grid{gap:35px}.vpm-hero-visual{height:480px}.vpm-collection{gap:40px}.vpm-toolbar{align-items:stretch;flex-direction:column}.vpm-search input{width:100%}}
+@media(max-width:750px){.vpm-container{width:calc(100% - 36px)}.vpm-hero{padding:140px 0 70px}.vpm-hero-grid{grid-template-columns:1fr}.vpm-hero h1{font-size:clamp(44px,11vw,66px)}.vpm-hero-visual{height:350px;margin:30px 20px 20px 0}.vpm-hero-inset{right:-18px;bottom:-20px;border-width:5px}.vpm-hero-foot{margin-top:38px}.vpm-catalog{padding:70px 0}.vpm-catalog-heading{display:block}.vpm-catalog-heading p{margin-top:15px}.vpm-toolbar{margin-top:30px}.vpm-collection,.vpm-collection--reverse{grid-template-columns:1fr;gap:30px;padding:65px 0}.vpm-collection-visual,.vpm-collection--reverse .vpm-collection-visual{position:relative;top:auto;order:0;width:100%;height:380px;min-height:0}.vpm-collection-copy h2{font-size:clamp(42px,10vw,58px)}.vpm-outro{padding:70px 0}.vpm-outro-inner{display:block}.vpm-outro .vpm-hero-button{margin-top:20px}.vpm-material-reveal>img,.vpm-no-image{width:110px;height:100px}.vpm-material-reveal{padding-left:0}.vpm-material-name{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.vpm-page *{transition:none!important;animation:none!important}}
+
+/* Step 6: curated product photography, editorial grid, refined material navigation */
+.vpm-hero{background:linear-gradient(118deg,#062e38,#0b4951 67%,#153f45)}
+.vpm-hero h1{letter-spacing:-.055em}
+.vpm-hero-visual>img{filter:none}
+.vpm-curation{padding-top:110px;padding-bottom:35px}
+.vpm-curation-top{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:35px}
+.vpm-curation-top h2{font-size:clamp(40px,4.8vw,72px);line-height:1.1;letter-spacing:-.055em;margin:15px 0 0}
+.vpm-curation-top p{max-width:350px;font:14px/1.85 Arial,sans-serif;color:#66777a}
+.vpm-curation-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:230px;gap:14px}
+.vpm-photo-tile{position:relative;display:block;overflow:hidden;background:#d8d4c9;color:white;grid-column:span 4;text-decoration:none}
+.vpm-photo-tile--0,.vpm-photo-tile--3{grid-column:span 6;grid-row:span 2}
+.vpm-photo-tile--1,.vpm-photo-tile--2,.vpm-photo-tile--4,.vpm-photo-tile--5{grid-column:span 3}
+.vpm-photo-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.vpm-photo-tile:hover img,.vpm-photo-tile:focus-visible img{transform:scale(1.07)}
+.vpm-photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(4,25,30,.75));pointer-events:none}
+.vpm-photo-copy{position:absolute;bottom:24px;left:24px;right:24px;display:flex;flex-direction:column;gap:9px}
+.vpm-photo-copy small{font:700 10px Arial,sans-serif;letter-spacing:.22em;color:#e5c69c}
+.vpm-photo-copy strong{font:400 clamp(22px,2.6vw,38px) Georgia,serif;letter-spacing:-.02em}
+.vpm-photo-copy>span{font:700 11px Arial,sans-serif;letter-spacing:.06em;opacity:.9}
+.vpm-material-action{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.vpm-material-action p{margin:0}
+.vpm-material-action .vpm-enquiry-mini{color:#96774d;font-size:10px}
+.vpm-catalog{padding-top:75px}
+.vpm-photo-tile:focus-visible,.vpm-material-trigger:focus-visible{outline:3px solid #c7a477;outline-offset:3px}
+@media(max-width:1000px){.vpm-curation-grid{grid-auto-rows:180px}.vpm-photo-tile--1,.vpm-photo-tile--2,.vpm-photo-tile--4,.vpm-photo-tile--5{grid-column:span 6}.vpm-photo-tile--0,.vpm-photo-tile--3{grid-column:span 6;grid-row:span 2}}
+@media(max-width:750px){.vpm-curation{padding-top:70px}.vpm-curation-top{display:block}.vpm-curation-top p{margin-top:20px}.vpm-curation-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:210px;gap:10px}.vpm-photo-tile,.vpm-photo-tile--0,.vpm-photo-tile--1,.vpm-photo-tile--2,.vpm-photo-tile--3,.vpm-photo-tile--4,.vpm-photo-tile--5{grid-column:span 1;grid-row:span 1}.vpm-photo-tile--0,.vpm-photo-tile--3{grid-column:span 2;grid-row:span 2}.vpm-photo-copy{bottom:15px;left:14px;right:14px}.vpm-photo-copy strong{font-size:24px}.vpm-catalog{padding-top:45px}}
+@media(prefers-reduced-motion:reduce){.vpm-photo-tile img{transition:none}}
+
+/* VASUPRIY PREMIUM HERO STEP 7 */
+/* Warm architectural editorial hero; all selectors scoped to Products. */
+.vpm-page .vpm-hero {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  color:#143e46;
+  background:linear-gradient(112deg,#f8f5ef 0%,#f4eee4 58%,#e9dfd0 100%);
+  padding:clamp(175px,15vw,218px) 0 clamp(78px,8vw,124px);
+}
+.vpm-page .vpm-hero::before {
+  content:"";position:absolute;z-index:-1;inset:0 auto 0 0;width:44%;
+  background:repeating-linear-gradient(90deg,transparent 0,transparent 85px,rgba(13,59,69,.025) 86px);
+  pointer-events:none;
+}
+.vpm-page .vpm-hero::after {
+  content:"V";position:absolute;z-index:-1;left:-.045em;bottom:-.34em;
+  font:400 clamp(320px,40vw,670px)/1 Georgia,serif;color:rgba(16,64,72,.035);
+  pointer-events:none;
+}
+.vpm-page .vpm-hero-grid {
+  grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);
+  align-items:center;gap:clamp(44px,6vw,94px);
+}
+.vpm-page .vpm-hero-copy {min-width:0;position:relative;z-index:2;padding:15px 0 8px}
+.vpm-page .vpm-hero .vpm-eyebrow {color:#97764d;font-size:10px;letter-spacing:.23em;line-height:1.9}
+.vpm-page .vpm-hero .vpm-eyebrow i {background:#b28b57;width:34px;flex-shrink:0}
+.vpm-page .vpm-hero h1 {
+  color:#103d46!important;
+  font:400 clamp(54px,5.2vw,83px)/1.075 Georgia,'Times New Roman',serif;
+  letter-spacing:-.058em;margin:32px 0 28px;max-width:680px;
+  text-wrap:balance;text-shadow:none;
+}
+.vpm-page .vpm-hero h1 em {color:#b08a59!important;font-weight:400;font-style:italic}
+.vpm-page .vpm-hero-copy>p {
+  color:#5c6c6b!important;font:400 clamp(14px,1.1vw,16px)/1.95 Arial,sans-serif;
+  max-width:440px;margin:0 0 33px;
+}
+.vpm-page .vpm-hero .vpm-hero-button {
+  background:#0c4049;color:#f7efe3;border:1px solid #0c4049;
+  min-width:242px;gap:35px;padding:19px 25px;
+  box-shadow:0 14px 32px rgba(8,52,61,.12);
+}
+.vpm-page .vpm-hero .vpm-hero-button:hover {background:#155562;border-color:#155562;transform:translateY(-3px)}
+.vpm-page .vpm-hero .vpm-hero-foot {
+  margin-top:58px;padding-top:21px;border-top:1px solid #d6cbbc;
+  color:#697876;font-size:9px;letter-spacing:.17em;flex-wrap:wrap;gap:12px 26px;
+}
+.vpm-page .vpm-hero .vpm-hero-foot span:first-child {color:#a17c4d}
+.vpm-page .vpm-hero-visual {
+  height:clamp(460px,43vw,610px);min-width:0;margin:0;
+  box-shadow:0 26px 65px rgba(32,48,47,.15);
+}
+.vpm-page .vpm-hero-visual::before {
+  inset:-18px 18px 18px -18px;border:1px solid rgba(166,128,77,.58);
+}
+.vpm-page .vpm-hero-visual::after {
+  content:"MATERIALS / 2026";position:absolute;right:-22px;top:50%;
+  transform:translate(100%,-50%) rotate(90deg);transform-origin:left center;
+  color:#9e8059;font:700 9px Arial,sans-serif;letter-spacing:.25em;white-space:nowrap;
+}
+.vpm-page .vpm-hero-visual>img {filter:none;object-position:center 54%;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.vpm-page .vpm-hero-visual:hover>img {transform:scale(1.018)}
+.vpm-page .vpm-hero-inset {display:none}
+.vpm-page .vpm-hero-image-label {
+  left:0;bottom:0;padding:24px 28px;width:100%;
+  background:linear-gradient(0deg,rgba(5,31,35,.7),transparent);
+  color:#fff;font-size:9px;letter-spacing:.2em;
+}
+@media(max-width:1050px) {
+  .vpm-page .vpm-hero-grid {gap:34px;grid-template-columns:minmax(0,1fr) minmax(0,.9fr)}
+  .vpm-page .vpm-hero h1 {font-size:clamp(47px,5.6vw,68px)}
+  .vpm-page .vpm-hero-visual {height:480px}
+  .vpm-page .vpm-hero-visual::after {display:none}
+}
+@media(max-width:750px) {
+  .vpm-page .vpm-hero {padding:145px 0 68px}
+  .vpm-page .vpm-hero-grid {grid-template-columns:1fr;gap:44px}
+  .vpm-page .vpm-hero-copy {padding:0}
+  .vpm-page .vpm-hero h1 {font-size:clamp(47px,10.2vw,67px);margin:24px 0 23px}
+  .vpm-page .vpm-hero-copy>p {font-size:14px}
+  .vpm-page .vpm-hero .vpm-hero-foot {margin-top:36px}
+  .vpm-page .vpm-hero-visual {height:clamp(340px,90vw,520px);margin:0 0 0 12px}
+  .vpm-page .vpm-hero-visual::before {inset:-12px 12px 12px -12px}
+}
+@media(prefers-reduced-motion:reduce){.vpm-page .vpm-hero-visual>img{transition:none}}
+
+/* VASUPRIY NAVBAR LOGO WATERMARK STEP 8 */
+/* Replace decorative single-letter V with the original navbar brand artwork. */
+.vpm-page .vpm-hero::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  width: clamp(260px, 34vw, 520px) !important;
+  height: clamp(260px, 34vw, 520px) !important;
+  left: -5% !important;
+  bottom: -16% !important;
+  background-image: url('/images/brand/vasupriy-navbar-watermark.png') !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  opacity: .065 !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  transform: none !important;
+  pointer-events: none !important;
+}
+@media (max-width: 750px) {
+  .vpm-page .vpm-hero::after { width: 280px !important; height: 280px !important; left: -70px !important; bottom: -60px !important; opacity: .045 !important; }
+}
+
+
+
+
+/* VASUPRIY CENTERED HERO LOGO START */
+
+.vpm-page .vpm-hero {
+    position: relative !important;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/* Original navbar logo - large centered watermark */
+.vpm-page .vpm-hero::after {
+    content: "" !important;
+    position: absolute !important;
+
+    width: min(65vw, 850px) !important;
+    height: min(65vw, 850px) !important;
+
+    top: 50% !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    background-image: url('/images/brand/vasupriy-navbar-watermark.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+
+    opacity: 0.06 !important;
+
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+/* Keep hero content above background logo */
+.vpm-page .vpm-hero-grid {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 750px) {
+    .vpm-page .vpm-hero::after {
+        width: 90vw !important;
+        height: 90vw !important;
+        top: 40% !important;
+        left: 50% !important;
+        bottom: auto !important;
+        transform: translate(-50%, -50%) !important;
+        opacity: 0.05 !important;
+    }
+}
+
+/* VASUPRIY CENTERED HERO LOGO END */

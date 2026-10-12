@@ -1,3 +1,4 @@
+import ProductDetail from './pages/ProductDetail/ProductDetail'
 
 import { Navigate, Route, Routes } from 'react-router-dom'
 
@@ -21,6 +22,7 @@ function App() {
       <RouteLoader />
 
       <Routes>
+        <Route path="/products/:category/:slug" element={<ProductDetail />} />
         <Route element={<SiteLayout />}>
           <Route index element={<Home />} />
 
