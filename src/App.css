@@ -11476,9 +11476,9 @@ body {
 }
 
 .site-footer .footer-socials a:hover {
-  background: #B48F4E !important;
-  border-color: #B48F4E !important;
-  color: #004758 !important;
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-4px);
 }
 
 
@@ -16078,3 +16078,607 @@ body {
 }
 
 /* VASUPRIY COMPACT FOOTER END */
+
+
+/* VASUPRIY FOOTER SOCIAL ICON ENHANCEMENT */
+
+.site-footer .footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.site-footer .footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border: 1px solid rgba(218, 184, 125, .65);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .045);
+  color: #f7ead4;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .10);
+  text-decoration: none;
+  transition:
+    background .3s ease,
+    color .3s ease,
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.site-footer .footer-socials a .footer-social-icon,
+.site-footer .footer-socials a svg {
+  width: 21px;
+  height: 21px;
+  color: inherit;
+  opacity: 1;
+  transition: transform .3s ease;
+}
+
+.site-footer .footer-socials a:hover {
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+.site-footer .footer-socials a:hover svg {
+  transform: scale(1.1);
+}
+
+.site-footer .footer-socials a:nth-child(1):hover {
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+  border-color: transparent;
+  box-shadow: 0 8px 22px rgba(220, 39, 103, .25);
+}
+
+.site-footer .footer-socials a:nth-child(2):hover {
+  background: #1877f2;
+  border-color: transparent;
+  box-shadow: 0 8px 22px rgba(24, 119, 242, .25);
+}
+
+.site-footer .footer-socials a:nth-child(3):hover {
+  background: #ff0033;
+  border-color: transparent;
+  box-shadow: 0 8px 22px rgba(255, 0, 51, .25);
+}
+
+.site-footer .footer-socials a:focus-visible {
+  outline: 2px solid #e6c99c;
+  outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+  .site-footer .footer-socials {
+    gap: 10px;
+  }
+
+  .site-footer .footer-socials a {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer .footer-socials a,
+  .site-footer .footer-socials a svg {
+    transition: none;
+  }
+
+  .site-footer .footer-socials a:hover {
+    transform: none;
+  }
+}
+
+
+
+
+
+
+
+/* VASUPRIY SIGNATURE LOADER V3 START */
+
+body.is-loading {
+  overflow: hidden;
+}
+
+.preloader.vasupriy-signature-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background: #092C30 !important;
+  color: #F5EFE3 !important;
+}
+
+.vasupriy-signature-loader .preloader-panels {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  pointer-events: none;
+}
+
+.vasupriy-signature-loader .preloader-panel,
+.vasupriy-signature-loader .preloader-panel:nth-child(n) {
+  display: block;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    #103C3E 0%,
+    #092C30 48%,
+    #061F24 100%
+  ) !important;
+  background-image: linear-gradient(
+    180deg,
+    #103C3E 0%,
+    #092C30 48%,
+    #061F24 100%
+  ) !important;
+  border-right: 1px solid rgba(207, 172, 111, 0.08) !important;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition:
+    transform 0.5s cubic-bezier(0.76, 0, 0.24, 1) !important;
+}
+
+.vasupriy-signature-loader .preloader-panel:nth-child(1) {
+  transition-delay: 0s !important;
+}
+
+.vasupriy-signature-loader .preloader-panel:nth-child(2) {
+  transition-delay: 0.035s !important;
+}
+
+.vasupriy-signature-loader .preloader-panel:nth-child(3) {
+  transition-delay: 0.07s !important;
+}
+
+.vasupriy-signature-loader .preloader-panel:nth-child(4) {
+  transition-delay: 0.035s !important;
+}
+
+.vasupriy-signature-loader .preloader-panel:nth-child(5) {
+  transition-delay: 0s !important;
+}
+
+.vasupriy-signature-loader .signature-loader-glow {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgba(182, 151, 93, 0.12),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(3, 15, 20, 0.4),
+      transparent 60%
+    );
+}
+
+.vasupriy-signature-loader .signature-loader-frame {
+  position: absolute;
+  z-index: 2;
+  inset: clamp(16px, 3vw, 40px);
+  pointer-events: none;
+}
+
+.vasupriy-signature-loader .signature-loader-corner {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-color: rgba(212, 182, 124, 0.65);
+  border-style: solid;
+  border-width: 0;
+}
+
+.vasupriy-signature-loader .signature-loader-corner--tl {
+  top: 0;
+  left: 0;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+.vasupriy-signature-loader .signature-loader-corner--tr {
+  top: 0;
+  right: 0;
+  border-top-width: 1px;
+  border-right-width: 1px;
+}
+
+.vasupriy-signature-loader .signature-loader-corner--bl {
+  bottom: 0;
+  left: 0;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+.vasupriy-signature-loader .signature-loader-corner--br {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+}
+
+.vasupriy-signature-loader .preloader-brand {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(92vw, 540px);
+  text-align: center;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none;
+  transition:
+    opacity 0.25s ease,
+    transform 0.35s ease;
+}
+
+.vasupriy-signature-loader .signature-loader-eyebrow {
+  color: #C9AE7C;
+  font-size: clamp(8px, 1vw, 10px);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.vasupriy-signature-loader .preloader-logo-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: clamp(125px, 17vw, 190px);
+  height: clamp(125px, 17vw, 190px);
+  margin: 12px 0 0;
+  border: 1px solid rgba(211, 178, 118, 0.42);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(231, 201, 147, 0.08),
+    transparent 70%
+  );
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  animation: signatureLogoReveal 0.65s ease-out both !important;
+}
+
+.vasupriy-signature-loader .preloader-logo-wrap::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border: 1px solid rgba(211, 178, 118, 0.16);
+  border-radius: 50%;
+}
+
+.vasupriy-signature-loader .preloader-logo {
+  display: block;
+  width: 83%;
+  height: 83%;
+  object-fit: contain;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.vasupriy-signature-loader .signature-loader-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 17px;
+}
+
+.vasupriy-signature-loader .signature-loader-wordmark span {
+  color: #F5EFE3;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 5vw, 54px);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.1;
+}
+
+.vasupriy-signature-loader .signature-loader-wordmark small {
+  color: #D6B780;
+  font-size: clamp(9px, 1.1vw, 12px);
+  font-weight: 600;
+  letter-spacing: 0.38em;
+}
+
+.vasupriy-signature-loader .preloader-progress {
+  position: relative;
+  display: block !important;
+  width: min(210px, 58vw);
+  height: 2px;
+  margin: 24px 0 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(220, 189, 132, 0.2) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  animation: none !important;
+}
+
+.vasupriy-signature-loader .preloader-progress span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  display: block !important;
+  width: 100% !important;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #8B7049,
+    #E6C990,
+    #B48F4E
+  ) !important;
+  box-shadow: 0 0 12px rgba(230, 201, 144, 0.5);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: signatureProgress 0.88s ease-out forwards !important;
+}
+
+.vasupriy-signature-loader .preloader-brand p {
+  display: block !important;
+  margin: 16px 0 0;
+  color: #E9DAC3 !important;
+  font-size: clamp(9px, 1vw, 11px);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+.vasupriy-signature-loader .preloader-index {
+  position: absolute;
+  z-index: 3;
+  bottom: clamp(25px, 4vw, 45px);
+  color: #BDA985 !important;
+  font-size: clamp(8px, 0.8vw, 10px);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  opacity: 1 !important;
+  visibility: visible !important;
+  animation: none !important;
+}
+
+.vasupriy-signature-loader .preloader-index--left {
+  left: clamp(22px, 5vw, 70px);
+}
+
+.vasupriy-signature-loader .preloader-index--right {
+  right: clamp(22px, 5vw, 70px);
+}
+
+.vasupriy-signature-loader.preloader--leaving .preloader-brand {
+  opacity: 0 !important;
+  transform: translateY(-12px) !important;
+}
+
+.vasupriy-signature-loader.preloader--leaving .preloader-index,
+.vasupriy-signature-loader.preloader--leaving .signature-loader-frame,
+.vasupriy-signature-loader.preloader--leaving .signature-loader-glow {
+  opacity: 0 !important;
+  transition: opacity 0.25s ease !important;
+}
+
+.vasupriy-signature-loader.preloader--leaving .preloader-panel:nth-child(n) {
+  transform: scaleY(0) !important;
+}
+
+.vasupriy-signature-loader.preloader--leaving .preloader-panel:nth-child(even) {
+  transform-origin: bottom;
+}
+
+@keyframes signatureLogoReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes signatureProgress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .vasupriy-signature-loader .signature-loader-eyebrow {
+    max-width: 85%;
+    line-height: 1.8;
+  }
+
+  .vasupriy-signature-loader .signature-loader-wordmark span {
+    letter-spacing: 0.08em;
+  }
+
+  .vasupriy-signature-loader .preloader-index--left {
+    left: 20px;
+  }
+
+  .vasupriy-signature-loader .preloader-index--right {
+    right: 20px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 390px) {
+  .vasupriy-signature-loader .preloader-index {
+    font-size: 7px;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vasupriy-signature-loader *,
+  .vasupriy-signature-loader *::before,
+  .vasupriy-signature-loader *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* VASUPRIY SIGNATURE LOADER V3 END */
+
+/* VASUPRIY FLOATING SCROLL START */
+
+.vasupriy-floating-scroll {
+  position: fixed;
+  z-index: 9000;
+  right: clamp(14px, 2.5vw, 34px);
+  bottom: clamp(22px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.vasupriy-scroll-btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid #D7B77C;
+  border-radius: 50%;
+  background: #092C30;
+  color: #D7B77C;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  pointer-events: auto;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.vasupriy-scroll-btn--top {
+  background: #D7B77C;
+  color: #092C30;
+}
+
+.vasupriy-scroll-btn svg {
+  width: 19px;
+  height: 19px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vasupriy-scroll-btn:not(:disabled):hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.22),
+    0 0 16px rgba(215, 183, 124, 0.22);
+}
+
+.vasupriy-scroll-btn--bottom:not(:disabled):hover {
+  background: #D7B77C;
+  color: #092C30;
+}
+
+.vasupriy-scroll-btn--top:not(:disabled):hover {
+  background: #F0D6A2;
+}
+
+.vasupriy-scroll-btn:disabled {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.8);
+}
+
+.vasupriy-scroll-btn:focus-visible {
+  outline: 3px solid #F0D6A2;
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .vasupriy-floating-scroll {
+    right: 14px;
+    bottom: 22px;
+    gap: 9px;
+  }
+
+  .vasupriy-scroll-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .vasupriy-scroll-btn svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vasupriy-scroll-btn {
+    transition: none;
+  }
+}
+
+/* VASUPRIY FLOATING SCROLL END */
+
+/* VASUPRIY FLOATING WHATSAPP START */
+
+.vasupriy-floating-scroll .vasupriy-scroll-btn--whatsapp {
+  display: grid;
+  place-items: center;
+  background: #25D366 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #25D366 !important;
+  text-decoration: none !important;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.22);
+}
+
+.vasupriy-floating-scroll .vasupriy-scroll-btn--whatsapp svg {
+  width: 25px;
+  height: 25px;
+  stroke: none;
+}
+
+.vasupriy-floating-scroll .vasupriy-scroll-btn--whatsapp:hover {
+  background: #1DA851 !important;
+  border-color: #1DA851 !important;
+  transform: translateY(-4px) scale(1.06);
+  box-shadow:
+    0 12px 30px rgba(37, 211, 102, 0.3),
+    0 0 18px rgba(37, 211, 102, 0.2);
+}
+
+@media (max-width: 640px) {
+  .vasupriy-floating-scroll .vasupriy-scroll-btn--whatsapp svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+/* VASUPRIY FLOATING WHATSAPP END */

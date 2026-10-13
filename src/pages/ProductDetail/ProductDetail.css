@@ -67,3 +67,250 @@
 }
 
 /* VIP CLEAN FLOATING LOGO END */
+/* VASUPRIY PREMIUM PRODUCT LIGHTBOX START */
+
+.vpd-image-zoom-trigger {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  position: relative;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.vpd-image-zoom-trigger img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .65s cubic-bezier(.2,.7,.2,1);
+}
+
+.vpd-image-zoom-trigger:hover img {
+  transform: scale(1.045);
+}
+
+.vpd-zoom-indicator {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(8, 43, 48, .9);
+  color: #E8C99B;
+  padding: 13px 17px;
+  font: 700 10px Arial, sans-serif;
+  letter-spacing: .14em;
+}
+
+.vpd-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(5, 23, 27, .985);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  animation: vpdLightboxAppear .25s ease both;
+}
+
+.vpd-lightbox-top {
+  min-height: 100px;
+  padding: 25px clamp(22px, 5vw, 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vpd-lightbox-top > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vpd-lightbox-top span {
+  color: #D7B77C;
+  font: 700 10px Arial, sans-serif;
+  letter-spacing: .24em;
+}
+
+.vpd-lightbox-top strong {
+  font: 400 27px Georgia, serif;
+}
+
+.vpd-lightbox-close {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ffffff50;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 31px;
+  cursor: pointer;
+  transition: background .25s, transform .25s;
+}
+
+.vpd-lightbox-close:hover {
+  background: #ffffff20;
+  transform: rotate(90deg);
+}
+
+.vpd-lightbox-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px clamp(60px, 9vw, 150px);
+  touch-action: pan-y;
+}
+
+.vpd-lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 25px 90px #0006;
+  animation: vpdImageReveal .3s ease both;
+}
+
+.vpd-lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border: 1px solid #ffffff45;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+
+.vpd-lightbox-arrow:hover {
+  background: #D7B77C;
+  color: #092C30;
+  border-color: #D7B77C;
+}
+
+.vpd-lightbox-arrow--prev { left: clamp(12px, 3vw, 55px); }
+.vpd-lightbox-arrow--next { right: clamp(12px, 3vw, 55px); }
+
+.vpd-lightbox-bottom {
+  min-height: 100px;
+  padding: 20px clamp(22px, 5vw, 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vpd-lightbox-bottom > span {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: 400 24px Georgia, serif;
+  color: #E8C99B;
+}
+
+.vpd-lightbox-bottom > span i {
+  width: 35px;
+  height: 1px;
+  background: #ffffff70;
+}
+
+.vpd-lightbox-bottom p {
+  font: 700 9px Arial, sans-serif;
+  letter-spacing: .15em;
+  color: #ffffff85;
+}
+
+.vpd-lightbox-bottom a {
+  padding: 15px 22px;
+  background: #D7B77C;
+  color: #092C30;
+  text-decoration: none;
+  font: 700 11px Arial, sans-serif;
+  letter-spacing: .08em;
+}
+
+.vpd-lightbox-overlay button:focus-visible,
+.vpd-lightbox-overlay a:focus-visible,
+.vpd-image-zoom-trigger:focus-visible {
+  outline: 3px solid #E8C99B;
+  outline-offset: 4px;
+}
+
+@keyframes vpdLightboxAppear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes vpdImageReveal {
+  from { opacity: .35; transform: scale(.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 650px) {
+  .vpd-lightbox-top {
+    min-height: 85px;
+    padding: 20px;
+  }
+
+  .vpd-lightbox-top strong {
+    font-size: 22px;
+  }
+
+  .vpd-lightbox-stage {
+    padding: 10px 45px;
+  }
+
+  .vpd-lightbox-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 19px;
+  }
+
+  .vpd-lightbox-arrow--prev { left: 5px; }
+  .vpd-lightbox-arrow--next { right: 5px; }
+
+  .vpd-lightbox-bottom {
+    min-height: 120px;
+    padding: 16px 20px;
+    flex-wrap: wrap;
+  }
+
+  .vpd-lightbox-bottom p {
+    display: none;
+  }
+
+  .vpd-lightbox-bottom a {
+    padding: 13px 17px;
+  }
+
+  .vpd-zoom-indicator {
+    right: 10px;
+    bottom: 10px;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vpd-lightbox-overlay,
+  .vpd-lightbox-image {
+    animation: none;
+  }
+
+  .vpd-image-zoom-trigger img,
+  .vpd-lightbox-close {
+    transition: none;
+  }
+}
+
+/* VASUPRIY PREMIUM PRODUCT LIGHTBOX END */

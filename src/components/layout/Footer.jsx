@@ -1,3 +1,5 @@
+import FloatingScrollButtons from '../common/FloatingScrollButtons.jsx'
+import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 
 import { contactInfo } from '../../data/contactInfo.js'
@@ -41,6 +43,7 @@ function FooterSocialIcon({ type }) {
 function Footer() {
   return (
     <>
+      <FloatingScrollButtons />
       {/* Separate Start a Project section */}
       <section className="footer-top footer-cta-section footer-cta-premium">
   <div className="footer-cta-blueprint" aria-hidden="true" />
@@ -223,7 +226,7 @@ function Footer() {
                   aria-label="Vasupriy Interiovilla on Instagram"
                   title="Instagram"
                 >
-                  <FooterSocialIcon type="instagram" />
+                  <FaInstagram className="footer-social-icon" aria-hidden="true" />
                 </a>
 
                 <a
@@ -233,7 +236,7 @@ function Footer() {
                   aria-label="Vasupriy Interiovilla on Facebook"
                   title="Facebook"
                 >
-                  <FooterSocialIcon type="facebook" />
+                  <FaFacebookF className="footer-social-icon" aria-hidden="true" />
                 </a>
 
                 <a
@@ -243,7 +246,7 @@ function Footer() {
                   aria-label="Vasupriy Interiovilla on YouTube"
                   title="YouTube"
                 >
-                  <FooterSocialIcon type="youtube" />
+                  <FaYoutube className="footer-social-icon" aria-hidden="true" />
                 </a>
               </div>
             </div>

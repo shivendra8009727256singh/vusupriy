@@ -1,14 +1,19 @@
-import productImages from '../InteriorProducts/productImages.json'
+import { wallPanelImages } from './wallPanelImages'
+import { laminateFinishes, laminateDetails } from './laminateFinishes'
+import { deckFinishes } from './deckFinishes'
+import { woodenFinishes } from './woodenFinishes'
+import { imagesForProduct } from '../InteriorProducts/productImageMap'
+import { spcFinishes } from './spcFinishes'
 
 export const productCategories = [
   { id: 'flooring', name: 'Flooring Styling', subtitle: 'Beautiful foundations for extraordinary spaces', groups: [
-    ['Flooring & Finishes', ['European Laminate','SPC Flooring','Wooden Deck Flooring','WPC Deck Flooring','Carpet Tiles Flooring','Artificial Grass Flooring','Epoxy Flooring','Handmade Rugs','Self-Adhesive Tiles']]
+    ['Flooring & Finishes', ['European Laminate','SPC Flooring','Wooden Deck Flooring','Deck Flooring','WPC Deck Flooring','Carpet Tiles Flooring','Artificial Grass Flooring','Epoxy Flooring','Handmade Rugs','Self-Adhesive Tiles']]
   ] },
   { id: 'green', name: 'Green Element', subtitle: 'A natural expression of modern living', groups: [
     ['Green Living', ['Artificial Grass Flooring','Vertical Garden','Artificial Plant and Tree','Natural Garden']]
   ] },
   { id: 'lighting', name: 'Enlightenment Options', subtitle: 'Create an atmosphere worth remembering', groups: [
-    ['Architectural Lighting', ['Garden Light','Ceiling Light','Pole Light','Wall Lamps','Down Light','Floor Lamps','Indoor & Outdoor Lights']]
+    ['Architectural Lighting', ['Chandeliers','Garden Light','Ceiling Light','Pole Light','Wall Lamps','Down Light','Focus Light','Floor Lamps','Indoor & Outdoor Lights']]
   ] },
   { id: 'walls', name: 'Wall Makeover Products', subtitle: 'Surfaces with a point of view', groups: [
     ['Wallpaper', ['Non-Woven Wallpaper','Customized Design Wallpaper','Fabric Wallpaper']],
@@ -19,12 +24,11 @@ export const productCategories = [
   ] }
 ]
 export const slugify = name => name.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')
-const pictures = {
- 'European Laminate':productImages.laminate,'SPC Flooring':productImages.spc,'Wooden Deck Flooring':productImages.wood,'WPC Deck Flooring':productImages.deck,'Carpet Tiles Flooring':productImages.carpet,'Artificial Grass Flooring':productImages.green,'Epoxy Flooring':productImages.epoxy,'Handmade Rugs':productImages.rug,'Vertical Garden':productImages.green,'Artificial Plant and Tree':productImages.green
-}
+
 export const catalogue = productCategories.flatMap(category => category.groups.flatMap(([group, names]) => names.map(name => ({
  category:category.id, categoryName:category.name, group, name, slug:slugify(name), url:`/products/${category.id}/${slugify(name)}`,
- images:(pictures[name] || []).filter(Boolean),
+ images: wallPanelImages[name] ? wallPanelImages[name] : name === 'European Laminate' ? [...laminateFinishes.flatMap(f => f.images), ...laminateDetails] : name === 'Deck Flooring' ? deckFinishes.flatMap(f => f.images) : name === 'Wooden Deck Flooring' ? woodenFinishes.flatMap(f => f.images) : name === 'SPC Flooring' ? spcFinishes.flatMap(f => f.images) : imagesForProduct(name),
+ finishes:name === 'European Laminate' ? laminateFinishes : name === 'Deck Flooring' ? deckFinishes : name === 'Wooden Deck Flooring' ? woodenFinishes : name === 'SPC Flooring' ? spcFinishes : [],
  description:`Explore ${name.toLowerCase()} for carefully considered residential and commercial spaces. Our team can help you identify suitable styles, finishes and applications for your project.`,
  specifications:[['Product family',category.name],['Material / finish', 'Confirm available options with our team'],['Dimensions & thickness','Available on request'],['Installation guidance','Discuss with our specialists'],['Availability & pricing','Request a quotation']]
 }))))

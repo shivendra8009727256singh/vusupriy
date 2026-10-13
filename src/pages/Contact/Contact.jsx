@@ -1,4 +1,3 @@
-import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 import {
   contactInfo,
@@ -81,15 +80,37 @@ function ContactIcon({ type }) {
 }
 
 function SocialIcon({ type }) {
-  const icons = {
-    instagram: FaInstagram,
-    facebook: FaFacebookF,
-    youtube: FaYoutube,
+  const paths = {
+    instagram: (
+      <>
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+      </>
+    ),
+    facebook: (
+      <path d="M14 8h2V5h-2c-2 0-3 1.5-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8.5c0-.3.2-.5.5-.5Z" />
+    ),
+    youtube: (
+      <>
+        <rect x="2.5" y="6" width="19" height="12" rx="4" />
+        <path d="m10.5 9.8 4.5 2.2-4.5 2.2Z" fill="currentColor" stroke="none" />
+      </>
+    ),
   };
-
-  const Icon = icons[type];
-
-  return Icon ? <Icon aria-hidden="true" /> : null;
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {paths[type]}
+    </svg>
+  );
 }
 
 function Contact() {
@@ -101,7 +122,7 @@ function Contact() {
   const [sending, setSending] = useState(false);
   const pendingRef = useRef(false);
   const mountedRef = useRef(true);
-  const mapUrl = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3506.4379190125574!2d77.14222337549583!3d28.496469475739296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI5JzQ3LjMiTiA3N8KwMDgnNDEuMyJF!5e0!3m2!1sen!2sin!4v1791805599792!5m2!1sen!2sin";
+  const mapUrl = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3506.4379190125574!2d77.14222337549583!3d28.496469475739296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI5JzQ3LjMiTiA3N8KwMDgnNDEuMyJF!5e0!3m2!1sen!2sin!4v1791872573603!5m2!1sen!2sin";
 
   useEffect(() => {
     mountedRef.current = true;
@@ -420,7 +441,7 @@ function Contact() {
                     ↗
                   </span>
                 </button>
-                <div className="contact-socials">
+                {/* <div className="contact-socials">
                   <p className="contact-socials-label">Follow Us</p>
                   <div className="contact-socials-links">
                     <a
@@ -454,7 +475,7 @@ function Contact() {
                       <SocialIcon type="youtube" />
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
               {!contactInfo.submissionEndpoint && (
                 <p className="contact-availability">

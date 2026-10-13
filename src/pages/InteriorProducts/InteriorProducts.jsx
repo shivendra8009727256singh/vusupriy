@@ -1,18 +1,20 @@
+import { wallPanelImages } from '../ProductDetail/wallPanelImages'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import productImages from './productImages.json'
+import { imagesForProduct } from './productImageMap'
 import { slugify } from '../ProductDetail/catalogue'
 import './InteriorProducts.css'
 
 const collections = [
   { id: 'flooring', number: '01', title: 'Flooring Styling', subtitle: 'The foundation of beautiful spaces', label: 'THE ART OF SURFACES', description: 'Understated texture. Exceptional presence. Discover surfaces that ground a room and define its character.', groups: [
-    { title: 'Flooring & Finishes', items: ['European Laminate', 'SPC Flooring', 'Wooden Deck Flooring', 'WPC Deck Flooring', 'Carpet Tiles Flooring', 'Artificial Grass Flooring', 'Epoxy Flooring', 'Handmade Rugs', 'Self-Adhesive Tiles'] },
+    { title: 'Flooring & Finishes', items: ['European Laminate', 'SPC Flooring', 'Wooden Deck Flooring', 'Deck Flooring', 'WPC Deck Flooring', 'Carpet Tiles Flooring', 'Artificial Grass Flooring', 'Epoxy Flooring', 'Handmade Rugs', 'Self-Adhesive Tiles'] },
   ] },
   { id: 'green', number: '02', title: 'Green Element', subtitle: 'Nature, thoughtfully brought indoors', label: 'LIVING TEXTURES', description: 'An invitation to slow down. Organic forms and greenery that bring a quiet sense of life to a space.', groups: [
     { title: 'Green Living', items: ['Artificial Grass Flooring', 'Vertical Garden', 'Artificial Plant and Tree', 'Natural Garden'] },
   ] },
   { id: 'lighting', number: '03', title: 'Enlightenment Options', subtitle: 'A new perspective on light', label: 'THE ART OF ILLUMINATION', description: 'Light creates mood, rhythm and atmosphere. Explore thoughtful options for interiors and outdoor spaces.', groups: [
-    { title: 'Architectural Lighting', items: ['Garden Light', 'Ceiling Light', 'Pole Light', 'Wall Lamps', 'Down Light', 'Floor Lamps', 'Indoor & Outdoor Lights'] },
+    { title: 'Architectural Lighting', items: ['Chandeliers', 'Garden Light', 'Ceiling Light', 'Pole Light', 'Wall Lamps', 'Down Light', 'Focus Light', 'Floor Lamps', 'Indoor & Outdoor Lights'] },
   ] },
   { id: 'walls', number: '04', title: 'Wall Makeover Products', subtitle: 'Every wall has a story', label: 'SURFACE EXPRESSION', description: 'A tactile palette of finishes and architectural details to make ordinary walls feel extraordinary.', groups: [
     { title: 'Wallpaper', items: ['Non-Woven Wallpaper', 'Customized Design Wallpaper', 'Fabric Wallpaper'] },
@@ -23,18 +25,7 @@ const collections = [
   ] },
 ]
 
-const imageByProduct = {
-  'European Laminate': productImages.laminate[0],
-  'SPC Flooring': productImages.spc[0],
-  'Wooden Deck Flooring': productImages.wood[0],
-  'WPC Deck Flooring': productImages.deck[0],
-  'Carpet Tiles Flooring': productImages.carpet[0],
-  'Artificial Grass Flooring': productImages.green[1],
-  'Epoxy Flooring': productImages.epoxy[0],
-  'Handmade Rugs': productImages.rug[0],
-  'Vertical Garden': productImages.green[0],
-  'Artificial Plant and Tree': productImages.green[2],
-}
+
 // Reuse photographs already present in the Vasupriy project, without copying stock imagery.
 const siteAssets = import.meta.glob('../../assets/images/**/*.{jpg,jpeg,png,webp,avif}', { eager: true, query: '?url', import: 'default' })
 const sitePhotos = Object.entries(siteAssets).map(([path, url]) => ({ path: path.toLowerCase(), url }))
@@ -42,16 +33,16 @@ const sitePhoto = (...terms) => sitePhotos.find(({ path }) => terms.some(term =>
 const collectionImages = {
   flooring: productImages.laminate[0],
   green: productImages.green[0],
-  lighting: sitePhoto('cafe-ambient-lighting', 'commercial-ceiling-lighting', 'living-room-ceiling-lighting', 'designer-ceiling'),
+  lighting: productImages.chandeliers[0],
   walls: sitePhoto('premium-wall-panels', 'living-room-feature-wall', 'cafe-feature-wall', 'bedroom-wall-paneling'),
 }
 const detailUrl = (category, name) => `/products/${category}/${slugify(name)}`
-const imageFor = (name) => imageByProduct[name] || (name.toLowerCase().includes('light') || name.toLowerCase().includes('lamp') ? collectionImages.lighting : name.toLowerCase().includes('panel') || name.toLowerCase().includes('wall') || name.toLowerCase().includes('tile') ? collectionImages.walls : null)
+const imageFor = (name) => wallPanelImages[name]?.[0] ||  imagesForProduct(name)[0] || null
 const photoTiles = [
   { title: 'Natural Wood', eyebrow: 'FLOORING', image: productImages.laminate[2] || productImages.laminate[0], category: 'flooring', name: 'European Laminate' },
   { title: 'Contemporary Surfaces', eyebrow: 'SPC COLLECTION', image: productImages.spc[1] || productImages.spc[0], category: 'flooring', name: 'SPC Flooring' },
-  { title: 'Living Green', eyebrow: 'BOTANICAL', image: productImages.green[2] || productImages.green[0], category: 'green', name: 'Vertical Garden' },
-  { title: 'Architectural Light', eyebrow: 'ILLUMINATION', image: collectionImages.lighting, category: 'lighting', name: 'Ceiling Light' },
+  { title: 'Living Green', eyebrow: 'BOTANICAL', image: imagesForProduct('Vertical Garden')[0], category: 'green', name: 'Vertical Garden' },
+  { title: 'Architectural Light', eyebrow: 'ILLUMINATION', image: productImages.ceilingLights[0], category: 'lighting', name: 'Ceiling Light' },
   { title: 'Statement Walls', eyebrow: 'WALL FINISHES', image: collectionImages.walls, category: 'walls', name: 'WPC Panels' },
   { title: 'Handcrafted Texture', eyebrow: 'RUGS & TEXTILES', image: productImages.rug[1] || productImages.rug[0], category: 'flooring', name: 'Handmade Rugs' },
 ].filter(item => item.image)
@@ -75,13 +66,22 @@ function MaterialRow({ name, category, index, open, onToggle }) {
 
 function Collection({ collection, reverse, search }) {
   const [openName, setOpenName] = useState(null)
-  useEffect(() => setOpenName(null), [collection.id, search])
+  const [activePhoto, setActivePhoto] = useState(0)
+  useEffect(() => { setOpenName(null); setActivePhoto(0) }, [collection.id, search])
+  const selectMaterial = (name) => {
+    setOpenName(current => current === name ? null : name)
+    setActivePhoto(0)
+  }
   const groups = collection.groups.map(group => ({ ...group, items: group.items.filter(name => `${name} ${group.title} ${collection.title}`.toLowerCase().includes(search.toLowerCase().trim())) })).filter(group => group.items.length)
   if (!groups.length) return null
-  const image = collectionImages[collection.id]
+  const gallery = openName ? imagesForProduct(openName) : []
+  const image = openName ? (gallery[activePhoto] || null) : collectionImages[collection.id]
+  const hasMissingPhoto = Boolean(openName && !gallery.length)
   return <article id={`vpm-${collection.id}`} className={`vpm-collection ${reverse ? 'vpm-collection--reverse' : ''}`}>
     <div className="vpm-collection-visual">
-      {image ? <img src={image} alt={`${collection.title} collection`} loading="lazy" /> : <div className={`vpm-art vpm-art--${collection.id}`} aria-hidden="true"><span>{collection.number}</span><strong>{collection.id === 'lighting' ? 'LIGHT' : 'FORM'}</strong><small>VASUPRIY MATERIAL LIBRARY</small></div>}
+      {image ? <img key={image} className="vpm-selected-photo" src={image} alt={openName ? `${openName} product reference ${activePhoto + 1}` : `${collection.title} collection`} loading="lazy" /> : hasMissingPhoto ? <div className="vpm-selected-empty" role="status"><span>PRODUCT REFERENCE</span><strong>{openName}</strong><p>Product photography coming soon</p><Link to={detailUrl(collection.id, openName)}>View product details ↗</Link></div> : <div className={`vpm-art vpm-art--${collection.id}`} aria-hidden="true"><span>{collection.number}</span><strong>{collection.id === 'lighting' ? 'LIGHT' : 'FORM'}</strong><small>VASUPRIY MATERIAL LIBRARY</small></div>}
+      {openName && gallery.length > 1 && <div className="vpm-selected-thumbnails" aria-label={`${openName} reference photos`}>{gallery.map((photo, i) => <button key={`${photo}-${i}`} type="button" className={i === activePhoto ? 'is-active' : ''} aria-label={`Show ${openName} image ${i + 1}`} aria-pressed={i === activePhoto} onClick={() => setActivePhoto(i)}><img src={photo} alt="" loading="lazy" /></button>)}</div>}
+      {openName && <div className="vpm-selected-label" aria-live="polite"><span>{openName}</span>{gallery.length > 0 && <small>{activePhoto + 1} / {gallery.length}</small>}</div>}
       <span className="vpm-visual-mark">{collection.number} / 04</span>
       <span className="vpm-visual-caption">VASUPRIY · INTERIOVILLA</span>
     </div>
@@ -92,7 +92,7 @@ function Collection({ collection, reverse, search }) {
       <div className="vpm-material-list">
         {groups.map(group => <div key={group.title} className="vpm-material-group">
           {collection.groups.length > 1 && <h3>{group.title}</h3>}
-          {group.items.map((name, index) => <MaterialRow key={name} name={name} category={collection.id} index={index} open={openName === name} onToggle={() => setOpenName(current => current === name ? null : name)} />)}
+          {group.items.map((name, index) => <MaterialRow key={name} name={name} category={collection.id} index={index} open={openName === name} onToggle={() => selectMaterial(name)} />)}
         </div>)}
       </div>
       <Link className="vpm-collection-link" to={`/interior-products?category=${collection.id}`}>Explore this collection <span aria-hidden="true">↗</span></Link>
@@ -100,6 +100,92 @@ function Collection({ collection, reverse, search }) {
   </article>
 }
 
+const lightingProducts = [
+  { name: 'Chandeliers', key: 'chandeliers' },
+  { name: 'Ceiling Light', key: 'ceilingLights' },
+  { name: 'Down Light', key: 'downLights' },
+  { name: 'Focus Light', key: 'focusLights' },
+  { name: 'Wall Lamps', key: 'wallLamps' },
+  { name: 'Garden Light', key: 'gardenLights' },
+  { name: 'Pole Light', key: 'poleLights' },
+]
+function LightingShowroom() {
+  const [selected, setSelected] = useState('all')
+
+  const available = lightingProducts.map(product => {
+    const normalized = value => value.toLowerCase().replace(/[^a-z0-9]/g, '')
+    const key = Object.keys(productImages).find(
+      candidate => normalized(candidate) === normalized(product.key) ||
+        normalized(candidate) === normalized(product.name)
+    )
+
+    return {
+      ...product,
+      images: key ? productImages[key] : [],
+    }
+  }).filter(product => product.images?.length)
+
+  if (!available.length) return null
+
+  const visible = selected === 'all'
+    ? available
+    : available.filter(product => product.name === selected)
+
+  return (
+    <section className="vpm-lighting-showroom vpm-container" aria-label="Luxury lighting showroom">
+      <div className="vpm-lighting-showroom-heading">
+        <div>
+          <span className="vpm-kicker">THE LIGHTING ATELIER</span>
+          <h2>Light, beautifully <em>considered.</em></h2>
+        </div>
+        <p>Explore our curated lighting references, from sculptural chandeliers to architectural illumination.</p>
+      </div>
+
+      <div className="vpm-lighting-filters" aria-label="Filter lighting products">
+        <button type="button" className={selected === 'all' ? 'is-active' : ''} onClick={() => setSelected('all')}>All Lighting</button>
+        {available.map(product => (
+          <button
+            key={product.name}
+            type="button"
+            className={selected === product.name ? 'is-active' : ''}
+            onClick={() => setSelected(product.name)}
+          >
+            {product.name}
+          </button>
+        ))}
+      </div>
+
+      <div className="vpm-lighting-grid">
+        {visible.map((product, index) => (
+          <Link
+            key={product.name}
+            className="vpm-lighting-card"
+            to={detailUrl('lighting', product.name)}
+          >
+            <div className="vpm-lighting-card-image">
+              <img
+                src={product.images[0]}
+                alt={`${product.name} from Vasupriy Interiovilla`}
+                loading="lazy"
+              />
+              <span className="vpm-lighting-card-count">
+                {String(index + 1).padStart(2, '0')} / {String(available.length).padStart(2, '0')}
+              </span>
+              <span className="vpm-lighting-card-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div className="vpm-lighting-card-info">
+              <div>
+                <span>VASUPRIY / LIGHTING COLLECTION</span>
+                <h3>{product.name}</h3>
+              </div>
+              <small>{product.images.length} reference images</small>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  )
+}
 export default function InteriorProducts() {
   const location = useLocation()
   const navigate = useNavigate()
@@ -125,6 +211,7 @@ export default function InteriorProducts() {
       <div className="vpm-curation-top"><div><span className="vpm-kicker">THE MATERIAL LIBRARY</span><h2>Texture. <em>Form.</em> Feeling.</h2></div><p>A closer look at the finishes, textures and details that define exceptional spaces.</p></div>
       <div className="vpm-curation-grid">{photoTiles.map((item, index) => <Link key={`${item.category}-${item.name}`} className={`vpm-photo-tile vpm-photo-tile--${index}`} to={detailUrl(item.category, item.name)}><img src={item.image} alt={`${item.title} — Vasupriy product material`} loading="lazy" /><span className="vpm-photo-shade"/><span className="vpm-photo-copy"><small>{item.eyebrow}</small><strong>{item.title}</strong><span>Explore product ↗</span></span></Link>)}</div>
     </section>
+    <LightingShowroom />
     <section id="vpm-collections" className="vpm-catalog vpm-container">
       <div className="vpm-catalog-heading"><div><span className="vpm-kicker">THE COLLECTIONS</span><h2>Explore by <em>material.</em></h2></div><p>Not simply products. A collection of details that bring a space to life.</p></div>
       <div className="vpm-toolbar"><div className="vpm-category-nav" aria-label="Select product collection">{[{id:'all',title:'All Collections'},...collections].map(c => <button type="button" key={c.id} onClick={() => choose(c.id)} className={active === c.id ? 'is-active' : ''} aria-pressed={active === c.id}>{c.title}</button>)}</div><label className="vpm-search"><span className="vpm-sr-only">Search materials</span><input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="Find a material..." /></label></div>

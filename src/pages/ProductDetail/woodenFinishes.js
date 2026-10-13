@@ -1,0 +1,9 @@
+// Client-provided Wooden Flooring photographs, grouped by original finish folder.
+export const woodenFinishes = [
+  { name: 'Walnut hickory', images: ["/images/wooden-client/walnut-hickory-01.webp", "/images/wooden-client/walnut-hickory-02.webp", "/images/wooden-client/walnut-hickory-03.webp", "/images/wooden-client/walnut-hickory-04.webp", "/images/wooden-client/walnut-hickory-05.webp", "/images/wooden-client/walnut-hickory-06.webp"] },
+  { name: 'Smoked oak', images: ["/images/wooden-client/smoked-oak-01.webp", "/images/wooden-client/smoked-oak-02.webp", "/images/wooden-client/smoked-oak-03.webp", "/images/wooden-client/smoked-oak-04.webp", "/images/wooden-client/smoked-oak-05.webp", "/images/wooden-client/smoked-oak-06.webp"] },
+  { name: 'Walnut oak', images: ["/images/wooden-client/walnut-oak-01.webp", "/images/wooden-client/walnut-oak-02.webp", "/images/wooden-client/walnut-oak-03.webp", "/images/wooden-client/walnut-oak-04.webp", "/images/wooden-client/walnut-oak-05.webp"] },
+  { name: 'Nutmeg hickory', images: ["/images/wooden-client/nutmeg-hickory-01.webp", "/images/wooden-client/nutmeg-hickory-02.webp", "/images/wooden-client/nutmeg-hickory-03.webp", "/images/wooden-client/nutmeg-hickory-04.webp", "/images/wooden-client/nutmeg-hickory-05.webp"] },
+  { name: 'Vineyard oak', images: ["/images/wooden-client/vineyard-oak-01.webp", "/images/wooden-client/vineyard-oak-02.webp", "/images/wooden-client/vineyard-oak-03.webp", "/images/wooden-client/vineyard-oak-04.webp", "/images/wooden-client/vineyard-oak-05.webp"] },
+  { name: 'Natural oak', images: ["/images/wooden-client/natural-oak-01.webp", "/images/wooden-client/natural-oak-02.webp", "/images/wooden-client/natural-oak-03.webp", "/images/wooden-client/natural-oak-04.webp", "/images/wooden-client/natural-oak-05.webp"] }
+]

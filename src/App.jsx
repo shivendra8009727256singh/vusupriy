@@ -1,3 +1,4 @@
+import VasupriyCursor from './components/common/VasupriyCursor.jsx'
 import ProductDetail from './pages/ProductDetail/ProductDetail'
 
 import { Navigate, Route, Routes } from 'react-router-dom'
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <RouteLoader />
+      <VasupriyCursor />
 
       <Routes>
         <Route path="/products/:category/:slug" element={<ProductDetail />} />

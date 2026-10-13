@@ -1,138 +1,115 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-
 import vasupriyLogo from '../../assets/brand/logo 2 vasupriya.png'
 
-const LEAVE_DELAY = 2200
-const READY_DELAY = 3100
-const REMOVE_DELAY = 3300
+const EXIT_START = 900
+const REMOVE_AT = 1450
 
 export default function RouteLoader() {
   const location = useLocation()
-  const timersRef = useRef([])
-
   const [showLoader, setShowLoader] = useState(true)
-  const [loaderLeaving, setLoaderLeaving] = useState(false)
+  const [leaving, setLeaving] = useState(false)
 
   useEffect(() => {
-    const preference = window.matchMedia(
+    const reducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     )
 
-    timersRef.current.forEach((timer) => {
-      window.clearTimeout(timer)
-    })
-
-    timersRef.current = []
+    let exitTimer
+    let removeTimer
 
     const finish = () => {
       setShowLoader(false)
-      setLoaderLeaving(false)
+      setLeaving(false)
       document.body.classList.remove('is-loading')
-    }
-
-    if (preference.matches) {
-      finish()
-      return undefined
-    }
-
-    setShowLoader(true)
-    setLoaderLeaving(false)
-
-    document.body.classList.add('is-loading')
-
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'auto',
-    })
-
-    const leaveTimer = window.setTimeout(() => {
-      setLoaderLeaving(true)
-    }, LEAVE_DELAY)
-
-    /*
-     * Kept intentionally to match the original loader timing:
-     * 2200ms -> leaving starts
-     * 3100ms -> page is considered ready
-     * 3300ms -> loader is removed
-     */
-    const readyTimer = window.setTimeout(() => {
-      document.documentElement.dataset.routeReady = 'true'
-    }, READY_DELAY)
-
-    const removeTimer = window.setTimeout(() => {
-      finish()
       delete document.documentElement.dataset.routeReady
-    }, REMOVE_DELAY)
+    }
 
-    timersRef.current = [
-      leaveTimer,
-      readyTimer,
-      removeTimer,
-    ]
+    const start = () => {
+      if (reducedMotion.matches) {
+        finish()
+        return
+      }
 
-    const preferenceChanged = () => {
-      if (!preference.matches) return
+      setShowLoader(true)
+      setLeaving(false)
+      document.body.classList.add('is-loading')
+      document.documentElement.dataset.routeReady = 'false'
 
-      timersRef.current.forEach((timer) => {
-        window.clearTimeout(timer)
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'auto',
       })
 
-      timersRef.current = []
+      exitTimer = window.setTimeout(() => {
+        document.documentElement.dataset.routeReady = 'true'
+        setLeaving(true)
+      }, EXIT_START)
 
-      delete document.documentElement.dataset.routeReady
+      removeTimer = window.setTimeout(finish, REMOVE_AT)
+    }
+
+    const onPreferenceChange = () => {
+      if (!reducedMotion.matches) return
+      window.clearTimeout(exitTimer)
+      window.clearTimeout(removeTimer)
       finish()
     }
 
-    preference.addEventListener(
-      'change',
-      preferenceChanged
-    )
+    start()
+
+    reducedMotion.addEventListener('change', onPreferenceChange)
 
     return () => {
-      timersRef.current.forEach((timer) => {
-        window.clearTimeout(timer)
-      })
-
-      timersRef.current = []
-
-      preference.removeEventListener(
-        'change',
-        preferenceChanged
-      )
-
-      delete document.documentElement.dataset.routeReady
+      window.clearTimeout(exitTimer)
+      window.clearTimeout(removeTimer)
+      reducedMotion.removeEventListener('change', onPreferenceChange)
       document.body.classList.remove('is-loading')
+      delete document.documentElement.dataset.routeReady
     }
   }, [location.pathname])
 
-  if (!showLoader) {
-    return null
-  }
+  if (!showLoader) return null
 
   return (
     <div
-      className={`preloader ${
-        loaderLeaving ? 'preloader--leaving' : ''
+      className={`preloader vasupriy-signature-loader ${
+        leaving ? 'preloader--leaving' : ''
       }`}
       aria-hidden="true"
     >
       <div className="preloader-panels">
-        <span className="preloader-panel" />
-        <span className="preloader-panel" />
-        <span className="preloader-panel" />
-        <span className="preloader-panel" />
-        <span className="preloader-panel" />
+        {Array.from({ length: 5 }, (_, index) => (
+          <span className="preloader-panel" key={index} />
+        ))}
+      </div>
+
+      <div className="signature-loader-glow" />
+
+      <div className="signature-loader-frame">
+        <span className="signature-loader-corner signature-loader-corner--tl" />
+        <span className="signature-loader-corner signature-loader-corner--tr" />
+        <span className="signature-loader-corner signature-loader-corner--bl" />
+        <span className="signature-loader-corner signature-loader-corner--br" />
       </div>
 
       <div className="preloader-brand">
+        <span className="signature-loader-eyebrow">
+          EST. 2019 — INTERIOR DESIGN STUDIO
+        </span>
+
         <div className="preloader-logo-wrap">
           <img
             src={vasupriyLogo}
             alt=""
             className="preloader-logo"
           />
+        </div>
+
+        <div className="signature-loader-wordmark">
+          <span>VASUPRIY</span>
+          <small>INTERIOVILLA</small>
         </div>
 
         <div className="preloader-progress">
@@ -143,7 +120,7 @@ export default function RouteLoader() {
       </div>
 
       <span className="preloader-index preloader-index--left">
-        EST. 2019
+        DESIGN · DETAIL · DISTINCTION
       </span>
 
       <span className="preloader-index preloader-index--right">

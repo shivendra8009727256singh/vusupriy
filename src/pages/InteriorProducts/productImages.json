@@ -1,40 +1,156 @@
 {
-  "laminate": [
-    "/images/product-showroom/laminate-01.webp",
-    "/images/product-showroom/laminate-02.webp",
-    "/images/product-showroom/laminate-03.webp"
-  ],
-  "spc": [
-    "/images/product-showroom/spc-01.webp",
-    "/images/product-showroom/spc-02.webp",
-    "/images/product-showroom/spc-03.webp"
-  ],
-  "wood": [
-    "/images/product-showroom/wood-01.webp",
-    "/images/product-showroom/wood-02.webp"
-  ],
-  "deck": [
-    "/images/product-showroom/deck-01.webp",
-    "/images/product-showroom/deck-02.webp"
-  ],
-  "carpet": [
-    "/images/product-showroom/carpet-01.webp",
-    "/images/product-showroom/carpet-02.webp"
-  ],
-  "epoxy": [
-    "/images/product-showroom/epoxy-01.webp",
-    "/images/product-showroom/epoxy-02.webp"
-  ],
-  "rug": [
-    "/images/product-showroom/rug-01.webp",
-    "/images/product-showroom/rug-02.webp",
-    "/images/product-showroom/rug-03.webp"
-  ],
-  "green": [
-    "/images/product-showroom/green-01.webp",
-    "/images/product-showroom/green-02.webp",
-    "/images/product-showroom/green-03.webp",
-    "/images/product-showroom/green-04.webp",
-    "/images/product-showroom/green-05.webp"
-  ]
+    "laminate":  [
+                     "/images/product-showroom/laminate-01.webp",
+                     "/images/product-showroom/laminate-02.webp",
+                     "/images/product-showroom/laminate-03.webp"
+                 ],
+    "spc":  [
+                "/images/product-showroom/spc-01.webp",
+                "/images/product-showroom/spc-02.webp",
+                "/images/product-showroom/spc-03.webp"
+            ],
+    "wood":  [
+                 "/images/product-showroom/wood-01.webp",
+                 "/images/product-showroom/wood-02.webp"
+             ],
+    "deck":  [
+                 "/images/product-showroom/deck-01.webp",
+                 "/images/product-showroom/deck-02.webp"
+             ],
+    "carpet":  [
+                   "/images/product-showroom/carpet-01.webp",
+                   "/images/product-showroom/carpet-02.webp"
+               ],
+    "epoxy":  [
+                  "/images/product-showroom/epoxy-01.webp",
+                  "/images/product-showroom/epoxy-02.webp"
+              ],
+    "rug":  [
+                "/images/product-showroom/rug-01.webp",
+                "/images/product-showroom/rug-02.webp",
+                "/images/product-showroom/rug-03.webp"
+            ],
+    "green":  [
+                  "/images/product-showroom/green-01.webp",
+                  "/images/product-showroom/green-02.webp",
+                  "/images/product-showroom/green-03.webp",
+                  "/images/product-showroom/green-04.webp",
+                  "/images/product-showroom/green-05.webp"
+              ],
+    "chandeliers":  [
+                        "/images/lighting-products/chandeliers-01.webp",
+                        "/images/lighting-products/chandeliers-02.webp",
+                        "/images/lighting-products/chandeliers-03.webp",
+                        "/images/lighting-products/chandeliers-04.webp",
+                        "/images/lighting-products/chandeliers-05.webp",
+                        "/images/lighting-products/chandeliers-06.webp",
+                        "/images/lighting-products/chandeliers-07.webp",
+                        "/images/lighting-products/chandeliers-08.webp",
+                        "/images/lighting-products/chandeliers-09.webp",
+                        "/images/lighting-products/chandeliers-10.webp",
+                        "/images/lighting-products/chandeliers-11.webp",
+                        "/images/lighting-products/chandeliers-12.webp",
+                        "/images/lighting-products/chandeliers-13.webp",
+                        "/images/lighting-products/chandeliers-14.webp",
+                        "/images/lighting-products/chandeliers-15.webp",
+                        "/images/lighting-products/chandeliers-16.webp",
+                        "/images/lighting-products/chandeliers-17.webp",
+                        "/images/lighting-products/chandeliers-18.webp",
+                        "/images/lighting-products/chandeliers-19.webp",
+                        "/images/lighting-products/chandeliers-20.webp"
+                    ],
+    "ceilingLights":  [
+                          "/images/lighting-products/ceiling-01.webp",
+                          "/images/lighting-products/ceiling-02.webp",
+                          "/images/lighting-products/ceiling-03.webp",
+                          "/images/lighting-products/ceiling-04.webp",
+                          "/images/lighting-products/ceiling-05.webp",
+                          "/images/lighting-products/ceiling-06.webp",
+                          "/images/lighting-products/ceiling-07.webp",
+                          "/images/lighting-products/ceiling-08.webp",
+                          "/images/lighting-products/ceiling-09.webp",
+                          "/images/lighting-products/ceiling-10.webp",
+                          "/images/lighting-products/ceiling-11.webp",
+                          "/images/lighting-products/ceiling-12.webp",
+                          "/images/lighting-products/ceiling-13.webp",
+                          "/images/lighting-products/ceiling-14.webp",
+                          "/images/lighting-products/ceiling-15.webp",
+                          "/images/lighting-products/ceiling-16.webp",
+                          "/images/lighting-products/ceiling-17.webp"
+                      ],
+    "downLights":  [
+                       "/images/lighting-products/down-01.webp",
+                       "/images/lighting-products/down-02.webp",
+                       "/images/lighting-products/down-03.webp",
+                       "/images/lighting-products/down-04.webp",
+                       "/images/lighting-products/down-05.webp",
+                       "/images/lighting-products/down-06.webp",
+                       "/images/lighting-products/down-07.webp",
+                       "/images/lighting-products/down-08.webp",
+                       "/images/lighting-products/down-09.webp",
+                       "/images/lighting-products/down-10.webp",
+                       "/images/lighting-products/down-11.webp",
+                       "/images/lighting-products/down-12.webp",
+                       "/images/lighting-products/down-13.webp",
+                       "/images/lighting-products/down-14.webp",
+                       "/images/lighting-products/down-15.webp",
+                       "/images/lighting-products/down-16.webp",
+                       "/images/lighting-products/down-17.webp",
+                       "/images/lighting-products/down-18.webp",
+                       "/images/lighting-products/down-19.webp"
+                   ],
+    "focusLights":  [
+                        "/images/lighting-products/focus-01.webp",
+                        "/images/lighting-products/focus-02.webp",
+                        "/images/lighting-products/focus-03.webp",
+                        "/images/lighting-products/focus-04.webp",
+                        "/images/lighting-products/focus-05.webp",
+                        "/images/lighting-products/focus-06.webp",
+                        "/images/lighting-products/focus-07.webp",
+                        "/images/lighting-products/focus-08.webp",
+                        "/images/lighting-products/focus-09.webp",
+                        "/images/lighting-products/focus-10.webp",
+                        "/images/lighting-products/focus-11.webp"
+                    ],
+    "gardenLights":  [
+                         "/images/lighting-products/garden-01.webp",
+                         "/images/lighting-products/garden-02.webp",
+                         "/images/lighting-products/garden-03.webp",
+                         "/images/lighting-products/garden-04.webp",
+                         "/images/lighting-products/garden-05.webp",
+                         "/images/lighting-products/garden-06.webp",
+                         "/images/lighting-products/garden-07.webp",
+                         "/images/lighting-products/garden-08.webp"
+                     ],
+    "poleLights":  [
+                       "/images/lighting-products/pole-01.webp",
+                       "/images/lighting-products/pole-02.webp",
+                       "/images/lighting-products/pole-03.webp",
+                       "/images/lighting-products/pole-04.webp",
+                       "/images/lighting-products/pole-05.webp",
+                       "/images/lighting-products/pole-06.webp",
+                       "/images/lighting-products/pole-07.webp",
+                       "/images/lighting-products/pole-08.webp",
+                       "/images/lighting-products/pole-09.webp",
+                       "/images/lighting-products/pole-10.webp",
+                       "/images/lighting-products/pole-11.webp"
+                   ],
+    "wallLamps":  [
+                      "/images/lighting-products/wall-01.webp",
+                      "/images/lighting-products/wall-02.webp",
+                      "/images/lighting-products/wall-03.webp",
+                      "/images/lighting-products/wall-04.webp",
+                      "/images/lighting-products/wall-05.webp",
+                      "/images/lighting-products/wall-06.webp",
+                      "/images/lighting-products/wall-07.webp",
+                      "/images/lighting-products/wall-08.webp",
+                      "/images/lighting-products/wall-09.webp",
+                      "/images/lighting-products/wall-10.webp",
+                      "/images/lighting-products/wall-11.webp",
+                      "/images/lighting-products/wall-12.webp",
+                      "/images/lighting-products/wall-13.webp",
+                      "/images/lighting-products/wall-14.webp",
+                      "/images/lighting-products/wall-15.webp",
+                      "/images/lighting-products/wall-16.webp"
+                  ]
 }
