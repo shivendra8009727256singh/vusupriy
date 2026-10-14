@@ -1,3 +1,4 @@
+﻿
 import VasupriyCursor from './components/common/VasupriyCursor.jsx'
 import ProductDetail from './pages/ProductDetail/ProductDetail'
 
@@ -24,14 +25,16 @@ function App() {
       <VasupriyCursor />
 
       <Routes>
-        <Route path="/products/:category/:slug" element={<ProductDetail />} />
+        {/* Existing individual product detail pages */}
+        <Route
+          path="/products/:category/:slug"
+          element={<ProductDetail />}
+        />
+
         <Route element={<SiteLayout />}>
           <Route index element={<Home />} />
 
-          <Route
-            path="about"
-            element={<About />}
-          />
+          <Route path="about" element={<About />} />
 
           {/* Main Services landing page */}
           <Route
@@ -55,38 +58,26 @@ function App() {
             element={<ServiceDetail />}
           />
 
+          {/* All Products: existing complete landing page */}
           <Route
             path="interior-products"
             element={<InteriorProducts />}
           />
 
+          {/* Dedicated product category pages */}
           <Route
-            path="projects"
-            element={<Projects />}
+            path="interior-products/:category"
+            element={<InteriorProducts />}
           />
 
-          <Route
-            path="gallery"
-            element={<Gallery />}
-          />
-
-          <Route
-            path="blog"
-            element={<Blog />}
-          />
-
+          <Route path="projects" element={<Projects />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="blog" element={<Blog />} />
           <Route path="blog/:slug" element={<BlogDetail />} />
-
-          <Route
-            path="contact"
-            element={<Contact />}
-          />
+          <Route path="contact" element={<Contact />} />
         </Route>
 
-        <Route
-          path="*"
-          element={<Navigate to="/" replace />}
-        />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   )
