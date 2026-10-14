@@ -1,0 +1,65 @@
+﻿[
+    {
+        "slug":  "jalsa",
+        "images":  [
+                       "/images/projects/jalsa/jalsa-01.jpg",
+                       "/images/projects/jalsa/jalsa-02.jpg",
+                       "/images/projects/jalsa/jalsa-03.jpg",
+                       "/images/projects/jalsa/jalsa-04.jpg",
+                       "/images/projects/jalsa/jalsa-05.jpg",
+                       "/images/projects/jalsa/jalsa-06.jpg",
+                       "/images/projects/jalsa/jalsa-07.jpg",
+                       "/images/projects/jalsa/jalsa-08.jpg",
+                       "/images/projects/jalsa/jalsa-09.jpg",
+                       "/images/projects/jalsa/jalsa-10.jpg"
+                   ]
+    },
+    {
+        "slug":  "65th-avenue",
+        "images":  [
+                       "/images/projects/65th-avenue/65th-avenue-01.jpg",
+                       "/images/projects/65th-avenue/65th-avenue-02.jpg",
+                       "/images/projects/65th-avenue/65th-avenue-03.jpg",
+                       "/images/projects/65th-avenue/65th-avenue-04.jpg",
+                       "/images/projects/65th-avenue/65th-avenue-05.jpg",
+                       "/images/projects/65th-avenue/65th-avenue-06.jpg",
+                       "/images/projects/65th-avenue/65th-avenue-07.jpg"
+                   ]
+    },
+    {
+        "slug":  "samsung-head-office",
+        "images":  [
+                       "/images/projects/samsung-head-office/samsung-head-office-01.jpg",
+                       "/images/projects/samsung-head-office/samsung-head-office-02.jpg",
+                       "/images/projects/samsung-head-office/samsung-head-office-03.jpg",
+                       "/images/projects/samsung-head-office/samsung-head-office-04.jpg",
+                       "/images/projects/samsung-head-office/samsung-head-office-05.jpg",
+                       "/images/projects/samsung-head-office/samsung-head-office-06.jpg",
+                       "/images/projects/samsung-head-office/samsung-head-office-07.jpg",
+                       "/images/projects/samsung-head-office/samsung-head-office-08.jpg",
+                       "/images/projects/samsung-head-office/samsung-head-office-09.jpg"
+                   ]
+    },
+    {
+        "slug":  "miricall",
+        "images":  [
+                       "/images/projects/miricall/miricall-01.jpg",
+                       "/images/projects/miricall/miricall-02.jpg",
+                       "/images/projects/miricall/miricall-03.jpg",
+                       "/images/projects/miricall/miricall-04.jpg",
+                       "/images/projects/miricall/miricall-05.jpg",
+                       "/images/projects/miricall/miricall-06.jpg",
+                       "/images/projects/miricall/miricall-07.jpg"
+                   ]
+    },
+    {
+        "slug":  "ascent-international-school",
+        "images":  [
+                       "/images/projects/ascent-international-school/ascent-international-school-01.jpg",
+                       "/images/projects/ascent-international-school/ascent-international-school-02.jpg",
+                       "/images/projects/ascent-international-school/ascent-international-school-03.jpg",
+                       "/images/projects/ascent-international-school/ascent-international-school-04.jpg",
+                       "/images/projects/ascent-international-school/ascent-international-school-05.jpg"
+                   ]
+    }
+]

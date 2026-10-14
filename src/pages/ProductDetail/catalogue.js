@@ -11,6 +11,7 @@ import { deckFinishes } from './deckFinishes'
 import { woodenFinishes } from './woodenFinishes'
 import { imagesForProduct } from '../InteriorProducts/productImageMap'
 import { spcFinishes } from './spcFinishes'
+import { chandelierImages } from './chandelierImages'
 
 export const productCategories = [
   { id: 'flooring', name: 'Flooring Styling', subtitle: 'Beautiful foundations for extraordinary spaces', groups: [
@@ -35,7 +36,7 @@ export const slugify = name => name.toLowerCase().replace(/&/g,'and').replace(/[
 
 export const catalogue = productCategories.flatMap(category => category.groups.flatMap(([group, names]) => names.map(name => ({
  category:category.id, categoryName:category.name, group, name, slug:slugify(name), url:`/products/${category.id}/${slugify(name)}`,
- images: name === 'Stone & Inlay Work on Walls' ? inlayStoneImages : name === 'Carpet Tiles Flooring' ? carpetTileImages : concreteImages[name] ? concreteImages[name] : sheetImages[name] ? sheetImages[name] : wallMouldingImages[name] ? wallMouldingImages[name] : wallpaperImages[name] ? wallpaperImages[name] : wallPanelImages[name] ? wallPanelImages[name] : name === 'European Laminate' ? [...laminateFinishes.flatMap(f => f.images), ...laminateDetails] : name === 'Deck Flooring' ? deckFinishes.flatMap(f => f.images) : name === 'Wooden Deck Flooring' ? woodenFinishes.flatMap(f => f.images) : name === 'SPC Flooring' ? spcFinishes.flatMap(f => f.images) : name === 'Artificial Grass Flooring' ? artificialGrassImages
+ images: name === 'Chandeliers' ? chandelierImages : name === 'Stone & Inlay Work on Walls' ? inlayStoneImages : name === 'Carpet Tiles Flooring' ? carpetTileImages : concreteImages[name] ? concreteImages[name] : sheetImages[name] ? sheetImages[name] : wallMouldingImages[name] ? wallMouldingImages[name] : wallpaperImages[name] ? wallpaperImages[name] : wallPanelImages[name] ? wallPanelImages[name] : name === 'European Laminate' ? [...laminateFinishes.flatMap(f => f.images), ...laminateDetails] : name === 'Deck Flooring' ? deckFinishes.flatMap(f => f.images) : name === 'Wooden Deck Flooring' ? woodenFinishes.flatMap(f => f.images) : name === 'SPC Flooring' ? spcFinishes.flatMap(f => f.images) : name === 'Artificial Grass Flooring' ? artificialGrassImages
 : name === 'Vertical Garden' ? verticalGardenImages
 : name === 'Artificial Plant and Tree' ? artificialPlantImages
 : imagesForProduct(name),
