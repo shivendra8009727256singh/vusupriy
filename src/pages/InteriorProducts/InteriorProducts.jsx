@@ -1,9 +1,8 @@
-import { wallPanelImages } from '../ProductDetail/wallPanelImages'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import productImages from './productImages.json'
 import { imagesForProduct } from './productImageMap'
-import { slugify } from '../ProductDetail/catalogue'
+import { slugify, findProduct } from '../ProductDetail/catalogue'
 import './InteriorProducts.css'
 
 const collections = [
@@ -18,6 +17,7 @@ const collections = [
   ] },
   { id: 'walls', number: '04', title: 'Wall Makeover Products', subtitle: 'Every wall has a story', label: 'SURFACE EXPRESSION', description: 'A tactile palette of finishes and architectural details to make ordinary walls feel extraordinary.', groups: [
     { title: 'Wallpaper', items: ['Non-Woven Wallpaper', 'Customized Design Wallpaper', 'Fabric Wallpaper'] },
+    { title: 'Wall Moulding', items: ['Wall Moulding'] },
     { title: 'Wall Panels', items: ['WPC Panels', 'PVC Panels', 'Charcoal Metallic Panels', '3D CNC Cutting Wall Panels', 'FRP Wall Panels', 'MDF Wall Panels'] },
     { title: 'Sheets', items: ['Texture Sheet', 'Fluted Acrylic Sheet', 'Natural Cork Sheet'] },
     { title: 'Concrete Work', items: ['Concrete Work (Walls & Outer Building Settings)'] },
@@ -37,7 +37,8 @@ const collectionImages = {
   walls: sitePhoto('premium-wall-panels', 'living-room-feature-wall', 'cafe-feature-wall', 'bedroom-wall-paneling'),
 }
 const detailUrl = (category, name) => `/products/${category}/${slugify(name)}`
-const imageFor = (name) => wallPanelImages[name]?.[0] ||  imagesForProduct(name)[0] || null
+const galleryFor = (category, name) => findProduct(category, slugify(name))?.images || imagesForProduct(name)
+const imageFor = (category, name) => galleryFor(category, name)[0] || null
 const photoTiles = [
   { title: 'Natural Wood', eyebrow: 'FLOORING', image: productImages.laminate[2] || productImages.laminate[0], category: 'flooring', name: 'European Laminate' },
   { title: 'Contemporary Surfaces', eyebrow: 'SPC COLLECTION', image: productImages.spc[1] || productImages.spc[0], category: 'flooring', name: 'SPC Flooring' },
@@ -48,7 +49,7 @@ const photoTiles = [
 ].filter(item => item.image)
 
 function MaterialRow({ name, category, index, open, onToggle }) {
-  const image = imageFor(name)
+  const image = imageFor(category, name)
   return (
     <div className={`vpm-material ${open ? 'vpm-material--open' : ''}`}>
       <button className="vpm-material-trigger" type="button" onClick={onToggle} aria-expanded={open}>
@@ -74,7 +75,7 @@ function Collection({ collection, reverse, search }) {
   }
   const groups = collection.groups.map(group => ({ ...group, items: group.items.filter(name => `${name} ${group.title} ${collection.title}`.toLowerCase().includes(search.toLowerCase().trim())) })).filter(group => group.items.length)
   if (!groups.length) return null
-  const gallery = openName ? imagesForProduct(openName) : []
+  const gallery = openName ? galleryFor(collection.id, openName) : []
   const image = openName ? (gallery[activePhoto] || null) : collectionImages[collection.id]
   const hasMissingPhoto = Boolean(openName && !gallery.length)
   return <article id={`vpm-${collection.id}`} className={`vpm-collection ${reverse ? 'vpm-collection--reverse' : ''}`}>

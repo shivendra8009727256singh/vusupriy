@@ -1,3 +1,10 @@
+import { artificialGrassImages, verticalGardenImages, artificialPlantImages } from './greenElementImages'
+import { inlayStoneImages } from './inlayStoneImages'
+import { carpetTileImages } from './carpetTileImages'
+import { concreteImages } from './concreteImages'
+import { sheetImages } from './sheetImages'
+import { wallMouldingImages } from './wallMouldingImages'
+import { wallpaperImages } from './wallpaperImages'
 import { wallPanelImages } from './wallPanelImages'
 import { laminateFinishes, laminateDetails } from './laminateFinishes'
 import { deckFinishes } from './deckFinishes'
@@ -17,6 +24,7 @@ export const productCategories = [
   ] },
   { id: 'walls', name: 'Wall Makeover Products', subtitle: 'Surfaces with a point of view', groups: [
     ['Wallpaper', ['Non-Woven Wallpaper','Customized Design Wallpaper','Fabric Wallpaper']],
+    ['Wall Moulding', ['Wall Moulding']],
     ['Wall Panels', ['WPC Panels','PVC Panels','Charcoal Metallic Panels','3D CNC Cutting Wall Panels','FRP Wall Panels','MDF Wall Panels']],
     ['Sheets', ['Texture Sheet','Fluted Acrylic Sheet','Natural Cork Sheet']],
     ['Concrete Work', ['Concrete Work (Walls & Outer Building Settings)']],
@@ -27,7 +35,10 @@ export const slugify = name => name.toLowerCase().replace(/&/g,'and').replace(/[
 
 export const catalogue = productCategories.flatMap(category => category.groups.flatMap(([group, names]) => names.map(name => ({
  category:category.id, categoryName:category.name, group, name, slug:slugify(name), url:`/products/${category.id}/${slugify(name)}`,
- images: wallPanelImages[name] ? wallPanelImages[name] : name === 'European Laminate' ? [...laminateFinishes.flatMap(f => f.images), ...laminateDetails] : name === 'Deck Flooring' ? deckFinishes.flatMap(f => f.images) : name === 'Wooden Deck Flooring' ? woodenFinishes.flatMap(f => f.images) : name === 'SPC Flooring' ? spcFinishes.flatMap(f => f.images) : imagesForProduct(name),
+ images: name === 'Stone & Inlay Work on Walls' ? inlayStoneImages : name === 'Carpet Tiles Flooring' ? carpetTileImages : concreteImages[name] ? concreteImages[name] : sheetImages[name] ? sheetImages[name] : wallMouldingImages[name] ? wallMouldingImages[name] : wallpaperImages[name] ? wallpaperImages[name] : wallPanelImages[name] ? wallPanelImages[name] : name === 'European Laminate' ? [...laminateFinishes.flatMap(f => f.images), ...laminateDetails] : name === 'Deck Flooring' ? deckFinishes.flatMap(f => f.images) : name === 'Wooden Deck Flooring' ? woodenFinishes.flatMap(f => f.images) : name === 'SPC Flooring' ? spcFinishes.flatMap(f => f.images) : name === 'Artificial Grass Flooring' ? artificialGrassImages
+: name === 'Vertical Garden' ? verticalGardenImages
+: name === 'Artificial Plant and Tree' ? artificialPlantImages
+: imagesForProduct(name),
  finishes:name === 'European Laminate' ? laminateFinishes : name === 'Deck Flooring' ? deckFinishes : name === 'Wooden Deck Flooring' ? woodenFinishes : name === 'SPC Flooring' ? spcFinishes : [],
  description:`Explore ${name.toLowerCase()} for carefully considered residential and commercial spaces. Our team can help you identify suitable styles, finishes and applications for your project.`,
  specifications:[['Product family',category.name],['Material / finish', 'Confirm available options with our team'],['Dimensions & thickness','Available on request'],['Installation guidance','Discuss with our specialists'],['Availability & pricing','Request a quotation']]

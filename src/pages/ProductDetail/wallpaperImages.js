@@ -1,0 +1,55 @@
+// Client-supplied wallpaper photographs; original category assignments preserved.
+export const wallpaperImages = {
+  "Customized Design Wallpaper": [
+    "/images/wallpaper-client/customized-01.webp",
+    "/images/wallpaper-client/customized-02.webp",
+    "/images/wallpaper-client/customized-03.webp",
+    "/images/wallpaper-client/customized-04.webp",
+    "/images/wallpaper-client/customized-05.webp",
+    "/images/wallpaper-client/customized-06.webp",
+    "/images/wallpaper-client/customized-07.webp",
+    "/images/wallpaper-client/customized-08.webp",
+    "/images/wallpaper-client/customized-09.webp",
+    "/images/wallpaper-client/customized-10.webp",
+    "/images/wallpaper-client/customized-11.webp",
+    "/images/wallpaper-client/customized-12.webp"
+  ],
+  "Fabric Wallpaper": [
+    "/images/wallpaper-client/fabric-01.webp",
+    "/images/wallpaper-client/fabric-02.webp",
+    "/images/wallpaper-client/fabric-03.webp",
+    "/images/wallpaper-client/fabric-04.webp",
+    "/images/wallpaper-client/fabric-05.webp",
+    "/images/wallpaper-client/fabric-06.webp",
+    "/images/wallpaper-client/fabric-07.webp",
+    "/images/wallpaper-client/fabric-08.webp",
+    "/images/wallpaper-client/fabric-09.webp",
+    "/images/wallpaper-client/fabric-10.webp",
+    "/images/wallpaper-client/fabric-11.webp",
+    "/images/wallpaper-client/fabric-12.webp",
+    "/images/wallpaper-client/fabric-13.webp",
+    "/images/wallpaper-client/fabric-14.webp",
+    "/images/wallpaper-client/fabric-15.webp",
+    "/images/wallpaper-client/fabric-16.webp",
+    "/images/wallpaper-client/fabric-17.webp",
+    "/images/wallpaper-client/fabric-18.webp",
+    "/images/wallpaper-client/fabric-19.webp",
+    "/images/wallpaper-client/fabric-20.webp"
+  ],
+  "Non-Woven Wallpaper": [
+    "/images/wallpaper-client/non-woven-01.webp",
+    "/images/wallpaper-client/non-woven-02.webp",
+    "/images/wallpaper-client/non-woven-03.webp",
+    "/images/wallpaper-client/non-woven-04.webp",
+    "/images/wallpaper-client/non-woven-05.webp",
+    "/images/wallpaper-client/non-woven-06.webp",
+    "/images/wallpaper-client/non-woven-07.webp",
+    "/images/wallpaper-client/non-woven-08.webp",
+    "/images/wallpaper-client/non-woven-09.webp",
+    "/images/wallpaper-client/non-woven-10.webp",
+    "/images/wallpaper-client/non-woven-11.webp",
+    "/images/wallpaper-client/non-woven-12.webp",
+    "/images/wallpaper-client/non-woven-13.webp",
+    "/images/wallpaper-client/non-woven-14.webp"
+  ]
+};
