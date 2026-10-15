@@ -1,3 +1,4 @@
+/* VASUPRIY_SPECIALITIES_IMAGE_MAPPING_V2 */
 import arunTeamImage from '../../assets/images/home/team/arun-sharma.png'
 import priyankaTeamImage from '../../assets/images/home/team/priyanka.png'
 import priyaTeamImage from '../../assets/images/home/team/priya.png'
@@ -142,13 +143,14 @@ const brandPartners = [
   { name: 'REHAU', logo: partnerRehau },
 ]
 
+/* VASUPRIY_ABOUT_SPECIALITIES_EXPERTISE_V1 */
 const specialityItems = [
   {
     id: '01',
     eyebrow: 'Artisan Crafted',
     title: 'Handcrafted Décor',
     image:
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=88',
+      '/images/home-expertise/hand-made-rugs.jpg',
     description:
       'Artisan-made décor that brings warmth, character and the soul of Indian craftsmanship into your home.',
   },
@@ -157,7 +159,7 @@ const specialityItems = [
     eyebrow: 'Made Around You',
     title: 'Customized Furniture',
     image:
-      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=88',
+      '/images/home-expertise/hdhmr.jpg',
     description:
       'Bespoke furniture thoughtfully customized around your space, lifestyle, materials and personal design language.',
   },
@@ -166,7 +168,7 @@ const specialityItems = [
     eyebrow: 'Rooted In Heritage',
     title: 'Traditional Art & Craft',
     image:
-      'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1400&q=88',
+      '/images/home-expertise/inlay-work.jpg',
     description:
       'Timeless Indian artistry reimagined for contemporary homes through skilled hands, detail and authentic craft.',
   },
@@ -175,7 +177,7 @@ const specialityItems = [
     eyebrow: 'Distinctive Details',
     title: 'Statement Pieces',
     image:
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=88',
+      '/images/home-expertise/frp-fountain.jpg',
     description:
       'Distinctive handcrafted accents designed to become memorable focal points within your interior.',
   },
@@ -184,9 +186,33 @@ const specialityItems = [
     eyebrow: 'Personal By Design',
     title: 'Made for Your Space',
     image:
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=88',
+      '/images/home-expertise/custom-mosaic-work.jpg',
     description:
       'Personalized creations shaped around your home, from dimensions and materials to finishes and final detailing.',
+  },
+  {
+    id: '06',
+    eyebrow: 'Textured Elegance',
+    title: 'Embroidered Wallpaper',
+    image: '/images/home-expertise/embroidered-wallpaper.jpg',
+    description:
+      'Refined embroidered wall coverings that bring texture, artistry and timeless sophistication to interior spaces.',
+  },
+  {
+    id: '07',
+    eyebrow: 'Artistic Expressions',
+    title: 'Mural Painting',
+    image: '/images/home-expertise/mural-painting.jpg',
+    description:
+      'Custom artistic murals crafted to transform walls into expressive and memorable design features.',
+  },
+  {
+    id: '08',
+    eyebrow: 'Sculpted Craftsmanship',
+    title: 'Stone Engraved',
+    image: '/images/home-expertise/stone-engraved.jpg',
+    description:
+      'Intricately engraved stone details that celebrate craftsmanship, texture and enduring architectural beauty.',
   },
 ]
 function About() {
@@ -457,7 +483,7 @@ function About() {
      */
     const holdTimer = window.setTimeout(() => {
       setSpecialitySliding(true)
-    }, 1500)
+    }, 900)
 
     return () => {
       window.clearTimeout(holdTimer)
@@ -477,7 +503,7 @@ function About() {
       ))
 
       setSpecialitySliding(false)
-    }, 2000)
+    }, 760)
 
     return () => {
       window.clearTimeout(slideTimer)

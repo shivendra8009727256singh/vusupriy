@@ -375,3 +375,163 @@
     transition: none;
   }
 }
+
+/* VASUPRIY_SPACE_PROCESS_BENEFITS_CLIENT_IMAGES_V1
+   Keep every photo attached to its existing process/benefit content. */
+.vasu-service-page--space-makeover .vasu-space-illustrated-card {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+.vasu-service-page--space-makeover .vasu-space-illustrated-card .vasu-space-card-photo {
+  display: block;
+  width: 100%;
+  height: clamp(175px, 19vw, 245px);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  margin: 0 0 20px;
+  flex-shrink: 0;
+  transition: transform .35s ease;
+}
+.vasu-service-page--space-makeover .vasu-space-benefit-copy {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.vasu-service-page--space-makeover .vasu-space-benefit-copy > span {
+  flex-shrink: 0;
+  color: #b48b48;
+  font-size: 25px;
+  line-height: 1.3;
+}
+.vasu-service-page--space-makeover .vasu-space-benefit-copy > div { min-width: 0; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .vasu-service-page--space-makeover .vasu-space-illustrated-card:hover .vasu-space-card-photo { transform: scale(1.015); }
+}
+@media (max-width: 600px) {
+  .vasu-service-page--space-makeover .vasu-space-illustrated-card .vasu-space-card-photo {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    margin-bottom: 15px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vasu-service-page--space-makeover .vasu-space-illustrated-card .vasu-space-card-photo { transition: none; }
+}
+/* VASUPRIY_SPACE_CLIENT_GALLERY_FILL_WIDTH_V1
+   Two client photos must occupy the full width of their content column,
+   not two of the four generic PDF gallery columns. */
+.vasu-service-page--space-makeover .vasu-space-client-galleries,
+.vasu-service-page--space-makeover .vasu-space-client-category {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+.vasu-service-page--space-makeover .vasu-space-client-category .vasu-pdf-gallery {
+  display: grid;
+  width: 100%;
+  max-width: none;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: clamp(12px, 1.4vw, 20px);
+}
+.vasu-service-page--space-makeover .vasu-space-client-category .vasu-pdf-gallery > img {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+}
+@media (max-width: 600px) {
+  .vasu-service-page--space-makeover .vasu-space-client-category .vasu-pdf-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .vasu-service-page--space-makeover .vasu-space-client-category .vasu-pdf-gallery > img {
+    aspect-ratio: 3 / 4;
+  }
+}
+@media (max-width: 380px) {
+  .vasu-service-page--space-makeover .vasu-space-client-category .vasu-pdf-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .vasu-service-page--space-makeover .vasu-space-client-category .vasu-pdf-gallery > img {
+    aspect-ratio: 4 / 3;
+  }
+}
+/* VASUPRIY_OTHER_SERVICES_CONTENT_PHOTOS_V1 */
+.vasu-service-page .vasu-client-detail-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  gap: clamp(12px, 1.5vw, 20px);
+  margin: 18px 0 26px;
+}
+.vasu-service-page .vasu-client-detail-photo {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #ede8dd;
+  aspect-ratio: 4 / 3;
+}
+.vasu-service-page .vasu-client-detail-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.vasu-service-page .vasu-custom-pdf-products .vasu-client-custom-product {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 0;
+  min-width: 0;
+}
+.vasu-service-page .vasu-client-custom-product-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  border-radius: 9px;
+  object-fit: cover;
+  margin: 0 0 15px;
+}
+.vasu-service-page .vasu-client-custom-product-copy { display: flex; gap: 12px; padding: 4px 6px 8px; }
+.vasu-service-page .vasu-client-custom-product-copy > span { color: #b48b48; font-size: 12px; font-weight: 800; flex: 0 0 auto; }
+.vasu-service-page .vasu-client-custom-product-copy > div { min-width: 0; }
+.vasu-service-page .vasu-custom-pdf-steps .vasu-client-custom-step {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  gap: 0;
+}
+.vasu-service-page .vasu-client-custom-step img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.vasu-service-page .vasu-client-custom-step > div {
+  display: flex;
+  gap: 12px;
+  padding: 17px 18px;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .vasu-service-page .vasu-client-detail-photo-grid { gap: 10px; }
+  .vasu-service-page .vasu-client-detail-photo { aspect-ratio: 3 / 4; }
+}
+@media (max-width: 380px) {
+  .vasu-service-page .vasu-client-detail-photo-grid { grid-template-columns: minmax(0, 1fr); }
+  .vasu-service-page .vasu-client-detail-photo { aspect-ratio: 4 / 3; }
+}

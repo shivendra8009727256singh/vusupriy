@@ -7031,3 +7031,99 @@
     overflow-wrap: break-word;
   }
 }
+
+
+/* =========================================================
+   VASUPRIY_SPECIALITIES_SMOOTH_SLIDER_V3
+   Animate forward movement only.
+   Reset track instantly without reverse animation.
+========================================================= */
+
+/* Resting state: do NOT animate position reset */
+.about-page .about-specialities-slider
+.about-specialities-grid {
+  transform: translate3d(0, 0, 0) !important;
+  transition: none !important;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Moving state: smooth horizontal transition */
+.about-page .about-specialities-slider
+.about-specialities-grid.is-sliding {
+  transition:
+    transform 2000ms cubic-bezier(0.45, 0, 0.55, 1)
+    !important;
+}
+
+/* Prevent old entrance animations from affecting cards */
+.about-page .about-specialities-slider
+.about-speciality-card {
+  animation: none !important;
+  will-change: auto;
+  backface-visibility: hidden;
+}
+
+/* Scroll reveal must not offset moving cards */
+.about-page .about-specialities-slider
+.about-speciality-card.about-scroll-reveal,
+.about-page .about-specialities-slider
+.about-speciality-card.about-scroll-reveal.is-revealed {
+  opacity: 1 !important;
+  filter: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Keep image hover movement */
+@media (hover: hover) {
+  .about-page .about-specialities-slider
+  .about-speciality-card:hover
+  .about-speciality-image img {
+    transform: translateZ(0) scale(1.055);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .about-page .about-specialities-slider
+  .about-specialities-grid,
+  .about-page .about-specialities-slider
+  .about-specialities-grid.is-sliding {
+    transition: none !important;
+  }
+}
+
+
+/* VASUPRIY_SPECIALITIES_SMOOTH_V4 */
+/* Important: the moving-state selector must outrank resting-state V3. */
+.about-page .about-specialities-slider .about-specialities-grid {
+  transform: translate3d(0, 0, 0) !important;
+  transition: none !important;
+  will-change: transform;
+}
+.about-page .about-specialities-slider .about-specialities-grid.is-sliding {
+  transform: translate3d(
+    calc(-1 * ((100% - (var(--speciality-gap) * 2)) / 3 + var(--speciality-gap))),
+    0, 0
+  ) !important;
+  transition: transform 700ms cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+}
+@media (max-width: 1000px) {
+  .about-page .about-specialities-slider .about-specialities-grid.is-sliding {
+    transform: translate3d(
+      calc(-1 * ((100% - var(--speciality-gap)) / 2 + var(--speciality-gap))),
+      0, 0
+    ) !important;
+  }
+}
+@media (max-width: 650px) {
+  .about-page .about-specialities-slider .about-specialities-grid.is-sliding {
+    transform: translate3d(-100%, 0, 0) !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-page .about-specialities-slider .about-specialities-grid.is-sliding {
+    transition: none !important;
+  }
+}

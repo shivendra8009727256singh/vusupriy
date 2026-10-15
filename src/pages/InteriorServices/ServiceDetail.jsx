@@ -1263,6 +1263,47 @@ const serviceEditorial = {
     "approach": "We match the visual concept to environmental conditions and maintenance preferences, creating a practical green layer for the space."
   }
 }
+/* VASUPRIY_CLIENT_CONTENT_IMAGES_V1: Client-owned photos grouped by real category. */
+const clientServicePhotos = {"drop-servicing/indian-artis":["/images/services-client/drop-servicing/indian-artis/019.jpg","/images/services-client/drop-servicing/indian-artis/024.jpg","/images/services-client/drop-servicing/indian-artis/028.jpg","/images/services-client/drop-servicing/indian-artis/032.png","/images/services-client/drop-servicing/indian-artis/039.png","/images/services-client/drop-servicing/indian-artis/040.png","/images/services-client/drop-servicing/indian-artis/072.jpg","/images/services-client/drop-servicing/indian-artis/085.jpg","/images/services-client/drop-servicing/indian-artis/086.jpg","/images/services-client/drop-servicing/indian-artis/091.jpg","/images/services-client/drop-servicing/indian-artis/100.jpg","/images/services-client/drop-servicing/indian-artis/103.jpg","/images/services-client/drop-servicing/indian-artis/104.jpg","/images/services-client/drop-servicing/indian-artis/108.jpg","/images/services-client/drop-servicing/indian-artis/111.png","/images/services-client/drop-servicing/indian-artis/113.jpg","/images/services-client/drop-servicing/indian-artis/114.jpg","/images/services-client/drop-servicing/indian-artis/122.jpg","/images/services-client/drop-servicing/indian-artis/128.jpg","/images/services-client/drop-servicing/indian-artis/137.png","/images/services-client/drop-servicing/indian-artis/141.png","/images/services-client/drop-servicing/indian-artis/145.jpg"],"drop-servicing/curtains-blinds":["/images/services-client/drop-servicing/curtains-blinds/005.jpg","/images/services-client/drop-servicing/curtains-blinds/009.jpg","/images/services-client/drop-servicing/curtains-blinds/041.jpg","/images/services-client/drop-servicing/curtains-blinds/043.jpg","/images/services-client/drop-servicing/curtains-blinds/044.jpg","/images/services-client/drop-servicing/curtains-blinds/045.jpg","/images/services-client/drop-servicing/curtains-blinds/046.jpg","/images/services-client/drop-servicing/curtains-blinds/048.jpg","/images/services-client/drop-servicing/curtains-blinds/050.jpg","/images/services-client/drop-servicing/curtains-blinds/051.jpg","/images/services-client/drop-servicing/curtains-blinds/056.jpg","/images/services-client/drop-servicing/curtains-blinds/112.jpg"],"space-makeover/stairs":["/images/services-client/space-makeover/stairs/129.jpg","/images/services-client/space-makeover/stairs/155.jpg","/images/services-client/space-makeover/stairs/157.jpg","/images/services-client/space-makeover/stairs/160.jpg","/images/services-client/space-makeover/stairs/165.jpg","/images/services-client/space-makeover/stairs/168.jpg","/images/services-client/space-makeover/stairs/169.jpg","/images/services-client/space-makeover/stairs/172.jpg","/images/services-client/space-makeover/stairs/173.jpg","/images/services-client/space-makeover/stairs/174.jpg","/images/services-client/space-makeover/stairs/175.jpg","/images/services-client/space-makeover/stairs/176.jpg","/images/services-client/space-makeover/stairs/177.jpg","/images/services-client/space-makeover/stairs/178.jpg","/images/services-client/space-makeover/stairs/179.jpg","/images/services-client/space-makeover/stairs/182.jpg","/images/services-client/space-makeover/stairs/184.jpg"],"drop-servicing/ac-electrical":["/images/services-client/drop-servicing/ac-electrical/007.jpg","/images/services-client/drop-servicing/ac-electrical/047.jpg","/images/services-client/drop-servicing/ac-electrical/078.png","/images/services-client/drop-servicing/ac-electrical/148.png"],"space-makeover/puja-room":["/images/services-client/space-makeover/puja-room/003.jpg","/images/services-client/space-makeover/puja-room/004.jpg","/images/services-client/space-makeover/puja-room/006.jpg","/images/services-client/space-makeover/puja-room/045.jpg","/images/services-client/space-makeover/puja-room/051.jpg","/images/services-client/space-makeover/puja-room/080.jpg"],"space-makeover/living-room":["/images/services-client/space-makeover/living-room/027.jpg","/images/services-client/space-makeover/living-room/032.jpg","/images/services-client/space-makeover/living-room/036.jpg","/images/services-client/space-makeover/living-room/037.jpg","/images/services-client/space-makeover/living-room/039.jpg","/images/services-client/space-makeover/living-room/040.jpg","/images/services-client/space-makeover/living-room/042.jpg","/images/services-client/space-makeover/living-room/050.jpg","/images/services-client/space-makeover/living-room/059.jpg","/images/services-client/space-makeover/living-room/073.jpg","/images/services-client/space-makeover/living-room/075.png","/images/services-client/space-makeover/living-room/083.jpg","/images/services-client/space-makeover/living-room/088.jpg","/images/services-client/space-makeover/living-room/094.jpg","/images/services-client/space-makeover/living-room/097.jpg","/images/services-client/space-makeover/living-room/101.jpg","/images/services-client/space-makeover/living-room/103.jpg","/images/services-client/space-makeover/living-room/104.jpg","/images/services-client/space-makeover/living-room/105.jpg","/images/services-client/space-makeover/living-room/106.jpg","/images/services-client/space-makeover/living-room/108.jpg","/images/services-client/space-makeover/living-room/113.jpg","/images/services-client/space-makeover/living-room/128.jpg"],"drop-servicing/mirror-glazing/glass-doors":["/images/services-client/drop-servicing/mirror-glazing/glass-doors/036.jpg","/images/services-client/drop-servicing/mirror-glazing/glass-doors/106.jpg","/images/services-client/drop-servicing/mirror-glazing/glass-doors/109.jpg","/images/services-client/drop-servicing/mirror-glazing/glass-doors/120.jpg","/images/services-client/drop-servicing/mirror-glazing/glass-doors/121.jpg","/images/services-client/drop-servicing/mirror-glazing/glass-doors/124.jpg","/images/services-client/drop-servicing/mirror-glazing/glass-doors/125.jpg","/images/services-client/drop-servicing/mirror-glazing/glass-doors/143.jpg"],"drop-servicing/epoxy-flooring":["/images/services-client/drop-servicing/epoxy-flooring/017.png","/images/services-client/drop-servicing/epoxy-flooring/052.png","/images/services-client/drop-servicing/epoxy-flooring/054.png","/images/services-client/drop-servicing/epoxy-flooring/061.png","/images/services-client/drop-servicing/epoxy-flooring/071.png","/images/services-client/drop-servicing/epoxy-flooring/079.png","/images/services-client/drop-servicing/epoxy-flooring/083.png","/images/services-client/drop-servicing/epoxy-flooring/096.png","/images/services-client/drop-servicing/epoxy-flooring/107.png"],"drop-servicing/architectural-civil":["/images/services-client/drop-servicing/architectural-civil/001.jpg","/images/services-client/drop-servicing/architectural-civil/010.jpg","/images/services-client/drop-servicing/architectural-civil/021.png","/images/services-client/drop-servicing/architectural-civil/022.jpg","/images/services-client/drop-servicing/architectural-civil/055.jpg","/images/services-client/drop-servicing/architectural-civil/068.jpg","/images/services-client/drop-servicing/architectural-civil/070.jpg","/images/services-client/drop-servicing/architectural-civil/084.jpg","/images/services-client/drop-servicing/architectural-civil/098.jpg","/images/services-client/drop-servicing/architectural-civil/119.jpg","/images/services-client/drop-servicing/architectural-civil/147.png"],"custom-theme/rugs":["/images/services-client/custom-theme/rugs/021.png","/images/services-client/custom-theme/rugs/023.png","/images/services-client/custom-theme/rugs/026.png","/images/services-client/custom-theme/rugs/027.png","/images/services-client/custom-theme/rugs/028.png","/images/services-client/custom-theme/rugs/029.png","/images/services-client/custom-theme/rugs/034.png","/images/services-client/custom-theme/rugs/036.png","/images/services-client/custom-theme/rugs/037.png","/images/services-client/custom-theme/rugs/038.png","/images/services-client/custom-theme/rugs/042.png","/images/services-client/custom-theme/rugs/044.png"],"drop-servicing/mirror-glazing/sunroofing-skylight":["/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/034.jpg","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/035.jpg","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/042.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/074.jpg","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/099.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/105.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/130.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/131.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/133.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/134.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/139.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/140.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/142.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/144.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/146.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/149.png","/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/151.png"],"space-makeover/kitchen":["/images/services-client/space-makeover/kitchen/069.jpg","/images/services-client/space-makeover/kitchen/070.jpg","/images/services-client/space-makeover/kitchen/077.jpg","/images/services-client/space-makeover/kitchen/082.jpg","/images/services-client/space-makeover/kitchen/085.jpg","/images/services-client/space-makeover/kitchen/089.jpg","/images/services-client/space-makeover/kitchen/092.jpg","/images/services-client/space-makeover/kitchen/096.png","/images/services-client/space-makeover/kitchen/098.jpg","/images/services-client/space-makeover/kitchen/107.jpg","/images/services-client/space-makeover/kitchen/109.jpg","/images/services-client/space-makeover/kitchen/111.jpg","/images/services-client/space-makeover/kitchen/112.jpg","/images/services-client/space-makeover/kitchen/116.jpg","/images/services-client/space-makeover/kitchen/118.jpg","/images/services-client/space-makeover/kitchen/119.jpg","/images/services-client/space-makeover/kitchen/120.jpg","/images/services-client/space-makeover/kitchen/125.jpg","/images/services-client/space-makeover/kitchen/130.jpg","/images/services-client/space-makeover/kitchen/131.jpg","/images/services-client/space-makeover/kitchen/134.jpg","/images/services-client/space-makeover/kitchen/136.jpg","/images/services-client/space-makeover/kitchen/137.jpg","/images/services-client/space-makeover/kitchen/138.jpg","/images/services-client/space-makeover/kitchen/140.jpg","/images/services-client/space-makeover/kitchen/142.jpg","/images/services-client/space-makeover/kitchen/144.jpg"],"custom-theme/floor":["/images/services-client/custom-theme/floor/031.png","/images/services-client/custom-theme/floor/035.png","/images/services-client/custom-theme/floor/039.png","/images/services-client/custom-theme/floor/040.png","/images/services-client/custom-theme/floor/041.png","/images/services-client/custom-theme/floor/043.png","/images/services-client/custom-theme/floor/045.webp","/images/services-client/custom-theme/floor/046.png","/images/services-client/custom-theme/floor/047.png"],"drop-servicing/lift-installation":["/images/services-client/drop-servicing/lift-installation/008.png","/images/services-client/drop-servicing/lift-installation/059.png","/images/services-client/drop-servicing/lift-installation/089.png","/images/services-client/drop-servicing/lift-installation/092.png","/images/services-client/drop-servicing/lift-installation/135.png"],"drop-servicing/2d-3d-drawing":["/images/services-client/drop-servicing/2d-3d-drawing/004.jpg","/images/services-client/drop-servicing/2d-3d-drawing/016.jpg","/images/services-client/drop-servicing/2d-3d-drawing/023.png","/images/services-client/drop-servicing/2d-3d-drawing/025.png","/images/services-client/drop-servicing/2d-3d-drawing/033.jpg","/images/services-client/drop-servicing/2d-3d-drawing/053.jpg","/images/services-client/drop-servicing/2d-3d-drawing/067.jpg","/images/services-client/drop-servicing/2d-3d-drawing/076.jpg","/images/services-client/drop-servicing/2d-3d-drawing/077.jpg","/images/services-client/drop-servicing/2d-3d-drawing/082.jpg"],"custom-theme/garden":["/images/services-client/custom-theme/garden/008.png","/images/services-client/custom-theme/garden/009.png","/images/services-client/custom-theme/garden/018.png","/images/services-client/custom-theme/garden/019.png","/images/services-client/custom-theme/garden/020.png","/images/services-client/custom-theme/garden/022.png","/images/services-client/custom-theme/garden/024.png","/images/services-client/custom-theme/garden/025.png","/images/services-client/custom-theme/garden/030.png","/images/services-client/custom-theme/garden/032.png","/images/services-client/custom-theme/garden/033.png"],"space-makeover/bedroom":["/images/services-client/space-makeover/bedroom/151.jpg","/images/services-client/space-makeover/bedroom/152.jpg","/images/services-client/space-makeover/bedroom/156.jpg","/images/services-client/space-makeover/bedroom/159.jpg","/images/services-client/space-makeover/bedroom/161.jpg","/images/services-client/space-makeover/bedroom/162.jpg","/images/services-client/space-makeover/bedroom/166.jpg","/images/services-client/space-makeover/bedroom/180.jpg"],"space-makeover/cafe-restaurant-salon":["/images/services-client/space-makeover/cafe-restaurant-salon/001.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/002.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/005.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/008.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/009.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/010.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/013.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/014.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/015.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/016.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/018.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/019.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/020.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/023.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/028.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/029.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/031.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/033.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/035.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/038.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/041.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/044.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/046.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/048.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/049.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/052.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/053.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/054.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/055.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/058.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/060.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/061.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/063.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/064.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/066.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/067.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/068.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/071.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/072.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/074.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/076.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/078.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/079.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/084.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/087.jpg"],"drop-servicing/garden-setup":["/images/services-client/drop-servicing/garden-setup/011.png","/images/services-client/drop-servicing/garden-setup/012.jpg","/images/services-client/drop-servicing/garden-setup/015.png","/images/services-client/drop-servicing/garden-setup/018.png","/images/services-client/drop-servicing/garden-setup/064.png","/images/services-client/drop-servicing/garden-setup/065.png","/images/services-client/drop-servicing/garden-setup/069.png","/images/services-client/drop-servicing/garden-setup/075.png","/images/services-client/drop-servicing/garden-setup/094.png","/images/services-client/drop-servicing/garden-setup/095.png","/images/services-client/drop-servicing/garden-setup/097.png","/images/services-client/drop-servicing/garden-setup/101.png","/images/services-client/drop-servicing/garden-setup/110.png","/images/services-client/drop-servicing/garden-setup/117.png","/images/services-client/drop-servicing/garden-setup/118.png","/images/services-client/drop-servicing/garden-setup/126.png","/images/services-client/drop-servicing/garden-setup/127.png","/images/services-client/drop-servicing/garden-setup/132.png","/images/services-client/drop-servicing/garden-setup/138.png"],"space-makeover/office":["/images/services-client/space-makeover/office/100.jpg","/images/services-client/space-makeover/office/102.jpg","/images/services-client/space-makeover/office/110.jpg","/images/services-client/space-makeover/office/114.jpg","/images/services-client/space-makeover/office/115.jpg","/images/services-client/space-makeover/office/117.jpg","/images/services-client/space-makeover/office/121.jpg","/images/services-client/space-makeover/office/122.jpg","/images/services-client/space-makeover/office/123.jpg","/images/services-client/space-makeover/office/124.jpg","/images/services-client/space-makeover/office/126.jpg","/images/services-client/space-makeover/office/127.jpg","/images/services-client/space-makeover/office/132.jpg","/images/services-client/space-makeover/office/133.jpg","/images/services-client/space-makeover/office/135.jpg","/images/services-client/space-makeover/office/139.jpg","/images/services-client/space-makeover/office/141.jpg","/images/services-client/space-makeover/office/143.jpg","/images/services-client/space-makeover/office/145.jpg","/images/services-client/space-makeover/office/146.jpg","/images/services-client/space-makeover/office/147.jpg","/images/services-client/space-makeover/office/148.jpg","/images/services-client/space-makeover/office/149.jpg","/images/services-client/space-makeover/office/150.jpg","/images/services-client/space-makeover/office/153.jpg","/images/services-client/space-makeover/office/154.jpg","/images/services-client/space-makeover/office/158.jpg","/images/services-client/space-makeover/office/163.jpg","/images/services-client/space-makeover/office/164.jpg","/images/services-client/space-makeover/office/167.jpg","/images/services-client/space-makeover/office/170.jpg","/images/services-client/space-makeover/office/171.jpg","/images/services-client/space-makeover/office/181.png","/images/services-client/space-makeover/office/183.png"],"custom-theme/furnishing":["/images/services-client/custom-theme/furnishing/001.jpg","/images/services-client/custom-theme/furnishing/002.jpg","/images/services-client/custom-theme/furnishing/003.jpg","/images/services-client/custom-theme/furnishing/004.jpg","/images/services-client/custom-theme/furnishing/005.jpg","/images/services-client/custom-theme/furnishing/006.jpg","/images/services-client/custom-theme/furnishing/007.jpg","/images/services-client/custom-theme/furnishing/010.jpg","/images/services-client/custom-theme/furnishing/011.jpg","/images/services-client/custom-theme/furnishing/012.jpg","/images/services-client/custom-theme/furnishing/013.jpg","/images/services-client/custom-theme/furnishing/014.jpg","/images/services-client/custom-theme/furnishing/015.jpg","/images/services-client/custom-theme/furnishing/016.jpg","/images/services-client/custom-theme/furnishing/017.jpg"],"drop-servicing/windows-doors":["/images/services-client/drop-servicing/windows-doors/002.jpg","/images/services-client/drop-servicing/windows-doors/003.jpg","/images/services-client/drop-servicing/windows-doors/006.jpg","/images/services-client/drop-servicing/windows-doors/014.jpg","/images/services-client/drop-servicing/windows-doors/020.jpg","/images/services-client/drop-servicing/windows-doors/026.jpg","/images/services-client/drop-servicing/windows-doors/029.jpg","/images/services-client/drop-servicing/windows-doors/030.jpg","/images/services-client/drop-servicing/windows-doors/031.jpg","/images/services-client/drop-servicing/windows-doors/060.jpg","/images/services-client/drop-servicing/windows-doors/073.jpg","/images/services-client/drop-servicing/windows-doors/080.jpg","/images/services-client/drop-servicing/windows-doors/081.jpg","/images/services-client/drop-servicing/windows-doors/087.jpg","/images/services-client/drop-servicing/windows-doors/088.jpg","/images/services-client/drop-servicing/windows-doors/090.jpg","/images/services-client/drop-servicing/windows-doors/093.jpg","/images/services-client/drop-servicing/windows-doors/102.jpg","/images/services-client/drop-servicing/windows-doors/116.jpg"],"drop-servicing/nano-coating":["/images/services-client/drop-servicing/nano-coating/013.jpg","/images/services-client/drop-servicing/nano-coating/049.jpg","/images/services-client/drop-servicing/nano-coating/057.jpg","/images/services-client/drop-servicing/nano-coating/058.jpg","/images/services-client/drop-servicing/nano-coating/062.jpg","/images/services-client/drop-servicing/nano-coating/063.jpg","/images/services-client/drop-servicing/nano-coating/066.jpg"],"space-makeover/washroom":["/images/services-client/space-makeover/washroom/007.jpg","/images/services-client/space-makeover/washroom/011.jpg","/images/services-client/space-makeover/washroom/012.jpg","/images/services-client/space-makeover/washroom/017.jpg","/images/services-client/space-makeover/washroom/021.jpg","/images/services-client/space-makeover/washroom/022.jpg","/images/services-client/space-makeover/washroom/024.jpg","/images/services-client/space-makeover/washroom/025.jpg","/images/services-client/space-makeover/washroom/026.jpg","/images/services-client/space-makeover/washroom/030.jpg","/images/services-client/space-makeover/washroom/034.jpg","/images/services-client/space-makeover/washroom/043.jpg","/images/services-client/space-makeover/washroom/047.jpg","/images/services-client/space-makeover/washroom/056.jpg","/images/services-client/space-makeover/washroom/057.jpg","/images/services-client/space-makeover/washroom/062.jpg","/images/services-client/space-makeover/washroom/065.jpg","/images/services-client/space-makeover/washroom/081.jpg","/images/services-client/space-makeover/washroom/086.jpg","/images/services-client/space-makeover/washroom/090.jpg","/images/services-client/space-makeover/washroom/091.jpg","/images/services-client/space-makeover/washroom/093.jpg","/images/services-client/space-makeover/washroom/095.jpg","/images/services-client/space-makeover/washroom/099.jpg"],"drop-servicing/mirror-glazing/partitions":["/images/services-client/drop-servicing/mirror-glazing/partitions/027.jpg","/images/services-client/drop-servicing/mirror-glazing/partitions/037.jpg","/images/services-client/drop-servicing/mirror-glazing/partitions/038.jpg","/images/services-client/drop-servicing/mirror-glazing/partitions/115.jpg","/images/services-client/drop-servicing/mirror-glazing/partitions/123.jpg","/images/services-client/drop-servicing/mirror-glazing/partitions/129.jpg","/images/services-client/drop-servicing/mirror-glazing/partitions/136.jpg","/images/services-client/drop-servicing/mirror-glazing/partitions/150.jpg"]}
+const clientServiceCategories = {
+  'space-designing-makeover': [
+    ['space-makeover/bedroom','space-makeover/living-room','space-makeover/kitchen','space-makeover/puja-room','space-makeover/washroom','space-makeover/office','space-makeover/stairs','space-makeover/cafe-restaurant-salon'],
+    ['space-makeover/office','space-makeover/stairs','space-makeover/living-room'],
+    ['space-makeover/cafe-restaurant-salon','space-makeover/bedroom','space-makeover/puja-room'],
+    ['space-makeover/kitchen','space-makeover/washroom','space-makeover/living-room'],
+  ],
+  'drop-servicing-installation': [
+    ['drop-servicing/architectural-civil'],
+    ['drop-servicing/2d-3d-drawing'],
+    ['drop-servicing/mirror-glazing/glass-doors','drop-servicing/mirror-glazing/partitions','drop-servicing/mirror-glazing/sunroofing-skylight'],
+    ['drop-servicing/windows-doors'],
+    ['drop-servicing/ac-electrical'],
+    ['drop-servicing/garden-setup'],
+    ['drop-servicing/epoxy-flooring'],
+    ['drop-servicing/indian-artis'],
+    ['drop-servicing/curtains-blinds'],
+    ['drop-servicing/nano-coating'],
+    ['drop-servicing/lift-installation'],
+  ],
+  'customized-theme-products': [
+    ['custom-theme/floor'],
+    [], // No wall-panel images supplied; retain the existing, relevant illustrations.
+    ['custom-theme/rugs'],
+    ['custom-theme/furnishing'],
+    ['custom-theme/garden'],
+  ],
+}
+const clientRoomLabels = {
+  'bedroom': 'Bedroom', 'cafe-restaurant-salon': 'Cafe, Restaurant & Salon',
+  'kitchen': 'Kitchen', 'living-room': 'Living Room', 'office': 'Office',
+  'puja-room': 'Puja Room', 'stairs': 'Staircase', 'washroom': 'Washroom',
+}
+
+
+/* VASUPRIY_SPACE_PROCESS_BENEFITS_CLIENT_IMAGES_V1 */
+const spaceProcessAndBenefitsPhotos = ["/images/services-client/space-makeover/living-room/027.jpg","/images/services-client/space-makeover/office/100.jpg","/images/services-client/space-makeover/kitchen/069.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/001.jpg","/images/services-client/space-makeover/washroom/007.jpg","/images/services-client/space-makeover/stairs/129.jpg","/images/services-client/space-makeover/bedroom/151.jpg","/images/services-client/space-makeover/puja-room/003.jpg"]
+
+/* VASUPRIY_OTHER_SERVICES_CONTENT_PHOTOS_V1 */
 function ServiceDetail() {
   const location = useLocation()
   const slug = location.pathname.split('/').filter(Boolean).at(-1)
@@ -1348,9 +1389,16 @@ function ServiceDetail() {
 
   const selected = service.items[selectedIndex] || service.items[0]
   const imageGroup = serviceImages[slug]
-  const selectedImages = (imageGroup?.items[selectedIndex] || [])
-    .map(findImage)
-    .filter(Boolean)
+  const selectedClientCategoryKeys = clientServiceCategories[slug]?.[selectedIndex] || []
+  const selectedClientGroups = selectedClientCategoryKeys.map((key) => ({
+    key,
+    label: clientRoomLabels[key.split('/').pop()] || selected.title,
+    images: clientServicePhotos[key] || [],
+  })).filter((group) => group.images.length > 0)
+  const existingSelectedImages = (imageGroup?.items[selectedIndex] || []).map(findImage).filter(Boolean)
+  const selectedImages = selectedClientGroups.length > 0
+    ? selectedClientGroups.flatMap((group) => group.images).slice(0, 5)
+    : existingSelectedImages
 
   return (
     <main className={`vasu-service-page ${slug === 'space-designing-makeover' ? 'vasu-service-page--space-makeover' : ''}`}>
@@ -1467,8 +1515,8 @@ function ServiceDetail() {
     <span className="vasu-service-gap-eyebrow">DESIGN INSPIRATION</span>
     <h3>Made for Your Space</h3>
     <p>Discover ideas and details tailored to your interior vision.</p>
-    {findImage(serviceImages[slug]?.hero) && (
-      <img src={findImage(serviceImages[slug]?.hero)} alt={`${service.title} interior inspiration`} loading="lazy" decoding="async" />
+    {selectedImages[0] && (
+      <img src={selectedImages[0]} alt={`${selected.title} interior inspiration`} loading="lazy" decoding="async" />
     )}
     <Link to="/contact">Discuss Your Project <span aria-hidden="true">&#8599;</span></Link>
   </div>
@@ -1485,6 +1533,30 @@ function ServiceDetail() {
             <p className="vasu-service-lead">
               {selected.description || service.description}
             </p>
+            {slug === 'space-designing-makeover' && selectedClientGroups.length > 0 && (
+              <div className="vasu-space-client-galleries" aria-label={`${selected.title} related client photographs`}>
+                {selectedClientGroups.map((group) => (
+                  <section className="vasu-space-client-category" key={group.key} style={{ margin: '24px 0' }}>
+                    <h3 style={{ marginBottom: 12 }}>{group.label}</h3>
+                    <div className="vasu-pdf-gallery">
+                      {group.images.slice(0, 2).map((src, index) => (
+                        <img key={src} src={src} loading="lazy" decoding="async" alt={`${group.label} project photograph ${index + 1}`} />
+                      ))}
+                    </div>
+                    {group.images.length > 2 && (
+                      <details style={{ marginTop: 12 }}>
+                        <summary style={{ cursor: 'pointer', fontWeight: 600 }}>View more {group.label} photos ({group.images.length - 2})</summary>
+                        <div className="vasu-pdf-gallery" style={{ marginTop: 14 }}>
+                          {group.images.slice(2).map((src, index) => (
+                            <img key={src} src={src} loading="lazy" decoding="async" alt={`${group.label} project photograph ${index + 3}`} />
+                          ))}
+                        </div>
+                      </details>
+                    )}
+                  </section>
+                ))}
+              </div>
+            )}
 
             {slug !== 'space-designing-makeover' && serviceEditorial[selected.title] && (
               <div className="vasu-service-editorial-intro">
@@ -1495,6 +1567,15 @@ function ServiceDetail() {
             {slug === 'drop-servicing-installation' && (
               <div className="vasu-drop-pdf-detail" key={selectedIndex}>
                 <span className="vasu-drop-pdf-eyebrow">VASUPRIY INTERIOVILLA / SERVICE DETAILS</span>
+                {selectedImages.length > 0 && (
+                  <div className="vasu-client-detail-photo-grid" aria-label={`${selected.title} client projects`}>
+                    {selectedImages.slice(0, 2).map((src, index) => (
+                      <figure className="vasu-client-detail-photo" key={src}>
+                        <img src={src} loading="lazy" decoding="async" alt={`${selected.title} project ${index + 1}`} />
+                      </figure>
+                    ))}
+                  </div>
+                )}
                 {(dropPdfDetails[selectedIndex] || []).map((block, i) =>
                   block.type === 'heading' ? <h3 key={i}>{block.text}</h3> :
                   block.type === 'bullet' ? <p className="vasu-drop-pdf-bullet" key={i}>{block.text}</p> :
@@ -1525,9 +1606,16 @@ function ServiceDetail() {
                   <h3>What We Customize</h3>
                   <div className="vasu-custom-pdf-products">
                     {service.items.map((item, index) => (
-                      <div className={`vasu-custom-pdf-product ${selectedIndex === index ? 'is-selected' : ''}`} key={item.title}>
-                        <span>{String(index + 1).padStart(2, '0')}</span>
-                        <div><h4>{item.title}</h4><p>{item.description}</p></div>
+                      <div className={`vasu-custom-pdf-product vasu-client-custom-product ${selectedIndex === index ? 'is-selected' : ''}`} key={item.title}>
+                        {(() => {
+                          const key = clientServiceCategories['customized-theme-products']?.[index]?.[0]
+                          const src = clientServicePhotos[key]?.[0] || existingSelectedImages[0]
+                          return src ? <img className="vasu-client-custom-product-photo" src={src} loading="lazy" decoding="async" alt={`${item.title} project photograph`} /> : null
+                        })()}
+                        <div className="vasu-client-custom-product-copy">
+                          <span>{String(index + 1).padStart(2, '0')}</span>
+                          <div><h4>{item.title}</h4><p>{item.description}</p></div>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -1537,30 +1625,17 @@ function ServiceDetail() {
                   <h3>Step-by-Step Customization</h3>
                   <div className="vasu-custom-pdf-steps">
                     {['Share Your Theme', 'Design & Concept Planning', 'Material Selection', 'Crafting & Installation'].map((step, index) => (
-                      <div key={step}><span>0{index + 1}</span><h4>{step}</h4></div>
+                      <div className="vasu-client-custom-step" key={step}>
+                        <img src={clientServicePhotos[['custom-theme/furnishing', 'custom-theme/floor', 'custom-theme/rugs', 'custom-theme/garden'][index]][0]} alt={`${step} - client design inspiration`} loading="lazy" decoding="async" />
+                        <div><span>0{index + 1}</span><h4>{step}</h4></div>
+                      </div>
                     ))}
                   </div>
                 </section>
               </div>
             )}
-            {slug === 'customized-theme-products' && (<div className="vasu-custom-pdf-gallery-heading"><span className="vasu-custom-pdf-eyebrow">05 / OUR WORK</span><h3>Gallery &amp; Portfolio</h3></div>)}
-            {/* VASUPRIY_CUSTOM_FINAL_UI_V1: one shared responsive gallery for all five product types */}
-            {slug === 'customized-theme-products' && (
-              <div className="vasu-custom-final-gallery" aria-label="Customized products gallery">
-                {(imageGroup?.items || [])
-                  .flat()
-                  .filter((name, index, all) => all.indexOf(name) === index)
-                  .map(findImage)
-                  .filter(Boolean)
-                  .slice(0, 9)
-                  .map((src, index) => (
-                    <figure key={src} className="vasu-custom-final-gallery-item">
-                      <img src={src} alt={`Customized interior product example ${index + 1}`} loading="lazy" decoding="async" />
-                    </figure>
-                  ))}
-              </div>
-            )}
-            {slug !== 'customized-theme-products' && selectedImages.length > 0 && (
+
+            {slug === 'customized-theme-products' && selectedImages.length > 0 && (
               <div
                 className="vasu-service-image-gallery"
                 style={{ margin: '30px 0 38px' }}
@@ -1640,12 +1715,7 @@ function ServiceDetail() {
           </div>
         <div className="vasu-service-gallery-showcase">
           <div className="vasu-sidebar-vertical-gallery">
-              {(imageGroup?.items || [])
-                .flat()
-                .filter((name, index, arr) => arr.indexOf(name) === index)
-                .map(findImage)
-                .filter(Boolean)
-                .slice(0, 2)
+              {selectedImages.slice(0, 2)
                 .map((src, index) => (
                   <div
                     className="vasu-sidebar-gallery-image"
@@ -1708,21 +1778,14 @@ function ServiceDetail() {
                     ['Material & Element Finalization', 'Selecting the finest wallpapers, furnishings, and decor elements.'],
                     ['Seamless Execution', 'On-ground team handling the entire room transformation with zero hassle.'],
                   ].map(([title, detail], index) => (
-                    <div className="vasu-pdf-step" key={title}>
+                    <div className="vasu-pdf-step vasu-space-illustrated-card" key={title}>
+                      <img className="vasu-space-card-photo" src={spaceProcessAndBenefitsPhotos[index]} alt={`${title} â€” interior project inspiration`} loading="lazy" decoding="async" />
                       <span>STEP {index + 1}</span><h3>{title}</h3><p>{detail}</p>
                     </div>
                   ))}
                 </div>
               </section>
-              <section className="vasu-pdf-section" aria-labelledby="vasu-space-gallery">
-                <div className="vasu-pdf-section-heading"><span>03 / OUR WORK</span><h2 id="vasu-space-gallery">Gallery & Portfolio</h2></div>
-                <div className="vasu-pdf-gallery">
-                  {(imageGroup?.items || []).flat()
-                    .filter((name, index, arr) => arr.indexOf(name) === index)
-                    .map(findImage).filter(Boolean).slice(0, 4)
-                    .map((src, index) => <img key={src} src={src} loading="lazy" decoding="async" alt={`Space makeover portfolio example ${index + 1}`} />)}
-                </div>
-              </section>
+
               <section className="vasu-pdf-section" aria-labelledby="vasu-space-why">
                 <div className="vasu-pdf-section-heading"><span>04 / WHY CHOOSE US</span><h2 id="vasu-space-why">Why Opt for Our Space Makeover?</h2></div>
                 <div className="vasu-pdf-grid vasu-pdf-grid--two">
@@ -1731,8 +1794,11 @@ function ServiceDetail() {
                     ['Maximum Utility', 'Precise space planning and layout optimization for even the tightest spaces.'],
                     ['Tailored to You', 'Unique aesthetic designs built entirely around your personal taste.'],
                     ['Hassle-Free Expertise', 'Dedicated interior design professionals managing everything from start to finish.'],
-                  ].map(([title, detail]) => (
-                    <div className="vasu-pdf-benefit" key={title}><span aria-hidden="true">&#10003;</span><div><h3>{title}</h3><p>{detail}</p></div></div>
+                  ].map(([title, detail], index) => (
+                    <div className="vasu-pdf-benefit vasu-space-illustrated-card" key={title}>
+                      <img className="vasu-space-card-photo" src={spaceProcessAndBenefitsPhotos[index + 4]} alt={`${title} â€” interior project inspiration`} loading="lazy" decoding="async" />
+                      <div className="vasu-space-benefit-copy"><span aria-hidden="true">&#10003;</span><div><h3>{title}</h3><p>{detail}</p></div></div>
+                    </div>
                   ))}
                 </div>
               </section>

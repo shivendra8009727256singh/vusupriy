@@ -1,0 +1,2298 @@
+{
+    "version":  1,
+    "total":  382,
+    "images":  [
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/001.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260605-WA0003.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/002.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260811-WA0028.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "puja-room",
+                       "src":  "/images/services-client/space-makeover/puja-room/003.jpg",
+                       "original":  "Space makeover or designing /Puja room/IMG-20260814-WA0115.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "puja-room",
+                       "src":  "/images/services-client/space-makeover/puja-room/004.jpg",
+                       "original":  "Space makeover or designing /Puja room/IMG-20260814-WA0123.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/005.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0039.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "puja-room",
+                       "src":  "/images/services-client/space-makeover/puja-room/006.jpg",
+                       "original":  "Space makeover or designing /Puja room/IMG-20260814-WA0122.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/007.jpg",
+                       "original":  "Space makeover or designing /Washroom/b243993f7bce83ad854009c1f935d593.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/008.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0020.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/009.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0025.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/010.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0053.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/011.jpg",
+                       "original":  "Space makeover or designing /Washroom/59906b928554cb9a2f844f9b43092037.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/012.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260813-WA0134.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/013.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0055.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/014.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0112.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/015.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0043.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/016.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0023.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/017.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0058.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/018.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0013.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/019.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0026.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/020.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0083.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/021.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0066.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/022.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0073.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/023.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260813-WA0114.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/024.jpg",
+                       "original":  "Space makeover or designing /Washroom/4f96b54a72fdef866ae981301e049be9.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/025.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0069.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/026.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0062.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/027.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20261006-WA0044.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/028.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0031.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/029.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0012.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/030.jpg",
+                       "original":  "Space makeover or designing /Washroom/5e7ff4977bdb6763a1cf700aedb386ba.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/031.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0030.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/032.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0128.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/033.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0044.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/034.jpg",
+                       "original":  "Space makeover or designing /Washroom/5fd93f3e180b2cc1f06c72726af1bee6.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/035.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0028.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/036.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0103.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/037.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0105.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/038.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0011.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/039.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0096.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/040.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0095.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/041.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0049.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/042.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0097.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/043.jpg",
+                       "original":  "Space makeover or designing /Washroom/9732e7005e57ec56bef7ff3a5d15b2e2.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/044.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0051.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "puja-room",
+                       "src":  "/images/services-client/space-makeover/puja-room/045.jpg",
+                       "original":  "Space makeover or designing /Puja room/IMG-20260814-WA0130.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/046.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/a90e26107cdb2d1aaf4a6230570f115a.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/047.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0082.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/048.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0037.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/049.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0021.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/050.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20261006-WA0042.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "puja-room",
+                       "src":  "/images/services-client/space-makeover/puja-room/051.jpg",
+                       "original":  "Space makeover or designing /Puja room/IMG-20260814-WA0116.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/052.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0056.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/053.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0034.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/054.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260126-WA0061.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/055.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0042.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/056.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0084.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/057.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0065.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/058.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0029.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/059.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0134.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/060.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0149.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/061.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0009.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/062.jpg",
+                       "original":  "Space makeover or designing /Washroom/f9da9c494bc0fae6b287ddef4ea9f795.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/063.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0040.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/064.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0010.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/065.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0083.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/066.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260623-WA0027.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/067.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0036.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/068.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0050.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/069.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260813-WA0038.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/070.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0159.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/071.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0045.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/072.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0054.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/073.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0133.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/074.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0052.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/075.png",
+                       "original":  "Space makeover or designing /Living room/10_20261010_140228_0008.png"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/076.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0092.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/077.jpg",
+                       "original":  "Space makeover or designing /Kitchen/e2ecf8e1b1671cb12ec7cca3e961ae1c.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/078.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0047.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/079.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0035.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "puja-room",
+                       "src":  "/images/services-client/space-makeover/puja-room/080.jpg",
+                       "original":  "Space makeover or designing /Puja room/IMG-20260814-WA0114.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/081.jpg",
+                       "original":  "Space makeover or designing /Washroom/2c1945a694980467da709281bafc17c7.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/082.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260813-WA0027.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/083.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0109.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/084.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0093.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/085.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0153.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/086.jpg",
+                       "original":  "Space makeover or designing /Washroom/47285678c25b651cf398adebeb2f5639.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "cafe-restaurant-salon",
+                       "src":  "/images/services-client/space-makeover/cafe-restaurant-salon/087.jpg",
+                       "original":  "Space makeover or designing /Cafe, Restaurant, Salon/IMG-20260814-WA0046.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/088.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20261006-WA0013.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/089.jpg",
+                       "original":  "Space makeover or designing /Kitchen/134d69ec0a7d9ce6c560d26d49ea2c3b.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/090.jpg",
+                       "original":  "Space makeover or designing /Washroom/90b6a3ea38e58f506fbd723b23e929c4.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/091.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0057.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/092.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0166.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/093.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0085.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/094.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0098.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/095.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0086.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/096.png",
+                       "original":  "Space makeover or designing /Kitchen/1786688076543.png"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/097.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0100.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/098.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260813-WA0042.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "washroom",
+                       "src":  "/images/services-client/space-makeover/washroom/099.jpg",
+                       "original":  "Space makeover or designing /Washroom/IMG-20260814-WA0071.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/100.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20261006-WA0025.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/101.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0101.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/102.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20261006-WA0028.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/103.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20261006-WA0064.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/104.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0107.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/105.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0108.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/106.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0104.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/107.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260813-WA0040.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/108.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0111.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/109.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0158.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/110.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20261006-WA0024.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/111.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0165.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/112.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260813-WA0059.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/113.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0131.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/114.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0031.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/115.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260813-WA0023.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/116.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0151.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/117.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0037.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/118.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260813-WA0043.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/119.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260813-WA0055.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/120.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0152.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/121.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20261006-WA0056.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/122.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0027.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/123.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260813-WA0002.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/124.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0033.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/125.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260523-WA0003.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/126.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20261006-WA0061.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/127.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0026.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "living-room",
+                       "src":  "/images/services-client/space-makeover/living-room/128.jpg",
+                       "original":  "Space makeover or designing /Living room/IMG-20260814-WA0135.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/129.jpg",
+                       "original":  "Space makeover or designing /Stairs/676a6f30cb8f2d2719ece37507a34126.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/130.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260813-WA0028(1).jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/131.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260523-WA0080.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/132.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0030.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/133.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0035.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/134.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260813-WA0041.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/135.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260813-WA0026.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/136.jpg",
+                       "original":  "Space makeover or designing /Kitchen/258cae653c217bcc01552361040741f2.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/137.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0181.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/138.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0154.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/139.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20261006-WA0022.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/140.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0164.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/141.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20261006-WA0026.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/142.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0163.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/143.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20261006-WA0027.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "kitchen",
+                       "src":  "/images/services-client/space-makeover/kitchen/144.jpg",
+                       "original":  "Space makeover or designing /Kitchen/IMG-20260814-WA0180.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/145.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20261006-WA0057.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/146.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260813-WA0022.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/147.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0038.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/148.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20261006-WA0051.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/149.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20261006-WA0023.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/150.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260813-WA0021.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "bedroom",
+                       "src":  "/images/services-client/space-makeover/bedroom/151.jpg",
+                       "original":  "Space makeover or designing /Bedroom/IMG-20260523-WA0088.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "bedroom",
+                       "src":  "/images/services-client/space-makeover/bedroom/152.jpg",
+                       "original":  "Space makeover or designing /Bedroom/IMG-20260813-WA0049.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/153.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260813-WA0024.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/154.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260813-WA0022(1).jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/155.jpg",
+                       "original":  "Space makeover or designing /Stairs/IMG-20260814-WA0078.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "bedroom",
+                       "src":  "/images/services-client/space-makeover/bedroom/156.jpg",
+                       "original":  "Space makeover or designing /Bedroom/IMG-20260523-WA0086.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/157.jpg",
+                       "original":  "Space makeover or designing /Stairs/312d8ec42594b43c63788b344a3d35d3.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/158.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260813-WA0025.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "bedroom",
+                       "src":  "/images/services-client/space-makeover/bedroom/159.jpg",
+                       "original":  "Space makeover or designing /Bedroom/IMG-20261006-WA0046.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/160.jpg",
+                       "original":  "Space makeover or designing /Stairs/IMG-20260814-WA0074.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "bedroom",
+                       "src":  "/images/services-client/space-makeover/bedroom/161.jpg",
+                       "original":  "Space makeover or designing /Bedroom/IMG-20261006-WA0038.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "bedroom",
+                       "src":  "/images/services-client/space-makeover/bedroom/162.jpg",
+                       "original":  "Space makeover or designing /Bedroom/IMG-20261006-WA0077.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/163.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0036.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/164.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0032.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/165.jpg",
+                       "original":  "Space makeover or designing /Stairs/IMG-20260814-WA0073.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "bedroom",
+                       "src":  "/images/services-client/space-makeover/bedroom/166.jpg",
+                       "original":  "Space makeover or designing /Bedroom/IMG-20260523-WA0085.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/167.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0034.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/168.jpg",
+                       "original":  "Space makeover or designing /Stairs/2e92335e65d49b9c60d696e233b775c3.webp.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/169.jpg",
+                       "original":  "Space makeover or designing /Stairs/1c3b18b3fc1f9c4660f8f294e2c95cb4.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/170.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0039.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/171.jpg",
+                       "original":  "Space makeover or designing /Office/IMG-20260811-WA0029.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/172.jpg",
+                       "original":  "Space makeover or designing /Stairs/d5ac54693f199bbe35f2fb03159be787.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/173.jpg",
+                       "original":  "Space makeover or designing /Stairs/c86564a5f06c7cc98d1a76ba4d66fdde.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/174.jpg",
+                       "original":  "Space makeover or designing /Stairs/f64098e9efca5e124231958b84df2d3a.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/175.jpg",
+                       "original":  "Space makeover or designing /Stairs/600840e1e3a1f35562ac000e1f551ed5.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/176.jpg",
+                       "original":  "Space makeover or designing /Stairs/Screenshot_20260720_185255_Instagram.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/177.jpg",
+                       "original":  "Space makeover or designing /Stairs/0b602698900017f709bdcea1b3c8af04.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/178.jpg",
+                       "original":  "Space makeover or designing /Stairs/04f667ac8a274400efaa873e8f4211a3.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/179.jpg",
+                       "original":  "Space makeover or designing /Stairs/f587485813690e8505d04f57f4e34c1f.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "bedroom",
+                       "src":  "/images/services-client/space-makeover/bedroom/180.jpg",
+                       "original":  "Space makeover or designing /Bedroom/IMG-20261006-WA0071.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/181.png",
+                       "original":  "Space makeover or designing /Office/7_20261010_140227_0005.png"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/182.jpg",
+                       "original":  "Space makeover or designing /Stairs/IMG-20260814-WA0077.jpg"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "office",
+                       "src":  "/images/services-client/space-makeover/office/183.png",
+                       "original":  "Space makeover or designing /Office/6_20261010_140227_0004.png"
+                   },
+                   {
+                       "service":  "space-makeover",
+                       "category":  "stairs",
+                       "src":  "/images/services-client/space-makeover/stairs/184.jpg",
+                       "original":  "Space makeover or designing /Stairs/IMG-20260814-WA0082.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "architectural-civil",
+                       "src":  "/images/services-client/drop-servicing/architectural-civil/001.jpg",
+                       "original":  "Drop servicing and installation /Architectural and civil work/84cccb13ebeb9ffddcabd834c5d6b42a.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/002.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /562df7c114c32c6791bd655410e92f8f.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/003.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /e32f87dff06a25717c9ee31bb8dccc7a.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "2d-3d-drawing",
+                       "src":  "/images/services-client/drop-servicing/2d-3d-drawing/004.jpg",
+                       "original":  "Drop servicing and installation /2d,3d drawing /8c9a8f8718b8be84d55576f27c5a3a56.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/005.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /d930409fd1323e457ff75deee0d1bf59.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/006.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /3adc82584d70061c18eb24e7ac507e2d.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "ac-electrical",
+                       "src":  "/images/services-client/drop-servicing/ac-electrical/007.jpg",
+                       "original":  "Drop servicing and installation /Ac and electrical fitting/c4008c47fbb4d60c221564e9cca16d9d.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "lift-installation",
+                       "src":  "/images/services-client/drop-servicing/lift-installation/008.png",
+                       "original":  "Drop servicing and installation /Lift installation /1792056637858.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/009.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /a6ca668986a38da27d5b26d99ce0e16f.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "architectural-civil",
+                       "src":  "/images/services-client/drop-servicing/architectural-civil/010.jpg",
+                       "original":  "Drop servicing and installation /Architectural and civil work/873f8928e27c13c03bb5862951ddb09a.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/011.png",
+                       "original":  "Drop servicing and installation /Garden setup/1789715696833.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/012.jpg",
+                       "original":  "Drop servicing and installation /Garden setup/IMG-20261014-WA0023.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "nano-coating",
+                       "src":  "/images/services-client/drop-servicing/nano-coating/013.jpg",
+                       "original":  "Drop servicing and installation /Nano Coating /6ee78ccdf790c1cf7c8b24f0b05d2da9.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/014.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /2e364e07ad9798f8f6d19bfa60b178fd.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/015.png",
+                       "original":  "Drop servicing and installation /Garden setup/1789715723208.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "2d-3d-drawing",
+                       "src":  "/images/services-client/drop-servicing/2d-3d-drawing/016.jpg",
+                       "original":  "Drop servicing and installation /2d,3d drawing /d19124041bc80955ea99e48f46da2534.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "epoxy-flooring",
+                       "src":  "/images/services-client/drop-servicing/epoxy-flooring/017.png",
+                       "original":  "Drop servicing and installation /Epoxy flooring /1788347180020.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/018.png",
+                       "original":  "Drop servicing and installation /Garden setup/1783331616547.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/019.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/341a7cbc6783aefdbe0430099a382562.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/020.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /e9edabfbdc4f514de1c1e24bb1d087f9.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "architectural-civil",
+                       "src":  "/images/services-client/drop-servicing/architectural-civil/021.png",
+                       "original":  "Drop servicing and installation /Architectural and civil work/1789987792550.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "architectural-civil",
+                       "src":  "/images/services-client/drop-servicing/architectural-civil/022.jpg",
+                       "original":  "Drop servicing and installation /Architectural and civil work/7cfa68b7d6a6895532b447b96f22be21.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "2d-3d-drawing",
+                       "src":  "/images/services-client/drop-servicing/2d-3d-drawing/023.png",
+                       "original":  "Drop servicing and installation /2d,3d drawing /1789817822194.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/024.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/273aa40b71c755ae2d2da84e12dd1440.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "2d-3d-drawing",
+                       "src":  "/images/services-client/drop-servicing/2d-3d-drawing/025.png",
+                       "original":  "Drop servicing and installation /2d,3d drawing /1789817825506.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/026.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /67382f4e1a93c1c830152e3c1475589f.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/partitions",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/partitions/027.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Partitions /33cd5d6862336727cd050cef11dc5ed0.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/028.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/00e5dbb37d9a8669a66d7648b6fc9ebc.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/029.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /6be8dc95860af04735a2343f87253d40 (1).jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/030.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /36561590952c7901640d53cfea1f56b5.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/031.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /80ac8ef5219fc4bfb8327460f2e0bb39.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/032.png",
+                       "original":  "Drop servicing and installation /Indian artis/1789809083439.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "2d-3d-drawing",
+                       "src":  "/images/services-client/drop-servicing/2d-3d-drawing/033.jpg",
+                       "original":  "Drop servicing and installation /2d,3d drawing /b4ba2f798a14ffd71c1d768f16508c17.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/034.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /IMG-20261006-WA0025.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/035.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /IMG-20261006-WA0026.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/glass-doors",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/glass-doors/036.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Glass doors/8fab1872a9348cd82ad64a9aecab48a8.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/partitions",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/partitions/037.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Partitions /6d1d90243730f63470c3151ccc4cb5b7.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/partitions",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/partitions/038.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Partitions /8b564fe2eb97d86f43c9f2d4dc7ed09b.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/039.png",
+                       "original":  "Drop servicing and installation /Indian artis/1789809071645.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/040.png",
+                       "original":  "Drop servicing and installation /Indian artis/1789736113791.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/041.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /8bd22ad6c0e2ef7c2d7ce8e7b9f105d6.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/042.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /10_20261010_140228_0008.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/043.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /272f8bb87329662cac490b54793ea5e8.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/044.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /37f7956239475d461265ef69ab9f44ec.webp.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/045.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /b1cf71826108d01ad06474b70c049876.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/046.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /93c46ef09c2f6a93dede4fd8dbb870c4.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "ac-electrical",
+                       "src":  "/images/services-client/drop-servicing/ac-electrical/047.jpg",
+                       "original":  "Drop servicing and installation /Ac and electrical fitting/648540968e1f5fd07470ce687a0938af.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/048.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /642daea6ffaafed2043b5cbc78583c12.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "nano-coating",
+                       "src":  "/images/services-client/drop-servicing/nano-coating/049.jpg",
+                       "original":  "Drop servicing and installation /Nano Coating /306fe3f079b8f287b95d3ec7f33051c0.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/050.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /2f772b67b16fc946282e29282c469a17.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/051.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /5df6822a9b1dbe68d07ebb0dff2f0585.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "epoxy-flooring",
+                       "src":  "/images/services-client/drop-servicing/epoxy-flooring/052.png",
+                       "original":  "Drop servicing and installation /Epoxy flooring /1788347109438.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "2d-3d-drawing",
+                       "src":  "/images/services-client/drop-servicing/2d-3d-drawing/053.jpg",
+                       "original":  "Drop servicing and installation /2d,3d drawing /610670e7fbd7f75509c7fbb0ecdc0f64.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "epoxy-flooring",
+                       "src":  "/images/services-client/drop-servicing/epoxy-flooring/054.png",
+                       "original":  "Drop servicing and installation /Epoxy flooring /1788347132109.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "architectural-civil",
+                       "src":  "/images/services-client/drop-servicing/architectural-civil/055.jpg",
+                       "original":  "Drop servicing and installation /Architectural and civil work/1a33fb92ac22b54c37adc7b85178092a.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/056.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /129ef4a4555eed75a9e6c1aad5ca6c40.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "nano-coating",
+                       "src":  "/images/services-client/drop-servicing/nano-coating/057.jpg",
+                       "original":  "Drop servicing and installation /Nano Coating /8193d04fb770e5068ccbdacf19a054db.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "nano-coating",
+                       "src":  "/images/services-client/drop-servicing/nano-coating/058.jpg",
+                       "original":  "Drop servicing and installation /Nano Coating /4f453aee7321784639d64cfa997e67e4.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "lift-installation",
+                       "src":  "/images/services-client/drop-servicing/lift-installation/059.png",
+                       "original":  "Drop servicing and installation /Lift installation /1792056648642.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/060.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /ee3f8c3377aa61ceaa835117ac7e04b1.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "epoxy-flooring",
+                       "src":  "/images/services-client/drop-servicing/epoxy-flooring/061.png",
+                       "original":  "Drop servicing and installation /Epoxy flooring /1788347127324.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "nano-coating",
+                       "src":  "/images/services-client/drop-servicing/nano-coating/062.jpg",
+                       "original":  "Drop servicing and installation /Nano Coating /d4ae28d796a0670f9a2d92f04c853f03.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "nano-coating",
+                       "src":  "/images/services-client/drop-servicing/nano-coating/063.jpg",
+                       "original":  "Drop servicing and installation /Nano Coating /d076b1e2093c51f65135cae1eadb4f16.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/064.png",
+                       "original":  "Drop servicing and installation /Garden setup/1789715725812.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/065.png",
+                       "original":  "Drop servicing and installation /Garden setup/1792058276182.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "nano-coating",
+                       "src":  "/images/services-client/drop-servicing/nano-coating/066.jpg",
+                       "original":  "Drop servicing and installation /Nano Coating /fd06aac1329df89e7deaa2ff90eba795.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "2d-3d-drawing",
+                       "src":  "/images/services-client/drop-servicing/2d-3d-drawing/067.jpg",
+                       "original":  "Drop servicing and installation /2d,3d drawing /4c1680b0dbce726215d6e67232e74aef.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "architectural-civil",
+                       "src":  "/images/services-client/drop-servicing/architectural-civil/068.jpg",
+                       "original":  "Drop servicing and installation /Architectural and civil work/648540968e1f5fd07470ce687a0938af.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/069.png",
+                       "original":  "Drop servicing and installation /Garden setup/1792058273349.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "architectural-civil",
+                       "src":  "/images/services-client/drop-servicing/architectural-civil/070.jpg",
+                       "original":  "Drop servicing and installation /Architectural and civil work/b97cd216a4325499f8668e63d2631076.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "epoxy-flooring",
+                       "src":  "/images/services-client/drop-servicing/epoxy-flooring/071.png",
+                       "original":  "Drop servicing and installation /Epoxy flooring /1788341349628.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/072.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/5d4574d1ac504a298542f71a34dc66c9.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/073.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /5168b18895accd5aed26c5089520f684.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/074.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /IMG-20261006-WA0027.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/075.png",
+                       "original":  "Drop servicing and installation /Garden setup/1792058270194.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "2d-3d-drawing",
+                       "src":  "/images/services-client/drop-servicing/2d-3d-drawing/076.jpg",
+                       "original":  "Drop servicing and installation /2d,3d drawing /1ae2ed92db0ee9ad69f52bf8100360b9.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "2d-3d-drawing",
+                       "src":  "/images/services-client/drop-servicing/2d-3d-drawing/077.jpg",
+                       "original":  "Drop servicing and installation /2d,3d drawing /6d46d3feebc0aae94610ba220650dbd0.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "ac-electrical",
+                       "src":  "/images/services-client/drop-servicing/ac-electrical/078.png",
+                       "original":  "Drop servicing and installation /Ac and electrical fitting/1789986961599.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "epoxy-flooring",
+                       "src":  "/images/services-client/drop-servicing/epoxy-flooring/079.png",
+                       "original":  "Drop servicing and installation /Epoxy flooring /1788347121579.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/080.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /ba607ee10b49a4aaf08020360b85e721.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/081.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /0309f8cc46e2d53a0269688a7c288982.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "2d-3d-drawing",
+                       "src":  "/images/services-client/drop-servicing/2d-3d-drawing/082.jpg",
+                       "original":  "Drop servicing and installation /2d,3d drawing /fa32f9a1125241cb566a1e2c77988e34.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "epoxy-flooring",
+                       "src":  "/images/services-client/drop-servicing/epoxy-flooring/083.png",
+                       "original":  "Drop servicing and installation /Epoxy flooring /1788347106688.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "architectural-civil",
+                       "src":  "/images/services-client/drop-servicing/architectural-civil/084.jpg",
+                       "original":  "Drop servicing and installation /Architectural and civil work/e09d5da1fe1c12cc6e295d77c154a82d (1).jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/085.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/IMG-20260918-WA0126.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/086.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/9de3f70c91ff113eecee436bd417e067.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/087.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /422408702af8a109b2f12d33fc42059f.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/088.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /85a4c0fb561109d977edda9b99b28e4d.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "lift-installation",
+                       "src":  "/images/services-client/drop-servicing/lift-installation/089.png",
+                       "original":  "Drop servicing and installation /Lift installation /1792056644356.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/090.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /9127b948d881300dbecb43a898283e05.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/091.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/c0e7734d5134fa5ee6f4291b2dbedb32.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "lift-installation",
+                       "src":  "/images/services-client/drop-servicing/lift-installation/092.png",
+                       "original":  "Drop servicing and installation /Lift installation /1792056641027.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/093.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /28c9b3706b260fc76cbd837113f0e648.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/094.png",
+                       "original":  "Drop servicing and installation /Garden setup/1789715702147.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/095.png",
+                       "original":  "Drop servicing and installation /Garden setup/1789715715870.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "epoxy-flooring",
+                       "src":  "/images/services-client/drop-servicing/epoxy-flooring/096.png",
+                       "original":  "Drop servicing and installation /Epoxy flooring /1788347112176.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/097.png",
+                       "original":  "Drop servicing and installation /Garden setup/1791876728713.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "architectural-civil",
+                       "src":  "/images/services-client/drop-servicing/architectural-civil/098.jpg",
+                       "original":  "Drop servicing and installation /Architectural and civil work/2e80c418d21cdb275453522b9e84a794.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/099.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /1789989095587.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/100.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/26_20261014_152031_0025.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/101.png",
+                       "original":  "Drop servicing and installation /Garden setup/1789715718915.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/102.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /3e0f651a9117f7315f94ae42ea0c2f4c (1).jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/103.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/356aa8b41400aeed15b665e00c6c0b18.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/104.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/IMG-20260606-WA0041.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/105.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /1789989091556.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/glass-doors",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/glass-doors/106.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Glass doors/da7e1c9e35676056a1efe578f0c9e843.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "epoxy-flooring",
+                       "src":  "/images/services-client/drop-servicing/epoxy-flooring/107.png",
+                       "original":  "Drop servicing and installation /Epoxy flooring /1788347141823.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/108.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/IMG-20260613-WA0029.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/glass-doors",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/glass-doors/109.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Glass doors/e09ea059f67bed8d5a2ee8ed72674e29.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/110.png",
+                       "original":  "Drop servicing and installation /Garden setup/1783331387522.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/111.png",
+                       "original":  "Drop servicing and installation /Indian artis/1789736131113.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "curtains-blinds",
+                       "src":  "/images/services-client/drop-servicing/curtains-blinds/112.jpg",
+                       "original":  "Drop servicing and installation /Curtain and blinds installation /80d5c1ed378c43387f4f780bb0978a56.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/113.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/IMG-20260606-WA0014.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/114.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/13_20261014_152030_0012.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/partitions",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/partitions/115.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Partitions /3c4b153c6a12fe58cfd395bba4c9b0f9.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "windows-doors",
+                       "src":  "/images/services-client/drop-servicing/windows-doors/116.jpg",
+                       "original":  "Drop servicing and installation /Window \u0026 door installation /ad1201ffe5e3b934754053dff8f74fb9.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/117.png",
+                       "original":  "Drop servicing and installation /Garden setup/1789715704702.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/118.png",
+                       "original":  "Drop servicing and installation /Garden setup/1783332437510.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "architectural-civil",
+                       "src":  "/images/services-client/drop-servicing/architectural-civil/119.jpg",
+                       "original":  "Drop servicing and installation /Architectural and civil work/37bfdaf803f65b8b127095095233ac39.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/glass-doors",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/glass-doors/120.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Glass doors/f2d5ceecf63c7a9cf5fff228df732622.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/glass-doors",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/glass-doors/121.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Glass doors/3e0f651a9117f7315f94ae42ea0c2f4c (1).jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/122.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/IMG-20260613-WA0028.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/partitions",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/partitions/123.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Partitions /8650206928f12958ec0444fc9bdc5609.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/glass-doors",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/glass-doors/124.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Glass doors/80ac8ef5219fc4bfb8327460f2e0bb39.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/glass-doors",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/glass-doors/125.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Glass doors/21fada1e9ca58a505811fae9c97d9d93.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/126.png",
+                       "original":  "Drop servicing and installation /Garden setup/1788953362331.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/127.png",
+                       "original":  "Drop servicing and installation /Garden setup/1780738397294.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/128.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/IMG-20260613-WA0034.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/partitions",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/partitions/129.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Partitions /238d80ef490fea94990bfcb680dedec8.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/130.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /1791877842688.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/131.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /1789989083214.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/132.png",
+                       "original":  "Drop servicing and installation /Garden setup/1789715706114.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/133.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /1791877513409.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/134.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /12_20261010_140228_0010.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "lift-installation",
+                       "src":  "/images/services-client/drop-servicing/lift-installation/135.png",
+                       "original":  "Drop servicing and installation /Lift installation /1792056653758.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/partitions",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/partitions/136.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Partitions /fbd08f1c6fc0e661c1bee8ce5a628828.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/137.png",
+                       "original":  "Drop servicing and installation /Indian artis/1789736212538.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "garden-setup",
+                       "src":  "/images/services-client/drop-servicing/garden-setup/138.png",
+                       "original":  "Drop servicing and installation /Garden setup/1783332542274.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/139.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /1791877416813.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/140.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /1791877618133.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/141.png",
+                       "original":  "Drop servicing and installation /Indian artis/1789809086764.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/142.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /1791877610706.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/glass-doors",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/glass-doors/143.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Glass doors/06e61c2ffe280e498a125e98b571b2bc.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/144.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /13_20261010_140228_0011.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "indian-artis",
+                       "src":  "/images/services-client/drop-servicing/indian-artis/145.jpg",
+                       "original":  "Drop servicing and installation /Indian artis/a9c00d8fa5af5143906ef1bcbf699f24.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/146.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /1789989083771.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "architectural-civil",
+                       "src":  "/images/services-client/drop-servicing/architectural-civil/147.png",
+                       "original":  "Drop servicing and installation /Architectural and civil work/1789975682871.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "ac-electrical",
+                       "src":  "/images/services-client/drop-servicing/ac-electrical/148.png",
+                       "original":  "Drop servicing and installation /Ac and electrical fitting/1789986959291.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/149.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /9_20261010_140227_0007.png"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/partitions",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/partitions/150.jpg",
+                       "original":  "Drop servicing and installation /Mirror glazing /Partitions /f2d5ceecf63c7a9cf5fff228df732622.jpg"
+                   },
+                   {
+                       "service":  "drop-servicing",
+                       "category":  "mirror-glazing/sunroofing-skylight",
+                       "src":  "/images/services-client/drop-servicing/mirror-glazing/sunroofing-skylight/151.png",
+                       "original":  "Drop servicing and installation /Mirror glazing /Sunroofing and skylight ceilings /11_20261010_140228_0009.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/001.jpg",
+                       "original":  "Custom theme based product/Furnishing /562df7c114c32c6791bd655410e92f8f.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/002.jpg",
+                       "original":  "Custom theme based product/Furnishing /3adc82584d70061c18eb24e7ac507e2d.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/003.jpg",
+                       "original":  "Custom theme based product/Furnishing /4c601ad891b96c98d9be058b7e0ee9eb.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/004.jpg",
+                       "original":  "Custom theme based product/Furnishing /e32f87dff06a25717c9ee31bb8dccc7a.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/005.jpg",
+                       "original":  "Custom theme based product/Furnishing /67382f4e1a93c1c830152e3c1475589f.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/006.jpg",
+                       "original":  "Custom theme based product/Furnishing /ba607ee10b49a4aaf08020360b85e721.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/007.jpg",
+                       "original":  "Custom theme based product/Furnishing /b1cf71826108d01ad06474b70c049876.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "garden",
+                       "src":  "/images/services-client/custom-theme/garden/008.png",
+                       "original":  "Custom theme based product/Garden/1792058273349.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "garden",
+                       "src":  "/images/services-client/custom-theme/garden/009.png",
+                       "original":  "Custom theme based product/Garden/1792058276182.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/010.jpg",
+                       "original":  "Custom theme based product/Furnishing /d076b1e2093c51f65135cae1eadb4f16.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/011.jpg",
+                       "original":  "Custom theme based product/Furnishing /ad1201ffe5e3b934754053dff8f74fb9.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/012.jpg",
+                       "original":  "Custom theme based product/Furnishing /6be8dc95860af04735a2343f87253d40 (1).jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/013.jpg",
+                       "original":  "Custom theme based product/Furnishing /d4ae28d796a0670f9a2d92f04c853f03.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/014.jpg",
+                       "original":  "Custom theme based product/Furnishing /0309f8cc46e2d53a0269688a7c288982.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/015.jpg",
+                       "original":  "Custom theme based product/Furnishing /a6ca668986a38da27d5b26d99ce0e16f.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/016.jpg",
+                       "original":  "Custom theme based product/Furnishing /5df6822a9b1dbe68d07ebb0dff2f0585.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "furnishing",
+                       "src":  "/images/services-client/custom-theme/furnishing/017.jpg",
+                       "original":  "Custom theme based product/Furnishing /e9edabfbdc4f514de1c1e24bb1d087f9.jpg"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "garden",
+                       "src":  "/images/services-client/custom-theme/garden/018.png",
+                       "original":  "Custom theme based product/Garden/1789715718915.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "garden",
+                       "src":  "/images/services-client/custom-theme/garden/019.png",
+                       "original":  "Custom theme based product/Garden/1789715715870.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "garden",
+                       "src":  "/images/services-client/custom-theme/garden/020.png",
+                       "original":  "Custom theme based product/Garden/1792058270194.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/021.png",
+                       "original":  "Custom theme based product/Rugs/1789732778090.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "garden",
+                       "src":  "/images/services-client/custom-theme/garden/022.png",
+                       "original":  "Custom theme based product/Garden/1789715702147.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/023.png",
+                       "original":  "Custom theme based product/Rugs/1789733586924.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "garden",
+                       "src":  "/images/services-client/custom-theme/garden/024.png",
+                       "original":  "Custom theme based product/Garden/1789715723208.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "garden",
+                       "src":  "/images/services-client/custom-theme/garden/025.png",
+                       "original":  "Custom theme based product/Garden/1789715708713.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/026.png",
+                       "original":  "Custom theme based product/Rugs/1789732745188.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/027.png",
+                       "original":  "Custom theme based product/Rugs/1789732655312.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/028.png",
+                       "original":  "Custom theme based product/Rugs/1789732663526.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/029.png",
+                       "original":  "Custom theme based product/Rugs/1789733571690.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "garden",
+                       "src":  "/images/services-client/custom-theme/garden/030.png",
+                       "original":  "Custom theme based product/Garden/1789715696833.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "floor",
+                       "src":  "/images/services-client/custom-theme/floor/031.png",
+                       "original":  "Custom theme based product/Floor/1780659203238.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "garden",
+                       "src":  "/images/services-client/custom-theme/garden/032.png",
+                       "original":  "Custom theme based product/Garden/1789715706114.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "garden",
+                       "src":  "/images/services-client/custom-theme/garden/033.png",
+                       "original":  "Custom theme based product/Garden/1789715704702.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/034.png",
+                       "original":  "Custom theme based product/Rugs/1789733617528.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "floor",
+                       "src":  "/images/services-client/custom-theme/floor/035.png",
+                       "original":  "Custom theme based product/Floor/1788341349628.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/036.png",
+                       "original":  "Custom theme based product/Rugs/1789732665356.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/037.png",
+                       "original":  "Custom theme based product/Rugs/1789733497301.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/038.png",
+                       "original":  "Custom theme based product/Rugs/1789733661360.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "floor",
+                       "src":  "/images/services-client/custom-theme/floor/039.png",
+                       "original":  "Custom theme based product/Floor/1780658498686.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "floor",
+                       "src":  "/images/services-client/custom-theme/floor/040.png",
+                       "original":  "Custom theme based product/Floor/1788347121579.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "floor",
+                       "src":  "/images/services-client/custom-theme/floor/041.png",
+                       "original":  "Custom theme based product/Floor/1782023380137.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/042.png",
+                       "original":  "Custom theme based product/Rugs/1789733574518.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "floor",
+                       "src":  "/images/services-client/custom-theme/floor/043.png",
+                       "original":  "Custom theme based product/Floor/1788347180020.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "rugs",
+                       "src":  "/images/services-client/custom-theme/rugs/044.png",
+                       "original":  "Custom theme based product/Rugs/1789732660355.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "floor",
+                       "src":  "/images/services-client/custom-theme/floor/045.webp",
+                       "original":  "Custom theme based product/Floor/BE010205-copy.webp"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "floor",
+                       "src":  "/images/services-client/custom-theme/floor/046.png",
+                       "original":  "Custom theme based product/Floor/1788347132109.png"
+                   },
+                   {
+                       "service":  "custom-theme",
+                       "category":  "floor",
+                       "src":  "/images/services-client/custom-theme/floor/047.png",
+                       "original":  "Custom theme based product/Floor/1782022770526.png"
+                   }
+               ]
+}
