@@ -3,14 +3,12 @@ import './FloorPlanGallery.css'
 import floorPlan1 from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-01.png'
 import floorPlan2 from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-02.png'
 import floorPlan3 from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-03.png'
-import floorPlan4 from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-04.png'
 import floorPlan5 from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-05.png'
 
 const floorPlans = [
   floorPlan1,
   floorPlan2,
   floorPlan3,
-  floorPlan4,
   floorPlan5,
 ]
 

@@ -1,11 +1,11 @@
-﻿import { Link } from 'react-router-dom'
+// VASUPRIY_WHY_PROJECT_PHOTOS_V1
+import { Link } from 'react-router-dom'
 
 import './WhyVasupriy.css'
 
-import mainInterior from '../../assets/images/home/projects/commercial-space.png'
-import secondaryInterior from '../../assets/images/home/projects/residential-interior.png'
-import detailInterior from '../../assets/images/home/projects/space-makeover.png'
-
+import mainInterior from '../../assets/images/home/why-choose-us-projects/65th-avenue-premium-interior.jpg'
+import secondaryInterior from '../../assets/images/home/why-choose-us-projects/samsung-head-office-interior.jpg'
+import detailInterior from '../../assets/images/home/why-choose-us-projects/jalsa-craftsmanship-detail.jpg'
 const reasons = [
   {
     icon: '▣',
@@ -107,7 +107,7 @@ export default function WhyVasupriy() {
             <figure className="why-vasupriy-image why-vasupriy-image--top">
               <img
                 src={secondaryInterior}
-                alt="Refined Vasupriy interior design"
+                alt="Vasupriy Samsung Head Office Noida completed office interior"
               />
             </figure>
 
@@ -115,7 +115,7 @@ export default function WhyVasupriy() {
             <figure className="why-vasupriy-image why-vasupriy-image--main">
               <img
                 src={mainInterior}
-                alt="Vasupriy residential and commercial interior"
+                alt="Vasupriy 65th Avenue Gurgaon premium interior project"
               />
             </figure>
 
@@ -123,7 +123,7 @@ export default function WhyVasupriy() {
             <figure className="why-vasupriy-image why-vasupriy-image--detail">
               <img
                 src={detailInterior}
-                alt="Vasupriy customized interior detail"
+                alt="Vasupriy Jalsa Gurgaon custom decorative interior craftsmanship"
               />
             </figure>
           </div>

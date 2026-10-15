@@ -1,90 +1,19 @@
 import { Link } from 'react-router-dom'
 import './HomeGallery.css'
 
+// VASUPRIY_HOME_GALLERY_TO_EXPERTISE_V1
 const galleryRowOne = [
-  {
-    id: 1,
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=88',
-    alt: 'Modern living room interior',
-    title: 'Refined Living',
-    category: 'Residential Interior',
-    size: 'medium',
-  },
-  {
-    id: 2,
-    image: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=1400&q=88',
-    alt: 'Modern kitchen interior',
-    title: 'The Modern Kitchen',
-    category: 'Kitchen Design',
-    size: 'large',
-  },
-  {
-    id: 3,
-    image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1400&q=88',
-    alt: 'Dining room interior',
-    title: 'Gather Around',
-    category: 'Dining Experience',
-    size: 'medium',
-  },
-  {
-    id: 4,
-    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88',
-    alt: 'Minimal contemporary interior',
-    title: 'Quiet Minimalism',
-    category: 'Contemporary Interior',
-    size: 'medium',
-  },
-  {
-    id: 5,
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=88',
-    alt: 'Luxury residential interior',
-    title: 'Elevated Comfort',
-    category: 'Luxury Residence',
-    size: 'large',
-  },
+  { id: 1, image: '/images/home-expertise/custom-mosaic-work.jpg', alt: 'Custom Mosaic Work', title: 'Custom Mosaic Work', category: 'Our Expertise', size: 'medium' },
+  { id: 2, image: '/images/home-expertise/embroidered-wallpaper.jpg', alt: 'Embroidered Wallpaper', title: 'Embroidered Wallpaper', category: 'Our Expertise', size: 'large' },
+  { id: 3, image: '/images/home-expertise/frp-fountain.jpg', alt: 'FRP Fountain', title: 'FRP Fountain', category: 'Our Expertise', size: 'medium' },
+  { id: 4, image: '/images/home-expertise/hand-made-rugs.jpg', alt: 'Hand Made Rugs', title: 'Hand Made Rugs', category: 'Our Expertise', size: 'medium' },
 ]
 
 const galleryRowTwo = [
-  {
-    id: 6,
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=88',
-    alt: 'Bedroom interior',
-    title: 'Restful Retreat',
-    category: 'Bedroom Interior',
-    size: 'medium',
-  },
-  {
-    id: 7,
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=88',
-    alt: 'Warm modern living interior',
-    title: 'Warmth in Every Detail',
-    category: 'Living Space',
-    size: 'large',
-  },
-  {
-    id: 8,
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88',
-    alt: 'Contemporary home interior',
-    title: 'Contemporary Living',
-    category: 'Modern Residence',
-    size: 'medium',
-  },
-  {
-    id: 9,
-    image: 'https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=88',
-    alt: 'Kitchen and dining interior',
-    title: 'Designed for Togetherness',
-    category: 'Kitchen & Dining',
-    size: 'large',
-  },
-  {
-    id: 10,
-    image: 'https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1400&q=88',
-    alt: 'Minimal bedroom interior',
-    title: 'Calm by Design',
-    category: 'Bedroom Interior',
-    size: 'medium',
-  },
+  { id: 5, image: '/images/home-expertise/hdhmr.jpg', alt: 'HDHMR', title: 'HDHMR', category: 'Our Expertise', size: 'large' },
+  { id: 6, image: '/images/home-expertise/inlay-work.jpg', alt: 'Inlay Work', title: 'Inlay Work', category: 'Our Expertise', size: 'medium' },
+  { id: 7, image: '/images/home-expertise/mural-painting.jpg', alt: 'Mural Painting', title: 'Mural Painting', category: 'Our Expertise', size: 'large' },
+  { id: 8, image: '/images/home-expertise/stone-engraved.jpg', alt: 'Stone Engraved', title: 'Stone Engraved', category: 'Our Expertise', size: 'medium' },
 ]
 
 function GalleryTrack({ items, direction = 'left' }) {
@@ -126,7 +55,7 @@ export default function HomeGallery() {
   return (
     <section
       className="antra-gallery"
-      id="home-gallery"
+      id="expertise"
       aria-labelledby="home-gallery-title"
       data-scroll-section
     >
@@ -140,7 +69,7 @@ export default function HomeGallery() {
       <div className="antra-gallery-header">
         <div className="antra-gallery-eyebrow">
           <span aria-hidden="true" />
-          Our Gallery
+          Our Expertise
         </div>
 
         <div className="antra-gallery-heading-row">

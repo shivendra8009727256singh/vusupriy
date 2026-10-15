@@ -1169,3 +1169,186 @@
 }
 
 /* VASUPRIY SMOOTH AUTOPLAY FIX END */
+
+
+/* VASUPRIY_PRODUCT_CAPTION_VISIBILITY_V1 */
+
+/* Keep the image behind the gradient and captions */
+.products-gallery .products-gallery-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.products-gallery .products-gallery-card > img {
+  position: relative;
+  z-index: 0;
+}
+
+/* Consistent dark gradient at the bottom of every card */
+.products-gallery .products-gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    transparent 40%,
+    rgba(0, 32, 45, 0.22) 62%,
+    rgba(0, 32, 45, 0.94) 100%
+  );
+  pointer-events: none;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Show every title and product number permanently */
+.products-gallery .products-gallery-card .products-gallery-card-overlay {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px 20px;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none;
+  pointer-events: none;
+}
+
+/* Ensure captions cannot inherit hidden states */
+.products-gallery .products-gallery-card .products-gallery-card-overlay h3,
+.products-gallery .products-gallery-card .products-gallery-card-overlay > span {
+  position: relative;
+  z-index: 6;
+  display: block;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+}
+
+.products-gallery .products-gallery-card .products-gallery-card-overlay > span {
+  color: #dbc4a4;
+  flex-shrink: 0;
+}
+
+.products-gallery .products-gallery-card .products-gallery-card-overlay h3 {
+  max-width: 82%;
+  margin: 0;
+  font-size: clamp(1rem, 1.3vw, 1.35rem);
+  line-height: 1.3;
+  overflow-wrap: break-word;
+  transform: translateY(0);
+  transition: transform 350ms ease;
+}
+
+/* Preserve premium hover movement */
+@media (hover: hover) {
+  .products-gallery .products-gallery-card:hover
+  .products-gallery-card-overlay h3 {
+    transform: translateY(-4px);
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 900px) {
+  .products-gallery .products-gallery-card .products-gallery-card-overlay {
+    padding: 22px 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .products-gallery .products-gallery-card .products-gallery-card-overlay {
+    padding: 22px 18px;
+  }
+
+  .products-gallery .products-gallery-card .products-gallery-card-overlay h3 {
+    font-size: clamp(1.05rem, 5vw, 1.4rem);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .products-gallery .products-gallery-card
+  .products-gallery-card-overlay h3 {
+    transition: none !important;
+  }
+}
+
+
+/* VASUPRIY_PRODUCT_CAPTION_POSITION_FIX_V2 */
+
+/* Every slide becomes its caption's positioning container */
+.products-gallery .products-gallery-track > .products-gallery-card {
+  position: relative !important;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Lock number and title inside the corresponding slide */
+.products-gallery .products-gallery-track
+> .products-gallery-card > .products-gallery-card-overlay {
+  position: absolute !important;
+  inset: auto 0 0 0 !important;
+  top: auto !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 100% !important;
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 20px 18px !important;
+
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  gap: 12px;
+
+  z-index: 10 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  translate: none !important;
+  pointer-events: none;
+}
+
+/* Keep product number and title visible */
+.products-gallery .products-gallery-card-overlay > span,
+.products-gallery .products-gallery-card-overlay > h3 {
+  position: relative;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.products-gallery .products-gallery-card-overlay > h3 {
+  margin: 0 !important;
+  max-width: 82%;
+  color: #fff !important;
+  font-size: clamp(16px, 1.35vw, 21px);
+  line-height: 1.3;
+  text-align: right;
+  overflow-wrap: break-word;
+}
+
+/* Preserve the dark bottom gradient */
+.products-gallery .products-gallery-card::after {
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Maintain mobile readability */
+@media (max-width: 640px) {
+  .products-gallery .products-gallery-track
+  > .products-gallery-card > .products-gallery-card-overlay {
+    padding: 20px 16px !important;
+  }
+
+  .products-gallery .products-gallery-card-overlay > h3 {
+    font-size: clamp(17px, 5vw, 22px);
+  }
+}

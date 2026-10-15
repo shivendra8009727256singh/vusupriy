@@ -1,0 +1,377 @@
+/* PDF-driven Space Designing & Makeover layout; scoped to the new content only. */
+.vasu-pdf-service { --vasu-pdf-gold: #c9a05e; --vasu-pdf-ink: #133c40; padding: clamp(32px,5vw,76px) 0 48px; }
+.vasu-pdf-section { margin-bottom: clamp(54px,6vw,90px); }
+.vasu-pdf-section-heading { margin-bottom: 24px; }
+.vasu-pdf-section-heading > span { display: block; color: #a47b3b; font-weight: 750; font-size: 12px; letter-spacing: .16em; margin-bottom: 10px; }
+.vasu-pdf-section-heading h2 { color: var(--vasu-pdf-ink); font-size: clamp(28px,3.4vw,48px); line-height: 1.15; letter-spacing: -.035em; font-weight: 750; margin: 0; }
+.vasu-pdf-section-intro { max-width: 810px; font-size: clamp(15px,1.3vw,18px); line-height: 1.75; margin: 0 0 26px; }
+.vasu-pdf-grid { display: grid; gap: 18px; }
+.vasu-pdf-grid--two { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.vasu-pdf-card,.vasu-pdf-step,.vasu-pdf-benefit { min-width: 0; border: 1px solid rgba(17,74,75,.13); border-radius: 18px; padding: clamp(22px,2.5vw,34px); background: #fffdf9; box-shadow: 0 14px 36px rgba(4,39,42,.05); }
+.vasu-pdf-card-number,.vasu-pdf-step > span { font-size: 12px; font-weight: 800; letter-spacing: .15em; color: #b48b48; }
+.vasu-pdf-card h3,.vasu-pdf-step h3,.vasu-pdf-benefit h3 { font-size: clamp(19px,1.7vw,24px); line-height: 1.3; color: var(--vasu-pdf-ink); margin: 14px 0 10px; }
+.vasu-pdf-card p,.vasu-pdf-step p,.vasu-pdf-benefit p { margin: 0; color: #526368; line-height: 1.75; font-size: 15px; }
+.vasu-pdf-benefit { display: flex; align-items: start; gap: 15px; }
+.vasu-pdf-benefit > span { color: #b48b48; font-size: 25px; line-height: 1.3; }
+.vasu-pdf-benefit h3 { margin: 0 0 10px; }
+.vasu-pdf-gallery { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
+.vasu-pdf-gallery img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 15px; transition: transform .35s ease; }
+@media (hover:hover) { .vasu-pdf-gallery img:hover { transform: translateY(-5px); } }
+.vasu-pdf-cta { text-align: center; padding: clamp(32px,5vw,70px) 22px; background: linear-gradient(120deg,#043e48,#0c6067); border-radius: 22px; }
+.vasu-pdf-cta h2 { margin: 0 auto 22px; color: #fff; line-height: 1.2; max-width: 800px; font-size: clamp(26px,3vw,42px); }
+.vasu-pdf-cta a { display: inline-flex; align-items: center; gap: 12px; background: #c9a05e; border-radius: 99px; padding: 14px 22px; color: #102f34; text-decoration: none; font-weight: 750; }
+@media(max-width:900px) { .vasu-pdf-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .vasu-pdf-grid--two { grid-template-columns: minmax(0,1fr); } .vasu-pdf-gallery { gap: 10px; } .vasu-pdf-card,.vasu-pdf-step,.vasu-pdf-benefit { padding: 20px; } .vasu-pdf-service { padding-top: 28px; } }
+@media(prefers-reduced-motion:reduce) { .vasu-pdf-gallery img { transition: none; } }
+
+/* VASUPRIY_SPACE_LAYOUT_CLEANUP_V2 */
+
+/* Hide duplicate details only on Space Makeover */
+.vasu-service-page--space-makeover
+.vasu-service-content
+.vasu-service-inline-details {
+  display: none !important;
+}
+
+/* Hide desktop sidebar filler for Space Makeover */
+.vasu-service-page--space-makeover
+.vasu-service-gap-filler {
+  display: none !important;
+}
+
+/* Compact PDF section layout */
+.vasu-service-page--space-makeover
+.vasu-service-fullwidth {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.vasu-service-page--space-makeover
+.vasu-pdf-service {
+  padding-top: clamp(16px, 2vw, 28px);
+}
+
+.vasu-service-page--space-makeover
+.vasu-pdf-section {
+  margin-bottom: clamp(36px, 4vw, 64px);
+}
+
+@media (max-width: 600px) {
+  .vasu-service-page--space-makeover
+  .vasu-pdf-service {
+    padding-top: 12px;
+  }
+
+  .vasu-service-page--space-makeover
+  .vasu-pdf-section {
+    margin-bottom: 38px;
+  }
+}
+
+
+/* VASUPRIY_DROP_PDF_EXACT_V1 */
+.vasu-service-page:has(.vasu-drop-pdf-detail) .vasu-service-editorial-intro,
+.vasu-service-page:has(.vasu-drop-pdf-detail) .vasu-service-inline-details,
+.vasu-service-page:has(.vasu-drop-pdf-detail) .vasu-service-process,
+.vasu-service-page:has(.vasu-drop-pdf-detail) .vasu-service-content-divider,
+.vasu-service-page:has(.vasu-drop-pdf-detail) .vasu-service-content-divider ~ h3,
+.vasu-service-page:has(.vasu-drop-pdf-detail) .vasu-service-content-divider ~ p { display: none !important; }
+.vasu-drop-pdf-detail {margin: 32px 0 12px; display: grid; gap: 13px; min-width: 0; color: #1f4145;}
+.vasu-drop-pdf-eyebrow {font-size: 11px; font-weight: 800; letter-spacing: .14em; color: #a47b3b;}
+.vasu-drop-pdf-detail h3 {font-family: Georgia,serif; color:#063f4b; font-size:clamp(21px,2.3vw,32px);font-weight:500;line-height:1.25;margin:24px 0 4px;}
+.vasu-drop-pdf-detail p {font-size:clamp(14px,1.2vw,16px);line-height:1.8;margin:0;overflow-wrap:anywhere;}
+.vasu-drop-pdf-detail .vasu-drop-pdf-bullet {padding:12px 16px 12px 26px; background:#f8f6f1;border-left:3px solid #c9a05e;border-radius:0 8px 8px 0;}
+.vasu-drop-pdf-detail .vasu-drop-pdf-cta {margin-top:10px;padding:18px 20px;border-radius:12px;background:#063f4b;color:#fff;}
+@media(max-width:600px){.vasu-drop-pdf-detail{gap:10px;margin-top:22px}.vasu-drop-pdf-detail h3{margin-top:17px}.vasu-drop-pdf-detail .vasu-drop-pdf-bullet{padding:10px 12px 10px 16px}}
+
+/* VASUPRIY_DROP_SPACING_FIX_V1 */
+
+/* Only Drop Servicing & Installation */
+.vasu-service-page:has(.vasu-drop-pdf-detail)
+.vasu-service-fullwidth {
+  display: none !important;
+}
+
+/* Remove dynamically generated sidebar filler */
+.vasu-service-page:has(.vasu-drop-pdf-detail)
+.vasu-service-gap-filler {
+  display: none !important;
+}
+
+/* Prevent the sidebar from stretching the content row */
+.vasu-service-page:has(.vasu-drop-pdf-detail)
+.vasu-service-layout {
+  align-items: start;
+}
+
+/* Desktop: compact sidebar with internal scrolling */
+@media (min-width: 1025px) {
+  .vasu-service-page:has(.vasu-drop-pdf-detail)
+  .vasu-service-sidebar {
+    height: auto !important;
+    align-self: start !important;
+  }
+
+  .vasu-service-page:has(.vasu-drop-pdf-detail)
+  .vasu-service-sidebar-inner {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .vasu-service-page:has(.vasu-drop-pdf-detail)
+  .vasu-service-sidebar-list {
+    max-height: 440px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #c9a05e transparent;
+  }
+}
+
+/* Tablet and mobile: normal scrolling */
+@media (max-width: 1024px) {
+  .vasu-service-page:has(.vasu-drop-pdf-detail)
+  .vasu-service-sidebar-list {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+/* Keep the main content proportional */
+.vasu-service-page:has(.vasu-drop-pdf-detail)
+.vasu-service-content {
+  min-height: 0;
+  min-width: 0;
+}
+
+/* Maintain natural spacing between service sections */
+.vasu-service-page:has(.vasu-drop-pdf-detail)
+.vasu-drop-pdf-detail {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* VASUPRIY_CUSTOM_PRODUCTS_PDF_V1: only the Customized & Theme-Based Products category */
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-service-editorial-intro,
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-service-inline-details,
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-service-gap-filler,
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-service-fullwidth,
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-service-lead { display: none !important; }
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-service-layout { align-items: start; }
+.vasu-custom-pdf-detail { min-width: 0; margin: 28px 0 0; color: #24464b; }
+.vasu-custom-pdf-section { margin: 0 0 clamp(30px, 4vw, 50px); }
+.vasu-custom-pdf-eyebrow { display: block; font-size: 11px; font-weight: 800; letter-spacing: .15em; color: #a47b3b; margin-bottom: 9px; }
+.vasu-custom-pdf-section h3,.vasu-custom-pdf-gallery-heading h3 { font-family: Georgia, 'Times New Roman', serif; color: #063f4b; font-size: clamp(24px, 2.8vw, 37px); font-weight: 500; line-height: 1.2; margin: 0 0 15px; }
+.vasu-custom-pdf-section > p { color: #455f62; font-size: clamp(14px,1.18vw,16px); line-height: 1.85; margin: 0 0 18px; }
+.vasu-custom-pdf-points { display:grid; gap:12px; }
+.vasu-custom-pdf-points > div { background:#f8f6f1; border-left:3px solid #c9a05e; border-radius:0 10px 10px 0; padding:14px 18px; line-height:1.65; font-size:14px; }
+.vasu-custom-pdf-points strong { color:#063f4b; }
+.vasu-custom-pdf-products { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
+.vasu-custom-pdf-product { display:flex; gap:13px; padding:19px; background:#fcfaf6; border:1px solid rgba(9,69,73,.12); border-radius:13px; min-width:0; }
+.vasu-custom-pdf-product.is-selected { border-color:#c9a05e; box-shadow:0 8px 24px rgba(3,57,63,.08); }
+.vasu-custom-pdf-product > span { color:#b48b48; font-size:12px; font-weight:800; padding-top:4px; }
+.vasu-custom-pdf-product h4 { color:#063f4b; font-size:16px; line-height:1.35; margin:0 0 7px; }
+.vasu-custom-pdf-product p { color:#526368; font-size:13px; line-height:1.65; margin:0; }
+.vasu-custom-pdf-steps { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.vasu-custom-pdf-steps > div { display:flex; align-items:center; gap:13px; border-radius:12px; background:linear-gradient(135deg,#063f4b,#0b5b62); padding:19px; min-width:0; }
+.vasu-custom-pdf-steps span { font-size:20px; color:#c9a05e; font-weight:800; }
+.vasu-custom-pdf-steps h4 { font-size:15px; color:#fff; margin:0; font-weight:600; }
+.vasu-custom-pdf-gallery-heading { margin: 10px 0 8px; }
+.vasu-custom-pdf-cta { margin:20px 0 16px; background:linear-gradient(115deg,#063f4b,#0d6269); padding:clamp(22px,3vw,38px); border-radius:17px; text-align:center; }
+.vasu-custom-pdf-cta h3 { color:#fff; font-family:Georgia,serif; font-size:clamp(23px,2.7vw,34px); font-weight:500; margin:0 0 18px; }
+.vasu-custom-pdf-cta a { display:inline-flex; color:#17343a; background:#c9a05e; border-radius:100px; padding:13px 21px; font-weight:750; text-decoration:none; }
+@media(max-width:700px) { .vasu-custom-pdf-products,.vasu-custom-pdf-steps {grid-template-columns:minmax(0,1fr);} .vasu-custom-pdf-product{padding:16px;} .vasu-custom-pdf-section {margin-bottom:30px;} }
+@media(prefers-reduced-motion:reduce) { .vasu-custom-pdf-product {transition:none;} }
+/* VASUPRIY_CUSTOM_FINAL_UI_V1 â€” scoped final polish */
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-pdf-detail {
+  margin-top: clamp(24px,3vw,40px);
+}
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-pdf-section {
+  margin-bottom: clamp(28px,3.2vw,45px);
+}
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-pdf-gallery-heading {
+  padding-top: clamp(8px,1.5vw,20px);
+  margin: 0 0 20px;
+}
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-final-gallery {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: clamp(10px,1.5vw,18px);
+  margin: 0 0 clamp(28px,4vw,52px);
+}
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-final-gallery-item {
+  margin: 0;
+  overflow: hidden;
+  background: #f4f0e9;
+  border-radius: 15px;
+  aspect-ratio: 4 / 5;
+  min-width: 0;
+}
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-final-gallery-item img {
+  display: block;
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .45s ease;
+}
+@media (hover:hover) {
+ .vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-final-gallery-item:hover img { transform: scale(1.045); }
+}
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-pdf-cta { margin: 0 0 clamp(12px,2vw,24px); }
+.vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-service-main { padding-bottom: clamp(32px,4vw,65px); }
+@media (max-width: 850px) {
+  .vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-final-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 480px) {
+  .vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-final-gallery { gap: 9px; }
+  .vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-final-gallery-item { border-radius: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-final-gallery-item img { transition: none; }
+}
+
+/* VASUPRIY_SERVICES_FINAL_RESPONSIVE_V1 */
+
+/* Shared Services layout finishing */
+.vasu-service-page {
+  overflow-x: clip;
+}
+
+.vasu-service-page .vasu-service-layout,
+.vasu-service-page .vasu-service-content,
+.vasu-service-page .vasu-service-sidebar,
+.vasu-service-page .vasu-service-fullwidth {
+  min-width: 0;
+}
+
+/* Reduce excessive spacing near the page bottom */
+.vasu-service-page .vasu-service-fullwidth {
+  padding-bottom: clamp(20px, 3vw, 48px);
+}
+
+.vasu-service-page--space-makeover .vasu-pdf-service {
+  padding-bottom: 0;
+}
+
+.vasu-service-page--space-makeover .vasu-pdf-section {
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.vasu-service-page--space-makeover .vasu-pdf-cta {
+  margin-bottom: 0;
+}
+
+/* Product gallery: consistent image sizing */
+.vasu-service-page .vasu-pdf-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Consistent PDF typography */
+.vasu-service-page .vasu-pdf-section-heading h2 {
+  line-height: 1.18;
+  overflow-wrap: break-word;
+}
+
+.vasu-service-page .vasu-pdf-card p,
+.vasu-service-page .vasu-pdf-step p,
+.vasu-service-page .vasu-pdf-benefit p {
+  line-height: 1.7;
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .vasu-service-page .vasu-pdf-section-heading h2 {
+    font-size: clamp(27px, 4vw, 38px);
+  }
+
+  .vasu-service-page .vasu-pdf-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .vasu-service-page .vasu-pdf-section {
+    margin-bottom: 42px;
+  }
+
+  .vasu-service-page .vasu-service-fullwidth {
+    padding-bottom: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .vasu-service-page .vasu-pdf-section-heading h2 {
+    font-size: clamp(25px, 7vw, 32px);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  .vasu-service-page .vasu-service-content h2 {
+    font-size: clamp(25px, 7vw, 34px);
+    line-height: 1.22;
+    overflow-wrap: break-word;
+  }
+
+  .vasu-service-page .vasu-pdf-section-intro,
+  .vasu-service-page .vasu-pdf-card p,
+  .vasu-service-page .vasu-pdf-step p,
+  .vasu-service-page .vasu-pdf-benefit p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .vasu-service-page .vasu-pdf-section {
+    margin-bottom: 34px;
+  }
+
+  .vasu-service-page .vasu-pdf-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .vasu-service-page .vasu-pdf-gallery img {
+    border-radius: 12px;
+  }
+
+  .vasu-service-page .vasu-pdf-card,
+  .vasu-service-page .vasu-pdf-step,
+  .vasu-service-page .vasu-pdf-benefit {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .vasu-service-page .vasu-pdf-cta {
+    padding: 30px 18px;
+    border-radius: 16px;
+  }
+
+  .vasu-service-page .vasu-pdf-cta h2 {
+    font-size: clamp(24px, 6.4vw, 31px);
+  }
+
+  .vasu-service-page .vasu-pdf-cta a {
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .vasu-service-page .vasu-service-fullwidth {
+    padding-bottom: 20px;
+  }
+}
+
+/* Extra-small mobile */
+@media (max-width: 360px) {
+  .vasu-service-page .vasu-pdf-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .vasu-service-page .vasu-pdf-gallery img {
+    transition: none;
+  }
+}

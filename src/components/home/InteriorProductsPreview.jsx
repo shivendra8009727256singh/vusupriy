@@ -1,47 +1,19 @@
+// VASUPRIY_WALL_MAKEOVER_REAL_IMAGE_V1
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './InteriorProductsPreview.css'
+import wallMakeoverRealImage from '../../assets/images/renamed-collection/cafe-interiors/cafe-wooden-wall-panels-07.jpg'
+import { productImageMap } from '../../pages/InteriorProducts/productImageMap.js'
 
-import curtainsImage from '../../assets/images/renamed-collection/residential-interior-renders/premium-wall-panels-51.jpg'
-import customizedImage from '../../assets/images/renamed-collection/cafe-interiors/cafe-interior-checkered-floor-01.jpg'
-import doorsImage from '../../assets/images/renamed-collection/commercial-interior-renders/cafe-counter-and-pendant-lights-02.jpg'
-import glazingImage from '../../assets/images/renamed-collection/cafe-interiors/cafe-seating-and-plants-04.jpg'
-import residentialImage from '../../assets/images/renamed-collection/residential-interior-renders/designer-ceiling-50.jpg'
 
+// VASUPRIY_HOME_FOUR_PRODUCT_COLLECTIONS_V1 - source photographs shared with dedicated Products page.
 const products = [
-  {
-    id: 1,
-    title: 'Wall Coverings',
-    image: curtainsImage,
-    alt: 'Premium decorative wall covering and panels',
-  },
-  {
-    id: 2,
-    title: 'Floor Makeovers',
-    image: customizedImage,
-    alt: 'Stylish checkered flooring in a modern interior',
-  },
-  {
-    id: 3,
-    title: 'Enlightenment Options',
-    image: doorsImage,
-    alt: 'Decorative pendant lighting in a premium cafe',
-  },
-  {
-    id: 4,
-    title: 'Green Elements',
-    image: glazingImage,
-    alt: 'Indoor greenery and plants in an interior space',
-  },
-  {
-    id: 5,
-    title: 'Ceiling Styling',
-    image: residentialImage,
-    alt: 'Designer ceiling styling in a modern interior',
-  },
+  { id: 1, title: 'Flooring Styling', image: productImageMap['SPC Flooring'][0], alt: 'SPC Flooring flooring product' },
+  { id: 2, title: 'Green Element', image: productImageMap['Vertical Garden'][0], alt: 'Vertical Garden greenery product' },
+  { id: 3, title: 'Enlightenment Options', image: productImageMap['Chandeliers'][0], alt: 'Chandeliers lighting product' },
+  { id: 4, title: 'Wall Makeover Products', image: wallMakeoverRealImage, alt: 'Decorative wall covering and wall makeover product' },
 ]
-
 const AUTOPLAY_DELAY = 2000
 const SLIDE_DURATION = 900
 

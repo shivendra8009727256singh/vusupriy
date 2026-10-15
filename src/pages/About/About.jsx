@@ -39,28 +39,28 @@ const aboutTeamMembers = [
     name: 'Arun Sharma',
     role: 'Architectural Design',
     image: arunTeamImage,
-    description: 'Creating thoughtful architectural concepts and refined spatial experiences.',
+    description: 'A bedroom is more than just a place to sleep—it is a personal sanctuary where comfort, relaxation, and style come together.',
   },
   {
     id: 'priyanka',
     name: 'Priyanka',
     role: 'Interior Design & Planning',
     image: priyankaTeamImage,
-    description: 'Transforming creative ideas into functional, beautiful interior environments.',
+    description: 'Dream it, we\u0027ll design it! From big picture layouts to the tiniest details, our architectural magic brings your ideas to life with creativity and precision!',
   },
   {
     id: 'priya',
     name: 'Priya',
     role: 'Quality Management',
     image: priyaTeamImage,
-    description: 'Ensuring quality, thoughtful detailing and carefully finished spaces.',
+    description: 'Dream it, we\u0027ll design it! From big picture layouts to the tiniest details, our architectural magic brings your ideas to life with creativity and precision!',
   },
   {
     id: 'anuj',
     name: 'Anuj Pratap Singh',
     role: 'Project Management',
     image: anujTeamImage,
-    description: 'Coordinating planning, execution and successful project delivery.',
+    description: 'Dream it, we\u0027ll design it! From big picture layouts to the tiniest details, our architectural magic brings your ideas to life with creativity and precision!',
   },
 ]
 const whoWeAreServices = [
@@ -527,13 +527,7 @@ function About() {
               ✦ Who We Are
             </span>
 
-            <h1 id="about-who-v2-title">
-              We Shape <span>Interior Designs,</span>
-              <br />
-              <span>Crafting Timeless</span> And
-              <br />
-              Inspiring Spaces
-            </h1>
+            <h1 id="about-who-v2-title">We Shape <span>Interior Designs,</span> <span>Crafting Timeless</span> And Inspiring Spaces</h1>
           </div>
 
           <div className="about-who-v2-visual">
@@ -1353,30 +1347,29 @@ function About() {
 
 
           <div className="about-team-grid about-team-people-grid">
+  {aboutTeamMembers.map((member) => (
+    <article className="about-team-person-card" key={member.id}>
+      <div className="about-team-person-top">
+        <h3 className="about-team-person-role">{member.role}</h3>
 
-            {aboutTeamMembers.map((member, index) => (
-  <article className="about-team-person-card" key={member.id}>
-    <div className="about-team-person-image">
-      <img
-        src={member.image}
-        alt={`${member.name} - ${member.role}`}
-        loading="lazy"
-        decoding="async"
-      />
-      <span className="about-team-person-number">
-        {String(index + 1).padStart(2, '0')}
-      </span>
-    </div>
+        <div className="about-team-person-image">
+          <img
+            src={member.image}
+            alt={member.name}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
 
-    <div className="about-team-person-info">
-      <span className="about-team-person-role">{member.role}</span>
-      <h3>{member.name}</h3>
-      <p>{member.description}</p>
-    </div>
-  </article>
-))}
-
-          </div>
+      <div className="about-team-person-info">
+        <span className="about-team-person-divider" aria-hidden="true" />
+        <h4>{member.name}</h4>
+        <p>{member.description}</p>
+      </div>
+    </article>
+  ))}
+</div>
 
         </div>
       </section>

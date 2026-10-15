@@ -6342,30 +6342,58 @@
 .about-team-people-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
+  gap: 20px;
   align-items: stretch;
 }
 
 .about-team-person-card {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #fff;
-  border: 1px solid rgba(15,73,75,.1);
-  box-shadow: 0 14px 38px rgba(18,55,56,.07);
-  transition: transform .35s ease, box-shadow .35s ease;
+  min-height: 365px;
+  padding: 28px 22px;
+  border: 1px solid rgba(25, 55, 55, 0.06);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(20, 45, 45, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .about-team-person-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 20px 45px rgba(18,55,56,.13);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(20, 45, 45, 0.1);
+}
+
+.about-team-person-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.about-team-person-role {
+  flex: 1;
+  min-width: 0;
+  margin: 10px 0 0;
+  color: #263d3d;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(23px, 2vw, 31px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  text-transform: none;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .about-team-person-image {
-  position: relative;
+  flex: 0 0 108px;
+  width: 108px;
+  height: 108px;
   overflow: hidden;
-  aspect-ratio: 3 / 3.6;
-  background: #e9e9e5;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background: #e9e9e6;
 }
 
 .about-team-person-image img {
@@ -6374,74 +6402,71 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  transition: transform .6s ease;
+  border-radius: 50%;
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
 }
 
-.about-team-person-card:hover img {
-  transform: scale(1.055);
-}
-
-.about-team-person-number {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  padding: 8px 11px;
-  border-radius: 6px;
-  background: rgba(255,255,255,.92);
-  color: #174c50;
-  font-size: 12px;
-  font-weight: 700;
+.about-team-person-card:hover .about-team-person-image img {
+  transform: none !important;
+  filter: none !important;
 }
 
 .about-team-person-info {
-  padding: 23px 20px 26px;
+  margin-top: auto;
+  padding-top: 32px;
 }
 
-.about-team-person-role {
+.about-team-person-divider {
   display: block;
-  margin-bottom: 9px;
-  color: #a1844e;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 22px;
+  background: rgba(35, 63, 64, 0.14);
 }
 
-.about-team-person-info h3 {
+.about-team-person-info h4 {
   margin: 0 0 10px;
-  color: #183d40;
-  font-size: clamp(20px,2vw,26px);
-  line-height: 1.2;
+  color: #263d3d;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.15;
 }
 
 .about-team-person-info p {
   margin: 0;
-  color: #667475;
+  color: #747e7e;
   font-size: 13px;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .about-team-people-grid {
-    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .about-team-people-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
+  }
+
+  .about-team-person-card {
+    min-height: 330px;
+    padding: 26px 24px;
+  }
+
+  .about-team-person-role {
+    font-size: 30px;
   }
 
   .about-team-person-image {
-    aspect-ratio: 4 / 3.6;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .about-team-person-card,
-  .about-team-person-image img {
-    transition: none;
+    flex-basis: 108px;
+    width: 108px;
+    height: 108px;
   }
 }
 
@@ -6670,3 +6695,339 @@
 }
 
 /* VASUPRIY WHAT WE DO LARGE SEAL END */
+
+/* Keep photo container perfectly circular */
+.about-team .about-team-person-image {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+/* Fixed framing — no hover zoom */
+.about-team .about-team-person-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  transform: none !important;
+  transition: none !important;
+  filter: none !important;
+}
+
+/* Priya — bring the face closer */
+.about-team .about-team-person-card:nth-child(3)
+.about-team-person-image img {
+  object-position: center 12%;
+  transform: scale(1.35) !important;
+}
+
+/* Keep identical framing on hover */
+.about-team .about-team-person-card:nth-child(3):hover
+.about-team-person-image img {
+  transform: scale(1.35) !important;
+}
+
+/* OUR TEAM — HEADING AND PHOTO SPACING FIX */
+@media (min-width: 1201px) {
+  .about-team-people-grid {
+    gap: 16px;
+  }
+
+  .about-team-person-card {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .about-team-person-top {
+    gap: 8px;
+  }
+
+  .about-team-person-role {
+    font-size: clamp(22px, 1.7vw, 26px);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    overflow-wrap: break-word;
+  }
+
+  .about-team-person-image {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+
+/* PRIYA PHOTO FRAMING — FULL FOREHEAD V2 */
+.about-team-people-grid
+.about-team-person-card:nth-child(3)
+.about-team-person-image img,
+.about-team-people-grid
+.about-team-person-card:nth-child(3):hover
+.about-team-person-image img {
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.08) !important;
+  transform-origin: center top;
+  filter: none !important;
+  transition: none !important;
+}
+
+
+
+/* VASUPRIY WHO WE ARE FULL WIDTH HEADING FIX V1 */
+
+/* Desktop: heading spans both content columns */
+@media (min-width: 901px) {
+  .about-page .about-who-v2--antra .about-who-v2-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+    grid-template-rows: auto auto;
+    column-gap: clamp(28px, 3vw, 60px);
+    row-gap: clamp(38px, 4.5vw, 62px);
+    align-items: start;
+  }
+
+  .about-page .about-who-v2--antra .about-who-v2-headline {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .about-page .about-who-v2--antra .about-who-v2-headline h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(42px, 4.4vw, 64px);
+    font-weight: 750;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+    text-wrap: wrap;
+  }
+
+  .about-page .about-who-v2--antra .about-who-v2-visual {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .about-page .about-who-v2--antra .about-who-v2-content {
+    grid-column: 2;
+    grid-row: 2;
+    padding-top: 0;
+  }
+
+  .about-page .about-who-v2--antra .about-who-v2-image {
+    height: clamp(380px, 39vw, 540px);
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 900px) {
+  .about-page .about-who-v2--antra .about-who-v2-headline h1 {
+    font-size: clamp(35px, 5.4vw, 49px);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+    white-space: normal;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .about-page .about-who-v2--antra .about-who-v2-headline h1 {
+    font-size: clamp(29px, 7.2vw, 36px);
+    line-height: 1.14;
+    letter-spacing: -0.035em;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .about-page .about-who-v2--antra .about-who-v2-shell {
+    row-gap: 26px;
+  }
+}
+
+
+/* VASUPRIY_ABOUT_HERO_BG_REFRESH_V1 */
+
+/* About hero section background refresh */
+.about-page .about-who-v2--antra {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      180deg,
+      #0b5c69 0%,
+      #146c79 28%,
+      #2a7f89 55%,
+      #5fa1a8 78%,
+      #9fc4c8 100%
+    ) !important;
+}
+
+/* soft premium glow */
+.about-page .about-who-v2--antra::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255,255,255,0.08), transparent 30%),
+    radial-gradient(circle at 82% 20%, rgba(255,255,255,0.07), transparent 28%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* keep grid/structure above bg layers */
+.about-page .about-who-v2--antra .about-who-v2-shell {
+  position: relative;
+  z-index: 2;
+}
+
+/* soften the grid lines if any */
+.about-page .about-who-v2--antra::after {
+  opacity: 0.16 !important;
+}
+
+/* make text pop nicely on lighter bg */
+.about-page .about-who-v2--antra .about-who-v2-headline h1,
+.about-page .about-who-v2--antra .about-who-v2-intro h2,
+.about-page .about-who-v2--antra .about-who-v2-feature strong,
+.about-page .about-who-v2--antra .about-who-v2-description {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* slightly richer gold highlight */
+.about-page .about-who-v2--antra .about-who-v2-headline h1 span,
+.about-page .about-who-v2--antra .about-who-v2-intro h2 span,
+.about-page .about-who-v2--antra .about-who-v2-feature > span,
+.about-page .about-who-v2--antra .about-who-v2-divider,
+.about-page .about-who-v2--antra .about-who-v2-button i {
+  color: #d8ad63 !important;
+  background-color: #d8ad63;
+}
+
+/* mobile polish */
+@media (max-width: 900px) {
+  .about-page .about-who-v2--antra {
+    background:
+      linear-gradient(
+        180deg,
+        #0c5f6d 0%,
+        #17717c 34%,
+        #3b8d95 68%,
+        #8eb8bc 100%
+      ) !important;
+  }
+}
+
+
+/* VASUPRIY_ABOUT_HERO_LIGHT_FIX_V2 */
+
+/* Light premium aqua gradient */
+.about-page .about-who-v2--antra {
+  background:
+    linear-gradient(
+      165deg,
+      #388894 0%,
+      #5b9fa9 33%,
+      #87b8bf 65%,
+      #b8d4d6 85%,
+      #d8e8e6 100%
+    ) !important;
+  background-color: #75acb4 !important;
+}
+
+/* Soft lighting instead of dark overlays */
+.about-page .about-who-v2--antra::before {
+  background:
+    radial-gradient(
+      ellipse at 75% 15%,
+      rgba(255, 255, 255, 0.15),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 12% 85%,
+      rgba(255, 255, 255, 0.12),
+      transparent 48%
+    ) !important;
+  pointer-events: none;
+}
+
+.about-page .about-who-v2--antra::after {
+  opacity: 0.08 !important;
+}
+
+/* Fix the solid gold boxes introduced by previous patch */
+.about-page .about-who-v2--antra .about-who-v2-headline h1 span,
+.about-page .about-who-v2--antra .about-who-v2-intro h2 span,
+.about-page .about-who-v2--antra .about-who-v2-feature > span,
+.about-page .about-who-v2--antra .about-who-v2-button i {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: #f0c27d !important;
+}
+
+/* Restore thin decorative dividers rather than gold blocks */
+.about-page .about-who-v2--antra .about-who-v2-divider {
+  background: rgba(205, 156, 82, 0.65) !important;
+  color: #c9944d !important;
+}
+
+/* Heading contrast and premium text finishing */
+.about-page .about-who-v2--antra .about-who-v2-headline h1 {
+  color: #ffffff !important;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  text-shadow: 0 2px 16px rgba(0, 48, 60, 0.13);
+}
+
+/* Gold highlighted words: text only, no filled rectangles */
+.about-page .about-who-v2--antra .about-who-v2-headline h1 span {
+  color: #f5c784 !important;
+  -webkit-text-fill-color: #f5c784 !important;
+  text-shadow: 0 2px 9px rgba(0, 45, 55, 0.10);
+}
+
+/* Improve readability over the softer background */
+.about-page .about-who-v2--antra .about-who-v2-intro h2,
+.about-page .about-who-v2--antra .about-who-v2-feature strong {
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 45, 55, 0.16);
+}
+
+.about-page .about-who-v2--antra .about-who-v2-description {
+  color: #123f4a;
+  text-shadow: none;
+}
+
+/* Keep the checklist accents neat */
+.about-page .about-who-v2--antra
+.about-who-v2-feature > span {
+  background: transparent !important;
+  color: #f0c27d !important;
+}
+
+/* Smaller screens: same premium palette */
+@media (max-width: 900px) {
+  .about-page .about-who-v2--antra {
+    background:
+      linear-gradient(
+        170deg,
+        #388894 0%,
+        #69a9b1 43%,
+        #a1c9cc 78%,
+        #d6e7e5 100%
+      ) !important;
+  }
+
+  .about-page .about-who-v2--antra
+  .about-who-v2-headline h1 {
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+    overflow-wrap: break-word;
+  }
+}
