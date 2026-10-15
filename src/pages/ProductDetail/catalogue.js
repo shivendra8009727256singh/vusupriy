@@ -1,4 +1,4 @@
-import { artificialGrassImages, verticalGardenImages, artificialPlantImages } from './greenElementImages'
+import { artificialGrassImages, verticalGardenImages, artificialPlantImages, naturalGardenImages } from './greenElementImages'
 import { inlayStoneImages } from './inlayStoneImages'
 import { carpetTileImages } from './carpetTileImages'
 import { concreteImages } from './concreteImages'
@@ -21,7 +21,7 @@ export const productCategories = [
     ['Green Living', ['Artificial Grass Flooring','Vertical Garden','Artificial Plant and Tree','Natural Garden']]
   ] },
   { id: 'lighting', name: 'Enlightenment Options', subtitle: 'Create an atmosphere worth remembering', groups: [
-    ['Architectural Lighting', ['Chandeliers','Garden Light','Ceiling Light','Pole Light','Wall Lamps','Down Light','Focus Light','Floor Lamps','Indoor & Outdoor Lights']]
+    ['Indoor & Outdoor Lights', ['Chandeliers','Garden Light','Ceiling Light','Pole Light','Wall Lamps','Down Light','Focus Light']]
   ] },
   { id: 'walls', name: 'Wall Makeover Products', subtitle: 'Surfaces with a point of view', groups: [
     ['Wallpaper', ['Non-Woven Wallpaper','Customized Design Wallpaper','Fabric Wallpaper']],
@@ -39,6 +39,7 @@ export const catalogue = productCategories.flatMap(category => category.groups.f
  images: name === 'Chandeliers' ? chandelierImages : name === 'Stone & Inlay Work on Walls' ? inlayStoneImages : name === 'Carpet Tiles Flooring' ? carpetTileImages : concreteImages[name] ? concreteImages[name] : sheetImages[name] ? sheetImages[name] : wallMouldingImages[name] ? wallMouldingImages[name] : wallpaperImages[name] ? wallpaperImages[name] : wallPanelImages[name] ? wallPanelImages[name] : name === 'European Laminate' ? [...laminateFinishes.flatMap(f => f.images), ...laminateDetails] : name === 'Deck Flooring' ? deckFinishes.flatMap(f => f.images) : name === 'Wooden Deck Flooring' ? woodenFinishes.flatMap(f => f.images) : name === 'SPC Flooring' ? spcFinishes.flatMap(f => f.images) : name === 'Artificial Grass Flooring' ? artificialGrassImages
 : name === 'Vertical Garden' ? verticalGardenImages
 : name === 'Artificial Plant and Tree' ? artificialPlantImages
+: name === 'Natural Garden' ? naturalGardenImages
 : imagesForProduct(name),
  finishes:name === 'European Laminate' ? laminateFinishes : name === 'Deck Flooring' ? deckFinishes : name === 'Wooden Deck Flooring' ? woodenFinishes : name === 'SPC Flooring' ? spcFinishes : [],
  description:`Explore ${name.toLowerCase()} for carefully considered residential and commercial spaces. Our team can help you identify suitable styles, finishes and applications for your project.`,
