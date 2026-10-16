@@ -535,3 +535,46 @@
   .vasu-service-page .vasu-client-detail-photo-grid { grid-template-columns: minmax(0, 1fr); }
   .vasu-service-page .vasu-client-detail-photo { aspect-ratio: 4 / 3; }
 }
+/* VASUPRIY_CONTENT_PAIRED_SECTIONS_V2 — scoped to the remaining two services only */
+.vasu-service-page .vasu-drop-pdf-detail { display: grid; gap: clamp(18px, 2.8vw, 30px); }
+.vasu-service-page .vasu-drop-content-pair {
+  display: grid; grid-template-columns: minmax(0, .40fr) minmax(0, .60fr);
+  align-items: stretch; overflow: hidden; border-radius: 17px;
+  background: #fcfaf6; border: 1px solid rgba(9,69,73,.12);
+  box-shadow: 0 8px 26px rgba(3,57,63,.045);
+}
+.vasu-service-page .vasu-drop-content-pair:nth-of-type(even) { grid-template-columns: minmax(0, .60fr) minmax(0, .40fr); }
+.vasu-service-page .vasu-drop-content-pair:nth-of-type(even) .vasu-drop-content-pair-photo { order: 2; }
+.vasu-service-page .vasu-drop-content-pair-photo { margin: 0; min-width: 0; min-height: 220px; background: #eae5db; }
+.vasu-service-page .vasu-drop-content-pair-photo img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.vasu-service-page .vasu-drop-content-pair-copy { min-width: 0; padding: clamp(20px,2.6vw,34px); display: grid; align-content: center; gap: 12px; }
+.vasu-service-page .vasu-drop-content-pair-copy h3 { margin: 0 0 6px; font-size: clamp(20px,2vw,28px); }
+.vasu-service-page .vasu-custom-copy-image-pair {
+  display: grid; grid-template-columns: minmax(0, .42fr) minmax(0, .58fr);
+  align-items: stretch; overflow: hidden; border-radius: 16px;
+  border: 1px solid rgba(9,69,73,.12); background: #fcfaf6;
+}
+.vasu-service-page .vasu-custom-copy-image-pair--reverse { grid-template-columns: minmax(0, .58fr) minmax(0, .42fr); }
+.vasu-service-page .vasu-custom-copy-image-pair > img { width: 100%; height: 100%; min-height: 230px; object-fit: cover; display: block; }
+.vasu-service-page .vasu-custom-copy-image-pair--reverse > img { order: 2; }
+.vasu-service-page .vasu-custom-copy-image-pair > div { min-width: 0; padding: clamp(20px,2.6vw,32px); align-self: center; }
+.vasu-service-page .vasu-custom-copy-image-pair > div > p { line-height: 1.8; margin: 0 0 14px; }
+@media (max-width: 850px) {
+  .vasu-service-page .vasu-drop-content-pair,
+  .vasu-service-page .vasu-drop-content-pair:nth-of-type(even),
+  .vasu-service-page .vasu-custom-copy-image-pair,
+  .vasu-service-page .vasu-custom-copy-image-pair--reverse { grid-template-columns: minmax(0,1fr); }
+  .vasu-service-page .vasu-drop-content-pair:nth-of-type(even) .vasu-drop-content-pair-photo,
+  .vasu-service-page .vasu-custom-copy-image-pair--reverse > img { order: 0; }
+  .vasu-service-page .vasu-drop-content-pair-photo { min-height: 0; aspect-ratio: 16/9; }
+  .vasu-service-page .vasu-custom-copy-image-pair > img { height: auto; min-height: 0; aspect-ratio: 16/9; }
+}
+@media (max-width: 480px) {
+  .vasu-service-page .vasu-drop-content-pair-copy, .vasu-service-page .vasu-custom-copy-image-pair > div { padding: 17px; }
+  .vasu-service-page .vasu-drop-content-pair-photo, .vasu-service-page .vasu-custom-copy-image-pair > img { aspect-ratio: 4/3; }
+}
+
+/* VASU_CUSTOM_SELECTED_CONTENT_V3: one active product, not five unchanged catalogue cards. */
+.vasu-service-page .vasu-custom-pdf-products--selected { grid-template-columns: minmax(0, 1fr) !important; }
+.vasu-service-page .vasu-custom-pdf-products--selected .vasu-client-custom-product { width: 100%; max-width: 100%; }
+.vasu-service-page .vasu-custom-pdf-products--selected .vasu-client-custom-product-photo { max-height: 340px; object-fit: cover; }

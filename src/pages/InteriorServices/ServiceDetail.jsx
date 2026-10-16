@@ -1303,6 +1303,39 @@ const clientRoomLabels = {
 /* VASUPRIY_SPACE_PROCESS_BENEFITS_CLIENT_IMAGES_V1 */
 const spaceProcessAndBenefitsPhotos = ["/images/services-client/space-makeover/living-room/027.jpg","/images/services-client/space-makeover/office/100.jpg","/images/services-client/space-makeover/kitchen/069.jpg","/images/services-client/space-makeover/cafe-restaurant-salon/001.jpg","/images/services-client/space-makeover/washroom/007.jpg","/images/services-client/space-makeover/stairs/129.jpg","/images/services-client/space-makeover/bedroom/151.jpg","/images/services-client/space-makeover/puja-room/003.jpg"]
 
+/* VASUPRIY_CONTENT_PAIRED_SECTIONS_V2: Preserve every original PDF paragraph. */
+function groupDropContent(blocks) {
+  const groups = []
+  for (const block of blocks) {
+    if (block.type === 'heading') {
+      groups.push({ title: block.text, blocks: [] })
+    } else {
+      if (!groups.length) groups.push({ title: '', blocks: [] })
+      groups[groups.length - 1].blocks.push(block)
+    }
+  }
+  return groups
+}
+
+function dropSectionPhotoKey(title, selectedKeys) {
+  const heading = title.toLowerCase()
+  if (/wiring|electrical|lighting|ac |air.condition/.test(heading)) return 'drop-servicing/ac-electrical'
+  if (/glass door/.test(heading)) return 'drop-servicing/mirror-glazing/glass-doors'
+  if (/partition/.test(heading)) return 'drop-servicing/mirror-glazing/partitions'
+  if (/skylight|sunroof/.test(heading)) return 'drop-servicing/mirror-glazing/sunroofing-skylight'
+  if (/mirror|glaz/.test(heading)) return 'drop-servicing/mirror-glazing/glass-doors'
+  if (/plumb|civil|ceiling|structure/.test(heading)) return 'drop-servicing/architectural-civil'
+  if (/drawing|3d|2d|grfc/.test(heading)) return 'drop-servicing/2d-3d-drawing'
+  if (/curtain|blind/.test(heading)) return 'drop-servicing/curtains-blinds'
+  if (/garden|landscap|plant/.test(heading)) return 'drop-servicing/garden-setup'
+  if (/floor|epoxy/.test(heading)) return 'drop-servicing/epoxy-flooring'
+  if (/lift|elevator/.test(heading)) return 'drop-servicing/lift-installation'
+  if (/coating|nano/.test(heading)) return 'drop-servicing/nano-coating'
+  if (/artisan|artistr|painting|mural|craft/.test(heading)) return 'drop-servicing/indian-artis'
+  if (/door|window/.test(heading)) return 'drop-servicing/windows-doors'
+  return selectedKeys[0] || 'drop-servicing/architectural-civil'
+}
+
 /* VASUPRIY_OTHER_SERVICES_CONTENT_PHOTOS_V1 */
 function ServiceDetail() {
   const location = useLocation()
@@ -1399,6 +1432,10 @@ function ServiceDetail() {
   const selectedImages = selectedClientGroups.length > 0
     ? selectedClientGroups.flatMap((group) => group.images).slice(0, 5)
     : existingSelectedImages
+  // VASU_CUSTOM_SELECTED_CONTENT_V3: all custom-product panels follow the active sidebar item.
+  const customSelectedPhotos = selectedClientGroups.flatMap((group) => group.images)
+  const customSelectedPhoto = customSelectedPhotos[0] || existingSelectedImages[0] || findImage('premium-wall-panels-51.jpg')
+  const customSelectedEditorial = serviceEditorial[selected.title]
 
   return (
     <main className={`vasu-service-page ${slug === 'space-designing-makeover' ? 'vasu-service-page--space-makeover' : ''}`}>
@@ -1567,66 +1604,83 @@ function ServiceDetail() {
             {slug === 'drop-servicing-installation' && (
               <div className="vasu-drop-pdf-detail" key={selectedIndex}>
                 <span className="vasu-drop-pdf-eyebrow">VASUPRIY INTERIOVILLA / SERVICE DETAILS</span>
-                {selectedImages.length > 0 && (
-                  <div className="vasu-client-detail-photo-grid" aria-label={`${selected.title} client projects`}>
-                    {selectedImages.slice(0, 2).map((src, index) => (
-                      <figure className="vasu-client-detail-photo" key={src}>
-                        <img src={src} loading="lazy" decoding="async" alt={`${selected.title} project ${index + 1}`} />
-                      </figure>
-                    ))}
-                  </div>
-                )}
-                {(dropPdfDetails[selectedIndex] || []).map((block, i) =>
-                  block.type === 'heading' ? <h3 key={i}>{block.text}</h3> :
-                  block.type === 'bullet' ? <p className="vasu-drop-pdf-bullet" key={i}>{block.text}</p> :
-                  block.type === 'cta' ? <p className="vasu-drop-pdf-cta" key={i}>{block.text}</p> :
-                  <p key={i}>{block.text}</p>
-                )}
+                {groupDropContent(dropPdfDetails[selectedIndex] || []).map((group, groupIndex) => {
+                  const photoKey = dropSectionPhotoKey(group.title, selectedClientCategoryKeys)
+                  const photos = clientServicePhotos[photoKey] || selectedImages
+                  const imageSrc = photos[groupIndex % photos.length] || selectedImages[0]
+                  return (
+                    <section className="vasu-drop-content-pair" key={`${selectedIndex}-${groupIndex}`}>
+                      {imageSrc && (
+                        <figure className="vasu-drop-content-pair-photo">
+                          <img src={imageSrc} alt={`${group.title || selected.title} client project photograph`} loading="lazy" decoding="async" />
+                        </figure>
+                      )}
+                      <div className="vasu-drop-content-pair-copy">
+                        {group.title && <h3>{group.title}</h3>}
+                        {group.blocks.map((block, i) =>
+                          block.type === 'bullet' ? <p className="vasu-drop-pdf-bullet" key={i}>{block.text}</p> :
+                          block.type === 'cta' ? <p className="vasu-drop-pdf-cta" key={i}>{block.text}</p> :
+                          <p key={i}>{block.text}</p>
+                        )}
+                      </div>
+                    </section>
+                  )
+                })}
               </div>
-            )}            {/* VASUPRIY_CUSTOM_PRODUCTS_PDF_V1: wording from client's supplied PDF */}
+            )}
+            {/* VASUPRIY_CUSTOM_PRODUCTS_PDF_V1 + SELECTED_CONTENT_V3 */}
             {slug === 'customized-theme-products' && (
-              <div className="vasu-custom-pdf-detail">
+              <div className="vasu-custom-pdf-detail" key={`custom-content-${selectedIndex}`}>
                 <section className="vasu-custom-pdf-section">
                   <span className="vasu-custom-pdf-eyebrow">01 / INTRODUCTION</span>
-                  <h3>Introduction</h3>
-                  <p>Every home tells a unique story, and your living space should reflect your distinct personality. At Vasupriy Interiovilla, we move beyond off-the-shelf options to bring you customized products that fit your exact lifestyle and spatial dimensions.</p>
+                  <h3>{selected.title} — Introduction</h3>
+                  <div className="vasu-custom-copy-image-pair">
+                    {customSelectedPhoto && <img src={customSelectedPhoto} alt={`${selected.title} client portfolio inspiration`} loading="lazy" decoding="async" />}
+                    <div>
+                      <p>{customSelectedEditorial?.intro || selected.description}</p>
+                      <p>Every home tells a unique story, and your living space should reflect your distinct personality. At Vasupriy Interiovilla, we move beyond off-the-shelf options to bring you customized products that fit your exact lifestyle and spatial dimensions.</p>
+                    </div>
+                  </div>
                 </section>
                 <section className="vasu-custom-pdf-section">
                   <span className="vasu-custom-pdf-eyebrow">02 / EXPERT GUIDANCE</span>
-                  <h3>Expert Guidance &amp; Client-Centric Process</h3>
-                  <p>Personalized interior design is not just about making productsâ€”it is about listening to you. We blend market trends with your individual aesthetic.</p>
-                  <div className="vasu-custom-pdf-points">
-                    <div><strong>Understanding Your Needs:</strong> We ensure every piece serves you perfectly.</div>
-                    <div><strong>Tailored Suggestions:</strong> Based on your room size and layout, we recommend the most suitable materials.</div>
-                    <div><strong>Visualizing Before Creating:</strong> We provide samples and previews so you can see the vision.</div>
+                  <h3>Expert Guidance for {selected.title}</h3>
+                  <div className="vasu-custom-copy-image-pair vasu-custom-copy-image-pair--reverse">
+                    {customSelectedPhoto && <img src={customSelectedPhotos[1] || customSelectedPhoto} alt={`${selected.title} materials and expert guidance`} loading="lazy" decoding="async" />}
+                    <div>
+                      <p>Personalized interior design is not just about making products—it is about listening to you. We blend market trends with your individual aesthetic.</p>
+                      <p>{customSelectedEditorial?.approach}</p>
+                      <div className="vasu-custom-pdf-points">
+                        {(customSelectedEditorial?.highlights || []).map((point, index) => (
+                          <div key={`${selected.title}-${index}`}><strong>{String(index + 1).padStart(2, '0')} / </strong>{point}</div>
+                        ))}
+                        <div><strong>Understanding Your Needs:</strong> We ensure every piece serves you perfectly.</div>
+                        <div><strong>Tailored Suggestions:</strong> Based on your room size and layout, we recommend the most suitable materials.</div>
+                        <div><strong>Visualizing Before Creating:</strong> We provide samples and previews so you can see the vision.</div>
+                      </div>
+                    </div>
                   </div>
                 </section>
                 <section className="vasu-custom-pdf-section">
                   <span className="vasu-custom-pdf-eyebrow">03 / OUR PRODUCTS</span>
-                  <h3>What We Customize</h3>
-                  <div className="vasu-custom-pdf-products">
-                    {service.items.map((item, index) => (
-                      <div className={`vasu-custom-pdf-product vasu-client-custom-product ${selectedIndex === index ? 'is-selected' : ''}`} key={item.title}>
-                        {(() => {
-                          const key = clientServiceCategories['customized-theme-products']?.[index]?.[0]
-                          const src = clientServicePhotos[key]?.[0] || existingSelectedImages[0]
-                          return src ? <img className="vasu-client-custom-product-photo" src={src} loading="lazy" decoding="async" alt={`${item.title} project photograph`} /> : null
-                        })()}
-                        <div className="vasu-client-custom-product-copy">
-                          <span>{String(index + 1).padStart(2, '0')}</span>
-                          <div><h4>{item.title}</h4><p>{item.description}</p></div>
-                        </div>
+                  <h3>What We Customize — {selected.title}</h3>
+                  <div className="vasu-custom-pdf-products vasu-custom-pdf-products--selected">
+                    <div className="vasu-custom-pdf-product vasu-client-custom-product is-selected" key={selected.title}>
+                      {customSelectedPhoto && <img className="vasu-client-custom-product-photo" src={customSelectedPhotos[2] || customSelectedPhoto} loading="lazy" decoding="async" alt={`${selected.title} project photograph`} />}
+                      <div className="vasu-client-custom-product-copy">
+                        <span>{String(selectedIndex + 1).padStart(2, '0')}</span>
+                        <div><h4>{selected.title}</h4><p>{selected.description}</p><p>{customSelectedEditorial?.intro}</p></div>
                       </div>
-                    ))}
+                    </div>
                   </div>
                 </section>
                 <section className="vasu-custom-pdf-section">
                   <span className="vasu-custom-pdf-eyebrow">04 / THE PROCESS</span>
-                  <h3>Step-by-Step Customization</h3>
+                  <h3>Step-by-Step Customization — {selected.title}</h3>
                   <div className="vasu-custom-pdf-steps">
                     {['Share Your Theme', 'Design & Concept Planning', 'Material Selection', 'Crafting & Installation'].map((step, index) => (
-                      <div className="vasu-client-custom-step" key={step}>
-                        <img src={clientServicePhotos[['custom-theme/furnishing', 'custom-theme/floor', 'custom-theme/rugs', 'custom-theme/garden'][index]][0]} alt={`${step} - client design inspiration`} loading="lazy" decoding="async" />
+                      <div className="vasu-client-custom-step" key={`${selected.title}-${step}`}>
+                        {customSelectedPhoto && <img src={customSelectedPhotos[index % customSelectedPhotos.length] || customSelectedPhoto} alt={`${step} — ${selected.title} inspiration`} loading="lazy" decoding="async" />}
                         <div><span>0{index + 1}</span><h4>{step}</h4></div>
                       </div>
                     ))}
