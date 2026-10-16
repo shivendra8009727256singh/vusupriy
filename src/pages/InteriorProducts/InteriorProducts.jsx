@@ -36,7 +36,7 @@ const collections = [
 
     { title: 'Wall Moulding', items: ['Wall Moulding'] },
 
-    { title: 'Wall Panels', items: ['WPC Panels', 'PVC Panels', 'Charcoal Metallic Panels', '3D CNC Cutting Wall Panels', 'FRP Wall Panels', 'MDF Wall Panels'] },
+    { title: 'Wall Panels', items: ['WPC Panels', 'PVC Panels', 'Charcoal Metallic Panels', '3D CNC Cutting Wall Panels', 'MDF Wall Panels'] },
 
     { title: 'Sheets', items: ['Texture Sheet', 'Fluted Acrylic Sheet', 'Natural Cork Sheet'] },
 
