@@ -74,15 +74,13 @@ export default function HomeGallery() {
 
         <div className="antra-gallery-heading-row">
           <h2 id="home-gallery-title">
-            Spaces We&apos;ve
+            Crafted with Passion.
             <br />
-            <em>Shaped.</em>
+            <em>Defined by Expertise.</em>
           </h2>
 
           <p>
-            A glimpse into interiors crafted with character,
-            comfort and purpose — spaces thoughtfully designed
-            around the way people live, work and connect.
+            Discover our expertise in bespoke craftsmanship, artistic finishes, and innovative interior solutions. From handcrafted details to distinctive design elements, every creation reflects quality, creativity, and timeless elegance.
           </p>
         </div>
       </div>

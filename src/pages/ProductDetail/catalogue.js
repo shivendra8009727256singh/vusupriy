@@ -15,7 +15,7 @@ import { chandelierImages } from './chandelierImages'
 
 export const productCategories = [
   { id: 'flooring', name: 'Flooring Styling', subtitle: 'Beautiful foundations for extraordinary spaces', groups: [
-    ['Flooring & Finishes', ['European Laminate','SPC Flooring','Wooden Deck Flooring','Deck Flooring','WPC Deck Flooring','Carpet Tiles Flooring','Artificial Grass Flooring','Epoxy Flooring','Handmade Rugs','Self-Adhesive Tiles']]
+    ['Flooring & Finishes', ['European Laminate','SPC Flooring','Wooden Deck Flooring','Deck Flooring','WPC Deck Flooring','Carpet Tiles Flooring','Artificial Grass Flooring','Epoxy Flooring','Handmade Rugs']]
   ] },
   { id: 'green', name: 'Green Element', subtitle: 'A natural expression of modern living', groups: [
     ['Green Living', ['Artificial Grass Flooring','Vertical Garden','Artificial Plant and Tree','Natural Garden']]
@@ -29,7 +29,7 @@ export const productCategories = [
     ['Wall Panels', ['WPC Panels','PVC Panels','Charcoal Metallic Panels','3D CNC Cutting Wall Panels','FRP Wall Panels','MDF Wall Panels']],
     ['Sheets', ['Texture Sheet','Fluted Acrylic Sheet','Natural Cork Sheet']],
     ['Concrete Work', ['Concrete Work (Walls & Outer Building Settings)']],
-    ['Tiles & Inlay', ['Mosaic Tiles (Metal & Glass)','3D Self-Adhesive Tiles','Elegant Wall & Flooring Tiles','Highlighter Tiles','Stone & Inlay Work on Walls']]
+    ['Tiles & Inlay', ['Mosaic Tiles (Metal & Glass)','3D Self-Adhesive Tiles','Highlighter Tiles','Stone & Inlay Work on Walls']]
   ] }
 ]
 export const slugify = name => name.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')
