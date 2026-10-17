@@ -53,7 +53,7 @@ const serviceData = {
     subtitle: 'Bring Your Vision to Life with Customized Products and Styling',
     description: 'Why settle for mass-produced decor when you can have a space tailored exclusively to your taste?',
     items: [
-      { title: 'Customized Flooring', description: 'Tailor-made for theme and durability.' },
+      { title: 'Epoxy flooring', description: 'Tailor-made for theme and durability.' },
       { title: 'Wall Panels & Wallpapers', description: 'Bespoke designs for your specific dimensions.' },
       { title: 'Rugs & Wall Hangings', description: 'Texture and art tailored to your room.' },
       { title: 'Complete Furnishings', description: 'Curtains, cushions, and throws matched to your theme.' },
@@ -1217,7 +1217,7 @@ const serviceEditorial = {
     ],
     "approach": "We can assist with design coordination while licensed lift providers and relevant professionals handle technical design, approvals and installation."
   },
-  "Customized Flooring": {
+  "Epoxy flooring": {
     "intro": "Flooring sets the tone for an entire interior. A tailored selection considers texture, scale, comfort and durability as well as the relationship between adjacent rooms.",
     "highlights": [
       "Material and finish combinations for the intended use",
@@ -1317,6 +1317,11 @@ function groupDropContent(blocks) {
   return groups
 }
 
+// Mirror partitions and walls: dedicated conceptual images, not client project photography.
+const mirrorPartitionPhotos = [
+  '/images/services/mirror-partitions/mirror-glass-divider.webp',
+  '/images/services/mirror-partitions/bronze-mirror-partition.webp',
+]
 function dropSectionPhotoKey(title, selectedKeys) {
   const heading = title.toLowerCase()
   if (/wiring|electrical|lighting|ac |air.condition/.test(heading)) return 'drop-servicing/ac-electrical'
@@ -1343,8 +1348,6 @@ function ServiceDetail() {
 
   const service = serviceData[slug]
   const [selectedIndex, setSelectedIndex] = useState(0)
-  // VASU_DYNAMIC_SIDEBAR_GAP_V1: measure natural content, never include filler in measurement.
-  const sidebarInnerRef = useRef(null)
   const articleRef = useRef(null)
   // VASUPRIY_MOBILE_SERVICE_AUTOSCROLL_V1
   const handleServiceSelect = (index) => {
@@ -1374,38 +1377,6 @@ function ServiceDetail() {
       })
     })
   }
-  const [sidebarGap, setSidebarGap] = useState(0)
-
-  useEffect(() => {
-    const sidebarInner = sidebarInnerRef.current
-    const article = articleRef.current
-    if (!sidebarInner || !article) return undefined
-    let frame = 0
-    const measure = () => {
-      cancelAnimationFrame(frame)
-      frame = requestAnimationFrame(() => {
-        if (window.innerWidth <= 1024) {
-          setSidebarGap(0)
-          return
-        }
-        const sidebarHeight = sidebarInner.getBoundingClientRect().height
-        const articleHeight = article.getBoundingClientRect().height
-        // Ignore small differences. Keep filler height independent of its own dimensions.
-        const difference = Math.max(0, Math.round(articleHeight - sidebarHeight - 26))
-        setSidebarGap(difference >= 220 ? difference : 0)
-      })
-    }
-    const observer = new ResizeObserver(measure)
-    observer.observe(sidebarInner)
-    observer.observe(article)
-    window.addEventListener('resize', measure)
-    measure()
-    return () => {
-      cancelAnimationFrame(frame)
-      observer.disconnect()
-      window.removeEventListener('resize', measure)
-    }
-  }, [slug, selectedIndex])
 
   useEffect(() => {
     setSelectedIndex(0)
@@ -1470,7 +1441,7 @@ function ServiceDetail() {
       <section className="vasu-service-main">
         <div className="vasu-service-container vasu-service-layout">
           <aside className="vasu-service-sidebar">
-            <div className="vasu-service-sidebar-inner" ref={sidebarInnerRef}>
+            <div className="vasu-service-sidebar-inner">
               <span className="vasu-service-sidebar-eyebrow">
                 EXPLORE SERVICES
               </span>
@@ -1547,17 +1518,7 @@ function ServiceDetail() {
               </div>
             </div>
             
-{sidebarGap > 0 && (
-  <div className="vasu-service-gap-filler" style={{ minHeight: sidebarGap }}>
-    <span className="vasu-service-gap-eyebrow">DESIGN INSPIRATION</span>
-    <h3>Made for Your Space</h3>
-    <p>Discover ideas and details tailored to your interior vision.</p>
-    {selectedImages[0] && (
-      <img src={selectedImages[0]} alt={`${selected.title} interior inspiration`} loading="lazy" decoding="async" />
-    )}
-    <Link to="/contact">Discuss Your Project <span aria-hidden="true">&#8599;</span></Link>
-  </div>
-)}
+
 </aside>
 
           <article className="vasu-service-content" ref={articleRef}>
@@ -1606,13 +1567,18 @@ function ServiceDetail() {
                 <span className="vasu-drop-pdf-eyebrow">VASUPRIY INTERIOVILLA / SERVICE DETAILS</span>
                 {groupDropContent(dropPdfDetails[selectedIndex] || []).map((group, groupIndex) => {
                   const photoKey = dropSectionPhotoKey(group.title, selectedClientCategoryKeys)
-                  const photos = clientServicePhotos[photoKey] || selectedImages
-                  const imageSrc = photos[groupIndex % photos.length] || selectedImages[0]
+                  const photos = selectedIndex === 2 && /mirror partitions|mirror.*walls/i.test(group.title) ? mirrorPartitionPhotos : (clientServicePhotos[photoKey] || selectedImages)
+                  const exteriorVisual = /3d\s+elevation\s*&\s*interior\s*\/\s*exterior\s+rendering/i.test(group.title)
+                    ? '/images/services/exterior/elevation-exterior-rendering.webp'
+                    : /grfc.*drawings.*detailing/i.test(group.title)
+                      ? '/images/services/exterior/grfc-facade-detailing.webp'
+                      : null
+                  const imageSrc = exteriorVisual || photos[groupIndex % photos.length] || selectedImages[0]
                   return (
                     <section className="vasu-drop-content-pair" key={`${selectedIndex}-${groupIndex}`}>
                       {imageSrc && (
                         <figure className="vasu-drop-content-pair-photo">
-                          <img src={imageSrc} alt={`${group.title || selected.title} client project photograph`} loading="lazy" decoding="async" />
+                          <img src={imageSrc} alt={exteriorVisual ? `${group.title} architectural concept illustration` : `${group.title || selected.title} client project photograph`} loading="lazy" decoding="async" />
                         </figure>
                       )}
                       <div className="vasu-drop-content-pair-copy">
@@ -1833,7 +1799,7 @@ function ServiceDetail() {
                     ['Seamless Execution', 'On-ground team handling the entire room transformation with zero hassle.'],
                   ].map(([title, detail], index) => (
                     <div className="vasu-pdf-step vasu-space-illustrated-card" key={title}>
-                      <img className="vasu-space-card-photo" src={spaceProcessAndBenefitsPhotos[index]} alt={`${title} â€” interior project inspiration`} loading="lazy" decoding="async" />
+                      <img className="vasu-space-card-photo" src={['/images/services/process/01-vision-assessment.webp', '/images/services/process/02-layout-concept-design.webp', '/images/services/process/03-material-finalization.webp', '/images/services/process/04-seamless-execution.webp'][index]} alt={`${title} â€” interior project inspiration`} loading="lazy" decoding="async" />
                       <span>STEP {index + 1}</span><h3>{title}</h3><p>{detail}</p>
                     </div>
                   ))}

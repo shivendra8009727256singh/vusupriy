@@ -16682,3 +16682,25 @@ body.is-loading {
 }
 
 /* VASUPRIY FLOATING WHATSAPP END */
+
+/* VASUPRIY_SERVICES_SIDEBAR_SCROLL_FIX_V1_START */
+@media (min-width: 1025px) {
+  .vasu-service-page .vasu-service-layout {
+    align-items: start;
+  }
+
+  .vasu-service-page .vasu-service-layout > .vasu-service-sidebar {
+    position: sticky !important;
+    top: 100px;
+    align-self: start !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .vasu-service-page .vasu-service-sidebar-inner {
+    position: static !important;
+    top: auto !important;
+  }
+}
+/* VASUPRIY_SERVICES_SIDEBAR_SCROLL_FIX_V1_END */
