@@ -1,4 +1,4 @@
-﻿import aboutFloorPlan from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-01.png'
+﻿import aboutFloorPlan from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-05.png'
 import { useState as useExpertiseState } from 'react'
 import solutionBrandImage from '../../assets/images/renamed-collection/commercial-site-photos/modern-commercial-space-interior-01.jpg'
 import solutionProductImage from '../../assets/images/renamed-collection/residential-site-photos/residential-interior-details-46.jpg'
@@ -12,6 +12,7 @@ import '../../App.css'
 import useScrollMotion from '../../hooks/useScrollMotion.js'
 import InteriorProductsPreview from '../../components/home/InteriorProductsPreview.jsx'
 import FloorPlanGallery from '../../components/home/FloorPlanGallery.jsx'
+import HomeExpertiseCurated from '../../components/home/HomeExpertiseCurated.jsx'
 
 import WhyVasupriy from '../../components/home/WhyVasupriy.jsx'
 import HomeGallery from '../../components/home/HomeGallery.jsx'
@@ -24,9 +25,9 @@ import heroArchitectureWatermark from '../../assets/images/home/hero-architectur
 import residentialInterior from '../../assets/images/home/projects/residential-interior.png'
 import commercialSpace from '../../assets/images/home/projects/commercial-space.png'
 import spaceMakeover from '../../assets/images/home/projects/space-makeover.png'
-import serviceMakeover from '../../assets/images/renamed-collection/residential-interior-renders/elegant-living-room-13.jpg'
-import serviceExecution from '../../assets/images/renamed-collection/commercial-site-photos/interior-renovation-in-progress-06.jpg'
-import serviceArchitecture from '../../assets/images/home/products/customized-products.png'
+import serviceMakeover from '../../assets/images/renamed-collection/residential-interior-renders/elegant-living-room-14.jpg'
+import serviceExecution from '../../assets/images/renamed-collection/commercial-site-photos/cafe-service-counter-17.jpg'
+import serviceArchitecture from '../../assets/images/renamed-collection/cafe-interiors/cafe-feature-wall-05.jpg'
 import expertiseInterior from '../../assets/images/home/expertise/expertise-interior.png'
 import interiorShowcaseImage from '../../assets/images/home/interior-showcase.png'
 
@@ -36,63 +37,6 @@ import expertiseDesignVisualization from '../../assets/images/home/expertise/des
 import expertiseArchitecture from '../../assets/images/home/expertise/architectural-solutions.png'
 import expertiseTurnkey from '../../assets/images/home/expertise/turnkey-execution.png'
 function Home() {
-  /* VASUPRIY ABOUT FLOOR PLAN SCROLL PARALLAX */
-  // useEffect(() => {
-  //   const image = siteRef.current?.querySelector('.about-antra-floor-plan')
-
-  //   if (!image) return undefined
-
-  //   const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-  //   let frame = 0
-
-  //   const update = () => {
-  //     frame = 0
-
-  //     if (motionQuery.matches) {
-  //       image.style.removeProperty('--floor-scroll-x')
-  //       return
-  //     }
-
-  //     const rect = image.getBoundingClientRect()
-  //     const viewportHeight = window.innerHeight || 1
-
-  //     const progress = (viewportHeight - rect.top) /
-  //       (viewportHeight + rect.height)
-
-  //     const clamped = Math.max(0, Math.min(1, progress))
-  //     const distance = window.innerWidth <= 640 ? 12 : 25
-
-  //     const offset = (clamped * 2 - 1) * distance
-
-  //     image.style.setProperty(
-  //       '--floor-scroll-x',
-  //       `${offset.toFixed(2)}px`
-  //     )
-  //   }
-
-  //   const onScroll = () => {
-  //     if (!frame) {
-  //       frame = window.requestAnimationFrame(update)
-  //     }
-  //   }
-
-  //   update()
-
-  //   window.addEventListener('scroll', onScroll, { passive: true })
-  //   window.addEventListener('resize', onScroll)
-  //   motionQuery.addEventListener?.('change', onScroll)
-
-  //   return () => {
-  //     window.removeEventListener('scroll', onScroll)
-  //     window.removeEventListener('resize', onScroll)
-  //     motionQuery.removeEventListener?.('change', onScroll)
-
-  //     if (frame) window.cancelAnimationFrame(frame)
-
-  //     image.style.removeProperty('--floor-scroll-x')
-  //   }
-  // }, [])
-
   const [activeExpertiseImage, setActiveExpertiseImage] =
     useExpertiseState(expertiseFeature)
 
@@ -100,6 +44,62 @@ function Home() {
   const [activeProject, setActiveProject] = useState(0)
   const [activeService, serviceImages] = useDecodedSelection(0)
   const siteRef = useRef(null)
+
+  /* VASUPRIY ABOUT FLOOR PLAN SCROLL PARALLAX (vertical) */
+  useEffect(() => {
+    const image = siteRef.current?.querySelector('.about-antra-floor-plan')
+
+    if (!image) return undefined
+
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    let frame = 0
+
+    const update = () => {
+      frame = 0
+
+      if (motionQuery.matches) {
+        image.style.removeProperty('--floor-scroll-y')
+        return
+      }
+
+      const rect = image.getBoundingClientRect()
+      const viewportHeight = window.innerHeight || 1
+
+      // 0 when the image enters at the bottom, 1 when it leaves at the top
+      const progress = (viewportHeight - rect.top) /
+        (viewportHeight + rect.height)
+
+      const clamped = Math.max(0, Math.min(1, progress))
+      const distance = window.innerWidth <= 640 ? 18 : 40
+
+      // Starts lower, drifts upward as the user scrolls down (and back on scroll up)
+      const offset = (1 - clamped * 2) * distance
+
+      image.style.setProperty('--floor-scroll-y', `${offset.toFixed(2)}px`)
+    }
+
+    const onScroll = () => {
+      if (!frame) {
+        frame = window.requestAnimationFrame(update)
+      }
+    }
+
+    update()
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    motionQuery.addEventListener?.('change', onScroll)
+
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      motionQuery.removeEventListener?.('change', onScroll)
+
+      if (frame) window.cancelAnimationFrame(frame)
+
+      image.style.removeProperty('--floor-scroll-y')
+    }
+  }, [])
   const projectIndexRef = useRef(0)
   const projectHoverTimer = useRef(null)
   const serviceHoverTimer = useRef(null)
@@ -614,13 +614,13 @@ function Home() {
 
             <div className="about-antra-bottom">
               <div className="about-antra-watermark-space">
-                {/* <img
+                <img
                   className="about-antra-floor-plan"
                   src={aboutFloorPlan}
                   alt="Vasupriy Interiovilla 3D interior floor plan"
                   loading="lazy"
                   decoding="async"
-                /> */}
+                />
               </div>
 
               <div className="about-antra-story" data-reveal>
@@ -1131,7 +1131,7 @@ function Home() {
                     <span key={`service-index-${activeService}`}>
                       0{activeService + 1}
                     </span>
-                    <span>/ 04</span>
+                    <span>/ 03</span>
                   </div>
 
                   <div className="home-services-visual-caption">
@@ -1148,6 +1148,9 @@ function Home() {
             </div>
           </div>
         </section>
+
+        {/* CURATED EXPERTISE (Antra exp-section) */}
+        <HomeExpertiseCurated />
 
         {/* =====================================================
             3D INTERIOR VISUAL + OUR EXPERTISE

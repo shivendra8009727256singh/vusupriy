@@ -69,7 +69,7 @@ export default function HomeGallery() {
       <div className="antra-gallery-header">
         <div className="antra-gallery-eyebrow">
           <span aria-hidden="true" />
-          Our Expertise
+          Indian Artistry
         </div>
 
         <div className="antra-gallery-heading-row">

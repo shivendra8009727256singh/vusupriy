@@ -5325,7 +5325,7 @@ body {
 
   overflow: hidden;
 
-  opacity: 0.065;
+  opacity: 0.02 !important;
 
   pointer-events: none;
   user-select: none;
@@ -5338,7 +5338,7 @@ body {
 
   object-fit: contain;
 
-  filter: grayscale(1) sepia(0.28);
+  filter: grayscale(1) sepia(0.1) brightness(0.6) contrast(0.5) !important;
 }
 
 .about-antra-watermark-space {
@@ -7269,7 +7269,7 @@ body {
   overflow: hidden;
 
   padding:
-    clamp(85px, 9vw, 135px) 0 clamp(55px, 6vw, 90px);
+    clamp(50px, 5vw, 90px) 0 clamp(40px, 4vw, 70px);
 
   background: #f7f5f1;
   color: #151515;
@@ -7278,6 +7278,7 @@ body {
 .expertise-showcase-container {
   position: relative;
   z-index: 2;
+  padding-bottom: clamp(80px, 8vw, 140px);
 }
 
 
@@ -7568,7 +7569,7 @@ body {
   z-index: 1;
 
   left: clamp(-10px, -1vw, 0px);
-  bottom: clamp(-58px, -4vw, -28px);
+  bottom: 10px;
 
   color: rgba(14, 41, 67, 0.045);
 
@@ -7616,7 +7617,7 @@ body {
 
   .expertise-showcase {
     padding:
-      85px 0 65px;
+      50px 0 40px;
   }
 
   .expertise-showcase-heading {
@@ -7666,7 +7667,7 @@ body {
 
   .expertise-showcase {
     padding:
-      70px 0 50px;
+      40px 0 30px;
   }
 
   .expertise-showcase-heading {
@@ -7730,7 +7731,7 @@ body {
 
   .expertise-showcase-wordmark {
     left: -4%;
-    bottom: -15px;
+    bottom: 10px;
 
     font-size: 27vw;
 
@@ -11040,21 +11041,21 @@ body {
 
 
 /* =========================================================
-   ABOUT LOGO — ORIGINAL COLOR + FULL OPACITY
-   Appearance only. Position / size / layout unchanged.
+   ABOUT LOGO — WATERMARK EFFECT
+   Faint watermark appearance, behind image content
    ========================================================= */
 
 .about-antra-watermark,
 .about-antra-media-row .about-antra-watermark {
-  opacity: 1 !important;
+  opacity: 0.6 !important;
 }
 
 .about-antra-watermark img,
 .about-antra-media-row .about-antra-watermark img {
-  opacity: 1 !important;
+  opacity: 0.6 !important;
 
-  /* Show original logo colors */
-  filter: none !important;
+  /* Show logo as faint watermark */
+  filter: grayscale(1) sepia(0.1) brightness(0.6) contrast(0.5) !important;
   mix-blend-mode: normal !important;
 }
 
@@ -16704,3 +16705,329 @@ body.is-loading {
   }
 }
 /* VASUPRIY_SERVICES_SIDEBAR_SCROLL_FIX_V1_END */
+
+/* =========================================================
+   VASUPRIY HERO BLUEPRINT — FINAL COMPOSITION FIX
+   1. Desktop: sketch stays inside the left copy area,
+      no bleed past the hero bottom.
+   2. Tablet + mobile: sketch visible again as a soft
+      watermark (was nearly hidden by old opacity hacks).
+   ========================================================= */
+
+/* Desktop (>= 1101px) */
+@media (min-width: 1101px) {
+
+  .antra4-hero-blueprint {
+    position: absolute !important;
+    inset: auto !important;
+    left: 0 !important;
+
+    /* Stretch to the bottom edge of the right-side hero image */
+    top: 22% !important;
+    bottom: clamp(60px, 7vw, 90px) !important;
+
+    width: 51% !important;
+    height: auto !important;
+
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    overflow: hidden !important;
+
+    z-index: 1 !important;
+    pointer-events: none !important;
+    transform: none !important;
+  }
+
+  .antra4-hero-blueprint::before,
+  .antra4-hero-blueprint::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .antra4-hero-blueprint-image {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: right bottom !important;
+
+    opacity: 0.55 !important;
+    visibility: visible !important;
+
+    filter: sepia(0.22) saturate(0.7) contrast(1.08) !important;
+    mix-blend-mode: multiply !important;
+
+    transform: none !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+
+/* Tablet (768px - 1100px) */
+@media (min-width: 768px) and (max-width: 1100px) {
+
+  /* Tablet: sketch sits in the blank space right of the copy,
+     above the hero image (keeps clear of the right-side visual) */
+  .antra4-hero-blueprint {
+    position: absolute !important;
+    inset: auto !important;
+    left: 45% !important;
+    right: 0 !important;
+
+    top: 10% !important;
+    bottom: auto !important;
+
+    width: auto !important;
+    height: 58% !important;
+
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    overflow: hidden !important;
+
+    z-index: 1 !important;
+    pointer-events: none !important;
+    transform: none !important;
+  }
+
+  .antra4-hero-blueprint-image {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: right top !important;
+
+    opacity: 0.38 !important;
+    visibility: visible !important;
+
+    filter: sepia(0.22) saturate(0.7) contrast(1.08) !important;
+    mix-blend-mode: multiply !important;
+
+    transform: none !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+
+/* Mobile (<= 767px) */
+@media (max-width: 767px) {
+
+  .antra4-hero-blueprint {
+    position: absolute !important;
+    inset: auto !important;
+    left: 0 !important;
+    top: 10% !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    height: 42% !important;
+
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    overflow: hidden !important;
+
+    z-index: 1 !important;
+    pointer-events: none !important;
+    transform: none !important;
+  }
+
+  .antra4-hero-blueprint-image {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: right center !important;
+
+    opacity: 0.26 !important;
+    visibility: visible !important;
+
+    filter: sepia(0.22) saturate(0.7) contrast(1.08) !important;
+    mix-blend-mode: multiply !important;
+
+    transform: none !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* =========================================================
+   ABOUT LOGO — FINAL WATERMARK OVERRIDE
+   Ensures logo appears as faint watermark on all breakpoints
+   ========================================================= */
+
+.about-antra-watermark,
+.about-antra-media-row .about-antra-watermark {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+.about-antra-watermark img,
+.about-antra-media-row .about-antra-watermark img {
+  opacity: 0.45 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+
+/* =========================================================
+   ABOUT — FLOOR PLAN IN LEFT SLOT
+   ========================================================= */
+
+.about-antra-bottom .about-antra-watermark-space {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+}
+
+.about-antra-bottom .about-antra-floor-plan {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  max-height: none;
+  height: auto;
+  object-fit: contain;
+
+  /* Scroll parallax: --floor-scroll-y is set from Home.jsx */
+  --floor-scroll-y: 0px;
+  transform: translate3d(0, var(--floor-scroll-y), 0);
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+@media (hover: hover) {
+  .about-antra-bottom .about-antra-floor-plan:hover {
+    transform: translate3d(0, calc(var(--floor-scroll-y) - 8px), 0) scale(1.025);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-antra-bottom .about-antra-floor-plan {
+    transform: none !important;
+    transition: none;
+    will-change: auto;
+  }
+}
+
+/* Tablet: floor plan on its own row above story + points */
+@media (max-width: 900px) {
+  .about-antra-bottom .about-antra-watermark-space {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .about-antra-bottom .about-antra-story,
+  .about-antra-bottom .about-antra-points {
+    grid-row: 2;
+  }
+
+  .about-antra-bottom .about-antra-floor-plan {
+    width: min(100%, 520px);
+    max-width: 520px;
+  }
+}
+
+/* Mobile: stacked column */
+@media (max-width: 640px) {
+  .about-antra-bottom .about-antra-watermark-space {
+    width: 100%;
+  }
+
+  .about-antra-bottom .about-antra-floor-plan {
+    width: min(100%, 400px);
+  }
+}
+
+/* =========================================================
+   HOME SERVICES — GLASS BACKGROUND
+   Semi-transparent teal with a frosted layer over the glows
+   ========================================================= */
+
+.site .home-services {
+  background:
+    radial-gradient(circle at 88% 18%,
+      rgba(180, 143, 78, 0.18),
+      transparent 34%),
+    linear-gradient(120deg,
+      rgba(0, 55, 68, 0.80) 0%,
+      rgba(0, 71, 88, 0.74) 52%,
+      rgba(0, 83, 101, 0.70) 100%) !important;
+
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  backdrop-filter: blur(18px) saturate(150%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Stronger colour blobs so the frosted layer has something to diffuse */
+.site .home-services-glow--one {
+  background: radial-gradient(circle,
+      rgba(215, 183, 125, 0.30),
+      transparent 68%);
+}
+
+.site .home-services-glow--two {
+  background: radial-gradient(circle,
+      rgba(120, 200, 210, 0.22),
+      transparent 70%);
+}
+
+/* Bleed the atmosphere past both edges so its scroll drift
+   (up to -18px) never exposes a band at the section bottom */
+.site .home-services-atmosphere {
+  inset: -32px 0;
+}
+
+/* Frosted glass sheet */
+.site .home-services-atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(160deg,
+      rgba(255, 255, 255, 0.10) 0%,
+      rgba(255, 255, 255, 0.03) 40%,
+      rgba(255, 255, 255, 0.06) 100%);
+
+  -webkit-backdrop-filter: blur(28px);
+  backdrop-filter: blur(28px);
+
+  pointer-events: none;
+}

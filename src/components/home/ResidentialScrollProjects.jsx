@@ -1,11 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom' // re-enable with the footer below
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import project01 from '../../assets/images/home/scroll-projects/project-01.png'
 import project02 from '../../assets/images/home/scroll-projects/project-02.png'
 import project03 from '../../assets/images/home/scroll-projects/project-03.png'
 
 import './ResidentialScrollProjects.css'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   {
@@ -35,6 +39,54 @@ export default function ResidentialScrollProjects() {
   const sectionRef = useRef(null)
   const [active, setActive] = useState(0)
 
+  /* Antra index-4 project stack (ported from antra main.js):
+     each item except the last pins at "top 15%" and scrubs to
+     scale 0.6 / opacity 0 while the next item scrolls over it. */
+  useEffect(() => {
+    const section = sectionRef.current
+    if (!section) return undefined
+
+    const mm = gsap.matchMedia()
+
+    mm.add(
+      '(min-width: 992px) and (prefers-reduced-motion: no-preference)',
+      () => {
+        gsap.utils
+          .toArray('.vasu-project-panel', section)
+          .forEach((element, index, array) => {
+            if (index === array.length - 1) return
+
+            gsap.to(element, {
+              scale: 0.6,
+              opacity: 0,
+              duration: 2,
+              scrollTrigger: {
+                trigger: element,
+                start: 'top 15%',
+                end: 'bottom 15%',
+                scrub: 2,
+                pin: true,
+                pinSpacing: false,
+              },
+            })
+          })
+      }
+    )
+
+    // Images load lazily; recalc trigger positions once they arrive
+    const images = section.querySelectorAll('img')
+    const refresh = () => ScrollTrigger.refresh()
+    images.forEach((img) => {
+      if (!img.complete) img.addEventListener('load', refresh, { once: true })
+    })
+
+    return () => {
+      images.forEach((img) => img.removeEventListener('load', refresh))
+      mm.revert()
+    }
+  }, [])
+
+  /* Intro counter: last panel whose top has passed mid-viewport */
   useEffect(() => {
     const section = sectionRef.current
     if (!section) return undefined
@@ -44,40 +96,26 @@ export default function ResidentialScrollProjects() {
     const update = () => {
       raf = 0
 
-      const panels = section.querySelectorAll(
-        '.vasu-project-panel'
-      )
-
-      if (!panels.length) return
-
+      const panels = section.querySelectorAll('.vasu-project-panel')
       const viewportMiddle = window.innerHeight * 0.5
       let current = 0
 
       panels.forEach((panel, index) => {
-        const rect = panel.getBoundingClientRect()
-
-        if (rect.top <= viewportMiddle) {
+        if (panel.getBoundingClientRect().top <= viewportMiddle) {
           current = index
         }
       })
 
-      setActive((previous) =>
-        previous === current ? previous : current
-      )
+      setActive((previous) => (previous === current ? previous : current))
     }
 
     const onScroll = () => {
-      if (!raf) {
-        raf = window.requestAnimationFrame(update)
-      }
+      if (!raf) raf = window.requestAnimationFrame(update)
     }
 
     update()
 
-    window.addEventListener('scroll', onScroll, {
-      passive: true,
-    })
-
+    window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', onScroll)
 
     return () => {
@@ -121,9 +159,9 @@ export default function ResidentialScrollProjects() {
           <article
             className="vasu-project-panel"
             key={project.number}
-            style={{ '--panel-index': index }}
+            style={{ zIndex: index + 1 }}
           >
-            <div className="vasu-project-image">
+            <div className="vasu-project-thumb">
               <img
                 src={project.image}
                 alt={`${project.title} - ${project.category}`}
@@ -131,50 +169,32 @@ export default function ResidentialScrollProjects() {
                 decoding="async"
               />
 
-              <div className="vasu-project-image-shade" />
+              <ul className="vasu-project-tags">
+                <li>{project.category}</li>
+                <li>{project.type}</li>
+              </ul>
 
-              <div className="vasu-project-image-top">
-                <div className="vasu-project-tags">
-                  <span>{project.category}</span>
-                  <span>{project.type}</span>
-                </div>
-
-                <span className="vasu-project-number">
-                  {project.number}
-                </span>
-              </div>
-
-              <div className="vasu-project-image-brand">
-                VASUPRIY INTERIOVILLA
-              </div>
+              <span className="vasu-project-number">
+                {project.number}
+              </span>
             </div>
 
             <div className="vasu-project-content">
-              <div>
-                <span className="vasu-project-content-label">
-                  Featured Project / {project.number}
-                </span>
-
-                <h3>{project.title}</h3>
-              </div>
-
-              <div className="vasu-project-content-right">
-                <span>{project.category}</span>
-                <span>{project.type}</span>
-              </div>
+              <h3>{project.title}</h3>
+              <p>Vasupriy Interiovilla</p>
             </div>
           </article>
         ))}
       </div>
 
-      <footer className="vasu-project-footer">
+      {/* <footer className="vasu-project-footer">
         <span>Explore more inspiring interior spaces</span>
 
         <Link to="/projects">
           Explore All Projects
           <span aria-hidden="true"> ↗</span>
         </Link>
-      </footer>
+      </footer> */}
     </section>
   )
 }
