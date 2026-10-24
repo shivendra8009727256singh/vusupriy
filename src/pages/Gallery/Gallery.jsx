@@ -244,7 +244,7 @@ function Gallery() {
             Vasupriy Interiovilla
           </span>
           <h1 id="gallery-title">
-            Our <em>Gallery.</em>
+            Design <em>Ideas.</em>
           </h1>
           <p className="gallery-hero-description">
             A curated look at the interiors and architectural details that

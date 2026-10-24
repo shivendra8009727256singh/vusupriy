@@ -1,4 +1,4 @@
-/* VASUPRIY_SPECIALITIES_IMAGE_MAPPING_V2 */
+﻿/* VASUPRIY_SPECIALITIES_IMAGE_MAPPING_V2 */
 import arunTeamImage from '../../assets/images/home/team/arun-sharma.png'
 import priyankaTeamImage from '../../assets/images/home/team/priyanka.png'
 import priyaTeamImage from '../../assets/images/home/team/priya.png'
@@ -1354,7 +1354,7 @@ function About() {
 
             <span className="about-team-eyebrow">
               <i aria-hidden="true" />
-              Our Team
+              Our Journey
             </span>
 
             <h2 id="about-team-title">
