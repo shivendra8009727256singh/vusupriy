@@ -1,4 +1,4 @@
-﻿
+
 import VasupriyCursor from './components/common/VasupriyCursor.jsx'
 import ProductDetail from './pages/ProductDetail/ProductDetail'
 
@@ -11,6 +11,7 @@ import Home from './pages/Home/Home.jsx'
 import About from './pages/About/About.jsx'
 import InteriorServices from './pages/InteriorServices/InteriorServices.jsx'
 import ServiceDetail from './pages/InteriorServices/ServiceDetail.jsx'
+import SpaceMakeoverLanding from './pages/InteriorServices/SpaceMakeoverLanding.jsx'
 import InteriorProducts from './pages/InteriorProducts/InteriorProducts.jsx'
 import Projects from './pages/Projects/Projects.jsx'
 import Gallery from './pages/Gallery/Gallery.jsx'
@@ -45,7 +46,7 @@ function App() {
           {/* Individual Services */}
           <Route
             path="services/space-designing-makeover"
-            element={<ServiceDetail />}
+            element={<SpaceMakeoverLanding />}
           />
 
           <Route

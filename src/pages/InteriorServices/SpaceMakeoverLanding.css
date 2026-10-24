@@ -1,0 +1,459 @@
+/* Scoped Space Designing & Makeover landing page. Does not modify other services. */
+.vsm{color:#203c3d;background:#fff;font-family:Arial,Helvetica,sans-serif;overflow:hidden}
+.vsm *, .vsm *::before,.vsm *::after{box-sizing:border-box}
+.vsm h1,.vsm h2,.vsm h3,.vsm p{margin:0}
+.vsm h1,.vsm h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.035em;line-height:1.12}
+.vsm h1 em,.vsm h2 em{font-weight:400}
+.vsm h2{font-size:clamp(2.35rem,4vw,4.8rem)}
+.vsm p{line-height:1.75}
+.vsm-container{width:min(1370px,calc(100% - 104px));margin:auto}
+.vsm-section{padding:clamp(78px,8vw,140px) 0}
+.vsm-eyebrow{font-size:11px;letter-spacing:.19em;font-weight:700;color:#bd9464;margin-bottom:24px!important}
+.vsm-eyebrow--light{color:#d5ba95}
+.vsm-button{display:inline-flex;align-items:center;justify-content:space-between;gap:36px;min-height:56px;padding:12px 17px 12px 25px;text-decoration:none;border-radius:40px;font-size:13px;font-weight:700;transition:transform .25s ease,background .25s ease}
+.vsm-button:hover{transform:translateY(-3px)}
+.vsm-button span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;font-size:17px}
+.vsm-button--light{background:#e8c99c;color:#11383f}.vsm-button--light span{background:#0c4149;color:#fff}
+.vsm-button--dark{background:#0c4149;color:#fff}.vsm-button--dark span{background:#e8c99c;color:#11383f}
+.vsm-hero{min-height:min(800px,90svh);height:760px;max-height:950px;position:relative;display:flex;align-items:center;color:white;background:#183f45}
+.vsm-hero>img,.vsm-hero-shade{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vsm-hero-shade{background:linear-gradient(90deg,rgba(5,29,33,.84),rgba(5,29,33,.26) 75%)}
+.vsm-hero-inner{position:relative;z-index:1;padding-top:110px}
+.vsm-hero h1{font-size:clamp(3.8rem,7.2vw,8.3rem);max-width:910px;color:#fff}
+.vsm-hero-inner>p:not(.vsm-eyebrow){max-width:480px;margin-top:26px;margin-bottom:32px;font-size:17px;color:#eee}
+.vsm-hero-counter{position:absolute;bottom:32px;right:5%;font-size:11px;letter-spacing:.15em;z-index:1;color:#fff}
+.vsm-intro-grid,.vsm-commitment-grid,.vsm-pricing-grid,.vsm-cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,110px);align-items:center}
+.vsm-intro-copy{max-width:610px}.vsm-intro-copy>p:not(.vsm-eyebrow){color:#617071;font-size:16px;margin:28px 0}
+.vsm-intro-image{height:clamp(350px,43vw,620px);overflow:hidden;border-radius:4px 72px 4px 4px}
+.vsm-intro-image img{width:100%;height:100%;object-fit:cover}
+.vsm-text-link{display:inline-block;font-weight:700;font-size:13px;color:#0e454b;text-decoration:none;border-bottom:1px solid #c69d6d;padding-bottom:8px}
+.vsm-text-link span{margin-left:14px}
+.vsm-included{background:#faf9f6}.vsm-section-heading{display:flex;gap:40px;justify-content:space-between;align-items:end;margin-bottom:45px}.vsm-section-heading p{max-width:360px;color:#5d6c6a}
+.vsm-inclusion-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.vsm-inclusion{background:#fff;overflow:hidden;box-shadow:0 10px 36px rgba(20,49,47,.05)}
+.vsm-inclusion-image{height:clamp(210px,23vw,340px);overflow:hidden}.vsm-inclusion-image img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}.vsm-inclusion:hover img{transform:scale(1.045)}
+.vsm-inclusion-info{padding:25px 22px 30px}.vsm-inclusion-info>span{display:block;color:#b79168;font-size:12px;margin-bottom:22px}.vsm-inclusion h3{font:400 clamp(19px,1.55vw,24px)/1.22 Georgia,serif;min-height:60px}.vsm-inclusion p{color:#64706e;font-size:13px;margin-top:16px}
+.vsm-process{position:relative;background:#183d41;color:white}.vsm-process-backdrop{position:absolute;inset:0;background-position:center;background-size:cover}
+.vsm-process-content{position:relative;z-index:1}.vsm-process h2{color:white}.vsm-process-subtitle{margin-top:16px;color:#e1e7e5}
+.vsm-process-steps{margin-top:65px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.vsm-process-card{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.34);border-radius:15px;overflow:hidden;backdrop-filter:blur(12px);display:flex;flex-direction:column;min-height:390px;transition:transform .25s}.vsm-process-card:nth-child(even){transform:translateY(42px)}.vsm-process-card:hover{border-color:#e6c89c}
+.vsm-process-number{font-size:56px;color:rgba(255,255,255,.55);line-height:1;padding:27px 22px 0;font-weight:700}.vsm-process-card-body{flex:1;padding:30px 22px 22px}.vsm-process-card h3{font-size:22px;line-height:1.25;font-weight:500}.vsm-process-card p{margin-top:17px;color:#ebeeeb;font-size:13px}
+.vsm-process-card img{width:100%;height:115px;object-fit:cover}
+.vsm-commitment-grid{align-items:start}.vsm-commitment h2{max-width:580px}.vsm-commitment-lead{margin-top:25px;color:#65706e;max-width:440px}
+.vsm-accordion-item{border-bottom:1px solid #d9dedb}.vsm-accordion-item:first-child{border-top:1px solid #d9dedb}
+.vsm-accordion-item button{display:flex;align-items:center;justify-content:space-between;width:100%;gap:20px;background:transparent;border:0;padding:25px 4px;text-align:left;font:500 17px Arial,sans-serif;color:#263c3c;cursor:pointer}.vsm-accordion-icon{font-size:22px;font-weight:300}.vsm-accordion-item [hidden]{display:none}.vsm-accordion-item>div p{padding:0 35px 22px 4px;font-size:14px;color:#6b7671}
+.vsm-comfort{background:#f6f5f2}.vsm-comfort-layout{display:grid;grid-template-columns:.82fr 1.18fr;overflow:hidden;border-radius:10px;min-height:540px;background:#fff}
+.vsm-comfort-copy{padding:clamp(28px,4vw,65px)}.vsm-comfort-copy>p:not(.vsm-eyebrow){margin:20px 0 26px;color:#65706e;font-size:14px}
+.vsm-comfort-items{display:grid;gap:9px}.vsm-comfort-item{border:0;background:transparent;display:flex;gap:14px;text-align:left;padding:12px 8px;cursor:pointer;color:#253f3c;border-radius:8px}.vsm-comfort-item.is-active{background:#f1eee8}
+.vsm-comfort-item>span:first-child{flex:0 0 40px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#e9e8e4;font-weight:bold}.vsm-comfort-item.is-active>span:first-child{background:#0c4149;color:white}
+.vsm-comfort-item strong,.vsm-comfort-item small{display:block}.vsm-comfort-item strong{font-size:14px}.vsm-comfort-item small{font-size:12px;line-height:1.5;color:#63716d;margin-top:5px}
+.vsm-comfort-photo{position:relative;min-height:480px}.vsm-comfort-photo>img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.vsm-hotspot{position:absolute;transform:translate(-50%,-50%);border:2px solid #fff;background:rgba(255,255,255,.65);backdrop-filter:blur(5px);width:45px;height:45px;border-radius:50%;font-size:17px;color:#1a3e41;cursor:pointer;transition:background .2s,transform .2s}.vsm-hotspot.is-active{background:#0c4149;color:#fff;transform:translate(-50%,-50%) scale(1.18)}
+.vsm-comfort-photo-label{position:absolute;bottom:23px;right:23px;color:#fff;background:rgba(4,33,38,.75);padding:10px 15px;border-radius:20px;font-size:12px}
+.vsm-benefits h2{margin-bottom:44px}.vsm-benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.vsm-benefit-grid article{border-top:1px solid #bbac95;padding-top:20px}.vsm-benefit-grid article>span{color:#be9665;font-size:12px}.vsm-benefit-grid h3{margin:34px 0 15px;font:400 24px Georgia,serif}.vsm-benefit-grid p{color:#667472;font-size:14px}
+.vsm-pricing{background:#f7f5f1}.vsm-pricing-grid>div:first-child>p:not(.vsm-eyebrow){margin:24px 0 30px;color:#65716c;max-width:560px}.vsm-pricing-card{background:#fff;border-radius:5px;padding:clamp(28px,4vw,58px);box-shadow:0 10px 40px rgba(13,48,45,.05)}.vsm-card-kicker{display:block;letter-spacing:.15em;color:#b78f61;font-size:11px;margin-bottom:20px;font-weight:bold}.vsm-pricing-card>div{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid #e5e6e2;align-items:center}.vsm-pricing-card>div span{color:#b9976f;font-size:12px}.vsm-pricing-card>div strong{font-size:15px;font-weight:500}.vsm-pricing-card small{display:block;color:#78817a;margin-top:23px;line-height:1.6}
+.vsm-cta{background:#0d4048;color:#fff}.vsm-cta h2{color:#fff}.vsm-cta p:not(.vsm-eyebrow){margin:24px 0 30px;color:#e0e7e5}.vsm-cta-visual{height:460px;position:relative}.vsm-cta-visual>img{width:100%;height:100%;object-fit:cover;border-radius:8px}.vsm-slide-controls{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,0,0,.65),transparent);padding:40px 22px 18px;display:flex;justify-content:space-between;align-items:center;color:white}.vsm-slide-controls>span{font-size:13px;letter-spacing:.1em}.vsm-slide-controls>div{display:flex;gap:9px}.vsm-slide-controls button{border:1px solid rgba(255,255,255,.7);border-radius:50%;width:39px;height:39px;color:white;background:transparent;font-size:17px;cursor:pointer}.vsm-slide-controls button:hover{background:#fff;color:#0d4048}
+@media(max-width:1100px){.vsm-container{width:min(100% - 64px,1370px)}.vsm-inclusion-grid,.vsm-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vsm-process-steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:55px}.vsm-process-card:nth-child(even){transform:none}.vsm-intro-grid,.vsm-commitment-grid,.vsm-pricing-grid,.vsm-cta-grid{gap:40px}}
+@media(max-width:700px){.vsm-container{width:calc(100% - 38px)}.vsm-section{padding:68px 0}.vsm-hero{height:680px;min-height:620px;max-height:none}.vsm-hero-inner{padding-top:90px}.vsm-hero h1{font-size:clamp(3.1rem,12vw,5rem)}.vsm-hero-inner>p:not(.vsm-eyebrow){font-size:15px}.vsm-hero-counter{font-size:9px}.vsm h2{font-size:clamp(2.25rem,9vw,3.5rem)}.vsm-intro-grid,.vsm-commitment-grid,.vsm-pricing-grid,.vsm-cta-grid,.vsm-comfort-layout{grid-template-columns:1fr}.vsm-intro-image{height:350px;order:-1;border-radius:6px 48px 6px 6px}.vsm-section-heading{display:block}.vsm-section-heading p{margin-top:15px}.vsm-inclusion-grid{gap:14px}.vsm-inclusion-image{height:200px}.vsm-inclusion-info{padding:18px 15px 23px}.vsm-inclusion h3{font-size:18px;min-height:0}.vsm-inclusion p{font-size:12px}.vsm-process-steps{gap:12px}.vsm-process-card{min-height:0}.vsm-process-number{font-size:39px;padding:22px 15px 0}.vsm-process-card-body{padding:22px 14px}.vsm-process-card h3{font-size:18px}.vsm-process-card p{font-size:12px}.vsm-process-card img{height:100px}.vsm-comfort-photo{min-height:420px}.vsm-benefit-grid{gap:25px}.vsm-benefit-grid h3{font-size:21px;margin:25px 0 10px}.vsm-cta-visual{height:330px}.vsm-button{max-width:100%;gap:18px;font-size:12px}}
+@media(max-width:430px){.vsm-inclusion-grid,.vsm-process-steps,.vsm-benefit-grid{grid-template-columns:1fr}.vsm-inclusion-image{height:265px}.vsm-process-card{display:grid;grid-template-columns:1fr 1fr;min-height:220px}.vsm-process-number{grid-column:1 / -1;font-size:36px;padding:17px 17px 0}.vsm-process-card-body{padding:10px 16px 17px}.vsm-process-card img{height:100%;min-height:170px;object-fit:cover}.vsm-benefit-grid{gap:24px}.vsm-comfort-copy{padding:29px 22px}}
+@media(prefers-reduced-motion:reduce){.vsm *, .vsm *::before,.vsm *::after{transition:none!important;scroll-behavior:auto!important}}
+
+/* VASUPRIY BEAUTIFUL HOMES REFERENCE ALIGNMENT V2 — SPACE MAKEOVER ONLY */
+.vsm{color:#232323;background:#fff;font-family:Arial,Helvetica,sans-serif}
+.vsm h1,.vsm h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.038em}
+.vsm-section{padding:clamp(76px,7vw,120px) 0}
+.vsm-included{background:#fff}
+.vsm-inclusion{box-shadow:none;border-radius:11px;background:#fff}
+.vsm-inclusion-image{border-radius:10px;overflow:hidden}
+.vsm-inclusion-info{padding:17px 2px 28px}
+.vsm-inclusion h3{color:#232323}
+.vsm-process{padding:85px 0 92px;background:#302c2c;overflow:hidden}
+.vsm-process-backdrop{filter:blur(2px);transform:scale(1.045);background-position:center 55%}
+.vsm-process .vsm-container{width:min(1510px,calc(100% - 90px))}
+.vsm-process .vsm-eyebrow{display:none}
+.vsm-process h2{text-align:center;font-size:clamp(3rem,5vw,5rem);color:#fff}
+.vsm-process h2 em{font-style:normal}
+.vsm-process-subtitle{text-align:center;color:#f4f3f0;font-size:17px;margin-top:9px}
+.vsm-process-timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(12px,2.5vw,36px);align-items:start;margin:90px 0 36px;min-height:500px}
+.vsm-process-timeline-card{position:relative;min-height:402px;padding:42px clamp(17px,2vw,35px) 36px;border:1px solid rgba(255,255,255,.74);border-radius:13px;background:rgba(52,52,52,.36);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);color:#fff;display:flex;flex-direction:column;z-index:1}
+.vsm-process-timeline-card:nth-child(even){margin-top:125px}
+.vsm-process-timeline-card::before{content:'';position:absolute;z-index:-1;width:178px;height:178px;border:1.2px solid rgba(255,255,255,.8);border-radius:50%;top:-35px;left:-85px;clip-path:inset(0 0 0 45%)}
+.vsm-process-timeline-card:nth-child(even)::before{top:auto;bottom:-55px;clip-path:inset(0 0 40% 0)}
+.vsm-process-timeline-card::after{content:'';position:absolute;top:-24px;left:28px;width:17px;height:17px;background:#fff;border-radius:50%}
+.vsm-process-timeline-card:nth-child(even)::after{top:auto;bottom:-23px}
+.vsm-process-timeline-number{font:700 clamp(43px,4.2vw,68px)/1 Arial,sans-serif;color:rgba(255,255,255,.46);margin-bottom:43px}
+.vsm-process-timeline-card h3{font:500 clamp(20px,2vw,29px)/1.2 Arial,sans-serif;color:#fff;max-width:220px}
+.vsm-process-timeline-card p{margin-top:32px;font:400 clamp(12px,1vw,15px)/1.55 Arial,sans-serif;color:#fff}
+.vsm-commitment{background:#fff}
+.vsm-commitment-grid{grid-template-columns:43% 1fr;gap:6%;align-items:start}
+.vsm-commitment .vsm-eyebrow{display:none}
+.vsm-commitment h2{font-size:clamp(3rem,4.5vw,5.5rem);line-height:1.09;max-width:560px;color:#171717}
+.vsm-commitment h2 em{font-style:normal}
+.vsm-commitment-lead{font:400 16px/1.65 Arial,sans-serif;color:#757575;margin-top:36px;max-width:440px}
+.vsm-accordion-item:first-child{border-top:0}
+.vsm-accordion-item{border-bottom:1px solid #d5d5d5}
+.vsm-accordion-item button{color:#242424;font:400 19px/1.35 Arial,sans-serif;padding:23px 0}
+.vsm-accordion-item>div p{padding:0 45px 23px 0;color:#777;font-size:14px;line-height:1.7}
+.vsm-accordion-icon{color:#1f1f1f}
+.vsm-comfort{background:#fff}
+.vsm-comfort-layout{grid-template-columns:30% 70%;border-radius:7px;min-height:570px;background:#f7f7f7}
+.vsm-comfort-copy{padding:clamp(24px,3vw,50px) clamp(19px,2vw,35px)}
+.vsm-comfort-copy .vsm-eyebrow{display:none}
+.vsm-comfort-copy h2{color:#222;font-size:clamp(2.25rem,3vw,3.6rem)}
+.vsm-comfort-copy h2 em{font-style:normal}
+.vsm-comfort-copy>p:not(.vsm-eyebrow){font:400 16px/1.42 Arial,sans-serif;color:#676767;margin:20px 0 21px}
+.vsm-comfort-items{gap:24px}
+.vsm-comfort-item{padding:7px 0;background:transparent!important;gap:19px;border-radius:0;align-items:start}
+.vsm-comfort-item>span:first-child{flex:0 0 48px;width:48px;height:48px;color:#282828;background:#e5e5e5!important;border-radius:50%;font-size:16px}
+.vsm-comfort-item.is-active>span:first-child{outline:2px solid #aeaeae;outline-offset:3px;color:#242424}
+.vsm-comfort-item strong{font-weight:500;font-size:16px;color:#303030}
+.vsm-comfort-item small{font-size:13px;color:#686868;line-height:1.6;margin-top:6px}
+.vsm-comfort-photo{min-height:570px}
+.vsm-hotspot{background:rgba(70,70,70,.34);border:2px solid #fff;color:#fff;font-weight:bold}
+.vsm-hotspot.is-active{background:rgba(15,15,15,.6);border-color:#fff;color:#fff}
+.vsm-cta{background:#fff;padding:75px 0 95px;color:#212121}
+.vsm-feature-banner{height:clamp(360px,35vw,470px);border-radius:20px;overflow:visible;position:relative;isolation:isolate}
+.vsm-feature-banner>img{width:100%;height:100%;object-fit:cover;border-radius:20px}
+.vsm-feature-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(246,245,244,.95) 0%,rgba(246,245,244,.7) 29%,rgba(246,245,244,.02) 75%);border-radius:20px}
+.vsm-feature-copy{position:absolute;left:4.5%;top:50%;transform:translateY(-50%);max-width:min(450px,42%);color:#222}
+.vsm-feature-kicker{font-size:12px;letter-spacing:.15em;color:#333}
+.vsm-feature-copy h2{font-size:clamp(2.8rem,4vw,5rem);margin:14px 0 16px;color:#242424}
+.vsm-feature-copy h2 em{font-style:normal}
+.vsm-feature-copy p{font:400 18px/1.5 Arial,sans-serif;color:#353535}
+.vsm-feature-link{position:absolute;right:0;bottom:0;transform:translateY(28%);display:flex;gap:45px;align-items:center;justify-content:space-between;border-radius:70px 0 0 70px;padding:13px 12px 13px 29px;background:#fff;color:#1f1f1f;text-decoration:none;font:500 21px Arial,sans-serif;min-width:230px;box-shadow:0 6px 20px rgba(0,0,0,.03)}
+.vsm-feature-link span{display:grid;place-items:center;width:55px;height:55px;border:1px solid #ddd;border-radius:50%;font-size:26px}
+.vsm-feature-slide-controls{display:flex;justify-content:space-between;align-items:center;padding:35px 0 0;font:400 13px Arial,sans-serif;color:#444}
+.vsm-feature-slide-controls>div{display:flex;gap:12px}
+.vsm-feature-slide-controls button{border-radius:50%;border:1px solid #dedede;background:#fff;color:#333;width:44px;height:44px;font-size:21px;cursor:pointer}
+@media(max-width:1150px){.vsm-process-timeline{grid-template-columns:repeat(3,1fr);gap:24px;min-height:0}.vsm-process-timeline-card:nth-child(even){margin-top:0}.vsm-process-timeline-card{min-height:305px}.vsm-process-timeline-card::before,.vsm-process-timeline-card::after{display:none}.vsm-process-timeline-number{margin-bottom:35px}.vsm-comfort-layout{grid-template-columns:38% 62%}}
+@media(max-width:700px){.vsm-process{padding:68px 0}.vsm-process .vsm-container{width:calc(100% - 36px)}.vsm-process-timeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:35px 0 0}.vsm-process-timeline-card{min-height:250px;padding:23px 18px}.vsm-process-timeline-number{font-size:38px;margin-bottom:26px}.vsm-process-timeline-card h3{font-size:19px}.vsm-process-timeline-card p{font-size:12px;margin-top:20px}.vsm-commitment-grid,.vsm-comfort-layout{grid-template-columns:1fr}.vsm-comfort-copy{padding:30px 24px}.vsm-comfort-photo{min-height:390px}.vsm-feature-banner{height:440px}.vsm-feature-copy{max-width:78%;top:36%;left:7%}.vsm-feature-copy h2{font-size:clamp(2.5rem,9vw,3.6rem)}.vsm-feature-copy p{font-size:15px}.vsm-feature-link{font-size:16px;min-width:190px;gap:16px}.vsm-feature-link span{width:42px;height:42px;font-size:20px}}
+@media(max-width:430px){.vsm-process-timeline{grid-template-columns:1fr}.vsm-process-timeline-card{min-height:0;padding:24px}.vsm-process-timeline-number{margin-bottom:20px}.vsm-process-timeline-card p{margin-top:12px}.vsm-feature-copy{max-width:82%;top:32%}}
+
+/* VASU_COMMITMENT_REFERENCE_V1_START */
+/* Only the Space Makeover commitment section: screenshot-matched split accordion. */
+.vsm .vsm-section.vsm-commitment {
+  background: #ffffff !important;
+  color: #181818;
+  padding: clamp(82px, 9vw, 140px) 0 clamp(88px, 10vw, 148px) !important;
+  overflow: visible;
+}
+.vsm .vsm-commitment .vsm-container.vsm-commitment-grid {
+  width: min(100% - 152px, 1400px);
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: minmax(0, 41%) minmax(0, 1fr);
+  gap: clamp(75px, 8vw, 154px);
+  align-items: start;
+}
+.vsm .vsm-commitment .vsm-eyebrow { display: none !important; }
+.vsm .vsm-commitment h2#vsm-commitment-title {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: clamp(44px, 4.05vw, 65px) !important;
+  line-height: 1.075 !important;
+  letter-spacing: -.035em !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  color: #1d1d1d !important;
+  margin: 0 !important;
+  max-width: 510px !important;
+}
+.vsm .vsm-commitment h2#vsm-commitment-title em {
+  font-style: normal !important;
+  font-weight: inherit !important;
+  color: inherit !important;
+}
+.vsm .vsm-commitment .vsm-commitment-lead {
+  margin: 34px 0 0 !important;
+  max-width: 425px !important;
+  color: #757575 !important;
+  font: 400 16px/1.58 Arial, Helvetica, sans-serif !important;
+}
+.vsm .vsm-commitment .vsm-accordion {
+  width: 100%;
+  min-width: 0;
+  margin: -11px 0 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.vsm .vsm-commitment .vsm-accordion-item,
+.vsm .vsm-commitment .vsm-accordion-item:first-child {
+  border: 0 !important;
+  border-bottom: 1px solid #d7d7d7 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+.vsm .vsm-commitment .vsm-accordion-item:last-child { border-bottom: 0 !important; }
+.vsm .vsm-commitment .vsm-accordion-item > button {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  min-height: 69px;
+  padding: 21px 5px 21px 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-align: left !important;
+  color: #292929 !important;
+  font: 400 18px/1.35 Arial, Helvetica, sans-serif !important;
+  cursor: pointer;
+}
+.vsm .vsm-commitment .vsm-accordion-item > button:hover,
+.vsm .vsm-commitment .vsm-accordion-item > button:focus-visible { color: #06505a !important; }
+.vsm .vsm-commitment .vsm-accordion-item > button:focus-visible {
+  outline: 2px solid #0a5360 !important;
+  outline-offset: 3px;
+}
+.vsm .vsm-commitment .vsm-accordion-icon {
+  flex: none;
+  color: #2e2e2e !important;
+  font: 400 23px/1 Arial, Helvetica, sans-serif !important;
+}
+.vsm .vsm-commitment .vsm-accordion-item > div[hidden] { display: none !important; }
+.vsm .vsm-commitment .vsm-accordion-item > div:not([hidden]) { display: block; }
+.vsm .vsm-commitment .vsm-accordion-item > div p {
+  margin: -2px 0 0 !important;
+  padding: 0 50px 20px 0 !important;
+  max-width: 610px;
+  font: 400 14px/1.55 Arial, Helvetica, sans-serif !important;
+  color: #838383 !important;
+}
+@media (max-width: 1100px) {
+  .vsm .vsm-commitment .vsm-container.vsm-commitment-grid {
+    width: calc(100% - 64px);
+    grid-template-columns: minmax(0, 41%) minmax(0, 1fr);
+    gap: 44px;
+  }
+  .vsm .vsm-commitment h2#vsm-commitment-title { font-size: clamp(38px, 4.5vw, 54px) !important; }
+}
+@media (max-width: 760px) {
+  .vsm .vsm-section.vsm-commitment { padding: 76px 0 85px !important; }
+  .vsm .vsm-commitment .vsm-container.vsm-commitment-grid {
+    width: calc(100% - 40px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
+  }
+  .vsm .vsm-commitment h2#vsm-commitment-title { font-size: clamp(39px, 10vw, 53px) !important; }
+  .vsm .vsm-commitment .vsm-commitment-lead { margin-top: 22px !important; font-size: 15px !important; }
+  .vsm .vsm-commitment .vsm-accordion { margin: 0 !important; }
+  .vsm .vsm-commitment .vsm-accordion-item > button {
+    min-height: 60px;
+    padding: 18px 2px 18px 0 !important;
+    font-size: 16px !important;
+  }
+}
+/* VASU_COMMITMENT_REFERENCE_V1_END */
+/* VASUPRIY_COMFORT_REFERENCE_IMAGE_V1_START */
+/* Scope: only the Space Makeover comfort section. */
+.vsm .vsm-section.vsm-comfort{background:#fff!important;padding:clamp(72px,7vw,115px) 0!important}
+.vsm .vsm-comfort-layout{display:grid!important;grid-template-columns:30% 70%!important;align-items:stretch!important;min-height:0!important;background:#f6f6f6!important;border-radius:12px!important;overflow:hidden!important}
+.vsm .vsm-comfort-copy{padding:clamp(26px,3.4vw,56px)!important;display:flex;flex-direction:column;justify-content:center;background:#f6f6f6}
+.vsm .vsm-comfort-copy h2#vsm-comfort-title{font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(34px,3vw,53px)!important;font-weight:400!important;line-height:1.06!important;letter-spacing:-.04em!important;color:#292929!important}
+.vsm .vsm-comfort-copy h2 em{font-style:normal!important}
+.vsm .vsm-comfort-copy>p:not(.vsm-eyebrow){font:400 clamp(12px,1.05vw,15px)/1.48 Arial,sans-serif!important;color:#666!important;margin:13px 0 24px!important}
+.vsm .vsm-comfort-items{gap:10px!important}
+.vsm .vsm-comfort-item{background:transparent!important;display:flex!important;align-items:flex-start!important;gap:14px!important;padding:10px 0!important;text-align:left!important;border:0!important}
+.vsm .vsm-comfort-item>span:first-child{flex:0 0 42px!important;width:42px!important;height:42px!important;background:#e7e7e7!important;color:#444!important;font:600 14px Arial,sans-serif!important;outline:none!important;border-radius:50%!important;display:grid!important;place-items:center!important}
+.vsm .vsm-comfort-item.is-active>span:first-child{outline:2px solid #bfbfbf!important;outline-offset:2px!important}
+.vsm .vsm-comfort-item strong{font:500 clamp(13px,1vw,15px)/1.35 Arial,sans-serif!important;color:#292929!important}
+.vsm .vsm-comfort-item small{font:400 12px/1.5 Arial,sans-serif!important;color:#777!important;margin-top:5px!important}
+.vsm .vsm-comfort-photo{position:relative!important;min-height:0!important;aspect-ratio:1448/1086!important;overflow:hidden!important;background:#e6dfd5}
+.vsm .vsm-comfort-photo>img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:fill!important}
+/* Markers 1/2/3 are baked into the generated image; these transparent buttons add interaction without duplicate circles. */
+.vsm .vsm-comfort-photo .vsm-hotspot{position:absolute!important;transform:translate(-50%,-50%)!important;width:clamp(33px,3.5vw,54px)!important;height:clamp(33px,3.5vw,54px)!important;padding:0!important;border:2px solid transparent!important;border-radius:50%!important;background:transparent!important;box-shadow:none!important;color:transparent!important;font-size:0!important;backdrop-filter:none!important;cursor:pointer!important;transition:box-shadow .2s,border-color .2s!important}
+.vsm .vsm-comfort-photo .vsm-hotspot.is-active,.vsm .vsm-comfort-photo .vsm-hotspot:hover,.vsm .vsm-comfort-photo .vsm-hotspot:focus-visible{border-color:#fff!important;box-shadow:0 0 0 4px rgba(16,64,70,.58)!important;outline:none!important}
+@media(max-width:1024px){.vsm .vsm-comfort-layout{grid-template-columns:36% 64%!important}.vsm .vsm-comfort-copy{padding:26px!important}.vsm .vsm-comfort-item small{font-size:11px!important}}
+@media(max-width:700px){.vsm .vsm-comfort-layout{grid-template-columns:1fr!important}.vsm .vsm-comfort-copy{padding:28px 24px!important}.vsm .vsm-comfort-photo{aspect-ratio:1448/1086!important;min-height:0!important}.vsm .vsm-comfort-items{gap:7px!important}}
+/* VASUPRIY_COMFORT_REFERENCE_IMAGE_V1_END */
+/* VASU_BENEFITS_REFERENCE_V1_START */
+/* Only Space Makeover > Our Benefits: clean editorial image cards. */
+.vsm .vsm-section.vsm-benefits {
+  background: #fff !important;
+  color: #222 !important;
+  padding: clamp(72px, 7.5vw, 112px) 0 clamp(76px, 8vw, 122px) !important;
+}
+.vsm .vsm-benefits .vsm-benefits-inner { max-width: 1400px; }
+.vsm .vsm-benefits-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+  align-items: end;
+  gap: 32px;
+  margin: 0 0 clamp(30px, 3vw, 45px);
+}
+.vsm .vsm-benefits-heading .vsm-benefits-kicker {
+  margin: 0 0 13px !important;
+  color: #8b765e;
+  letter-spacing: .14em;
+  font: 600 10px/1.6 Arial, sans-serif;
+}
+.vsm .vsm-benefits h2#vsm-benefits-title {
+  margin: 0 !important;
+  font: 400 clamp(42px, 4.2vw, 65px)/1.08 Georgia, 'Times New Roman', serif !important;
+  letter-spacing: -.04em !important;
+  color: #232323;
+}
+.vsm .vsm-benefits h2 em { font-style: normal; }
+.vsm .vsm-benefits-heading > p {
+  max-width: 340px;
+  margin: 0 0 5px !important;
+  font: 400 15px/1.65 Arial, sans-serif !important;
+  color: #777 !important;
+}
+.vsm .vsm-benefits-showcase {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 1.7vw, 25px);
+}
+.vsm .vsm-benefits-card {
+  min-width: 0;
+  background: transparent;
+}
+.vsm .vsm-benefits-card-photo {
+  position: relative;
+  height: clamp(210px, 25vw, 345px);
+  overflow: hidden;
+  border-radius: 9px;
+  background: #eeeae5;
+}
+.vsm .vsm-benefits-card-photo img {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .55s ease;
+}
+.vsm .vsm-benefits-card:hover img { transform: scale(1.04); }
+.vsm .vsm-benefits-number {
+  position: absolute;
+  top: 14px; left: 14px;
+  display: grid; place-items: center;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  color: #292929;
+  background: rgba(255,255,255,.94);
+  font: 500 13px Arial, sans-serif;
+}
+.vsm .vsm-benefits-card-body { padding: 21px 3px 8px; }
+.vsm .vsm-benefits-card h3 {
+  margin: 0 0 10px !important;
+  color: #262626;
+  font: 400 clamp(20px, 1.7vw, 26px)/1.2 Georgia, 'Times New Roman', serif !important;
+}
+.vsm .vsm-benefits-card-body p {
+  margin: 0 !important;
+  color: #737373;
+  font: 400 14px/1.65 Arial, sans-serif !important;
+}
+.vsm .vsm-benefits-footnote {
+  margin: 33px 0 0 !important;
+  color: #888;
+  font: 400 12px/1.6 Arial, sans-serif !important;
+}
+@media (max-width: 1024px) {
+  .vsm .vsm-benefits-showcase { grid-template-columns: repeat(2, minmax(0,1fr)); row-gap: 34px; }
+  .vsm .vsm-benefits-card-photo { height: clamp(250px, 35vw, 370px); }
+}
+@media (max-width: 700px) {
+  .vsm .vsm-section.vsm-benefits { padding: 66px 0 73px !important; }
+  .vsm .vsm-benefits-heading { grid-template-columns: 1fr; gap: 15px; margin-bottom: 28px; }
+  .vsm .vsm-benefits-heading > p { max-width: 480px; font-size: 14px !important; }
+  .vsm .vsm-benefits-showcase { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px 12px; }
+  .vsm .vsm-benefits-card-photo { height: clamp(155px, 38vw, 250px); }
+  .vsm .vsm-benefits-card-body { padding: 13px 1px 0; }
+  .vsm .vsm-benefits-card h3 { font-size: clamp(17px, 4.4vw, 22px) !important; }
+  .vsm .vsm-benefits-card-body p { font-size: 12px !important; line-height: 1.5 !important; }
+  .vsm .vsm-benefits-number { width: 30px; height: 30px; top: 8px; left: 8px; font-size: 11px; }
+}
+@media (max-width: 420px) {
+  .vsm .vsm-benefits-showcase { grid-template-columns: 1fr; gap: 24px; }
+  .vsm .vsm-benefits-card-photo { height: 280px; }
+  .vsm .vsm-benefits-card-body p { font-size: 13px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vsm .vsm-benefits-card-photo img { transition: none !important; }
+}
+/* VASU_BENEFITS_REFERENCE_V1_END */
+/* VASU_PRICING_REFERENCE_V1_START */
+/* Scoped to the Space Designing & Makeover pricing section only. */
+.vsm .vsm-section.vsm-pricing {
+  padding: clamp(68px, 7.5vw, 116px) 0 !important;
+  background: #fff !important;
+  color: #222 !important;
+}
+.vsm .vsm-pricing .vsm-pricing-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  background: #eaf1f4;
+  border-radius: 15px;
+  overflow: hidden;
+  min-height: 480px;
+  border: 1px solid #e1eaed;
+}
+.vsm .vsm-pricing .vsm-pricing-intro {
+  padding: clamp(32px, 4.9vw, 76px);
+  align-self: center;
+}
+.vsm .vsm-pricing .vsm-pricing-kicker {
+  display: block;
+  color: #6c7880;
+  font: 600 11px/1.4 Arial,sans-serif;
+  letter-spacing: .16em;
+  margin-bottom: 21px;
+}
+.vsm .vsm-pricing h2#vsm-pricing-title {
+  color: #202b2f !important;
+  font: 400 clamp(36px, 3.65vw, 61px)/1.12 Georgia,'Times New Roman',serif !important;
+  letter-spacing: -.045em !important;
+  margin: 0 0 24px !important;
+  max-width: 630px;
+}
+.vsm .vsm-pricing h2#vsm-pricing-title em { font-weight: 400; }
+.vsm .vsm-pricing .vsm-pricing-intro > p {
+  color: #58686e !important;
+  font: 400 15px/1.75 Arial,sans-serif !important;
+  margin: 0 0 28px !important;
+  max-width: 490px;
+}
+.vsm .vsm-pricing .vsm-pricing-actions {display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.vsm .vsm-pricing .vsm-pricing-action {
+  display: inline-flex; align-items:center; justify-content:space-between;gap:20px;
+  background:#202c31;color:#fff!important; padding:15px 21px; border-radius:999px;
+  font: 600 13px/1.4 Arial,sans-serif;text-decoration:none; transition:background .2s,transform .2s;
+}
+.vsm .vsm-pricing .vsm-pricing-action:hover {background:#394a51;transform:translateY(-2px)}
+.vsm .vsm-pricing .vsm-pricing-actions > span{color:#6d7d83;font:400 12px/1.5 Arial,sans-serif;max-width:220px}
+.vsm .vsm-pricing .vsm-pricing-breakdown{
+  padding:clamp(32px,4.3vw,65px);border-left:1px solid #d3e0e6;
+  background:rgba(255,255,255,.26);display:flex;flex-direction:column;justify-content:center;
+}
+.vsm .vsm-pricing .vsm-pricing-breakdown-head {display:flex;align-items:center;justify-content:space-between;gap:12px;color:#76868c;letter-spacing:.1em;font:600 10px Arial,sans-serif}
+.vsm .vsm-pricing .vsm-pricing-breakdown h3 {margin:24px 0 10px!important;font:400 clamp(27px,2.45vw,39px)/1.16 Georgia,'Times New Roman',serif!important;color:#26343a!important}
+.vsm .vsm-pricing .vsm-pricing-factors {border-top:1px solid #cbd9df;margin-top:22px}
+.vsm .vsm-pricing .vsm-pricing-factor {display:grid;grid-template-columns:43px minmax(0,1fr) 22px;gap:10px;align-items:center;border-bottom:1px solid #cbd9df;padding:20px 0}
+.vsm .vsm-pricing .vsm-pricing-factor-num{font:400 13px Arial,sans-serif;color:#839399}
+.vsm .vsm-pricing .vsm-pricing-factor-text{font:500 15px/1.45 Arial,sans-serif;color:#344348}
+.vsm .vsm-pricing .vsm-pricing-factor-mark{text-align:right;font:400 17px Arial,sans-serif;color:#8b9ca3}
+.vsm .vsm-pricing .vsm-pricing-disclaimer {font:400 12px/1.65 Arial,sans-serif!important;color:#677b84!important;margin:23px 0 0!important}
+@media(max-width:900px){
+  .vsm .vsm-pricing .vsm-pricing-shell{grid-template-columns:1fr;min-height:0}
+  .vsm .vsm-pricing .vsm-pricing-intro,.vsm .vsm-pricing .vsm-pricing-breakdown{padding:38px}
+  .vsm .vsm-pricing .vsm-pricing-breakdown{border-left:0;border-top:1px solid #d3e0e6}
+}
+@media(max-width:600px){
+  .vsm .vsm-section.vsm-pricing{padding:65px 0!important}
+  .vsm .vsm-pricing .vsm-pricing-shell{border-radius:12px}
+  .vsm .vsm-pricing .vsm-pricing-intro,.vsm .vsm-pricing .vsm-pricing-breakdown{padding:29px 23px}
+  .vsm .vsm-pricing h2#vsm-pricing-title{font-size:clamp(34px,9vw,44px)!important}
+  .vsm .vsm-pricing .vsm-pricing-intro > p{font-size:14px!important}
+  .vsm .vsm-pricing .vsm-pricing-factor{padding:17px 0;grid-template-columns:34px minmax(0,1fr) 16px}
+  .vsm .vsm-pricing .vsm-pricing-factor-text{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){.vsm .vsm-pricing .vsm-pricing-action{transition:none!important}}
+/* VASU_PRICING_REFERENCE_V1_END */
