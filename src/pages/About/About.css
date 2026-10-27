@@ -7019,3 +7019,170 @@
     transition: none !important;
   }
 }
+
+/* VASUPRIY ABOUT HERO WARM IVORY CHAMPAGNE - BEGIN */
+/* Visual-only: preserves image, JSX content, animations and all responsive geometry. */
+.about-page .about-who-v2--antra {
+  background:
+    radial-gradient(circle at 82% 15%, rgba(180, 143, 78, 0.10), transparent 30%),
+    linear-gradient(135deg, #FAF7F2 0%, #F5F0EA 55%, #F8F3EC 100%);
+  color: #073E46;
+}
+/* Replace the old dark architectural grid with a very subtle ivory detail. */
+.about-page .about-who-v2--antra::before {
+  opacity: 0.32;
+  background:
+    repeating-linear-gradient(90deg, transparent 0, transparent 14%, rgba(180,143,78,0.09) 14.1%, transparent 14.3%),
+    repeating-linear-gradient(0deg, transparent 0, transparent 105px, rgba(0,71,88,0.045) 106px, transparent 107px);
+}
+.about-page .about-who-v2--antra .about-who-v2-kicker {
+  color: #073E46;
+  border-color: rgba(180, 143, 78, 0.44);
+  background: rgba(255,255,255,0.48);
+}
+.about-page .about-who-v2--antra .about-who-v2-headline h1,
+.about-page .about-who-v2--antra .about-who-v2-content,
+.about-page .about-who-v2--antra .about-who-v2-intro h2,
+.about-page .about-who-v2--antra .about-who-v2-feature,
+.about-page .about-who-v2--antra .about-who-v2-feature strong {
+  color: #073E46;
+}
+.about-page .about-who-v2--antra .about-who-v2-headline h1 span,
+.about-page .about-who-v2--antra .about-who-v2-intro h2 span,
+.about-page .about-who-v2--antra .about-who-v2-feature > span {
+  color: #A47B3C;
+}
+.about-page .about-who-v2--antra .about-who-v2-description {
+  color: #586B6C;
+}
+.about-page .about-who-v2--antra .about-who-v2-divider {
+  background: rgba(180,143,78,0.38);
+}
+.about-page .about-who-v2--antra .about-who-v2-button {
+  border-color: rgba(0,71,88,0.36);
+  background: rgba(255,255,255,0.37);
+  color: #073E46;
+}
+.about-page .about-who-v2--antra .about-who-v2-button:hover {
+  background: #073E46;
+  border-color: #073E46;
+  color: #FFFFFF;
+}
+/* VASUPRIY ABOUT HERO WARM IVORY CHAMPAGNE - END */
+
+/* VASUPRIY ABOUT IVORY HERO FIX START */
+
+/* About hero background only */
+.about-page .about-who-v2.about-who-v2--antra {
+    background:
+        radial-gradient(
+            circle at 85% 12%,
+            rgba(180,143,78,0.12),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #FAF7F2 0%,
+            #F5F0EA 55%,
+            #F8F3EC 100%
+        ) !important;
+
+    color: #073E46 !important;
+}
+
+/* Replace dark architectural grid with subtle gold lines */
+.about-page .about-who-v2.about-who-v2--antra::before {
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 14%,
+            rgba(180,143,78,0.12) 14.1%,
+            transparent 14.3%
+        ) !important;
+    opacity: 0.35 !important;
+}
+
+/* Hero heading */
+.about-page .about-who-v2--antra
+.about-who-v2-headline h1 {
+    color: #073E46 !important;
+}
+
+/* Highlighted words */
+.about-page .about-who-v2--antra
+.about-who-v2-headline h1 span,
+.about-page .about-who-v2--antra
+.about-who-v2-intro h2 span {
+    color: #A47B3C !important;
+}
+
+/* Who We Are label */
+.about-page .about-who-v2--antra
+.about-who-v2-kicker {
+    color: #073E46 !important;
+    background: rgba(255,255,255,0.56) !important;
+    border-color: rgba(180,143,78,0.42) !important;
+}
+
+/* Main supporting heading */
+.about-page .about-who-v2--antra
+.about-who-v2-intro h2 {
+    color: #073E46 !important;
+}
+
+/* Supporting content */
+.about-page .about-who-v2--antra
+.about-who-v2-content,
+.about-page .about-who-v2--antra
+.about-who-v2-feature,
+.about-page .about-who-v2--antra
+.about-who-v2-feature strong {
+    color: #173E44 !important;
+}
+
+/* Body description */
+.about-page .about-who-v2--antra
+.about-who-v2-description {
+    color: #586B6C !important;
+}
+
+/* Premium divider */
+.about-page .about-who-v2--antra
+.about-who-v2-divider {
+    background: rgba(180,143,78,0.36) !important;
+}
+
+/* Consultation button */
+.about-page .about-who-v2--antra
+.about-who-v2-button {
+    color: #073E46 !important;
+    border-color: rgba(7,62,70,0.42) !important;
+    background: rgba(255,255,255,0.46) !important;
+}
+
+.about-page .about-who-v2--antra
+.about-who-v2-button:hover {
+    background: rgba(180,143,78,0.14) !important;
+}
+
+/* VASUPRIY ABOUT IVORY HERO FIX END */
+
+
+/* VASUPRIY ABOUT HERO TOP SPACING START */
+
+/* Desktop */
+@media (min-width: 901px) {
+  .about-page .about-who-v2.about-who-v2--antra {
+    padding-top: 125px !important;
+  }
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+  .about-page .about-who-v2.about-who-v2--antra {
+    padding-top: 112px !important;
+  }
+}
+
+/* VASUPRIY ABOUT HERO TOP SPACING END */
