@@ -19,7 +19,7 @@ export default function FloorPlanGallery() {
       aria-label="3D interior floor plan gallery"
       data-scroll-section
     >
-      <div className="floor-plan-gallery-viewport">
+      {/* <div className="floor-plan-gallery-viewport">
         <div className="floor-plan-gallery-track">
           {[0, 1].map((copy) => (
             <div
@@ -40,7 +40,7 @@ export default function FloorPlanGallery() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

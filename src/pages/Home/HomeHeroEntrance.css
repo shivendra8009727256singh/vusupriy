@@ -1,0 +1,73 @@
+/* Only the homepage's ANTRA4 hero. Existing layout/sizing remains unchanged. */
+@keyframes vasuHeroRise {
+  from { opacity: 0; transform: translate3d(0, 30px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@keyframes vasuHeroPicture {
+  from { opacity: 0; transform: translate3d(28px, 16px, 0) scale(.97); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes vasuHeroBackdrop {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Static starting state only until the existing home page-ready flag fires. */
+  body.is-loading .site .antra4-hero :is(
+    .antra4-hero-badge,
+    .antra4-title-line,
+    .antra4-hero-description,
+    .antra4-hero-cta,
+    .antra4-hero-image-frame,
+    .antra4-hero-dot
+  ) { opacity: 0; }
+
+  body:not(.is-loading) .site--ready .antra4-hero .antra4-hero-badge {
+    animation: vasuHeroRise 850ms cubic-bezier(.18,.7,.25,1) 60ms both !important;
+  }
+  body:not(.is-loading) .site--ready .antra4-hero .antra4-title-line:nth-child(1) {
+    animation: vasuHeroRise 1050ms cubic-bezier(.18,.7,.25,1) 180ms both !important;
+  }
+  body:not(.is-loading) .site--ready .antra4-hero .antra4-title-line:nth-child(2) {
+    animation: vasuHeroRise 1050ms cubic-bezier(.18,.7,.25,1) 300ms both !important;
+  }
+  body:not(.is-loading) .site--ready .antra4-hero .antra4-title-line:nth-child(3) {
+    animation: vasuHeroRise 1050ms cubic-bezier(.18,.7,.25,1) 420ms both !important;
+  }
+  body:not(.is-loading) .site--ready .antra4-hero .antra4-title-line:nth-child(4) {
+    animation: vasuHeroRise 1050ms cubic-bezier(.18,.7,.25,1) 540ms both !important;
+  }
+  body:not(.is-loading) .site--ready .antra4-hero .antra4-hero-description {
+    animation: vasuHeroRise 950ms cubic-bezier(.18,.7,.25,1) 690ms both !important;
+  }
+  body:not(.is-loading) .site--ready .antra4-hero .antra4-hero-cta {
+    animation: vasuHeroRise 900ms cubic-bezier(.18,.7,.25,1) 820ms both !important;
+  }
+  body:not(.is-loading) .site--ready .antra4-hero .antra4-hero-image-frame {
+    animation: vasuHeroPicture 1600ms cubic-bezier(.15,.72,.2,1) 200ms both !important;
+  }
+  body:not(.is-loading) .site--ready .antra4-hero .antra4-hero-dot {
+    animation: vasuHeroBackdrop 750ms ease 1050ms both !important;
+  }
+  /* Architectural watermark retains its existing opacity and placement. */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site .antra4-hero :is(.antra4-hero-badge,.antra4-title-line,.antra4-hero-description,.antra4-hero-cta,.antra4-hero-image-frame,.antra4-hero-dot) {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+/* Wait for RouteLoader to REMOVE its body.is-loading class.
+   Older site--ready transitions fire while the loader still covers the hero. */
+@media (prefers-reduced-motion: no-preference) {
+  body.is-loading .site .antra4-hero :is(
+    .antra4-hero-badge,
+    .antra4-title-line,
+    .antra4-hero-description,
+    .antra4-hero-cta,
+    .antra4-hero-image-frame,
+    .antra4-hero-dot
+  ) { opacity: 0 !important; }
+}

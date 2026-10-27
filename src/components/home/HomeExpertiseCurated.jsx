@@ -1,4 +1,11 @@
 import './HomeExpertiseCurated.css'
+// Reference-image slots: missing images fall back to existing Vasupriy artwork.
+const expertiseReferenceImages = [
+  '/images/home/expertise-reference/renovation.jpg',
+  '/images/home/expertise-reference/consultation.jpg',
+  '/images/home/expertise-reference/space-planning.jpg',
+  '/images/home/expertise-reference/visualization.jpg',
+]
 
 // Placeholder images — swap these for the final artwork
 import renovationImage from '../../assets/images/home/expertise/turnkey-execution.png'
@@ -64,7 +71,7 @@ function HomeExpertiseCurated() {
             >
               <div className="home-curated-image">
                 <img
-                  src={item.image}
+                  src={expertiseReferenceImages[index]} onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = item.image }}
                   alt={item.title.join(' ')}
                   loading="lazy"
                   decoding="async"

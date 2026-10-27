@@ -1,4 +1,6 @@
-﻿import aboutFloorPlan from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-05.png'
+﻿import '../../components/home/SingleSolutionVideos.css'
+import './HomeHeroEntrance.css'
+import aboutFloorPlan from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-05.png'
 import { useState as useExpertiseState } from 'react'
 import solutionBrandImage from '../../assets/images/renamed-collection/commercial-site-photos/modern-commercial-space-interior-01.jpg'
 import solutionProductImage from '../../assets/images/renamed-collection/residential-site-photos/residential-interior-details-46.jpg'
@@ -9,9 +11,11 @@ import useDecodedSelection, { createDecodedSelection } from '../../hooks/useDeco
 import { Link } from 'react-router-dom'
 
 import '../../App.css'
+import './HomeAboutShowcaseBackground.css'
+import './HomeAboutChapters.css'
 import useScrollMotion from '../../hooks/useScrollMotion.js'
 import InteriorProductsPreview from '../../components/home/InteriorProductsPreview.jsx'
-import FloorPlanGallery from '../../components/home/FloorPlanGallery.jsx'
+// import FloorPlanGallery from '../../components/home/FloorPlanGallery.jsx'
 import HomeExpertiseCurated from '../../components/home/HomeExpertiseCurated.jsx'
 
 import WhyVasupriy from '../../components/home/WhyVasupriy.jsx'
@@ -36,11 +40,39 @@ import expertiseSpacePlanning from '../../assets/images/home/expertise/space-pla
 import expertiseDesignVisualization from '../../assets/images/home/expertise/design-visualization.png'
 import expertiseArchitecture from '../../assets/images/home/expertise/architectural-solutions.png'
 import expertiseTurnkey from '../../assets/images/home/expertise/turnkey-execution.png'
+const aboutChapters = [
+  {
+    label: 'Chapter I', title: 'Designed for Living',
+    description: 'A thoughtful dialogue between your everyday routines, timeless aesthetics and practical design.',
+    keywords: 'Residential · Spatial Planning · Comfort', image: aboutVasupriyInterior,
+    alt: 'Warm, contemporary interior design by Vasupriy', link: '/services/space-designing-makeover',
+  },
+  {
+    label: 'Chapter II', title: 'Made with Precision',
+    description: 'From considered material choices to coordinated craftsmanship, every detail has a purpose.',
+    keywords: 'Execution · Detail · Craft', image: solutionBrandImage,
+    alt: 'Refined commercial interior highlighting material craftsmanship', link: '/services/drop-servicing-installation',
+  },
+  {
+    label: 'Chapter III', title: 'Distinctly Yours',
+    description: 'Personalised finishes, furniture and statement features that reflect your individual design language.',
+    keywords: 'Customisation · Finishes · Identity', image: solutionProductImage,
+    alt: 'Custom contemporary interior feature with layered materials', link: '/services/customized-theme-products',
+  },
+  {
+    label: 'Chapter IV', title: 'Spaces Reimagined',
+    description: 'Beautiful transformations balancing what a space already is with everything it could become.',
+    keywords: 'Makeovers · Ideas · Transformation', image: solutionDesignImage,
+    alt: 'Inviting interior makeover featuring soft furnishings and natural tones', link: '/services/space-designing-makeover',
+  },
+]
+
 function Home() {
   const [activeExpertiseImage, setActiveExpertiseImage] =
     useExpertiseState(expertiseFeature)
 
   const [pageReady, setPageReady] = useState(false)
+  const [activeAboutChapter, setActiveAboutChapter] = useState(0)
   const [activeProject, setActiveProject] = useState(0)
   const [activeService, serviceImages] = useDecodedSelection(0)
   const siteRef = useRef(null)
@@ -562,118 +594,76 @@ function Home() {
             ABOUT VASUPRIY — EDITORIAL
         ====================================================== */}
 
-        <section
-          className="about-antra section-space"
-          id="about"
-          data-scroll-section
-        >
-
-          <div className="site-container about-antra-container">
-            <div
-              className="about-antra-heading"
-              data-reveal
-              data-heading-reveal
-            >
-              <div className="about-antra-heading-label">
-                <span className="section-label">About Vasupriy</span>
+                <section className="vasu-chapter-about" id="about" data-scroll-section aria-labelledby="vasu-about-title">
+          <div className="vasu-chapter-about__shell">
+            <div className="vasu-chapter-about__copy">
+              <div className="vasu-chapter-about__brand">
+                <img src={vasupriyLogo} alt="" loading="lazy" />
+                <span>VASUPRIY <small>INTERIOVILLA</small></span>
               </div>
-
-              <div className="about-antra-heading-copy">
-                <h2 className="about-antra-title">
-                  Thoughtful Spaces.
-                  <br />
-                  <em>Inspired Living.</em>
-                </h2>
-              </div>
+              <span className="vasu-chapter-about__eyebrow">INTERIOR DESIGN STUDIO · EST. 2019</span>
+              <h2 id="vasu-about-title">Spaces with a <em>story to tell.</em></h2>
+              <p>We blend thoughtful design, careful material selection and coordinated execution to create spaces that feel unmistakably yours. Discover the craft behind every Vasupriy interior.</p>
+              <Link className="vasu-chapter-about__all" to="/about">Discover Our Story <span aria-hidden="true">&#8599;</span></Link>
             </div>
-
-            <div className="about-antra-media-row">
+            <div className="vasu-chapter-about__showcase">
+              <div className="vasu-chapter-about__tabs" role="tablist" aria-label="Explore Vasupriy expertise">
+                {aboutChapters.map((chapter, index) => (
+                  <button
+                    type="button"
+                    role="tab"
+                    key={chapter.label}
+                    id={`vasu-about-tab-${index}`}
+                    aria-controls="vasu-about-panel"
+                    aria-selected={activeAboutChapter === index}
+                    tabIndex={activeAboutChapter === index ? 0 : -1}
+                    className={activeAboutChapter === index ? 'is-active' : ''}
+                    onClick={() => setActiveAboutChapter(index)}
+                    onKeyDown={(event) => {
+                      const key = event.key
+                      let next = null
+                      if (key === 'ArrowRight') next = (index + 1) % aboutChapters.length
+                      if (key === 'ArrowLeft') next = (index - 1 + aboutChapters.length) % aboutChapters.length
+                      if (key === 'Home') next = 0
+                      if (key === 'End') next = aboutChapters.length - 1
+                      if (next !== null) {
+                        event.preventDefault()
+                        setActiveAboutChapter(next)
+                        event.currentTarget.parentElement?.querySelectorAll('[role="tab"]')[next]?.focus()
+                      }
+                    }}
+                  >{chapter.label}</button>
+                ))}
+              </div>
               <div
-                className="about-antra-watermark"
-                aria-hidden="true"
+                className="vasu-chapter-about__stage"
+                id="vasu-about-panel"
+                role="tabpanel"
+                aria-labelledby={`vasu-about-tab-${activeAboutChapter}`}
               >
-                <img src={vasupriyLogo} alt="" />
-              </div>
-
-              <div className="about-antra-visual" data-reveal>
                 <img
-                  src={aboutVasupriyInterior}
-                  alt="Vasupriy Interiovilla premium commercial interior project"
+                  key={aboutChapters[activeAboutChapter].label}
+                  className="vasu-chapter-about__image"
+                  src={aboutChapters[activeAboutChapter].image}
+                  alt={aboutChapters[activeAboutChapter].alt}
                   loading="lazy"
                   decoding="async"
                 />
-              </div>
-            </div>
-
-            <div className="about-antra-statement" data-reveal>
-              <p>
-                Beautifully designed interiors, tailored to the way you
-                live and work.
-              </p>
-            </div>
-
-            <div className="about-antra-bottom">
-              <div className="about-antra-watermark-space">
-                <img
-                  className="about-antra-floor-plan"
-                  src={aboutFloorPlan}
-                  alt="Vasupriy Interiovilla 3D interior floor plan"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-
-              <div className="about-antra-story" data-reveal>
-                <p>
-                  Since 2019, Vasupriy Interiovilla has been shaping
-                  residential and commercial spaces around clean lines,
-                  functional layouts and sophisticated details. From design
-                  direction and visualization to coordinated execution and
-                  customization, we bring each element together through one
-                  considered approach.
-                </p>
-
-                <Link
-                  className="about-antra-cta"
-                  to="/about"
-                >
-                  <span>More About Us</span>
-                  <span
-                    className="about-antra-cta-arrow"
-                    aria-hidden="true"
-                  >
-                    ↗
-                  </span>
-                </Link>
-              </div>
-
-              <div className="about-antra-points" data-reveal>
-                <div className="about-antra-point">
-                  <span aria-hidden="true">→</span>
-                  <p>Residential &amp; Commercial Interiors</p>
-                </div>
-
-                <div className="about-antra-point">
-                  <span aria-hidden="true">→</span>
-                  <p>Design &amp; Visualization</p>
-                </div>
-
-                <div className="about-antra-point">
-                  <span aria-hidden="true">→</span>
-                  <p>Execution &amp; Turnkey Solutions</p>
-                </div>
-
-                <div className="about-antra-point">
-                  <span aria-hidden="true">→</span>
-                  <p>Customized Interior Solutions</p>
+                <div className="vasu-chapter-about__story">
+                  {/* <span className="vasu-chapter-about__ornament" aria-hidden="true">V</span> */}
+                  <span className="vasu-chapter-about__story-label">VASUPRIY / {aboutChapters[activeAboutChapter].label}</span>
+                  <h3>{aboutChapters[activeAboutChapter].title}</h3>
+                  <p>{aboutChapters[activeAboutChapter].description}</p>
+                  <span className="vasu-chapter-about__keywords">{aboutChapters[activeAboutChapter].keywords}</span>
+                  <Link to={aboutChapters[activeAboutChapter].link}>Explore Collection <span aria-hidden="true">&#8594;</span></Link>
                 </div>
               </div>
             </div>
           </div>
-          {/* ===================================================
-              ABOUT — VISUAL STORY + HIGHLIGHTS
-          =================================================== */}
+        </section>
 
+        {/* Restored original Multiple Brand, Product and Design Options */}
+        <section className="about-antra section-space about-showcase-restored" aria-label="Interior options and design highlights">
           <div className="about-showcase">
             <div className="about-showcase-solution-heading" data-reveal>
               <span className="about-showcase-solution-eyebrow">
@@ -690,33 +680,42 @@ function Home() {
               data-reveal
             >
               <figure className="about-showcase-image about-showcase-image--one">
-                <img
+                <video className="vasu-single-solution-video" autoPlay muted loop playsInline preload="metadata" poster={solutionBrandImage} aria-hidden="true">
+                  <source src="/videos/home/single-solution/multiple-brands.mp4" type="video/mp4" />
+                </video>
+                <img className="vasu-single-solution-poster"
                   src={solutionBrandImage}
                   alt="Vasupriy residential interior"
                 />
-                <figcaption className="about-showcase-solution-label">
-                  Multiple Brand Options
-                </figcaption>
+                        {/* <figcaption className="about-showcase-solution-label">
+                          Multiple Brand Options
+                        </figcaption> */}
               </figure>
 
               <figure className="about-showcase-image about-showcase-image--two">
-                <img
+                <video className="vasu-single-solution-video" autoPlay muted loop playsInline preload="metadata" poster={solutionProductImage} aria-hidden="true">
+                  <source src="/videos/home/single-solution/multiple-products.mp4" type="video/mp4" />
+                </video>
+                <img className="vasu-single-solution-poster"
                   src={solutionProductImage}
                   alt="Vasupriy commercial interior"
                 />
-                <figcaption className="about-showcase-solution-label">
+                {/* <figcaption className="about-showcase-solution-label">
                   Multiple Products Options
-                </figcaption>
+                </figcaption> */}
               </figure>
 
               <figure className="about-showcase-image about-showcase-image--three">
-                <img
+                <video className="vasu-single-solution-video" autoPlay muted loop playsInline preload="metadata" poster={solutionDesignImage} aria-hidden="true">
+                  <source src="/videos/home/single-solution/multiple-designs.mp4" type="video/mp4" />
+                </video>
+                <img className="vasu-single-solution-poster"
                   src={solutionDesignImage}
                   alt="Vasupriy interior space makeover"
                 />
-                <figcaption className="about-showcase-solution-label">
+                {/* <figcaption className="about-showcase-solution-label">
                   Multiple Design Options
-                </figcaption>
+                </figcaption> */}
               </figure>
             </div>
 
@@ -773,7 +772,6 @@ function Home() {
               </article>
             </div>
           </div>
-
         </section>
         {/* =====================================================
             FEATURED PROJECTS
@@ -1159,7 +1157,7 @@ function Home() {
 
 
         {/* ORIGINAL 3D INTERIOR FLOOR PLAN VISUAL */}
-        <FloorPlanGallery />
+        {/* <FloorPlanGallery /> */}
         {/* EXPERTISE / SKILLS SHOWCASE */}
         <section
           className="expertise-showcase"

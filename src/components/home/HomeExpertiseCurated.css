@@ -287,3 +287,120 @@
     transition: none;
   }
 }
+
+/* VASUPRIY EXPERTISE REFERENCE DARK - BEGIN */
+.home-curated {
+  --curated-bg: #241c18;
+  --curated-teal: #ffffff;
+  --curated-gold: #c49a5a;
+  --curated-gold-light: #dec297;
+  --curated-text: #ffffff;
+  --curated-muted: #e4ddd6;
+  --curated-line: rgba(255,255,255,.26);
+  --curated-step: clamp(35px,4vw,60px);
+  background: #241c18 !important;
+  color: #ffffff;
+  padding: clamp(55px,6vw,85px) 0 clamp(85px,9vw,130px);
+}
+.home-curated::after { display: none !important; }
+.home-curated::before { opacity: .18; }
+.home-curated-heading { margin-bottom: clamp(44px,5vw,70px); }
+.home-curated-label {
+  color: #ffffff;
+  background: transparent;
+  border-color: rgba(255,255,255,.34);
+  padding: 5px 12px;
+  font-size: .65rem;
+  letter-spacing: 0;
+  margin-bottom: 19px;
+}
+.home-curated-label > span { display: none; }
+.home-curated-heading h2 {
+  color: #ffffff;
+  font-family: var(--font-body,Arial,sans-serif);
+  font-weight: 700;
+  font-size: clamp(35px,4.05vw,59px);
+  line-height: 1.09;
+  letter-spacing: -.055em;
+  white-space: normal;
+}
+.home-curated-heading h2 em {
+  color: #c49a5a;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: inherit;
+}
+.home-curated-grid { gap: clamp(15px,1.8vw,27px); }
+.home-curated-image {
+  border-radius: 16px;
+  aspect-ratio: 1.9 / 1;
+  background: #352b25;
+  box-shadow: none;
+}
+.home-curated-content { padding-top: 14px; }
+.home-curated-content h3 {
+  color: #ffffff;
+  font-size: clamp(16px,1.3vw,21px);
+  font-weight: 700;
+  line-height: 1.22;
+  margin-bottom: 15px;
+  letter-spacing: -.035em;
+}
+.home-curated-line { margin-bottom: 14px; }
+.home-curated-content p {
+  color: #e4ddd6;
+  font-size: clamp(12px,.94vw,14px);
+  line-height: 1.65;
+  max-width: 275px;
+}
+@media (min-width:992px) {
+  .home-curated-item:nth-child(2) { margin-top: var(--curated-step); }
+  .home-curated-item:nth-child(3) { margin-top: calc(var(--curated-step) * 2); }
+  .home-curated-item:nth-child(4) { margin-top: calc(var(--curated-step) * 3); }
+}
+@media (max-width:991px) {
+  .home-curated-grid { grid-template-columns: repeat(2,minmax(0,1fr)); row-gap: 35px; }
+  .home-curated-item:nth-child(n) { margin-top: 0; }
+  .home-curated-item:nth-child(even) { margin-top: 26px; }
+}
+@media (max-width:600px) {
+  .home-curated { padding: 55px 0 75px; }
+  .home-curated-heading h2 { font-size: clamp(30px,8.1vw,46px); }
+  .home-curated-grid { grid-template-columns: 1fr; gap: 34px; }
+  .home-curated-item:nth-child(n) { margin-top: 0; }
+  .home-curated-image { aspect-ratio: 1.9 / 1; }
+  .home-curated-content p { max-width: none; }
+}
+/* VASUPRIY EXPERTISE REFERENCE DARK - END */
+
+/* VASUPRIY EXPERTISE HERO THEME START */
+/* Match the homepage hero's warm ivory palette without changing layout. */
+.site .home-curated {
+  --curated-bg: #f5f0ea;
+  --curated-teal: #003e4c;
+  --curated-text: #17353b;
+  --curated-muted: #566b70;
+  --curated-line: rgba(0, 71, 88, .22);
+  background: radial-gradient(circle at 82% 15%, rgba(180, 143, 78, .10), transparent 30%), linear-gradient(135deg, #faf7f2 0%, #f5f0ea 55%, #f8f3ec 100%) !important;
+  color: #17353b !important;
+}
+.site .home-curated::after {
+  opacity: .14 !important;
+  mix-blend-mode: multiply;
+}
+.site .home-curated-heading h2,
+.site .home-curated-content h3 { color: #003e4c !important; }
+.site .home-curated-heading h2 em { color: #b48f4e !important; }
+.site .home-curated-content p { color: #566b70 !important; }
+.site .home-curated-label {
+  color: #876a3c !important;
+  background: rgba(255, 255, 255, .48) !important;
+  border-color: rgba(180, 143, 78, .36) !important;
+}
+.site .home-curated-line { background: rgba(0, 71, 88, .22) !important; }
+.site .home-curated-line::after { border-color: rgba(0, 71, 88, .22) !important; }
+.site .home-curated-image {
+  background: #ede7df;
+  box-shadow: 0 14px 38px rgba(34, 58, 59, .12);
+}
+/* VASUPRIY EXPERTISE HERO THEME END */

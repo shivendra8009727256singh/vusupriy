@@ -1,212 +1,119 @@
-// VASUPRIY_WALL_MAKEOVER_REAL_IMAGE_V1
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { imagesForProduct } from '../../pages/InteriorProducts/productImageMap.js'
+import './InteriorProductsReference.css'
 
-import './InteriorProductsPreview.css'
-import wallMakeoverRealImage from '../../assets/images/renamed-collection/cafe-interiors/cafe-wooden-wall-panels-07.jpg'
-import { productImageMap } from '../../pages/InteriorProducts/productImageMap.js'
-
-
-// VASUPRIY_HOME_FOUR_PRODUCT_COLLECTIONS_V1 - source photographs shared with dedicated Products page.
-const products = [
-  { id: 1, title: 'Flooring Styling', image: productImageMap['SPC Flooring'][0], alt: 'SPC Flooring flooring product' },
-  { id: 2, title: 'Green Element', image: productImageMap['Vertical Garden'][0], alt: 'Vertical Garden greenery product' },
-  { id: 3, title: 'Enlightenment Options', image: productImageMap['Chandeliers'][0], alt: 'Chandeliers lighting product' },
-  { id: 4, title: 'Wall Makeover Products', image: wallMakeoverRealImage, alt: 'Decorative wall covering and wall makeover product' },
+// Reuse the existing product catalogue and its real client-provided images.
+const collections = [
+  {
+    label: 'Flooring Styling',
+    description: 'Considered flooring materials and textures to ground every interior beautifully.',
+    items: ['SPC Flooring', 'European Laminate', 'Wooden Deck Flooring', 'Carpet Tiles Flooring', 'Epoxy Flooring'],
+  },
+  {
+    label: 'Green Element',
+    description: 'Bring a naturally refreshing atmosphere to your space with thoughtful greenery.',
+    items: ['Vertical Garden', 'Artificial Plant and Tree', 'Artificial Grass Flooring'],
+  },
+  {
+    label: 'Enlightenment Options',
+    description: 'Lighting selections that add warmth, ambience and definition to every room.',
+    items: ['Chandeliers', 'Ceiling Light', 'Wall Lamps', 'Garden Light', 'Down Light'],
+  },
+  {
+    label: 'Wall Makeover Products',
+    description: 'Elevate walls with expressive patterns, refined surfaces and layered finishes.',
+    items: ['Non-Woven Wallpaper', 'Customized Design Wallpaper', 'WPC Panels', 'PVC Panels', 'MDF Wall Panels'],
+  },
 ]
-const AUTOPLAY_DELAY = 2000
-const SLIDE_DURATION = 900
 
-const sliderProducts = [...products, ...products, ...products]
+const cardsFor = collection => collection.items.flatMap(name => {
+  const image = imagesForProduct(name)[0]
+  return image ? [{ name, image }] : []
+})
 
 export default function InteriorProductsPreview() {
-  const [trackIndex, setTrackIndex] = useState(products.length)
-  const [isAnimating, setIsAnimating] = useState(true)
-
-  const trackIndexRef = useRef(products.length)
-  const touchStartX = useRef(null)
-  const slideTimeoutRef = useRef(null)
-  const lockedRef = useRef(false)
-
-  const activeIndex =
-    ((trackIndex % products.length) + products.length) %
-    products.length
-
-  const moveTo = (nextIndex) => {
-    if (lockedRef.current) return
-
-    lockedRef.current = true
-    setIsAnimating(true)
-    trackIndexRef.current = nextIndex
-    setTrackIndex(nextIndex)
-
-    window.clearTimeout(slideTimeoutRef.current)
-
-    slideTimeoutRef.current = window.setTimeout(() => {
-      let normalizedIndex = trackIndexRef.current
-
-      if (normalizedIndex >= products.length * 2) {
-        normalizedIndex -= products.length
-      } else if (normalizedIndex < products.length) {
-        normalizedIndex += products.length
-      }
-
-      if (normalizedIndex !== trackIndexRef.current) {
-        setIsAnimating(false)
-        trackIndexRef.current = normalizedIndex
-        setTrackIndex(normalizedIndex)
-      }
-
-      lockedRef.current = false
-    }, SLIDE_DURATION)
-  }
+  const [selected, setSelected] = useState(0)
+  const [position, setPosition] = useState(0)
+  const railRef = useRef(null)
+  const category = collections[selected]
+  const cards = cardsFor(category)
 
   useEffect(() => {
-    const timer = window.setInterval(() => {
-      moveTo(trackIndexRef.current + 1)
-    }, AUTOPLAY_DELAY)
+    const rail = railRef.current
+    if (rail) rail.scrollTo({ left: 0, behavior: 'instant' })
+    setPosition(0)
+  }, [selected])
 
-    return () => {
-      window.clearInterval(timer)
-      window.clearTimeout(slideTimeoutRef.current)
-    }
-  }, [])
-
-  const handleTouchStart = (event) => {
-    touchStartX.current = event.touches[0]?.clientX ?? null
+  const updatePosition = () => {
+    const rail = railRef.current
+    if (!rail) return
+    const firstCard = rail.querySelector('.vproduct-card')
+    if (!firstCard) return
+    const step = firstCard.getBoundingClientRect().width + 18
+    setPosition(Math.round(rail.scrollLeft / step))
   }
 
-  const handleTouchEnd = (event) => {
-    if (touchStartX.current === null) return
-
-    const endX =
-      event.changedTouches[0]?.clientX ?? touchStartX.current
-
-    const distance = endX - touchStartX.current
-
-    if (distance < -45) {
-      moveTo(trackIndexRef.current + 1)
-    } else if (distance > 45) {
-      moveTo(trackIndexRef.current - 1)
-    }
-
-    touchStartX.current = null
-  }
-
-  const handleDotClick = (index) => {
-    const current = trackIndexRef.current % products.length
-    const forward = (index - current + products.length) % products.length
-
-    if (forward === 0) return
-
-    moveTo(trackIndexRef.current + forward)
+  const navigate = direction => {
+    const rail = railRef.current
+    const firstCard = rail?.querySelector('.vproduct-card')
+    if (!rail || !firstCard) return
+    const gap = parseFloat(getComputedStyle(rail).columnGap) || 18
+    const step = firstCard.getBoundingClientRect().width + gap
+    const maxScroll = rail.scrollWidth - rail.clientWidth
+    const target = Math.max(0, Math.min(maxScroll, rail.scrollLeft + direction * step))
+    rail.scrollTo({ left: target, behavior: 'smooth' })
   }
 
   return (
-    <section
-      className="products-gallery"
-      id="home-products"
-      aria-labelledby="products-gallery-title"
-      data-scroll-section
-    >
-      <div
-        className="products-gallery-background"
-        aria-hidden="true"
-      >
-        <img src={products[activeIndex].image} alt="" />
-      </div>
+    <section className="vproduct-showcase" id="home-products" aria-labelledby="vproduct-title" data-scroll-section>
+      <div className="vproduct-shell">
+        <header className="vproduct-heading">
+          <div>
+            <span className="vproduct-eyebrow">VASUPRIY INTERIOVILLA / OUR PRODUCTS</span>
+            <h2 id="vproduct-title">Interior products <em>&amp; finishes</em></h2>
+            <p>Curated interior products, thoughtfully chosen for spaces that feel like yours.</p>
+          </div>
+          <div className="vproduct-arrows" aria-label="Browse product images">
+            <button type="button" onClick={() => navigate(-1)} aria-label="Previous products">←</button>
+            <button type="button" onClick={() => navigate(1)} aria-label="Next products">→</button>
+          </div>
+        </header>
 
-      <div
-        className="products-gallery-overlay"
-        aria-hidden="true"
-      />
+        <div className="vproduct-layout">
+          <nav className="vproduct-tabs" aria-label="Product collections">
+            {collections.map((item, index) => (
+              <button
+                key={item.label}
+                type="button"
+                className={selected === index ? 'vproduct-tab is-active' : 'vproduct-tab'}
+                aria-pressed={selected === index}
+                onClick={() => setSelected(index)}
+              >
+                {item.label}
+              </button>
+            ))}
+            <Link className="vproduct-all" to="/interior-products">View full collection <span aria-hidden="true">↗</span></Link>
+          </nav>
 
-      <div className="site-container products-gallery-container">
-        <div className="products-gallery-copy" data-reveal>
-          <span className="products-gallery-label">
-            <i aria-hidden="true" />
-            Our Products
-          </span>
-
-          <h2 id="products-gallery-title">
-            Interior
-            <br />
-            Products
-          </h2>
-
-          <p>
-            Curated interior products that bring together refined
-            materials, thoughtful details and practical solutions
-            for beautifully finished spaces.
-          </p>
-
-          <Link
-            className="products-gallery-link"
-            to="/interior-products"
-          >
-            Explore Products
-            <span aria-hidden="true">{'\u2197'}</span>
-          </Link>
-        </div>
-
-        <div
-          className="products-gallery-slider"
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-          aria-label="Interior products gallery"
-          data-reveal
-        >
-          <div className="products-gallery-viewport">
-            <div
-              className={`products-gallery-track ${
-                isAnimating ? 'products-gallery-track--animate' : ''
-              }`}
-              style={{
-                '--product-index': trackIndex,
-              }}
-            >
-              {sliderProducts.map((product, index) => (
-                <article
-                  className="products-gallery-card"
-                  key={`${product.id}-${index}`}
-                >
-                  <img
-                    src={product.image}
-                    alt={product.alt}
-                    decoding="async"
-                  />
-
-                  <div className="products-gallery-card-overlay">
-                    <span>
-                      {String(product.id).padStart(2, '0')}
-                    </span>
-                    <h3>{product.title}</h3>
-                  </div>
+          <div className="vproduct-right">
+            <div className="vproduct-rail" ref={railRef} onScroll={updatePosition} aria-label={`${category.label} products`}>
+              {cards.map((card, index) => (
+                <article className="vproduct-card" key={`${selected}-${card.name}`}>
+                  <Link to="/interior-products" aria-label={`Explore ${card.name} products`}>
+                    <div className="vproduct-image-wrap">
+                      <img src={card.image} alt={card.name} loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />
+                    </div>
+                    <h3>{card.name}</h3>
+                    <p>{category.description}</p>
+                  </Link>
                 </article>
               ))}
             </div>
-          </div>
-
-          <div
-            className="products-gallery-progress"
-            aria-label={`Product ${activeIndex + 1} of ${products.length}`}
-          >
-            {products.map((product, index) => (
-              <button
-                key={product.id}
-                type="button"
-                className={
-                  index === activeIndex
-                    ? 'products-gallery-dot products-gallery-dot--active'
-                    : 'products-gallery-dot'
-                }
-                onClick={() => handleDotClick(index)}
-                aria-label={`Show ${product.title}`}
-                aria-current={
-                  index === activeIndex ? 'true' : undefined
-                }
-              />
-            ))}
+            <div className="vproduct-footer">
+              <span>{String(Math.min(position + 1, Math.max(cards.length, 1))).padStart(2, '0')} / {String(cards.length).padStart(2, '0')}</span>
+              <span>Swipe or use arrows to explore</span>
+            </div>
           </div>
         </div>
       </div>

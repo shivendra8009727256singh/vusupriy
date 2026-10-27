@@ -1,0 +1,24 @@
+/* Vasupriy: make the restored Multiple Options showcase flow naturally
+   into the warm About section. Scope only the original showcase. */
+.site .about-showcase,
+.site .about-showcase-solution-heading,
+.site .about-showcase-gallery,
+.site .about-showcase-highlights {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+/* Keep the heading flush with the surrounding section, not in a white card. */
+.site .about-showcase-solution-heading {
+  border-radius: 0 !important;
+}
+/* Protect the original pictures and their rounded frames. */
+.site .about-showcase-image {
+  background: transparent !important;
+}
+/* Avoid a mismatched divider above the restored section. */
+.site .about-showcase::before {
+  display: none !important;
+}

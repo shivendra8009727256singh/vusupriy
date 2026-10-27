@@ -1,0 +1,20 @@
+/* Vasupriy Single Solution videos - scoped to the restored three-card showcase */
+.about-showcase-image .vasu-single-solution-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.about-showcase-image .vasu-single-solution-poster {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-showcase-image .vasu-single-solution-video { display: none; }
+  .about-showcase-image .vasu-single-solution-poster { display: block; }
+}

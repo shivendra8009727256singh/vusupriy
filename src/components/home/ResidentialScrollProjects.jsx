@@ -49,7 +49,7 @@ export default function ResidentialScrollProjects() {
     const mm = gsap.matchMedia()
 
     mm.add(
-      '(min-width: 992px) and (prefers-reduced-motion: no-preference)',
+      '(prefers-reduced-motion: no-preference)',
       () => {
         gsap.utils
           .toArray('.vasu-project-panel', section)

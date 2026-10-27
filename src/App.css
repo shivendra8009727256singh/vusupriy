@@ -17068,3 +17068,49 @@ body.is-loading {
     font-size: 25vw;
   }
 }
+/* VASUPRIY HOME SERVICES LIGHT GLASS START */
+/* Only visual backgrounds; existing layout, images, scroll and animations remain intact. */
+.site .home-services {
+  background:
+    radial-gradient(ellipse at 91% 12%, rgba(241, 221, 180, .29) 0%, transparent 43%),
+    radial-gradient(ellipse at 10% 93%, rgba(185, 229, 218, .25) 0%, transparent 49%),
+    linear-gradient(112deg,
+      rgba(22, 93, 105, .91) 0%,
+      rgba(48, 120, 129, .86) 52%,
+      rgba(66, 139, 141, .82) 100%),
+    #a8c5c1 !important;
+  color: #fff !important;
+}
+
+.site .home-services-atmosphere::after {
+  background: linear-gradient(140deg,
+    rgba(255,255,255,.16) 0%,
+    rgba(255,255,255,.075) 52%,
+    rgba(255,255,255,.14) 100%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(130%);
+  backdrop-filter: blur(22px) saturate(130%);
+}
+
+.site .home-services-glow--one {
+  background: radial-gradient(circle, rgba(244, 211, 153, .30) 0%, transparent 70%) !important;
+}
+.site .home-services-glow--two {
+  background: radial-gradient(circle, rgba(167, 227, 224, .23) 0%, transparent 70%) !important;
+}
+
+@media (max-width: 767px) {
+  .site .home-services {
+    background:
+      radial-gradient(ellipse at 90% 8%, rgba(241,221,180,.23), transparent 55%),
+      linear-gradient(160deg, rgba(25,96,107,.92), rgba(65,132,137,.87)),
+      #a8c5c1 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site .home-services-atmosphere::after {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+/* VASUPRIY HOME SERVICES LIGHT GLASS END */

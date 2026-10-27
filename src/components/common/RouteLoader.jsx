@@ -107,10 +107,10 @@ export default function RouteLoader() {
           />
         </div>
 
-        <div className="signature-loader-wordmark">
+        {/* <div className="signature-loader-wordmark">
           <span>VASUPRIY</span>
           <small>INTERIOVILLA</small>
-        </div>
+        </div> */}
 
         <div className="preloader-progress">
           <span />
