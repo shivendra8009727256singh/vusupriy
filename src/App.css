@@ -17114,3 +17114,145 @@ body.is-loading {
   }
 }
 /* VASUPRIY HOME SERVICES LIGHT GLASS END */
+
+
+/* VASUPRIY SERVICES IVORY START */
+
+/* Match About Hero's premium ivory background */
+.site .home-services {
+  background:
+    radial-gradient(
+      circle at 85% 12%,
+      rgba(180,143,78,0.12),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #FAF7F2 0%,
+      #F5F0EA 55%,
+      #F8F3EC 100%
+    ) !important;
+  color: #073E46 !important;
+}
+
+/* Remove teal tint from the old glass overlay */
+.site .home-services-atmosphere::after {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Soft champagne decorative glows */
+.site .home-services-glow--one {
+  background: radial-gradient(
+    circle,
+    rgba(180,143,78,0.14),
+    transparent 70%
+  ) !important;
+}
+
+.site .home-services-glow--two {
+  background: radial-gradient(
+    circle,
+    rgba(180,143,78,0.08),
+    transparent 70%
+  ) !important;
+}
+
+/* Heading */
+.site .home-services-heading-copy h2 {
+  color: #073E46 !important;
+}
+
+.site .home-services-heading-copy h2 em {
+  color: #A47B3C !important;
+}
+
+/* Label and service counter */
+.site .home-services-label {
+  color: #A47B3C !important;
+  border-color: rgba(180,143,78,0.38) !important;
+  background: rgba(255,255,255,0.48);
+}
+
+.site .home-services-count {
+  color: #586B6C !important;
+}
+
+/* Section description */
+.site .home-services-heading-copy > p,
+.site .home-services-description p {
+  color: #586B6C !important;
+}
+
+/* Service titles: visible on light background */
+.site .home-service-item {
+  color: #073E46 !important;
+  border-bottom-color: rgba(7,62,70,0.15) !important;
+}
+
+.site .home-services-list {
+  border-top-color: rgba(7,62,70,0.15) !important;
+}
+
+/* Hover and active state */
+.site .home-service-item:hover,
+.site .home-service-item:focus-visible,
+.site .home-service-item--active {
+  color: #A47B3C !important;
+}
+
+/* Service numbers and arrow */
+.site .home-service-number {
+  color: #A47B3C !important;
+}
+
+.site .home-service-arrow {
+  border-color: rgba(7,62,70,0.35) !important;
+  color: #073E46;
+  opacity: 0.8;
+}
+
+/* Existing gold active arrow behaviour remains */
+.site .home-service-item:hover .home-service-arrow,
+.site .home-service-item:focus-visible .home-service-arrow,
+.site .home-service-item--active .home-service-arrow {
+  background: #B48F4E !important;
+  color: #073E46 !important;
+  opacity: 1;
+}
+
+/* CTA readability */
+.site .home-services-cta {
+  color: #073E46 !important;
+  border-color: rgba(180,143,78,0.65) !important;
+  background: rgba(255,255,255,0.42);
+}
+
+.site .home-services-cta:hover {
+  color: #073E46 !important;
+}
+
+/* VASUPRIY SERVICES IVORY END */
+
+
+/* VASUPRIY SERVICES TEXT CONTRAST START */
+
+/* All service names: dark teal */
+.site .home-services .home-service-item .home-service-title {
+  color: #073E46 !important;
+}
+
+/* Highlight active and hovered service */
+.site .home-services .home-service-item:hover .home-service-title,
+.site .home-services .home-service-item:focus-visible .home-service-title,
+.site .home-services .home-service-item--active .home-service-title {
+  color: #A47B3C !important;
+}
+
+/* Refined service separators */
+.site .home-services .home-service-item {
+  border-bottom-color: rgba(7,62,70,0.16) !important;
+}
+
+/* VASUPRIY SERVICES TEXT CONTRAST END */

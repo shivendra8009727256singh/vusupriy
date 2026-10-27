@@ -14,24 +14,39 @@ gsap.registerPlugin(ScrollTrigger)
 const projects = [
   {
     number: '01',
-    title: 'Elegant Dining',
+    title: 'Stone Engraved Work',
     category: 'Residential Interior',
     type: 'Refined Dining Spaces',
     image: project01,
   },
   {
     number: '02',
-    title: 'Luxury Living',
+    title: 'FRP Wall Art',
     category: 'Single Home',
     type: 'Luxury Residential Design',
     image: project02,
   },
   {
     number: '03',
-    title: 'Modern Retreat',
+    title: 'Highlighter Tiles',
     category: 'Residential Interior',
     type: 'Contemporary Living Spaces',
     image: project03,
+  },
+  /* VASUPRIY_FIVE_SHOWCASE_ITEMS */
+  {
+    number: '04',
+    title: 'Mosaic Tiles',
+    category: 'Decorative Surfaces',
+    type: 'Custom Mosaic Work',
+    image: '/images/home-expertise/custom-mosaic-work.jpg',
+  },
+  {
+    number: '05',
+    title: 'Embroidery Wallpaper',
+    category: 'Wall Decor',
+    type: 'Embroidered Wallpaper',
+    image: '/images/home-expertise/embroidered-wallpaper.jpg',
   },
 ]
 
@@ -148,7 +163,7 @@ export default function ResidentialScrollProjects() {
           <div className="vasu-project-intro-side">
             <span>Designed for inspired living</span>
             <span className="vasu-project-count">
-              0{active + 1} / 03
+              {String(active + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
             </span>
           </div>
         </div>

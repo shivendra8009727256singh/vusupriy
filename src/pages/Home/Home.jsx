@@ -1,4 +1,4 @@
-﻿import '../../components/home/SingleSolutionVideos.css'
+import '../../components/home/SingleSolutionVideos.css'
 import './HomeHeroEntrance.css'
 import aboutFloorPlan from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-05.png'
 import { useState as useExpertiseState } from 'react'
@@ -76,6 +76,61 @@ function Home() {
   const [activeProject, setActiveProject] = useState(0)
   const [activeService, serviceImages] = useDecodedSelection(0)
   const siteRef = useRef(null)
+  /* VASUPRIY_SEQUENTIAL_VIDEOS_V1 */
+  const [solutionVideoStep, setSolutionVideoStep] = useState(-1)
+  const solutionVideoRefs = useRef([])
+  const solutionStarted = useRef(false)
+
+  // Start once when the showcase enters the viewport.
+  useEffect(() => {
+    const gallery = document.querySelector('.about-showcase-gallery')
+    if (!gallery) return undefined
+
+    const start = () => {
+      if (solutionStarted.current) return
+      solutionStarted.current = true
+      setSolutionVideoStep(0)
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      start()
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        start()
+        observer.disconnect()
+      }
+    }, { threshold: 0.2 })
+
+    observer.observe(gallery)
+    return () => observer.disconnect()
+  }, [])
+
+  // Only one video plays at a time.
+  useEffect(() => {
+    const videos = solutionVideoRefs.current
+
+    videos.forEach((video, index) => {
+      if (!video) return
+
+      video.loop = false
+      video.pause()
+
+      if (index === solutionVideoStep) {
+        video.currentTime = 0
+
+        const playRequest = video.play()
+        if (playRequest?.catch) {
+          playRequest.catch(() => {
+            // Browser autoplay restrictions leave the preview static.
+          })
+        }
+      }
+    })
+  }, [solutionVideoStep])
+
 
   /* VASUPRIY ABOUT FLOOR PLAN SCROLL PARALLAX (vertical) */
   useEffect(() => {
@@ -680,7 +735,7 @@ function Home() {
               data-reveal
             >
               <figure className="about-showcase-image about-showcase-image--one">
-                <video className="vasu-single-solution-video" autoPlay muted loop playsInline preload="metadata" poster={solutionBrandImage} aria-hidden="true">
+                <video className="vasu-single-solution-video" muted playsInline preload="auto" poster={solutionBrandImage} ref={el => { solutionVideoRefs.current[0] = el }} onEnded={() => setSolutionVideoStep(1)} aria-hidden="true">
                   <source src="/videos/home/single-solution/multiple-brands.mp4" type="video/mp4" />
                 </video>
                 <img className="vasu-single-solution-poster"
@@ -693,7 +748,7 @@ function Home() {
               </figure>
 
               <figure className="about-showcase-image about-showcase-image--two">
-                <video className="vasu-single-solution-video" autoPlay muted loop playsInline preload="metadata" poster={solutionProductImage} aria-hidden="true">
+                <video className="vasu-single-solution-video" muted playsInline preload="auto" poster={solutionProductImage} ref={el => { solutionVideoRefs.current[1] = el }} onEnded={() => setSolutionVideoStep(2)} aria-hidden="true">
                   <source src="/videos/home/single-solution/multiple-products.mp4" type="video/mp4" />
                 </video>
                 <img className="vasu-single-solution-poster"
@@ -706,7 +761,7 @@ function Home() {
               </figure>
 
               <figure className="about-showcase-image about-showcase-image--three">
-                <video className="vasu-single-solution-video" autoPlay muted loop playsInline preload="metadata" poster={solutionDesignImage} aria-hidden="true">
+                <video className="vasu-single-solution-video" muted playsInline preload="auto" poster={solutionDesignImage} ref={el => { solutionVideoRefs.current[2] = el }} onEnded={() => setSolutionVideoStep(3)} aria-hidden="true">
                   <source src="/videos/home/single-solution/multiple-designs.mp4" type="video/mp4" />
                 </video>
                 <img className="vasu-single-solution-poster"
