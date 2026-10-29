@@ -17256,3 +17256,23 @@ body.is-loading {
 }
 
 /* VASUPRIY SERVICES TEXT CONTRAST END */
+
+
+/* VASUPRIY DROPDOWN HOVER LINE FIX START */
+
+/* Remove main navigation underline/dot from submenu links */
+.site-header .desktop-nav .vasu-services-dropdown .vasu-services-dropdown-link::before,
+.site-header .desktop-nav .vasu-services-dropdown .vasu-services-dropdown-link::after {
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+}
+
+/* Keep submenu text stable on hover */
+.site-header .desktop-nav .vasu-services-dropdown .vasu-services-dropdown-link:hover,
+.site-header .desktop-nav .vasu-services-dropdown .vasu-services-dropdown-link.active {
+  transform: none !important;
+  text-decoration: none !important;
+}
+
+/* VASUPRIY DROPDOWN HOVER LINE FIX END */

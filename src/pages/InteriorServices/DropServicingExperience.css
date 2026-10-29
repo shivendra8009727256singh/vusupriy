@@ -1,0 +1,671 @@
+/* VASUPRIY DROP SERVICING EXPERIENCE V1: isolated styles */
+.vds{--vds-teal:#073E46;--vds-gold:#B48F4E;--vds-ivory:#FAF7F2;--vds-muted:#586B6C;color:var(--vds-teal);background:var(--vds-ivory);overflow:hidden}
+.vds *,.vds *::before,.vds *::after{box-sizing:border-box}
+.vds :is(h1,h2,h3,p){margin:0}
+.vds h1,.vds h2,.vds h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}
+.vds h2{font-size:clamp(2.5rem,5vw,5.7rem);line-height:1.08;letter-spacing:-.045em}
+.vds h2 em{color:#A47B3C;font-weight:400}
+.vds-container{width:min(1320px,calc(100% - 88px));margin-inline:auto}
+.vds-section{padding:clamp(78px,8vw,128px) 0}
+.vds-eyebrow{display:block;font-size:11px;letter-spacing:.19em;font-weight:750;color:#A47B3C;margin-bottom:22px}
+.vds-eyebrow-light{color:#E8C999}
+.vds-hero{height:clamp(650px,85svh,880px);position:relative;isolation:isolate;color:#FFF8EC;display:flex;align-items:center;background:#073E46}
+.vds-hero-photo,.vds-hero-cover{position:absolute;inset:0;width:100%;height:100%}
+.vds-hero-photo{object-fit:cover;z-index:-2}
+.vds-hero-cover{z-index:-1;background:linear-gradient(90deg,rgba(1,33,40,.87) 0%,rgba(2,48,58,.64) 49%,rgba(2,38,45,.22) 100%),linear-gradient(0deg,rgba(2,39,47,.24),transparent 70%)}
+.vds-hero-content{padding-top:95px;position:relative}
+.vds-hero h1{font-size:clamp(4rem,8vw,8rem);line-height:1.03;letter-spacing:-.065em;max-width:980px;color:#FFF8EC}
+.vds-hero h1 em{color:#E8C999;font-weight:400}
+.vds-hero-content>p{color:rgba(255,248,236,.87);max-width:550px;font-size:clamp(15px,1.3vw,18px);line-height:1.8;margin:27px 0 33px}
+.vds-pill{display:inline-flex;gap:35px;align-items:center;justify-content:space-between;border-radius:999px;text-decoration:none;padding:16px 19px 16px 25px;font-size:13px;font-weight:700;transition:transform .3s ease,background .3s ease}
+.vds-pill span{font-size:20px}
+.vds-pill-gold{background:#D7B889;color:#073E46}
+.vds-pill-gold:hover{transform:translateY(-3px);background:#E8C999}
+.vds-hero-index{position:absolute;right:45px;bottom:30px;font-size:11px;letter-spacing:.14em;color:#FFF8EC}
+.vds-intro{background:linear-gradient(135deg,#FAF7F2,#F5F0EA,#F8F3EC)}
+.vds-intro-grid,.vds-detail-intro{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(35px,7vw,110px);align-items:end}
+.vds-intro-grid>div:last-child>p,.vds-detail-intro>p{max-width:500px;font-size:clamp(15px,1.15vw,18px);line-height:1.85;color:var(--vds-muted)}
+.vds-intro-signature{border-top:1px solid #CEB892;display:flex;align-items:center;gap:22px;margin-top:34px;padding-top:20px}
+.vds-intro-signature strong{font:400 70px Georgia,serif;color:#A47B3C}
+.vds-intro-signature span{font-size:13px;line-height:1.7;color:#586B6C}
+.vds-catalog,.vds-detail-features{background:#FFFDF9}
+.vds-section-head{display:flex;align-items:end;justify-content:space-between;gap:50px;margin-bottom:50px}
+.vds-section-head>p{max-width:390px;line-height:1.8;color:#586B6C;font-size:15px}
+.vds-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.vds-service-card{text-decoration:none;color:inherit;border:1px solid rgba(180,143,78,.20);border-radius:18px;overflow:hidden;background:#FAF7F2;transition:transform .4s ease,box-shadow .4s ease}
+.vds-service-card:hover{transform:translateY(-7px);box-shadow:0 25px 60px rgba(5,42,49,.11)}
+.vds-service-photo{height:clamp(210px,22vw,300px);position:relative;overflow:hidden;background:#E9E1D4}
+.vds-service-photo img{width:100%;height:100%;object-fit:cover;transition:transform .75s ease;display:block}
+.vds-service-card:hover img{transform:scale(1.06)}
+.vds-service-number{position:absolute;top:16px;left:16px;background:rgba(7,62,70,.92);color:#E8C999;padding:8px 10px;font:500 13px Georgia,serif}
+.vds-service-body{padding:25px 24px 27px;display:flex;flex-direction:column;min-height:220px}
+.vds-service-body h3{font-size:clamp(23px,2vw,30px);line-height:1.2;color:#073E46}
+.vds-service-body p{color:#586B6C;font-size:13px;line-height:1.7;margin:12px 0 24px}
+.vds-service-visit{margin-top:auto;display:flex;justify-content:space-between;border-top:1px solid rgba(180,143,78,.28);padding-top:15px;color:#A47B3C;font-weight:700;font-size:12px;letter-spacing:.08em}
+.vds-service-visit>span{font-size:22px;font-weight:400}
+.vds-commitment{background:radial-gradient(circle at 90% 10%,rgba(180,143,78,.15),transparent 40%),linear-gradient(120deg,#073E46,#004758);color:#FFF8EC}
+.vds-commitment-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,8vw,130px)}
+.vds-commitment h2,.vds-cta h2{color:#FFF8EC}
+.vds-commitment h2 em,.vds-cta h2 em{color:#E8C999}
+.vds-commitment-list{border-top:1px solid rgba(232,201,153,.28)}
+.vds-commitment-item{display:grid;grid-template-columns:45px 1fr;gap:23px;padding:27px 0;border-bottom:1px solid rgba(232,201,153,.28)}
+.vds-commitment-item>span{color:#E8C999;font:400 20px Georgia,serif}
+.vds-commitment-item h3{color:#FFF8EC;font-size:25px;margin-bottom:10px}
+.vds-commitment-item p{color:rgba(255,248,236,.73);font-size:14px;line-height:1.75}
+.vds-showcase{background:linear-gradient(135deg,#FAF7F2,#F5F0EA)}
+.vds-slides-photo{height:clamp(360px,53vw,650px);position:relative;overflow:hidden;border-radius:20px;background:#EAE3D8}
+.vds-slides-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.vds-slides-count{position:absolute;right:24px;bottom:24px;background:rgba(7,62,70,.9);color:#FFF8EC;padding:12px 16px;letter-spacing:.12em;font-size:12px}
+.vds-slides-footer{display:flex;align-items:center;justify-content:space-between;gap:25px;padding-top:21px;font-size:11px;letter-spacing:.14em;color:#586B6C}
+.vds-slide-buttons{display:flex;gap:10px}
+.vds-slide-buttons button{width:46px;height:46px;border-radius:50%;background:transparent;border:1px solid rgba(7,62,70,.3);font-size:22px;color:#073E46;cursor:pointer;transition:background .2s ease}
+.vds-slide-buttons button:hover{background:#E8C999}
+.vds-cta{background:linear-gradient(135deg,#083F49,#032F39)}
+.vds-cta-inner{display:flex;align-items:end;justify-content:space-between;gap:40px}
+.vds-cta p{color:rgba(255,248,236,.75);line-height:1.8;max-width:520px;margin-top:25px}
+.vds-cta .vds-pill{flex-shrink:0}
+.vds-back{display:inline-block;margin-bottom:42px;text-decoration:none;color:#E8C999;font-size:13px;letter-spacing:.08em}
+.vds-detail-hero{height:clamp(600px,75svh,770px)}
+.vds-detail-hero h1{font-size:clamp(3.5rem,7vw,7rem)}
+.vds-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.vds-feature-card{padding:clamp(27px,3vw,45px);min-height:310px;background:#FAF7F2;border:1px solid rgba(180,143,78,.22);border-radius:16px}
+.vds-feature-card>span{color:#B48F4E;font-size:13px;letter-spacing:.15em}
+.vds-feature-card h3{margin:36px 0 14px;font-size:clamp(23px,2vw,30px);color:#073E46;line-height:1.2}
+.vds-feature-card p{color:#586B6C;font-size:14px;line-height:1.8}
+.vds-detail .vds-commitment .vds-pill{margin-top:35px}
+.vds-related{background:#FFFDF9}
+.vds-related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.vds-related-grid a{position:relative;display:block;height:260px;border-radius:14px;overflow:hidden;color:white;text-decoration:none;background:#073E46}
+.vds-related-grid img{width:100%;height:100%;object-fit:cover;filter:brightness(.65)}
+.vds-related-grid span{position:absolute;bottom:18px;left:20px;right:20px;color:#fff;font:400 23px Georgia,serif}
+.vds :is(a,button):focus-visible{outline:3px solid #B48F4E;outline-offset:3px}
+@media(max-width:1000px){.vds-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vds-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vds-container{width:calc(100% - 56px)}.vds-commitment-layout{gap:50px}.vds-hero-content{padding-top:110px}}
+@media(max-width:700px){.vds-container{width:calc(100% - 36px)}.vds-section{padding:68px 0}.vds-hero{min-height:650px;height:82svh}.vds-hero-content{padding-top:100px}.vds-hero h1{font-size:clamp(3.6rem,12vw,5.5rem)}.vds-hero-index{right:18px;bottom:18px;font-size:9px}.vds-intro-grid,.vds-detail-intro,.vds-commitment-layout,.vds-feature-grid{grid-template-columns:1fr}.vds-intro-grid,.vds-detail-intro{gap:26px}.vds-section-head{display:block;margin-bottom:30px}.vds-section-head>p{margin-top:22px}.vds-grid{grid-template-columns:1fr;gap:18px}.vds-service-photo{height:260px}.vds-service-body{min-height:0;padding:23px}.vds-service-body p{margin-bottom:24px}.vds-feature-card{min-height:0}.vds-slides-photo{height:360px;border-radius:14px}.vds-slides-footer{font-size:9px;letter-spacing:.08em}.vds-cta-inner{align-items:start;flex-direction:column}.vds-related-grid{grid-template-columns:1fr}.vds-related-grid a{height:230px}.vds-commitment-item{grid-template-columns:34px 1fr;gap:13px}}
+@media(max-width:400px){.vds-hero{min-height:590px}.vds-hero h1{font-size:3.35rem}.vds-hero-content>p{font-size:14px}.vds-slides-photo{height:290px}.vds-pill{gap:15px}.vds-intro-signature strong{font-size:55px}}
+@media(prefers-reduced-motion:reduce){.vds *{transition:none!important}}
+
+/* VASUPRIY DROP LUXURY V2 — photographic editorial design */
+.vds { background:#FAF7F2; }
+.vds .vds-section { padding-block:clamp(68px,7vw,108px); }
+.vds .vds-hero { min-height:600px; }
+.vds .vds-hero-photo { object-position:center 50%; }
+.vds .vds-detail-hero .vds-hero-photo { object-position:center 47%; }
+.vds .vds-hero-cover { background:linear-gradient(90deg,rgba(1,32,39,.86),rgba(1,34,40,.48) 59%,rgba(4,30,37,.22)); }
+.vds .vds-eyebrow { letter-spacing:.22em; }
+.vds .vds-catalog { background:#FAF7F2; }
+.vds .vds-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(16px,2vw,27px); }
+.vds .vds-service-card { border:0; border-radius:3px; background:transparent; box-shadow:none; }
+.vds .vds-service-photo { height:auto; aspect-ratio:4 / 4.5; border-radius:3px; }
+.vds .vds-service-photo::after { content:"";position:absolute;inset:50% 0 0; background:linear-gradient(0deg,rgba(1,32,39,.35),transparent);pointer-events:none; }
+.vds .vds-service-number { background:#073E46; color:#E8C999; top:15px;left:15px; }
+.vds .vds-service-body { min-height:0; padding:16px 2px 26px; }
+.vds .vds-service-body h3 { font-size:clamp(23px,2vw,31px); min-height:0; }
+.vds .vds-service-visit { margin-top:16px; font-size:10px; letter-spacing:.14em; }
+.vds .vds-service-card:hover { transform:translateY(-4px); box-shadow:none; }
+.vds .vds-detail-features { background:linear-gradient(135deg,#FAF7F2,#F5F0EA); }
+.vds .vds-detail-editorial { display:grid; gap:clamp(25px,4vw,65px); }
+.vds .vds-editorial-row { display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:clamp(26px,6vw,115px); }
+.vds .vds-editorial-row:nth-child(even) .vds-editorial-photo { order:2; }
+.vds .vds-editorial-row:nth-child(even) .vds-editorial-copy { order:1; }
+.vds .vds-editorial-photo { height:clamp(280px,34vw,495px); position:relative; overflow:hidden; background:#E8DFD0; border-radius:5px; }
+.vds .vds-editorial-photo img { display:block;width:100%;height:100%;object-fit:cover; }
+.vds .vds-editorial-photo>span { position:absolute;bottom:20px;right:20px;background:rgba(7,62,70,.90);color:#E8C999;padding:9px 13px;font:500 12px Georgia,serif; }
+.vds .vds-editorial-copy { max-width:450px; }
+.vds .vds-editorial-copy h3 { font:400 clamp(30px,3vw,52px)/1.1 Georgia,serif;letter-spacing:-.045em;color:#073E46; }
+.vds .vds-editorial-copy p { max-width:400px; margin-top:22px;line-height:1.85;font-size:15px;color:#586B6C; }
+.vds .vds-showcase { background:#FFFDF9; }
+.vds .vds-slides-photo { height:clamp(380px,48vw,690px);border-radius:6px; }
+.vds .vds-slides-photo img { object-position:center; }
+.vds .vds-intro-grid>div:last-child>p,.vds .vds-detail-intro>p { max-width:430px; }
+.vds .vds-related-grid a { height:310px; border-radius:5px; }
+@media(max-width:1000px) {
+  .vds .vds-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .vds .vds-editorial-row { gap:25px; }
+  .vds .vds-editorial-photo { height:350px; }
+}
+@media(max-width:700px) {
+  .vds .vds-section { padding-block:65px; }
+  .vds .vds-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 13px; }
+  .vds .vds-service-photo { aspect-ratio:3 / 4; }
+  .vds .vds-service-body { padding:12px 0 22px; }
+  .vds .vds-service-body h3 {font-size:clamp(17px,4.3vw,24px);}
+  .vds .vds-service-visit {padding-top:12px;font-size:9px;}
+  .vds .vds-editorial-row {grid-template-columns:1fr;gap:17px;}
+  .vds .vds-editorial-row:nth-child(even) .vds-editorial-photo,.vds .vds-editorial-row:nth-child(even) .vds-editorial-copy {order:initial;}
+  .vds .vds-editorial-photo {height:auto;aspect-ratio:4 / 3;}
+  .vds .vds-editorial-copy {padding:0 3px 10px;}
+  .vds .vds-editorial-copy h3 {font-size:clamp(27px,7vw,38px);}
+  .vds .vds-editorial-copy p {margin-top:12px;font-size:14px;}
+  .vds .vds-slides-photo {height:340px;}
+  .vds .vds-related-grid a {height:260px;}
+}
+@media(max-width:400px) {
+  .vds .vds-grid {grid-template-columns:1fr;}
+  .vds .vds-service-photo {aspect-ratio:5 / 4;}
+}
+@media(prefers-reduced-motion:reduce) {.vds .vds-service-card {transition:none;} }
+
+
+/* VASUPRIY DESKTOP SLIDER HEIGHT START */
+
+/* Desktop only: shorter, elegant panoramic slider */
+@media (min-width: 1025px) {
+  .vds .vds-slides-photo {
+    height: clamp(360px, 32vw, 470px) !important;
+  }
+}
+
+/* VASUPRIY DESKTOP SLIDER HEIGHT END */
+
+
+/* VASUPRIY EDITORIAL SLIDER V3 START */
+
+@media (min-width: 1025px) {
+  .vds .vds-slides-photo {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: flex-end !important;
+    position: relative;
+    height: clamp(360px, 32vw, 470px) !important;
+    overflow: hidden;
+    background: #073E46 !important;
+  }
+
+  /* Brand editorial panel */
+  .vds .vds-slides-editorial {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: clamp(25px, 3.5vw, 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background:
+      radial-gradient(
+        circle at 12% 85%,
+        rgba(180,143,78,.13),
+        transparent 55%
+      ),
+      linear-gradient(135deg,#073E46,#004758);
+    color: #FFF8EC;
+    position: relative;
+    z-index: 1;
+  }
+
+  .vds .vds-slides-editorial-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #E8C999;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .18em;
+  }
+
+  .vds .vds-slides-editorial-line {
+    display: block;
+    width: 38px;
+    height: 1px;
+    background: #E8C999;
+  }
+
+  .vds .vds-slides-editorial-content {
+    max-width: 600px;
+  }
+
+  .vds .vds-slides-editorial-label,
+  .vds .vds-slides-editorial-bottom {
+    display: block;
+    color: #E8C999;
+    font-size: 10px;
+    letter-spacing: .17em;
+  }
+
+  .vds .vds-slides-editorial-content h3 {
+    color: #FFF8EC !important;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: clamp(30px, 3.5vw, 52px);
+    line-height: 1.12;
+    letter-spacing: -.035em;
+    margin: 19px 0;
+    overflow-wrap: anywhere;
+  }
+
+  .vds .vds-slides-editorial-content p {
+    color: rgba(255,248,236,.80) !important;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Sharp, fully visible photograph */
+  .vds .vds-slides-photo img.vds-slides-main {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    flex: 0 1 auto;
+    width: auto !important;
+    max-width: 60% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    filter: none !important;
+    transform: none !important;
+    background: #F5F0EA;
+    z-index: 1;
+  }
+
+  .vds .vds-slides-count {
+    z-index: 5 !important;
+  }
+}
+
+/* Preserve existing tablet/mobile photo layout */
+@media (max-width: 1024px) {
+  .vds .vds-slides-editorial {
+    display: none !important;
+  }
+
+  .vds .vds-slides-photo img.vds-slides-main {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* VASUPRIY EDITORIAL SLIDER V3 END */
+
+
+/* VASUPRIY SLIDER STORY SPACING V5 START */
+
+@media (min-width: 1025px) {
+
+  /* More balanced text/image proportions */
+  .vds .vds-slides-photo {
+    display: grid !important;
+    grid-template-columns: 43% minmax(0, 57%) !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    height: clamp(360px, 32vw, 470px) !important;
+  }
+
+  .vds .vds-slides-editorial {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: stretch !important;
+  }
+
+  .vds .vds-slides-editorial-shell {
+    box-sizing: border-box;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0;
+    padding: clamp(24px, 3vw, 42px) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .vds .vds-slides-editorial-content {
+    width: 100%;
+    max-width: 430px;
+    margin: 18px 0;
+  }
+
+  .vds .vds-slides-editorial-content h3 {
+    font-size: clamp(27px, 2.7vw, 39px) !important;
+    line-height: 1.15 !important;
+    margin: 14px 0 !important;
+  }
+
+  .vds .vds-slides-editorial-content p {
+    max-width: 43ch !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* Full photograph, aligned closer to editorial panel */
+  .vds .vds-slides-photo img.vds-slides-main {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-width: 0;
+    object-fit: contain !important;
+    object-position: left center !important;
+    background: #F5F0EA;
+    z-index: 1;
+  }
+}
+
+/* Tablet/mobile designs remain unchanged */
+
+/* VASUPRIY SLIDER STORY SPACING V5 END */
+
+
+/* VASUPRIY SLIDER TEXT ALIGN V6 START */
+
+@media (min-width: 1025px) {
+
+  .vds .vds-slides-photo {
+    grid-template-columns: 43% minmax(0, 57%) !important;
+    height: clamp(390px, 32vw, 470px) !important;
+    min-height: 0 !important;
+  }
+
+  .vds .vds-slides-editorial {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .vds .vds-slides-editorial-shell {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    padding: 32px clamp(24px, 3vw, 44px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .vds .vds-slides-editorial-top,
+  .vds .vds-slides-editorial-bottom {
+    flex-shrink: 0 !important;
+  }
+
+  .vds .vds-slides-editorial-content {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: auto 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    flex: 0 1 auto !important;
+  }
+
+  .vds .vds-slides-editorial-content h3 {
+    margin: 12px 0 !important;
+    font-size: clamp(26px, 2.6vw, 38px) !important;
+    line-height: 1.14 !important;
+    overflow-wrap: break-word;
+  }
+
+  .vds .vds-slides-editorial-content p {
+    margin: 0 !important;
+    max-width: 46ch !important;
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+  }
+}
+
+/* VASUPRIY SLIDER TEXT ALIGN V6 END */
+
+
+/* VASUPRIY ORIGINAL COVER SLIDER RESTORE START */
+
+/* Desktop: original full-width image presentation */
+@media (min-width: 1025px) {
+
+  .vds .vds-slides-photo {
+    position: relative !important;
+    display: block !important;
+    height: clamp(360px, 32vw, 470px) !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    background: #073E46 !important;
+  }
+
+  /* Hide the later editorial and blurred panels */
+  .vds .vds-slides-editorial,
+  .vds .vds-slides-backdrop {
+    display: none !important;
+  }
+
+  /* Restore full-width image with cover */
+  .vds .vds-slides-photo img.vds-slides-main,
+  .vds .vds-slides-photo > img:not(.vds-slides-backdrop) {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    border-radius: 0 !important;
+    filter: none !important;
+    transform: none !important;
+    z-index: 1 !important;
+  }
+
+  /* Keep image counter visible */
+  .vds .vds-slides-count {
+    position: absolute;
+    z-index: 5 !important;
+  }
+}
+
+/* Mobile and tablet remain unchanged */
+
+/* VASUPRIY ORIGINAL COVER SLIDER RESTORE END */
+
+
+/* VASUPRIY_DROP_INSTALLATION_PROCESS_V1 */
+.vds-install-process {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(80px, 8vw, 125px) 0 145px;
+  color: #faf7f2;
+  background:
+    radial-gradient(ellipse at 18% 25%, rgba(37,110,112,.37), transparent 48%),
+    radial-gradient(ellipse at 85% 80%, rgba(161,123,61,.14), transparent 45%),
+    linear-gradient(135deg, #062d35 0%, #0a4850 52%, #062e37 100%);
+}
+
+.vds-install-process * {
+  box-sizing: border-box;
+}
+
+.vds-install-process-head {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.vds-install-process-kicker {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  color: #e3c391;
+}
+
+.vds-install-process .vds-install-process-head h2 {
+  margin: 0;
+  color: #fff9ef;
+  font: 400 clamp(38px, 5vw, 72px)/1.12 Georgia, serif;
+  letter-spacing: -.035em;
+}
+
+.vds-install-process-head h2 em {
+  color: #e3c391;
+  font-weight: 400;
+}
+
+.vds-install-process-head > p {
+  margin: 18px auto 0;
+  max-width: 620px;
+  color: #e2e9e5;
+  font-size: clamp(14px, 1.15vw, 17px);
+  line-height: 1.7;
+}
+
+.vds-install-process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(12px, 1.7vw, 25px);
+  align-items: start;
+  margin-top: 105px;
+  padding: 0 10px;
+}
+
+.vds-install-process-card {
+  position: relative;
+  min-width: 0;
+  min-height: 385px;
+  padding: 34px clamp(16px, 1.8vw, 28px);
+  border: 1px solid rgba(227,195,145,.54);
+  border-radius: 15px;
+  background: rgba(255,255,255,.075);
+  box-shadow: 0 18px 45px rgba(0,0,0,.10);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  transition: border-color .3s ease, background .3s ease, box-shadow .3s ease;
+}
+
+.vds-install-process-card:nth-child(even) {
+  margin-top: 105px;
+}
+
+.vds-install-process-card:hover {
+  border-color: #ebcc97;
+  background: rgba(255,255,255,.12);
+  box-shadow: 0 24px 50px rgba(0,0,0,.17);
+}
+
+.vds-install-process-number {
+  display: block;
+  margin-bottom: 45px;
+  color: #dfbd82;
+  font: 700 clamp(42px, 4vw, 65px)/1 Arial, sans-serif;
+}
+
+.vds-install-process-card-copy h3 {
+  margin: 0;
+  color: #fffaf2;
+  font: 500 clamp(19px, 1.55vw, 25px)/1.25 Arial, sans-serif;
+  overflow-wrap: anywhere;
+}
+
+.vds-install-process-card-copy p {
+  margin: 22px 0 0;
+  color: #e4e9e6;
+  font: 400 clamp(12px, .95vw, 14px)/1.65 Arial, sans-serif;
+}
+
+.vds-install-process-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 154px;
+  height: 154px;
+  top: -38px;
+  left: -55px;
+  border: 1px solid rgba(227,195,145,.68);
+  border-radius: 50%;
+  pointer-events: none;
+  clip-path: inset(0 0 0 35%);
+}
+
+.vds-install-process-card:nth-child(even)::before {
+  top: auto;
+  bottom: -48px;
+  clip-path: inset(0 0 35% 0);
+}
+
+.vds-install-process-card::after {
+  content: "";
+  position: absolute;
+  top: -26px;
+  left: 48px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #e3c391;
+  box-shadow: 0 0 0 4px rgba(227,195,145,.13);
+  pointer-events: none;
+}
+
+.vds-install-process-card:nth-child(even)::after {
+  top: auto;
+  bottom: -26px;
+}
+
+@media (max-width: 1150px) {
+  .vds-install-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 65px;
+  }
+
+  .vds-install-process-card,
+  .vds-install-process-card:nth-child(even) {
+    min-height: 320px;
+    margin-top: 0;
+  }
+
+  .vds-install-process-card::before,
+  .vds-install-process-card::after {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .vds-install-process {
+    padding: 75px 0 85px;
+  }
+
+  .vds-install-process-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 38px;
+    padding: 0;
+  }
+
+  .vds-install-process-card,
+  .vds-install-process-card:nth-child(even) {
+    min-height: 0;
+    padding: 25px;
+    margin-top: 0;
+  }
+
+  .vds-install-process-number {
+    font-size: 42px;
+    margin-bottom: 25px;
+  }
+
+  .vds-install-process-card-copy h3 {
+    font-size: 22px;
+  }
+
+  .vds-install-process-card-copy p {
+    font-size: 14px;
+    margin-top: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vds-install-process-card {
+    transition: none;
+  }
+}
+/* END VASUPRIY_DROP_INSTALLATION_PROCESS_V1 */

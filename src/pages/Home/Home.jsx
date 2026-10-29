@@ -1,3 +1,4 @@
+/* VASUPRIY_SINGLE_SOLUTION_STATIC_V1 */
 import '../../components/home/SingleSolutionVideos.css'
 import './HomeHeroEntrance.css'
 import aboutFloorPlan from '../../assets/images/home/expertise/floor-plan-gallery/floor-plan-05.png'
@@ -42,31 +43,38 @@ import expertiseArchitecture from '../../assets/images/home/expertise/architectu
 import expertiseTurnkey from '../../assets/images/home/expertise/turnkey-execution.png'
 const aboutChapters = [
   {
-    label: 'Chapter I', title: 'Designed for Living',
+    label: 'Designing', title: 'Designed for Living',
     description: 'A thoughtful dialogue between your everyday routines, timeless aesthetics and practical design.',
     keywords: 'Residential · Spatial Planning · Comfort', image: aboutVasupriyInterior,
     alt: 'Warm, contemporary interior design by Vasupriy', link: '/services/space-designing-makeover',
   },
   {
-    label: 'Chapter II', title: 'Made with Precision',
+    label: 'Materials', title: 'Made with Precision',
     description: 'From considered material choices to coordinated craftsmanship, every detail has a purpose.',
     keywords: 'Execution · Detail · Craft', image: solutionBrandImage,
     alt: 'Refined commercial interior highlighting material craftsmanship', link: '/services/drop-servicing-installation',
   },
   {
-    label: 'Chapter III', title: 'Distinctly Yours',
+    label: 'Walkthrough', title: 'Distinctly Yours',
     description: 'Personalised finishes, furniture and statement features that reflect your individual design language.',
     keywords: 'Customisation · Finishes · Identity', image: solutionProductImage,
     alt: 'Custom contemporary interior feature with layered materials', link: '/services/customized-theme-products',
   },
   {
-    label: 'Chapter IV', title: 'Spaces Reimagined',
+    label: 'Door Services', title: 'Spaces Reimagined',
     description: 'Beautiful transformations balancing what a space already is with everything it could become.',
     keywords: 'Makeovers · Ideas · Transformation', image: solutionDesignImage,
     alt: 'Inviting interior makeover featuring soft furnishings and natural tones', link: '/services/space-designing-makeover',
   },
 ]
 
+/* VASUPRIY_ABOUT_FOUR_TAB_VIDEOS_V1 */
+const aboutChapterVideos = [
+  '/videos/home/about-chapters/designing.mp4',
+  '/videos/home/about-chapters/materials.mp4',
+  '/videos/home/about-chapters/walkthrough.mp4',
+  '/videos/home/about-chapters/door-services.mp4',
+]
 function Home() {
   const [activeExpertiseImage, setActiveExpertiseImage] =
     useExpertiseState(expertiseFeature)
@@ -76,60 +84,7 @@ function Home() {
   const [activeProject, setActiveProject] = useState(0)
   const [activeService, serviceImages] = useDecodedSelection(0)
   const siteRef = useRef(null)
-  /* VASUPRIY_SEQUENTIAL_VIDEOS_V1 */
-  const [solutionVideoStep, setSolutionVideoStep] = useState(-1)
-  const solutionVideoRefs = useRef([])
-  const solutionStarted = useRef(false)
 
-  // Start once when the showcase enters the viewport.
-  useEffect(() => {
-    const gallery = document.querySelector('.about-showcase-gallery')
-    if (!gallery) return undefined
-
-    const start = () => {
-      if (solutionStarted.current) return
-      solutionStarted.current = true
-      setSolutionVideoStep(0)
-    }
-
-    if (!('IntersectionObserver' in window)) {
-      start()
-      return undefined
-    }
-
-    const observer = new IntersectionObserver(entries => {
-      if (entries.some(entry => entry.isIntersecting)) {
-        start()
-        observer.disconnect()
-      }
-    }, { threshold: 0.2 })
-
-    observer.observe(gallery)
-    return () => observer.disconnect()
-  }, [])
-
-  // Only one video plays at a time.
-  useEffect(() => {
-    const videos = solutionVideoRefs.current
-
-    videos.forEach((video, index) => {
-      if (!video) return
-
-      video.loop = false
-      video.pause()
-
-      if (index === solutionVideoStep) {
-        video.currentTime = 0
-
-        const playRequest = video.play()
-        if (playRequest?.catch) {
-          playRequest.catch(() => {
-            // Browser autoplay restrictions leave the preview static.
-          })
-        }
-      }
-    })
-  }, [solutionVideoStep])
 
 
   /* VASUPRIY ABOUT FLOOR PLAN SCROLL PARALLAX (vertical) */
@@ -649,7 +604,7 @@ function Home() {
             ABOUT VASUPRIY — EDITORIAL
         ====================================================== */}
 
-                <section className="vasu-chapter-about" id="about" data-scroll-section aria-labelledby="vasu-about-title">
+        <section className="vasu-chapter-about" id="about" data-scroll-section aria-labelledby="vasu-about-title">
           <div className="vasu-chapter-about__shell">
             <div className="vasu-chapter-about__copy">
               <div className="vasu-chapter-about__brand">
@@ -696,13 +651,17 @@ function Home() {
                 role="tabpanel"
                 aria-labelledby={`vasu-about-tab-${activeAboutChapter}`}
               >
-                <img
+                <video
                   key={aboutChapters[activeAboutChapter].label}
                   className="vasu-chapter-about__image"
-                  src={aboutChapters[activeAboutChapter].image}
-                  alt={aboutChapters[activeAboutChapter].alt}
-                  loading="lazy"
-                  decoding="async"
+                  src={aboutChapterVideos[activeAboutChapter]}
+                  poster={aboutChapters[activeAboutChapter].image}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={aboutChapters[activeAboutChapter].alt}
                 />
                 <div className="vasu-chapter-about__story">
                   {/* <span className="vasu-chapter-about__ornament" aria-hidden="true">V</span> */}
@@ -735,42 +694,36 @@ function Home() {
               data-reveal
             >
               <figure className="about-showcase-image about-showcase-image--one">
-                <video className="vasu-single-solution-video" muted playsInline preload="auto" poster={solutionBrandImage} ref={el => { solutionVideoRefs.current[0] = el }} onEnded={() => setSolutionVideoStep(1)} aria-hidden="true">
-                  <source src="/videos/home/single-solution/multiple-brands.mp4" type="video/mp4" />
-                </video>
+
                 <img className="vasu-single-solution-poster"
-                  src={solutionBrandImage}
-                  alt="Vasupriy residential interior"
+                  src="/images/home/single-solution/multiple-brands.webp"
+                  alt="Multiple brand choices for interior products"
                 />
-                        {/* <figcaption className="about-showcase-solution-label">
-                          Multiple Brand Options
-                        </figcaption> */}
+                <figcaption className="about-showcase-solution-label">
+                  Multiple Brand Options
+                </figcaption>
               </figure>
 
               <figure className="about-showcase-image about-showcase-image--two">
-                <video className="vasu-single-solution-video" muted playsInline preload="auto" poster={solutionProductImage} ref={el => { solutionVideoRefs.current[1] = el }} onEnded={() => setSolutionVideoStep(2)} aria-hidden="true">
-                  <source src="/videos/home/single-solution/multiple-products.mp4" type="video/mp4" />
-                </video>
+
                 <img className="vasu-single-solution-poster"
-                  src={solutionProductImage}
-                  alt="Vasupriy commercial interior"
+                  src="/images/home/single-solution/multiple-products.webp"
+                  alt="Interior product and material selection consultation"
                 />
-                {/* <figcaption className="about-showcase-solution-label">
+                <figcaption className="about-showcase-solution-label">
                   Multiple Products Options
-                </figcaption> */}
+                </figcaption>
               </figure>
 
               <figure className="about-showcase-image about-showcase-image--three">
-                <video className="vasu-single-solution-video" muted playsInline preload="auto" poster={solutionDesignImage} ref={el => { solutionVideoRefs.current[2] = el }} onEnded={() => setSolutionVideoStep(3)} aria-hidden="true">
-                  <source src="/videos/home/single-solution/multiple-designs.mp4" type="video/mp4" />
-                </video>
+
                 <img className="vasu-single-solution-poster"
-                  src={solutionDesignImage}
-                  alt="Vasupriy interior space makeover"
+                  src="/images/home/single-solution/multiple-designs.webp"
+                  alt="Interior design drawings and material samples"
                 />
-                {/* <figcaption className="about-showcase-solution-label">
+                <figcaption className="about-showcase-solution-label">
                   Multiple Design Options
-                </figcaption> */}
+                </figcaption>
               </figure>
             </div>
 
