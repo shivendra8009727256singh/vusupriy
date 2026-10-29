@@ -457,3 +457,439 @@
 }
 @media(prefers-reduced-motion:reduce){.vsm .vsm-pricing .vsm-pricing-action{transition:none!important}}
 /* VASU_PRICING_REFERENCE_V1_END */
+
+
+/* VASUPRIY_SPACE_SIGNATURE_THEME_START */
+
+/* Unified palette, scoped to this service page */
+.vsm {
+  --vsm-ivory: #FAF7F2;
+  --vsm-cream: #F5F0EA;
+  --vsm-teal: #073E46;
+  --vsm-gold: #B48F4E;
+  --vsm-gold-deep: #A47B3C;
+  --vsm-muted: #586B6C;
+  --vsm-line: rgba(7,62,70,.15);
+
+  background: var(--vsm-ivory) !important;
+  color: var(--vsm-teal) !important;
+}
+
+/* Shared typography */
+.vsm .vsm-eyebrow,
+.vsm .vsm-benefits-kicker,
+.vsm .vsm-pricing-kicker {
+  color: var(--vsm-gold-deep) !important;
+}
+
+.vsm .vsm-section h2,
+.vsm .vsm-section h3 {
+  color: var(--vsm-teal);
+}
+
+.vsm .vsm-section h2 em {
+  color: var(--vsm-gold-deep) !important;
+  font-style: italic !important;
+}
+
+/* HERO: preserve original image and readable white text */
+.vsm .vsmref-shade {
+  background:
+    linear-gradient(
+      115deg,
+      rgba(3,37,44,.73),
+      rgba(7,62,70,.40) 58%,
+      rgba(7,62,70,.14)
+    ) !important;
+}
+
+.vsm .vsmref-center h1,
+.vsm .vsmref-center h1 em {
+  color: #FFF8EC !important;
+}
+
+.vsm .vsmref-kicker {
+  color: #E8C999 !important;
+}
+
+.vsm .vsmref-leadcard {
+  background: #FAF7F2 !important;
+  color: var(--vsm-teal) !important;
+  border-top: 1px solid rgba(180,143,78,.35);
+}
+
+.vsm .vsmref-leadcard h2 {
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsmref-lower button {
+  background: var(--vsm-teal) !important;
+  color: #FFF8EC !important;
+}
+
+.vsm .vsmref-lower button:hover {
+  background: #0B5963 !important;
+}
+
+/* INTRO */
+.vsm .vsm-intro-ref {
+  background:
+    linear-gradient(135deg,#FAF7F2,#F5F0EA) !important;
+}
+
+.vsm .vsm-intro-ref h2 {
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsm-intro-ref__tabs button {
+  color: var(--vsm-muted) !important;
+}
+
+.vsm .vsm-intro-ref__tabs button.is-selected {
+  color: var(--vsm-teal) !important;
+  border-bottom-color: var(--vsm-gold) !important;
+}
+
+.vsm .vsm-intro-ref__editorial {
+  background: #073E46 !important;
+}
+
+.vsm .vsm-intro-ref__arrow {
+  color: var(--vsm-teal) !important;
+  border-color: rgba(180,143,78,.32) !important;
+}
+
+.vsm .vsm-intro-ref__link {
+  color: #E8C999 !important;
+}
+
+/* WHAT'S INCLUDED */
+.vsm .vsm-included-ref {
+  background: #FAF7F2 !important;
+}
+
+.vsm .vsm-included-ref__panel {
+  background:
+    linear-gradient(125deg,#073E46,#004758) !important;
+  border: 1px solid rgba(180,143,78,.32);
+}
+
+.vsm .vsm-included-ref__eyebrow,
+.vsm .vsm-included-ref__number {
+  color: #E8C999 !important;
+}
+
+.vsm .vsm-included-ref__copy h2 {
+  color: #FFF8EC !important;
+}
+
+.vsm .vsm-included-ref__copy h2 em {
+  color: #E8C999 !important;
+}
+
+.vsm .vsm-included-ref__list p {
+  color: rgba(255,248,236,.75) !important;
+}
+
+.vsm .vsm-included-ref__link {
+  border-color: rgba(232,201,153,.6) !important;
+  color: #FFF8EC !important;
+}
+
+.vsm .vsm-included-ref__link:hover {
+  background: #E8C999 !important;
+  color: #073E46 !important;
+}
+
+/* INSTALLATION PROCESS: cinematic deep teal */
+.vsm .vsm-process {
+  background: #073E46 !important;
+}
+
+.vsm .vsm-process-backdrop {
+  background-blend-mode: multiply;
+}
+
+.vsm .vsm-process::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(3,45,54,.30);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.vsm .vsm-process h2 {
+  color: #FFF8EC !important;
+}
+
+.vsm .vsm-process h2 em {
+  color: #E8C999 !important;
+}
+
+.vsm .vsm-process-timeline-card {
+  background: rgba(7,62,70,.60) !important;
+  border-color: rgba(232,201,153,.52) !important;
+}
+
+.vsm .vsm-process-timeline-number {
+  color: #E8C999 !important;
+}
+
+.vsm .vsm-process-timeline-card::before {
+  border-color: rgba(232,201,153,.75) !important;
+}
+
+.vsm .vsm-process-timeline-card::after {
+  background: #E8C999 !important;
+}
+
+/* OUR COMMITMENT */
+.vsm .vsm-section.vsm-commitment {
+  background:
+    linear-gradient(135deg,#FAF7F2,#F8F3EC) !important;
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsm-commitment h2#vsm-commitment-title {
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsm-commitment h2#vsm-commitment-title em {
+  color: var(--vsm-gold-deep) !important;
+  font-style: italic !important;
+}
+
+.vsm .vsm-commitment-lead {
+  color: var(--vsm-muted) !important;
+}
+
+.vsm .vsm-commitment .vsm-accordion-item {
+  border-bottom-color: var(--vsm-line) !important;
+}
+
+.vsm .vsm-commitment .vsm-accordion-item > button {
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsm-commitment .vsm-accordion-item > button:hover {
+  color: var(--vsm-gold-deep) !important;
+}
+
+.vsm .vsm-commitment .vsm-accordion-icon {
+  color: var(--vsm-gold-deep) !important;
+}
+
+.vsm .vsm-commitment .vsm-accordion-item > div p {
+  color: var(--vsm-muted) !important;
+}
+
+/* COMFORT */
+.vsm .vsm-section.vsm-comfort {
+  background: #F5F0EA !important;
+}
+
+.vsm .vsm-comfort-layout,
+.vsm .vsm-comfort-copy {
+  background: #FAF7F2 !important;
+}
+
+.vsm .vsm-comfort-copy h2#vsm-comfort-title {
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsm-comfort-copy h2 em {
+  color: var(--vsm-gold-deep) !important;
+  font-style: italic !important;
+}
+
+.vsm .vsm-comfort-item strong {
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsm-comfort-item small,
+.vsm .vsm-comfort-copy > p:not(.vsm-eyebrow) {
+  color: var(--vsm-muted) !important;
+}
+
+.vsm .vsm-comfort-item > span:first-child {
+  background: #E9DFD0 !important;
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsm-comfort-item.is-active > span:first-child {
+  background: #073E46 !important;
+  color: #FFF8EC !important;
+  outline-color: #B48F4E !important;
+}
+
+/* BENEFITS */
+.vsm .vsm-section.vsm-benefits {
+  background: #FFFDF9 !important;
+}
+
+.vsm .vsm-benefits h2#vsm-benefits-title,
+.vsm .vsm-benefits-card h3 {
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsm-benefits h2 em {
+  color: var(--vsm-gold-deep) !important;
+  font-style: italic !important;
+}
+
+.vsm .vsm-benefits-number {
+  color: var(--vsm-teal) !important;
+  background: #F4E7D1 !important;
+}
+
+.vsm .vsm-benefits-heading > p,
+.vsm .vsm-benefits-card-body p,
+.vsm .vsm-benefits-footnote {
+  color: var(--vsm-muted) !important;
+}
+
+/* PRICING */
+.vsm .vsm-section.vsm-pricing {
+  background: #FAF7F2 !important;
+}
+
+.vsm .vsm-pricing .vsm-pricing-shell {
+  background:
+    linear-gradient(130deg,#F2E8DA,#FAF7F2) !important;
+  border-color: rgba(180,143,78,.28) !important;
+}
+
+.vsm .vsm-pricing h2#vsm-pricing-title,
+.vsm .vsm-pricing .vsm-pricing-breakdown h3 {
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsm-pricing h2 em {
+  color: var(--vsm-gold-deep) !important;
+  font-style: italic !important;
+}
+
+.vsm .vsm-pricing .vsm-pricing-intro > p,
+.vsm .vsm-pricing .vsm-pricing-disclaimer,
+.vsm .vsm-pricing .vsm-pricing-actions > span {
+  color: var(--vsm-muted) !important;
+}
+
+.vsm .vsm-pricing .vsm-pricing-breakdown {
+  border-color: rgba(180,143,78,.25) !important;
+  background: rgba(255,255,255,.40) !important;
+}
+
+.vsm .vsm-pricing .vsm-pricing-factor,
+.vsm .vsm-pricing .vsm-pricing-factors {
+  border-color: rgba(7,62,70,.15) !important;
+}
+
+.vsm .vsm-pricing .vsm-pricing-factor-text {
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsm-pricing .vsm-pricing-action {
+  background: var(--vsm-teal) !important;
+  color: #FFF8EC !important;
+}
+
+.vsm .vsm-pricing .vsm-pricing-action:hover {
+  background: #0B5963 !important;
+}
+
+/* FINAL CALL TO ACTION */
+.vsm .vsm-section.vsm-cta {
+  background: #F5F0EA !important;
+}
+
+.vsm .vsm-feature-scrim {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(250,247,242,.96) 0%,
+      rgba(250,247,242,.78) 32%,
+      rgba(250,247,242,.03) 77%
+    ) !important;
+}
+
+.vsm .vsm-feature-copy h2 {
+  color: var(--vsm-teal) !important;
+}
+
+.vsm .vsm-feature-copy h2 em {
+  color: var(--vsm-gold-deep) !important;
+  font-style: italic !important;
+}
+
+.vsm .vsm-feature-kicker {
+  color: var(--vsm-gold-deep) !important;
+}
+
+.vsm .vsm-feature-copy p {
+  color: var(--vsm-muted) !important;
+}
+
+.vsm .vsm-feature-link {
+  background: #073E46 !important;
+  color: #FFF8EC !important;
+}
+
+.vsm .vsm-feature-link span {
+  border-color: rgba(232,201,153,.65) !important;
+  color: #E8C999 !important;
+}
+
+.vsm .vsm-feature-slide-controls button {
+  border-color: rgba(7,62,70,.32) !important;
+  color: var(--vsm-teal) !important;
+}
+
+/* Unified keyboard focus */
+.vsm :is(a, button, input):focus-visible {
+  outline: 2px solid #B48F4E;
+  outline-offset: 3px;
+}
+
+/* No changes to grid, sizing, image placement or breakpoints */
+@media (prefers-reduced-motion: reduce) {
+  .vsm .vsm-pricing-action {
+    transition: none !important;
+  }
+}
+
+/* VASUPRIY_SPACE_SIGNATURE_THEME_END */
+
+
+/* VASUPRIY PROCESS COLORS ONLY START */
+
+/* Existing layout, stagger, shapes and animations preserved */
+
+.vsm .vsm-process-timeline-card {
+  background: rgba(7, 62, 70, 0.60) !important;
+  border-color: rgba(232, 201, 153, 0.52) !important;
+  color: #FFF8EC !important;
+}
+
+.vsm .vsm-process-timeline-card h3 {
+  color: #FFF8EC !important;
+}
+
+.vsm .vsm-process-timeline-card p {
+  color: #E4EAE6 !important;
+}
+
+.vsm .vsm-process-timeline-number {
+  color: #E8C999 !important;
+}
+
+.vsm .vsm-process-timeline-card::before {
+  border-color: rgba(232, 201, 153, 0.75) !important;
+}
+
+.vsm .vsm-process-timeline-card::after {
+  background: #E8C999 !important;
+}
+
+/* VASUPRIY PROCESS COLORS ONLY END */

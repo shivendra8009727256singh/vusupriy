@@ -1,4 +1,14 @@
-﻿/* VASUPRIY_SPECIALITIES_IMAGE_MAPPING_V2 */
+﻿/* VASUPRIY_JOURNEY_ICONS_V1 */
+import {
+  FiSun,
+  FiCompass,
+  FiLayers,
+  FiAward,
+  FiUsers,
+  FiMap,
+  FiGlobe
+} from 'react-icons/fi'
+/* VASUPRIY_SPECIALITIES_IMAGE_MAPPING_V2 */
 import arunTeamImage from '../../assets/images/home/team/arun-sharma.png'
 import priyankaTeamImage from '../../assets/images/home/team/priyanka.png'
 import priyaTeamImage from '../../assets/images/home/team/priya.png'
@@ -34,6 +44,16 @@ import partnerRehau from '../../assets/images/about/partners/rehau.webp'
 
 import visionInterior from '../../assets/images/about/vision/our-vision.jpg'
 
+/* Premium milestone icon mapping */
+const journeyMilestoneIcons = [
+  <FiSun />,
+  <FiCompass />,
+  <FiLayers />,
+  <FiAward />,
+  <FiUsers />,
+  <FiMap />,
+  <FiGlobe />
+]
 const aboutTeamMembers = [
   {
     id: 'arun',
@@ -175,7 +195,7 @@ const specialityItems = [
   {
     id: '04',
     eyebrow: 'Distinctive Details',
-    title: 'Statement Pieces',
+    title: 'FRP Fountains',
     image:
       '/images/home-expertise/frp-fountain.jpg',
     description:
@@ -201,7 +221,7 @@ const specialityItems = [
   {
     id: '07',
     eyebrow: 'Artistic Expressions',
-    title: 'Mural Painting',
+    title: 'Hand Painting on Walls',
     image: '/images/home-expertise/mural-painting.jpg',
     description:
       'Custom artistic murals crafted to transform walls into expressive and memorable design features.',
@@ -1338,6 +1358,92 @@ function About() {
       {/* =====================================================
           OUR TEAM
       ====================================================== */}
+      {/* VASUPRIY_PREMIUM_JOURNEY_V2 */}
+<section className="about-journey" aria-labelledby="about-journey-title">
+  <div className="about-journey-shell">
+    <header className="about-journey-heading">
+      <div>
+        <span className="about-journey-eyebrow">OUR JOURNEY / SINCE 2019</span>
+        <h2 id="about-journey-title">
+          Built on Vision.<br />
+          <em>Driven by Purpose.</em>
+        </h2>
+      </div>
+      <p>
+        From a simple beginning to a broader vision,
+        every chapter has helped us rethink the way
+        beautiful spaces are created.
+      </p>
+    </header>
+
+    <div className="about-journey-grid">
+      {[
+        {
+          year: '2019',
+          title: 'A Vision Takes Shape',
+          thought: 'Every great space begins with an idea.',
+          detail: 'Our interior design journey began with a belief in creating thoughtful spaces.',
+        },
+        {
+          year: '2020',
+          title: 'A New Perspective',
+          thought: 'Challenges reveal opportunities for change.',
+          detail: 'Market challenges inspired our commitment to fairer pricing and transparency.',
+        },
+        {
+          year: '2021–22',
+          title: 'Building the Foundation',
+          thought: 'Better connections. Greater possibilities.',
+          detail: 'We built trusted manufacturing partnerships and our factory-direct approach.',
+        },
+        {
+          year: '2023',
+          title: 'A Better Way to Create',
+          thought: 'Quality and value belong together.',
+          detail: 'Our refreshed model connected premium brands with factory-direct value.',
+        },
+        {
+          year: '2024',
+          title: 'Beyond Our Clients',
+          thought: 'Great ideas grow when shared.',
+          detail: 'Our products reached interior designers, builders and architects.',
+        },
+        {
+          year: '2025',
+          title: 'New Horizons',
+          thought: 'Ambition extends beyond boundaries.',
+          detail: 'We expanded beyond Delhi NCR and embraced more commercial projects.',
+        },
+        {
+          year: '2026',
+          title: 'Digital Reach. Wider Possibilities.',
+          thought: 'Rooted in design. Connected to the world.',
+          detail: 'Expanding digital access and product delivery across India and internationally, while retaining our Delhi-region full-service focus.',
+          featured: true,
+        },
+      ].map((item, index) => (
+        <article
+          className={`about-journey-card${item.featured ? ' about-journey-card--featured' : ''}`}
+          key={item.year}
+        >
+          <div className="about-journey-card-top">
+            <span>{item.year}</span>
+            <small>{String(index + 1).padStart(2, '0')} / 07</small>
+          </div>
+          <div className="about-journey-card-icon" aria-hidden="true">
+            {journeyMilestoneIcons[index]}
+          </div>
+
+          <h3>{item.title}</h3>
+          <blockquote>{item.thought}</blockquote>
+          <p>{item.detail}</p>
+          <span className="about-journey-card-line" aria-hidden="true" />
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
       <section
         className="about-team"
         aria-labelledby="about-team-title"
@@ -1354,7 +1460,7 @@ function About() {
 
             <span className="about-team-eyebrow">
               <i aria-hidden="true" />
-              Our Journey
+              Our Team
             </span>
 
             <h2 id="about-team-title">

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import './HomeGallery.css'
 
 // VASUPRIY_HOME_GALLERY_TO_EXPERTISE_V1
@@ -12,7 +12,7 @@ const galleryRowOne = [
 const galleryRowTwo = [
   { id: 5, image: '/images/home-expertise/hdhmr.jpg', alt: 'HDHMR', title: 'HDHMR', category: 'Our Expertise', size: 'large' },
   { id: 6, image: '/images/home-expertise/inlay-work.jpg', alt: 'Inlay Work', title: 'Inlay Work', category: 'Our Expertise', size: 'medium' },
-  { id: 7, image: '/images/home-expertise/mural-painting.jpg', alt: 'Mural Painting', title: 'Mural Painting', category: 'Our Expertise', size: 'large' },
+  { id: 7, image: '/images/home-expertise/mural-painting.jpg', alt: 'Mural Painting', title: 'Hand Painting', category: 'Our Expertise', size: 'large' },
   { id: 8, image: '/images/home-expertise/stone-engraved.jpg', alt: 'Stone Engraved', title: 'Stone Engraved', category: 'Our Expertise', size: 'medium' },
 ]
 

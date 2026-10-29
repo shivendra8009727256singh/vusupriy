@@ -11,9 +11,9 @@ const collections = [
     items: ['SPC Flooring', 'European Laminate', 'Wooden Deck Flooring', 'Carpet Tiles Flooring', 'Epoxy Flooring'],
   },
   {
-    label: 'Green Element',
-    description: 'Bring a naturally refreshing atmosphere to your space with thoughtful greenery.',
-    items: ['Vertical Garden', 'Artificial Plant and Tree', 'Artificial Grass Flooring'],
+    label: 'Wall Makeover Products',
+    description: 'Elevate walls with expressive patterns, refined surfaces and layered finishes.',
+    items: ['Non-Woven Wallpaper', 'Customized Design Wallpaper', 'WPC Panels', 'PVC Panels', 'MDF Wall Panels'],
   },
   {
     label: 'Enlightenment Options',
@@ -21,9 +21,9 @@ const collections = [
     items: ['Chandeliers', 'Ceiling Light', 'Wall Lamps', 'Garden Light', 'Down Light'],
   },
   {
-    label: 'Wall Makeover Products',
-    description: 'Elevate walls with expressive patterns, refined surfaces and layered finishes.',
-    items: ['Non-Woven Wallpaper', 'Customized Design Wallpaper', 'WPC Panels', 'PVC Panels', 'MDF Wall Panels'],
+    label: 'Green Element',
+    description: 'Bring a naturally refreshing atmosphere to your space with thoughtful greenery.',
+    items: ['Vertical Garden', 'Artificial Plant and Tree', 'Artificial Grass Flooring'],
   },
 ]
 

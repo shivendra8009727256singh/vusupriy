@@ -11,7 +11,9 @@ import Home from './pages/Home/Home.jsx'
 import About from './pages/About/About.jsx'
 import InteriorServices from './pages/InteriorServices/InteriorServices.jsx'
 import ServiceDetail from './pages/InteriorServices/ServiceDetail.jsx'
+import { DropServicingLanding, DropServicingDetail } from './pages/InteriorServices/DropServicingExperience.jsx'
 import SpaceMakeoverLanding from './pages/InteriorServices/SpaceMakeoverLanding.jsx'
+import CustomThemeLanding from './pages/InteriorServices/CustomThemeLanding.jsx'
 import InteriorProducts from './pages/InteriorProducts/InteriorProducts.jsx'
 import Projects from './pages/Projects/Projects.jsx'
 import Gallery from './pages/Gallery/Gallery.jsx'
@@ -51,13 +53,14 @@ function App() {
 
           <Route
             path="services/drop-servicing-installation"
-            element={<ServiceDetail />}
+            element={<DropServicingLanding />}
+          />
+          <Route
+            path="services/drop-servicing-installation/:serviceSlug"
+            element={<DropServicingDetail />}
           />
 
-          <Route
-            path="services/customized-theme-products"
-            element={<ServiceDetail />}
-          />
+          <Route path="services/customized-theme-products" element={<CustomThemeLanding />} />
 
           {/* All Products: existing complete landing page */}
           <Route
