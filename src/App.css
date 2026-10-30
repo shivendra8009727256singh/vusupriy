@@ -17276,3 +17276,679 @@ body.is-loading {
 }
 
 /* VASUPRIY DROPDOWN HOVER LINE FIX END */
+
+/* VASUPRIY_ALL_SERVICES_CONTAIN_START */
+
+/* Show complete images for all service tabs */
+.site .home-services-image-frame .home-services-image-stack > img.home-service-image {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+/* Maintain a consistent frame background */
+.site .home-services-image-frame,
+.site .home-services-image-stack {
+  background-color: #073E46;
+}
+
+/* VASUPRIY_ALL_SERVICES_CONTAIN_END */
+
+/* VASUPRIY_SERVICES_BLURRED_FILL_V1 */
+
+/* Fill unused space with a matching soft image */
+.site .home-services-image-frame .home-services-image-stack {
+  isolation: isolate;
+}
+
+.site .home-services-image-frame .home-services-image-stack::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  z-index: 0;
+  background-image: var(--vasu-service-bg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(18px) brightness(0.65);
+  transform: scale(1.06);
+  pointer-events: none;
+}
+
+/* Keep the entire original image visible */
+.site .home-services-image-frame .home-services-image-stack > img.home-service-image {
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Keep selected image above blurred background */
+.site .home-services-image-frame .home-services-image-stack > img.home-service-image--active {
+  z-index: 1;
+}
+
+/* END VASUPRIY_SERVICES_BLURRED_FILL_V1 */
+
+/* VASUPRIY_SERVICES_LUXURY_V1_START */
+
+/* Warm editorial luxury background */
+.site .home-services {
+  background:
+    radial-gradient(
+      ellipse at 92% 12%,
+      rgba(202,166,112,.15),
+      transparent 43%
+    ),
+    radial-gradient(
+      ellipse at 6% 95%,
+      rgba(12,76,83,.055),
+      transparent 44%
+    ),
+    linear-gradient(
+      145deg,
+      #FBF8F3 0%,
+      #F5F0E9 52%,
+      #FAF7F2 100%
+    );
+  color: #073E46;
+}
+
+.site .home-services::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(164,123,60,.6),
+    transparent
+  );
+}
+
+.site .home-services-grid {
+  opacity: .025;
+  background-image:
+    linear-gradient(rgba(7,62,70,.3) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(7,62,70,.3) 1px,transparent 1px);
+}
+
+.site .home-services-glow--one {
+  background: radial-gradient(
+    circle,rgba(202,166,112,.12),transparent 70%
+  );
+}
+
+.site .home-services-glow--two {
+  background: radial-gradient(
+    circle,rgba(7,62,70,.06),transparent 70%
+  );
+}
+
+/* Premium typography */
+.site .home-services-label {
+  border-color: rgba(164,123,60,.35);
+  background: rgba(255,255,255,.55);
+  color: #A47B3C;
+}
+
+.site .home-services-count {
+  color: #9A856C;
+}
+
+.site .home-services-heading-copy h2 {
+  color: #073E46;
+  letter-spacing: -.045em;
+}
+
+.site .home-services-heading-copy h2 em {
+  color: #A47B3C;
+}
+
+.site .home-services-heading-copy > p {
+  color: #65716E;
+  max-width: 640px;
+}
+
+/* Refined service list */
+.site .home-services-list {
+  border-top: 1px solid rgba(7,62,70,.14);
+}
+
+.site .home-service-item {
+  border-bottom: 1px solid rgba(7,62,70,.14);
+  color: #174F56;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.site .home-service-number {
+  color: #AA8550;
+}
+
+.site .home-service-title {
+  font-family: Georgia,serif;
+  letter-spacing: -.03em;
+}
+
+.site .home-service-item::before {
+  background: #B58B50;
+  height: 1px;
+}
+
+.site .home-service-item:hover,
+.site .home-service-item:focus-visible,
+.site .home-service-item--active {
+  color: #A47B3C;
+}
+
+.site .home-service-item--active {
+  border-bottom-color: rgba(181,139,80,.5);
+}
+
+.site .home-service-item:hover .home-service-number,
+.site .home-service-item:focus-visible .home-service-number,
+.site .home-service-item--active .home-service-number {
+  color: #A47B3C;
+}
+
+.site .home-service-arrow {
+  border-color: rgba(7,62,70,.3);
+  color: #073E46;
+  opacity: .8;
+  background: rgba(255,255,255,.46);
+}
+
+.site .home-service-item:hover .home-service-arrow,
+.site .home-service-item:focus-visible .home-service-arrow,
+.site .home-service-item--active .home-service-arrow {
+  color: #073E46;
+  background: #DCC49D;
+  border-color: #DCC49D;
+  opacity: 1;
+}
+
+/* Service details */
+.site .home-services-description p {
+  color: #63716E;
+  line-height: 1.85;
+}
+
+/* Luxury call-to-action */
+.site .home-services-cta {
+  border: 1px solid #C8A675;
+  background: rgba(255,255,255,.6);
+  color: #073E46;
+  box-shadow: 0 12px 32px rgba(7,62,70,.055);
+}
+
+.site .home-services-cta::before {
+  background: #073E46;
+}
+
+.site .home-services-cta:hover {
+  border-color: #073E46;
+  color: #FFF9EF;
+}
+
+/* Image editorial framing; preserve contain + blurred fill */
+.site .home-services-image-frame {
+  border: 1px solid rgba(180,142,85,.48);
+  border-radius: 5px 48px 5px 48px;
+  box-shadow:
+    0 30px 75px rgba(7,47,55,.17),
+    0 7px 20px rgba(7,47,55,.07);
+}
+
+.site .home-services-image-frame::before {
+  border-color: rgba(230,204,160,.62);
+  border-radius: 2px 35px 2px 35px;
+}
+
+/* Keep bottom captions legible over every image */
+.site .home-services-image-shade {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4,29,36,.04) 0%,
+      rgba(4,29,36,.02) 38%,
+      rgba(4,29,36,.42) 72%,
+      rgba(4,29,36,.90) 100%
+    );
+}
+
+.site .home-services-visual-index span:first-child {
+  color: #E6C997;
+}
+
+.site .home-services-visual-index span:last-child {
+  color: rgba(255,250,241,.77);
+}
+
+.site .home-services-visual-caption {
+  color: #FFF9F1;
+}
+
+.site .home-services-visual-caption > span {
+  color: #FFF9F1;
+  text-shadow: 0 3px 16px rgba(0,0,0,.28);
+}
+
+.site .home-services-visual-caption small {
+  color: #E7D0A8;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .site .home-services-stage {
+    gap: clamp(20px,3vw,36px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .site .home-services-heading-copy h2 {
+    line-height: 1.06;
+  }
+
+  .site .home-services-image-frame {
+    border-radius: 5px 30px 5px 30px;
+  }
+
+  .site .home-services-image-frame::before {
+    border-radius: 2px 22px 2px 22px;
+  }
+
+  .site .home-service-item {
+    min-height: 82px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site .home-service-item,
+  .site .home-service-arrow,
+  .site .home-services-cta {
+    transition: none !important;
+  }
+}
+
+/* VASUPRIY_SERVICES_LUXURY_V1_END */
+
+/* VASUPRIY_SERVICES_LUXURY_V2_START */
+
+/* Warm architectural showroom atmosphere */
+.site .home-services {
+  background:
+    radial-gradient(ellipse at 92% 22%, rgba(191,151,90,.18), transparent 48%),
+    linear-gradient(145deg, #FFFCF7 0%, #F4EDE3 100%);
+  color: #073E46;
+}
+
+.site .home-services-heading {
+  margin-bottom: clamp(38px, 4vw, 64px);
+}
+
+.site .home-services-heading-copy h2 {
+  color: #073E46;
+}
+
+.site .home-services-heading-copy h2 em {
+  color: #A47B3C;
+}
+
+.site .home-services-heading-copy > p {
+  color: #65716E;
+}
+
+/* Main stage: new premium two-panel composition */
+.site .home-services-stage {
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  align-items: stretch;
+  gap: clamp(18px, 2.5vw, 38px);
+}
+
+/* Distinctive deep-teal service selection panel */
+.site .home-services-content {
+  position: relative;
+  padding: clamp(26px, 3.1vw, 48px);
+  border: 1px solid rgba(227,195,145,.34);
+  border-radius: 32px 5px 32px 5px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(215,183,125,.17), transparent 46%),
+    linear-gradient(150deg, #073E46 0%, #052F39 65%, #082C34 100%);
+  box-shadow: 0 22px 55px rgba(7,47,55,.17);
+  color: #FFF9EF;
+}
+
+.site .home-services-list {
+  border-top: 1px solid rgba(232,208,169,.35);
+}
+
+.site .home-service-item {
+  min-height: 102px;
+  padding: 22px 8px;
+  color: rgba(255,250,242,.78);
+  border-bottom: 1px solid rgba(232,208,169,.24);
+  background: transparent;
+  text-decoration: none;
+}
+
+.site .home-service-title {
+  color: inherit;
+  font-family: Georgia, serif;
+  font-size: clamp(22px, 2vw, 32px);
+  line-height: 1.17;
+}
+
+.site .home-service-number {
+  color: #DCC49D;
+  font-weight: 700;
+}
+
+.site .home-service-item::before {
+  height: 2px;
+  background: linear-gradient(90deg, #DCC49D, #A47B3C);
+}
+
+.site .home-service-item:hover,
+.site .home-service-item:focus-visible,
+.site .home-service-item--active {
+  color: #F1CD91;
+  padding-left: 14px;
+}
+
+.site .home-service-item--active {
+  background: linear-gradient(90deg, rgba(221,186,127,.13), transparent 90%);
+  border-bottom-color: rgba(232,208,169,.46);
+}
+
+.site .home-service-arrow {
+  color: #F1DDC0;
+  background: transparent;
+  border-color: rgba(232,208,169,.58);
+  opacity: 1;
+}
+
+.site .home-service-item:hover .home-service-arrow,
+.site .home-service-item--active .home-service-arrow,
+.site .home-service-item:focus-visible .home-service-arrow {
+  background: #DCC49D;
+  border-color: #DCC49D;
+  color: #073E46;
+}
+
+/* Description reads clearly inside the dark panel */
+.site .home-services-description {
+  min-height: 90px;
+  margin-top: 28px;
+}
+
+.site .home-services-description p {
+  color: rgba(255,250,242,.84);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* More visible champagne-gold button */
+.site .home-services-cta {
+  min-height: 56px;
+  background: #DCC49D;
+  color: #073E46;
+  border: 1px solid #DCC49D;
+  box-shadow: 0 8px 24px rgba(0,0,0,.17);
+}
+
+.site .home-services-cta:hover {
+  color: #FFF9EF;
+  border-color: #E7D4B6;
+}
+
+.site .home-services-cta::before {
+  background: #13525C;
+}
+
+/* Editorial image panel */
+.site .home-services-visual {
+  min-width: 0;
+}
+
+.site .home-services-image-frame {
+  min-height: 590px;
+  border: 2px solid rgba(190,149,83,.74);
+  border-radius: 5px 48px 5px 48px;
+  box-shadow:
+    0 30px 70px rgba(7,47,55,.2),
+    0 0 0 7px rgba(255,255,255,.58);
+}
+
+.site .home-services-image-frame::before {
+  border: 1px solid rgba(236,207,162,.75);
+}
+
+.site .home-services-visual-caption > span {
+  color: #FFF9EF;
+  font-size: clamp(28px, 3vw, 46px);
+  text-shadow: 0 3px 14px rgba(0,0,0,.42);
+}
+
+.site .home-services-visual-caption small {
+  color: #E8CF9F;
+}
+
+.site .home-services-visual-index span:first-child {
+  color: #E8CF9F;
+}
+
+/* Tablet: preserve spacing without horizontal overflow */
+@media (max-width: 1100px) {
+  .site .home-services-stage {
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    gap: 22px;
+  }
+
+  .site .home-services-content {
+    padding: 25px;
+  }
+}
+
+/* Mobile: image above service panel, as before */
+@media (max-width: 760px) {
+  .site .home-services-stage {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .site .home-services-visual {
+    order: 1;
+  }
+
+  .site .home-services-content {
+    order: 2;
+    padding: 25px 20px;
+    border-radius: 24px 5px 24px 5px;
+  }
+
+  .site .home-service-item {
+    min-height: 82px;
+    padding: 18px 4px;
+  }
+
+  .site .home-service-title {
+    font-size: clamp(19px, 5.2vw, 27px);
+  }
+
+  .site .home-services-image-frame {
+    min-height: 0;
+    height: clamp(330px, 105vw, 480px);
+    border-radius: 5px 28px 5px 28px;
+  }
+
+  .site .home-services-visual-caption > span {
+    font-size: clamp(22px, 5vw, 32px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site .home-service-item,
+  .site .home-services-cta,
+  .site .home-service-arrow {
+    transition: none !important;
+  }
+}
+
+/* VASUPRIY_SERVICES_LUXURY_V2_END */
+
+/* VASUPRIY_SERVICES_VISUAL_FIX_V3_START */
+
+/* 1. FIX DARK TEXT ON DARK LUXURY PANEL */
+.site .home-services .home-services-content .home-service-item {
+  color: #FFF8ED !important;
+  border-bottom-color: rgba(231,207,166,.28) !important;
+}
+
+.site .home-services .home-services-content
+.home-service-item .home-service-title {
+  color: #FFF8ED !important;
+  -webkit-text-fill-color: #FFF8ED !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.site .home-services .home-services-content
+.home-service-item:hover .home-service-title,
+.site .home-services .home-services-content
+.home-service-item:focus-visible .home-service-title,
+.site .home-services .home-services-content
+.home-service-item--active .home-service-title {
+  color: #E9C58B !important;
+  -webkit-text-fill-color: #E9C58B !important;
+}
+
+.site .home-services .home-services-content
+.home-service-number {
+  color: #DCC49D !important;
+}
+
+.site .home-services .home-services-content
+.home-services-description p {
+  color: rgba(255,249,239,.87) !important;
+}
+
+/* Correct list separators */
+.site .home-services .home-services-content
+.home-services-list {
+  border-top-color: rgba(231,207,166,.28) !important;
+}
+
+/* 2. IMAGE FRAME FOLLOWS IMAGE ASPECT RATIO */
+.site .home-services .home-services-visual {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.site .home-services .home-services-image-frame {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 3 / 2;
+  align-self: center;
+}
+
+/* Second and third service banners are wide images */
+.site .home-services .home-services-image-frame:has(
+  .home-service-image:nth-child(2).home-service-image--active
+),
+.site .home-services .home-services-image-frame:has(
+  .home-service-image:nth-child(3).home-service-image--active
+) {
+  aspect-ratio: 16 / 9;
+}
+
+/* Keep image fully visible */
+.site .home-services .home-services-image-stack
+> img.home-service-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Remove the blurred fill now that the frame matches */
+.site .home-services .home-services-image-stack::before {
+  opacity: 0 !important;
+}
+
+/* Keep caption readable without an oversized overlay */
+.site .home-services .home-services-image-shade {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 55%,
+    rgba(3,33,40,.13) 75%,
+    rgba(3,33,40,.66) 100%
+  ) !important;
+}
+
+/* Maintain comfortable proportions on tablets */
+@media (max-width: 1100px) {
+  .site .home-services .home-services-image-frame {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+}
+
+/* Mobile: keep images complete, without forced tall frames */
+@media (max-width: 760px) {
+  .site .home-services .home-services-visual {
+    width: 100%;
+    display: block;
+  }
+
+  .site .home-services .home-services-image-frame {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .site .home-services .home-services-visual-caption {
+    left: 15px;
+    right: 15px;
+    bottom: 12px;
+  }
+
+  .site .home-services .home-services-visual-caption > span {
+    font-size: clamp(15px, 3.6vw, 23px) !important;
+    max-width: 72%;
+  }
+
+  .site .home-services .home-services-visual-caption small {
+    font-size: 8px;
+    max-width: 100%;
+  }
+
+  .site .home-services .home-services-visual-index {
+    top: 15px;
+    right: 15px;
+  }
+
+  .site .home-services .home-services-visual-index span:first-child {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .site .home-services .home-services-visual-caption small {
+    display: none;
+  }
+}
+
+/* VASUPRIY_SERVICES_VISUAL_FIX_V3_END */
+
+/* VASUPRIY_SERVICES_REMOVE_IMAGE_OVERLAYS_START */
+
+/* Hide top-right 01 / 03 indicator */
+.site .home-services .home-services-visual-index {
+  display: none !important;
+}
+
+/* Hide bottom title and tagline */
+.site .home-services .home-services-visual-caption {
+  display: none !important;
+}
+
+/* VASUPRIY_SERVICES_REMOVE_IMAGE_OVERLAYS_END */

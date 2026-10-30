@@ -7469,3 +7469,34 @@
 }
 
 /* END VASUPRIY_JOURNEY_ICONS_V1 */
+
+
+/* VASUPRIY_ABOUT_HERO_SAGE_START */
+
+/* Same background palette as Homepage Our Expertise */
+.about-page .about-who-v2.about-who-v2--antra {
+  background:
+    radial-gradient(
+      ellipse at 8% 18%,
+      rgba(187, 213, 193, .82),
+      transparent 51%
+    ),
+    radial-gradient(
+      ellipse at 88% 80%,
+      rgba(203, 223, 205, .78),
+      transparent 47%
+    ),
+    linear-gradient(
+      135deg,
+      #E1EBE4 0%,
+      #F7F5EE 48%,
+      #E5EDE5 100%
+    ) !important;
+}
+
+/* Preserve subtle architectural lines */
+.about-page .about-who-v2.about-who-v2--antra::before {
+  opacity: .16 !important;
+}
+
+/* VASUPRIY_ABOUT_HERO_SAGE_END */

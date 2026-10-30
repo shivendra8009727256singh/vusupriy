@@ -1093,7 +1093,18 @@ function Home() {
                 aria-labelledby={`home-service-tab-${activeService}`}
               >
                 <div className="home-services-image-frame" data-reveal>
-                  <div className="home-services-image-stack">
+                                    {/* VASUPRIY_SERVICES_BLURRED_FILL_V1 */}
+                  <div
+                    className="home-services-image-stack"
+                    style={{
+                      '--vasu-service-bg': `url(${[
+                        serviceMakeover,
+                        serviceExecution,
+                        serviceArchitecture,
+                        serviceMakeover
+                      ][activeService]})`
+                    }}
+                  >
                     <img
                       className={`home-service-image ${activeService === 0 ? 'home-service-image--active' : ''
                         }`}
@@ -1276,8 +1287,6 @@ function Home() {
 
         <InteriorProductsPreview />
 
-        <WhyVasupriy />
-
 
 
         <section
@@ -1303,6 +1312,9 @@ function Home() {
         </section>
 
         <HomeGallery />
+
+        {/* WHY CHOOSE US - BEFORE FINAL CTA */}
+        <WhyVasupriy />
       </div>
     </>
   )

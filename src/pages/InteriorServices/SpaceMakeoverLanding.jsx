@@ -133,7 +133,7 @@ export default function SpaceMakeoverLanding() {
         </div>
       </section>
 
-      <section className="vsm-section vsm-benefits" aria-labelledby="vsm-benefits-title">
+      {/* <section className="vsm-section vsm-benefits" aria-labelledby="vsm-benefits-title">
         <div className="vsm-container vsm-benefits-inner">
           <div className="vsm-benefits-heading">
             <div>
@@ -158,7 +158,7 @@ export default function SpaceMakeoverLanding() {
           </div>
           <p className="vsm-benefits-footnote">Every space is unique. Specific improvements are planned around your room, requirements and approved scope.</p>
         </div>
-      </section>
+      </section> */}
 
       <section className="vsm-section vsm-pricing" aria-labelledby="vsm-pricing-title">
         <div className="vsm-container">

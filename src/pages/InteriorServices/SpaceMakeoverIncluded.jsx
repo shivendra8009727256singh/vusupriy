@@ -48,11 +48,11 @@ export default function SpaceMakeoverIncluded() {
             </Link>
           </div>
           <div className="vsm-included-ref__gallery" aria-label="Space makeover design inspirations">
-            <figure className="vsm-included-ref__photo vsm-included-ref__photo--main"><img src={roomMain} alt="Refined living room makeover" loading="lazy" /></figure>
-            <figure className="vsm-included-ref__photo vsm-included-ref__photo--top"><img src={bedroom} alt="Modern bedroom transformation" loading="lazy" /></figure>
-            <figure className="vsm-included-ref__photo vsm-included-ref__photo--far"><img src={wallDetail} alt="Detailed wall styling and materials" loading="lazy" /></figure>
-            <figure className="vsm-included-ref__photo vsm-included-ref__photo--middle"><img src={roomDetail} alt="Carefully curated interior finishes" loading="lazy" /></figure>
-            <figure className="vsm-included-ref__photo vsm-included-ref__photo--bottom"><img src={lighting} alt="Warm ambient lighting details" loading="lazy" /></figure>
+            <figure className="vsm-included-ref__photo vsm-included-ref__photo--main"><img src="/images/services/space-makeover-included/included-main-concept.webp" alt="Refined living room makeover" loading="lazy" /></figure>
+            <figure className="vsm-included-ref__photo vsm-included-ref__photo--top"><img src="/images/services/space-makeover-included/included-bedroom.webp" alt="Modern bedroom transformation" loading="lazy" /></figure>
+            <figure className="vsm-included-ref__photo vsm-included-ref__photo--far"><img src="/images/services/space-makeover-included/included-temple.webp" alt="Detailed wall styling and materials" loading="lazy" /></figure>
+            <figure className="vsm-included-ref__photo vsm-included-ref__photo--middle"><img src="/images/services/space-makeover-included/included-blue-living.webp" alt="Carefully curated interior finishes" loading="lazy" /></figure>
+            <figure className="vsm-included-ref__photo vsm-included-ref__photo--bottom"><img src="/images/services/space-makeover-included/included-tv-wall.webp" alt="Warm ambient lighting details" loading="lazy" /></figure>
           </div>
         </div>
       </div>

@@ -404,3 +404,57 @@
   box-shadow: 0 14px 38px rgba(34, 58, 59, .12);
 }
 /* VASUPRIY EXPERTISE HERO THEME END */
+
+
+/* VASUPRIY_EXPERTISE_SAGE_BG_START */
+
+.site .home-curated {
+  background:
+    radial-gradient(
+      ellipse at 8% 18%,
+      rgba(187, 213, 193, .82),
+      transparent 51%
+    ),
+    radial-gradient(
+      ellipse at 88% 80%,
+      rgba(203, 223, 205, .78),
+      transparent 47%
+    ),
+    linear-gradient(
+      135deg,
+      #E1EBE4 0%,
+      #F7F5EE 48%,
+      #E5EDE5 100%
+    ) !important;
+  color: #073E46 !important;
+}
+
+/* Soft architectural texture */
+.site .home-curated::after {
+  display: block !important;
+  opacity: .075 !important;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* Preserve premium teal and gold contrast */
+.site .home-curated-heading h2,
+.site .home-curated-content h3 {
+  color: #073E46 !important;
+}
+
+.site .home-curated-heading h2 em {
+  color: #A47B3C !important;
+}
+
+.site .home-curated-content p {
+  color: #536763 !important;
+}
+
+.site .home-curated-label {
+  background: rgba(255,255,255,.58) !important;
+  border-color: rgba(164,123,60,.38) !important;
+  color: #876A3C !important;
+}
+
+/* VASUPRIY_EXPERTISE_SAGE_BG_END */

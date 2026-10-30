@@ -669,3 +669,81 @@
   }
 }
 /* END VASUPRIY_DROP_INSTALLATION_PROCESS_V1 */
+
+/* VASUPRIY_INSTALL_PROCESS_SAGE_START */
+
+/* Same sage-green and ivory palette as Our Expertise */
+.vds .vds-install-process {
+  background:
+    radial-gradient(
+      ellipse at 8% 18%,
+      rgba(187, 213, 193, .82),
+      transparent 51%
+    ),
+    radial-gradient(
+      ellipse at 88% 80%,
+      rgba(203, 223, 205, .78),
+      transparent 47%
+    ),
+    linear-gradient(
+      135deg,
+      #E1EBE4 0%,
+      #F7F5EE 48%,
+      #E5EDE5 100%
+    ) !important;
+
+  color: #073E46;
+}
+
+/* Heading contrast on light background */
+.vds .vds-install-process .vds-install-process-head h2 {
+  color: #073E46 !important;
+}
+
+.vds .vds-install-process .vds-install-process-head h2 em {
+  color: #A47B3C !important;
+}
+
+.vds .vds-install-process .vds-install-process-head > p {
+  color: #536763 !important;
+}
+
+.vds .vds-install-process .vds-install-process-kicker {
+  color: #A47B3C !important;
+}
+
+/* Preserve the original teal-glass card appearance */
+.vds .vds-install-process .vds-install-process-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(7, 62, 70, .95),
+      rgba(9, 76, 83, .93)
+    ) !important;
+  border-color: rgba(220,196,157,.72);
+  box-shadow: 0 18px 42px rgba(7,62,70,.14);
+}
+
+.vds .vds-install-process .vds-install-process-card:hover {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(10, 75, 82, .97),
+      rgba(7, 62, 70, .96)
+    ) !important;
+}
+
+/* Keep card content high-contrast */
+.vds .vds-install-process .vds-install-process-number {
+  color: #DFBD82;
+}
+
+.vds .vds-install-process .vds-install-process-card-copy h3 {
+  color: #FFF9EF;
+}
+
+.vds .vds-install-process .vds-install-process-card-copy p {
+  color: #E4E9E6;
+}
+
+/* VASUPRIY_INSTALL_PROCESS_SAGE_END */

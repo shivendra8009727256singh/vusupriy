@@ -13,7 +13,7 @@ const collections = [
   {
     label: 'Wall Makeover Products',
     description: 'Elevate walls with expressive patterns, refined surfaces and layered finishes.',
-    items: ['Non-Woven Wallpaper', 'Customized Design Wallpaper', 'WPC Panels', 'PVC Panels', 'MDF Wall Panels'],
+    items: ['Wallpaper', 'Customized Design Wallpaper', 'WPC Panels', '', 'MDF Wall Panels'],
   },
   {
     label: 'Enlightenment Options',
@@ -41,7 +41,14 @@ export default function InteriorProductsPreview() {
 
   useEffect(() => {
     const rail = railRef.current
-    if (rail) rail.scrollTo({ left: 0, behavior: 'instant' })
+    if (rail) {
+      const first = rail.querySelector('.vproduct-card')
+      if (first) {
+        const gap = parseFloat(getComputedStyle(rail).columnGap) || 18
+        const step = first.getBoundingClientRect().width + gap
+        rail.scrollTo({ left: cards.length * step, behavior: 'instant' })
+      }
+    }
     setPosition(0)
   }, [selected])
 
@@ -51,7 +58,7 @@ export default function InteriorProductsPreview() {
     const firstCard = rail.querySelector('.vproduct-card')
     if (!firstCard) return
     const step = firstCard.getBoundingClientRect().width + 18
-    setPosition(Math.round(rail.scrollLeft / step))
+    setPosition(cards.length ? Math.round(rail.scrollLeft / step) % cards.length : 0)
   }
 
   const navigate = direction => {
@@ -65,6 +72,60 @@ export default function InteriorProductsPreview() {
     rail.scrollTo({ left: target, behavior: 'smooth' })
   }
 
+
+  /* VASUPRIY_PRODUCTS_INFINITE_V1 */
+  useEffect(() => {
+    const rail = railRef.current
+    if (!rail || cards.length < 2) return undefined
+
+    const section = rail.closest('.vproduct-showcase')
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+    let visible = false
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting
+      },
+      { threshold: 0.15 }
+    )
+
+    if (section) observer.observe(section)
+
+    const timer = window.setInterval(() => {
+      if (
+        !visible ||
+        document.hidden ||
+        reducedMotion.matches ||
+        
+        rail.matches(':focus-within')
+      ) return
+
+      const first = rail.querySelector('.vproduct-card')
+      if (!first) return
+
+      const gap = parseFloat(getComputedStyle(rail).columnGap) || 18
+      const step = first.getBoundingClientRect().width + gap
+      const cycle = cards.length * step
+
+      // Identical copies: invisible reset, always move forward.
+      if (rail.scrollLeft >= 2 * cycle - step * 0.5) {
+        rail.scrollTo({
+          left: rail.scrollLeft - cycle,
+          behavior: 'instant'
+        })
+      }
+
+      rail.scrollTo({
+        left: rail.scrollLeft + step,
+        behavior: 'smooth'
+      })
+    }, 2000)
+
+    return () => {
+      window.clearInterval(timer)
+      observer.disconnect()
+    }
+  }, [selected])
   return (
     <section className="vproduct-showcase" id="home-products" aria-labelledby="vproduct-title" data-scroll-section>
       <div className="vproduct-shell">
@@ -98,8 +159,8 @@ export default function InteriorProductsPreview() {
 
           <div className="vproduct-right">
             <div className="vproduct-rail" ref={railRef} onScroll={updatePosition} aria-label={`${category.label} products`}>
-              {cards.map((card, index) => (
-                <article className="vproduct-card" key={`${selected}-${card.name}`}>
+              {[...cards, ...cards, ...cards].map((card, index) => (
+                <article className="vproduct-card" key={`${selected}-${index}-${card.name}`}>
                   <Link to="/interior-products" aria-label={`Explore ${card.name} products`}>
                     <div className="vproduct-image-wrap">
                       <img src={card.image} alt={card.name} loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />

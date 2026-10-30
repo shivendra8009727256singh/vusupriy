@@ -21,11 +21,11 @@ const garden = resolveImage('cafe-seating-and-plants-12.jpg', resolveImage('cafe
 const detail = resolveImage('bedroom-wall-paneling-29.jpg', panels)
 
 const collections = [
-  { id: '01', title: 'Custom Epoxy Flooring', tag: 'A signature underfoot', image: epoxy, description: 'Personalised flooring finishes, patterns and colour stories shaped around your space.' },
+  { id: '01', title: 'FRP Murals and fountains', tag: 'A signature underfoot', image: epoxy, description: 'Personalised flooring finishes, patterns and colour stories shaped around your space.' },
   { id: '02', title: 'Wall Panels & Wallpapers', tag: 'Walls with character', image: panels, description: 'Tailored textures, feature panels and wallpapers that create a distinct focal point.' },
   { id: '03', title: 'Rugs & Wall Hangings', tag: 'Art in every detail', image: art, description: 'Considered textile accents and decorative art selected to complement your theme.' },
   { id: '04', title: 'Complete Furnishings', tag: 'Beautifully coordinated', image: furniture, description: 'Custom-inspired furniture, curtains, cushions and soft furnishings in visual harmony.' },
-  { id: '05', title: 'Garden & Greenery', tag: 'Nature, thoughtfully placed', image: garden, description: 'Green features and planting concepts curated for indoor and outdoor settings.' },
+  { id: '05', title: 'Embroidery on wallpapers', tag: 'Nature, thoughtfully placed', image: garden, description: 'Green features and planting concepts curated for indoor and outdoor settings.' },
 ]
 
 const steps = [

@@ -1,0 +1,316 @@
+.vpd-page{--ink:#173a3d;--teal:#063e49;--gold:#c6a777;--cream:#f8f5ef;color:var(--ink);background:#fff;font-family:inherit}.vpd-page *{box-sizing:border-box}.vpd-wrap{width:min(1320px,calc(100% - 8vw));margin-inline:auto}.vpd-topbar{background:#f8f6f1;border-bottom:1px solid #e8e5dd}.vpd-breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding-block:19px;font-size:12px;color:#777}.vpd-breadcrumb a{color:inherit;text-decoration:none}.vpd-breadcrumb a:hover{color:var(--teal)}.vpd-breadcrumb strong{color:var(--teal);font-weight:500}.vpd-intro{padding-block:84px 74px;display:grid;grid-template-columns:1fr 300px;gap:50px;align-items:center}.vpd-eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:10px;letter-spacing:.23em;font-weight:700;color:#a17e4e}.vpd-eyebrow i{width:24px;height:1px;background:var(--gold)}.vpd-intro h1,.vpd-section-head h2,.vpd-gallery-info h2,.vpd-cta h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.04em}.vpd-intro h1{font-size:clamp(46px,6vw,88px);line-height:1.08;margin:24px 0}.vpd-intro h1 em{display:block;color:#b49465;font-size:.65em;font-weight:400}.vpd-intro p{font-size:16px;line-height:1.9;max-width:650px;color:#6b7775}.vpd-intro-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.vpd-btn,.vpd-outline,.vpd-dark-btn{display:inline-flex;justify-content:space-between;align-items:center;gap:26px;padding:16px 22px;font-size:12px;letter-spacing:.06em;text-decoration:none;transition:.25s}.vpd-btn,.vpd-dark-btn{background:var(--teal);color:#fff}.vpd-outline{border:1px solid #c7d0cd;color:var(--teal)}.vpd-btn:hover,.vpd-dark-btn:hover{background:#135e66;color:#fff}.vpd-outline:hover{border-color:var(--teal)}.vpd-intro-side{min-height:240px;background:var(--teal);color:#e5c89a;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px}.vpd-intro-side span,.vpd-intro-side small{font-size:10px;letter-spacing:.25em}.vpd-intro-side strong{font:italic 130px Georgia,serif;line-height:1}.vpd-gallery{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(330px,.75fr);gap:clamp(28px,5vw,72px);padding-bottom:100px;align-items:center}.vpd-photo-main{height:clamp(400px,55vw,650px);background:#eeeae2;position:relative;overflow:hidden}.vpd-photo-main>img{height:100%;width:100%;object-fit:cover;display:block}.vpd-photo-tag{position:absolute;bottom:22px;left:22px;background:#fff;padding:12px 16px;font-size:11px;letter-spacing:.08em}.vpd-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;background:linear-gradient(145deg,#e9e5dc,#f8f6f1);gap:18px}.vpd-placeholder span,.vpd-placeholder small{font-size:10px;letter-spacing:.16em}.vpd-placeholder strong{font:normal clamp(30px,4vw,58px) Georgia,serif}.vpd-gallery-info h2{font-size:clamp(36px,4vw,58px);line-height:1.15;margin:22px 0}.vpd-gallery-info h2 em,.vpd-section-head h2 em,.vpd-cta h2 em{color:#b59568}.vpd-gallery-info>p{line-height:1.9;color:#71807b;font-size:14px}.vpd-finish-label{font-size:11px;text-transform:uppercase;letter-spacing:.18em;font-weight:700;margin:26px 0 12px}.vpd-thumbs{display:flex;flex-wrap:wrap;gap:10px}.vpd-thumbs button{width:88px;height:90px;border:2px solid transparent;background:#eee;position:relative;padding:0;cursor:pointer}.vpd-thumbs button.is-active{border-color:#b59568}.vpd-thumbs img{width:100%;height:100%;object-fit:cover}.vpd-thumbs button span{position:absolute;bottom:3px;right:5px;background:#fff;padding:2px 4px;font-size:9px}.vpd-gallery-info .vpd-note{font-size:11px;color:#8a8d86;margin:18px 0 25px}.vpd-dark-btn{width:100%}.vpd-spec-section{background:#f8f6f1;padding:92px 0 100px}.vpd-section-head h2{font-size:clamp(38px,4.8vw,64px);margin:15px 0 35px}.vpd-tabs{display:flex;gap:38px;border-bottom:1px solid #ddd8cd;overflow-x:auto}.vpd-tabs button{border:0;border-bottom:2px solid transparent;background:none;padding:17px 0;cursor:pointer;color:#7e8884;font-size:13px;white-space:nowrap}.vpd-tabs button[aria-selected=true]{border-bottom-color:#b59568;color:var(--teal);font-weight:700}.vpd-tab-panel{padding-top:36px;max-width:950px;min-height:210px}.vpd-copy h3{font:normal 30px Georgia,serif}.vpd-copy p{font-size:15px;line-height:1.9;color:#65746e}.vpd-copy a{color:var(--teal)}.vpd-spec-table>div{display:grid;grid-template-columns:1fr 1.4fr;gap:18px;padding:18px 0;border-bottom:1px solid #e1ddd3;font-size:14px}.vpd-spec-table span{color:#6b7774}.vpd-spec-table strong{font-weight:500}.vpd-related{padding-block:95px}.vpd-related-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}.vpd-related-card{text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:9px}.vpd-related-card>div{height:240px;background:#e9e5dc;overflow:hidden}.vpd-related-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.vpd-related-card:hover img{transform:scale(1.05)}.vpd-related-empty{display:flex;align-items:center;justify-content:center;height:100%;font:italic 20px Georgia,serif;color:#a68d66;text-align:center;padding:20px}.vpd-related-card>span{font-size:10px;color:#aa8b61;letter-spacing:.15em;text-transform:uppercase;margin-top:10px}.vpd-related-card strong{font:normal 22px Georgia,serif}.vpd-related-card small{font-size:12px;color:#60726e}.vpd-cta{background:var(--teal);color:#fff;padding:72px 0}.vpd-cta>.vpd-wrap{display:flex;align-items:center;justify-content:space-between;gap:30px}.vpd-cta h2{font-size:clamp(36px,4vw,58px);margin:15px 0}.vpd-cta p{color:#c7d5d3}.vpd-cta a{color:var(--teal);background:#f2e9d9;padding:17px 24px;text-decoration:none;white-space:nowrap}.vpd-missing{min-height:65vh;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:70px 20px}.vpd-missing h1{font:normal 55px Georgia,serif}.vpd-missing a{color:#063e49}@media(max-width:1000px){.vpd-intro{grid-template-columns:1fr 180px}.vpd-intro-side{min-height:200px}.vpd-intro-side strong{font-size:90px}.vpd-gallery{grid-template-columns:1fr 1fr;gap:25px}.vpd-related-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:720px){.vpd-wrap{width:calc(100% - 36px)}.vpd-intro{grid-template-columns:1fr;padding-block:55px}.vpd-intro-side{display:none}.vpd-intro h1{font-size:48px}.vpd-gallery{grid-template-columns:1fr;padding-bottom:60px}.vpd-photo-main{height:420px}.vpd-spec-section,.vpd-related{padding-block:60px}.vpd-related-grid{gap:15px}.vpd-related-card>div{height:180px}.vpd-related-card strong{font-size:18px}.vpd-cta>.vpd-wrap{flex-direction:column;align-items:flex-start}.vpd-cta a{white-space:normal}.vpd-spec-table>div{grid-template-columns:1fr;gap:6px}.vpd-tabs{gap:25px}}
+
+
+
+
+
+/* VIP ACTUAL FLOATING LOGO START */
+
+.vpd-page .vpd-intro-side {
+    position: relative;
+    overflow: hidden;
+}
+
+.vpd-page .vpd-intro-side .vpd-floating-brand-logo {
+    display: block;
+    width: 68%;
+    max-width: 220px;
+    height: 170px;
+    object-fit: contain;
+    margin: 8px auto;
+    animation: vpdBrandFloat 7s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes vpdBrandFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vpd-page .vpd-intro-side .vpd-floating-brand-logo {
+        animation: none;
+    }
+}
+
+/* VIP ACTUAL FLOATING LOGO END */
+
+
+/* VIP CLEAN FLOATING LOGO START */
+
+/* Remove teal background from logo container */
+.vpd-page .vpd-intro-side {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+/* Keep original logo floating */
+.vpd-page .vpd-floating-brand-logo {
+    width: 75%;
+    max-width: 240px;
+    height: auto;
+    object-fit: contain;
+    animation: vpdBrandFloat 7s ease-in-out infinite;
+}
+
+/* Ensure label text is readable on white background */
+.vpd-page .vpd-intro-side > span,
+.vpd-page .vpd-intro-side > small {
+    color: #063e49 !important;
+}
+
+/* VIP CLEAN FLOATING LOGO END */
+/* VASUPRIY PREMIUM PRODUCT LIGHTBOX START */
+
+.vpd-image-zoom-trigger {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  position: relative;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.vpd-image-zoom-trigger img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .65s cubic-bezier(.2,.7,.2,1);
+}
+
+.vpd-image-zoom-trigger:hover img {
+  transform: scale(1.045);
+}
+
+.vpd-zoom-indicator {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(8, 43, 48, .9);
+  color: #E8C99B;
+  padding: 13px 17px;
+  font: 700 10px Arial, sans-serif;
+  letter-spacing: .14em;
+}
+
+.vpd-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(5, 23, 27, .985);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  animation: vpdLightboxAppear .25s ease both;
+}
+
+.vpd-lightbox-top {
+  min-height: 100px;
+  padding: 25px clamp(22px, 5vw, 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vpd-lightbox-top > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vpd-lightbox-top span {
+  color: #D7B77C;
+  font: 700 10px Arial, sans-serif;
+  letter-spacing: .24em;
+}
+
+.vpd-lightbox-top strong {
+  font: 400 27px Georgia, serif;
+}
+
+.vpd-lightbox-close {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ffffff50;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 31px;
+  cursor: pointer;
+  transition: background .25s, transform .25s;
+}
+
+.vpd-lightbox-close:hover {
+  background: #ffffff20;
+  transform: rotate(90deg);
+}
+
+.vpd-lightbox-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px clamp(60px, 9vw, 150px);
+  touch-action: pan-y;
+}
+
+.vpd-lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 25px 90px #0006;
+  animation: vpdImageReveal .3s ease both;
+}
+
+.vpd-lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border: 1px solid #ffffff45;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+
+.vpd-lightbox-arrow:hover {
+  background: #D7B77C;
+  color: #092C30;
+  border-color: #D7B77C;
+}
+
+.vpd-lightbox-arrow--prev { left: clamp(12px, 3vw, 55px); }
+.vpd-lightbox-arrow--next { right: clamp(12px, 3vw, 55px); }
+
+.vpd-lightbox-bottom {
+  min-height: 100px;
+  padding: 20px clamp(22px, 5vw, 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vpd-lightbox-bottom > span {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: 400 24px Georgia, serif;
+  color: #E8C99B;
+}
+
+.vpd-lightbox-bottom > span i {
+  width: 35px;
+  height: 1px;
+  background: #ffffff70;
+}
+
+.vpd-lightbox-bottom p {
+  font: 700 9px Arial, sans-serif;
+  letter-spacing: .15em;
+  color: #ffffff85;
+}
+
+.vpd-lightbox-bottom a {
+  padding: 15px 22px;
+  background: #D7B77C;
+  color: #092C30;
+  text-decoration: none;
+  font: 700 11px Arial, sans-serif;
+  letter-spacing: .08em;
+}
+
+.vpd-lightbox-overlay button:focus-visible,
+.vpd-lightbox-overlay a:focus-visible,
+.vpd-image-zoom-trigger:focus-visible {
+  outline: 3px solid #E8C99B;
+  outline-offset: 4px;
+}
+
+@keyframes vpdLightboxAppear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes vpdImageReveal {
+  from { opacity: .35; transform: scale(.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 650px) {
+  .vpd-lightbox-top {
+    min-height: 85px;
+    padding: 20px;
+  }
+
+  .vpd-lightbox-top strong {
+    font-size: 22px;
+  }
+
+  .vpd-lightbox-stage {
+    padding: 10px 45px;
+  }
+
+  .vpd-lightbox-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 19px;
+  }
+
+  .vpd-lightbox-arrow--prev { left: 5px; }
+  .vpd-lightbox-arrow--next { right: 5px; }
+
+  .vpd-lightbox-bottom {
+    min-height: 120px;
+    padding: 16px 20px;
+    flex-wrap: wrap;
+  }
+
+  .vpd-lightbox-bottom p {
+    display: none;
+  }
+
+  .vpd-lightbox-bottom a {
+    padding: 13px 17px;
+  }
+
+  .vpd-zoom-indicator {
+    right: 10px;
+    bottom: 10px;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vpd-lightbox-overlay,
+  .vpd-lightbox-image {
+    animation: none;
+  }
+
+  .vpd-image-zoom-trigger img,
+  .vpd-lightbox-close {
+    transition: none;
+  }
+}
+
+/* VASUPRIY PREMIUM PRODUCT LIGHTBOX END */

@@ -1,4 +1,4 @@
-﻿/* VASUPRIY_JOURNEY_ICONS_V1 */
+/* VASUPRIY_JOURNEY_ICONS_V1 */
 import {
   FiSun,
   FiCompass,
@@ -17,6 +17,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './About.css'
+import AboutIntroHero from './AboutIntroHero.jsx'
 
 import processConsultation from '../../assets/images/about/how-we-work/initial-consultation.jpg'
 import processPlanning from '../../assets/images/about/how-we-work/design-planning.jpg'
@@ -559,6 +560,8 @@ function About() {
 
   return (
     <main className="about-page">
+      {/* VASUPRIY_ABOUT_INTRO_HERO_V1 */}
+      <AboutIntroHero image={visionInterior} />
       {/* =====================================================
           WHO WE ARE
       ====================================================== */}

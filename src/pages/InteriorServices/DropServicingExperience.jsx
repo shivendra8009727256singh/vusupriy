@@ -16,6 +16,23 @@ const services = [
   { slug: 'curtains-blinds-installation', title: 'Curtains & Blinds Installation', image: '/images/services/drop/curtains-blinds-installation-1.webp', gallery: ['/images/services/drop/curtains-blinds-installation-1.webp', '/images/services/drop/curtains-blinds-installation-2.webp', '/images/services/drop/curtains-blinds-installation-3.webp'], summary: 'Soft furnishings and window treatments made to complement the space.', details: ['Fabric, texture and operating-style consultation', 'Measurement and fitting coordination', 'Privacy, light and finishing considerations'], highlight: 'The final layer makes the space feel complete.' },
   { slug: 'nano-coating-protection', title: 'Nano Coating Protection', image: '/images/services/drop/nano-coating-protection-1.webp', gallery: ['/images/services/drop/nano-coating-protection-1.webp', '/images/services/drop/nano-coating-protection-2.webp', '/images/services/drop/nano-coating-protection-3.webp'], summary: 'Surface-focused protective treatments selected for suitable materials and use cases.', details: ['Suitability review for the chosen substrate', 'Application planning for eligible finishes', 'Care guidance based on selected treatment'], highlight: 'Protect the finishes that define your space.' },
   { slug: 'lift-installation', title: 'Lift Installation', image: '/images/services/drop/lift-installation-1.webp', gallery: ['/images/services/drop/lift-installation-1.webp', '/images/services/drop/lift-installation-2.webp', '/images/services/drop/lift-installation-3.webp'], summary: 'Coordinated vertical-mobility solutions considered alongside architecture and safety.', details: ['Requirements and site-readiness consultation', 'Coordination with qualified lift vendors', 'Fit, access and applicable compliance planning'], highlight: 'Convenience designed into every level.' },
+  {
+    slug: 'sunroof-skylighting',
+    title: 'Sunroof and Skylighting',
+    image: '/images/services/drop/mirror-glazing-styling-3.webp',
+    gallery: [
+      '/images/services/drop/mirror-glazing-styling-3.webp',
+      '/images/services/drop/mirror-glazing-styling-2.webp',
+      '/images/services/drop/mirror-glazing-styling-1.webp'
+    ],
+    summary: 'Bring beautiful natural daylight into your space through thoughtfully planned sunroofs and architectural skylighting.',
+    details: [
+      'Sunroof and skylight design, placement and daylight planning',
+      'Suitable glazing, frame systems, drainage and waterproofing considerations',
+      'Professional fitting coordination, finishing and maintenance guidance'
+    ],
+    highlight: 'Open your interiors to a brighter perspective.'
+  },
 ]
 
 const basePath = '/services/drop-servicing-installation'
@@ -149,14 +166,14 @@ export function DropServicingLanding() {
           <p>From architectural groundwork to the finishing touches—coordinated installation services designed around your space.</p>
           <a className="vds-pill vds-pill-gold" href="#drop-services">Explore our services <span>↗</span></a>
         </div>
-        <span className="vds-hero-index">01 — 11 / SPECIALIZED SERVICES</span>
+        <span className="vds-hero-index">01 — 12 / SPECIALIZED SERVICES</span>
       </section>
 
       {/* INTRO */}
       <section className="vds-intro vds-section">
         <div className="vds-container vds-intro-grid">
-          <div><span className="vds-eyebrow">AN INTEGRATED APPROACH</span><h2>One vision.<br /><em>Many possibilities.</em></h2></div>
-          <div><p>Exceptional interiors are built through more than design alone. Our installation offering brings planning, sourcing and on-site coordination together—with attention to the material, the craft and the final detail.</p><div className="vds-intro-signature"><strong>11</strong><span>specialist service categories<br />one considered experience</span></div></div>
+          <div><span className="vds-eyebrow">AN INTEGRATED APPROACH</span><h2>See it. Feel it.<br /><em>Get it... at your home</em></h2></div>
+          <div><p>Exceptional interiors are built through more than design alone. Our installation offering brings planning, sourcing and on-site coordination together—with attention to the material, the craft and the final detail.</p><div className="vds-intro-signature"><strong>12</strong><span>specialist service categories<br />one considered experience</span></div></div>
         </div>
       </section>
 

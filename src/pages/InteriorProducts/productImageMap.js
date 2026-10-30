@@ -3,7 +3,7 @@ import productImages from './productImages.json'
 // Explicit product references only. Never use a different product's image as fallback.
 // The five existing greenery images are split into non-overlapping sets.
 export const productImageMap = {
-  'Non-Woven Wallpaper': ['/images/wall-makeover/wall-reference-01.jpg'],
+  'Wallpaper': ['/images/wall-makeover/wall-reference-01.jpg'],
   'Customized Design Wallpaper': ['/images/wall-makeover/wall-reference-02.jpg'],
   'Fabric Wallpaper': ['/images/wall-makeover/wall-reference-03.jpg'],
   'WPC Panels': ['/images/wall-makeover/wall-reference-04.jpg'],
