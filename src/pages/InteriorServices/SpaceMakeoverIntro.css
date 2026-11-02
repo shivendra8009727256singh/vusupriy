@@ -28,3 +28,68 @@
 @media(max-width:760px){.vsm-intro-ref{padding:60px 0 65px}.vsm-intro-ref__container{width:calc(100% - 36px)}.vsm-intro-ref h2{font-size:27px!important}.vsm-intro-ref__tabs{gap:23px;margin-bottom:16px}.vsm-intro-ref__tabs button{font-size:13px!important}.vsm-intro-ref__stage{height:auto;min-height:0;display:flex;flex-direction:column}.vsm-intro-ref__main-image{height:320px;border-radius:7px 7px 0 0}.vsm-intro-ref__editorial{height:390px;min-height:390px;border-radius:0 0 7px 7px}.vsm-intro-ref__editorial h3{left:5%;width:46%;top:25px}.vsm-intro-ref__description{left:5%;top:100px;width:44%}.vsm-intro-ref__tile--top{right:5%;width:44%;height:215px}.vsm-intro-ref__tile--bottom{left:5%;width:46%;top:165px;height:163px}.vsm-intro-ref__specs{right:5%;width:44%;bottom:45px}.vsm-intro-ref__link{left:5%}.vsm-intro-ref__arrow{top:320px}.vsm-intro-ref__arrow--prev{left:-13px}.vsm-intro-ref__arrow--next{right:-13px}}
 @media(max-width:440px){.vsm-intro-ref__container{width:calc(100% - 28px)}.vsm-intro-ref h2{font-size:24px!important}.vsm-intro-ref__tabs{gap:14px}.vsm-intro-ref__tabs button{font-size:12px!important}.vsm-intro-ref__main-image{height:245px}.vsm-intro-ref__arrow{top:245px;width:36px;height:36px}.vsm-intro-ref__editorial{height:365px;min-height:365px}.vsm-intro-ref__editorial h3{font-size:17px!important}.vsm-intro-ref__description{top:93px;font-size:11px!important}.vsm-intro-ref__tile--top{height:190px}.vsm-intro-ref__tile--bottom{top:158px;height:145px}.vsm-intro-ref__specs{bottom:44px;gap:8px}.vsm-intro-ref__specs strong{font-size:12px}.vsm-intro-ref__specs span{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.vsm-intro-ref *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* VASUPRIY CLIENT SPACE MAKEOVER: 162 CATEGORY PHOTOS */
+.vsm-intro-ref__tabs{max-width:100%;justify-content:flex-start!important;gap:clamp(12px,2vw,30px)!important;overflow-x:auto;scrollbar-width:thin;overscroll-behavior-x:contain;padding:5px 2px 12px;margin-bottom:18px!important}
+.vsm-intro-ref__tabs button{flex:0 0 auto}
+.vsm-intro-ref__gallery-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 0 12px;color:#173d45;font:600 12px Arial,Helvetica,sans-serif}
+.vsm-intro-ref__gallery-buttons{display:flex;gap:10px}
+.vsm-intro-ref__gallery-buttons button{width:39px;height:39px;border-radius:50%;border:1px solid #bda17b;background:#fff;color:#0a3b44;cursor:pointer;font:20px Arial,Helvetica,sans-serif}
+.vsm-intro-ref__gallery-buttons button:hover{background:#0a3b44;color:#fff}
+.vsm-intro-ref__gallery-thumbs{display:flex;gap:10px;max-width:100%;overflow-x:auto;padding:3px 2px 12px;scrollbar-width:thin;overscroll-behavior-x:contain}
+.vsm-intro-ref__gallery-thumbs button{position:relative;flex:0 0 100px;height:74px;padding:0;border:2px solid transparent;border-radius:5px;overflow:hidden;background:#e9e5de;cursor:pointer;opacity:.8}
+.vsm-intro-ref__gallery-thumbs button.is-active{border-color:#b99162;opacity:1}
+.vsm-intro-ref__gallery-thumbs img{width:100%;height:100%;display:block;object-fit:cover}
+.vsm-intro-ref__editorial{background:#073e48}
+@media(max-width:760px){.vsm-intro-ref__tabs{gap:14px!important}.vsm-intro-ref__gallery-thumbs button{flex-basis:82px;height:63px}.vsm-intro-ref__gallery-controls{margin-top:16px}}
+
+/* VASUPRIY_GALLERY_CSS_ARROW_FIX_V2 */
+
+/* Hide corrupted text without hiding the actual buttons */
+.vsm-intro-ref button[aria-label*="Previous"],
+.vsm-intro-ref button[aria-label*="Next"],
+.vsm-intro-ref .vsm-intro-ref__arrow {
+    font-size: 0 !important;
+    color: #073b46 !important;
+}
+
+/* Draw encoding-independent arrows */
+.vsm-intro-ref button[aria-label*="Previous"]::before,
+.vsm-intro-ref button[aria-label*="Next"]::before,
+.vsm-intro-ref .vsm-intro-ref__arrow::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    margin: auto;
+    flex-shrink: 0;
+}
+
+/* Left arrows */
+.vsm-intro-ref button[aria-label*="Previous"]::before,
+.vsm-intro-ref .vsm-intro-ref__arrow--prev::before {
+    transform: rotate(-135deg);
+}
+
+/* Right arrows */
+.vsm-intro-ref button[aria-label*="Next"]::before,
+.vsm-intro-ref .vsm-intro-ref__arrow--next::before {
+    transform: rotate(45deg);
+}
+
+.vsm-intro-ref button[aria-label*="Previous"],
+.vsm-intro-ref button[aria-label*="Next"] {
+    cursor: pointer;
+}
+
+/* Mobile and tablet */
+@media (max-width: 760px) {
+    .vsm-intro-ref button[aria-label*="Previous"]::before,
+    .vsm-intro-ref button[aria-label*="Next"]::before,
+    .vsm-intro-ref .vsm-intro-ref__arrow::before {
+        width: 9px;
+        height: 9px;
+    }
+}
