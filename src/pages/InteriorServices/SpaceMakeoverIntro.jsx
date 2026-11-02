@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import livingMainNew from '../../assets/images/renamed-collection/residential-interior-renders/elegant-living-room-15.jpg'
+import livingSecondaryNew from '../../assets/images/renamed-collection/residential-interior-renders/elegant-living-room-16.jpg'
+import livingDetailNew from '../../assets/images/renamed-collection/residential-interior-renders/elegant-living-room-17.jpg'
 import './SpaceMakeoverIntro.css'
 
 import livingMain from '../../assets/images/renamed-collection/residential-interior-renders/elegant-living-room-13.jpg'
@@ -16,9 +19,9 @@ const examples = [
   {
     tab: 'Living Room',
     title: 'A thoughtful living room, tailored around you',
-    image: livingMain,
-    supporting: livingSecondary,
-    detail: livingDetail,
+    image: livingMainNew,
+    supporting: livingSecondaryNew,
+    detail: livingDetailNew,
     featureOne: ['Design focus', 'Balanced layouts'],
     featureTwo: ['Atmosphere', 'Warm & welcoming'],
     description: 'Thoughtful layout, calm textures and coordinated finishes for the moments that matter.',

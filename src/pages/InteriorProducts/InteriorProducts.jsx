@@ -64,7 +64,7 @@ const collectionImages = {
 
   lighting: productImages.chandeliers[0],
 
-  walls: sitePhoto('premium-wall-panels', 'living-room-feature-wall', 'cafe-feature-wall', 'bedroom-wall-paneling'),
+  walls: '/images/products/wall-makeover-mural.webp',
 
 }
 
@@ -446,6 +446,20 @@ export default function InteriorProducts() {
 .vpm-category-hero-visual{position:relative;min-width:0;height:clamp(420px,42vw,590px);background:#d6d3c9;box-shadow:0 25px 65px rgba(17,48,50,.17);animation:vpmCategoryEnter .9s .1s ease both}
 .vpm-category-hero-visual>img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
 .vpm-category-hero-visual:hover>img{transform:scale(1.025)}
+/* WALL MAKEOVER HERO — SHOW COMPLETE IMAGE */
+.vpm-page .vpm-category-hero--walls .vpm-category-hero-visual{
+  background:#f4f0e9;
+}
+.vpm-page .vpm-category-hero--walls .vpm-category-hero-visual>img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center center;
+  transform:none;
+}
+.vpm-page .vpm-category-hero--walls .vpm-category-hero-visual:hover>img{
+  transform:none;
+}
 .vpm-category-hero-outline{position:absolute;inset:-17px 17px 17px -17px;border:1px solid rgba(174,137,84,.7);pointer-events:none}
 .vpm-category-hero-image-caption{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:28px 24px 19px;background:linear-gradient(0deg,rgba(4,33,39,.82),transparent);color:white;font:700 10px Arial,sans-serif;letter-spacing:.17em}
 .vpm-category-hero-image-caption strong{color:#e4c49b;font-weight:700;white-space:nowrap}
