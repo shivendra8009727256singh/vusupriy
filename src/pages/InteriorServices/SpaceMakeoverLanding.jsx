@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import clientGallery from './spaceMakeoverClientGallery.json'
 import './SpaceMakeoverLanding.css'
 import SpaceMakeoverIncluded from './SpaceMakeoverIncluded.jsx'
 import SpaceMakeoverIntro from './SpaceMakeoverIntro.jsx'
@@ -27,6 +28,19 @@ const inclusions = [
   { number: '08', title: 'Beautiful Bedroom Makeover', description: 'Comfort and elegance in a personal retreat.', image: extraBedroom },
 ]
 
+ 
+// VASUPRIY_ALL_CLIENT_IMAGES_INFINITE_SLIDER_V1
+// Keep the original 8 slides and append all client category images.
+const sliderPhotos = [
+  ...inclusions,
+  ...Object.entries(clientGallery).flatMap(([category, photos]) =>
+    photos.map((image, index) => ({
+      number: String(index + 1).padStart(2, '0'),
+      title: `${category} interior design ${index + 1}`,
+      image,
+    }))
+  ),
+]
 const journey = [
   { title: 'Understand your needs', body: 'We begin by understanding your home, personal style and everyday requirements.' },
   { title: 'Design to match', body: 'Our team plans practical layouts, textures and visual concepts tailored to your space.' },
@@ -70,7 +84,7 @@ export default function SpaceMakeoverLanding() {
   // VASUPRIY_SPACE_MAKEOVER_AUTOPLAY_2S
   useEffect(() => {
     const interval = window.setInterval(() => {
-      setActiveSlide(current => (current + 1) % inclusions.length)
+      setActiveSlide(current => (current + 1) % sliderPhotos.length)
     }, 2000)
 
     return () => window.clearInterval(interval)
@@ -82,8 +96,18 @@ export default function SpaceMakeoverLanding() {
     return () => { document.title = previousTitle }
   }, [])
 
-  const currentSlide = inclusions[activeSlide]
-  const changeSlide = direction => setActiveSlide(current => (current + direction + inclusions.length) % inclusions.length)
+
+  // Preload only the upcoming slide, not all 170 at once.
+  useEffect(() => {
+    const nextSlide = sliderPhotos[
+      (activeSlide + 1) % sliderPhotos.length
+    ]
+
+    const image = new Image()
+    image.src = nextSlide.image
+  }, [activeSlide])
+  const currentSlide = sliderPhotos[activeSlide]
+  const changeSlide = direction => setActiveSlide(current => (current + direction + sliderPhotos.length) % sliderPhotos.length)
 
   return (
     <div className="vsm">
@@ -223,7 +247,7 @@ export default function SpaceMakeoverLanding() {
             <Link to="/contact" className="vsm-feature-link">Explore now <span aria-hidden="true">→</span></Link>
           </div>
           <div className="vsm-feature-slide-controls" aria-label="Featured interior images">
-            <span>{String(activeSlide+1).padStart(2,'0')} / {String(inclusions.length).padStart(2,'0')}</span>
+            <span>{String(activeSlide+1).padStart(3,'0')} / {String(sliderPhotos.length).padStart(3,'0')}</span>
             <div><button type="button" onClick={() => changeSlide(-1)} aria-label="Previous design image">←</button><button type="button" onClick={() => changeSlide(1)} aria-label="Next design image">→</button></div>
           </div>
         </div>
