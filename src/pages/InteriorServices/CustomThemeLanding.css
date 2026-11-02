@@ -359,3 +359,22 @@
 }
 
 /* VASUPRIY CUSTOM SLIDER EDGE ARROWS END */
+
+
+/* VASUPRIY_CUSTOM_THEME_SEVEN_TOPICS_V1 */
+
+/* Three cards, then two, then two */
+@media (min-width: 701px) {
+  .vct .vct-collection-card:nth-child(6),
+  .vct .vct-collection-card:nth-child(7) {
+    grid-column: span 3;
+  }
+}
+
+/* Mobile layout remains responsive */
+@media (max-width: 700px) {
+  .vct .vct-collection-card:nth-child(6),
+  .vct .vct-collection-card:nth-child(7) {
+    grid-column: span 1;
+  }
+}

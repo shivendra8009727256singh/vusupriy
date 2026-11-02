@@ -20,14 +20,60 @@ const furniture = resolveImage('custom-furniture.jpg', resolveImage('elegant-liv
 const garden = resolveImage('cafe-seating-and-plants-12.jpg', resolveImage('cafe-green-accent-wall-19.jpg', hero))
 const detail = resolveImage('bedroom-wall-paneling-29.jpg', panels)
 
+// VASUPRIY_CUSTOM_THEME_SEVEN_TOPICS_V1
+// HDMR and Wall Hanging currently use representative
+// panel and wall-art photos, not verified product samples.
 const collections = [
-  { id: '01', title: 'FRP Murals and fountains', tag: 'A signature underfoot', image: epoxy, description: 'Personalised flooring finishes, patterns and colour stories shaped around your space.' },
-  { id: '02', title: 'Wall Panels & Wallpapers', tag: 'Walls with character', image: panels, description: 'Tailored textures, feature panels and wallpapers that create a distinct focal point.' },
-  { id: '03', title: 'Rugs & Wall Hangings', tag: 'Art in every detail', image: art, description: 'Considered textile accents and decorative art selected to complement your theme.' },
-  { id: '04', title: 'Complete Furnishings', tag: 'Beautifully coordinated', image: furniture, description: 'Custom-inspired furniture, curtains, cushions and soft furnishings in visual harmony.' },
-  { id: '05', title: 'Embroidery on wallpapers', tag: 'Nature, thoughtfully placed', image: garden, description: 'Green features and planting concepts curated for indoor and outdoor settings.' },
+  {
+    id: '01',
+    title: 'Fountain',
+    tag: 'Decorative water features',
+    image: '/images/home-expertise/frp-fountain.jpg',
+    description: 'Decorative fountain concepts that bring movement, character and tranquillity to your space.',
+  },
+  {
+    id: '02',
+    title: 'Furnishing',
+    tag: 'Comfort and coordination',
+    image: '/images/services-client/custom-theme/furnishing/001.jpg',
+    description: 'Beautifully coordinated soft furnishings, fabrics and finishing details.',
+  },
+  {
+    id: '03',
+    title: 'HDMR Panel',
+    tag: 'Custom panel concepts',
+    image: '/images/services/custom-theme/hdmr-panel.webp',
+    description: 'Explore refined decorative panel concepts, textures and coordinated interior finishes.',
+  },
+  {
+    id: '04',
+    title: 'Murals',
+    tag: 'Artistic wall expressions',
+    image: '/images/home-expertise/mural-painting.jpg',
+    description: 'Distinctive mural artwork that introduces personality and visual storytelling.',
+  },
+  {
+    id: '05',
+    title: 'Rugs',
+    tag: 'Texture underfoot',
+    image: '/images/home-expertise/hand-made-rugs.jpg',
+    description: 'Layered rugs that bring softness, warmth and character to interiors.',
+  },
+  {
+    id: '06',
+    title: 'Wall Hanging',
+    tag: 'Decorative accents',
+    image: '/images/services/custom-theme/wall-hanging.webp',
+    description: 'Explore decorative wall-art references for expressive interior accents.',
+  },
+  {
+    id: '07',
+    title: 'Wallpaper',
+    tag: 'Walls with personality',
+    image: '/images/wallpaper-client/customized-01.webp',
+    description: 'Customized wallpaper patterns and finishes that transform everyday walls.',
+  },
 ]
-
 const steps = [
   {
     id: '01',
@@ -97,11 +143,11 @@ export default function CustomThemeLanding() {
 
       <section id="what-we-customize" className="vct-collections vct-section" aria-labelledby="vct-collections-title">
         <div className="vct-wrap">
-          <div className="vct-heading-row"><div><p className="vct-kicker">01 / OUR COLLECTIONS</p><h2 id="vct-collections-title">What we <em>customize.</em></h2></div><p>Five considered ways to make your interior unmistakably yours.</p></div>
+          <div className="vct-heading-row"><div><p className="vct-kicker">01 / OUR COLLECTIONS</p><h2 id="vct-collections-title">What we <em>customize.</em></h2></div><p>Seven considered ways to make your interior unmistakably yours.</p></div>
           <div className="vct-collection-grid">
             {collections.map((item) => (
               <article key={item.id} className="vct-collection-card">
-                <div className="vct-collection-image"><img src={item.image} alt={`${item.title} interior design example`} loading="lazy" decoding="async" /><span className="vct-collection-number">{item.id} / 05</span></div>
+                <div className="vct-collection-image"><img src={item.image} alt={`${item.title} interior design example`} loading="lazy" decoding="async" /><span className="vct-collection-number">{item.id} / {String(collections.length).padStart(2, '0')}</span></div>
                 <div className="vct-collection-copy"><p>{item.tag}</p><h3>{item.title}</h3><span>{item.description}</span></div>
               </article>
             ))}
