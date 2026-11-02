@@ -12,11 +12,19 @@ import roomPhoto from '../../assets/images/renamed-collection/residential-site-p
 import floorPlanPhoto from '../../assets/images/home/expertise/space-planning.png'
 import panelPhoto from '../../assets/images/renamed-collection/residential-site-photos/bedroom-wall-paneling-29.jpg'
 
+import extraLiving1 from '../../assets/images/renamed-collection/residential-interior-renders/elegant-living-room-15.jpg'
+import extraLiving2 from '../../assets/images/renamed-collection/residential-interior-renders/elegant-living-room-16.jpg'
+import extraLiving3 from '../../assets/images/renamed-collection/residential-interior-renders/elegant-living-room-17.jpg'
+import extraBedroom from '../../assets/images/renamed-collection/residential-site-photos/modern-bedroom-interior-31.jpg'
 const inclusions = [
   { number: '01', title: 'Complete Room Transformation', description: 'A fresh visual identity for living rooms, bedrooms and other meaningful spaces.', image: livingPhoto },
   { number: '02', title: 'Space Planning & Layout', description: 'Thoughtful furniture placement and circulation that put every square foot to work.', image: floorPlanPhoto },
   { number: '03', title: 'Aesthetic & Theme Styling', description: 'Coordinated materials, colours, furnishings and lighting to reflect your taste.', image: roomPhoto },
   { number: '04', title: 'Surface & Detail Upgrades', description: 'Feature walls, texture, panel designs and finishing details that make a difference.', image: panelPhoto },
+  { number: '05', title: 'Contemporary Living Room', description: 'Layered textures and refined contemporary comfort.', image: extraLiving1 },
+  { number: '06', title: 'Elegant Living Spaces', description: 'Warm interiors designed for everyday living.', image: extraLiving2 },
+  { number: '07', title: 'Premium Interior Styling', description: 'Considered details that elevate every room.', image: extraLiving3 },
+  { number: '08', title: 'Beautiful Bedroom Makeover', description: 'Comfort and elegance in a personal retreat.', image: extraBedroom },
 ]
 
 const journey = [
@@ -58,6 +66,15 @@ export default function SpaceMakeoverLanding() {
   const [openCommitment, setOpenCommitment] = useState(0)
   const [activeComfort, setActiveComfort] = useState(0)
   const [activeSlide, setActiveSlide] = useState(0)
+
+  // VASUPRIY_SPACE_MAKEOVER_AUTOPLAY_2S
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveSlide(current => (current + 1) % inclusions.length)
+    }, 2000)
+
+    return () => window.clearInterval(interval)
+  }, [])
 
   useEffect(() => {
     const previousTitle = document.title
