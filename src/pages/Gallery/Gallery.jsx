@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 import { galleryCategories, galleryItems, filterGalleryItems, getPageWindow } from '../../data/galleryItems.js'
-import bannerImage from '../../assets/vasupriy-interior-images-renamed/galleryheader.png'
+const bannerImage = galleryItems[0].image
 import './Gallery.css'
 
 /* One mosaic = 1 feature panel + 4 supporting panels (reference rhythm). */

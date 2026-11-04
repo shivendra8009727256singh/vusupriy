@@ -1,0 +1,1298 @@
+[
+    {
+        "id":  "living-room-1",
+        "title":  "Living Room - Design 1",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-001.png",
+        "imageAlt":  "Living Room interior design reference 1",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-2",
+        "title":  "Living Room - Design 2",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-002.png",
+        "imageAlt":  "Living Room interior design reference 2",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-3",
+        "title":  "Living Room - Design 3",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-003.jpg",
+        "imageAlt":  "Living Room interior design reference 3",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-4",
+        "title":  "Living Room - Design 4",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-004.jpg",
+        "imageAlt":  "Living Room interior design reference 4",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-5",
+        "title":  "Living Room - Design 5",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-005.jpg",
+        "imageAlt":  "Living Room interior design reference 5",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-6",
+        "title":  "Living Room - Design 6",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-006.jpg",
+        "imageAlt":  "Living Room interior design reference 6",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-7",
+        "title":  "Living Room - Design 7",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-007.jpg",
+        "imageAlt":  "Living Room interior design reference 7",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-8",
+        "title":  "Living Room - Design 8",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-008.jpg",
+        "imageAlt":  "Living Room interior design reference 8",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-9",
+        "title":  "Living Room - Design 9",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-009.jpg",
+        "imageAlt":  "Living Room interior design reference 9",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-10",
+        "title":  "Living Room - Design 10",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-010.jpg",
+        "imageAlt":  "Living Room interior design reference 10",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-11",
+        "title":  "Living Room - Design 11",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-011.jpg",
+        "imageAlt":  "Living Room interior design reference 11",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-12",
+        "title":  "Living Room - Design 12",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-012.jpg",
+        "imageAlt":  "Living Room interior design reference 12",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-13",
+        "title":  "Living Room - Design 13",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-013.jpg",
+        "imageAlt":  "Living Room interior design reference 13",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-14",
+        "title":  "Living Room - Design 14",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-014.jpg",
+        "imageAlt":  "Living Room interior design reference 14",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-15",
+        "title":  "Living Room - Design 15",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-015.jpg",
+        "imageAlt":  "Living Room interior design reference 15",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-16",
+        "title":  "Living Room - Design 16",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-016.jpg",
+        "imageAlt":  "Living Room interior design reference 16",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-17",
+        "title":  "Living Room - Design 17",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-017.jpg",
+        "imageAlt":  "Living Room interior design reference 17",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-18",
+        "title":  "Living Room - Design 18",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-018.jpg",
+        "imageAlt":  "Living Room interior design reference 18",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-19",
+        "title":  "Living Room - Design 19",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-019.jpg",
+        "imageAlt":  "Living Room interior design reference 19",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-20",
+        "title":  "Living Room - Design 20",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-020.jpg",
+        "imageAlt":  "Living Room interior design reference 20",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "living-room-21",
+        "title":  "Living Room - Design 21",
+        "category":  "Living Room",
+        "image":  "/images/gallery/space-makeover-client/living-room-021.jpg",
+        "imageAlt":  "Living Room interior design reference 21",
+        "description":  "Interior design inspiration from the supplied Living Room collection."
+    },
+    {
+        "id":  "bedroom-1",
+        "title":  "Bedroom - Design 1",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-001.jpg",
+        "imageAlt":  "Bedroom interior design reference 1",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-2",
+        "title":  "Bedroom - Design 2",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-002.jpg",
+        "imageAlt":  "Bedroom interior design reference 2",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-3",
+        "title":  "Bedroom - Design 3",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-003.jpg",
+        "imageAlt":  "Bedroom interior design reference 3",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-4",
+        "title":  "Bedroom - Design 4",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-004.jpg",
+        "imageAlt":  "Bedroom interior design reference 4",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-5",
+        "title":  "Bedroom - Design 5",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-005.jpg",
+        "imageAlt":  "Bedroom interior design reference 5",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-6",
+        "title":  "Bedroom - Design 6",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-006.jpg",
+        "imageAlt":  "Bedroom interior design reference 6",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-7",
+        "title":  "Bedroom - Design 7",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-007.jpg",
+        "imageAlt":  "Bedroom interior design reference 7",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-8",
+        "title":  "Bedroom - Design 8",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-008.jpg",
+        "imageAlt":  "Bedroom interior design reference 8",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-9",
+        "title":  "Bedroom - Design 9",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-009.jpg",
+        "imageAlt":  "Bedroom interior design reference 9",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-10",
+        "title":  "Bedroom - Design 10",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-010.jpg",
+        "imageAlt":  "Bedroom interior design reference 10",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-11",
+        "title":  "Bedroom - Design 11",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-011.jpg",
+        "imageAlt":  "Bedroom interior design reference 11",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-12",
+        "title":  "Bedroom - Design 12",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-012.jpg",
+        "imageAlt":  "Bedroom interior design reference 12",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "bedroom-13",
+        "title":  "Bedroom - Design 13",
+        "category":  "Bedroom",
+        "image":  "/images/gallery/space-makeover-client/bedroom-013.jpg",
+        "imageAlt":  "Bedroom interior design reference 13",
+        "description":  "Interior design inspiration from the supplied Bedroom collection."
+    },
+    {
+        "id":  "kitchen-1",
+        "title":  "Kitchen - Design 1",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-001.png",
+        "imageAlt":  "Kitchen interior design reference 1",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-2",
+        "title":  "Kitchen - Design 2",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-002.jpg",
+        "imageAlt":  "Kitchen interior design reference 2",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-3",
+        "title":  "Kitchen - Design 3",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-003.jpg",
+        "imageAlt":  "Kitchen interior design reference 3",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-4",
+        "title":  "Kitchen - Design 4",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-004.jpg",
+        "imageAlt":  "Kitchen interior design reference 4",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-5",
+        "title":  "Kitchen - Design 5",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-005.jpg",
+        "imageAlt":  "Kitchen interior design reference 5",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-6",
+        "title":  "Kitchen - Design 6",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-006.jpg",
+        "imageAlt":  "Kitchen interior design reference 6",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-7",
+        "title":  "Kitchen - Design 7",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-007.jpg",
+        "imageAlt":  "Kitchen interior design reference 7",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-8",
+        "title":  "Kitchen - Design 8",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-008.jpg",
+        "imageAlt":  "Kitchen interior design reference 8",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-9",
+        "title":  "Kitchen - Design 9",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-009.jpg",
+        "imageAlt":  "Kitchen interior design reference 9",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-10",
+        "title":  "Kitchen - Design 10",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-010.jpg",
+        "imageAlt":  "Kitchen interior design reference 10",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-11",
+        "title":  "Kitchen - Design 11",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-011.jpg",
+        "imageAlt":  "Kitchen interior design reference 11",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-12",
+        "title":  "Kitchen - Design 12",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-012.jpg",
+        "imageAlt":  "Kitchen interior design reference 12",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-13",
+        "title":  "Kitchen - Design 13",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-013.jpg",
+        "imageAlt":  "Kitchen interior design reference 13",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-14",
+        "title":  "Kitchen - Design 14",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-014.jpg",
+        "imageAlt":  "Kitchen interior design reference 14",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-15",
+        "title":  "Kitchen - Design 15",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-015.jpg",
+        "imageAlt":  "Kitchen interior design reference 15",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-16",
+        "title":  "Kitchen - Design 16",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-016.jpg",
+        "imageAlt":  "Kitchen interior design reference 16",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-17",
+        "title":  "Kitchen - Design 17",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-017.jpg",
+        "imageAlt":  "Kitchen interior design reference 17",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-18",
+        "title":  "Kitchen - Design 18",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-018.jpg",
+        "imageAlt":  "Kitchen interior design reference 18",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-19",
+        "title":  "Kitchen - Design 19",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-019.jpg",
+        "imageAlt":  "Kitchen interior design reference 19",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-20",
+        "title":  "Kitchen - Design 20",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-020.jpg",
+        "imageAlt":  "Kitchen interior design reference 20",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-21",
+        "title":  "Kitchen - Design 21",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-021.jpg",
+        "imageAlt":  "Kitchen interior design reference 21",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-22",
+        "title":  "Kitchen - Design 22",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-022.jpg",
+        "imageAlt":  "Kitchen interior design reference 22",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-23",
+        "title":  "Kitchen - Design 23",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-023.jpg",
+        "imageAlt":  "Kitchen interior design reference 23",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "kitchen-24",
+        "title":  "Kitchen - Design 24",
+        "category":  "Kitchen",
+        "image":  "/images/gallery/space-makeover-client/kitchen-024.jpg",
+        "imageAlt":  "Kitchen interior design reference 24",
+        "description":  "Interior design inspiration from the supplied Kitchen collection."
+    },
+    {
+        "id":  "washroom-1",
+        "title":  "Washroom - Design 1",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-001.jpg",
+        "imageAlt":  "Washroom interior design reference 1",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-2",
+        "title":  "Washroom - Design 2",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-002.jpg",
+        "imageAlt":  "Washroom interior design reference 2",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-3",
+        "title":  "Washroom - Design 3",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-003.jpg",
+        "imageAlt":  "Washroom interior design reference 3",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-4",
+        "title":  "Washroom - Design 4",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-004.jpg",
+        "imageAlt":  "Washroom interior design reference 4",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-5",
+        "title":  "Washroom - Design 5",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-005.jpg",
+        "imageAlt":  "Washroom interior design reference 5",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-6",
+        "title":  "Washroom - Design 6",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-006.jpg",
+        "imageAlt":  "Washroom interior design reference 6",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-7",
+        "title":  "Washroom - Design 7",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-007.jpg",
+        "imageAlt":  "Washroom interior design reference 7",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-8",
+        "title":  "Washroom - Design 8",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-008.jpg",
+        "imageAlt":  "Washroom interior design reference 8",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-9",
+        "title":  "Washroom - Design 9",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-009.jpg",
+        "imageAlt":  "Washroom interior design reference 9",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-10",
+        "title":  "Washroom - Design 10",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-010.jpg",
+        "imageAlt":  "Washroom interior design reference 10",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-11",
+        "title":  "Washroom - Design 11",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-011.jpg",
+        "imageAlt":  "Washroom interior design reference 11",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-12",
+        "title":  "Washroom - Design 12",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-012.jpg",
+        "imageAlt":  "Washroom interior design reference 12",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-13",
+        "title":  "Washroom - Design 13",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-013.jpg",
+        "imageAlt":  "Washroom interior design reference 13",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-14",
+        "title":  "Washroom - Design 14",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-014.jpg",
+        "imageAlt":  "Washroom interior design reference 14",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "washroom-15",
+        "title":  "Washroom - Design 15",
+        "category":  "Washroom",
+        "image":  "/images/gallery/space-makeover-client/washroom-015.jpg",
+        "imageAlt":  "Washroom interior design reference 15",
+        "description":  "Interior design inspiration from the supplied Washroom collection."
+    },
+    {
+        "id":  "office-1",
+        "title":  "Office - Design 1",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-001.png",
+        "imageAlt":  "Office interior design reference 1",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-2",
+        "title":  "Office - Design 2",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-002.png",
+        "imageAlt":  "Office interior design reference 2",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-3",
+        "title":  "Office - Design 3",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-003.jpg",
+        "imageAlt":  "Office interior design reference 3",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-4",
+        "title":  "Office - Design 4",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-004.jpg",
+        "imageAlt":  "Office interior design reference 4",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-5",
+        "title":  "Office - Design 5",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-005.jpg",
+        "imageAlt":  "Office interior design reference 5",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-6",
+        "title":  "Office - Design 6",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-006.jpg",
+        "imageAlt":  "Office interior design reference 6",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-7",
+        "title":  "Office - Design 7",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-007.jpg",
+        "imageAlt":  "Office interior design reference 7",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-8",
+        "title":  "Office - Design 8",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-008.jpg",
+        "imageAlt":  "Office interior design reference 8",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-9",
+        "title":  "Office - Design 9",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-009.jpg",
+        "imageAlt":  "Office interior design reference 9",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-10",
+        "title":  "Office - Design 10",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-010.jpg",
+        "imageAlt":  "Office interior design reference 10",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-11",
+        "title":  "Office - Design 11",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-011.jpg",
+        "imageAlt":  "Office interior design reference 11",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-12",
+        "title":  "Office - Design 12",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-012.jpg",
+        "imageAlt":  "Office interior design reference 12",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-13",
+        "title":  "Office - Design 13",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-013.jpg",
+        "imageAlt":  "Office interior design reference 13",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-14",
+        "title":  "Office - Design 14",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-014.jpg",
+        "imageAlt":  "Office interior design reference 14",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-15",
+        "title":  "Office - Design 15",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-015.jpg",
+        "imageAlt":  "Office interior design reference 15",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-16",
+        "title":  "Office - Design 16",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-016.jpg",
+        "imageAlt":  "Office interior design reference 16",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-17",
+        "title":  "Office - Design 17",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-017.jpg",
+        "imageAlt":  "Office interior design reference 17",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-18",
+        "title":  "Office - Design 18",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-018.jpg",
+        "imageAlt":  "Office interior design reference 18",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-19",
+        "title":  "Office - Design 19",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-019.jpg",
+        "imageAlt":  "Office interior design reference 19",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-20",
+        "title":  "Office - Design 20",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-020.jpg",
+        "imageAlt":  "Office interior design reference 20",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-21",
+        "title":  "Office - Design 21",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-021.jpg",
+        "imageAlt":  "Office interior design reference 21",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-22",
+        "title":  "Office - Design 22",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-022.jpg",
+        "imageAlt":  "Office interior design reference 22",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-23",
+        "title":  "Office - Design 23",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-023.jpg",
+        "imageAlt":  "Office interior design reference 23",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-24",
+        "title":  "Office - Design 24",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-024.jpg",
+        "imageAlt":  "Office interior design reference 24",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-25",
+        "title":  "Office - Design 25",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-025.jpg",
+        "imageAlt":  "Office interior design reference 25",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "office-26",
+        "title":  "Office - Design 26",
+        "category":  "Office",
+        "image":  "/images/gallery/space-makeover-client/office-026.jpg",
+        "imageAlt":  "Office interior design reference 26",
+        "description":  "Interior design inspiration from the supplied Office collection."
+    },
+    {
+        "id":  "puja-room-1",
+        "title":  "Puja Room - Design 1",
+        "category":  "Puja Room",
+        "image":  "/images/gallery/space-makeover-client/puja-room-001.jpg",
+        "imageAlt":  "Puja Room interior design reference 1",
+        "description":  "Interior design inspiration from the supplied Puja Room collection."
+    },
+    {
+        "id":  "puja-room-2",
+        "title":  "Puja Room - Design 2",
+        "category":  "Puja Room",
+        "image":  "/images/gallery/space-makeover-client/puja-room-002.jpg",
+        "imageAlt":  "Puja Room interior design reference 2",
+        "description":  "Interior design inspiration from the supplied Puja Room collection."
+    },
+    {
+        "id":  "puja-room-3",
+        "title":  "Puja Room - Design 3",
+        "category":  "Puja Room",
+        "image":  "/images/gallery/space-makeover-client/puja-room-003.jpg",
+        "imageAlt":  "Puja Room interior design reference 3",
+        "description":  "Interior design inspiration from the supplied Puja Room collection."
+    },
+    {
+        "id":  "puja-room-4",
+        "title":  "Puja Room - Design 4",
+        "category":  "Puja Room",
+        "image":  "/images/gallery/space-makeover-client/puja-room-004.jpg",
+        "imageAlt":  "Puja Room interior design reference 4",
+        "description":  "Interior design inspiration from the supplied Puja Room collection."
+    },
+    {
+        "id":  "puja-room-5",
+        "title":  "Puja Room - Design 5",
+        "category":  "Puja Room",
+        "image":  "/images/gallery/space-makeover-client/puja-room-005.jpg",
+        "imageAlt":  "Puja Room interior design reference 5",
+        "description":  "Interior design inspiration from the supplied Puja Room collection."
+    },
+    {
+        "id":  "puja-room-6",
+        "title":  "Puja Room - Design 6",
+        "category":  "Puja Room",
+        "image":  "/images/gallery/space-makeover-client/puja-room-006.jpg",
+        "imageAlt":  "Puja Room interior design reference 6",
+        "description":  "Interior design inspiration from the supplied Puja Room collection."
+    },
+    {
+        "id":  "stairs-1",
+        "title":  "Stairs - Design 1",
+        "category":  "Stairs",
+        "image":  "/images/gallery/space-makeover-client/stairs-001.jpg",
+        "imageAlt":  "Stairs interior design reference 1",
+        "description":  "Interior design inspiration from the supplied Stairs collection."
+    },
+    {
+        "id":  "stairs-2",
+        "title":  "Stairs - Design 2",
+        "category":  "Stairs",
+        "image":  "/images/gallery/space-makeover-client/stairs-002.jpg",
+        "imageAlt":  "Stairs interior design reference 2",
+        "description":  "Interior design inspiration from the supplied Stairs collection."
+    },
+    {
+        "id":  "stairs-3",
+        "title":  "Stairs - Design 3",
+        "category":  "Stairs",
+        "image":  "/images/gallery/space-makeover-client/stairs-003.jpg",
+        "imageAlt":  "Stairs interior design reference 3",
+        "description":  "Interior design inspiration from the supplied Stairs collection."
+    },
+    {
+        "id":  "stairs-4",
+        "title":  "Stairs - Design 4",
+        "category":  "Stairs",
+        "image":  "/images/gallery/space-makeover-client/stairs-004.jpg",
+        "imageAlt":  "Stairs interior design reference 4",
+        "description":  "Interior design inspiration from the supplied Stairs collection."
+    },
+    {
+        "id":  "stairs-5",
+        "title":  "Stairs - Design 5",
+        "category":  "Stairs",
+        "image":  "/images/gallery/space-makeover-client/stairs-005.jpg",
+        "imageAlt":  "Stairs interior design reference 5",
+        "description":  "Interior design inspiration from the supplied Stairs collection."
+    },
+    {
+        "id":  "stairs-6",
+        "title":  "Stairs - Design 6",
+        "category":  "Stairs",
+        "image":  "/images/gallery/space-makeover-client/stairs-006.jpg",
+        "imageAlt":  "Stairs interior design reference 6",
+        "description":  "Interior design inspiration from the supplied Stairs collection."
+    },
+    {
+        "id":  "stairs-7",
+        "title":  "Stairs - Design 7",
+        "category":  "Stairs",
+        "image":  "/images/gallery/space-makeover-client/stairs-007.jpg",
+        "imageAlt":  "Stairs interior design reference 7",
+        "description":  "Interior design inspiration from the supplied Stairs collection."
+    },
+    {
+        "id":  "stairs-8",
+        "title":  "Stairs - Design 8",
+        "category":  "Stairs",
+        "image":  "/images/gallery/space-makeover-client/stairs-008.jpg",
+        "imageAlt":  "Stairs interior design reference 8",
+        "description":  "Interior design inspiration from the supplied Stairs collection."
+    },
+    {
+        "id":  "stairs-9",
+        "title":  "Stairs - Design 9",
+        "category":  "Stairs",
+        "image":  "/images/gallery/space-makeover-client/stairs-009.jpg",
+        "imageAlt":  "Stairs interior design reference 9",
+        "description":  "Interior design inspiration from the supplied Stairs collection."
+    },
+    {
+        "id":  "pergola-1",
+        "title":  "Pergola - Design 1",
+        "category":  "Pergola",
+        "image":  "/images/gallery/space-makeover-client/pergola-001.jpg",
+        "imageAlt":  "Pergola interior design reference 1",
+        "description":  "Interior design inspiration from the supplied Pergola collection."
+    },
+    {
+        "id":  "pergola-2",
+        "title":  "Pergola - Design 2",
+        "category":  "Pergola",
+        "image":  "/images/gallery/space-makeover-client/pergola-002.jpg",
+        "imageAlt":  "Pergola interior design reference 2",
+        "description":  "Interior design inspiration from the supplied Pergola collection."
+    },
+    {
+        "id":  "pergola-3",
+        "title":  "Pergola - Design 3",
+        "category":  "Pergola",
+        "image":  "/images/gallery/space-makeover-client/pergola-003.jpg",
+        "imageAlt":  "Pergola interior design reference 3",
+        "description":  "Interior design inspiration from the supplied Pergola collection."
+    },
+    {
+        "id":  "pergola-4",
+        "title":  "Pergola - Design 4",
+        "category":  "Pergola",
+        "image":  "/images/gallery/space-makeover-client/pergola-004.jpg",
+        "imageAlt":  "Pergola interior design reference 4",
+        "description":  "Interior design inspiration from the supplied Pergola collection."
+    },
+    {
+        "id":  "pergola-5",
+        "title":  "Pergola - Design 5",
+        "category":  "Pergola",
+        "image":  "/images/gallery/space-makeover-client/pergola-005.jpg",
+        "imageAlt":  "Pergola interior design reference 5",
+        "description":  "Interior design inspiration from the supplied Pergola collection."
+    },
+    {
+        "id":  "pergola-6",
+        "title":  "Pergola - Design 6",
+        "category":  "Pergola",
+        "image":  "/images/gallery/space-makeover-client/pergola-006.jpg",
+        "imageAlt":  "Pergola interior design reference 6",
+        "description":  "Interior design inspiration from the supplied Pergola collection."
+    },
+    {
+        "id":  "pergola-7",
+        "title":  "Pergola - Design 7",
+        "category":  "Pergola",
+        "image":  "/images/gallery/space-makeover-client/pergola-007.jpg",
+        "imageAlt":  "Pergola interior design reference 7",
+        "description":  "Interior design inspiration from the supplied Pergola collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-1",
+        "title":  "Cafe / Restaurant / Salon - Design 1",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-001.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 1",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-2",
+        "title":  "Cafe / Restaurant / Salon - Design 2",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-002.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 2",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-3",
+        "title":  "Cafe / Restaurant / Salon - Design 3",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-003.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 3",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-4",
+        "title":  "Cafe / Restaurant / Salon - Design 4",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-004.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 4",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-5",
+        "title":  "Cafe / Restaurant / Salon - Design 5",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-005.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 5",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-6",
+        "title":  "Cafe / Restaurant / Salon - Design 6",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-006.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 6",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-7",
+        "title":  "Cafe / Restaurant / Salon - Design 7",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-007.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 7",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-8",
+        "title":  "Cafe / Restaurant / Salon - Design 8",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-008.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 8",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-9",
+        "title":  "Cafe / Restaurant / Salon - Design 9",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-009.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 9",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-10",
+        "title":  "Cafe / Restaurant / Salon - Design 10",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-010.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 10",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-11",
+        "title":  "Cafe / Restaurant / Salon - Design 11",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-011.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 11",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-12",
+        "title":  "Cafe / Restaurant / Salon - Design 12",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-012.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 12",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-13",
+        "title":  "Cafe / Restaurant / Salon - Design 13",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-013.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 13",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-14",
+        "title":  "Cafe / Restaurant / Salon - Design 14",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-014.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 14",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-15",
+        "title":  "Cafe / Restaurant / Salon - Design 15",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-015.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 15",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-16",
+        "title":  "Cafe / Restaurant / Salon - Design 16",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-016.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 16",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-17",
+        "title":  "Cafe / Restaurant / Salon - Design 17",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-017.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 17",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-18",
+        "title":  "Cafe / Restaurant / Salon - Design 18",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-018.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 18",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-19",
+        "title":  "Cafe / Restaurant / Salon - Design 19",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-019.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 19",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-20",
+        "title":  "Cafe / Restaurant / Salon - Design 20",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-020.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 20",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-21",
+        "title":  "Cafe / Restaurant / Salon - Design 21",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-021.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 21",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-22",
+        "title":  "Cafe / Restaurant / Salon - Design 22",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-022.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 22",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-23",
+        "title":  "Cafe / Restaurant / Salon - Design 23",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-023.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 23",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-24",
+        "title":  "Cafe / Restaurant / Salon - Design 24",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-024.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 24",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-25",
+        "title":  "Cafe / Restaurant / Salon - Design 25",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-025.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 25",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-26",
+        "title":  "Cafe / Restaurant / Salon - Design 26",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-026.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 26",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-27",
+        "title":  "Cafe / Restaurant / Salon - Design 27",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-027.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 27",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-28",
+        "title":  "Cafe / Restaurant / Salon - Design 28",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-028.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 28",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-29",
+        "title":  "Cafe / Restaurant / Salon - Design 29",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-029.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 29",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-30",
+        "title":  "Cafe / Restaurant / Salon - Design 30",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-030.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 30",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-31",
+        "title":  "Cafe / Restaurant / Salon - Design 31",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-031.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 31",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-32",
+        "title":  "Cafe / Restaurant / Salon - Design 32",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-032.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 32",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-33",
+        "title":  "Cafe / Restaurant / Salon - Design 33",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-033.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 33",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-34",
+        "title":  "Cafe / Restaurant / Salon - Design 34",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-034.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 34",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-35",
+        "title":  "Cafe / Restaurant / Salon - Design 35",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-035.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 35",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-36",
+        "title":  "Cafe / Restaurant / Salon - Design 36",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-036.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 36",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-37",
+        "title":  "Cafe / Restaurant / Salon - Design 37",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-037.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 37",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-38",
+        "title":  "Cafe / Restaurant / Salon - Design 38",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-038.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 38",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-39",
+        "title":  "Cafe / Restaurant / Salon - Design 39",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-039.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 39",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-40",
+        "title":  "Cafe / Restaurant / Salon - Design 40",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-040.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 40",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    },
+    {
+        "id":  "cafe-restaurant-salon-41",
+        "title":  "Cafe / Restaurant / Salon - Design 41",
+        "category":  "Cafe / Restaurant / Salon",
+        "image":  "/images/gallery/space-makeover-client/cafe-restaurant-salon-041.jpg",
+        "imageAlt":  "Cafe / Restaurant / Salon interior design reference 41",
+        "description":  "Interior design inspiration from the supplied Cafe / Restaurant / Salon collection."
+    }
+]
