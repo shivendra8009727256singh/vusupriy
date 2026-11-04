@@ -13,7 +13,7 @@ const collections = [
   {
     label: 'Wall Makeover Products',
     description: 'Elevate walls with expressive patterns, refined surfaces and layered finishes.',
-    items: ['Wallpaper', 'Customized Design Wallpaper', 'WPC Panels', '', 'MDF Wall Panels'],
+    items: ['Customized Design Wallpaper', 'WPC Panels', ''],
   },
   {
     label: 'Enlightenment Options',
@@ -27,8 +27,13 @@ const collections = [
   },
 ]
 
+// VASUPRIY_GREEN_ELEMENT_CLIENT_IMAGES_V1
+const greenElementOverrides = {
+  'Vertical Garden': '/images/home/green-element/vertical-garden-client.webp',
+  'Artificial Grass Flooring': '/images/home/green-element/artificial-grass-client.webp',
+}
 const cardsFor = collection => collection.items.flatMap(name => {
-  const image = imagesForProduct(name)[0]
+  const image = greenElementOverrides[name] || imagesForProduct(name)[0]
   return image ? [{ name, image }] : []
 })
 

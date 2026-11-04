@@ -6,7 +6,6 @@ import './SpaceMakeoverIncluded.css'
 const cards = [
   { title: 'Living Room', image: clientGallery['Living room'][0] },
   { title: 'Bedroom', image: clientGallery['Bedroom'][0] },
-  { title: 'Space Planning', image: spacePlanningPhoto },
   { title: 'Kitchen', image: clientGallery['Kitchen'][0] },
   { title: 'Washroom', image: clientGallery['Washroom'][0] },
   { title: 'Office', image: clientGallery['Office'][0] },
@@ -14,7 +13,6 @@ const cards = [
   { title: 'Stairs', image: clientGallery['Stairs'][0] },
   { title: 'Pergola', image: clientGallery['Pergola'][0] },
   { title: 'Cafe / Restaurant / Salon', image: clientGallery['Cafe, Restaurant, Salon'][0] },
-  { title: 'Furnishings', image: clientGallery['Living room'][1] },
 ]
 
 export default function SpaceMakeoverIncluded() {

@@ -26,10 +26,10 @@ export const productCategories = [
   { id: 'walls', name: 'Wall Makeover Products', subtitle: 'Surfaces with a point of view', groups: [
     ['Wallpaper', ['Non-Woven Wallpaper','Customized Design Wallpaper','Fabric Wallpaper']],
     ['Wall Moulding', ['Wall Moulding']],
-    ['Wall Panels', ['WPC Panels','PVC Panels','Charcoal Metallic Panels','3D CNC Cutting Wall Panels','MDF Wall Panels']],
+    ['Wall Panels', ['WPC Panels','PVC Panels','Charcoal Metallic Panels','3D CNC Cutting Wall Panels']],
     ['Sheets', ['Texture Sheet','Fluted Acrylic Sheet','Natural Cork Sheet']],
     ['Concrete Work', ['Concrete Work (Walls & Outer Building Settings)']],
-    ['Tiles & Inlay', ['Mosaic Tiles (Metal & Glass)','3D Self-Adhesive Tiles','Highlighter Tiles','Stone & Inlay Work on Walls']]
+    ['Tiles & Inlay', ['Mosaic Tiles (Metal & Glass)','Highlighter Tiles','Stone & Inlay Work on Walls']]
   ] }
 ]
 export const slugify = name => name.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')

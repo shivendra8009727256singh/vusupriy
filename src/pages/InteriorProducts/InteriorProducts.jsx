@@ -36,13 +36,13 @@ const collections = [
 
     { title: 'Wall Moulding', items: ['Wall Moulding'] },
 
-    { title: 'Wall Panels', items: ['WPC Panels', 'PVC Panels', 'Charcoal Metallic Panels', '3D CNC Cutting Wall Panels', 'MDF Wall Panels'] },
+    { title: 'Wall Panels', items: ['WPC Panels', 'PVC Panels', 'Charcoal Metallic Panels', '3D CNC Cutting Wall Panels'] },
 
     { title: 'Sheets', items: ['Texture Sheet', 'Fluted Acrylic Sheet', 'Natural Cork Sheet'] },
 
     { title: 'Concrete Work', items: ['Concrete Work (Walls & Outer Building Settings)'] },
 
-    { title: 'Tiles & Inlay', items: ['Mosaic Tiles (Metal & Glass)', '3D Self-Adhesive Tiles', 'Highlighter Tiles', 'Stone & Inlay Work on Walls'] },
+    { title: 'Tiles & Inlay', items: ['Mosaic Tiles (Metal & Glass)', 'Highlighter Tiles', 'Stone & Inlay Work on Walls'] },
 
   ] },
 

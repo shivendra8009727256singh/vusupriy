@@ -157,3 +157,120 @@
     transition: none;
   }
 }
+
+/* VASUPRIY_NINE_EQUAL_CATEGORY_CARDS_V1 */
+
+/* Desktop: three equal columns, three equal rows */
+.vsm-included-ref .vsm-included-ref__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: none;
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
+    gap: 12px;
+}
+
+/* Remove all previous uneven masonry spans */
+.vsm-included-ref .vsm-included-ref__card,
+.vsm-included-ref .vsm-included-ref__card:nth-child(5n + 1),
+.vsm-included-ref .vsm-included-ref__card:nth-child(5n + 2),
+.vsm-included-ref .vsm-included-ref__card:nth-child(5n + 4) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    aspect-ratio: 4 / 3;
+    min-width: 0;
+    min-height: 0;
+    background: #e9e5df;
+}
+
+/* Display the complete image without cropping */
+.vsm-included-ref .vsm-included-ref__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    object-position: center;
+    background: #e9e5df;
+}
+
+/* Keep category names visible */
+.vsm-included-ref .vsm-included-ref__card h3 {
+    z-index: 2;
+    color: #fff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .7);
+}
+
+/* Tablet: two equal columns */
+@media (max-width: 900px) {
+    .vsm-included-ref .vsm-included-ref__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+}
+
+/* Mobile: two equal columns */
+@media (max-width: 600px) {
+    .vsm-included-ref .vsm-included-ref__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .vsm-included-ref .vsm-included-ref__card {
+        aspect-ratio: 4 / 5;
+    }
+}
+
+/* Small phones: one full-width card */
+@media (max-width: 420px) {
+    .vsm-included-ref .vsm-included-ref__grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .vsm-included-ref .vsm-included-ref__card {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+
+/* VASUPRIY_NINE_CARDS_EDGE_TO_EDGE_V1 */
+
+/* All nine cards remain equal sized */
+.vsm-included-ref .vsm-included-ref__card {
+    position: relative;
+    overflow: hidden;
+    background: #e9e5df;
+}
+
+/* Remove empty space around photos */
+.vsm-included-ref .vsm-included-ref__card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    object-position: center center !important;
+}
+
+/* Maintain smooth image hover */
+.vsm-included-ref .vsm-included-ref__card:hover img {
+    transform: scale(1.045);
+}
+
+/* Preserve readable category labels */
+.vsm-included-ref .vsm-included-ref__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 55%,
+        rgba(0, 0, 0, .65) 100%
+    );
+    pointer-events: none;
+}
+
+.vsm-included-ref .vsm-included-ref__card h3 {
+    position: absolute;
+    z-index: 2;
+    bottom: 15px;
+    left: 10px;
+    right: 10px;
+    color: #fff !important;
+}
