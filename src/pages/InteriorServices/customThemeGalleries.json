@@ -1,0 +1,178 @@
+{
+    "fountain":  {
+                     "title":  "Fountain",
+                     "blurb":  "Decorative water features that add movement, calm and a considered focal point to a space.",
+                     "applications":  [
+                                          "Courtyards and garden settings",
+                                          "Entrance features",
+                                          "Indoor decorative corners"
+                                      ],
+                     "notes":  "Discuss dimensions, water circulation, maintenance and electrical requirements before installation.",
+                     "images":  [
+                                    "/images/services-client/custom-theme/galleries/fountain/fountain-01.jpeg",
+                                    "/images/services-client/custom-theme/galleries/fountain/fountain-02.jpeg",
+                                    "/images/services-client/custom-theme/galleries/fountain/fountain-03.jpeg",
+                                    "/images/services-client/custom-theme/galleries/fountain/fountain-04.jpeg",
+                                    "/images/services-client/custom-theme/galleries/fountain/fountain-05.jpeg",
+                                    "/images/services-client/custom-theme/galleries/fountain/fountain-06.jpeg",
+                                    "/images/services-client/custom-theme/galleries/fountain/fountain-07.jpeg",
+                                    "/images/services-client/custom-theme/galleries/fountain/fountain-08.jpeg",
+                                    "/images/services-client/custom-theme/galleries/fountain/fountain-09.jpeg"
+                                ]
+                 },
+    "furnishing":  {
+                       "title":  "Furnishing",
+                       "blurb":  "Layered fabrics, textures and soft furnishings selected to complement your interiors.",
+                       "applications":  [
+                                            "Living and bedroom textiles",
+                                            "Soft furnishing coordination",
+                                            "Fabric and colour selections"
+                                        ],
+                       "notes":  "Fabric, finish, dimensions and care specifications depend on the selected products.",
+                       "images":  [
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-01.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-02.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-03.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-04.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-05.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-06.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-07.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-08.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-09.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-10.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-11.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-12.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-13.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-14.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-15.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-16.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-17.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-18.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-19.jpeg",
+                                      "/images/services-client/custom-theme/galleries/furnishing/furnishing-20.jpeg"
+                                  ]
+                   },
+    "hdhmr-panel":  {
+                        "title":  "HDHMR Panel",
+                        "blurb":  "Explore decorative panel ideas and carefully coordinated interior finishes.",
+                        "applications":  [
+                                             "Wall feature concepts",
+                                             "Cabinetry and furniture details",
+                                             "Bespoke panel finishes"
+                                         ],
+                        "notes":  "Panel grade, thickness, coating and suitability for your application should be confirmed with the team.",
+                        "images":  [
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-01.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-02.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-03.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-04.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-05.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-06.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-07.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-08.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-09.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-10.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-11.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-12.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-13.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-14.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-15.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-16.jpeg",
+                                       "/images/services-client/custom-theme/galleries/hdhmr-panel/hdhmr-panel-17.jpeg"
+                                   ]
+                    },
+    "murals":  {
+                   "title":  "Murals",
+                   "blurb":  "Artistic murals with personality, atmosphere and visual storytelling.",
+                   "applications":  [
+                                        "Statement walls",
+                                        "Residential living spaces",
+                                        "Commercial feature walls"
+                                    ],
+                   "notes":  "Artwork scale, surface preparation and installation method depend on the chosen concept.",
+                   "images":  [
+                                  "/images/services-client/custom-theme/galleries/murals/murals-01.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-02.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-03.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-04.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-05.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-06.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-07.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-08.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-09.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-10.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-11.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-12.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-13.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-14.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-15.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-16.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-17.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-18.jpeg",
+                                  "/images/services-client/custom-theme/galleries/murals/murals-19.jpeg"
+                              ]
+               },
+    "rugs":  {
+                 "title":  "Rugs",
+                 "blurb":  "Thoughtful rugs that bring texture, warmth and balance to a room.",
+                 "applications":  [
+                                      "Living room layering",
+                                      "Bedrooms and lounge areas",
+                                      "Texture and colour coordination"
+                                  ],
+                 "notes":  "Material composition, sizing, pile and maintenance depend on the selected rug.",
+                 "images":  [
+                                "/images/services-client/custom-theme/galleries/rugs/rugs-01.jpeg",
+                                "/images/services-client/custom-theme/galleries/rugs/rugs-02.jpeg",
+                                "/images/services-client/custom-theme/galleries/rugs/rugs-03.jpeg",
+                                "/images/services-client/custom-theme/galleries/rugs/rugs-04.jpeg",
+                                "/images/services-client/custom-theme/galleries/rugs/rugs-05.jpeg"
+                            ]
+             },
+    "hand-painting-on-wall":  {
+                                  "title":  "Hand Painting on Wall",
+                                  "blurb":  "Made-for-your-space wall art, painted with attention to composition and detail.",
+                                  "applications":  [
+                                                       "Custom artistic feature walls",
+                                                       "Living and hospitality spaces",
+                                                       "Personalised wall designs"
+                                                   ],
+                                  "notes":  "Artwork, wall preparation, technique and completion time are discussed for each project.",
+                                  "images":  [
+                                                 "/images/services-client/custom-theme/galleries/hand-painting-on-wall/hand-painting-on-wall-01.jpeg",
+                                                 "/images/services-client/custom-theme/galleries/hand-painting-on-wall/hand-painting-on-wall-02.jpeg",
+                                                 "/images/services-client/custom-theme/galleries/hand-painting-on-wall/hand-painting-on-wall-03.jpeg",
+                                                 "/images/services-client/custom-theme/galleries/hand-painting-on-wall/hand-painting-on-wall-04.jpeg",
+                                                 "/images/services-client/custom-theme/galleries/hand-painting-on-wall/hand-painting-on-wall-05.jpeg",
+                                                 "/images/services-client/custom-theme/galleries/hand-painting-on-wall/hand-painting-on-wall-06.jpeg"
+                                             ]
+                              },
+    "wallpaper":  {
+                      "title":  "Wallpaper",
+                      "blurb":  "Expressive wallpaper patterns and finishes that transform everyday walls.",
+                      "applications":  [
+                                           "Accent walls",
+                                           "Full-room decorative finishes",
+                                           "Pattern and texture coordination"
+                                       ],
+                      "notes":  "Wallpaper material, wall condition, repeat pattern and installation details depend on selection.",
+                      "images":  [
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-01.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-02.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-03.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-04.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-05.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-06.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-07.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-08.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-09.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-10.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-11.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-12.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-13.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-14.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-15.jpeg",
+                                     "/images/services-client/custom-theme/galleries/wallpaper/wallpaper-16.jpeg"
+                                 ]
+                  }
+}

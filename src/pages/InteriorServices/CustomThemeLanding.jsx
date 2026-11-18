@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './CustomThemeLanding.css'
+import './CustomThemeGallery.css'
+import customThemeGalleries from './customThemeGalleries.json'
 
 /* Resolve existing project assets by filename, independent of their collection folder. */
 const imageFiles = import.meta.glob('../../assets/images/**/*.{png,jpg,jpeg,webp,avif}', {
@@ -40,7 +42,7 @@ const collections = [
   },
   {
     id: '03',
-    title: 'HDMR Panel',
+    title: 'HDHMR Panel',
     tag: 'Custom panel concepts',
     image: '/images/services/custom-theme/hdmr-panel.webp',
     description: 'Explore refined decorative panel concepts, textures and coordinated interior finishes.',
@@ -61,10 +63,10 @@ const collections = [
   },
   {
     id: '06',
-    title: 'Wall Hanging',
-    tag: 'Decorative accents',
+    title: 'Hand Painting on Wall',
+    tag: 'Art made for your walls',
     image: '/images/services/custom-theme/wall-hanging.webp',
-    description: 'Explore decorative wall-art references for expressive interior accents.',
+    description: 'Personalised hand-painted wall artwork with an expressive sense of character.',
   },
   {
     id: '07',
@@ -74,6 +76,7 @@ const collections = [
     description: 'Customized wallpaper patterns and finishes that transform everyday walls.',
   },
 ]
+const categorySlug = (title) => title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const steps = [
   {
     id: '01',
@@ -146,10 +149,10 @@ export default function CustomThemeLanding() {
           <div className="vct-heading-row"><div><p className="vct-kicker">01 / OUR COLLECTIONS</p><h2 id="vct-collections-title">What we <em>customize.</em></h2></div><p>Seven considered ways to make your interior unmistakably yours.</p></div>
           <div className="vct-collection-grid">
             {collections.map((item) => (
-              <article key={item.id} className="vct-collection-card">
-                <div className="vct-collection-image"><img src={item.image} alt={`${item.title} interior design example`} loading="lazy" decoding="async" /><span className="vct-collection-number">{item.id} / {String(collections.length).padStart(2, '0')}</span></div>
+              <Link key={item.id} to={`/services/customized-theme-products/${categorySlug(item.title)}`} className="vct-collection-card vct-collection-card--link">
+                <div className="vct-collection-image"><img src={customThemeGalleries[categorySlug(item.title)]?.images?.[0] || item.image} alt={`${item.title} interior design example`} loading="lazy" decoding="async" /><span className="vct-collection-number">{item.id} / {String(collections.length).padStart(2, '0')}</span></div>
                 <div className="vct-collection-copy"><p>{item.tag}</p><h3>{item.title}</h3><span>{item.description}</span></div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
