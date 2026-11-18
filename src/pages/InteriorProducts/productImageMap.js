@@ -37,6 +37,8 @@ export const productImageMap = {
   'Wall Lamps': productImages.wallLamps,
   'Down Light': productImages.downLights,
   'Focus Light': productImages.focusLights,
+  'Linen Lights': productImages.linenLights,
+  'Bamboo Light': productImages.bambooLights,
 }
 
 export const imagesForProduct = name => (productImageMap[name] || []).filter(Boolean)

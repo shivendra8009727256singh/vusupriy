@@ -21,7 +21,7 @@ export const productCategories = [
     ['Green Living', ['Artificial Grass Flooring','Vertical Garden','Artificial Plant and Tree','Natural Garden']]
   ] },
   { id: 'lighting', name: 'Enlightenment Options', subtitle: 'Create an atmosphere worth remembering', groups: [
-    ['Indoor & Outdoor Lights', ['Chandeliers','Garden Light','Ceiling Light','Pole Light','Wall Lamps','Down Light','Focus Light']]
+    ['Indoor & Outdoor Lights', ['Chandeliers','Garden Light','Ceiling Light','Pole Light','Wall Lamps','Down Light','Focus Light','Linen Lights','Bamboo Light']]
   ] },
   { id: 'walls', name: 'Wall Makeover Products', subtitle: 'Surfaces with a point of view', groups: [
     ['Wallpaper', ['Non-Woven Wallpaper','Customized Design Wallpaper','Fabric Wallpaper']],

@@ -1,4 +1,6 @@
 {
+  "linenLights": ["/images/lighting/linen-lights/linen-light-01.jpeg","/images/lighting/linen-lights/linen-light-02.jpeg","/images/lighting/linen-lights/linen-light-03.jpeg","/images/lighting/linen-lights/linen-light-04.jpeg","/images/lighting/linen-lights/linen-light-05.jpeg"],
+  "bambooLights": ["/images/lighting/bamboo-light/bamboo-light-01.jpeg","/images/lighting/bamboo-light/bamboo-light-02.jpeg","/images/lighting/bamboo-light/bamboo-light-03.jpeg","/images/lighting/bamboo-light/bamboo-light-04.jpeg"],
     "laminate":  [
                      "/images/product-showroom/laminate-01.webp",
                      "/images/product-showroom/laminate-02.webp",

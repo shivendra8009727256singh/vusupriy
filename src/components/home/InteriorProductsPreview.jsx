@@ -18,7 +18,7 @@ const collections = [
   {
     label: 'Enlightenment Options',
     description: 'Lighting selections that add warmth, ambience and definition to every room.',
-    items: ['Chandeliers', 'Ceiling Light', 'Wall Lamps', 'Garden Light', 'Down Light'],
+    items: ['Chandeliers', 'Ceiling Light', 'Wall Lamps', 'Garden Light', 'Down Light', 'Linen Lights', 'Bamboo Light'],
   },
   {
     label: 'Green Element',

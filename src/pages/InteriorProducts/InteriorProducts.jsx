@@ -26,7 +26,7 @@ const collections = [
 
   { id: 'lighting', number: '03', title: 'Enlightenment Options', subtitle: 'A new perspective on light', label: 'THE ART OF ILLUMINATION', description: 'Light creates mood, rhythm and atmosphere. Explore thoughtful options for interiors and outdoor spaces.', groups: [
 
-    { title: 'Indoor & Outdoor Lights', items: ['Chandeliers', 'Garden Light', 'Ceiling Light', 'Pole Light', 'Wall Lamps', 'Down Light', 'Focus Light'] },
+    { title: 'Indoor & Outdoor Lights', items: ['Chandeliers', 'Garden Light', 'Ceiling Light', 'Pole Light', 'Wall Lamps', 'Down Light', 'Focus Light', 'Linen Lights', 'Bamboo Light'] },
 
   ] },
 
@@ -207,6 +207,8 @@ const lightingProducts = [
   { name: 'Garden Light', key: 'gardenLights' },
 
   { name: 'Pole Light', key: 'poleLights' },
+  { name: 'Linen Lights', key: 'linenLights' },
+  { name: 'Bamboo Light', key: 'bambooLights' },
 
 ]
 
