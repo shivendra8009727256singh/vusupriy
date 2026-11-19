@@ -37,7 +37,7 @@ const greenElementOverrides = {
 const wallProductImages = {
   'Concrete Work (Walls & Outer Building Settings)': concreteImages['Concrete Work (Walls & Outer Building Settings)']?.[0],
   'Texture Sheet': sheetImages['Texture Sheet']?.[0],
-  'HDHMR Panel': imagesForProduct('3D CNC Cutting Wall Panels')[0],
+  'HDHMR Panel': '/images/wall-makeover/hdhmr-panel-reference-20261119.jpeg',
 }
 
 const wallProductLinks = {

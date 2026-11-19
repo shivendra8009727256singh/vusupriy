@@ -12,7 +12,7 @@ export const productImageMap = {
   'Charcoal Metallic Panels': ['/images/wall-makeover/wall-reference-06.jpg'],
   '3D CNC Cutting Wall Panels': ['/images/wall-makeover/wall-reference-07.jpg'],
   'FRP Wall Panels': ['/images/wall-makeover/wall-reference-08.jpg'],
-  'Texture Sheet': ['/images/wall-makeover/wall-reference-10.jpg'],
+  'Texture Sheet': ['/images/wall-makeover/texture-sheet-reference-20261119.jpeg'],
   'Fluted Acrylic Sheet': ['/images/wall-makeover/wall-reference-11.jpg'],
   'Natural Cork Sheet': ['/images/products/walls/natural-cork-sheet/cork-sheet-01.png', '/images/products/walls/natural-cork-sheet/cork-sheet-02.png', '/images/products/walls/natural-cork-sheet/cork-sheet-03.png', '/images/products/walls/natural-cork-sheet/cork-sheet-04.jpg', '/images/products/walls/natural-cork-sheet/cork-sheet-05.jpg', '/images/products/walls/natural-cork-sheet/cork-sheet-06.jpg', '/images/products/walls/natural-cork-sheet/cork-sheet-07.jpg'],
   'Concrete Work (Walls & Outer Building Settings)': ['/images/wall-makeover/wall-reference-13.jpg'],
