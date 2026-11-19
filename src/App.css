@@ -17952,3 +17952,47 @@ body.is-loading {
 }
 
 /* VASUPRIY_SERVICES_REMOVE_IMAGE_OVERLAYS_END */
+
+/* VASUPRIY_HOME_SERVICES_FINAL_IVORY_2026 */
+
+/* Final warm ivory background for Home Services */
+html body .site section#home-services.home-services {
+  background:
+    radial-gradient(
+      ellipse at 92% 12%,
+      rgba(202, 166, 112, 0.15),
+      transparent 43%
+    ),
+    radial-gradient(
+      ellipse at 6% 95%,
+      rgba(12, 76, 83, 0.055),
+      transparent 44%
+    ),
+    linear-gradient(
+      145deg,
+      #FBF8F3 0%,
+      #F5F0E9 52%,
+      #FAF7F2 100%
+    ) !important;
+
+  color: #073E46 !important;
+}
+
+html body .site section#home-services.home-services
+.home-services-heading-copy h2 {
+  color: #073E46 !important;
+}
+
+html body .site section#home-services.home-services
+.home-services-heading-copy h2 em {
+  color: #A47B3C !important;
+}
+
+html body .site section#home-services.home-services
+.home-services-heading-copy > p,
+html body .site section#home-services.home-services
+.home-services-description p {
+  color: #65716E !important;
+}
+
+/* END VASUPRIY_HOME_SERVICES_FINAL_IVORY_2026 */
