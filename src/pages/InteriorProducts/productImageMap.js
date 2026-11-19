@@ -22,7 +22,7 @@ export const productImageMap = {
   'Stone & Inlay Work on Walls': ['/images/inlay-stone-client/inlay-stone-01.webp'],
   'European Laminate': productImages.laminate,
   'SPC Flooring': productImages.spc,
-  'Wooden Deck Flooring': productImages.wood,
+  'Wooden Flooring': productImages.wood,
   'WPC Deck Flooring': productImages.deck,
   'Carpet Tiles Flooring': ['/images/carpet-tiles-client/carpet-tile-01.webp'],
   'Artificial Grass Flooring': productImages.green.slice(0, 1),
