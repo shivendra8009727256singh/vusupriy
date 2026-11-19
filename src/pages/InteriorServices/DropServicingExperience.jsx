@@ -146,7 +146,7 @@ function PhotoSlides({ images, title }) {
 export function DropServicingLanding() {
   useEffect(() => {
     const before = document.title
-    document.title = 'Drop Servicing & Installation | Vasupriy Interiovilla'
+    document.title='Drop Servicing & Installation | Vasupriy Interiovilla'
     return () => { document.title = before }
   }, [])
 

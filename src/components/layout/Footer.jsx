@@ -169,7 +169,7 @@ function Footer() {
 
                 <Link to="/gallery">
                   <span>06</span>
-                  Gallery
+                  Design Idea
                 </Link>
 
                 <Link to="/blog">

@@ -127,7 +127,7 @@ function Contact() {
   useEffect(() => {
     mountedRef.current = true;
     const previousTitle = document.title;
-    document.title = "Contact Us | Vasupriy Interiovilla";
+    document.title="Contact Us | Vasupriy Interiovilla";
     const root = rootRef.current;
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     let observer;

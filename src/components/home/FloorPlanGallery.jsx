@@ -16,7 +16,7 @@ export default function FloorPlanGallery() {
   return (
     <section
       className="floor-plan-gallery"
-      aria-label="3D interior floor plan gallery"
+      aria-label="3D interior floor plan design ideas"
       data-scroll-section
     >
       {/* <div className="floor-plan-gallery-viewport">

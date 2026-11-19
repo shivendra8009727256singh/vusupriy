@@ -117,7 +117,7 @@ export default function CustomThemeLanding() {
 
   useEffect(() => {
     const old = document.title
-    document.title = 'Customized & Theme-Based Products | Vasupriy Interiovilla'
+    document.title='Customized & Theme-Based Products | Vasupriy Interiovilla'
     return () => { document.title = old }
   }, [])
 

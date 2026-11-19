@@ -92,7 +92,7 @@ export default function SpaceMakeoverLanding() {
 
   useEffect(() => {
     const previousTitle = document.title
-    document.title = 'Space Designing & Makeover | Vasupriy Interiovilla'
+    document.title='Space Designing & Makeover | Vasupriy Interiovilla'
     return () => { document.title = previousTitle }
   }, [])
 

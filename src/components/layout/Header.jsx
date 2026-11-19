@@ -67,7 +67,7 @@ const navigation = [
 
   { label: 'Projects', path: '/projects' },
 
-  { label: 'Gallery', path: '/gallery' },
+  { label: 'Design Idea', path: '/gallery' },
 
   { label: 'Blog', path: '/blog' },
 

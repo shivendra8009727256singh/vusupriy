@@ -134,7 +134,7 @@ function Gallery() {
   /* Page title */
   useEffect(() => {
     const previousTitle = document.title
-    document.title = 'Our Gallery | Vasupriy Interiovilla'
+    document.title='Our Design Idea | Vasupriy Interiovilla'
     return () => {
       document.title = previousTitle
     }
@@ -274,13 +274,13 @@ function Gallery() {
       {/* ============ SECTION 3 + 4 — FILTERS + GRID + PAGINATION ============ */}
       <section
         className="site-container gallery-collection"
-        aria-label="Gallery collection"
+        aria-label="Design Idea collection"
         ref={collectionRef}
       >
         <div
           className="gallery-filters"
           role="group"
-          aria-label="Filter gallery by category"
+          aria-label="Filter design ideas by category"
           data-gallery-reveal
         >
           {galleryCategories.map((category) => (
@@ -319,7 +319,7 @@ function Gallery() {
             {pageCount > 1 && (
               <nav
                 className="gallery-pagination"
-                aria-label="Gallery pages"
+                aria-label="Design Idea pages"
               >
                 <button
                   type="button"

@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './HomeGallery.css'
 
 // VASUPRIY_HOME_GALLERY_TO_EXPERTISE_V1
@@ -29,7 +29,7 @@ function GalleryTrack({ items, direction = 'left' }) {
             to="/gallery"
             className={`antra-gallery-item antra-gallery-item--${item.size}`}
             key={`${item.id}-${index}`}
-            aria-label={`View gallery: ${item.title}`}
+            aria-label={`View design idea: ${item.title}`}
           >
             <img
               src={item.image}
