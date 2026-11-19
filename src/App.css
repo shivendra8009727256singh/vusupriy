@@ -15892,7 +15892,7 @@ body {
 @media (max-width: 767px) {
   .vasu-service-content .vasu-service-inline-details { margin-top: 18px; }
 }
-/* VASU_DYNAMIC_SIDEBAR_GAP_V1 â€” only fills a genuine desktop sidebar gap */
+/* VASU_DYNAMIC_SIDEBAR_GAP_V1 — only fills a genuine desktop sidebar gap */
 @media (min-width: 1025px) {
   .vasu-service-page .vasu-service-sidebar { align-self: start; display: flex; flex-direction: column; gap: 26px; min-width: 0; }
   .vasu-service-page .vasu-service-gap-filler {

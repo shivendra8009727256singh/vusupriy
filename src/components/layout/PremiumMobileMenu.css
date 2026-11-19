@@ -1,4 +1,4 @@
-/* Vasupriy â€” premium mobile/tablet navigation. Scoped to drawer only. */
+/* Vasupriy — premium mobile/tablet navigation. Scoped to drawer only. */
 @media (max-width: 1100px) {
   .mobile-menu { z-index: 9000; }
   .mobile-menu-backdrop { background: rgba(9, 20, 22, .69); -webkit-backdrop-filter: blur(9px); backdrop-filter: blur(9px); }

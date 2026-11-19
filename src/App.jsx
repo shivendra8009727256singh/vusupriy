@@ -30,6 +30,7 @@ function App() {
 
       <Routes>
         {/* Existing individual product detail pages */}
+        <Route path="/products/flooring/wpc-deck-flooring" element={<Navigate to="/products/flooring/deck-flooring" replace />} />
         <Route
           path="/products/:category/:slug"
           element={<ProductDetail />}

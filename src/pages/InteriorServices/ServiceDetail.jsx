@@ -1785,7 +1785,7 @@ function ServiceDetail() {
         </div>
         {/* VASUPRIY FULL WIDTH SERVICE DETAILS V1 */}
         <div className="vasu-service-container vasu-service-fullwidth">
-          {/* VASUPRIY_SPACE_PDF_CONTENT_V1 â€” exact text from supplied Space Designing & Makeover PDF */}
+          {/* VASUPRIY_SPACE_PDF_CONTENT_V1 — exact text from supplied Space Designing & Makeover PDF */}
           {slug === 'space-designing-makeover' && (
             <div className="vasu-pdf-service">
               {/* VASUPRIY_SPACE_DUPLICATE_CLEANUP_V1: Services are presented in the interactive sidebar and selected service article. */}
@@ -1799,7 +1799,7 @@ function ServiceDetail() {
                     ['Seamless Execution', 'On-ground team handling the entire room transformation with zero hassle.'],
                   ].map(([title, detail], index) => (
                     <div className="vasu-pdf-step vasu-space-illustrated-card" key={title}>
-                      <img className="vasu-space-card-photo" src={['/images/services/process/01-vision-assessment.webp', '/images/services/process/02-layout-concept-design.webp', '/images/services/process/03-material-finalization.webp', '/images/services/process/04-seamless-execution.webp'][index]} alt={`${title} â€” interior project inspiration`} loading="lazy" decoding="async" />
+                      <img className="vasu-space-card-photo" src={['/images/services/process/01-vision-assessment.webp', '/images/services/process/02-layout-concept-design.webp', '/images/services/process/03-material-finalization.webp', '/images/services/process/04-seamless-execution.webp'][index]} alt={`${title} — interior project inspiration`} loading="lazy" decoding="async" />
                       <span>STEP {index + 1}</span><h3>{title}</h3><p>{detail}</p>
                     </div>
                   ))}
@@ -1816,7 +1816,7 @@ function ServiceDetail() {
                     ['Hassle-Free Expertise', 'Dedicated interior design professionals managing everything from start to finish.'],
                   ].map(([title, detail], index) => (
                     <div className="vasu-pdf-benefit vasu-space-illustrated-card" key={title}>
-                      <img className="vasu-space-card-photo" src={spaceProcessAndBenefitsPhotos[index + 4]} alt={`${title} â€” interior project inspiration`} loading="lazy" decoding="async" />
+                      <img className="vasu-space-card-photo" src={spaceProcessAndBenefitsPhotos[index + 4]} alt={`${title} — interior project inspiration`} loading="lazy" decoding="async" />
                       <div className="vasu-space-benefit-copy"><span aria-hidden="true">&#10003;</span><div><h3>{title}</h3><p>{detail}</p></div></div>
                     </div>
                   ))}

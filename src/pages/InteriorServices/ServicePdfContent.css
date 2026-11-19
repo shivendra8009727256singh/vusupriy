@@ -183,7 +183,7 @@
 .vasu-custom-pdf-cta a { display:inline-flex; color:#17343a; background:#c9a05e; border-radius:100px; padding:13px 21px; font-weight:750; text-decoration:none; }
 @media(max-width:700px) { .vasu-custom-pdf-products,.vasu-custom-pdf-steps {grid-template-columns:minmax(0,1fr);} .vasu-custom-pdf-product{padding:16px;} .vasu-custom-pdf-section {margin-bottom:30px;} }
 @media(prefers-reduced-motion:reduce) { .vasu-custom-pdf-product {transition:none;} }
-/* VASUPRIY_CUSTOM_FINAL_UI_V1 â€” scoped final polish */
+/* VASUPRIY_CUSTOM_FINAL_UI_V1 — scoped final polish */
 .vasu-service-page:has(.vasu-custom-pdf-detail) .vasu-custom-pdf-detail {
   margin-top: clamp(24px,3vw,40px);
 }

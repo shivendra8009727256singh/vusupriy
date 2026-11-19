@@ -14,7 +14,7 @@ const collections = [
 
   { id: 'flooring', number: '01', title: 'Flooring Styling', subtitle: 'The foundation of beautiful spaces', label: 'THE ART OF SURFACES', description: 'Understated texture. Exceptional presence. Discover surfaces that ground a room and define its character.', groups: [
 
-    { title: 'Flooring & Finishes', items: ['European Laminate', 'SPC Flooring', 'Wooden Deck Flooring', 'Deck Flooring', 'WPC Deck Flooring', 'Carpet Tiles Flooring', 'Artificial Grass Flooring', 'Epoxy Flooring', 'Handmade Rugs'] },
+    { title: 'Flooring & Finishes', items: ['European Laminate', 'SPC Flooring', 'Wooden Flooring', 'Deck Flooring', 'Carpet Tiles Flooring', 'Artificial Grass Flooring', 'Epoxy Flooring', 'Handmade Rugs'] },
 
   ] },
 

@@ -51,7 +51,7 @@ const collections = [
     id: '04',
     title: 'Murals',
     tag: 'Artistic wall expressions',
-    image: '/images/home-expertise/mural-painting.jpg',
+    image: '/images/services-client/custom-theme/galleries/murals/murals-15.jpeg',
     description: 'Distinctive mural artwork that introduces personality and visual storytelling.',
   },
   {

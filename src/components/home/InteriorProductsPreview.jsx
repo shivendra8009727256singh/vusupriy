@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { imagesForProduct } from '../../pages/InteriorProducts/productImageMap.js'
+import { concreteImages } from '../../pages/ProductDetail/concreteImages.js'
+import { sheetImages } from '../../pages/ProductDetail/sheetImages.js'
 import './InteriorProductsReference.css'
 
 // Reuse the existing product catalogue and its real client-provided images.
@@ -8,12 +10,12 @@ const collections = [
   {
     label: 'Flooring Styling',
     description: 'Considered flooring materials and textures to ground every interior beautifully.',
-    items: ['SPC Flooring', 'European Laminate', 'Wooden Deck Flooring', 'Carpet Tiles Flooring', 'Epoxy Flooring'],
+    items: ['SPC Flooring', 'European Laminate', 'Wooden Flooring', 'Carpet Tiles Flooring', 'Epoxy Flooring'],
   },
   {
     label: 'Wall Makeover Products',
     description: 'Elevate walls with expressive patterns, refined surfaces and layered finishes.',
-    items: ['Customized Design Wallpaper', 'WPC Panels', ''],
+    items: ['Customized Design Wallpaper', 'WPC Panels', 'Concrete Work (Walls & Outer Building Settings)', 'Texture Sheet', 'HDHMR Panel', 'Highlighter Tiles'],
   },
   {
     label: 'Enlightenment Options',
@@ -32,9 +34,28 @@ const greenElementOverrides = {
   'Vertical Garden': '/images/home/green-element/vertical-garden-client.webp',
   'Artificial Grass Flooring': '/images/home/green-element/artificial-grass-client.webp',
 }
+const wallProductImages = {
+  'Concrete Work (Walls & Outer Building Settings)': concreteImages['Concrete Work (Walls & Outer Building Settings)']?.[0],
+  'Texture Sheet': sheetImages['Texture Sheet']?.[0],
+  'HDHMR Panel': imagesForProduct('3D CNC Cutting Wall Panels')[0],
+}
+
+const wallProductLinks = {
+  'Concrete Work (Walls & Outer Building Settings)': '/products/walls/concrete-work-walls-and-outer-building-settings',
+  'Texture Sheet': '/products/walls/texture-sheet',
+  'HDHMR Panel': '/services/customized-theme-products/hdhmr-panel',
+  'Highlighter Tiles': '/products/walls/highlighter-tiles',
+}
+
 const cardsFor = collection => collection.items.flatMap(name => {
-  const image = greenElementOverrides[name] || imagesForProduct(name)[0]
-  return image ? [{ name, image }] : []
+  const image = greenElementOverrides[name] || wallProductImages[name] || imagesForProduct(name)[0]
+
+  return image ? [{
+    name,
+    image,
+    title: name === 'Concrete Work (Walls & Outer Building Settings)' ? 'Concrete Work' : name,
+    href: wallProductLinks[name] || '/interior-products',
+  }] : []
 })
 
 export default function InteriorProductsPreview() {
@@ -166,11 +187,11 @@ export default function InteriorProductsPreview() {
             <div className="vproduct-rail" ref={railRef} onScroll={updatePosition} aria-label={`${category.label} products`}>
               {[...cards, ...cards, ...cards].map((card, index) => (
                 <article className="vproduct-card" key={`${selected}-${index}-${card.name}`}>
-                  <Link to="/interior-products" aria-label={`Explore ${card.name} products`}>
+                  <Link to={card.href} aria-label={`Explore ${card.name} products`}>
                     <div className="vproduct-image-wrap">
                       <img src={card.image} alt={card.name} loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />
                     </div>
-                    <h3>{card.name}</h3>
+                    <h3>{card.title}</h3>
                     <p>{category.description}</p>
                   </Link>
                 </article>
