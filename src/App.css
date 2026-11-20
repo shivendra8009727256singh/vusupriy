@@ -17996,3 +17996,15 @@ html body .site section#home-services.home-services
 }
 
 /* END VASUPRIY_HOME_SERVICES_FINAL_IVORY_2026 */
+
+
+/* VASUPRIY_ABOUT_HEADING_GOLD_MATCH_V1 */
+
+/* Match the existing "vision to life." accent color */
+#about-who-v2-title > span {
+  color: #A47B3C !important;
+  -webkit-text-fill-color: #A47B3C !important;
+  background-image: none !important;
+}
+
+/* END VASUPRIY_ABOUT_HEADING_GOLD_MATCH_V1 */

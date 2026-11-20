@@ -32,3 +32,37 @@
 @media(max-width:700px){.vproduct-showcase{padding:56px 0 68px}.vproduct-shell{width:calc(100% - 32px)}.vproduct-heading{align-items:flex-end;gap:12px}.vproduct-heading h2{font-size:clamp(30px,8vw,44px)}.vproduct-heading p{max-width:31ch}.vproduct-arrows{gap:7px}.vproduct-arrows button{width:39px;height:39px;font-size:19px}.vproduct-layout{display:block}.vproduct-tabs{display:flex;flex-direction:row;overflow-x:auto;gap:8px;padding:5px 0 12px;margin-bottom:14px;scrollbar-width:none}.vproduct-tabs::-webkit-scrollbar{display:none}.vproduct-tab{width:auto;white-space:nowrap;flex:0 0 auto;padding:13px 15px;font-size:13px}.vproduct-all{margin:0;white-space:nowrap;align-self:center;padding:10px}.vproduct-card{flex:0 0 min(78vw,330px)}.vproduct-image-wrap{height:clamp(290px,89vw,405px)}.vproduct-card h3{font-size:17px}.vproduct-card p{font-size:13px}.vproduct-footer{margin-top:10px}}
 @media(max-width:360px){.vproduct-heading{align-items:start;flex-direction:column}.vproduct-arrows{align-self:flex-end}.vproduct-card{flex-basis:83vw}}
 @media(prefers-reduced-motion:reduce){.vproduct-rail{scroll-behavior:auto}.vproduct-image-wrap img,.vproduct-arrows button{transition:none}}
+
+
+/* VASUPRIY_MOBILE_PRODUCTS_BG_FIX_V1 */
+@media screen and (max-width: 700px) {
+
+  /* Restore dark teal background on mobile */
+  .site #home-products.vproduct-showcase {
+    background: #00394B !important;
+    background-color: #00394B !important;
+    background-image: none !important;
+    color: #FFFFFF;
+  }
+
+  /* Keep section heading readable */
+  .site #home-products .vproduct-heading h2 {
+    color: #FFFFFF !important;
+  }
+
+  /* Preserve premium gold italic text */
+  .site #home-products .vproduct-heading h2 em {
+    color: #B98A4D !important;
+  }
+
+  /* Supporting text */
+  .site #home-products .vproduct-heading p {
+    color: rgba(255, 255, 255, 0.72) !important;
+  }
+
+  /* Preserve gold section eyebrow */
+  .site #home-products .vproduct-eyebrow {
+    color: #D4B083 !important;
+  }
+}
+/* END VASUPRIY_MOBILE_PRODUCTS_BG_FIX_V1 */

@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import {
   contactInfo,
   validateContactForm,
-  submitContactMessage,
 } from "../../data/contactInfo.js";
 import heroImage from "../../assets/contact/contactheader.png";
 import studioImage from "../../assets/images/home/hero-interior.png";
@@ -122,7 +121,7 @@ function Contact() {
   const [sending, setSending] = useState(false);
   const pendingRef = useRef(false);
   const mountedRef = useRef(true);
-  const mapUrl = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3506.4379190125574!2d77.14222337549583!3d28.496469475739296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDI5JzQ3LjMiTiA3N8KwMDgnNDEuMyJF!5e0!3m2!1sen!2sin!4v1791872573603!5m2!1sen!2sin";
+  const mapUrl = contactInfo.mapEmbedUrl;
 
   useEffect(() => {
     mountedRef.current = true;
@@ -170,36 +169,67 @@ function Contact() {
     }));
   }
 
-  async function handleSubmit(event) {
+  // VASUPRIY_CONTACT_MAILTO_V1
+  function handleSubmit(event) {
     event.preventDefault();
+
     if (pendingRef.current) return;
+
     const nextErrors = validateContactForm(values);
     setErrors(nextErrors);
     setFeedback(null);
+
     if (Object.keys(nextErrors).length) {
-      formRef.current.elements.namedItem(Object.keys(nextErrors)[0])?.focus();
+      formRef.current.elements
+        .namedItem(Object.keys(nextErrors)[0])?.focus();
       return;
     }
+
     pendingRef.current = true;
     setSending(true);
+
     try {
-      await submitContactMessage(
-        contactInfo.submissionEndpoint,
-        Object.fromEntries(
-          Object.entries(values).map(([key, value]) => [key, value.trim()]),
-        ),
-      );
+      const firstName = values.firstName.trim();
+      const lastName = values.lastName.trim();
+
+      const subject = `New Website Enquiry - ${firstName} ${lastName}`;
+
+      const body = [
+        "New enquiry from Vasupriy Interiovilla website",
+        "",
+        `First Name: ${firstName}`,
+        `Last Name: ${lastName}`,
+        `Phone Number: ${values.phone.trim()}`,
+        `Email Address: ${values.email.trim()}`,
+        "",
+        "Message:",
+        values.message.trim() || "No additional message provided.",
+        "",
+        "Source: Vasupriy Interiovilla Contact Page"
+      ].join("\n");
+
+      const mailtoUrl =
+        `mailto:${contactInfo.email}` +
+        `?subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailtoUrl;
+
       if (mountedRef.current) {
         setFeedback({
           success: true,
           message:
-            "Thank you. Your message has been received. We look forward to speaking with you.",
+            "Your email app should open with your enquiry filled in. " +
+            "Please press Send in your email app to complete submission."
         });
-        setValues(emptyForm);
       }
     } catch (error) {
-      if (mountedRef.current)
-        setFeedback({ success: false, message: error.message });
+      if (mountedRef.current) {
+        setFeedback({
+          success: false,
+          message: "Could not open your email app. Please email us directly."
+        });
+      }
     } finally {
       pendingRef.current = false;
       if (mountedRef.current) setSending(false);
@@ -228,7 +258,7 @@ function Contact() {
       label: "Our Location",
       value: contactInfo.address,
       href: contactInfo.address
-        ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactInfo.address)}`
+        ? contactInfo.mapDirectionsUrl
         : null,
       description: "A space for ideas, materials and possibilities.",
     },
@@ -479,7 +509,7 @@ function Contact() {
               </div>
               {!contactInfo.submissionEndpoint && (
                 <p className="contact-availability">
-                  Online messaging will be available soon.
+                  Click Submit Message to open your email app, then press Send.
                 </p>
               )}
             </form>

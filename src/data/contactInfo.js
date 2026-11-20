@@ -3,8 +3,9 @@
 export const contactInfo = {
   phone: '+91 8447689084',
   email: 'Vasupriyinteriovilla@gmail.com',
-  address: 'Office no -F09, 1st floor, Anjuman House 23, C Block, Sector 63, Noida, Uttar Pradesh 201309',
-  mapEmbedUrl: '',
+  address: 'House No. 118/119, S/F, Right Side, Mangu Mohalla, Village Ghitorni, New Delhi, Delhi 110030',
+  mapEmbedUrl: 'https://maps.google.com/maps?q=28.496469497680664,77.1447982788086&z=17&hl=en&output=embed',
+  mapDirectionsUrl: 'https://www.google.com/maps/search/?api=1&query=28.496469497680664,77.1447982788086',
   // Connect a server endpoint accepting JSON via POST and returning { success: true }
   // only after the message is accepted. Email-provider secrets belong on the server.
   submissionEndpoint: '',
